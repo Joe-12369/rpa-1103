@@ -1,0 +1,368 @@
+﻿<Window
+    x:Class="II.RPA.Core.Provider.PluginProvider.ScreenSaveWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:II.RPA.Core.Provider.PluginProvider"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="屏幕保护"
+    d:DesignHeight="1080"
+    d:DesignWidth="1920"
+    AllowsTransparency="True"
+    Background="Transparent"
+    ShowInTaskbar="False"
+    Topmost="True"
+    WindowStartupLocation="Manual"
+    WindowState="Maximized"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle
+                            Margin="2"
+                            SnapsToDevicePixels="true"
+                            Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+                            StrokeDashArray="1 2"
+                            StrokeThickness="1" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD" />
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070" />
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#25FFFFFF" />
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1" />
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6" />
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B" />
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4" />
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5" />
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383" />
+        <Style x:Key="EnterButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}" />
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}" />
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Padding" Value="1" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border
+                            x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="24"
+                            SnapsToDevicePixels="true">
+                            <StackPanel
+                                Margin="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Orientation="Horizontal">
+                                <ContentPresenter
+                                    x:Name="contentPresenter"
+                                    Margin="5,0,0,0"
+                                    Focusable="False"
+                                    RecognizesAccessKey="True"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                <Viewbox
+                                    Height="15"
+                                    Margin="5,0,0,0"
+                                    Stretch="Uniform">
+                                    <Canvas Width="1307" Height="1024">
+                                        <Path Fill="#FFFFFF">
+                                            <Path.Data>
+                                                <PathGeometry Figures="M796.113455 1024l511.627636-511.720727L796.113455 0 687.476364 108.450909l330.752 331.403636H0V584.610909h1018.228364L687.476364 915.362909z" FillRule="NonZero" />
+                                            </Path.Data>
+                                        </Path>
+                                    </Canvas>
+                                </Viewbox>
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter TargetName="border" Property="Background" Value="{StaticResource Button.MouseOver.Background}" />
+                                <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource Button.MouseOver.Border}" />
+                            </Trigger>
+                            <!--<Trigger Property="IsPressed" Value="true">
+                                <Setter TargetName="border" Property="Background" Value="{StaticResource Button.Pressed.Background}" />
+                                <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource Button.Pressed.Border}" />
+                            </Trigger>-->
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter TargetName="border" Property="Background" Value="{StaticResource Button.Disabled.Background}" />
+                                <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource Button.Disabled.Border}" />
+                                <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="{StaticResource Button.Disabled.Foreground}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3" />
+        <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA" />
+        <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FFFFFF" />
+        <SolidColorBrush x:Key="TextBox.Focus.Background" Color="#25FFFFFF" />
+        <Style x:Key="PasswordBoxStyle" TargetType="{x:Type PasswordBox}">
+            <Setter Property="PasswordChar" Value="●" />
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" />
+            <Setter Property="BorderBrush" Value="{StaticResource TextBox.Static.Border}" />
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="KeyboardNavigation.TabNavigation" Value="None" />
+            <Setter Property="HorizontalContentAlignment" Value="Left" />
+            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+            <Setter Property="AllowDrop" Value="true" />
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst" />
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type PasswordBox}">
+                        <Border
+                            x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="8"
+                            SnapsToDevicePixels="True">
+                            <Grid>
+                                <ScrollViewer
+                                    x:Name="PART_ContentHost"
+                                    Margin="12,0,12,0"
+                                    Focusable="false"
+                                    HorizontalScrollBarVisibility="Hidden"
+                                    VerticalScrollBarVisibility="Hidden" />
+                                <TextBlock
+                                    x:Name="Part_WaterMark"
+                                    Margin="12,0,0,0"
+                                    VerticalAlignment="Center"
+                                    FontSize="16"
+                                    Foreground="#90FFFFFF"
+                                    IsHitTestVisible="False"
+                                    Opacity="1"
+                                    Text="{TemplateBinding Tag}" />
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter TargetName="border" Property="Opacity" Value="0.56" />
+                            </Trigger>
+                            <Trigger Property="IsMouseCaptureWithin" Value="true">
+                                <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource TextBox.Focus.Border}" />
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="true">
+                                <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource TextBox.Focus.Border}" />
+                                <Setter TargetName="Part_WaterMark" Property="Visibility" Value="Collapsed" />
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="False">
+                                <Setter TargetName="Part_WaterMark" Property="Visibility" Value="Visible" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true" />
+                        <Condition Property="IsSelectionActive" Value="false" />
+                    </MultiTrigger.Conditions>
+                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}" />
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid x:Name="mainGrid" Background="#88161923">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock
+            Name="tipText"
+            MaxWidth="1200"
+            MaxHeight="800"
+            Margin="0,20,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Background="Transparent"
+            FontSize="56"
+            Foreground="White"
+            TextTrimming="CharacterEllipsis"
+            TextWrapping="Wrap" />
+        <StackPanel
+            Name="passwordBorder"
+            Grid.Row="1"
+            Margin="0,24,0,0"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <PasswordBox
+                x:Name="passwordBox"
+                Width="653"
+                Height="48"
+                Margin="0"
+                VerticalContentAlignment="Center"
+                Background="#15FFFFFF"
+                BorderBrush="Transparent"
+                BorderThickness="1"
+                CaretBrush="White"
+                Foreground="White"
+                PasswordChanged="PasswordBox_PasswordChanged"
+                SelectionBrush="White"
+                Style="{DynamicResource PasswordBoxStyle}"
+                Tag="请输入密码" />
+            <Button
+                Width="18"
+                Margin="-37,0,0,0"
+                Panel.ZIndex="99"
+                Background="Transparent"
+                BorderThickness="0"
+                Click="Button_Click"
+                Cursor="Hand"
+                IsDefault="True">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <Viewbox Stretch="Uniform">
+                                <Canvas Width="1307" Height="1024">
+                                    <Path Fill="#FFFFFF">
+                                        <Path.Data>
+                                            <PathGeometry Figures="M796.113455 1024l511.627636-511.720727L796.113455 0 687.476364 108.450909l330.752 331.403636H0V584.610909h1018.228364L687.476364 915.362909z" FillRule="NonZero" />
+                                        </Path.Data>
+                                    </Path>
+                                </Canvas>
+                            </Viewbox>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+        <Border
+            Name="errorBorder"
+            Grid.Row="1"
+            Width="653"
+            Height="48"
+            Margin="0,24,0,0"
+            HorizontalAlignment="Center"
+            Background="Transparent"
+            BorderBrush="#FF6151"
+            BorderThickness="1"
+            CornerRadius="8"
+            IsHitTestVisible="False"
+            SnapsToDevicePixels="True"
+            Visibility="Collapsed" />
+        <TextBlock
+            x:Name="erroText"
+            Grid.Row="1"
+            Margin="-530,0,0,-20"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Foreground="#FF6151"
+            Text="密码错误，请重新输入"
+            Visibility="Collapsed" />
+        <Button
+            Name="enter"
+            Grid.Row="1"
+            Width="197"
+            Height="48"
+            Margin="0,24,0,0"
+            Background="#15FFFFFF"
+            BorderThickness="0"
+            Click="Enter_Click"
+            Content="Enter解锁"
+            Cursor="Hand"
+            FontSize="16"
+            Foreground="White"
+            IsDefault="True"
+            Style="{DynamicResource EnterButtonStyle}"
+            Visibility="Visible" />
+        <Border
+            Name="borderRestart"
+            Grid.Row="2"
+            Width="190"
+            Height="86"
+            Margin="0,52,0,0"
+            VerticalAlignment="Top"
+            Background="#15FFFFFF"
+            CornerRadius="8">
+            <Grid>
+                <Viewbox
+                    Width="16"
+                    Height="16"
+                    Margin="42,22,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Stretch="Uniform">
+                    <Canvas Width="1024" Height="1024">
+                        <Path Fill="#FFFFFF">
+                            <Path.Data>
+                                <PathGeometry Figures="M512 0C357.745338 0 220.266383 69.421417 126.499734 177.713372L0 51.213639v307.145445h307.213639L198.444326 249.726159a408.277038 408.277038 0 0 1 313.48748-147.298881 410.05008 410.05008 0 0 1 409.572723 409.572722 410.05008 410.05008 0 0 1-409.572723 409.572722 410.05008 410.05008 0 0 1-409.572722-409.572722H0c0 282.322856 229.677144 512 512 512 282.322856 0 512-229.677144 512-512C1024 229.677144 794.322856 0 512 0" FillRule="NonZero" />
+                            </Path.Data>
+                        </Path>
+                    </Canvas>
+                </Viewbox>
+
+                <TextBlock
+                    Margin="66,20,0,0"
+                    FontSize="16"
+                    Foreground="White"
+                    Text="重新运行" />
+                <TextBlock
+                    x:Name="runTxt"
+                    Margin="44,0,0,20"
+                    VerticalAlignment="Bottom"
+                    FontSize="16"
+                    Foreground="White" />
+            </Grid>
+        </Border>
+        <Border
+            Name="borderStop"
+            Grid.Row="2"
+            Width="190"
+            Height="86"
+            Margin="0,52,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Background="#15FFFFFF"
+            CornerRadius="8">
+            <Grid>
+                <Viewbox
+                    Width="20"
+                    Height="20"
+                    Margin="52,20,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Stretch="Uniform">
+                    <Canvas Width="1024" Height="1024">
+                        <Path Fill="#FFFFFF">
+                            <Path.Data>
+                                <PathGeometry Figures="M512 85.333333a426.666667 426.666667 0 1 0 426.666667 426.666667A426.666667 426.666667 0 0 0 512 85.333333z m0 768a341.333333 341.333333 0 1 1 341.333333-341.333333 341.333333 341.333333 0 0 1-341.333333 341.333333z m-128-213.333333h256V384H384z" FillRule="NonZero" />
+                            </Path.Data>
+                        </Path>
+                    </Canvas>
+                </Viewbox>
+
+                <TextBlock
+                    Margin="76,20,0,0"
+                    FontSize="16"
+                    Foreground="White"
+                    Text="停止运行" />
+                <TextBlock
+                    x:Name="stopTxt"
+                    Margin="0,0,0,20"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    FontSize="16"
+                    Foreground="White"
+                    Opacity="0.4" />
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

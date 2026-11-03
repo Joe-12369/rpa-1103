@@ -1,0 +1,45 @@
+{
+  "defaults": {
+    "build": "stable",
+    "outputBaseDir": "dist/extensions",
+    "manifest": "src/manifest/manifest_v2.ts",
+    "nativeHostName": "ii.rpa.chromenativemsg",
+    "clientFlag": "Chrome",
+    "key": "",
+    "enabled": false,
+    "currentVersion": "4.0.1.0"
+  },
+  "extensions": [
+    {
+      "build": "stable",
+      "name": "IIRPAChromeExtension",
+      "manifest": "src/manifest/manifest_v3.ts",
+      "outputDir": "RPAChromeExtension",
+      "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAme2hdLlrTv62nf3CTBPTG8KFAM+yhDN2TJDGknF83rRAn9d6CJUVqxPf2uofVebo0/6/ch3KJS68PyFYs2ot6QnlN20ZQKd3VOwOEPWUyWh0ETwaVBmQUJQVqa4FFDqwHAof6IUcba0P49PKyPEmnHGHs1o5V90t5bB2nnL0FwP+lSQj73di39ynQ8cENP/Ui7gTKnhkAHXWZU2ljz/6ZYs4yGfhng21TLf/d//Xi3JYb8Irv/IkzkT9J15BRgySNfu6vG6bkDl5JR8tJ3dJcKVMY3jTmSWpOcz/fZNyRk6eB2JXe2m1b51Mua3853SISHpoozzSBAgm9mOO8D8AmwIDAQAB",
+      "enabled": true,
+      "currentVersion": "4.0.1.235"
+    },
+    {
+      "name": "IIRPAChromeExtensionV2",
+      "outputDir": "RPAChromeExtensionV2"
+    },
+    {
+      "name": "IIRPAEdgeExtension",
+      "outputDir": "RPAEdgeExtension",
+      "clientFlag": "Edge",
+      "enabled": false
+    },
+    {
+      "name": "IIRPA360seExtension",
+      "outputDir": "RPA360seExtension"
+    },
+    {
+      "name": "IIRPA360XExtension",
+      "outputDir": "dist/extensions/RPA360XExtension"
+    },
+    {
+      "name": "IIRPASogouExplorerExtension",
+      "outputDir": "RPASogouExplorerExtension"
+    }
+  ]
+}

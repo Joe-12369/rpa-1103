@@ -1,0 +1,54 @@
+﻿<Window x:Class="II.RPA.Plugin.Dialog.Forms.FormImport"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:II.RPA.Plugin.Dialog.Forms"
+        mc:Ignorable="d"
+        Name="Windows"
+        ShowInTaskbar="False"
+        WindowChrome.WindowChrome="{DynamicResource MyChrome}"
+        Title="FormImport" Height="221" Width="468" WindowStartupLocation="CenterOwner">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../IIDefaultStyle.xaml"/>
+                <ResourceDictionary Source="../Skin/MyComboBox.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
+            <WindowChrome x:Key="MyChrome" 
+                          UseAeroCaptionButtons="False" 
+                        
+                          ResizeBorderThickness="0">
+            </WindowChrome>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.Clip>
+        <RectangleGeometry RadiusX="4" RadiusY="4" Rect="0,0,468,221">
+        </RectangleGeometry>
+    </Window.Clip>
+    <StackPanel>
+        <DockPanel DockPanel.Dock="Top" Height="{Binding (SystemParameters.WindowNonClientFrameThickness).Top }" Background="#F7F7F7">
+            <Button Click="btnCancel_Click" BorderThickness="0"  DockPanel.Dock="Right" Width="30"
+                    WindowChrome.IsHitTestVisibleInChrome="True"
+                    Background="Transparent" Margin="0,0,9,0">
+                <Canvas>
+                    <Line X1="-6" Y1="-6" X2="6" Y2="6" Stroke="#999DA8"></Line>
+                    <Line X1="-6" Y1="6" X2="6" Y2="-6" Stroke="#999DA8"></Line>
+                </Canvas>
+            </Button>
+            <TextBlock x:Name="TITLE" Background="#F7F7F7" Padding="16,7,0,0" FontSize="13" Text="{DynamicResource DaoRuBiaoGe}"></TextBlock>
+        </DockPanel>
+        <Label Margin="32,20,0,4" HorizontalAlignment="Left" Width="166" Content="{DynamicResource XuanZeXvYaoDaoRudeSheetYe}"></Label>
+        <ComboBox BorderBrush="#D0D5E0" Background="#FFFFFF" Width="395" VerticalContentAlignment="Center" x:Name="ComB" Margin="32,0,32,0" Height="36"
+                  ItemContainerStyle="{StaticResource ComboBoxItemStyle1}"
+                  Template="{DynamicResource ComboBoxTemplate1}"></ComboBox>
+        <StackPanel Width="{Binding ActualWidth, ElementName=Windows}" DockPanel.Dock="Bottom"  Height="54" VerticalAlignment="Bottom" Margin="0,30,0,0" HorizontalAlignment="Left">
+            <Line  Stroke="#ECEEF2" StrokeThickness="1" X1="2" X2="{Binding Width, ElementName=Windows}" Y1="0" Y2="0"></Line>
+            <StackPanel Margin="0,12,0,0" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Height="30px" Width="80px" Style="{StaticResource BtnDeleteStyle}" x:Name="btnCancel" Content="{DynamicResource XMessageBox.xaml_QuXiao}" Margin="0,0,8,0" Click="btnCancel_Click" />
+                <Button Height="30px" Width="80px" Style="{StaticResource BtnInfoStyle}" x:Name="btnOK" Click="btnOK_Click"  Margin="0,0,30,0" Content="{DynamicResource ConfigSetWnd.xaml_QueRen}"/>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Window>

@@ -1,0 +1,30 @@
+{
+	"name": "OcrOffline",
+	"title": " OCR 鼠标操作组件包",
+	"version": "3.3.5.0",
+	"type": "1",
+	"depend": "7.3.5",
+	"isBasic": 1,
+	"DefaultInit": 0,
+	"introduction": "提供了自研 OCR 鼠标操作能力",
+	"description": "·鼠标移动到OCR文本上-鼠标移动到OCR文本上\n·鼠标点击OCR文本-鼠标点击OCR文本\n·图像OCR识别-图像OCR识别\n·OCR解析表格",
+	"releaseTime": 1634054400,
+	"DependRef": [
+		{
+			"name": "CommonDLLBase",
+			"version": "3.3.5.0"
+		},
+		{
+			"name": "Element",
+			"version": "3.3.5.0"
+		},
+		{
+			"name": "GUICV",
+			"version": "3.3.5.0"
+		},
+		{
+			"name": "DesktopInput",
+			"version": "3.3.5.0"
+		}
+	]
+}

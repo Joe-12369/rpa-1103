@@ -1,0 +1,35 @@
+{
+  "fileName": "II.RPA.Plugin.WebBrowser.dll",
+  "category": [
+    {
+      "name": "GUIIE"
+    },
+    {
+      "name": "GUIChrome"
+    },
+    {
+      "name": "GUIFireFox"
+    },
+    {
+      "name": "GUIZExplorer"
+    },
+    {
+      "name": "GUIEdge"
+    },
+    {
+      "name": "GUIWeb360se"
+    },
+    {
+      "name": "GUIWeb360X"
+    },
+    {
+      "name": "GUISogou"
+    },
+    {
+      "name": "GUISuperBrowser"
+    },
+    {
+      "name": "Chromium"
+    }
+  ]
+}

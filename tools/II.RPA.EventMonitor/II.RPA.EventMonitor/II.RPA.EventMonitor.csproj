@@ -1,0 +1,85 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RootNamespace>II.RPA.EventMonitor</RootNamespace>
+    <AssemblyName>II.RPA.EventMonitor</AssemblyName>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultItems>false</EnableDefaultItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BouncyCastle.Cryptography" Version="2.4.0" />
+    <PackageReference Include="log4net" Version="2.0.15" />
+    <PackageReference Include="MailKit" Version="4.7.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Management" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Common\Configurations.cs" />
+    <Compile Include="Common\Loggers.cs" />
+    <Compile Include="Common\Utils.cs" />
+    <Compile Include="Entitys\EnumCollections.cs" />
+    <Compile Include="Entitys\TriggerErrorEventArgs.cs" />
+    <Compile Include="Entitys\JMessage.cs" />
+    <Compile Include="Entitys\JSON\TriggerJson.cs" />
+    <Compile Include="File\FileTrigger.cs" />
+    <Compile Include="File\NetworkFilePoller.cs" />
+    <Compile Include="HotkeyMouse\HotkeyTrigger.cs" />
+    <Compile Include="HotkeyMouse\MouseKeyMonitor.cs" />
+    <Compile Include="HotkeyMouse\MouseTrigger.cs" />
+    <Compile Include="Mail\MailBodyEntity.cs" />
+    <Compile Include="Mail\MailMessage.cs" />
+    <Compile Include="Mail\MailTrigger.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScoketComm\ReceivedEvent.cs" />
+    <Compile Include="Socket\SocketExtension.cs" />
+    <Compile Include="Socket\SocketServer.cs" />
+    <Compile Include="TriggerServer.cs" />
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trigger.cs" />
+    <Compile Include="TriggerBus.cs" />
+    <Compile Include="TriggerTask.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Config\log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\log4net.unix.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\Gma.UserActivityMonitor\Gma.UserActivityMonitor.csproj" />
+  </ItemGroup>
+
+</Project>

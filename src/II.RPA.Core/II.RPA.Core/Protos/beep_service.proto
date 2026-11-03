@@ -1,0 +1,19 @@
+syntax = "proto3";
+package rpa.core.beep;
+message Beep
+{
+	string Beep = 1;
+	Payload Payload = 2;
+}
+message Payload
+{
+	string Client_Id = 1;
+}
+
+service BeepService 
+{
+	rpc BeepUnary(Beep) returns (Beep);
+	rpc BeepPingPongStreaming(stream Beep) returns (stream Beep);
+	rpc BeepStreamingFromClient(stream Beep) returns (Beep);
+	rpc BeepStreamingFromServer(Beep) returns (stream Beep);
+}

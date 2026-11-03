@@ -1,0 +1,48 @@
+{
+  "name": "实在RPA(Sogou)",
+  "version": "1.0.0",
+  "author":"实在智能",
+  "description": "大家都在用的智能软件机器人",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "permissions": [
+    "management",
+    "tabs",
+    "webNavigation",
+    "cookies",
+    "clipboardRead",
+    "clipboardWrite",
+    "downloads",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "script/jquery.js",
+      "script/rpa_server.js",
+      "script/background.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "match_about_blank": true,
+      "all_frames": true,
+      "js": [
+        "script/content.js",
+        "script/crawer.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "file://*/*",
+        "ftp://*/*"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "icons/AiIndeedRPA16.png",
+    "48": "icons/AiIndeedRPA48.png",
+    "128": "icons/AiIndeedRPA128.png"
+  },
+  "manifest_version": 2
+}

@@ -1,0 +1,133 @@
+{
+    "$schema": "./addins.schema.json",
+    "version": 1,
+    "defaults": {
+        "outputDir": "dist/scripts",
+        "enabled": true,
+        "type": "content",
+        "kind": "legacy",
+        "entry": "index.ts",
+        "target_browser": [],
+        "target": "es2020",
+        "build": {
+            "minify": false,
+            "obfuscate": false,
+            "sourcemap": true,
+            "embed": true
+        },
+        "publish": {
+            "minify": true,
+            "obfuscate": "medium",
+            "sourcemap": false,
+            "embed": false
+        }
+    },
+    "libs": [
+        {
+            "name": "jquery",
+            "description": "jQuery",
+            "entry": "libs/jquery.js",
+            "type": "background",
+            "enabled": false,
+            "publish": {
+                "minify": true,
+                "obfuscate": false,
+                "sourcemap": false
+            }
+        },
+        {
+            "name": "json2",
+            "description": "json2.js for IE6-7",
+            "entry": "libs/json2.js",
+            "type": "content",
+            "target": "es5",
+            "target_browser": [
+                "ie"
+            ],
+            "publish": {
+                "minify": true,
+                "obfuscate": false,
+                "sourcemap": false
+            }
+        },
+        {
+            "name": "rpa_server",
+            "description": "RPA Service Hub",
+            "entry": "libs/rpa_server.js",
+            "type": "background",
+            "enabled": false,
+            "publish": {
+                "minify": true,
+                "obfuscate": false,
+                "sourcemap": false
+            }
+        },
+        {
+            "name": "rpa_client",
+            "description": "RPA Service Hub rpa_client",
+            "entry": "signalr/index.ts",
+            "type": "page",
+            "enabled": false,
+            "publish": {
+                "minify": true,
+                "obfuscate": false,
+                "sourcemap": false
+            }
+        },
+        {
+            "name": "sizzle",
+            "description": "Sizzle.js for IE selector",
+            "entry": "libs/sizzle.js",
+            "type": "content",
+            "target": "es5",
+            "target_browser": [
+                "ie"
+            ],
+            "publish": {
+                "minify": true,
+                "obfuscate": false,
+                "sourcemap": false
+            }
+        }
+    ],
+    "items": [
+        {
+            "name": "backgroundscript",
+            "description": "MVC2 backgroundscript.js",
+            "type": "background",
+            "entry": "background/backgroundscript.js"
+        },
+        {
+            "name": "commonscript",
+            "description": "内容页公共脚本",
+            "entry": "content/commonscript.js",
+            "target": "es5"
+        },
+        {
+            "name": "contentscript",
+            "description": "内容页脚本",
+            "entry": "content/contentscript.js"
+        },
+        {
+            "name": "dataCollectionScript",
+            "description": "数据采集脚本",
+            "entry": "content/dataCollectionScript.js",
+            "target": "es5"
+        },
+        {
+            "name": "utils",
+            "description": "工具类脚本",
+            "entry": "content/utils.js",
+            "target": "es5",
+            "target_browser": [
+                "ie"
+            ]
+        },
+        {
+            "name": "webselect",
+            "description": "网页下拉框",
+            "entry": "webselect/Index.ts",
+            "kind": "module"
+        }
+    ]
+}

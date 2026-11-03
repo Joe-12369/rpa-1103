@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace II.RPA.Plugin.WdtErp.Models
+{
+    [Flags]
+    public enum ElementStateBits : uint
+    {
+        STATE_LINK = 0x00000001,
+        STATE_HOVER = 0x00000002,
+        STATE_ACTIVE = 0x00000004,
+        STATE_FOCUS = 0x00000008,
+        STATE_VISITED = 0x00000010,
+        STATE_CURRENT = 0x00000020,
+        STATE_CHECKED = 0x00000040,
+        STATE_DISABLED = 0x00000080,
+        STATE_READONLY = 0x00000100,
+        STATE_EXPANDED = 0x00000200,
+        STATE_COLLAPSED = 0x00000400,
+        STATE_INCOMPLETE = 0x00000800,
+        STATE_ANIMATING = 0x00001000,
+        STATE_FOCUSABLE = 0x00002000,
+        STATE_ANCHOR = 0x00004000,
+        STATE_SYNTHETIC = 0x00008000,
+        STATE_OWNS_POPUP = 0x00010000,
+        STATE_TABFOCUS = 0x00020000,
+        STATE_EMPTY = 0x00040000,
+        STATE_BUSY = 0x00080000,
+        STATE_DRAG_OVER = 0x00100000,
+        STATE_DROP_TARGET = 0x00200000,
+        STATE_MOVING = 0x00400000,
+        STATE_COPYING = 0x00800000,
+        STATE_DRAG_SOURCE = 0x01000000,
+        STATE_DROP_MARKER = 0x02000000,
+        STATE_PRESSED = 0x04000000,
+        STATE_POPUP = 0x08000000,
+        STATE_IS_LTR = 0x10000000,
+        STATE_IS_RTL = 0x20000000
+    }
+
+}

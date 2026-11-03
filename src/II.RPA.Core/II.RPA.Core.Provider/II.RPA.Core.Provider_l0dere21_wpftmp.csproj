@@ -1,0 +1,659 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <AssemblyName>II.RPA.Core.Provider</AssemblyName>
+    <IntermediateOutputPath>obj\x86\Debug\</IntermediateOutputPath>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <MSBuildProjectExtensionsPath>C:\Works\ii.rpa\src\II.RPA.Core\II.RPA.Core.Provider\obj\</MSBuildProjectExtensionsPath>
+    <_TargetAssemblyProjectName>II.RPA.Core.Provider</_TargetAssemblyProjectName>
+    <RootNamespace>II.RPA.Core.Provider</RootNamespace>
+  </PropertyGroup>
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Core.Provider</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Core.Provider</RootNamespace>
+    <Deterministic>true</Deterministic>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA|x86'">
+    <OutputPath>bin\x86\QA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA|x64'">
+    <OutputPath>bin\x64\QA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\II.RPA.IPC\II.RPA.IPC.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CoreAssemblyInfo.cs">
+      <Link>CoreAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="EngineProxyProvider\EngineProxyProvider.cs" />
+    <Compile Include="EngineProxyProvider\Startup.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_Agent_Provider.cs" />
+    <Compile Include="PluginProvider\Verification.cs" />
+    <Compile Include="MobileHostProvider\MobileHostProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\CaptureWindowProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\DriverSearchProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\GetWindowSizeProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\OutLookAccountsProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\GetSystemFontProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\TransferPluginActonProvider.cs" />
+    <Compile Include="PluginInterfere\ElementPlugin.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\CancelCaptureProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\ExcelProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\GetWindowListProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\ConfigDialogPreviewProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\NewDataCollectProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\ProcessCreatorProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\ScreenShotProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\SharpUIProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_OcrTableAnalyse_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_Phone_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_CV_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_Combo_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_Phone_CV_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_Ocr_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_CS_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_Renovate_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_Screenshot_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_Similar_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Verify_Selector_Similar_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Verify_Selector_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\Command\CommandConsumer.cs" />
+    <Compile Include="PluginLoaderProvider\Command\FuncTaskConsumer.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\MouseRecordPhoneProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\BaseActionProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\CheckDriveProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\ConnectPhoneProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\CollectDataProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\DBTestProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\USBGetComsProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionNameAttribute.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\MouseRecordProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProviderFactory.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\IClientActionProvider.cs" />
+    <Compile Include="PluginLoaderProvider\Command\IDispatchCommand.cs" />
+    <Compile Include="PluginLoaderProvider\IPluginLoaderProvider.cs" />
+    <Compile Include="PluginLoaderProvider\PluginLoaderModel.cs" />
+    <Compile Include="PluginProvider\PluginProviderFactory.cs" />
+    <Compile Include="PluginProvider\ScreenSaveWindow.xaml.cs">
+      <DependentUpon>ScreenSaveWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenRecordProvider\FFmpegWrapper.cs" />
+    <Compile Include="ScreenRecordProvider\FFmpeg\DirectShowDevices.cs" />
+    <Compile Include="ScreenRecordProvider\FFmpeg\Enums.cs" />
+    <Compile Include="ScreenRecordProvider\FFmpeg\ExternalCLIManager.cs" />
+    <Compile Include="ScreenRecordProvider\FFmpeg\FFmpegCLIManager.cs" />
+    <Compile Include="ScreenRecordProvider\FFmpeg\FFmpegOptions.cs" />
+    <Compile Include="ScreenRecordProvider\FFmpeg\ScreencastOptions.cs" />
+    <Compile Include="ScreenRecordProvider\FFmpeg\VideoInfo.cs" />
+    <Compile Include="ScreenRecordProvider\RecordOptions.cs" />
+    <Compile Include="ScreenRecordProvider\ScreenRecorder.cs" />
+    <Compile Include="ScreenRecordProvider\ScreenRecordProvider.cs" />
+    <Compile Include="PluginProvider\ScreenSaver.cs" />
+    <Compile Include="SubProcessManage\JavaBridgeHostManager.cs" />
+    <Compile Include="Utility\Cancel.cs" />
+    <Compile Include="Utility\ConcurrentDictionaryExtensions.cs" />
+    <Compile Include="Utility\CtsTimeout.cs" />
+    <Compile Include="Utility\FileUtils.cs" />
+    <Compile Include="Utility\InterlockedEx.cs" />
+    <Compile Include="Utility\InterlockedEnum.cs" />
+    <Compile Include="Utility\JsonDecoder.cs" />
+    <Compile Include="Utility\StateMachineExtensions.cs" />
+    <Compile Include="Utility\StringExtensions.cs" />
+    <Compile Include="Utility\SM4Utils.cs" />
+    <Compile Include="Utility\SubjectExtensions.cs" />
+    <Compile Include="Utility\TaskQueue.cs" />
+    <Compile Include="ZBrainProxyProvider\ChildStartup.cs" />
+    <Compile Include="ZBrainProxyProvider\CoreTalkerKestrelOwinServer.cs" />
+    <Compile Include="ZBrainProxyProvider\Extensions.cs" />
+    <Compile Include="ZBrainProxyProvider\LoggingMiddleware.cs" />
+    <Compile Include="ZBrainProxyProvider\Startup.cs" />
+    <Compile Include="ZBrainProxyProvider\WorkerApiController.cs" />
+    <Compile Include="ZBrainProxyProvider\ZBrainProxyProvider.cs" />
+    <Compile Include="ZBrainProxyProvider\ZBrainResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="..\..\II.RPA.RunTimeHost\Protos\runtime_service.proto" GrpcServices="Client">
+      <Link>ClientProtos\runtime_service.proto</Link>
+    </Protobuf>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\II.RPA.Core.Contracts\II.RPA.Core.Contracts.csproj" />
+    <ProjectReference Include="..\..\GrpcDotNetNamedPipes\GrpcDotNetNamedPipes.csproj" />
+    <ProjectReference Include="..\..\II.RPA.Core.GRPCServiceClient\II.RPA.Core.GRPCServiceClient.csproj" />
+    <ProjectReference Include="..\..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+    <ProjectReference Include="..\II.RPA.Core\II.RPA.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="CommonServiceLocator" Version="2.0.4" />
+    <PackageReference Include="DynamicData" Version="7.12.11" />
+    <PackageReference Include="Google.Protobuf" Version="3.35.1" />
+    <PackageReference Include="Grpc.Core.Api" Version="2.62.0" />
+    <PackageReference Include="IPA.Ubases" Version="1.0.0.22" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.3.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Owin" Version="5.3.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.OwinSelfHost" Version="5.3.0" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Owin" Version="4.2.2" />
+    <PackageReference Include="Microsoft.Owin.Host.HttpListener" Version="4.2.2" />
+    <PackageReference Include="Microsoft.Owin.Hosting" Version="4.2.2" />
+    <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.2" />
+    <PackageReference Include="Owin" Version="1.0" />
+    <PackageReference Include="Polly" Version="7.2.2" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
+    <PackageReference Include="Stateless" Version="5.15.0" />
+    <PackageReference Include="System.Reactive" Version="5.0.0" />
+    <PackageReference Include="Unity.Abstractions" Version="5.11.7" />
+    <PackageReference Include="Unity.Container" Version="5.11.11" />
+    <PackageReference Include="Unity.ServiceLocation" Version="5.11.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\Accessibility.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\portable.bouncycastle\1.9.0\lib\netstandard2.0\BouncyCastle.Crypto.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\commonservicelocator\2.0.4\lib\netcoreapp2.0\CommonServiceLocator.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\controlzex\4.2.2\lib\netcoreapp3.1\ControlzEx.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\dynamicdata\7.12.11\lib\net6.0\DynamicData.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\entityframework\6.3.0\lib\netstandard2.1\EntityFramework.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\entityframework\6.3.0\lib\netstandard2.1\EntityFramework.SqlServer.dll" />
+    <ReferencePath Include="C:\Works\ii.rpa\src\FlaUI.Core\bin\x86\Debug\FlaUI.Core.dll" />
+    <ReferencePath Include="C:\Works\ii.rpa\src\FlaUI.UIA2\bin\x86\Debug\FlaUI.UIA2.dll" />
+    <ReferencePath Include="C:\Works\ii.rpa\src\FlaUI.UIA3\bin\x86\Debug\FlaUI.UIA3.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\fluent.ribbon\7.1.0\lib\netcoreapp3.0\Fluent.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\google.protobuf\3.35.1\lib\net5.0\Google.Protobuf.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\grpc.core.api\2.62.0\lib\netstandard2.1\Grpc.Core.Api.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\grpc.core\2.46.6\lib\netstandard2.0\Grpc.Core.dll" />
+    <ReferencePath Include="C:\Works\ii.rpa\src\GrpcDotNetNamedPipes\bin\x86\Debug\GrpcDotNetNamedPipes.dll" />
+    <ReferencePath Include="C:\Works\ii.rpa\src\II.RPA.Communication\bin\x86\Debug\II.RPA.Communication.dll" />
+    <ReferencePath Include="C:\Works\ii.rpa\src\II.RPA.Core.Abstractions\bin\x86\Debug\II.RPA.Core.Abstractions.dll" />
+    <ReferencePath Include="C:\Works\ii.rpa\src\II.RPA.Core.Contracts\bin\x86\Debug\II.RPA.Core.Contracts.dll" />
+    <ReferencePath Include="C:\Works\ii.rpa\bin\II.RPA.PluginLoader\II.RPA.Core.dll" />
+    <ReferencePath Include="C:\Works\ii.rpa\src\II.RPA.Core.GRPCServiceClient\bin\x86\Debug\II.RPA.Core.GRPCServiceClient.dll" />
+    <ReferencePath Include="C:\Works\ii.rpa\src\II.RPA.Core.WorkerProtocol\bin\x86\Debug\II.RPA.Core.WorkerProtocol.dll" />
+    <ReferencePath Include="C:\Works\ii.rpa\src\II.RPA.IPC\bin\x86\Debug\II.RPA.IPC.dll" />
+    <ReferencePath Include="C:\Works\ii.rpa\src\II.RPA.Logging\bin\x86\Debug\II.RPA.Logging.dll" />
+    <ReferencePath Include="C:\Works\ii.rpa\src\II.RPA.NamedPipeWrapper\bin\x86\Debug\II.RPA.NamedPipeWrapper.dll" />
+    <ReferencePath Include="C:\Works\ii.rpa\src\II.RPA.Plugin.Core\bin\x86\Debug\II.RPA.Plugin.Core.dll" />
+    <ReferencePath Include="C:\Works\ii.rpa\src\II.RPA.WinAutomation.CommonUtility\bin\x86\Debug\II.RPA.WinAutomation.CommonUtility.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\interop.uiautomationclient\10.18362.0\lib\netcoreapp3.0\Interop.UIAutomationClient.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\ipa.ubases\1.0.0.22\lib\netstandard2.0\IPA.Ubases.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Antiforgery.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Authentication.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Authentication.BearerToken.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Authentication.Cookies.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Authentication.Core.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Authentication.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Authentication.OAuth.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Authorization.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Authorization.Policy.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Components.Authorization.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Components.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Components.Endpoints.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Components.Forms.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Components.Server.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Components.Web.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Connections.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.CookiePolicy.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Cors.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Cryptography.Internal.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.DataProtection.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.DataProtection.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.DataProtection.Extensions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Diagnostics.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Diagnostics.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Diagnostics.HealthChecks.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.HostFiltering.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Hosting.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Hosting.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Html.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Http.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Http.Connections.Common.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Http.Connections.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Http.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Http.Extensions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Http.Features.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Http.Results.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.HttpLogging.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.HttpOverrides.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.HttpsPolicy.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Identity.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Localization.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Localization.Routing.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Metadata.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Mvc.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Mvc.ApiExplorer.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Mvc.Core.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Mvc.Cors.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Mvc.DataAnnotations.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Mvc.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Mvc.Formatters.Json.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Mvc.Formatters.Xml.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Mvc.Localization.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Mvc.Razor.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Mvc.RazorPages.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Mvc.TagHelpers.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Mvc.ViewFeatures.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.OutputCaching.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.RateLimiting.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Razor.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Razor.Runtime.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.RequestDecompression.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.ResponseCaching.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.ResponseCompression.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Rewrite.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Routing.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Routing.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Server.HttpSys.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Server.IIS.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Server.IISIntegration.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Server.Kestrel.Core.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Server.Kestrel.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Server.Kestrel.Transport.NamedPipes.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Quic.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.Session.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.SignalR.Common.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.SignalR.Core.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.SignalR.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.StaticAssets.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.StaticFiles.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.WebSockets.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.AspNetCore.WebUtilities.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\microsoft.bcl.asyncinterfaces\8.0.0\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\Microsoft.CSharp.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Caching.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Caching.Memory.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Configuration.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Configuration.Binder.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Configuration.CommandLine.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Configuration.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Configuration.FileExtensions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Configuration.Ini.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Configuration.Json.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Configuration.KeyPerFile.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Configuration.UserSecrets.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Configuration.Xml.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.DependencyInjection.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Diagnostics.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Diagnostics.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Diagnostics.HealthChecks.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Features.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.FileProviders.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.FileProviders.Composite.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.FileProviders.Embedded.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.FileProviders.Physical.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.FileSystemGlobbing.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Hosting.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Hosting.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Http.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Identity.Core.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Identity.Stores.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Localization.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Localization.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Logging.Abstractions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Logging.Configuration.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Logging.Console.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Logging.Debug.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Logging.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Logging.EventLog.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Logging.EventSource.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Logging.TraceSource.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.ObjectPool.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Options.DataAnnotations.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Options.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Primitives.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.Validation.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Extensions.WebEncoders.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.JSInterop.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Net.Http.Headers.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\microsoft.owin\4.2.2\lib\net45\Microsoft.Owin.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\microsoft.owin.host.httplistener\4.2.2\lib\net45\Microsoft.Owin.Host.HttpListener.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\microsoft.owin.hosting\4.2.2\lib\net45\Microsoft.Owin.Hosting.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\Microsoft.VisualBasic.Core.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\Microsoft.VisualBasic.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\Microsoft.VisualBasic.Forms.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Win32.Primitives.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\Microsoft.Win32.Registry.AccessControl.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\Microsoft.Win32.Registry.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\Microsoft.Win32.SystemEvents.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\microsoft.xaml.behaviors.wpf\1.1.19\lib\netcoreapp3.0\Microsoft.Xaml.Behaviors.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\mscorlib.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\netstandard.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\newtonsoft.json.bson\1.0.2\lib\netstandard2.0\Newtonsoft.Json.Bson.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\newtonsoft.json\13.0.3\lib\net6.0\Newtonsoft.Json.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\owin\1.0.0\lib\net40\Owin.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\polly\7.2.2\lib\netstandard2.0\Polly.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\PresentationCore.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\PresentationFramework.Aero.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\PresentationFramework.Aero2.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\PresentationFramework.AeroLite.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\PresentationFramework.Classic.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\PresentationFramework.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\PresentationFramework.Luna.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\PresentationFramework.Royale.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\PresentationUI.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\ReachFramework.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\serilog\2.10.0\lib\netstandard2.1\Serilog.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\serilog.enrichers.process\2.0.2\lib\netstandard2.0\Serilog.Enrichers.Process.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\serilog.enrichers.thread\3.1.0\lib\netstandard2.0\Serilog.Enrichers.Thread.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\serilog.extensions.logging\2.0.4\lib\netstandard2.0\Serilog.Extensions.Logging.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\serilog.formatting.compact\1.1.0\lib\netstandard2.0\Serilog.Formatting.Compact.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\serilog.settings.appsettings\2.2.2\lib\netstandard2.0\Serilog.Settings.AppSettings.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\serilog.sinks.file\5.0.0\lib\net5.0\Serilog.Sinks.File.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\serilog.sinks.map\1.0.2\lib\net5.0\Serilog.Sinks.Map.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\stateless\5.15.0\lib\net8.0\Stateless.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.AppContext.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Buffers.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.CodeDom.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Collections.Concurrent.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Collections.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Collections.Immutable.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Collections.NonGeneric.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Collections.Specialized.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.ComponentModel.Annotations.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.ComponentModel.DataAnnotations.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.ComponentModel.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.ComponentModel.EventBasedAsync.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.ComponentModel.Primitives.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.ComponentModel.TypeConverter.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Configuration.ConfigurationManager.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Configuration.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Console.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Core.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Data.Common.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Data.DataSetExtensions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Data.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\system.data.sqlclient\4.9.1\lib\net8.0\System.Data.SqlClient.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\system.data.sqlite.core\1.0.112\lib\netstandard2.0\System.Data.SQLite.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\system.data.sqlite.ef6\1.0.112\lib\netstandard2.1\System.Data.SQLite.EF6.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\system.data.sqlite.linq\1.0.112\lib\net46\System.Data.SQLite.Linq.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Design.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Diagnostics.Contracts.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Diagnostics.Debug.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Diagnostics.DiagnosticSource.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Diagnostics.EventLog.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Diagnostics.FileVersionInfo.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Diagnostics.PerformanceCounter.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Diagnostics.Process.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Diagnostics.StackTrace.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Diagnostics.TextWriterTraceListener.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Diagnostics.Tools.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Diagnostics.TraceSource.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Diagnostics.Tracing.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.DirectoryServices.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Drawing.Common.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Drawing.Design.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Drawing.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Drawing.Primitives.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Dynamic.Runtime.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Formats.Asn1.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\System.Formats.Cbor.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Formats.Nrbf.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Formats.Tar.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Globalization.Calendars.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Globalization.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Globalization.Extensions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.IO.Compression.Brotli.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.IO.Compression.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.IO.Compression.FileSystem.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.IO.Compression.ZipFile.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.IO.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.IO.FileSystem.AccessControl.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.IO.FileSystem.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.IO.FileSystem.DriveInfo.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.IO.FileSystem.Primitives.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.IO.FileSystem.Watcher.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.IO.IsolatedStorage.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.IO.MemoryMappedFiles.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.IO.Packaging.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.IO.Pipelines.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.IO.Pipes.AccessControl.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.IO.Pipes.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.IO.UnmanagedMemoryStream.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Linq.AsyncEnumerable.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Linq.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Linq.Expressions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Linq.Parallel.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Linq.Queryable.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\system.management\8.0.0\lib\net8.0\System.Management.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Memory.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.Http.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\microsoft.aspnet.webapi.client\6.0.0\lib\netstandard2.0\System.Net.Http.Formatting.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.Http.Json.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.HttpListener.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.Mail.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.NameResolution.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.NetworkInformation.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.Ping.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.Primitives.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.Quic.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.Requests.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.Security.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.ServerSentEvents.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.ServicePoint.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.Sockets.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.WebClient.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.WebHeaderCollection.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.WebProxy.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.WebSockets.Client.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Net.WebSockets.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Numerics.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Numerics.Vectors.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.ObjectModel.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Printing.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Private.Windows.Core.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Private.Windows.GdiPlus.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\system.reactive\5.0.0\lib\net5.0\System.Reactive.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Reflection.DispatchProxy.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Reflection.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Reflection.Emit.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Reflection.Emit.ILGeneration.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Reflection.Emit.Lightweight.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Reflection.Extensions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Reflection.Metadata.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Reflection.Primitives.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Reflection.TypeExtensions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Resources.Extensions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Resources.Reader.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Resources.ResourceManager.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Resources.Writer.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Runtime.CompilerServices.Unsafe.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Runtime.CompilerServices.VisualC.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Runtime.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Runtime.Extensions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Runtime.Handles.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Runtime.InteropServices.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Runtime.InteropServices.JavaScript.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Runtime.Intrinsics.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Runtime.Loader.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Runtime.Numerics.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Runtime.Serialization.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Runtime.Serialization.Formatters.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Runtime.Serialization.Json.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Runtime.Serialization.Primitives.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Runtime.Serialization.Xml.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Security.AccessControl.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Security.Claims.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Security.Cryptography.Algorithms.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Security.Cryptography.Cng.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Security.Cryptography.Csp.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Security.Cryptography.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Security.Cryptography.Encoding.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Security.Cryptography.OpenSsl.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Security.Cryptography.Pkcs.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Security.Cryptography.Primitives.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Security.Cryptography.ProtectedData.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Security.Cryptography.X509Certificates.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Security.Cryptography.Xml.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Security.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Security.Permissions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Security.Principal.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Security.Principal.Windows.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Security.SecureString.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\system.servicemodel.primitives\8.1.2\ref\net8.0\System.ServiceModel.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\system.servicemodel.primitives\8.1.2\ref\net8.0\System.ServiceModel.Duplex.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\system.servicemodel.netframingbase\8.1.2\ref\net8.0\System.ServiceModel.NetFramingBase.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\system.servicemodel.netnamedpipe\8.1.2\lib\net8.0\System.ServiceModel.NetNamedPipe.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\system.servicemodel.primitives\8.1.2\ref\net8.0\System.ServiceModel.Primitives.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\system.servicemodel.primitives\8.1.2\ref\net8.0\System.ServiceModel.Security.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.ServiceModel.Web.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.ServiceProcess.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Text.Encoding.CodePages.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Text.Encoding.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Text.Encoding.Extensions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Text.Encodings.Web.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Text.Json.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Text.RegularExpressions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Threading.AccessControl.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Threading.Channels.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Threading.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Threading.Overlapped.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\ref\net10.0\System.Threading.RateLimiting.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Threading.Tasks.Dataflow.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Threading.Tasks.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Threading.Tasks.Extensions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Threading.Tasks.Parallel.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Threading.Thread.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Threading.ThreadPool.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Threading.Timer.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Transactions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Transactions.Local.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.ValueTuple.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Web.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\microsoft.aspnet.webapi.core\5.3.0\lib\net45\System.Web.Http.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\microsoft.aspnet.webapi.owin\5.3.0\lib\net45\System.Web.Http.Owin.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Web.HttpUtility.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Windows.Controls.Ribbon.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Windows.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Windows.Extensions.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Windows.Forms.Design.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Windows.Forms.Design.Editors.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Windows.Forms.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Windows.Forms.Primitives.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Windows.Input.Manipulations.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Windows.Presentation.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Windows.Primitives.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\System.Xaml.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Xml.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Xml.Linq.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Xml.ReaderWriter.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Xml.Serialization.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Xml.XDocument.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Xml.XmlDocument.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Xml.XmlSerializer.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Xml.XPath.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\ref\net10.0\System.Xml.XPath.XDocument.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\UIAutomationClient.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\UIAutomationClientSideProviders.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\UIAutomationProvider.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\UIAutomationTypes.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\unity.abstractions\5.11.7\lib\netcoreapp3.0\Unity.Abstractions.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\unity.container\5.11.11\lib\netcoreapp3.0\Unity.Container.dll" />
+    <ReferencePath Include="C:\Users\EDY\.nuget\packages\unity.servicelocation\5.11.1\lib\netcoreapp2.0\Unity.ServiceLocation.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\WindowsBase.dll" />
+    <ReferencePath Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\ref\net10.0\WindowsFormsIntegration.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="C:\Works\ii.rpa\src\II.RPA.Core\II.RPA.Core.Provider\obj\x86\Debug\PluginProvider\ScreenSaveWindow.g.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files\dotnet\sdk\10.0.302\Sdks\Microsoft.NET.Sdk\targets\..\analyzers\Microsoft.CodeAnalysis.CSharp.NetAnalyzers.dll" />
+    <Analyzer Include="C:\Program Files\dotnet\sdk\10.0.302\Sdks\Microsoft.NET.Sdk\targets\..\analyzers\Microsoft.CodeAnalysis.NetAnalyzers.dll" />
+    <Analyzer Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\analyzers/dotnet/cs/Microsoft.Interop.ComInterfaceGenerator.dll" />
+    <Analyzer Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\analyzers/dotnet/cs/Microsoft.Interop.JavaScript.JSImportGenerator.dll" />
+    <Analyzer Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\analyzers/dotnet/cs/Microsoft.Interop.LibraryImportGenerator.dll" />
+    <Analyzer Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\analyzers/dotnet/cs/Microsoft.Interop.SourceGeneration.dll" />
+    <Analyzer Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\analyzers/dotnet/cs/System.Text.Json.SourceGeneration.dll" />
+    <Analyzer Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.10\analyzers/dotnet/cs/System.Text.RegularExpressions.Generator.dll" />
+    <Analyzer Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\analyzers/dotnet/System.Windows.Forms.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\analyzers/dotnet/cs/System.Windows.Forms.Analyzers.CSharp.dll" />
+    <Analyzer Include="C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\10.0.10\analyzers/dotnet/cs/System.Windows.Forms.Analyzers.CodeFixes.CSharp.dll" />
+    <Analyzer Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\analyzers/dotnet/cs/Microsoft.AspNetCore.App.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\analyzers/dotnet/cs/Microsoft.AspNetCore.App.CodeFixes.dll" />
+    <Analyzer Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\analyzers/dotnet/cs/Microsoft.AspNetCore.App.SourceGenerators.dll" />
+    <Analyzer Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\analyzers/dotnet/cs/Microsoft.AspNetCore.Components.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\analyzers/dotnet/cs/Microsoft.Extensions.Validation.ValidationsGenerator.dll" />
+    <Analyzer Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\analyzers/dotnet/cs/Microsoft.Extensions.Logging.Generators.dll" />
+    <Analyzer Include="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\10.0.10\analyzers/dotnet/cs/Microsoft.Extensions.Options.SourceGeneration.dll" />
+  </ItemGroup>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+</Project>

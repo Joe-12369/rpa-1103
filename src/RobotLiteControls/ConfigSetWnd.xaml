@@ -1,0 +1,39 @@
+﻿<Fluent:RibbonWindow  Name="Windows"
+        x:Class="RobotLiteControls.ConfigSetWnd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RobotLiteControls"
+        xmlns:Fluent="clr-namespace:Fluent;assembly=Fluent"    
+        mc:Ignorable="d"
+        IsIconVisible="False"
+        MinHeight="210" MaxHeight="700" MinWidth="468" MaxWidth="468"  WindowStartupLocation="CenterScreen" BorderThickness="0" SizeToContent="Height" FontSize="13" TitleBarHeight="30"  TitleForeground="#FF5C6F88" TitleBackground="#F7F7F7">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Fluent;Component/Themes/Generic.xaml" />
+                <ResourceDictionary Source="IIDefaultStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <ScrollViewer  Margin="16,0,0,80" HorizontalAlignment="Left"  VerticalAlignment="Top" VerticalScrollBarVisibility="Auto">
+                <StackPanel MinWidth="436"  Orientation="Vertical" x:Name="ParameterPanl"/>
+        </ScrollViewer>
+        <DockPanel Width="468"  Height="70" VerticalAlignment="Bottom" Margin="0,0,0,10" HorizontalAlignment="Left">
+            <StackPanel>
+                <Line  Stroke="#ECEEF2" StrokeThickness="1" X1="2" X2="468" Y1="0" Y2="0"></Line>
+                <StackPanel Orientation="Horizontal" Margin="0,28,0,0">
+                    <StackPanel Height="20"  Margin="32,0,0,0">
+                        <CheckBox x:Name="IsRemember" Visibility="Hidden">保存当前值</CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="151,0,0,0">
+                        <Button Height="30px" Width="80px" Style="{StaticResource BtnDeleteStyle}" x:Name="btnCancel" Content="取消" Margin="0,0,8,0" Click="btnCancel_Click" />
+                        <Button Height="30px" Width="80px" Style="{StaticResource BtnInfoStyle}" x:Name="btnOK" Click="btnOK_Click"  Margin="0,0,25,0" Content="确认"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</Fluent:RibbonWindow>

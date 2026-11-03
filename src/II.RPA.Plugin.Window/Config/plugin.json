@@ -1,0 +1,21 @@
+{
+  "name": "Window",
+  "title": "Window窗口功能依赖包",
+  "version": "3.3.5.0",
+  "type": "1",
+  "depend": "7.3.5",
+  "isBasic": 1,
+  "DependRef": [
+    {
+      "name": "CommonDLLBase",
+      "version": "3.3.5.0"
+    },
+    {
+      "name": "Element",
+      "version": "3.3.5.0"
+    }
+  ],
+  "introduction": "为操作 Window 窗口提供了底层能力支持",
+  "description": "在操作 Windows 窗口时需要依赖此基础组件包。",
+  "releaseTime": 1634054400
+}

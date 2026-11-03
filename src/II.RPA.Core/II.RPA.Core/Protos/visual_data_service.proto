@@ -1,0 +1,92 @@
+syntax = "proto3";
+package rpa.core.visual.data;
+
+service VisualDataService 
+{
+	//生成组件
+	rpc GenerateComponentUnary(GenerateComponentRequest) returns (VisualDataResponse);
+	//状态控制
+	rpc StatusControlUnary(StatusControlRequest) returns (VisualDataResponse);
+	//状态检查
+	rpc StatusCheckUnary(StatusCheckRequest) returns (VisualDataResponse);
+	//订阅消息
+	rpc ServerStreaming(Message) returns(stream Message);
+	//Excel录制状态通知
+	rpc ExcelStatusNotifyUnary(ExcelStatusRequest) returns (VisualDataResponse);
+	//埋点上报
+	rpc EventTrackerUnary(EventRequest) returns(VisualDataResponse);
+}
+message Message
+{
+	//消息Id、由请求端创建、响应端原样返回
+	//请求端需要验证消息Id的一致
+    int32 Message_Id = 1;
+	//身份、目前仅有一个excel插件使用：excel_extension
+    string Client_Type = 2;
+	//消息体、json字符串、目前只传入流程编辑器的状态"{"processcreatorstatus":0/1}" 0:启动 1:未启动
+	string Payload = 3;
+}
+message StatusControlRequest
+{
+	//随机8位数字、备用、可忽略
+    int32 Message_Id = 1;
+    //行为类型、备用、可忽略
+	string Action = 2;
+	//控制流程编辑器的状态字段
+	//启动拾取：0 停止拾取：1
+	string Status = 3;
+	//客户端身份、目前仅有一个excel插件使用：excel_extension
+	string Client_Type = 4;
+	//消息体、一般为json字符串、备用、可忽略
+	string Payload = 5;
+}
+message StatusCheckRequest
+{
+	//随机8位数字、备用、可忽略
+    int32 Message_Id = 1;
+	//客户端身份、目前仅有一个excel插件使用：excel_extension
+	string Client_Type = 2;
+	//消息体、一般为json字符串、备用、可忽略
+	string Payload = 3;
+}
+message GenerateComponentRequest
+{
+	//随机8位数字、备用、可忽略
+    int32 Message_Id = 1;
+    //行为类型、备用、可忽略
+	string Action = 2;
+	//身份、目前仅有一个excel插件使用：excel_extension
+	string Client_Type = 3;
+	//消息体、一般为json字符串、json格式按照约定
+	string Payload = 4;
+}
+message ExcelStatusRequest
+{
+	//随机8位数字、备用、可忽略
+    int32 Message_Id = 1;
+    //行为类型、备用、可忽略
+	string Action = 2;
+	//控制流程编辑器的状态字段
+	//正在录制：0 停止录制：1
+	string Status = 3;
+	//客户端身份、目前仅有一个excel插件使用：excel_extension
+	string Client_Type = 4;
+	//消息体、一般为json字符串、备用、可忽略
+	string Payload = 5;
+}
+message VisualDataResponse
+{
+	//随机8位数字、备用、可忽略
+    int32 Message_Id = 1;
+	//0:成功返回 其他为异常
+	int32 Code = 2;
+	//消息体、一般为json字符串
+	string Payload = 3;
+}
+message EventRequest
+{
+	//身份、目前仅有一个excel插件使用：excel_extension
+    string Client_Type = 1;
+	//消息体、json字符串
+	string Payload = 2;
+}

@@ -1,0 +1,49 @@
+files:
+  - ..\bin\II.RPA.PluginLoader\II.RPA.PluginLoader.dll
+  - ..\bin\II.RPA.PluginLoader\II.RPA.Plugin.Core.dll
+  - ..\bin\II.RPA.PluginLoader\II.RPA.WinAutomation.CommonUtility.dll
+  - ..\bin\II.RPA.PluginLoader\II.RPA.Logging.dll
+  - ..\bin\II.RPA.PluginLoader\II.RPA.IPC.dll
+  - ..\bin\II.RPA.PluginLoader\II.RPA.Core.Server.exe
+  - ..\bin\II.RPA.PluginLoader\II.RPA.Core.Provider.dll
+  - ..\bin\II.RPA.PluginLoader\II.RPA.Core.GRPCServiceClient.dll
+  - ..\bin\II.RPA.PluginLoader\II.RPA.Core.GRPCService.dll
+  - ..\bin\II.RPA.PluginLoader\II.RPA.Core.dll
+  - ..\bin\II.RPA.PluginLoader\II.RPA.RuntimeHost.exe
+  - ..\bin\II.RPA.PluginLoader\runtime\Element\II.RPA.Plugin.GUI.dll
+  - ..\bin\II.RPA.PluginLoader\runtime\Browsers\II.RPA.Plugin.Browsers.dll
+  - ..\bin\II.RPA.PluginLoader\runtime\DesktopInput\II.RPA.Plugin.DesktopInput.dll
+  - ..\bin\II.RPA.PluginLoader\runtime\GUICV\II.RPA.Plugin.CV.dll
+  - ..\bin\II.RPA.PluginLoader\runtime\GUIIE\II.RPA.Plugin.IE.dll
+  - ..\bin\II.RPA.PluginLoader\runtime\GUIJava\II.RPA.Plugin.Java.dll
+  - ..\bin\II.RPA.PluginLoader\runtime\GUISAP\II.RPA.Plugin.SAP.dll
+  - ..\bin\II.RPA.PluginLoader\runtime\GUIWindows\II.RPA.Plugin.Windows.dll
+  - ..\bin\II.RPA.PluginLoader\runtime\GUIZExplorer\II.RPA.Plugin.ZExplorer.dll
+  - ..\bin\II.RPA.PluginLoader\runtime\WdtErp\II.RPA.Plugin.WdtErp.dll
+  - ..\bin\II.RPA.PluginLoader\runtime\Database\II.RPA.Plugin.Database.dll
+  - ..\bin\II.RPA.PluginLoader\runtime\OutLook\II.RPA.Plugin.OutLook.dll
+  - ..\bin\II.RPA.ZDeskTop\II.RPA.ZDeskTop.exe
+  - ..\bin\II.RPA.ZDeskTop\II.Framework.UI.dll
+  - ..\bin\II.RPA.ZDeskTop\II.Framework.dll
+  - ..\bin\II.RPA.PluginLoader\II.RPA.MobileDeviceManager.exe
+  - ..\bin\II.RPA.PluginLoader\II.RPA.MobileDeviceManager.GrpcService.dll
+  - ..\bin\II.RPA.PluginLoader\II.RPA.MobileProvider.exe
+  - ..\bin\II.RPA.PluginLoader\wfreerdp.exe
+  - ..\bin\II.RPA.PluginLoader\owfreerdp.exe
+  - ..\bin\II.RPA.PluginLoader\IPA.Ubases.dll
+  - ..\bin\II.RPA.PluginLoader\runtime\GoogleTable\II.RPA.Plugin.GoogleSheets.dll
+
+glob:
+  - ..\bin\II.RPA.*\II.RPA.*.dll
+  - ..\bin\II.RPA.*\II.RPA.*.exe
+  - ..\bin\II.RPA.PluginLoader\runtime\*\II.RPA.*.dll
+  - ..\bin\II.RPA.PluginLoader\runtime\GUIWindows\OwnerDraw\*.dll
+  - ..\bin\II.RPA.PluginLoader\runtime\GUIWindows\OwnerDraw\*.exe
+  - ..\bin\**\WindowsAccessBridgeInterop.dll
+  - ..\bin\LiteControls\RobotLiteControlsNew.dll
+exclude_glob:
+  - ..\bin\II.RPA.Plugin\II.RPA.Plugin.Test.exe
+  - ..\bin\II.RPA.Plugin\II.RPA.*.dll
+  # This prebuilt helper is already Authenticode-signed and its exact hash is
+  # pinned by VclGridAccBridge. Re-signing would change the allowlisted image.
+  - ..\bin\II.RPA.PluginLoader\runtime\GUIWindows\OwnerDraw\DelphiRttiBridge.dll

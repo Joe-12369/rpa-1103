@@ -1,0 +1,157 @@
+{
+  "active_bit": false,
+  "active_permissions": {
+    "api": [
+      "activeTab",
+      "cookies",
+      "debugger",
+      "downloads",
+      "management",
+      "nativeMessaging",
+      "storage",
+      "tabs",
+      "webNavigation",
+      "scripting",
+      "offscreen"
+    ],
+    "explicit_host": [
+      "<all_urls>"
+    ],
+    "manifest_permissions": [],
+    "scriptable_host": [
+      "file:///*",
+      "ftp://*/*",
+      "http://*/*",
+      "https://*/*"
+    ]
+  },
+  "allowlist": 1,
+  "creation_flags": 1,
+  "filtered_service_worker_events": {
+    "webNavigation.onCompleted": [
+      {}
+    ],
+    "webNavigation.onErrorOccurred": [
+      {}
+    ],
+    "windows.onCreated": [
+      {}
+    ],
+    "windows.onRemoved": [
+      {}
+    ]
+  },
+  "first_install_time": "13408705671306973",
+  "from_webstore": false,
+  "granted_permissions": {
+    "api": [
+      "activeTab",
+      "cookies",
+      "debugger",
+      "downloads",
+      "management",
+      "nativeMessaging",
+      "storage",
+      "tabs",
+      "webNavigation",
+      "scripting",
+      "offscreen"
+    ],
+    "explicit_host": [
+      "<all_urls>"
+    ],
+    "manifest_permissions": [],
+    "scriptable_host": [
+      "file:///*",
+      "ftp://*/*",
+      "http://*/*",
+      "https://*/*"
+    ]
+  },
+  "last_update_time": "13408705671306973",
+  "location": 1,
+  "manifest": {
+    "action": {
+      "default_icon": {
+        "_INDEED_128": "icons/indeed-128x128.png",
+        "_INDEED_16": "icons/indeed-16x16.png",
+        "_INDEED_32": "icons/indeed-32x32.png",
+        "_INDEED_48": "icons/indeed-48x48.png"
+      },
+      "default_popup": "pages/popup.html",
+      "default_title": "实在智能 RPA 插件"
+    },
+    "background": {
+      "service_worker": "service_worker.js"
+    },
+    "content_scripts": [
+      {
+        "all_frames": true,
+        "js": [
+          "content.js"
+        ],
+        "match_about_blank": true,
+        "matches": [
+          "http://*/*",
+          "https://*/*",
+          "ftp://*/*",
+          "file://*/*"
+        ],
+        "run_at": "document_start"
+      }
+    ],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self' ; object-src 'self'; font-src 'self' https://fonts.gstatic.com/ https://res-1.cdn.office.net/;"
+    },
+    "current_locale": "zh_CN",
+    "default_locale": "zh_CN",
+    "description": "实在Agent插件，v3版本能力再升级，查询数据、处理文档、填报表单、网页交互等各类网页操作场景轻松应对",
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "icons": {
+      "_INDEED_128": "icons/indeed-128x128.png",
+      "_INDEED_16": "icons/indeed-16x16.png",
+      "_INDEED_32": "icons/indeed-32x32.png",
+      "_INDEED_48": "icons/indeed-48x48.png"
+    },
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAme2hdLlrTv62nf3CTBPTG8KFAM+yhDN2TJDGknF83rRAn9d6CJUVqxPf2uofVebo0/6/ch3KJS68PyFYs2ot6QnlN20ZQKd3VOwOEPWUyWh0ETwaVBmQUJQVqa4FFDqwHAof6IUcba0P49PKyPEmnHGHs1o5V90t5bB2nnL0FwP+lSQj73di39ynQ8cENP/Ui7gTKnhkAHXWZU2ljz/6ZYs4yGfhng21TLf/d//Xi3JYb8Irv/IkzkT9J15BRgySNfu6vG6bkDl5JR8tJ3dJcKVMY3jTmSWpOcz/fZNyRk6eB2JXe2m1b51Mua3853SISHpoozzSBAgm9mOO8D8AmwIDAQAB",
+    "manifest_version": 3,
+    "name": "实在Agent：AI智能体助理，开启智能办公新范式",
+    "options_ui": {
+      "open_in_tab": true,
+      "page": "pages/options.html"
+    },
+    "permissions": [
+      "storage",
+      "cookies",
+      "management",
+      "tabs",
+      "debugger",
+      "offscreen",
+      "nativeMessaging",
+      "webNavigation",
+      "downloads",
+      "scripting",
+      "activeTab"
+    ],
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "4.0.1.235",
+    "version_name": "4.0.1.235+stable-260707.1514"
+  },
+  "needs_sync": true,
+  "path": "pcopnibgkbdnlaeagepigbboebdfejmb\\4.0.1.235_0",
+  "service_worker_registration_info": {
+    "version": "4.0.1.235"
+  },
+  "serviceworkerevents": [
+    "debugger.onDetach",
+    "debugger.onEvent",
+    "runtime.onInstalled",
+    "storage.onChanged",
+    "tabs.onRemoved"
+  ],
+  "was_installed_by_default": false,
+  "was_installed_by_oem": false,
+  "withholding_permissions": false
+}

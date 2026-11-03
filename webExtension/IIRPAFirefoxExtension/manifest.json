@@ -1,0 +1,58 @@
+{
+  "name": "实在RPA-V2",
+  "version": "2.7.0",
+  "description": "Ai-indeed WebBrowser Automation",
+  "web_accessible_resources": [
+    "executor/index.js"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "management",
+    "nativeMessaging",
+    "tabs",
+    "webNavigation",
+    "cookies",
+    "clipboardRead",
+    "clipboardWrite",
+    "downloads",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "jquery.js",
+      "rpa_server.js",
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "match_about_blank": true,
+      "all_frames": true,
+      "js": [
+        "content.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "file://*/*",
+        "ftp://*/*"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "applications": {
+    "gecko": {
+      "id": "super.ai.indeed@gmail.com",
+      "strict_min_version": "58.0"
+    }
+  },
+  "icons": {
+    "16": "icons/AiIndeedRPA16.png",
+    "48": "icons/AiIndeedRPA48.png",
+    "128": "icons/AiIndeedRPA128.png"
+  },
+  "manifest_version": 2
+}

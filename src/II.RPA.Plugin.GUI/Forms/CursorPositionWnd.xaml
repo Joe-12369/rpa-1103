@@ -1,0 +1,23 @@
+﻿<Window x:Class="II.RPA.Plugin.GUI.CursorPositionWnd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:II.RPA.Plugin.GUI"
+        mc:Ignorable="d"
+        Title="CursorPositionWnd" 
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Background="#01000000"
+        Opacity="0.99"
+        Topmost="True"
+        ShowInTaskbar="False"
+        Loaded="CursorPositionWnd_Loaded"
+        Closing="Window_Closing">
+    
+ 
+    <Canvas x:Name="CaptureCanvas" IsHitTestVisible="False">
+        <Line x:Name="xCrossLine" StrokeThickness="2" Visibility="Hidden"></Line>
+        <Line x:Name="yCrossLine" StrokeThickness="2"  Visibility="Hidden"></Line>
+    </Canvas>
+</Window>

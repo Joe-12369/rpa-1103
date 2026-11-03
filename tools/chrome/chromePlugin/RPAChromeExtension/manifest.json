@@ -1,0 +1,9 @@
+{
+    "name": "ii.rpa.chromenativemsg",
+    "description": "Ai-indeed Native Message Host",
+    "path": "II.RPA.NativeMessagingHost.exe",
+    "type": "stdio",
+    "allowed_origins": [
+      "chrome-extension://dkoieojamolcmboailagjcpjeibdiahd/"
+    ]
+}

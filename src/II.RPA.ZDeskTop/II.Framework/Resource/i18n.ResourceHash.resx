@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="6904439C" xml:space="preserve">
+    <value>AppMeta_63499A3A,OverlayWindow_6904439C</value>
+  </data>
+  <data name="20A159F9" xml:space="preserve">
+    <value>WorkerServiceProvider_A40C22A3</value>
+  </data>
+  <data name="53E086CB" xml:space="preserve">
+    <value>ChildSessionHelper_EDEAA9AB</value>
+  </data>
+  <data name="6859F1D2" xml:space="preserve">
+    <value>BaseIIWindowDictionary_6859F1D2</value>
+  </data>
+  <data name="8DB9E938" xml:space="preserve">
+    <value>BaseIIWindowDictionary_8DB9E938</value>
+  </data>
+  <data name="84E8A59A" xml:space="preserve">
+    <value>BaseIIWindowDictionary_84E8A59A</value>
+  </data>
+  <data name="39B523BD" xml:space="preserve">
+    <value>BaseIIWindowDictionary_39B523BD</value>
+  </data>
+  <data name="58D7C828" xml:space="preserve">
+    <value>BaseIIWindowDictionary_58D7C828</value>
+  </data>
+  <data name="2689D476" xml:space="preserve">
+    <value>Program_8DAE7A1C</value>
+  </data>
+  <data name="9AD34C6B" xml:space="preserve">
+    <value>SettingView_9AD34C6B</value>
+  </data>
+  <data name="ADB11681" xml:space="preserve">
+    <value>SettingView_ADB11681</value>
+  </data>
+  <data name="5A010A8" xml:space="preserve">
+    <value>ZDeskTopWindow_5A010A8,OverlayWindow_5A010A8</value>
+  </data>
+  <data name="E7F8BEAA" xml:space="preserve">
+    <value>ZDeskTopWindow_E7F8BEAA,OverlayWindow_E7F8BEAA</value>
+  </data>
+  <data name="14FBDD42" xml:space="preserve">
+    <value>ZDeskTopWindow_14FBDD42,OverlayWindow_14FBDD42</value>
+  </data>
+  <data name="11703F4D" xml:space="preserve">
+    <value>ZDeskTopWindow_11703F4D</value>
+  </data>
+  <data name="F3B57A9A" xml:space="preserve">
+    <value>ZDeskTopWindow_F3B57A9A</value>
+  </data>
+  <data name="E75E55AF" xml:space="preserve">
+    <value>ZDeskTopWindow_E75E55AF</value>
+  </data>
+  <data name="F3C259DD" xml:space="preserve">
+    <value>ZDeskTopWindow_F3C259DD</value>
+  </data>
+  <data name="7AB0B288" xml:space="preserve">
+    <value>ZDeskTopWindow_7AB0B288</value>
+  </data>
+  <data name="5FE9E236" xml:space="preserve">
+    <value>ZDeskTopWindow.xaml_717A451C</value>
+  </data>
+  <data name="2362E5C7" xml:space="preserve">
+    <value>ZDeskTopWindow.xaml_FF91BFB0,ZDeskTopWindow.xaml_16F92AAD</value>
+  </data>
+  <data name="6422A116" xml:space="preserve">
+    <value>ZDeskTopWindow.xaml_D7FC5A3C</value>
+  </data>
+  <data name="74A0150E" xml:space="preserve">
+    <value>ZDeskTopWindow.xaml_7B1F2724</value>
+  </data>
+  <data name="283D9B28" xml:space="preserve">
+    <value>ZDeskTopWindow.xaml_9F9A4E3F</value>
+  </data>
+  <data name="70B958D5" xml:space="preserve">
+    <value>ZDeskTopWindow.xaml_A77BB03F</value>
+  </data>
+  <data name="3542D019" xml:space="preserve">
+    <value>CommonValidationRule_3AF0D375</value>
+  </data>
+  <data name="5E6E9D3B" xml:space="preserve">
+    <value>NotEmptyValidationRule_88017F3B</value>
+  </data>
+  <data name="1652C914" xml:space="preserve">
+    <value>LoginWindow_1652C914</value>
+  </data>
+  <data name="EB688AC5" xml:space="preserve">
+    <value>LoginWindow_EB688AC5</value>
+  </data>
+  <data name="6D13EC97" xml:space="preserve">
+    <value>LoginWindow_6D13EC97</value>
+  </data>
+  <data name="A8566BA8" xml:space="preserve">
+    <value>LoginWindow_A8566BA8</value>
+  </data>
+  <data name="7023C8A6" xml:space="preserve">
+    <value>LoginWindow_7023C8A6</value>
+  </data>
+  <data name="4AD2EF8F" xml:space="preserve">
+    <value>LoginWindow_4AD2EF8F</value>
+  </data>
+  <data name="565F96F" xml:space="preserve">
+    <value>MessageDialog_565F96F</value>
+  </data>
+  <data name="96547FDD" xml:space="preserve">
+    <value>MessageDialog_96547FDD</value>
+  </data>
+</root>

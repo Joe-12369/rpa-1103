@@ -1,0 +1,32 @@
+syntax = "proto3";
+package rpa.core.flowedit;
+
+service FlowEditService 
+{
+	rpc FactoryMessageStreaming(stream FlowEditMessage) returns (stream FlowEditMessage);
+	rpc CreatorMessageStreaming(stream FlowEditMessage) returns (stream FlowEditMessage);
+
+	rpc FactoryPostUnary(FlowEditMessage) returns (FlowEditMessage);
+	rpc CreatorPostUnary(FlowEditMessage) returns (FlowEditMessage);
+}
+message FlowEditMessage
+{
+	//Streaming通讯必须字段、Unary通讯忽略此字段
+	//消息Id、由server端创建、client端原样返回
+	//对于需要等待返回的消息推送、server端需要实现请求的一致性验证
+    int32 MessageId = 1;
+    //行为类型,内容为字符串,目前有下列行为
+	//creator.open
+	//creator.close
+	//creator.pause
+	//creator.resume
+	//creator.restart
+	string Action = 2;
+	//当前流程package路径,发起请求端传入，接收端原样返回
+	string PackagePath = 3;
+	//消息体、json字符串
+	string Payload = 4;
+	//保留字段、留作扩展
+	string Reserve = 5;
+}
+

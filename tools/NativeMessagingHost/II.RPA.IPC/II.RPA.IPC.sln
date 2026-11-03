@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "II.RPA.IPC", "II.RPA.IPC.csproj", "{BC02D9AE-1979-4152-BE4F-F1B9859E34E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC02D9AE-1979-4152-BE4F-F1B9859E34E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC02D9AE-1979-4152-BE4F-F1B9859E34E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC02D9AE-1979-4152-BE4F-F1B9859E34E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC02D9AE-1979-4152-BE4F-F1B9859E34E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CFAC488C-A077-4553-96AA-450758E09687}
+	EndGlobalSection
+EndGlobal

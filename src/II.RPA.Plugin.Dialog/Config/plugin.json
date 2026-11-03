@@ -1,0 +1,12 @@
+{
+	"name": "Dialog",
+	"title": "自定义对话框依赖包",
+	"version": "3.3.5.0",
+	"type": "1",
+	"depend": "7.3.5",
+	"DependRef": [],
+	"isBasic": 0,
+	"introduction": "自定义对话框能力支持",
+	"description": "在流程中配置自定义对话框，并在流程执行过程输入参数信息后再执行，并输出流程结果。",
+	"releaseTime": 1635995053
+}

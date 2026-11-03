@@ -1,0 +1,20 @@
+syntax = "proto3";
+import "base.proto";
+package rpa.core.win32;
+
+message ProcessInfo
+{
+    int32 pId = 1;
+	string path = 2;
+	string name = 3;
+}
+
+message ProcessInfos
+{
+    repeated ProcessInfo processes = 1;
+}
+
+service Win32Service
+{
+	rpc WhoIsLockingUnary(rpa.core.base.StringValue) returns (ProcessInfos);
+}

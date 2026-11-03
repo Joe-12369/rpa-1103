@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Plugin.Browsers</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.Browsers</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <PlatformTarget>$(Platform)</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <Platforms>x86;x64</Platforms>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+  <ItemGroup>
+    <Compile Include="Config\Configurations.cs" />
+    <Compile Include="PluginPackage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Chrome\**\*.cs" />
+    <Compile Include="Edge\**\*.cs" />
+    <Compile Include="FireFox\**\*.cs" />
+    <Compile Include="Sogou\**\*.cs" />
+    <Compile Include="SuperBrowser\**\*.cs" />
+    <Compile Include="Web360se\**\*.cs" />
+    <Compile Include="Web360X\**\*.cs" />
+    <Compile Include="Chromium\**\*.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Config\config.json"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.GUI.Commons\II.RPA.Plugin.GUI.Commons.csproj" />
+    <ProjectReference Include="..\II.RPA.WebBrowser.Common\II.RPA.WebBrowser.Common.csproj" />
+    <ProjectReference Include="..\..\tools\NativeMessagingHost\II.RPA.IPC\II.RPA.IPC.csproj" />
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.NamedPipeWrapper\II.RPA.NamedPipeWrapper.csproj" />
+    <ProjectReference Include="..\FlaUI.Core\FlaUI.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Management" />
+  </ItemGroup>
+  <Target Name="DeployBrowsersPlugin" AfterTargets="Build">
+    <PropertyGroup>
+      <_PluginName>Browsers</_PluginName>
+      <_SolutionDir Condition="'$(SolutionDir)' != '' And '$(SolutionDir)' != '*Undefined*'">$(SolutionDir)</_SolutionDir>
+      <_SolutionDir Condition="'$(_SolutionDir)' == '' Or '$(_SolutionDir)' == '*Undefined*'">$(MSBuildProjectDirectory)\..\</_SolutionDir>
+      <_RuntimePluginDir>$(_SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimePluginDir>
+    </PropertyGroup>
+    <RemoveDir Directories="$(_RuntimePluginDir)" Condition="Exists('$(_RuntimePluginDir)')" />
+    <MakeDir Directories="$(_RuntimePluginDir)" />
+    <Copy SourceFiles="$(TargetDir)Config\config.json" DestinationFolder="$(_RuntimePluginDir)" SkipUnchangedFiles="false" />
+    <ItemGroup>
+      <_MainOutput Include="$(TargetDir)$(TargetName).*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_MainOutput)" DestinationFolder="$(_RuntimePluginDir)" SkipUnchangedFiles="false" />
+  </Target>
+</Project>

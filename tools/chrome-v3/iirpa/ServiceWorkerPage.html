@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title id="title">实在Agent-网页自动化</title>
+        <style type="text/css">
+            body {
+                margin: 16px;
+                width:  90%;
+                height:  100%;
+            }
+            header {
+                position: relative;
+                width:  100%;
+            }
+            section {
+                clear: both;
+                position: relative;
+                overflow: hidden;
+                min-width: 600px;
+            }
+            section img {
+                float: left;
+            }
+            section div {
+                margin-left: 16px;
+                float: left;
+                width: 512px;
+            }
+            section h2 {
+                margin-top: 5px;
+                margin-bottom: 0px;
+                font-size: 15px;
+                font-weight: 600;
+            }
+            section p {
+                margin-top: 4px;
+                line-height: 18px;
+            }
+            hr {
+                border: none;
+                height: 1px;
+                width: 100%;
+                /* Set the hr color */
+                color: #EEE; /* old IE */
+                background-color: #EEE; /* Modern Browsers */
+            }
+        </style>
+    </head>
+    <body>
+        <section id="status_okay">
+            <hr />
+            <div class="details">
+                <h2 data-i18n="windowTitle">实在Agent-网页自动化</h2>
+                <p data-i18n="tips">请勿手动关闭此窗口，窗口将稍后自动关闭。</p>
+            </div>
+        </section> 
+        <script src="jquery.js"></script>
+        <script src="rpa_server.js"></script>
+        <script src="serviceworkerpage.static.js"></script>
+    </body>
+</html>

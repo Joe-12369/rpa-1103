@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Theme/ColorDictionary.xaml"/>
+        <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Theme/SvgDictionary.xaml"/>
+        <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Controls/TFButton.xaml"/>
+        <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Theme/StyleDictionary.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

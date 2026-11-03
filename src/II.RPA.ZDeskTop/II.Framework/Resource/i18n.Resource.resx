@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppMeta_63499A3A" xml:space="preserve">
+    <value>执行小窗</value>
+    <comment>6904439C</comment>
+  </data>
+  <data name="WorkerServiceProvider_A40C22A3" xml:space="preserve">
+    <value>从命令行参数获取参数 '--p' 的值的失败</value>
+    <comment>20A159F9</comment>
+  </data>
+  <data name="ChildSessionHelper_EDEAA9AB" xml:space="preserve">
+    <value>此操作系统不支持子会话!</value>
+    <comment>53E086CB</comment>
+  </data>
+  <data name="BaseIIWindowDictionary_6859F1D2" xml:space="preserve">
+    <value>最小化</value>
+    <comment>6859F1D2</comment>
+  </data>
+  <data name="BaseIIWindowDictionary_8DB9E938" xml:space="preserve">
+    <value>恢复</value>
+    <comment>8DB9E938</comment>
+  </data>
+  <data name="BaseIIWindowDictionary_84E8A59A" xml:space="preserve">
+    <value>最大化</value>
+    <comment>84E8A59A</comment>
+  </data>
+  <data name="BaseIIWindowDictionary_39B523BD" xml:space="preserve">
+    <value>关闭</value>
+    <comment>39B523BD</comment>
+  </data>
+  <data name="BaseIIWindowDictionary_58D7C828" xml:space="preserve">
+    <value>还原</value>
+    <comment>58D7C828</comment>
+  </data>
+  <data name="Program_8DAE7A1C" xml:space="preserve">
+    <value>请使用管理员权限重启客户端！</value>
+    <comment>2689D476</comment>
+  </data>
+  <data name="SettingView_9AD34C6B" xml:space="preserve">
+    <value>章鱼桌面登录设置</value>
+    <comment>9AD34C6B</comment>
+  </data>
+  <data name="SettingView_ADB11681" xml:space="preserve">
+    <value>请输入您当前电脑的登录账号、密码，以便自动登录章鱼桌面</value>
+    <comment>ADB11681</comment>
+  </data>
+  <data name="ZDeskTopWindow_5A010A8" xml:space="preserve">
+    <value>暂停执行</value>
+    <comment>5A010A8</comment>
+  </data>
+  <data name="ZDeskTopWindow_E7F8BEAA" xml:space="preserve">
+    <value>继续执行</value>
+    <comment>E7F8BEAA</comment>
+  </data>
+  <data name="ZDeskTopWindow_14FBDD42" xml:space="preserve">
+    <value>暂停中</value>
+    <comment>14FBDD42</comment>
+  </data>
+  <data name="ZDeskTopWindow_11703F4D" xml:space="preserve">
+    <value>收起到小窗口</value>
+    <comment>11703F4D</comment>
+  </data>
+  <data name="ZDeskTopWindow_F3B57A9A" xml:space="preserve">
+    <value>开启小窗内部操作</value>
+    <comment>F3B57A9A</comment>
+  </data>
+  <data name="ZDeskTopWindow_E75E55AF" xml:space="preserve">
+    <value>置顶窗口</value>
+    <comment>E75E55AF</comment>
+  </data>
+  <data name="ZDeskTopWindow_F3C259DD" xml:space="preserve">
+    <value>设置</value>
+    <comment>F3C259DD</comment>
+  </data>
+  <data name="ZDeskTopWindow_7AB0B288" xml:space="preserve">
+    <value>帮助</value>
+    <comment>7AB0B288</comment>
+  </data>
+  <data name="ZDeskTopWindow.xaml_717A451C" xml:space="preserve">
+    <value>小窗启动异常</value>
+    <comment>5FE9E236</comment>
+  </data>
+  <data name="ZDeskTopWindow.xaml_FF91BFB0" xml:space="preserve">
+    <value>登录失败:{0}</value>
+    <comment>2362E5C7</comment>
+  </data>
+  <data name="ZDeskTopWindow.xaml_D7FC5A3C" xml:space="preserve">
+    <value>点击查看解决方案</value>
+    <comment>6422A116</comment>
+  </data>
+  <data name="ZDeskTopWindow.xaml_16F92AAD" xml:space="preserve">
+    <value>登录失败:{0}</value>
+    <comment>2362E5C7</comment>
+  </data>
+  <data name="ZDeskTopWindow.xaml_7B1F2724" xml:space="preserve">
+    <value>查看解决方案</value>
+    <comment>74A0150E</comment>
+  </data>
+  <data name="ZDeskTopWindow.xaml_9F9A4E3F" xml:space="preserve">
+    <value>{0}启动失败,请使用管理员身份重试！</value>
+    <comment>283D9B28</comment>
+  </data>
+  <data name="ZDeskTopWindow.xaml_A77BB03F" xml:space="preserve">
+    <value>本机远程桌面服务不可用，请参考帮助文档解决</value>
+    <comment>70B958D5</comment>
+  </data>
+  <data name="CommonValidationRule_3AF0D375" xml:space="preserve">
+    <value>不允许为空</value>
+    <comment>3542D019</comment>
+  </data>
+  <data name="NotEmptyValidationRule_88017F3B" xml:space="preserve">
+    <value>请输入内容!</value>
+    <comment>5E6E9D3B</comment>
+  </data>
+  <data name="LoginWindow_1652C914" xml:space="preserve">
+    <value>登录执行小窗</value>
+    <comment>1652C914</comment>
+  </data>
+  <data name="LoginWindow_EB688AC5" xml:space="preserve">
+    <value>首次使用执行小窗，需要验证您当前Windows的登录信息</value>
+    <comment>EB688AC5</comment>
+  </data>
+  <data name="LoginWindow_6D13EC97" xml:space="preserve">
+    <value>用户名</value>
+    <comment>6D13EC97</comment>
+  </data>
+  <data name="LoginWindow_A8566BA8" xml:space="preserve">
+    <value>密码</value>
+    <comment>A8566BA8</comment>
+  </data>
+  <data name="LoginWindow_7023C8A6" xml:space="preserve">
+    <value>用户名密码验证失败！</value>
+    <comment>7023C8A6</comment>
+  </data>
+  <data name="LoginWindow_4AD2EF8F" xml:space="preserve">
+    <value>确认</value>
+    <comment>4AD2EF8F</comment>
+  </data>
+  <data name="MessageDialog_565F96F" xml:space="preserve">
+    <value>提示</value>
+    <comment>565F96F</comment>
+  </data>
+  <data name="MessageDialog_96547FDD" xml:space="preserve">
+    <value>知道了</value>
+    <comment>96547FDD</comment>
+  </data>
+  <data name="OverlayWindow_6904439C" xml:space="preserve">
+    <value>执行小窗</value>
+    <comment>6904439C</comment>
+  </data>
+  <data name="OverlayWindow_5A010A8" xml:space="preserve">
+    <value>暂停执行</value>
+    <comment>5A010A8</comment>
+  </data>
+  <data name="OverlayWindow_E7F8BEAA" xml:space="preserve">
+    <value>继续执行</value>
+    <comment>E7F8BEAA</comment>
+  </data>
+  <data name="OverlayWindow_14FBDD42" xml:space="preserve">
+    <value>暂停中</value>
+    <comment>14FBDD42</comment>
+  </data>
+</root>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Plugin.CV</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.CV</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>Library</OutputType>
+    
+    <RootNamespace>II.RPA.Plugin.CV</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.CV</AssemblyName>
+    
+    
+    <Deterministic>true</Deterministic>
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Trace</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Trace</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\Configurations.cs" />
+    <Compile Include="ConstFields.cs" />
+    <Compile Include="CVCapture.cs" />
+    <Compile Include="CVCollection.cs" />
+    <Compile Include="CVElementWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CVElementWnd.designer.cs">
+      <DependentUpon>CVElementWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CVException.cs" />
+    <Compile Include="CVNode.cs" />
+    <Compile Include="CVObjs.cs" />
+    <Compile Include="CVScreenWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CVScreenWnd.designer.cs">
+      <DependentUpon>CVScreenWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CVSelectorItem.cs" />
+    <Compile Include="GuiOperator.cs" />
+    <Compile Include="GuiModule.cs" />
+    <Compile Include="PluginPackage.cs" />
+    <Compile Include="Params\ParamGetCVTextModel.cs" />
+    <Compile Include="Payload.cs" />
+    <Compile Include="Plugins\GetCVText.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CVSelectorItemProperty.cs" />
+    <Compile Include="SelectorAdapter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Config\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\plugin.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CVElementWnd.resx">
+      <DependentUpon>CVElementWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CVScreenWnd.resx">
+      <DependentUpon>CVScreenWnd.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlaUI.Core\FlaUI.Core.csproj" />
+    <ProjectReference Include="..\Gma.UserActivityMonitor\Gma.UserActivityMonitor.csproj" />
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.GUI.Commons\II.RPA.Plugin.GUI.Commons.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  
+  <Target Name="DeployCVPlugin" AfterTargets="AfterBuild">
+    <PropertyGroup>
+      <_PluginName>GUICV</_PluginName>
+      <_RuntimePluginDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimePluginDir>
+      <_RuntimeCsDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimeCsDir>
+    </PropertyGroup>
+    <RemoveDir Directories="$(_RuntimeCsDir)" Condition="Exists('$(_RuntimeCsDir)')" />
+    <MakeDir Directories="$(_RuntimePluginDir);$(_RuntimeCsDir)" />
+    <Copy SourceFiles="$(TargetDir)Config\config.json" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <ItemGroup>
+      <_MainOutput Include="$(TargetDir)$(TargetName).*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_MainOutput)" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+  </Target>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+</Project>
+
+
+
+

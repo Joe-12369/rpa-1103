@@ -1,0 +1,27 @@
+{
+  "0": [
+    {
+      "elementtype": "文字",
+      "actions": [
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "OCR_SourceMergeGeneralOCR",
+          "input": [ "args0.pictureSource=0", "args0.image_path" ]
+        },
+        {
+          "action": "OcrOffline_GetOcrTextPosition",
+          "input": [ "args0.pictureSource=1", "args0.image_path" ]
+        }
+      ],
+      "category": []
+    }
+  ]
+}
+    

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>II.RPA.Plugin.Test</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.Test</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>II.RPA.Plugin.Test</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.Test</AssemblyName>
+    
+    
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    
+    
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Trace</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+</PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+</PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+<WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+<WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    
+    <Reference Include="HIK.Toolkit.WPF.CustomControls">
+      <HintPath>..\libs\HIK.Toolkit.WPF.CustomControls.dll</HintPath>
+    </Reference>
+    <ProjectReference Include="..\..\tools\NativeMessagingHost\II.RPA.IPC\II.RPA.IPC.csproj" />
+</ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataCollectionTestWnd.xaml.cs">
+      <DependentUpon>DataCollectionTestWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DbForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DbForm.Designer.cs">
+      <DependentUpon>DbForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcelForm.Designer.cs">
+      <DependentUpon>ExcelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AsyncMethodInfo.cs" />
+    <Compile Include="MethodComponentAttribute.cs" />
+    <Compile Include="OutLookTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutLookTest.Designer.cs">
+      <DependentUpon>OutLookTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParamterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ParamterControl.Designer.cs">
+      <DependentUpon>ParamterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginAvtionParamRun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PluginAvtionParamRun.Designer.cs">
+      <DependentUpon>PluginAvtionParamRun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPATest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPATest.Designer.cs">
+      <DependentUpon>RPATest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetSharedVariableData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetSharedVariableData.Designer.cs">
+      <DependentUpon>SetSharedVariableData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsbHubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsbHubForm.Designer.cs">
+      <DependentUpon>UsbHubForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DbForm.resx">
+      <DependentUpon>DbForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcelForm.resx">
+      <DependentUpon>ExcelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutLookTest.resx">
+      <DependentUpon>OutLookTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParamterControl.resx">
+      <DependentUpon>ParamterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PluginAvtionParamRun.resx">
+      <DependentUpon>PluginAvtionParamRun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPATest.resx">
+      <DependentUpon>RPATest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SetSharedVariableData.resx">
+      <DependentUpon>SetSharedVariableData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsbHubForm.resx">
+      <DependentUpon>UsbHubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="ComponentTree.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="LogSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlaUI.UIA2\FlaUI.UIA2.csproj" />
+    <ProjectReference Include="..\FlaUI.UIA3\FlaUI.UIA3.csproj" />
+    <ProjectReference Include="..\Gma.UserActivityMonitor\Gma.UserActivityMonitor.csproj" />
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Excel\II.RPA.Plugin.Excel.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.GUI.Commons\II.RPA.Plugin.GUI.Commons.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="wfreerdp.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="DataCollectionTestWnd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  
+  
+  <ItemGroup>
+    <PackageReference Include="Expression.Blend.Sdk.WPF" Version="1.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="SharpVectors" Version="1.7.7" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AutoItX3.Assembly">
+      <HintPath>..\libs\AutoItX3.Assembly.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
+
+
+
+
+
+

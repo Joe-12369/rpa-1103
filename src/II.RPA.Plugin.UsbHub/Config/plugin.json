@@ -1,0 +1,11 @@
+{
+  "name": "UsbHub",
+  "title": "UsbHub依赖包",
+  "version": "3.3.5.0",
+  "type": "1",
+  "depend": "7.3.5",
+  "DependRef": [],
+  "introduction": "提供了操作 UsbhHub的底层支持能力。",
+  "description": "需要操作UsbhHub时，需要依赖此组件包。",
+  "releaseTime": 1634054400
+}

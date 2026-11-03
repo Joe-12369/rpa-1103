@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="II.RPA.Plugin.Dialog.UCControl.SubAnnex"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="80" d:DesignWidth="436" HorizontalContentAlignment="Left">
+    <UserControl.Resources>
+        <Style x:Key="MyButton" TargetType="Button">
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Width="auto">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Viewbox Margin="6" Stretch="Uniform" Height="16" Width="16">
+                                <Canvas
+                                        Width="1024.0"
+                                        Height="1024.0"
+                                        UseLayoutRounding="False">
+                                    <Canvas.Clip>
+                                        <RectangleGeometry Rect="0.0,0.0,1024.0,1024.0" />
+                                    </Canvas.Clip>
+                                    <Path Fill="#8B97AF">
+                                        <Path.Data>
+                                            <PathGeometry Figures="M 746.048 520.704 c 51.84 -55.68 53.248 -144.448 3.072 -198.272 c -50.176 -53.888 -132.864 -52.352 -184.704 3.328 l -312.96 336 l 60.48 65.024 l 312.96 -336 c 17.344 -18.56 44.928 -19.136 61.632 -1.152 c 15.488 16.64 16.256 43.392 2.432 61.952 l -3.456 4.16 l -312.96 336 c -51.904 55.68 -134.592 57.152 -184.768 3.328 c -48.32 -51.904 -48.768 -136.32 -2.24 -192.192 l 5.376 -6.08 l 312.96 -336 c 86.4 -92.8 224.256 -95.36 307.84 -5.568 c 81.408 87.36 81.28 229.952 1.472 323.008 l -6.656 7.488 l -250.368 268.8 l 60.544 65.024 l 250.368 -268.8 c 120.96 -129.92 124.224 -337.152 7.232 -462.72 c -116.992 -125.696 -309.952 -122.24 -430.976 7.68 L 130.368 531.84 c -86.4 92.8 -88.768 240.768 -5.12 330.496 c 83.52 89.728 221.376 87.296 307.84 -5.504 l 312.96 -336 z" FillRule="Nonzero" />
+                                        </Path.Data>
+                                    </Path>
+                                </Canvas>
+                            </Viewbox>
+                            <TextBlock Grid.Column="1" Text="{Binding Content,RelativeSource={RelativeSource TemplatedParent}}" Foreground="#0085FF"  FontSize="13" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" TextWrapping="NoWrap" Margin="0,0,0,0"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid Height="28" Margin="0,0,0,4">
+        <Button  x:Name="FileName" Click="Button_Click" Style="{StaticResource MyButton}">
+        </Button>
+    </Grid>
+</UserControl>

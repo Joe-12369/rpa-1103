@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>II.RPA.RuntimeHost</RootNamespace>
+    <AssemblyName>II.RPA.RuntimeHost</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <!-- Protected JIT initialization is incompatible with the .NET 10 x64
+         apphost CET shadow stack (FAST_FAIL_CONTROL_INVALID_RETURN_ADDRESS). -->
+    <CetCompat Condition="'$(Platform)' == 'x64'">false</CetCompat>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>II.RPA.RuntimeHost</RootNamespace>
+    <AssemblyName>II.RPA.RuntimeHost</AssemblyName>
+    
+    
+    
+    <Deterministic>true</Deterministic>
+    
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+</PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+<WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+</PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+</PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CommandParamsHelper.cs" />
+    <Compile Include="Configs\UiContextActionsConfig.cs" />
+    <Compile Include="IApplication.cs" />
+    <Compile Include="MonForQuitThread.cs" />
+    <Compile Include="RunTimeHostApplicationContext.cs" />
+    <Compile Include="Services\RuntimeVersionService.cs" />
+    <Compile Include="Services\ProcessServiceClientProvider.cs" />
+    <Compile Include="Services\RunTimeServiceProvider.cs" />
+    <Compile Include="Services\SynchronizationContextDispatcher.cs" />
+    <Compile Include="ApplicationProvider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationProvider.Designer.cs">
+      <DependentUpon>ApplicationProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\WorkerConnection.cs" />
+    <Compile Include="Services\WorkerConnectionProvider.cs" />
+    <EmbeddedResource Include="ApplicationProvider.resx">
+      <DependentUpon>ApplicationProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Protobuf GrpcServices="Client" Include="Protos\process_service.proto">
+      <Generator>MSBuild:Compile</Generator>
+    </Protobuf>
+    <Protobuf GrpcServices="Server" Include="Protos\runtime_service.proto">
+    </Protobuf>
+    <Protobuf Include="..\II.RPA.Core\II.RPA.Core\Protos\sharpruntime_service.proto">
+      <Link>Protos\sharpruntime_service.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\II.RPA.Core\II.RPA.Core\Protos\worker_service.proto">
+      <Link>Protos\worker_service.proto</Link>
+    </Protobuf>
+    
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\II.RPA.Communication\II.RPA.Communication.csproj" />
+    <ProjectReference Include="..\II.RPA.Core\II.RPA.Core\II.RPA.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.PluginLoader\II.RPA.PluginLoader.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.PluginLoader\II.RPA.PluginLoader.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <Content Include="owfreerdp.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wfreerdp.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  
+  
+  
+  
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.35.1" />
+    <PackageReference Include="Grpc.Core" Version="2.46.6" />
+    <PackageReference Include="Grpc.Core.Api" Version="2.70.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.82.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="System.Reactive" Version="6.0.1" />
+    </ItemGroup>
+</Project>
+
+
+
+
+

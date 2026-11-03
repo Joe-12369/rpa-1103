@@ -1,0 +1,43 @@
+{
+  "fileName": "II.RPA.Plugin.Windows.dll",
+  //使用UIA2的应用，应用名在selector中获取
+  "Mode2Apps": [ "eTerm3", "yqzs", "m2browser", "saplogon" ],
+  //自动使用深度匹配
+  "AutoSeekDepthApps": [ "weixin", "wechatapp", "wechat", "qq", "aliworkbench", "dingtalk" ],
+  "ScanElementTreeApps": [ "wxwork", "wxworklocal", "WeChatAppEx", "saplogon" ],
+  "UseScanCacheApps": [ "wxwork", "wxworklocal" ],
+  "AccEnablerApps": [ "aliworkbench", "pddworkbench", "pddprintclient", "epportalsb1" ],
+  //查找子元素的深度，小于等于0关闭
+  "SeekDepth": "0",
+  //是否匹配鼠标点匹配元素的同级元素 
+  "MatchSiblings": "false",
+  "RpaProcess": [ "实在设计器", "Z-Factory", "z-bot" ],
+  //路径纠错 true启用 false不启用
+  "ErrorScan": "false",
+  //匹配根节点的方式类型,0 UIA方式，1窗口匹配
+  "MatchRootNodeMode": 1,
+  //忽略窗口是否可视
+  "ignoreVisible": [ "iexplore" ],
+  "selectorUseScanCacheAppsInfo": {
+    "wxwork": {
+      "processName": "wxwork",
+      "minVersion": "",
+      "maxVersion": ""
+    },
+    "wxworklocal": {
+      "processName": "wxworklocal",
+      "minVersion": "",
+      "maxVersion": "2.5.999999.999999"
+    }
+  },
+  //正向获取元素链路
+  "forwardElementChain": false,
+  //构建前校验元素
+  "validateElementBeforeBuild": false,
+  //启用acc拾取元素
+  "captureByAcc": true,
+  //计算Index时过滤隐藏(Offscreen)元素
+  "filterHiddenForIndex": false,
+  //允许"某层匹配失败后自动降级为跳级匹配"的应用(进程名，不含扩展名)，仅硬CEF/Chromium等UIA树懒加载场景需要
+  "jumpFallbackApps": [ "wxwork", "wxworklocal", "WeChatAppEx", "weixin", "wechatapp", "wechat", "qq", "aliworkbench", "alirender", "dingtalk" ]
+}

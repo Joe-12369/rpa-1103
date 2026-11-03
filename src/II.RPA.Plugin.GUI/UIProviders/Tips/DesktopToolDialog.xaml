@@ -1,0 +1,148 @@
+﻿<Window
+    x:Class="II.RPA.Plugin.GUI.UIProviders.Tips.DesktopToolDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:ipacontrols="clr-namespace:II.RPA.Plugin.GUI.ProcessCreator.Controls"
+    xmlns:local="clr-namespace:II.RPA.Plugin.GUI.UIProviders.Tips"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="{x:Static res:II_RPA_Resource.DesktopToolDialog_565F96F}"
+    Width="420"
+    Height="199"
+    AllowsTransparency="True"
+    Background="Transparent"
+    ShowInTaskbar="False"
+    Topmost="True"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d"
+    xmlns:res="clr-namespace:II.RPA.WinAutomation.CommonUtility.Resource;assembly=II.RPA.WinAutomation.CommonUtility">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Theme/ColorDictionary.xaml" />
+                <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Theme/SvgDictionary.xaml" />
+                <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Theme/Generic.xaml" />
+                <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Controls/TFButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="36" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Border
+            Grid.RowSpan="2"
+            Background="#AA30333C"
+            BorderBrush="#30333C"
+            BorderThickness="1"
+            CornerRadius="10">
+            <Border.Effect>
+                <DropShadowEffect
+                    BlurRadius="8"
+                    Direction="0"
+                    Opacity="0.5"
+                    ShadowDepth="0"
+                    Color="Black" />
+            </Border.Effect>
+        </Border>
+
+        <Border
+            Grid.RowSpan="2"
+            Background="#FFFFFF"
+            CornerRadius="8,8,8,8" />
+        <Border
+            Background="#8FF1F4F7"
+            CornerRadius="8,8,0,0"
+            MouseDown="Grid_MouseDown"
+            MouseRightButtonUp="Grid_MouseRightButtonUp" />
+        <Button
+            Margin="0,0,13,0"
+            HorizontalAlignment="Right"
+            Background="Transparent"
+            BorderThickness="0"
+            Click="Close_Click"
+            Cursor="Hand"
+            Foreground="Black">
+            <Button.Content>
+                <Path
+                    Margin="2"
+                    Data="M0,0 L15,15 M0,15 L15,0"
+                    Stroke="#161923" />
+            </Button.Content>
+        </Button>
+        <TextBlock
+            Margin="13,0,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            FontSize="14"
+            Foreground="#161923"
+            Text="{x:Static res:II_RPA_Resource.DesktopToolDialog_565F96F}" />
+        <Grid
+            Grid.Row="1"
+            Width="20"
+            Height="20"
+            Margin="34,22,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Panel.ZIndex="99">
+            <Ellipse
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Fill="Orange" />
+            <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="16"
+                Foreground="White"
+                Text="!" />
+        </Grid>
+        <TextBlock
+            Grid.Row="1"
+            Margin="62,22,0,0"
+            FontSize="14"
+            Foreground="#161923"
+            Text="{x:Static res:II_RPA_Resource.DesktopToolDialog_234EA942}" />
+        <TextBlock
+            Grid.Row="1"
+            Margin="62,50,0,0"
+            FontSize="12"
+            Foreground="#848A90 ">
+            {x:Static res:II_RPA_Resource.DesktopToolDialog_382732C7}<Run x:Name="tipText" Foreground="#FF8910" />
+           {x:Static res:II_RPA_Resource.DesktopToolDialog_B45B6608}</TextBlock>
+        <ipacontrols:TFButton
+            Grid.Row="1"
+            Width="auto"
+            Height="30"
+            Margin="62,0,0,25"
+            Padding="16,0,15,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Background="#FFFFFF"
+            BorderBrush="#D9DDE6 "
+            BorderThickness="1"
+            Click="TFButton_Click"
+            Content="{x:Static res:II_RPA_Resource.DesktopToolDialog_E326B98E}"
+            CornerRadius="3"
+            Cursor="Hand"
+            Foreground="#505962"
+            Style="{StaticResource TFButton_Base}" />
+        <ipacontrols:TFButton
+            Grid.Row="1"
+            Width="auto"
+            Height="30"
+            Margin="0,0,30,25"
+            Padding="29,0,28,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Background="#FF8910"
+            Click="TFButton_Click_1"
+            Content="{x:Static res:II_RPA_Resource.DesktopToolDialog_7EB7D768}"
+            CornerRadius="3"
+            Cursor="Hand"
+            Foreground="#FFFFFF"
+            MouseOverBackground="#99FF8910"
+            Style="{StaticResource TFButton_Base}" />
+    </Grid>
+</Window>

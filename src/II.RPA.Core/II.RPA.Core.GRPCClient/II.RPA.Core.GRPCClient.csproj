@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Core.GRPCClient</RootNamespace>
+    <AssemblyName>II.RPA.Core.GRPCClient</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Core.GRPCClient</RootNamespace>
+    <AssemblyName>II.RPA.Core.GRPCClient</AssemblyName>
+    <Deterministic>true</Deterministic>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Protobuf Include="..\II.RPA.Core\Protos\power_message.proto" GrpcServices="Client" Link="Protos\power_message.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\power_request.proto" GrpcServices="Client" Link="Protos\power_request.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\power_response.proto" GrpcServices="Client" Link="Protos\power_response.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\power_service.proto" GrpcServices="Client" Link="Protos\power_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\simple_service.proto" GrpcServices="Client" Link="Protos\simple_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\plugin_service.proto" GrpcServices="Client" Link="Protos\plugin_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\beep_service.proto" GrpcServices="Client" Link="Protos\beep_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\admin_service.proto" GrpcServices="Client" Link="Protos\admin_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\message_service.proto" GrpcServices="Client" Link="Protos\message_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\win32_service.proto" GrpcServices="Client" Link="Protos\win32_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\base.proto" GrpcServices="Client" Link="Protos\base.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\flowedit_service.proto" GrpcServices="Client" Link="Protos\flowedit_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\visual_data_service.proto" GrpcServices="Client" Link="Protos\visual_data_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\process_service.proto" GrpcServices="Client" Link="Protos\process_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\base_resp.proto" GrpcServices="Client" Link="Protos\base_resp.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\screen_record_service.proto" GrpcServices="Client" Link="Protos\screen_record_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\childsession_service.proto" GrpcServices="Client" Link="Protos\childsession_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\mobile_service.proto" GrpcServices="Client" Link="Protos\mobile_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\mobile_plugin_service.proto" GrpcServices="Client" Link="Protos\mobile_plugin_service.proto" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChildSessionServiceClient.cs" />
+    <Compile Include="GrpcClientFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\II.RPA.Core\II.RPA.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.35.1" />
+    <PackageReference Include="Grpc.Core" Version="2.46.6" />
+    <PackageReference Include="Grpc.Core.Api" Version="2.70.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.82.0" PrivateAssets="all" />
+  </ItemGroup>
+</Project>

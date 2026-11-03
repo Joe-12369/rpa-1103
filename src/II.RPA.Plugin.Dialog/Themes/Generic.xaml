@@ -1,0 +1,11 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:II.RPA.Plugin.Dialog">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/II.RPA.Plugin.Dialog;component/Themes/CustomMenuItem.xaml"></ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="{x:Type local:CustomMenuItem}" BasedOn="{StaticResource MyMenuItem}"/>
+
+</ResourceDictionary>

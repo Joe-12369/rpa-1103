@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using sapfewse;
+
+namespace II.RPA.Plugin.SAP.Controls
+{
+    class GuiBaseAction : ISapControl
+    {
+        public void Execute(ApplicationContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Rectangle GetRectangle(GuiComponent component)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetText(ApplicationContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetText(ApplicationContext context, string txt)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

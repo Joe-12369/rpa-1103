@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.NamedPipeWrapper</RootNamespace>
+    <AssemblyName>II.RPA.NamedPipeWrapper</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <Platforms>x64;x86</Platforms>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>Library</OutputType>
+    
+    <RootNamespace>II.RPA.NamedPipeWrapper</RootNamespace>
+    <AssemblyName>II.RPA.NamedPipeWrapper</AssemblyName>
+    
+    
+    <Deterministic>true</Deterministic>
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    
+  </PropertyGroup>
+  <ItemGroup>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HIDSendMessage.cs" />
+    <Compile Include="JavaMessage.cs" />
+    <Compile Include="NamedPipeClient.cs" />
+    <Compile Include="NamedPipeConnection.cs" />
+    <Compile Include="NamedPipeException.cs" />
+    <Compile Include="NamedPipeServer.cs" />
+    <Compile Include="PipeMessage.cs" />
+    <Compile Include="PipeStreamReader.cs" />
+    <Compile Include="PipeStreamWrapper.cs" />
+    <Compile Include="PipeStreamWriter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Socket\SocketClient.cs" />
+    <Compile Include="Socket\SocketConnection.cs" />
+    <Compile Include="Socket\SocketServer.cs" />
+    <Compile Include="Socket\Entitys\EnumCollections.cs" />
+    <Compile Include="Socket\Entitys\SocketRequest.cs" />
+    <Compile Include="Socket\Entitys\SocketResponse.cs" />
+    <Compile Include="Socket\Entitys\Params\RDPLockParams.cs" />
+    <Compile Include="Worker.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+</Project>
+
+
+
+
+

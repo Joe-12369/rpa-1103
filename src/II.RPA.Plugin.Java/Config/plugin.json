@@ -1,0 +1,25 @@
+{
+	"name": "GUIJava",
+	"title": "Java程序界面元素功能依赖包",
+	"version": "3.3.5.0",
+	"type": "1",
+	"depend": "7.3.5",
+	"isBasic": 1,
+	"DependRef": [
+		{
+			"name": "CommonDLLBase",
+			"version": "3.3.5.0"
+		},
+		{
+			"name": "Element",
+			"version": "3.3.5.0"
+		},
+		{
+			"name": "GUIWindows",
+			"version": "3.3.5.0"
+		}
+	],
+	"introduction": "为操作 Java 程序提供底层能力支持",
+	"description": "在操作 Java 程序时需要依赖此基础组件包，和界面元素组件包有依赖关系。",
+	"releaseTime": 1634054400
+}

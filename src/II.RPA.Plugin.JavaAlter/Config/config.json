@@ -1,0 +1,12 @@
+{
+  "fileName": "II.RPA.Plugin.JavaAlter.dll",
+  "clickBefore": 0,
+  "clickAfter": 0,
+  "whitelist": [],
+  "windowMap": [
+    {
+      "title": "长城物业集团EAS-T20250321",
+      "newTitle": "长城物业集团EAS-"
+    }
+  ]
+}

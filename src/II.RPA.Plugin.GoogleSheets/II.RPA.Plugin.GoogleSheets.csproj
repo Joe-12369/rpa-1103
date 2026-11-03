@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Plugin.GoogleSheets</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.GoogleSheets</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>Library</OutputType>
+    
+    <RootNamespace>II.RPA.Plugin.GoogleSheets</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.GoogleSheets</AssemblyName>
+    
+    
+    <Deterministic>true</Deterministic>
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="PluginPackage.cs" />
+    <Reference Include="Google.Apis.PlatformServices, Version=1.55.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\googletable\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+</ItemGroup>
+  <ItemGroup>
+    <Compile Include="GoogleSheetsAccess.cs" />
+    <Compile Include="Params\ParamAddFilterViewModel.cs" />
+    <Compile Include="Params\ParamAddNewSheetModel.cs" />
+    <Compile Include="Params\ParamCopyPasteSheetModel.cs" />
+    <Compile Include="Params\ParamDownloadSheetsModel.cs" />
+    <Compile Include="Params\ParamGetCellsDataModel.cs" />
+    <Compile Include="Params\ParamNewFilterModel.cs" />
+    <Compile Include="Params\ParamGetActivedSheetNameModel.cs" />
+    <Compile Include="Params\ParamGetAllDataModel.cs" />
+    <Compile Include="Params\ParamGetAllSheetsNameModel.cs" />
+    <Compile Include="Params\ParamGetFirstCanUseRowModel.cs" />
+    <Compile Include="Params\ParamInsertHylinkModel.cs" />
+    <Compile Include="Params\ParamGetColumnsByTableTitleModel.cs" />
+    <Compile Include="Params\ParamRenameSheetModel.cs" />
+    <Compile Include="Params\ParamWriteToSheetCellModel.cs" />
+    <Compile Include="Params\ParamWriteToSheetRegionModel.cs" />
+    <Compile Include="Plugins\AddFilterView.cs" />
+    <Compile Include="Plugins\AddNewSheet.cs" />
+    <Compile Include="Plugins\CopyPasteSheet.cs" />
+    <Compile Include="Plugins\DownloadSheets.cs" />
+    <Compile Include="Plugins\GetColumnsByTableTitle.cs" />
+    <Compile Include="Plugins\GetSheetRowCount.cs" />
+    <Compile Include="Plugins\NewFilterView.cs" />
+    <Compile Include="Plugins\DeleteSheet.cs" />
+    <Compile Include="Plugins\GetActivedSheetName.cs" />
+    <Compile Include="Plugins\GetAllData.cs" />
+    <Compile Include="Plugins\GetAllSheetsName.cs" />
+    <Compile Include="Plugins\GetFirstCanUseRow.cs" />
+    <Compile Include="Plugins\InsertHylink.cs" />
+    <Compile Include="Plugins\RenameSheet.cs" />
+    <Compile Include="Plugins\WriteToSheetCell.cs" />
+    <Compile Include="Plugins\WriteToSheetCellFormula.cs" />
+    <Compile Include="Plugins\WriteToSheetRegion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SheetsWrapper\BaseRecord.cs" />
+    <Compile Include="SheetsWrapper\BaseRepository.cs" />
+    <Compile Include="SheetsWrapper\BatchUpdateRequestObject.cs" />
+    <Compile Include="SheetsWrapper\CurrencyParsing.cs" />
+    <Compile Include="SheetsWrapper\DateTimeUtils.cs" />
+    <Compile Include="SheetsWrapper\PhoneNumberParsing.cs" />
+    <Compile Include="SheetsWrapper\SchemaValidationResult.cs" />
+    <Compile Include="SheetsWrapper\SheetAdapter.cs" />
+    <Compile Include="SheetsWrapper\SheetAppender.cs" />
+    <Compile Include="SheetsWrapper\SheetExporter.cs" />
+    <Compile Include="SheetsWrapper\SheetFieldAttribute.cs" />
+    <Compile Include="SheetsWrapper\SheetFieldAttributeComparer.cs" />
+    <Compile Include="SheetsWrapper\SheetFieldAttributeUtils.cs" />
+    <Compile Include="SheetsWrapper\SheetRange.cs" />
+    <Compile Include="SheetsWrapper\SheetRangeParser.cs" />
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Config\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\plugin.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    
+    <None Include="sheets.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.GUI\II.RPA.Plugin.GUI.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  <ItemGroup />
+  
+  <Target Name="DeployGoogleSheetsPlugin" AfterTargets="AfterBuild">
+    <PropertyGroup>
+      <_PluginName>GoogleTable</_PluginName>
+      <_RuntimePluginDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimePluginDir>
+      <_RuntimeCsDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimeCsDir>
+    </PropertyGroup>
+    <RemoveDir Directories="$(_RuntimeCsDir)" Condition="Exists('$(_RuntimeCsDir)')" />
+    <MakeDir Directories="$(_RuntimePluginDir);$(_RuntimeCsDir)" />
+    <Copy SourceFiles="$(TargetDir)Config\config.json" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <ItemGroup>
+      <_MainOutput Include="$(TargetDir)$(TargetName).*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_MainOutput)" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+  </Target>
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="27.2.1" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.15.0" />
+    <PackageReference Include="Google.Apis" Version="1.55.0" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.55.0" />
+    <PackageReference Include="Google.Apis.Core" Version="1.55.0" />
+    <PackageReference Include="Google.Apis.Sheets.v4" Version="1.55.0.2371" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Primitives" Version="10.0.10" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+</Project>
+
+
+
+

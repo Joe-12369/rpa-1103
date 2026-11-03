@@ -1,0 +1,22 @@
+﻿using II.RPA.Plugin.GUI.Commons.WindowMatch.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace II.RPA.Plugin.GUI.Commons.WindowMatch.MatchRule
+{
+    public class ProductNameMatchHandler : MatchHandler
+    {
+        public override bool IsMatch(WindowObject wndInfo, MatchConfig matchConfig)
+        {
+            if (string.IsNullOrEmpty(matchConfig.ProductName)
+                || wndInfo.AppExeProductName.Equals(matchConfig.ProductName, StringComparison.OrdinalIgnoreCase))
+            {
+                return this.nextHandler == null ? true : this.nextHandler.IsMatch(wndInfo, matchConfig);
+            }
+            return false;
+        }
+    }
+}

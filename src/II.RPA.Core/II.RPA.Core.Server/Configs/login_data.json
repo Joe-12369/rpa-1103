@@ -1,0 +1,275 @@
+﻿{
+  "taobao": {
+    "selectors": {
+      "loginbutton_selector": {
+          "commonProps": {
+            "GUIType": "Edge",
+            "filePath": "res\\26912-1662274046.png",
+            "captureMode": 0,
+            "flag": "",
+            "version": "1.0",
+            "isfindbyindex": "false",
+            "resDirPath": "res\\1662274046955",
+            "issmartcontrol": "true",
+            "queryMode": "default",
+            "cssSelector": "div:nth-child(6)>div:nth-child(2)>div:nth-child(3)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>form:nth-child(3)>div:nth-child(4)>button:nth-child(1)",
+            "processName": "msedge.exe"
+          },
+          "selector": [
+            {
+              "name": "tab",
+              "accurate": "true",
+              "props": [
+                {
+                  "name": "title",
+                  "value": "淘宝网 - 淘！我喜欢",
+                  "pattern": "equal",
+                  "accurate": "true"
+                },
+                {
+                  "name": "url",
+                  "value": "https://login.taobao.com/member/login.jhtml?spm=a21bo.jianhua.754894437.1.5af911d9jke1I3&f=top&redirectURL=https%3A%2F%2Fwww.taobao.com%2F",
+                  "pattern": "equal",
+                  "accurate": "false"
+                }
+              ]
+            },
+            {
+              "accurate": "true",
+              "name": "form",
+              "props": [
+                {
+                  "accurate": "true",
+                  "name": "id",
+                  "pattern": "equal",
+                  "value": "login-form"
+                },
+                {
+                  "accurate": "false",
+                  "name": "class",
+                  "pattern": "equal",
+                  "value": "login-form"
+                },
+                {
+                  "accurate": "false",
+                  "name": "innertext",
+                  "pattern": "equal",
+                  "value": "登录\n微博登录支付宝登录\n忘记密码忘记账号名免费注册"
+                },
+                {
+                  "accurate": "false",
+                  "name": "@index",
+                  "pattern": "equal",
+                  "value": 3
+                }
+              ],
+              "type": "web"
+            },
+            {
+              "accurate": "true",
+              "name": "div",
+              "props": [
+                {
+                  "accurate": "false",
+                  "name": "class",
+                  "pattern": "equal",
+                  "value": "fm-btn"
+                },
+                {
+                  "accurate": "false",
+                  "name": "innertext",
+                  "pattern": "equal",
+                  "value": "登录"
+                },
+                {
+                  "accurate": "false",
+                  "name": "@index",
+                  "pattern": "equal",
+                  "value": 4
+                }
+              ],
+              "type": "web"
+            },
+            {
+              "accurate": "true",
+              "name": "button",
+              "props": [
+                {
+                  "accurate": "false",
+                  "name": "class",
+                  "pattern": "equal",
+                  "value": "fm-button fm-submit password-login"
+                },
+                {
+                  "accurate": "false",
+                  "name": "innertext",
+                  "pattern": "equal",
+                  "value": "登录"
+                },
+                {
+                  "accurate": "false",
+                  "name": "@index",
+                  "pattern": "equal",
+                  "value": 1
+                }
+              ],
+              "type": "web"
+            }
+          ],
+          "elementDetail": {
+            "categoryIcon": "res\\msedge.ico",
+            "CategoryIconFile": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+            "categoryName": "淘宝网 - 淘！我喜欢",
+            "elementName": "按钮_button",
+            "windowName": "淘宝网 - 淘！我喜欢"
+          }
+      },
+      "password_selector": {
+          "commonProps": {
+            "GUIType": "Edge",
+            "filePath": "res\\17622-1662274036.png",
+            "captureMode": 0,
+            "flag": "",
+            "version": "1.0",
+            "isfindbyindex": "false",
+            "resDirPath": "res\\1662274036047",
+            "issmartcontrol": "true",
+            "queryMode": "default",
+            "cssSelector": "div:nth-child(6)>div:nth-child(2)>div:nth-child(3)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>form:nth-child(3)>div:nth-child(2)>div:nth-child(2)>input:nth-child(1)",
+            "processName": "msedge.exe"
+          },
+          "selector": [
+            {
+              "name": "tab",
+              "accurate": "true",
+              "props": [
+                {
+                  "name": "title",
+                  "value": "淘宝网 - 淘！我喜欢",
+                  "pattern": "equal",
+                  "accurate": "true"
+                },
+                {
+                  "name": "url",
+                  "value": "https://login.taobao.com/member/login.jhtml?spm=a21bo.jianhua.754894437.1.5af911d9jke1I3&f=top&redirectURL=https%3A%2F%2Fwww.taobao.com%2F",
+                  "pattern": "equal",
+                  "accurate": "false"
+                }
+              ]
+            },
+            {
+              "accurate": "true",
+              "name": "input",
+              "props": [
+                {
+                  "accurate": "false",
+                  "name": "name",
+                  "pattern": "equal",
+                  "value": "fm-login-password"
+                },
+                {
+                  "accurate": "false",
+                  "name": "type",
+                  "pattern": "equal",
+                  "value": "password"
+                },
+                {
+                  "accurate": "false",
+                  "name": "class",
+                  "pattern": "equal",
+                  "value": "fm-text"
+                },
+                {
+                  "accurate": "true",
+                  "name": "id",
+                  "pattern": "equal",
+                  "value": "fm-login-password"
+                }
+              ],
+              "type": "web"
+            }
+          ],
+          "elementDetail": {
+            "categoryIcon": "res\\msedge.ico",
+            "CategoryIconFile": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+            "categoryName": "淘宝网 - 淘！我喜欢",
+            "elementName": "输入框_fm-login-password",
+            "windowName": "淘宝网 - 淘！我喜欢"
+          }
+      },
+      "username_selector": {
+        "commonProps": {
+          "GUIType": "Edge",
+          "filePath": "res\\68851-1662463265.png",
+          "captureMode": 0,
+          "flag": "",
+          "version": "1.0",
+          "isfindbyindex": "false",
+          "resDirPath": "res\\1662463265463",
+          "issmartcontrol": "true",
+          "queryMode": "default",
+          "cssSelector": "div:nth-child(6)>div:nth-child(2)>div:nth-child(3)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>form:nth-child(3)>div:nth-child(1)>div:nth-child(2)>input:nth-child(1)",
+          "processName": "msedge.exe"
+        },
+        "selector": [
+          {
+            "name": "tab",
+            "accurate": "true",
+            "props": [
+              {
+                "name": "title",
+                "value": "淘宝网 - 淘！我喜欢",
+                "pattern": "equal",
+                "accurate": "true"
+              },
+              {
+                "name": "url",
+                "value": "https://login.taobao.com/member/login.jhtml?spm=a21bo.jianhua.754894437.1.5af911d9Dv3pga&f=top&redirectURL=https%3A%2F%2Fwww.taobao.com%2F",
+                "pattern": "equal",
+                "accurate": "false"
+              }
+            ]
+          },
+          {
+            "accurate": "true",
+            "name": "input",
+            "props": [
+              {
+                "accurate": "false",
+                "name": "name",
+                "pattern": "equal",
+                "value": "fm-login-id"
+              },
+              {
+                "accurate": "false",
+                "name": "type",
+                "pattern": "equal",
+                "value": "text"
+              },
+              {
+                "accurate": "false",
+                "name": "class",
+                "pattern": "equal",
+                "value": "fm-text"
+              },
+              {
+                "accurate": "true",
+                "name": "id",
+                "pattern": "equal",
+                "value": "fm-login-id"
+              }
+            ],
+            "type": "web"
+          }
+        ],
+        "elementDetail": {
+          "categoryIcon": "res\\msedge.ico",
+          "CategoryIconFile": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+          "categoryName": "淘宝网 - 淘！我喜欢",
+          "elementName": "输入框_fm-login-id",
+          "windowName": "淘宝网 - 淘！我喜欢"
+        }
+      }
+    }
+  }
+}

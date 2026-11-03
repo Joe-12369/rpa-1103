@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package simple.grpc;
+
+service SimpleService 
+{
+  rpc SimpleUnary (SimpleRequest) returns (SimpleResponse);
+}
+
+message SimpleRequest 
+{
+  string message = 1;
+  string instrument = 2;
+}
+
+message SimpleResponse 
+{
+  string message = 1;
+  string instrument = 2;
+}

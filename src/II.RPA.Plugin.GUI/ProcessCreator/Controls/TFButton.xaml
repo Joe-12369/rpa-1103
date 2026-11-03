@@ -1,0 +1,110 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ap="clr-namespace:II.RPA.Plugin.GUI.ProcessCreator.AttachProperty"
+    xmlns:local="clr-namespace:II.RPA.Plugin.GUI.ProcessCreator.Controls">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Theme/ColorDictionary.xaml" />
+        <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Theme/SvgDictionary.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <ControlTemplate x:Key="FButton_Template" TargetType="{x:Type local:TFButton}">
+        <Border
+            x:Name="border"
+            Width="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Width}"
+            Height="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Height}"
+            Background="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Background}"
+            BorderBrush="{TemplateBinding BorderBrush}"
+            BorderThickness="{TemplateBinding BorderThickness}"
+            CornerRadius="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=CornerRadius}">
+            <!--  Icon/Text  -->
+            <StackPanel
+                Margin="{TemplateBinding Padding}"
+                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+                <TextBlock
+                    x:Name="icon"
+                    Margin="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=FIconMargin}"
+                    VerticalAlignment="Center"
+                    FontFamily="{TemplateBinding IconFontFamily}"
+                    FontSize="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=FIconSize}"
+                    Foreground="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=IconForeground}"
+                    Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=FIcon}" />
+                <TextBlock
+                    x:Name="txt"
+                    VerticalAlignment="Center"
+                    FontSize="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=FontSize}"
+                    Foreground="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Foreground}"
+                    Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Content}"
+                    TextDecorations="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=ContentDecorations}" />
+            </StackPanel>
+        </Border>
+        <!--  触发器  -->
+        <ControlTemplate.Triggers>
+            <!--  设置鼠标进入时的背景、前景样式  -->
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="border" Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=MouseOverBackground}" />
+                <Setter TargetName="txt" Property="Foreground" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=MouseOverForeground}" />
+            </Trigger>
+            <!--  鼠标按下时的前景、背景样式  -->
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="border" Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=PressedBackground}" />
+                <Setter TargetName="txt" Property="Foreground" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=PressedForeground}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="false">
+                <Setter TargetName="border" Property="Opacity" Value="0.5" />
+            </Trigger>
+            <Trigger Property="FIcon" Value="{x:Null}">
+                <Setter TargetName="icon" Property="Visibility" Value="Collapsed" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <Style x:Key="TFButton_Base" TargetType="{x:Type local:TFButton}">
+        <Setter Property="Background" Value="{StaticResource SAGrayTextForeground}" />
+        <Setter Property="MouseOverBackground" Value="Transparent" />
+        <Setter Property="PressedBackground" Value="Transparent" />
+        <Setter Property="Foreground" Value="{StaticResource TextButttonForeground}" />
+        <Setter Property="MouseOverForeground" Value="{StaticResource SABorderBrushground}" />
+        <Setter Property="PressedForeground" Value="{StaticResource PressedForeground}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FIconSize" Value="20" />
+        <Setter Property="Padding" Value="3,1,3,1" />
+        <Setter Property="Content" Value="{x:Null}" />
+        <Setter Property="FIconMargin" Value="0,0,0,0" />
+        <Setter Property="AllowsAnimation" Value="False" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Template" Value="{StaticResource FButton_Template}" />
+    </Style>
+
+    <Style
+        x:Key="TFButton_CornerCross"
+        BasedOn="{StaticResource TFButton_Base}"
+        TargetType="{x:Type local:TFButton}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:TFButton}">
+                    <Border Background="Transparent">
+                        <Viewbox
+                            x:Name="icon"
+                            Margin="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=FIconMargin}"
+                            Child="{StaticResource CornerCross}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{StaticResource SABorderBrushground}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{StaticResource SABorderBrushground}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false" />
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

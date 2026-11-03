@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="ProtoServices\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.35.1" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.70.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Drawing.Common" Version="10.0.10" />
+    <PackageReference Include="Grpc.Tools" Version="2.82.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\II.RPA.Core.Abstractions\II.RPA.Core.Abstractions.csproj" />
+    <ProjectReference Include="..\II.RPA.Core.Contracts\II.RPA.Core.Contracts.csproj" />
+    <ProjectReference Include="..\II.RPA.Core.WorkerProtocol\II.RPA.Core.WorkerProtocol.csproj" />
+    <ProjectReference Include="..\II.RPA.Communication\II.RPA.Communication.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\RuntimeHostProtos\process_service.proto" GrpcServices="Client" ProtoRoot="Protos\RuntimeHostProtos\" />
+    <Protobuf Include="Protos\RuntimeHostProtos\runtime_service.proto" GrpcServices="Both" ProtoRoot="Protos\RuntimeHostProtos\" />
+  </ItemGroup>
+
+</Project>

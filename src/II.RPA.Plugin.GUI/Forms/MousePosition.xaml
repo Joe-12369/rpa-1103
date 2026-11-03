@@ -1,0 +1,107 @@
+﻿<Window x:Class="II.RPA.Plugin.GUI.MousePosition"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:II.RPA.Plugin.GUI"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        SizeToContent ="Manual"
+        WindowStyle="None"
+        WindowStartupLocation="Manual"
+         Width="213px"
+        Height="124px"
+         AllowsTransparency="True"
+        Topmost="True"
+        Background="Transparent"
+        Loaded="Window_Loaded" FontFamily="Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Segoe UI" Padding="0 0 0 0" 
+        ShowInTaskbar="False"
+        Closing="Window_Closing">
+    <!--<Window.Background>
+        <SolidColorBrush Opacity="0.5" Color="Black"></SolidColorBrush>
+    </Window.Background>-->
+    <Window.Resources>
+        <Style x:Key="xTextBlockStyleTitle" TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="#C6ECEEF2"/>
+            <Setter Property="FontFamily" Value="Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Segoe UI"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+           
+        </Style>
+        <Style x:Key="xTextBlockStyleGray" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#ECEEF2"/>
+            <Setter Property="FontFamily" Value="Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Segoe UI"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+        </Style>
+        <Style x:Key="xTextBlockStyleLight" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontFamily" Value="Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Segoe UI"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Block.TextAlignment" Value="Center"/>
+            <Setter Property="FontStretch" Value="SemiExpanded"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+        </Style>
+        <Style x:Key="xTextBlockCaptureMode" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFF"/>
+            <Setter Property="FontFamily" Value="Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Segoe UI"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+           
+        </Style>
+        <Style x:Key="xTextBlockCaptureModeLight" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#000"/>
+            <Setter Property="FontFamily" Value="Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Segoe UI"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+        </Style>
+        <Style x:Name="s_xBorderBg" x:Key="xBorderBg" TargetType="Border">
+            <Setter Property="Background" Value="#fff"/>
+        </Style>
+    </Window.Resources>
+    <Border Background="#F0161923" CornerRadius="4">
+        <StackPanel Orientation="Vertical" Margin="15 10 15 10" Height="auto" >
+            <StackPanel Orientation="Horizontal" Height="28">
+                <TextBlock Text="{DynamicResource InspectInfoWnd.xaml_ShuBiaoWeiZhi}" Style="{StaticResource xTextBlockStyleTitle}"   />
+                <TextBlock Text="X:" Style="{StaticResource xTextBlockStyleGray}" Margin="10 0 0 0" />
+                <TextBlock Text="100" x:Name="tb_PositionX" Style="{StaticResource xTextBlockStyleGray}" Padding="0" Margin="8,0,0,0"/>
+                <TextBlock Text="," Style="{StaticResource xTextBlockStyleGray}" Margin="5 0 0 0" />
+                <TextBlock Text="Y:" Style="{StaticResource xTextBlockStyleGray}" Margin="5 0 0 0" />
+                <TextBlock Text="200" x:Name="tb_PositionY" Style="{StaticResource xTextBlockStyleGray}" Padding="0" Margin="8,0,0,0"/>
+            </StackPanel>
+            <StackPanel  x:Name="rect_refreshLine"  Visibility="Visible"  Orientation="Horizontal" Height="15">
+                <Rectangle Fill="#1AECEEF2" VerticalAlignment="Center" Height="1" Width="183" Margin="0,7,26,7" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"  Margin="0,0,0,1"  Height="26">
+                <Border Background="#ff8910" CornerRadius="2"  Height="17" Width="32" Padding="0 1 0 0">
+                    <TextBlock Text="Ctrl" Style="{StaticResource xTextBlockStyleLight}"   Height="16" Width="28" />
+                </Border>
+                <TextBlock Text="+" FontSize="10px" Foreground="White" FontStretch="SemiExpanded"  Block.TextAlignment="Center"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="14" Width="9" Margin="2 6 0 6"  />
+                <Border Background="#ff8910" CornerRadius="2"  Height="17" Width="50" Margin="2 0 0 0" Padding="0 1 0 0">
+                    <TextBlock x:Name="tb_singleClick" Text="{DynamicResource DataCollectOverlayWnd.xaml_ShuBiaoZuoJian}" Style="{StaticResource xTextBlockStyleLight}"   Height="16" Width="50"  />
+                </Border>
+                <TextBlock x:Name="txt_Status" Text="{DynamicResource MousePosition.xaml_HuoQuDangQianZuoBiao}" Style="{StaticResource xTextBlockStyleGray}" Margin="6,0,0,1" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Height="28" Margin="0,0,0,0">
+                <Border Background="#ff8910" CornerRadius="2"  Height="17" Width="32" Padding="0 1 0 0" >
+                    <TextBlock Text="ESC" Style="{StaticResource xTextBlockStyleLight}" Width="30" Height="16" />
+                </Border>
+                <TextBlock Text="{DynamicResource InspectInfoWnd.xaml_TuiChu}" Style="{StaticResource xTextBlockStyleGray}" Margin="12,0,0,0" />
+            </StackPanel>
+            <StackPanel  x:Name="rect_loadingLine"  Visibility="Collapsed"  Orientation="Horizontal" Height="15">
+                <Rectangle Fill="#1AECEEF2" VerticalAlignment="Center" Height="1" Width="233" Margin="0,7,26,7" />
+            </StackPanel>
+            <StackPanel x:Name="sp_loading" Visibility="Collapsed" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Height="29" Margin="0 0 34 0" >
+                <Image x:Name="loadingImg" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" SnapsToDevicePixels="True" Height="28"/>
+                <TextBlock TextWrapping="Wrap" Text="{DynamicResource nspectInfoWnd.xaml_ZhiNengJianCeZhong}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13px"/>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Window>
+

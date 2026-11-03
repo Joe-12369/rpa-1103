@@ -1,0 +1,18 @@
+﻿syntax = "proto3";
+package rpa.core.worker.settings;
+
+message Settings {
+  repeated SettingItem items = 1;
+}
+
+message SettingItem {
+  string key = 1;
+
+  oneof value {
+    string string_value = 2;
+    int32 int_value = 3;
+    bool bool_value = 4;
+    double double_value = 5;
+    bytes bytes_value = 6;
+  }
+}

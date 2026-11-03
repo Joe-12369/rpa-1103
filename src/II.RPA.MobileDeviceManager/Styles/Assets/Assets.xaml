@@ -1,0 +1,49 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--  登录界面  -->
+    <BitmapImage x:Key="LogoLogin" UriSource="Login_Banner.png" />
+    <BitmapImage x:Key="LogoAccountLogin" UriSource="Login_AccountLogin.png" />
+    <BitmapImage x:Key="LogoActivationCode" UriSource="Login_ActivationCode.png" />
+    <BitmapImage x:Key="LogoActivationCodeLogin" UriSource="Login_ActivationCodeLogin.png" />
+    <BitmapImage x:Key="LogoServer" UriSource="Login_Server.png" />
+    <BitmapImage x:Key="LogoUserName" UriSource="Login_UserName.png" />
+    <BitmapImage x:Key="LogoPassword" UriSource="Login_Password.png" />
+    <BitmapImage x:Key="LogoWechat" UriSource="Login_WeiXin.png" />
+    <BitmapImage x:Key="LogoAlipay" UriSource="Login_Zhifubao.png" />
+    <BitmapImage x:Key="LogoTitle" UriSource="Login_LogoTitle.png" />
+
+    <!--  主页  -->
+    <BitmapImage x:Key="BotThemeLogo" UriSource="Main_BotThemeLogo.png" />
+    <BitmapImage x:Key="Home_MachineLogo" UriSource="Home_MachineLogo.png" />
+    <BitmapImage x:Key="Home_DestopProtect" UriSource="Home_DestopProtect.png" />
+    <BitmapImage x:Key="Home_Setting" UriSource="Home_Setting.png" />
+    <BitmapImage x:Key="Home_UserPicture" UriSource="Home_UserPicture.png" />
+    <BitmapImage x:Key="Home_OpenFile" UriSource="OpenFile.png" />
+
+    <!--  个人中心  -->
+    <BitmapImage x:Key="Main_PersonalCenter" UriSource="Main_PersonalCenter.png" />
+    <BitmapImage x:Key="Main_Feedback" UriSource="Main_Feedback.png" />
+    <BitmapImage x:Key="Main_Exit" UriSource="Main_Exit.png" />
+
+
+    <BitmapImage x:Key="Home_NoHistory" UriSource="NoHistory.png" />
+    <BitmapImage x:Key="Home_NoMatchHistory" UriSource="NoMatchHistory.png" />
+
+    <!--  流程记录  -->
+    <BitmapImage x:Key="Recorder_StartEdit" UriSource="Recorder_StartEdit.png" />
+
+    <BitmapImage x:Key="Recorder_Loading" UriSource="Loading.gif" />
+    <BitmapImage x:Key="Recorder_Load_Complate" UriSource="CheckComplate.png" />
+    <BitmapImage x:Key="Recorder_Audio_Running" UriSource="Audio_Running.png" />
+    <BitmapImage x:Key="Recorder_Audio_Stop" UriSource="Audio_Stop.png" />
+
+    <!--  新手指引  -->
+    <BitmapImage x:Key="Guide_OpenMicrophone" UriSource="Guide_OpenMicrophone.png" />
+    <BitmapImage x:Key="Guide_StartRecord" UriSource="Guide_StartRecord.png" />
+    <BitmapImage x:Key="Guide_StepIndex" UriSource="Guide_StepIndex.png" />
+    <BitmapImage x:Key="Guide_Image" UriSource="Guide_Image.png" />
+    <BitmapImage x:Key="Gide_CompleteBtn" UriSource="Gide_CompleteBtn.png" />
+    <BitmapImage x:Key="Guide_Shrink" UriSource="Guide_Shrink.png" />
+
+    <BitmapImage x:Key="Install_Fail" UriSource="Install_Fail.png" />
+    <BitmapImage x:Key="DisConnect" UriSource="DisConnect.png" />
+</ResourceDictionary>

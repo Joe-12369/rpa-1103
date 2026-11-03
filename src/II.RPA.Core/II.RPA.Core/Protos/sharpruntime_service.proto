@@ -1,0 +1,28 @@
+﻿syntax = "proto3";
+package rpa.core.worker.sharpruntime;
+
+message SharpRuntimeMessage
+{
+  string action = 1;
+  string payload = 2;
+  string request_id = 3;
+}
+
+message ElementNode {
+  string elementId = 1;
+  string name = 2;
+  string tag = 3;
+  repeated ElementNode children = 4;
+}
+
+message PeerElementPayload {
+  repeated ElementNode tree = 1;
+  repeated string active = 2;
+}
+
+message PeerElementMessage {
+  string action = 1;
+  PeerElementPayload payload = 2;
+}
+
+

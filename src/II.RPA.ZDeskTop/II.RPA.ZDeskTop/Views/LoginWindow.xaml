@@ -1,0 +1,180 @@
+﻿<Window
+    x:Class="II.RPA.ZDeskTop.Views.LoginWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:II.RPA.ZDeskTop.Views"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vali="clr-namespace:II.RPA.ZDeskTop.DataValidation"
+    xmlns:res="clr-namespace:II.Framework.Resource;assembly=II.Framework"
+    Title="{x:Static res:i18n_Resource.LoginWindow_1652C914}"
+    Width="500"
+    Height="350"
+    MaxWidth="500"
+    MaxHeight="350"
+    ResizeMode="NoResize"
+    Topmost="False"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="SingleBorderWindow"
+    mc:Ignorable="d">
+    <WindowChrome.WindowChrome>
+        <WindowChrome
+            CaptionHeight="0"
+            CornerRadius="0"
+            GlassFrameThickness="1"
+            NonClientFrameEdges="None"
+            UseAeroCaptionButtons="False" />
+    </WindowChrome.WindowChrome>
+    <Border
+        Background="#161923"
+        BorderBrush="#0085FF"
+        BorderThickness="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid
+                Background="Transparent"
+                Focusable="True"
+                IsHitTestVisible="True"
+                MouseDown="Grid_MouseDown">
+                <TextBlock
+                    Margin="10,0,0,0"
+                    VerticalAlignment="Center"
+                    FontSize="15"
+                    Foreground="#0085FF"
+                    IsHitTestVisible="False"
+                    Text="{x:Static res:i18n_Resource.LoginWindow_1652C914}" />
+                <Button
+                    Width="40"
+                    Height="40"
+                    Margin="0,0,5,0"
+                    HorizontalAlignment="Right"
+                    Click="Button_Click"
+                    Style="{StaticResource MaterialDesignIconButton}">
+                    <materialDesign:PackIcon Foreground="#0085FF" Kind="Close" />
+                </Button>
+            </Grid>
+            <ContentControl x:Name="ContentRegion" Grid.Row="1">
+                <Grid>
+                    <StackPanel
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center"
+                        Orientation="Vertical">
+                        <TextBlock
+                            Margin="2,0,0,0"
+                            FontSize="13"
+                            Foreground="#99FFFFFF"
+                            Text="{x:Static res:i18n_Resource.LoginWindow_EB688AC5}" />
+                        <StackPanel
+                            Margin="0,20,0,0"
+                            HorizontalAlignment="Center"
+                            Orientation="Horizontal">
+                            <materialDesign:PackIcon
+                                Width="25"
+                                Margin="0,0,5,0"
+                                VerticalAlignment="Center"
+                                Foreground="{Binding ElementName=UsernameTxt, Path=BorderBrush}"
+                                Kind="Account" />
+                            <TextBox
+                                x:Name="UsernameTxt"
+                                Width="300"
+                                Height="50"
+                                HorizontalAlignment="Center"
+                                materialDesign:HintAssist.FloatingScale="0.7"
+                                materialDesign:HintAssist.Foreground="#0085FF"
+                                materialDesign:HintAssist.HelperTextFontSize="15"
+                                materialDesign:HintAssist.Hint="{x:Static res:i18n_Resource.LoginWindow_6D13EC97}"
+                                materialDesign:TextFieldAssist.HasClearButton="True"
+                                materialDesign:TextFieldAssist.UnderlineBrush="#0085FF"
+                                materialDesign:ValidationAssist.Background="Transparent"
+                                materialDesign:ValidationAssist.FontSize="12"
+                                materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                                materialDesign:ValidationAssist.PopupPlacement="Bottom"
+                                materialDesign:ValidationAssist.UsePopup="True"
+                                BorderBrush="#54FFFFFF"
+                                FontSize="16"
+                                Foreground="White"
+                                Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                                <TextBox.Text>
+                                    <Binding
+                                        Mode="TwoWay"
+                                        Path="UserName"
+                                        UpdateSourceTrigger="PropertyChanged">
+                                        <Binding.ValidationRules>
+                                            <vali:NotEmptyValidationRule ValidatesOnTargetUpdated="True" />
+                                        </Binding.ValidationRules>
+                                    </Binding>
+                                </TextBox.Text>
+                            </TextBox>
+                        </StackPanel>
+                        <StackPanel
+                            Margin="0,20,0,0"
+                            HorizontalAlignment="Center"
+                            Orientation="Horizontal">
+                            <materialDesign:PackIcon
+                                Width="25"
+                                Margin="0,0,5,0"
+                                VerticalAlignment="Center"
+                                Foreground="{Binding ElementName=UsernameTxt, Path=BorderBrush}"
+                                Kind="Key" />
+                            <PasswordBox
+                                x:Name="PasswordTxt"
+                                Width="300"
+                                Height="50"
+                                HorizontalAlignment="Center"
+                                materialDesign:HintAssist.FloatingScale="0.7"
+                                materialDesign:HintAssist.Foreground="#0085FF"
+                                materialDesign:HintAssist.Hint="{x:Static res:i18n_Resource.LoginWindow_A8566BA8}"
+                                materialDesign:TextFieldAssist.HasClearButton="True"
+                                materialDesign:TextFieldAssist.UnderlineBrush="#0085FF"
+                                materialDesign:ValidationAssist.Background="Transparent"
+                                materialDesign:ValidationAssist.FontSize="12"
+                                materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                                materialDesign:ValidationAssist.PopupPlacement="Bottom"
+                                materialDesign:ValidationAssist.UsePopup="True"
+                                BorderBrush="#54FFFFFF"
+                                FontSize="16"
+                                Foreground="White"
+                                Style="{StaticResource MaterialDesignFloatingHintRevealPasswordBox}">
+                                <materialDesign:PasswordBoxAssist.Password>
+                                    <Binding
+                                        Mode="TwoWay"
+                                        Path="Password"
+                                        UpdateSourceTrigger="PropertyChanged">
+                                        <Binding.ValidationRules>
+                                            <vali:NotEmptyValidationRule ValidatesOnTargetUpdated="True" />
+                                        </Binding.ValidationRules>
+                                    </Binding>
+                                </materialDesign:PasswordBoxAssist.Password>
+                            </PasswordBox>
+                        </StackPanel>
+                        <TextBlock
+                            Margin="0,18,0,0"
+                            HorizontalAlignment="Center"
+                            Foreground="PaleVioletRed"
+                            Text="{x:Static res:i18n_Resource.LoginWindow_7023C8A6}"
+                            Visibility="{Binding TipsVisibility}" />
+                        <Button
+                            Width="150"
+                            Height="50"
+                            Margin="0,12,0,0"
+                            materialDesign:ButtonAssist.CornerRadius="25"
+                            Background="Transparent"
+                            BorderBrush="#0085FF"
+                            BorderThickness="1"
+                            Click="ConfirmClick"
+                            Content="{x:Static res:i18n_Resource.LoginWindow_4AD2EF8F}"
+                            FontSize="14"
+                            Foreground="#0085FF"
+                            IsDefault="True"
+                            LostFocus="Button_LostFocus"
+                            Style="{StaticResource MaterialDesignRaisedDarkButton}" />
+                    </StackPanel>
+                </Grid>
+            </ContentControl>
+        </Grid>
+    </Border>
+</Window>

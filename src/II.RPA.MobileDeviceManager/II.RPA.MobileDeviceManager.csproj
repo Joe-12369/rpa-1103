@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <!-- Protected x64 startup fails CET shadow stack validation (0x39). -->
+    <CetCompat Condition="'$(Platform)' == 'x64'">false</CetCompat>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>II.RPA.MobileDeviceManager</RootNamespace>
+    <AssemblyName>II.RPA.MobileDeviceManager</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>II.RPA.MobileDeviceManager</RootNamespace>
+    <AssemblyName>II.RPA.MobileDeviceManager</AssemblyName>
+    
+    
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+<LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+<LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+<LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+<LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Reference Include="II.RPA.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\II.RPA.UI.dll</HintPath>
+    </Reference>
+<Reference Include="System.Management" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CheckConnectMobileService.cs" />
+    <Compile Include="CommandParamsHelper.cs" />
+    <Compile Include="Common\AdbHelper.cs" />
+    <Compile Include="Common\AndroidProp.cs" />
+    <Compile Include="Common\Device.cs" />
+    <Compile Include="Common\DosHelper.cs" />
+    <Compile Include="Common\Extensions.cs" />
+    <Compile Include="Common\ImageHelper.cs" />
+    <Compile Include="Common\MsgTipsHelper.cs" />
+    <Compile Include="Common\ObjectRef{T}.cs" />
+    <Compile Include="Common\ProcessHelper.cs" />
+    <Compile Include="Common\RandomHelper.cs" />
+    <Compile Include="Common\ReactiveObject.cs" />
+    <Compile Include="Controls\Arc.cs" />
+    <Compile Include="Controls\GifPlayBox.cs" />
+    <Compile Include="Controls\ModifyDialog.xaml.cs">
+      <DependentUpon>ModifyDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CV\AdbCVHelper.cs" />
+    <Compile Include="CV\CVHelper.cs" />
+    <Compile Include="CV\CVImageHelper.cs" />
+    <Compile Include="CV\CVItem.cs" />
+    <Compile Include="CV\CVItemElementObj.cs" />
+    <Compile Include="CV\CVMessage.cs" />
+    <Compile Include="CV\CVMobileElement.cs" />
+    <Compile Include="CV\CVSelectorItem.cs" />
+    <Compile Include="CV\CVWaiting.xaml.cs">
+      <DependentUpon>CVWaiting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CV\Payload.cs" />
+    <Compile Include="Controls\ProgressRing.xaml.cs">
+      <DependentUpon>ProgressRing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Extentions\SemaphoreExtention.cs" />
+    <Compile Include="Log\AdaptedLogger.cs" />
+    <Compile Include="Log\ILogger.cs" />
+    <Compile Include="Log\LogScopeExtension.cs" />
+    <Compile Include="MobileDeviceManager.cs" />
+    <Compile Include="MobileException.cs" />
+    <Compile Include="Models\ConnectEventSubModel.cs" />
+    <Compile Include="Models\CurrentDeviceGlobal.cs" />
+    <Compile Include="Models\GlobalEventSubModel.cs" />
+    <Compile Include="Models\GlobalExceptionSubModel.cs" />
+    <Compile Include="Models\MobileElement.cs" />
+    <Compile Include="Models\ParamCvCaptureModel.cs" />
+    <Compile Include="Models\ParamElementCaptureModel.cs" />
+    <Compile Include="Models\MobileRotation.cs" />
+    <Compile Include="Models\ParamElementShotClickModel.cs" />
+    <Compile Include="Models\Selecter\AndroidSelectorItem.cs" />
+    <Compile Include="Models\Selecter\MobileItem.cs" />
+    <Compile Include="Models\Selecter\MobileSelectorItem.cs" />
+    <Compile Include="Models\Selecter\MobileSelectorItemProperty.cs" />
+    <Compile Include="ScreenShot\ConcurrencyItemContainer.cs" />
+    <Compile Include="ScreenShot\ElementShoter.cs" />
+    <Compile Include="ScreenShot\Interop.cs" />
+    <Compile Include="ScreenShot\ScreenShoter.cs" />
+    <Compile Include="ScreenShot\ScreenshotWindow.cs" />
+    <Compile Include="ScreenShot\SimplePanel.cs" />
+    <Compile Include="ScreenShot\TipElement.cs" />
+    <Compile Include="Services\MobileLocalSelectorService.cs" />
+    <Compile Include="Services\MobileElementRepository.cs" />
+    <Compile Include="Services\MobileScreenMirrorService.cs" />
+    <Compile Include="Services\PageSourceRefreshService.cs" />
+    <Compile Include="Services\ScrcpyInputMonitor.cs" />
+    <Compile Include="SyncMobileConnectExService.cs" />
+    <Compile Include="SyncMobilePageSourceService.cs" />
+    <Compile Include="ValueTypeConvert\Bool2VisibilityInvertConverter.cs" />
+    <Compile Include="ViewModels\DeviceScreenViewModel.cs" />
+    <Compile Include="Views\CheckWnd.xaml.cs">
+      <DependentUpon>CheckWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ModifyWindow.xaml.cs">
+      <DependentUpon>ModifyWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OverlayWnd.xaml.cs">
+      <DependentUpon>OverlayWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CapureShotToolWnd.xaml.cs">
+      <DependentUpon>CapureShotToolWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SelectorToolWnd.xaml.cs">
+      <DependentUpon>SelectorToolWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UsercontrolLoadingMantle.xaml.cs">
+      <DependentUpon>UsercontrolLoadingMantle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WarningMsgWnd.xaml.cs">
+      <DependentUpon>WarningMsgWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WarningWnd.xaml.cs">
+      <DependentUpon>WarningWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Win32\BOOL.cs" />
+    <Compile Include="Win32\HWND.cs" />
+    <Compile Include="Win32\PCWSTR.cs" />
+    <Compile Include="Win32\PWSTR.cs" />
+    <Compile Include="Win32\RECT.cs" />
+    <Compile Include="Win32\Win32Helper.cs" />
+    <Compile Include="ContentDialogExtension.cs" />
+    <Compile Include="Models\DeviceInfo.cs" />
+    <Compile Include="Models\E_MobileTool_Install_Status.cs" />
+    <Compile Include="MobileInstall\Downloader.cs" />
+    <Compile Include="MobileInstall\MobileToolInstaller.cs" />
+    <Compile Include="MobileInstall\ProcessItem.cs" />
+    <Compile Include="MobileInstall\ZipHandler.cs" />
+    <Compile Include="Controls\IIProgressBar.xaml.cs">
+      <DependentUpon>IIProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ValueTypeConvert\Bool2VisibilityConverter.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\ModelBase.cs" />
+    <Compile Include="Views\DeviceListBoxItem.xaml.cs">
+      <DependentUpon>DeviceListBoxItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeviceScreenView.xaml.cs">
+      <DependentUpon>DeviceScreenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Win32\WINDOW_LONG_PTR_INDEX.cs" />
+    <Page Include="Controls\GifPlayBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ModifyDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CV\CVWaiting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ProgressRing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Resources\ProgressBarStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\IIProgressBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ScreenShot\Style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Assets\Assets.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\Borders\Default.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\Borders\Eclipse.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\Borders\ImageBorderStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\Buttons\ImageButtonStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\Comboxs\ComboxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\Comboxs\IIComboxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\Images\Default.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\ListBoxItem\ListBoxItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Controls\Menus\MenuStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Controls\Paths\PathCommonStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\Popups\PopupCommonStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\RadioButton\RadioButtonBorderStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\RadioButton\RadioButtonStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\Scroll\HikScrollView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\Scroll\ScrollbarStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\Scroll\ScrollViewStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\StackPanel\CommonStackPanelStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\TextBlocks\Default.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\TextBlocks\IconText.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\TextBlocks\Title.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\TextBoxs\TextBoxHitInputStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\TextBoxs\TextBoxWithWaterMarkStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Controls\Tooltip\TooltipCommonStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Controls\Windows\CommonWindowEx.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Nameds\Buttons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Nameds\Texts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Mobile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\SkinDefault.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CheckWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DeviceListBoxItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DeviceScreenView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ModifyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OverlayWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CapureShotToolWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SelectorToolWnd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsercontrolLoadingMantle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\WarningMsgWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\WarningWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Resource Include="Styles\Assets\Install_Fail.png" />
+    <Resource Include="Styles\Assets\DisConnect.png" />
+    <Content Include="MobileScreen\open_a_terminal_here.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MobileScreen\scrcpy-console.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MobileScreen\scrcpy-server">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Images\connectloading.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Resources\Images\gifloading.png" />
+    <None Include="Resources\Images\tips_02.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Images\tips_01.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Styles\Assets\Audio_Running.png" />
+    <Resource Include="Styles\Assets\Audio_Stop.png" />
+    <Resource Include="Styles\Assets\CheckComplate.png" />
+    <Resource Include="Styles\Assets\Gide_CompleteBtn.png" />
+    <Resource Include="Styles\Assets\Guide_Image.png" />
+    <Resource Include="Styles\Assets\Guide_Image1.png" />
+    <Resource Include="Styles\Assets\Guide_OpenMicrophone.png" />
+    <Resource Include="Styles\Assets\Guide_Shrink.png" />
+    <Resource Include="Styles\Assets\Guide_StartRecord.png" />
+    <Resource Include="Styles\Assets\Guide_StepIndex.png" />
+    <Resource Include="Styles\Assets\Home_DestopProtect.png" />
+    <Resource Include="Styles\Assets\Home_MachineLogo.png" />
+    <Resource Include="Styles\Assets\Home_Setting.png" />
+    <Resource Include="Styles\Assets\Home_UserPicture.png" />
+    <Resource Include="Styles\Assets\Loading.gif" />
+    <Resource Include="Styles\Assets\Login_AccountLogin.png" />
+    <Resource Include="Styles\Assets\Login_ActivationCode.png" />
+    <Resource Include="Styles\Assets\Login_ActivationCodeLogin.png" />
+    <Resource Include="Styles\Assets\Login_Banner.png" />
+    <Resource Include="Styles\Assets\Login_Logo1.png" />
+    <Resource Include="Styles\Assets\Login_LogoTitle.png" />
+    <Resource Include="Styles\Assets\Login_Password.png" />
+    <Resource Include="Styles\Assets\Login_Server.png" />
+    <Resource Include="Styles\Assets\Login_UserName.png" />
+    <Resource Include="Styles\Assets\Login_WeiXin.png" />
+    <Resource Include="Styles\Assets\Login_Zhifubao.png" />
+    <Resource Include="Styles\Assets\Main_BotThemeLogo.png" />
+    <Resource Include="Styles\Assets\Main_Exit.png" />
+    <Resource Include="Styles\Assets\Main_Feedback.png" />
+    <Resource Include="Styles\Assets\Main_PersonalCenter.png" />
+    <Resource Include="Styles\Assets\NoHistory.png" />
+    <Resource Include="Styles\Assets\NoMatchHistory.png" />
+    <Resource Include="Styles\Assets\OpenFile.png" />
+    <Resource Include="Styles\Assets\Recorder_StartEdit.png" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="logo.ico" />
+    <Resource Include="CV\loading.gif" />
+    <Resource Include="Icon\iconfont.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icon\iconfont.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MobileScreen\adb.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MobileScreen\AdbWinApi.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MobileScreen\AdbWinUsbApi.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MobileScreen\avcodec-61.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MobileScreen\avformat-61.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MobileScreen\avutil-59.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MobileScreen\icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MobileScreen\II.RPA.MobileScreen.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MobileScreen\libusb-1.0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MobileScreen\scrcpy-noconsole.vbs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MobileScreen\SDL2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MobileScreen\swresample-5.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlaUI.Core\FlaUI.Core.csproj" />
+    <ProjectReference Include="..\FlaUI.UIA3\FlaUI.UIA3.csproj" />
+    <ProjectReference Include="..\Gma.UserActivityMonitor\Gma.UserActivityMonitor.csproj" />
+    <ProjectReference Include="..\II.RPA.Communication\II.RPA.Communication.csproj" />
+    <ProjectReference Include="..\II.RPA.Core\II.RPA.Core\II.RPA.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.MobileDeviceManager.GrpcService\II.RPA.MobileDeviceManager.GrpcService.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  <ItemGroup />
+  
+  <ItemGroup>
+    <PackageReference Include="Appium.WebDriver" Version="4.4.5" />
+    <PackageReference Include="Castle.Core" Version="4.3.1" />
+    <PackageReference Include="DotNetSeleniumExtras.PageObjects" Version="3.11.0" />
+    <PackageReference Include="DynamicData" Version="9.0.4" />
+    <PackageReference Include="Google.Protobuf" Version="3.35.1" />
+    <PackageReference Include="Grpc.Core.Api" Version="2.70.0" />
+    <PackageReference Include="IPA.Ubases" Version="1.0.0.22" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Selenium.Support" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="SharpZipLib" Version="1.3.2" />
+    <PackageReference Include="System.Reactive" Version="6.0.1" />
+    <PackageReference Include="Unity.Abstractions" Version="5.11.7" />
+    <PackageReference Include="Unity.Container" Version="5.11.11" />
+    <PackageReference Include="WPF-UI" Version="3.0.0-preview.13" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Reactive.Windows.Threading" Version="5.0.0" />
+  </ItemGroup>
+</Project>
+
+
+
+
+

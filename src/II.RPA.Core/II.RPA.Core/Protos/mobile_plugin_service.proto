@@ -1,0 +1,70 @@
+syntax = "proto3";
+package rpa.core.mobileplugin;
+
+message MobileRequest
+{
+    string action=1;
+    //设备udid
+    string udid=2;
+     //设备操作系统
+    string platform_name=3;
+     //设备版本
+    string platform_version=4;
+    //元素结构
+    string selecter=5;
+    //首次元素结构-相似元素专用
+    string origin_selecter=6;
+     //流程组件执行的入参
+    string in_parameter=7;
+    //超时时间
+    int32 time_out=8;
+    //是否相似元素 0-否 1-是
+    int32 is_similar=9;
+}
+message MobileResponse
+{
+	string code = 1;
+    string message=2;
+    string info=3;
+}
+
+message MobileShotbyteResponse
+{
+	string code = 1;
+    string message=2;
+    bytes shot_data = 3;
+}
+message MobileShotBaseStringResponse
+{
+	string code = 1;
+    string message=2;
+    string shot_basestring = 3;
+}
+
+
+service MobilePluginService
+{
+    //组件执行
+	rpc PluginActionInvokeUnary(MobileRequest) returns (MobileResponse);
+    rpc MobileConnectUnary(MobileRequest) returns (MobileResponse);
+    rpc MobileEnterDesignTimeUnary(MobileRequest) returns (MobileResponse);
+     //手机元素校验
+	rpc MobileCheckElementUnary(MobileRequest) returns (MobileResponse);
+    //元素坐标信息
+	rpc MobileElementsRectUnary(MobileRequest) returns (MobileResponse);
+    //手机屏幕截图
+    rpc MobileShotbyteGetUnary(MobileRequest) returns (MobileShotbyteResponse);
+    rpc MobileShotBaseStringGetUnary(MobileRequest) returns (MobileShotBaseStringResponse);
+     //手机资源文件
+    rpc MobilePageSourceGetUnary(MobileRequest) returns (MobileResponse);
+    //手机元素校验
+     rpc MobilePressKeyUnary(MobileRequest) returns (MobileResponse);
+     //开启手机服务
+     rpc StartAppiumServerUnary(MobileRequest) returns (MobileResponse);
+     //供客户端检测服务心跳
+     rpc CheckServiceHeartbeatUnary(MobileRequest) returns (MobileResponse);
+       //测试滑动
+     rpc MobileTestSlidUnary(MobileRequest) returns (MobileResponse);
+}
+
+

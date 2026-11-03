@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaPluginInstaller", "JavaPluginInstaller\JavaPluginInstaller.csproj", "{1BFE72C1-957E-4D3B-B886-8FC980263A4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BFE72C1-957E-4D3B-B886-8FC980263A4D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{1BFE72C1-957E-4D3B-B886-8FC980263A4D}.Debug|Any CPU.Build.0 = Debug|x86
+		{1BFE72C1-957E-4D3B-B886-8FC980263A4D}.Debug|x64.ActiveCfg = Debug|x64
+		{1BFE72C1-957E-4D3B-B886-8FC980263A4D}.Debug|x64.Build.0 = Debug|x64
+		{1BFE72C1-957E-4D3B-B886-8FC980263A4D}.Debug|x86.ActiveCfg = Debug|x86
+		{1BFE72C1-957E-4D3B-B886-8FC980263A4D}.Debug|x86.Build.0 = Debug|x86
+		{1BFE72C1-957E-4D3B-B886-8FC980263A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BFE72C1-957E-4D3B-B886-8FC980263A4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BFE72C1-957E-4D3B-B886-8FC980263A4D}.Release|x64.ActiveCfg = Release|x64
+		{1BFE72C1-957E-4D3B-B886-8FC980263A4D}.Release|x64.Build.0 = Release|x64
+		{1BFE72C1-957E-4D3B-B886-8FC980263A4D}.Release|x86.ActiveCfg = Release|x86
+		{1BFE72C1-957E-4D3B-B886-8FC980263A4D}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B3F400F-3BF4-480E-B4FB-061362B4AD5D}
+	EndGlobalSection
+EndGlobal

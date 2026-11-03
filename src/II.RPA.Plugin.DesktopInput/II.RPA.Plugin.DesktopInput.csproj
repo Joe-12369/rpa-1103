@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Plugin.DesktopInput</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.DesktopInput</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <Platforms>x86;x64</Platforms>
+    <PlatformTarget>$(Platform)</PlatformTarget>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="PluginPackage.cs" />
+    <Compile Include="Mouse\MouseConfigurations.cs" />
+    <Compile Include="Mouse\Params\Base\ParamBase.cs" />
+    <Compile Include="Mouse\Params\ParamMouseDragModel.cs" />
+    <Compile Include="Mouse\Params\ParamMouseMovementTrackModel.cs" />
+    <Compile Include="Mouse\Params\ParamMouseMoveModel.cs" />
+    <Compile Include="Mouse\Params\ParamMouseReleaseModel.cs" />
+    <Compile Include="Mouse\Plugins\Base\MouseComponentBase.cs" />
+    <Compile Include="Mouse\Plugins\MouseDrag.cs" />
+    <Compile Include="Mouse\Plugins\MouseMove.cs" />
+    <Compile Include="Mouse\Plugins\MouseMovementTrack.cs" />
+    <Compile Include="Mouse\Plugins\MouseRelease.cs" />
+    <Compile Include="InputMethod\Commons\ImmHelper.cs" />
+    <Compile Include="InputMethod\Params\ParamGetState.cs" />
+    <Compile Include="InputMethod\Params\ParamSetState.cs" />
+    <Compile Include="InputMethod\Plugins\GetState.cs" />
+    <Compile Include="InputMethod\Plugins\SetState.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Config\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlaUI.Core\FlaUI.Core.csproj" />
+    <ProjectReference Include="..\FlaUI.UIA3\FlaUI.UIA3.csproj" />
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.GUI.Commons\II.RPA.Plugin.GUI.Commons.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAPI\II.RPA.WinAPI.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+  </ItemGroup>
+  <Target Name="DeployDesktopInputPlugin" AfterTargets="AfterBuild">
+    <PropertyGroup>
+      <_RuntimePluginDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\DesktopInput\</_RuntimePluginDir>
+    </PropertyGroup>
+    <RemoveDir Directories="$(_RuntimePluginDir)" Condition="Exists('$(_RuntimePluginDir)')" />
+    <MakeDir Directories="$(_RuntimePluginDir)" />
+    <Copy SourceFiles="$(TargetDir)Config\config.json" DestinationFolder="$(_RuntimePluginDir)" SkipUnchangedFiles="false" />
+    <ItemGroup>
+      <_MainOutput Include="$(TargetDir)$(TargetName).*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_MainOutput)" DestinationFolder="$(_RuntimePluginDir)" SkipUnchangedFiles="false" />
+  </Target>
+</Project>

@@ -1,0 +1,31 @@
+﻿syntax = "proto3";
+package rpa.core.process;
+
+service ProcessService 
+{
+    rpc ResetPluginLoaderRunTimeout (Message) returns (Message);
+    rpc NotifyClientUnary (Message) returns (Message);
+    rpc NotifyEngineUnary (Message) returns (Message);
+    rpc NotifyCoreServerUnary (Message) returns (Message);
+    rpc NotifyVisualDataUnary (Message) returns (Message);
+    rpc NotifyBotUnary (Message) returns (Message);
+}
+
+message Message
+{
+    //消息Id、由请求端创建、响应端原样返回
+    //请求端需要验证消息Id的一致
+    //unary通信此字段可省略
+    int32 Message_Id = 1;
+    //客户端身份 factory、engine
+    string Client_Id = 2;
+    //行为类型,内容为字符串
+    string Action = 3;
+    //当前流程package路径,发起请求端传入，接收端原样返回
+    string Package_Path = 4;
+    //消息体、json字符串
+    string Payload = 5;
+    //保留字段、留作扩展
+    string Reserve = 6;
+    int32 Code = 7;
+}

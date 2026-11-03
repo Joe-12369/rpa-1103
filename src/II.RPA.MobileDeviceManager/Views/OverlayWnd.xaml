@@ -1,0 +1,28 @@
+﻿<Window
+    x:Class="II.RPA.MobileDeviceManager.Views.OverlayWnd"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="50"
+    d:DesignWidth="50"
+    AllowsTransparency="True"
+    Background="Transparent"
+    Closing="Window_Closing"
+    IsHitTestVisible="False"
+    Opacity="0.5"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Grid>
+        <Border
+            x:Name="boder"
+            Background="Transparent"
+            BorderBrush="#FD2E39"
+            BorderThickness="1.5"
+            CornerRadius="0,0,0,0">
+            <!--<Border.Effect>
+                <DropShadowEffect Color="Gray" BlurRadius="10" ShadowDepth="0" Opacity="0.5" />
+            </Border.Effect>-->
+        </Border>
+    </Grid>
+</Window>

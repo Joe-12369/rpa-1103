@@ -1,0 +1,95 @@
+syntax = "proto3";
+import "google/protobuf/wrappers.proto";
+package rpa.core.childsession;
+
+service ChildSessionService 
+{
+	//从CoreServerStreaming收到online消息后 engine调用Run方法执行流程
+	rpc RunUnary(RunRequest) returns (RunResponse);
+	//子会话的CoreServer调用此接口向主会话的CoreServer发送ready消息
+	rpc ChildSessionReadyUnary(Message) returns (Message);
+	//主会话的CoreServer通过此消息流向订阅端engine发送
+	rpc CoreServerStreaming(Message) returns (stream Message);
+	//注销子会话消息
+	rpc ChildSessionCloseUnary(Message) returns (Message);
+
+    //获取ZdeskTop状态
+	rpc GetZdesktopUnary(GetZdesktopRequest) returns (GetZdesktopResponse);
+	//从CoreServerStreaming收到online消息后 engine调用Run方法执行流程
+	rpc StartZDeskTop(RunRequest) returns (RunResponse);
+
+	///engine proxy
+	rpc SubEngineRequestUnary(Message) returns (Message);
+	rpc MainEngineRequestUnary(Message) returns (Message);
+
+	rpc MainEngineStreaming(Message) returns (stream Message);
+	rpc SubEngineStreaming(Message) returns (stream Message);
+
+	/// action = maximize.on 最大化窗口
+	/// action = minimize.on 最小化窗口
+	/// action = restore.on 还原窗口尺寸
+	/// action = topmost.on 置顶
+	/// action = topmost.off 取消置顶
+	/// action = operation.on 允许用户操作
+	/// action = operation.off 不允许用户操作
+	/// action = close 关闭章鱼桌面
+	/// action = miniwindow.on 启动小窗模式，payload = {"hwnd":123,"rect":{"x":1,"y":1,"w":1,"h":1},"innerRect":{"x":1,"y":1,"w":1,"h":1},"screen":1}
+	/// action = miniwindow.off 取消小窗模式
+	/// action = hide.on 隐藏窗口
+	/// action = hide.off 取消隐藏
+	/// action = region.set，payload = {"x":1,"y":1,"w":1,"h":1}
+    /// action = subscribe.start,payload = {"interval":100}
+	rpc ChildSessionControlUnary(Message) returns (Message);
+
+	rpc ServerStreamingToZdesktop(Message) returns (stream Message);
+	/// response:payload = {"path":"1.png","base64":"qwqwqwq"}
+	rpc SnapshotFromServerStreaming(Message) returns (stream Message);
+
+	rpc SnapshotFromZDesktopStreaming(stream Message) returns (Message);
+
+}
+message RunRequest
+{
+	//客户端身份 factory、engine
+    string client_id = 1;
+	//json消息体
+	string payload = 2;
+}
+message RunResponse
+{
+	//客户端身份 factory、engine
+    string client_id = 1;
+	//json消息体
+	string code = 2;
+	string message = 3;
+}
+message GetZdesktopRequest
+{
+	//客户端身份 factory、engine
+    string client_id = 1;
+}
+message GetZdesktopResponse
+{
+	google.protobuf.BoolValue is_runnning = 1;
+	int32 pid = 2;
+}
+message Message
+{
+	//消息Id、由请求端创建、响应端原样返回
+	//请求端需要验证消息Id的一致
+    int32 message_id = 1;
+	//客户端身份 factory、engine
+    string client_id = 2;
+    //行为类型,内容为字符串
+	string action = 3;
+	//当前流程package路径,发起请求端传入，接收端原样返回
+	string package_path = 4;
+	//当前流程runtime路径,发起请求端传入，接收端原样返回
+	string plugin_path = 5;
+	//消息体、json字符串
+	string payload = 6;
+	//超时时间 可选 默认无限超时
+	int32 time_out = 7;
+	//是否需要返回值 默认true
+	google.protobuf.BoolValue need_return = 8;
+}

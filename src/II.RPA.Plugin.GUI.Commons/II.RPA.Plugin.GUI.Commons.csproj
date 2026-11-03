@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Plugin.GUI.Commons</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.GUI.Commons</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>Library</OutputType>
+    
+    <RootNamespace>II.RPA.Plugin.GUI.Commons</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.GUI.Commons</AssemblyName>
+    
+    
+    <Deterministic>true</Deterministic>
+    
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoItX3.Assembly">
+      <HintPath>..\libs\AutoItX3.Assembly.dll</HintPath>
+    </Reference>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Reference Include="System.Management" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessibleObject.cs" />
+    <Compile Include="AutoItHelper.cs" />
+    <Compile Include="ConstFields\CVRouteConstFields.cs" />
+    <Compile Include="DpiTransform.cs" />
+    <Compile Include="FacDialog\EnumTypes.cs" />
+    <Compile Include="FacDialog\FacMessageHelper.cs" />
+    <Compile Include="FacDialog\WindowDialog.cs" />
+    <Compile Include="FilterHelper.cs" />
+    <Compile Include="Forms\ExtendedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitingWnd.xaml.cs">
+      <DependentUpon>WaitingWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GuiBase\cv\IGuiCVNodeAddition.cs" />
+    <Compile Include="GuiBase\cv\IGuiCVNode650.cs" />
+    <Compile Include="GuiBase\cv\IGuiCVNode590.cs" />
+    <Compile Include="GuiBase\cv\IGuiCVNode.cs" />
+    <Compile Include="GuiBase\cv\IGuiCVNode604.cs" />
+    <Compile Include="GuiBase\cv\IGuiCVOperator650.cs" />
+    <Compile Include="GuiBase\cv\IGuiCVOperator.cs" />
+    <Compile Include="GuiBase\IGuiNode_6_4_0.cs" />
+    <Compile Include="GuiBase\IGuiNode_6_3_0.cs" />
+    <Compile Include="GuiBase\IGuiNode_6_5_0.cs" />
+    <Compile Include="GuiBase\IGuiNode_6_6_0.cs" />
+    <Compile Include="GuiBase\IGuiOperator_6_9_0.cs" />
+    <Compile Include="GuiBase\IGuiOperator_6_7_0.cs" />
+    <Compile Include="GuiBase\IGuiOperator_6_3_0.cs" />
+    <Compile Include="GuiBase\IGuiOperator_6_1_0.cs" />
+    <Compile Include="GuiBase\IGuiIENode.cs" />
+    <Compile Include="GuiBase\IGuiJavaOperator.cs" />
+    <Compile Include="GuiBase\IGuiNode.cs" />
+    <Compile Include="GuiBase\IGuiModule.cs" />
+    <Compile Include="GuiBase\IGuiNodeFactory.cs" />
+    <Compile Include="GuiBase\ICVGuiNodeFactory.cs" />
+    <Compile Include="GuiBase\IWindowsGuiNodeFactory.cs" />
+    <Compile Include="GuiBase\GuiModuleBuilder.cs" />
+    <Compile Include="GuiBase\GuiModuleLoader.cs" />
+    <Compile Include="GuiBase\GuiRuntime.cs" />
+    <Compile Include="GuiBase\GuiRuntimeServices.cs" />
+    <Compile Include="GuiBase\IGuiNode_6_1_0.cs" />
+    <Compile Include="GuiBase\IGuiNode_GetElementSelectExtension.cs" />
+    <Compile Include="GuiBase\IGuiNode_InputExtension.cs" />
+    <Compile Include="GuiBase\IGuiOperator.cs" />
+    <Compile Include="GuiBase\IGuiQuerySelectorOperator.cs" />
+    <Compile Include="GuiBase\IGuiSAPNode.cs" />
+    <Compile Include="GuiBase\IGuiWdtErpOperator.cs" />
+    <Compile Include="GuiBase\IGuiWindowsNode.cs" />
+    <Compile Include="GuiBase\IGuiWebNode.cs" />
+    <Compile Include="GuiBase\IGuiWebNode_690.cs" />
+    <Compile Include="GuiBase\IGuiWebOperator.cs" />
+    <Compile Include="GuiBase\IGuiWindowsOperator.cs" />
+    <Compile Include="GuiBase\IGuiNode_MouseExtension.cs" />
+    <Compile Include="GuiBase\ObservableObject.cs" />
+    <Compile Include="GuiBase\Selector.cs" />
+    <Compile Include="GuiBase\SelectorItem.cs" />
+    <Compile Include="GuiBase\SelectorItemProperty.cs" />
+    <Compile Include="MouseParamDef.cs" />
+    <Compile Include="Params\ParamGetChartDataModel.cs" />
+    <Compile Include="Params\ParamAiEnhancedModel.cs" />
+    <Compile Include="Params\UiElementParams.cs" />
+    <Compile Include="MouseMotions\Algorithm1\ConstSpeedManager.cs" />
+    <Compile Include="MouseMotions\Algorithm1\DefaultNoiseProvider.cs" />
+    <Compile Include="MouseMotions\Algorithm1\DefaultSpeedManager.cs" />
+    <Compile Include="MouseMotions\Algorithm1\DoublePoint.cs" />
+    <Compile Include="MouseMotions\Algorithm1\FactoryTemplates.cs" />
+    <Compile Include="MouseMotions\Algorithm1\Flow.cs" />
+    <Compile Include="MouseMotions\Algorithm1\FlowTemplates.cs" />
+    <Compile Include="MouseMotions\Algorithm1\IDeviationProvider.cs" />
+    <Compile Include="MouseMotions\Algorithm1\IntPoint.cs" />
+    <Compile Include="MouseMotions\Algorithm1\MouseMotionNature.cs" />
+    <Compile Include="MouseMotions\Algorithm2\WindMouseRouteBuilder.cs" />
+    <Compile Include="MouseMotions\MouseMovement.cs" />
+    <Compile Include="MouseMotions\MouseRoute.cs" />
+    <Compile Include="MouseMotions\MouseRouteBuilder.cs" />
+    <Compile Include="MouseMotions\MouseRouteBuildAlgorithm.cs" />
+    <Compile Include="MouseMotions\MouseRouteBuildParams.cs" />
+    <Compile Include="MouseMotions\MouseRouteType.cs" />
+    <Compile Include="MouseMotions\Algorithm1\Movement.cs" />
+    <Compile Include="MouseMotions\Algorithm1\MovementFactory.cs" />
+    <Compile Include="MouseMotions\Algorithm1\NoiseProvider.cs" />
+    <Compile Include="MouseMotions\Algorithm1\OvershootManager.cs" />
+    <Compile Include="MouseMotions\Algorithm1\POINT.cs" />
+    <Compile Include="MouseMotions\Algorithm1\SinusoidalDeviationProvider.cs" />
+    <Compile Include="MouseMotions\Algorithm1\SpeedManager.cs" />
+    <Compile Include="MouseMotions\Algorithm1\ZeroDeviationProvider.cs" />
+    <Compile Include="MouseMotions\Algorithm1\ZeroNoiseProvider.cs" />
+    <Compile Include="MouseMotions\Utils.cs" />
+    <Compile Include="MouseMotions\Algorithm1\MouseMotion.cs" />
+    <Compile Include="MouseMotions\Algorithm1\MouseMotionFactory.cs" />
+    <Compile Include="MouseMotions\Algorithm1\MouseMotionService.cs" />
+    <Compile Include="MouseMotions\Algorithm1\MouseSpeed.cs" />
+    <Compile Include="MouseMotions\MouseMotionHelper.cs" />
+    <Compile Include="Params\DataCollect\v1\eFeildType.cs" />
+    <Compile Include="Params\DataCollect\v1\ParamBulidCollectDataSelectorModel.cs" />
+    <Compile Include="Params\DataCollect\v1\ParamCollectDataBySelectorModel.cs" />
+    <Compile Include="Params\DataCollect\v1\ParamDoElementEditorModel.cs" />
+    <Compile Include="Params\DataCollect\v1\ParamDoStringCompileModel.cs" />
+    <Compile Include="Params\DataCollect\v1\ParamMatchNextButtonSelectorModel.cs" />
+    <Compile Include="Params\DataCollect\v1\ParamStartCollectElementCaptureModel.cs" />
+    <Compile Include="Params\DataCollect\v1\Ret\RetDataCollectConfigurationModel.cs" />
+    <Compile Include="Params\DataCollect\v1\Ret\RetElementCaptureModel.cs" />
+    <Compile Include="Params\DataCollect\v2\ParamDataCollect_V2Model.cs" />
+    <Compile Include="FacDialog\ParamShowWindowDialogModel.cs" />
+    <Compile Include="Params\DataCollect\v2\Ret\RetDataCollectConfigurationModel_v2.cs" />
+    <Compile Include="Params\GetElementSelectExParamModel.cs" />
+    <Compile Include="Params\JsonArrayClass.cs" />
+    <Compile Include="Params\ParamDownloaderModel.cs" />
+    <Compile Include="Params\ParamQueryTargetSelectorAllModel.cs" />
+    <Compile Include="Params\ParamSetTextModel.cs" />
+    <Compile Include="Params\QuerySelectorParams.cs" />
+    <Compile Include="Params\ParamTableModel.cs" />
+    <Compile Include="PluginActionHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UiCommon.cs" />
+    <Compile Include="utils\KeyboardLayoutManager.cs" />
+    <Compile Include="utils\RectHelper.cs" />
+    <Compile Include="utils\GUIUtils.cs" />
+    <Compile Include="utils\SelectorPathToXPath.cs" />
+    <Compile Include="utils\SelectorShell.cs" />
+    <Compile Include="Win32Tools\Win32Action.cs" />
+    <Compile Include="Win32Tools\Win32Window.cs" />
+    <Compile Include="WindowMatch\Entities\FirstWndSourceType.cs" />
+    <Compile Include="WindowMatch\Entities\MatchConfig.cs" />
+    <Compile Include="WindowMatch\MatchRule\ExcludeProcessMatchHandler.cs" />
+    <Compile Include="WindowMatch\MatchRule\AppExePathMatchHandler.cs" />
+    <Compile Include="WindowMatch\MatchRule\ProductNameMatchHandler.cs" />
+    <Compile Include="WindowMatch\WindowCache\DesktopWindowCache.cs" />
+    <Compile Include="WindowMatch\WindowCache\DesktopWindowCacheKey.cs" />
+    <Compile Include="WindowMatch\WindowCache\DesktopWindowCacheOptions.cs" />
+    <Compile Include="WindowMatch\WindowCache\DesktopWindowMonitor.cs" />
+    <Compile Include="WindowMatch\WindowCache\DesktopWindowRecord.cs" />
+    <Compile Include="WindowMatch\WindowCache\DesktopWindowSnapshotProvider.cs" />
+    <Compile Include="WindowMatch\WindowObj\DesktopWindow.cs" />
+    <Compile Include="WindowMatch\WindowObj\BrowserWindow.cs" />
+    <Compile Include="WindowMatch\Entities\WindowInfo.cs" />
+    <Compile Include="WindowMatch\Entities\WindowMatcherItem.cs" />
+    <Compile Include="WindowMatch\Entities\WindowType.cs" />
+    <Compile Include="WindowMatch\MatchRule\MainWndClassNameMatchHandler.cs" />
+    <Compile Include="WindowMatch\MatchRule\EmbeddedIEMatchHandler.cs" />
+    <Compile Include="WindowMatch\MatchRule\MatchHandler.cs" />
+    <Compile Include="WindowMatch\MatchRule\ProcessMatchHandler.cs" />
+    <Compile Include="WindowMatch\MatchRule\TitleMatchHandler.cs" />
+    <Compile Include="WindowMatch\WindowMatcher.cs" />
+    <Compile Include="WindowMatch\WindowObj\WindowObject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Forms\IIDefaultStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\WaitingWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Forms\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlaUI.Core\FlaUI.Core.csproj" />
+    <ProjectReference Include="..\FlaUI.UIA2\FlaUI.UIA2.csproj" />
+    <ProjectReference Include="..\FlaUI.UIA3\FlaUI.UIA3.csproj" />
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAPI\II.RPA.WinAPI.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  <ItemGroup />
+  
+  
+  
+  <ItemGroup>
+    <PackageReference Include="ControlzEx" Version="4.2.2" />
+    <PackageReference Include="Fluent.Ribbon" Version="7.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+</Project>
+
+
+
+
+

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Plugin.WebBrowser</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.WebBrowser</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>Library</OutputType>
+    
+    <RootNamespace>II.RPA.Plugin.WebBrowser</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.WebBrowser</AssemblyName>
+    
+    
+    <LangVersion>latest</LangVersion>
+    <Deterministic>true</Deterministic>
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Params\Base\ParamBase.cs" />
+    <Compile Include="Params\ParamUploadDialogModel.cs" />
+    <Compile Include="Params\ParamDownloadDialogModel.cs" />
+    <Compile Include="Params\ParamGetInspectNetworkModel.cs" />
+    <Compile Include="Params\ParamCloseModel.cs" />
+    <Compile Include="Params\ParamCloseAllModel.cs" />
+    <Compile Include="Params\ParamCaptureScreenshotModel.cs" />
+    <Compile Include="Params\ParamMultipleCloseModel.cs" />
+    <Compile Include="Params\ParamStartCaptureModel.cs" />
+    <Compile Include="Params\ParamStartConfigModel.cs" />
+    <Compile Include="Params\ParamDownloadModel.cs" />
+    <Compile Include="Params\ParamDownloadUrlModel.cs" />
+    <Compile Include="Params\ParamElementExecutejsModel.cs" />
+    <Compile Include="Params\ParamExecutejsModel.cs" />
+    <Compile Include="Params\ParamGetCookiesModel.cs" />
+    <Compile Include="Params\ParamGetDocumentModel.cs" />
+    <Compile Include="Params\ParamGetScrollModel.cs" />
+    <Compile Include="Params\ParamGetTabDetailModel.cs" />
+    <Compile Include="Params\ParamGetTitleModel.cs" />
+    <Compile Include="Params\ParamGetUrlModel.cs" />
+    <Compile Include="Params\ParamGoBackModel.cs" />
+    <Compile Include="Params\ParamGoForwardModel.cs" />
+    <Compile Include="Params\ParamIsLoadedModel.cs" />
+    <Compile Include="Params\ParamMaximizedModel.cs" />
+    <Compile Include="Params\ParamMinimizedModel.cs" />
+    <Compile Include="Params\ParamNavigateModel.cs" />
+    <Compile Include="Params\ParamAcquireModel.cs" />
+    <Compile Include="Params\ParamsActiveModel.cs" />
+    <Compile Include="Params\ParamReLoadModel.cs" />
+    <Compile Include="Params\ParamRemoveCookieModel.cs" />
+    <Compile Include="Params\ParamScreenshotModel.cs" />
+    <Compile Include="Params\ParamScrollModel.cs" />
+    <Compile Include="Params\ParamSetCookieModel.cs" />
+    <Compile Include="Params\ParamStopModel.cs" />
+    <Compile Include="Params\ParamSwitchModel.cs" />
+    <Compile Include="Params\ParamWaitModel.cs" />
+    <Compile Include="Params\TabInfo\TabInfo.cs" />
+    <Compile Include="PluginPackage.cs" />
+    <Compile Include="Plugins\Acquire.cs" />
+    <Compile Include="Plugins\Active.cs" />
+    <Compile Include="Plugins\Base\BrowserComponentBase.cs" />
+    <Compile Include="Plugins\UploadDialog.cs" />
+    <Compile Include="Plugins\DownloadDialog.cs" />
+    <Compile Include="Plugins\EndInspectNetwork.cs" />
+    <Compile Include="Plugins\GetInspectNetwork.cs" />
+    <Compile Include="Plugins\GetScroll_V2.cs" />
+    <Compile Include="Plugins\GetSupportedBrowserList.cs" />
+    <Compile Include="Plugins\MultipleClose.cs" />
+    <Compile Include="Plugins\Scroll_V2.cs" />
+    <Compile Include="Plugins\StartInspectNetwork.cs" />
+    <Compile Include="Plugins\Close.cs" />
+    <Compile Include="Plugins\CloseAll.cs" />
+    <Compile Include="Plugins\CaptureScreenshot.cs" />
+    <Compile Include="Plugins\StartCapture.cs" />
+    <Compile Include="Plugins\StartConfig.cs" />
+    <Compile Include="Plugins\Download.cs" />
+    <Compile Include="Plugins\DownloadUrl.cs" />
+    <Compile Include="Plugins\ElementExecutejs.cs" />
+    <Compile Include="Plugins\Executejs.cs" />
+    <Compile Include="Plugins\GetCookies.cs" />
+    <Compile Include="Plugins\GetDocument.cs" />
+    <Compile Include="Plugins\GetScroll.cs" />
+    <Compile Include="Plugins\GetTabDetail.cs" />
+    <Compile Include="Plugins\GetTitle.cs" />
+    <Compile Include="Plugins\GetUrl.cs" />
+    <Compile Include="Plugins\GoBack.cs" />
+    <Compile Include="Plugins\GoForward.cs" />
+    <Compile Include="Plugins\IsLoaded.cs" />
+    <Compile Include="Plugins\Maximized.cs" />
+    <Compile Include="Plugins\Minimized.cs" />
+    <Compile Include="Plugins\Navigate.cs" />
+    <Compile Include="Plugins\ReLoad.cs" />
+    <Compile Include="Plugins\RemoveCookie.cs" />
+    <Compile Include="Plugins\Screenshot.cs" />
+    <Compile Include="Plugins\Scroll.cs" />
+    <Compile Include="Plugins\SetCookie.cs" />
+    <Compile Include="Plugins\Stop.cs" />
+    <Compile Include="Plugins\Switch.cs" />
+    <Compile Include="Plugins\Wait.cs" />
+    <Compile Include="WebBrowserManager.cs" />
+    <Compile Include="Config\Configurations.cs" />
+    <Compile Include="Params\ParamCreateModel.cs" />
+    <Compile Include="Plugins\Create.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlaUI.Core\FlaUI.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.GUI.Commons\II.RPA.Plugin.GUI.Commons.csproj" />
+    <ProjectReference Include="..\II.RPA.WebBrowser.Common\II.RPA.WebBrowser.Common.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Config\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\plugin.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    
+  </ItemGroup>
+  
+  <Target Name="DeployWebBrowserPlugin" AfterTargets="AfterBuild">
+    <PropertyGroup>
+      <_PluginName>WebBrowser</_PluginName>
+      <_RuntimePluginDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimePluginDir>
+      <_RuntimeCsDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimeCsDir>
+    </PropertyGroup>
+    <RemoveDir Directories="$(_RuntimeCsDir)" Condition="Exists('$(_RuntimeCsDir)')" />
+    <MakeDir Directories="$(_RuntimePluginDir);$(_RuntimeCsDir)" />
+    <Copy SourceFiles="$(TargetDir)Config\config.json" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <ItemGroup>
+      <_MainOutput Include="$(TargetDir)$(TargetName).*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_MainOutput)" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+  </Target>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    </ItemGroup>
+</Project>
+
+
+
+

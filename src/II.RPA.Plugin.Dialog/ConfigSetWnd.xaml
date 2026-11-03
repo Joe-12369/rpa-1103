@@ -1,0 +1,193 @@
+﻿<Window
+    x:Class="II.RPA.Plugin.Dialog.ConfigSetWnd"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:conv="clr-namespace:II.RPA.Plugin.Dialog.Converts"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:template="clr-namespace:II.RPA.Plugin.Dialog.TemplateSelector"
+    Name="Windows"
+    Width="468"
+    MinWidth="468"
+    MinHeight="210"
+    BorderThickness="1"
+    Closed="Windows_Closed"
+    ResizeMode="CanResize"
+    ShowInTaskbar="False"
+    SizeToContent="Height"
+    WindowChrome.WindowChrome="{DynamicResource WindowChromeKey}"
+    WindowStartupLocation="CenterScreen"
+    Loaded="Windows_Loaded"
+    Closing="Windows_Closing"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Fluent;Component/Themes/Generic.xaml" />
+                <ResourceDictionary Source="IIDefaultStyle.xaml" />
+                <ResourceDictionary Source="Skin/Title.xaml" />
+                <ResourceDictionary Source="Skin/CheckBox.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <conv:WidthConv x:Key="WidthConv" />
+            <WindowChrome
+                x:Key="WindowChromeKey"
+                CaptionHeight="0"
+                CornerRadius="3"
+                ResizeBorderThickness="4" />
+            <template:MaxTemplateSelector
+                x:Key="selector"
+                MaxTemplate="{StaticResource Max}"
+                RestoreTemplate="{StaticResource Restore}" />
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.Effect>
+        <DropShadowEffect
+            BlurRadius="24"
+            Direction="90"
+            Opacity="1"
+            ShadowDepth="3"
+            Color="#F7F7F7" />
+    </Window.Effect>
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static SystemCommands.RestoreWindowCommand}" Executed="RestoreWindow_Exec" />
+        <CommandBinding Command="{x:Static SystemCommands.MaximizeWindowCommand}" Executed="MaximizeWindow_Exec" />
+    </Window.CommandBindings>
+    <DockPanel Background="#FFFFFF">
+        <DockPanel
+            Height="30"
+            Background="#F7F7F7"
+            DockPanel.Dock="Top"
+            MouseLeftButtonDown="DockPanel_MouseLeftButtonDown">
+            <Button
+                Width="30"
+                Margin="0,0,9,0"
+                Background="Transparent"
+                BorderThickness="0"
+                Click="btnCancel_Click"
+                DockPanel.Dock="Right">
+                <Canvas>
+                    <Line
+                        Stroke="#999DA8"
+                        X1="-6"
+                        X2="6"
+                        Y1="-6"
+                        Y2="6" />
+                    <Line
+                        Stroke="#999DA8"
+                        X1="-6"
+                        X2="6"
+                        Y1="6"
+                        Y2="-6" />
+                </Canvas>
+            </Button>
+            <Button
+                Width="30"
+                Background="Transparent"
+                BorderThickness="0"
+                Content="{Binding ElementName=Windows, Path=WindowState}"
+                ContentTemplateSelector="{StaticResource selector}"
+                DockPanel.Dock="Right" />
+            <Button
+                Width="30"
+                Background="Transparent"
+                BorderThickness="0"
+                Click="Min_Click"
+                DockPanel.Dock="Right">
+                <Canvas>
+                    <Line
+                        Stroke="#999DA8"
+                        X1="-6"
+                        X2="6"
+                        Y1="0"
+                        Y2="0" />
+                </Canvas>
+            </Button>
+            <TextBlock
+                x:Name="TITLE"
+                Padding="16,7,0,0"
+                Background="#F7F7F7"
+                FontSize="13"
+                Text="{DynamicResource ConfigSetWnd.xaml_ZiDingYiDuiHuaKuang}" />
+        </DockPanel>
+        <Grid
+            Height="30"
+            DockPanel.Dock="Top"
+            Visibility="{Binding Path=IsEnable}">
+            <Grid.Background>
+                <SolidColorBrush Opacity="0.1" Color="#FF890F" />
+            </Grid.Background>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Text="{Binding Path=Tip}" />
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    FontSize="18"
+                    Foreground="#FF890F"
+                    Text="{Binding Path=OutTime}" />
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Text="{DynamicResource ConfigSetWnd.xaml_Miao}" />
+            </StackPanel>
+        </Grid>
+        <StackPanel
+            Width="{Binding ActualWidth, ElementName=Windows}"
+            Margin="0,0,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            DockPanel.Dock="Bottom">
+            <StackPanel>
+                <Line
+                    Stroke="#ECEEF2"
+                    StrokeThickness="1"
+                    X1="2"
+                    X2="{Binding Width, ElementName=Windows}"
+                    Y1="0"
+                    Y2="0" />
+                <DockPanel Margin="0,20,0,20">
+                    <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                        <Button
+                            x:Name="btnCancel"
+                            Width="80px"
+                            Height="30px"
+                            Margin="0,0,8,0"
+                            Click="btnCancel_Click"
+                            Content="{DynamicResource XMessageBox.xaml_QuXiao}"
+                            Style="{StaticResource BtnDeleteStyle}" />
+                        <Button
+                            x:Name="btnOK"
+                            Width="80px"
+                            Height="30px"
+                            Margin="0,0,25,0"
+                            Click="btnOK_Click"
+                            Content="{DynamicResource ConfigSetWnd.xaml_QueRen}"
+                            Style="{StaticResource BtnInfoStyle}" />
+                    </StackPanel>
+                    <StackPanel Margin="32,0,0,0">
+                        <CheckBox
+                            x:Name="IsRemember"
+                            Content="{DynamicResource ConfigSetWnd.xaml_BaoCunDangQianZhi}"
+                            Style="{StaticResource CheckBoxStyle_Main}"
+                            Visibility="Visible" />
+                    </StackPanel>
+                </DockPanel>
+            </StackPanel>
+        </StackPanel>
+        <ScrollViewer
+            Margin="16,0,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            VerticalScrollBarVisibility="Auto">
+            <StackPanel
+                x:Name="ParameterPanl"
+                Width="{Binding ActualWidth, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Converter={StaticResource WidthConv}}"
+                MinWidth="436"
+                Orientation="Vertical" />
+        </ScrollViewer>
+    </DockPanel>
+</Window>

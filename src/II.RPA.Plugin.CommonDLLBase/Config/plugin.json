@@ -1,0 +1,15 @@
+{
+	"name": "CommonDLLBase",
+	"title": "公共类库组件包",
+	"version": "3.3.5.0",
+	"type": "1",
+	"depend": "7.3.5",
+	"isBasic": 1,
+	"InitOrder": 100,
+	"introduction": "包含了其余组件引用的基础类库",
+	"description": "·包含公共类库 影响各组件运行\n·",
+	"releaseTime": 1634054400,
+	"DependRef": [
+
+	]
+}

@@ -1,0 +1,384 @@
+{
+  "fileName": "II.RPA.Plugin.Excel.dll",
+  "GlobalSetting": {
+    //超时时间（秒）-1 不超时
+    "ExecuteTimeout": 900,
+    "Debug": "false",
+    "GC": "false",
+    "BatchSize": 1000,
+    "WPSClass": "KET.Application",
+    "SaveInstance": "true",
+    //执行前延时（毫秒）
+    "DelayBefore": 0,
+    "UseLegacyReader": 0,
+    "UseLegacyRange":0
+  },
+  "ActionSetting": {
+    "New": {
+      "name": "新建Excel",
+      "ExecuteTimeout": 900,
+      "DelayBefore": 100
+    },
+    "Open": {
+      "name": "打开Excel",
+      "Visible": "",
+      "DisplayAlerts": "false",
+      "ExecuteTimeout": 900,
+      "DelayBefore": 100
+    },
+    "Load": {
+      "name": "获取已打开Excel",
+      "ExecuteTimeout": 900,
+      "DelayBefore": 100
+    },
+    "Save": {
+      "name": "保存Excel",
+      "ExecuteTimeout": 900,
+      "DelayBefore": 100
+    },
+    "SaveAs": {
+      "name": "另存为Excel",
+      "ExecuteTimeout": 900,
+      "DelayBefore": 100
+    },
+    "Close": {
+      "name": "关闭Excel",
+      "ExecuteTimeout": 900,
+      "DelayBefore": 100
+    },
+    "Export": {
+      "name": "导出Excel为PDF",
+      "ExecuteTimeout": 900,
+      "DelayBefore": 100
+    },
+    "Encrypt": {
+      "name": "加密Excel",
+      "ExecuteTimeout": 900,
+      "DelayBefore": 100
+    },
+    "GetPath": {
+      "name": "获取Excel路径",
+      "ExecuteTimeout": 900,
+      "DelayBefore": 100
+    },
+    "Insert": {
+      "name": "插入Sheet",
+      "ExecuteTimeout": 900
+    },
+    "GetName": {
+      "name": "获取Sheet名",
+      "ExecuteTimeout": 900
+    },
+    "Rename": {
+      "name": "重命名Sheet",
+      "ExecuteTimeout": 900
+    },
+    "Copy": {
+      "name": "复制Sheet",
+      "ExecuteTimeout": 900
+    },
+    "CopyV2": {
+      "name": "复制Sheet",
+      "ExecuteTimeout": 900
+    },
+    "Merge": {
+      "name": "合并Sheet",
+      "ExecuteTimeout": 900
+    },
+    "Active": {
+      "name": "激活Sheet",
+      "ExecuteTimeout": 900
+    },
+    "Delete": {
+      "name": "删除Sheet",
+      "ExecuteTimeout": 900
+    },
+    "Move": {
+      "name": "移动Sheet",
+      "ExecuteTimeout": 900
+    },
+    "ReadCell": {
+      "name": "读取单元格",
+      "ExecuteTimeout": 900
+    },
+    "ReadRange": {
+      "name": "读取区域",
+      "ExecuteTimeout": 900
+    },
+    "ReadRangeV2": {
+      "name": "读取区域",
+      "ExecuteTimeout": 900
+    },
+    "ReadRow": {
+      "name": "读取行",
+      "ExecuteTimeout": 900
+    },
+    "ReadColumn": {
+      "name": "读取列",
+      "ExecuteTimeout": 900
+    },
+    "ReadRowCount": {
+      "name": "读取行数",
+      "ExecuteTimeout": 900
+    },
+    "ReadColumnCount": {
+      "name": "读取列数",
+      "ExecuteTimeout": 900
+    },
+    "GetEmptyCell": {
+      "name": "获取第一个空白单元格",
+      "ExecuteTimeout": 900
+    },
+    "GetLastEmptyCell": {
+      "name": "获取最后一个空白单元格",
+      "ExecuteTimeout": 900
+    },
+    "GetEditRange": {
+      "name": "获取已编辑区域",
+      "ExecuteTimeout": 900
+    },
+    "WriteCell": {
+      "name": "写入单元格",
+      "ExecuteTimeout": 900
+    },
+    "WriteRow": {
+      "name": "写入行",
+      "ExecuteTimeout": 900
+    },
+    "DeleteRow": {
+      "name": "删除行",
+      "ExecuteTimeout": 900
+    },
+    "WriteColumn": {
+      "name": "写入列",
+      "ExecuteTimeout": 900
+    },
+    "DeleteColumn": {
+      "name": "删除列",
+      "ExecuteTimeout": 900
+    },
+    "InsertRow": {
+      "name": "插入行",
+      "ExecuteTimeout": 900
+    },
+    "InsertRowV3": {
+      "name": "插入行",
+      "ExecuteTimeout": 900
+    },
+    "InsertColumn": {
+      "name": "插入列",
+      "ExecuteTimeout": 900
+    },
+    "InsertColumnV3": {
+      "name": "插入列",
+      "ExecuteTimeout": 900
+    },
+    "Hide": {
+      "name": "隐藏/显示行列",
+      "ExecuteTimeout": 900
+    },
+    "InsertPicture": {
+      "name": "插入图片",
+      "ExecuteTimeout": 900
+    },
+    "DeletePicture": {
+      "name": "删除图片",
+      "ExecuteTimeout": 900
+    },
+    "WriteRange": {
+      "name": "写入区域",
+      "ExecuteTimeout": 900
+    },
+    "SelectRange": {
+      "name": "选中区域",
+      "ExecuteTimeout": 900
+    },
+    "SelectRangeV2": {
+      "name": "选中区域",
+      "ExecuteTimeout": 900
+    },
+    "ClearRange": {
+      "name": "清除区域",
+      "ExecuteTimeout": 900
+    },
+    "ClearRangeV2": {
+      "name": "清除区域",
+      "ExecuteTimeout": 900
+    },
+    "DeleteRange": {
+      "name": "删除区域",
+      "ExecuteTimeout": 900
+    },
+    "DeleteRangeV2": {
+      "name": "删除区域",
+      "ExecuteTimeout": 900
+    },
+    "SetRangeBackground": {
+      "name": "区域背景颜色",
+      "ExecuteTimeout": 900
+    },
+    "SetRangeBackgroundV2": {
+      "name": "区域背景颜色",
+      "ExecuteTimeout": 900
+    },
+    "SetRangeFont": {
+      "name": "区域字体颜色",
+      "ExecuteTimeout": 900
+    },
+    "SetRangeFontV2": {
+      "name": "区域字体颜色",
+      "ExecuteTimeout": 900
+    },
+    "CopyRange": {
+      "name": "复制表格内容",
+      "ExecuteTimeout": 900
+    },
+    "PastRange": {
+      "name": "粘贴表格内容",
+      "ExecuteTimeout": 900
+    },
+    "PastRangeV2": {
+      "name": "粘贴表格内容",
+      "ExecuteTimeout": 900
+    },
+    "DeleteDuplicates": {
+      "name": "删除重复",
+      "ExecuteTimeout": 900
+    },
+    "SetWidth": {
+      "name": "设置列宽",
+      "ExecuteTimeout": 900
+    },
+    "SetHeight": {
+      "name": "设置行高",
+      "ExecuteTimeout": 900
+    },
+    "SetCellBackground": {
+      "name": "单元格背景颜色",
+      "ExecuteTimeout": 900
+    },
+    "SetCellFont": {
+      "name": "单元格字体颜色",
+      "ExecuteTimeout": 900
+    },
+    "InsertPivotTable": {
+      "name": "新建数据透视表",
+      "ExecuteTimeout": 900
+    },
+    "RefreshPivotTable": {
+      "name": "刷新数据透视表",
+      "ExecuteTimeout": 900
+    },
+    "FilterPivotTable": {
+      "name": "筛选数据透视表",
+      "ExecuteTimeout": 900
+    },
+    "InsertPivotView": {
+      "name": "新建透视图",
+      "ExecuteTimeout": 900
+    },
+    "Sort": {
+      "name": "数据排序",
+      "ExecuteTimeout": 900
+    },
+    "Filter": {
+      "name": "数据筛选",
+      "ExecuteTimeout": 900
+    },
+    "ExcelFilter": {
+      "name": "Excel数据筛选",
+      "ExecuteTimeout": 900
+    },
+    "SetSlicer": {
+      "name": "Excel切片器",
+      "ExecuteTimeout": 900
+    },
+    "RunMacro": {
+      "name": "执行宏",
+      "ExecuteTimeout": 900
+    },
+    "Loop": {
+      "name": "内容循环",
+      "ExecuteTimeout": -1,
+      "DelayBefore": 100
+    },
+    "GetShapes": {
+      "name": "获取指定范围图片",
+      "ExecuteTimeout": 900
+    },
+    "GetExcelRule": {
+      "name": "获取Excel规则",
+      "ExecuteTimeout": 900
+    },
+    "Search": {
+      "name": "查找/替换",
+      "ExecuteTimeout": 900
+    },
+    "AutoFill": {
+      "name": "自动填充",
+      "ExecuteTimeout": 900
+    },
+    "SetCellFormat": {
+      "name": "单元格格式",
+      "ExecuteTimeout": 900
+    },
+    "SetCellFormatEx": {
+      "name": "单元格格式",
+      "ExecuteTimeout": 900
+    },
+    "ReadCellFormula": {
+      "name": "读取单元格公式",
+      "ExecuteTimeout": 900
+    },
+    "ReadCellBackground": {
+      "name": "读取单元格背景颜色",
+      "ExecuteTimeout": 900
+    },
+    "ReadContent": {
+      "name": "读取Excel内容",
+      "ExecuteTimeout": 900,
+      "DelayBefore": 100
+    },
+    "WriteContent": {
+      "name": "写入Excel内容",
+      "ExecuteTimeout": 1800,
+      "DelayBefore": 100
+    },
+    "EnableExcelFilter": {
+      "name": "取消Excel筛选",
+      "ExecuteTimeout": 900
+    },
+    "ClearExcelFilter": {
+      "name": "清除Excel数据筛选",
+      "ExecuteTimeout": 900
+    },
+    "ShowTableStyle": {
+      "name": "设置Excel表格样式",
+      "ExecuteTimeout": 900
+    },
+    "RefreshAll": {
+      "name": "刷新Excel数据",
+      "ExecuteTimeout": 900
+    },
+    "ExportRangeAsPicture": {
+      "name": "导出区域为图片",
+      "ExecuteTimeout": 900
+    },
+    "Group": {
+      "name": "组合行列",
+      "ExecuteTimeout": 900
+    },
+    "MergeCells": {
+      "name": "合并单元格",
+      "ExecuteTimeout": 900
+    },
+    "Find": {
+      "name": "Excel查找/替换",
+      "ExecuteTimeout": -1
+    },
+    "Interop": {
+      "name": "Excel动态调用",
+      "ExecuteTimeout": 900
+    }
+  }
+}

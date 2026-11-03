@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "power_request.proto";
+import "power_response.proto";
+
+package power.grpc;
+
+service PowerService 
+{
+	rpc PowerUnary(PowerRequest) returns (PowerResponse);
+	rpc PowerPingPongStreaming(stream PowerRequest) returns (stream PowerResponse);
+	rpc PowerStreamingFromClient(stream PowerRequest) returns (PowerResponse);
+	rpc PowerStreamingFromServer(PowerRequest) returns (stream PowerResponse);
+	rpc PowerStreamingTwoWays(stream PowerRequest) returns (stream PowerResponse);
+}

@@ -1,0 +1,50 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <!--<ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/TextBlocks/Default.xaml" />
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/TextBlocks/Title.xaml" />
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/Images/Default.xaml" />
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Assets/Assets.xaml" />-->
+
+
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/SkinDefault.xaml" />
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/TextBlocks/Default.xaml" />
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/TextBlocks/Title.xaml" />
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/Images/Default.xaml" />
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/Borders/Default.xaml" />
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/Borders/Eclipse.xaml" />
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/Borders/ImageBorderStyle.xaml" />
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/Buttons/ImageButtonStyle.xaml" />
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/Tooltip/TooltipCommonStyle.xaml" />
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/Menus/MenuStyle.xaml" />
+
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/Paths/PathCommonStyle.xaml" />
+
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/RadioButton/RadioButtonBorderStyle.xaml" />
+
+        <!--<ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/Scroll/HikScrollView.xaml" />
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/Scroll/ScrollbarStyle.xaml" />-->
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/Scroll/ScrollViewStyle.xaml" />
+
+
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/StackPanel/CommonStackPanelStyle.xaml" />
+
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/Popups/PopupCommonStyle.xaml" />
+
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/TextBoxs/TextBoxHitInputStyle.xaml" />
+
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/TextBoxs/TextBoxWithWaterMarkStyle.xaml" />
+
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Assets/Assets.xaml" />
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/Windows/CommonWindowEx.xaml" />
+        <!--<ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Svgs/Default.xaml" />-->
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/Scroll/HikScrollView.xaml" />
+
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/Comboxs/ComboxStyle.xaml" />
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/Comboxs/IIComboxStyle.xaml" />
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/TextBlocks/IconText.xaml" />
+
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/ListBoxItem/ListBoxItem.xaml" />
+        <!--<ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Nameds/Texts.xaml" />
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Nameds/Buttons.xaml" />-->
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

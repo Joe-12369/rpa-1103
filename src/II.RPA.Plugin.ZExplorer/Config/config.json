@@ -1,0 +1,24 @@
+{
+  "fileName": "II.RPA.Plugin.ZExplorer.dll",
+  "matchConfigMap": {
+    "zexplorer": {
+      "configType": "Normal",
+      "productName": "zexplorer",
+      "lableName": "实在浏览器",
+      "browserWndClassNames": [],
+      "titleFeatures": [],
+      "processFeatures": [ "zexplore" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [],
+      "appExePath": ""
+    }
+  },
+  "arguments": [],
+  "app": [
+    {
+      "name": "实在浏览器",
+      "className": "Chrome_RenderWidgetHostHWND",
+      "enable": true
+    }
+  ]
+}

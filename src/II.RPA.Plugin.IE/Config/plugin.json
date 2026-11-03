@@ -1,0 +1,29 @@
+{
+	"name": "GUIIE",
+	"title": "IE程序功能依赖包",
+	"version": "3.3.5.0",
+	"type": "1",
+	"depend": "7.3.5",
+	"isBasic": 1,
+	"DependRef": [
+		{
+			"name": "CommonDLLBase",
+			"version": "3.3.5.0"
+		},
+		{
+			"name": "Element",
+			"version": "3.3.5.0"
+		},
+		{
+			"name": "WebBrowser",
+			"version": "3.3.5.0"
+		},
+		{
+			"name": "GUIWindows",
+			"version": "3.3.5.0"
+		}
+	],
+	"introduction": "为操作 IE 浏览器提供底层能力支持",
+	"description": "在操作 IE 浏览器时需要依赖此基础组件包，和界面元素组件包有依赖关系。",
+	"releaseTime": 1634054400
+}

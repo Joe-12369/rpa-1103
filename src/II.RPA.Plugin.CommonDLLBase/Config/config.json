@@ -1,0 +1,12 @@
+{
+  "fileName": "II.RPA.Plugin.CommonDLLBase.dll",
+  "serviceHubPort": 36516,
+  "initConnectTimeout": 3050,
+  "transportConnectTimeout": 300,
+  "deadlockErrorTimeout": 1000,
+  //"AUTO","SH","NMH"
+  "browserConnMode": "NMH",
+  "category": [
+
+  ]
+}

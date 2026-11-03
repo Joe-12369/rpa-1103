@@ -1,0 +1,65 @@
+﻿<Window x:Class="II.RPA.Plugin.GUI.DataCollection.Windows.ErrorMessageWnd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:II.RPA.Plugin.GUI.DataCollection.Windows"
+        mc:Ignorable="d"
+        Title="ErrorMessageWnd" Height="40" Width="252"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        SizeToContent="Width"
+        HorizontalAlignment="Center"
+        IsHitTestVisible="False"
+        ShowInTaskbar="False" WindowStyle="None" AllowsTransparency="True" Topmost="True"
+        xmlns:svgc="http://sharpvectors.codeplex.com/svgc/">
+
+    <!--<WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="-1" ResizeBorderThickness="11"  CaptionHeight="34"/>
+    </WindowChrome.WindowChrome>-->
+
+    <Window.Template>
+        <ControlTemplate TargetType="{x:Type Window}">
+            <Grid x:Name="backGrid">
+                <Border x:Name="contentBorder" Margin="4" CornerRadius="4" Background="#fefefc">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="4" ShadowDepth="0" Color="#B7B7B7"/>
+                    </Border.Effect>
+                    <Border.OpacityMask>
+                        <VisualBrush>
+                            <VisualBrush.Visual>
+                                <Border Background="Black"
+                                        SnapsToDevicePixels="True"
+                                        CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}"
+                                        Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}"
+                                        Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}" />
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Border.OpacityMask>
+                    <AdornerDecorator>
+                        <ContentPresenter />
+                    </AdornerDecorator>
+                </Border>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsActive" Value="True">
+                    <Setter TargetName="contentBorder" Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect BlurRadius="4" ShadowDepth="0" Color="#B2B2B2"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Template>
+    
+    <Grid IsHitTestVisible="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="42"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <svgc:SvgViewbox Height="20" Width="20" VerticalAlignment="Center" HorizontalAlignment="Right" Source="../Assets/SvgIcon/Warning.svg"/>
+        <!--<Image Width="20" Height="20" VerticalAlignment="Center" HorizontalAlignment="Right" Source="../Assets/Images/icon_warn.png"/>-->
+        <TextBlock x:Name="tb_ErrorMessage" VerticalAlignment="Center" Margin="8,0,20,0" Grid.Column="1" TextWrapping="NoWrap"  FontSize="14" Foreground="#161923"/>
+    </Grid>
+</Window>

@@ -1,0 +1,401 @@
+[
+  {
+    "name": "custom",
+    "label": "代码组件",
+    "icon": "icon-zijianzujian",
+    "isTop": true
+  },
+  {
+    "name": "task_component",
+    "label": "自建组件",
+    "icon": "icon-zujian2x",
+    "isTop": true
+  },
+  {
+    "name": "download-extension",
+    "label": "扩展组件",
+    "icon": "icon-RPAzujian",
+    "isTop": true
+  },
+  {
+    "name": "mobile",
+    "label": "手机自动化",
+    "icon": "icon-shoujizidonghua",
+    "isTop": true,
+    "children": [
+      {
+        "name": "connect_mobile",
+        "label": "手机连接",
+        "icon": "icon-shoujilianjie"
+      }
+    ]
+  },
+  {
+    "name": "IPA_Chatbot",
+    "label": "AI扩展能力",
+    "icon": "icon-yingyongjichuzujian",
+    "isTop": true
+  },
+  {
+    "name": "logical_judgment",
+    "label": "逻辑判断",
+    "icon": "icon-luojikongzhi",
+    "isTop": true
+  },
+  {
+    "name": "loop_repeat",
+    "label": "循环重复",
+    "icon": "icon-xunhuanchongfu",
+    "isTop": true
+  },
+  {
+    "name": "process_control",
+    "label": "流程控制",
+    "icon": "icon-liuchengtu",
+    "isTop": true
+  },
+  {
+    "name": "base_command",
+    "label": "代码命令",
+    "icon": "icon-jichumingling",
+    "isTop": true
+  },
+  {
+    "name": "interface_element",
+    "label": "界面元素操作",
+    "icon": "icon-jiemiancaozuo",
+    "isTop": true,
+    "children": [
+      {
+        "name": "image",
+        "label": "图像",
+        "icon": "icon-img"
+      }
+    ]
+  },
+  {
+    "name": "dialog_operator",
+    "label": "窗口对话框操作",
+    "isTop": true,
+    "icon": "icon-chuangkouduihuakuangcaozuo",
+    "children": [
+      {
+        "name": "window",
+        "label": "窗口",
+        "icon": "icon-chuangkou"
+      },
+      {
+        "name": "dialog",
+        "label": "对话框",
+        "icon": "icon-duihuakuang"
+      }
+    ]
+  },
+  {
+    "name": "peripheral_device",
+    "label": "键盘鼠标外设",
+    "icon": "icon-jianpanshubiao",
+    "isTop": true,
+    "children": [
+      {
+        "name": "keyboard",
+        "label": "键盘",
+        "icon": "icon-jianpan"
+      },
+      {
+        "name": "mouse",
+        "label": "鼠标",
+        "icon": "icon-shubiao"
+      },
+      {
+        "name": "peripherals",
+        "label": "USBhub",
+        "icon": "icon-waishe"
+      }
+    ]
+  },
+  {
+    "name": "webBrowser",
+    "label": "浏览器",
+    "isTop": true,
+    "icon": "icon-liulanqi",
+    "children": [
+      {
+        "name": "webBrowser_operate",
+        "label": "浏览器操作",
+        "icon": "icon-liulanqicaozuo"
+      },
+      {
+        "name": "webBrowser_data",
+        "label": "数据获取",
+        "icon": "icon-shujuhuoqu"
+      }
+    ]
+  },
+  {
+    "name": "data_parse",
+    "label": "数据处理",
+    "icon": "icon-shujuchuli",
+    "isTop": true,
+    "children": [
+      {
+        "name": "data_analysis",
+        "label": "数据分析服务",
+        "icon": "icon-shujufenxifuwu"
+      },
+      {
+        "name": "data_type_conversion",
+        "label": "数据类型转换",
+        "icon": "icon-shujuleixingzhuanhua"
+      },
+      {
+        "name": "string",
+        "label": "文本操作String",
+        "icon": "icon-zifuchuan"
+      },
+      {
+        "name": "regexp",
+        "label": "文本查找提取",
+        "icon": "icon-zhengze"
+      },
+      {
+        "name": "math",
+        "label": "数学",
+        "icon": "icon-shuxue"
+      },
+      {
+        "name": "time",
+        "label": "日期/时间处理",
+        "icon": "icon-shijian"
+      },
+      {
+        "name": "collection",
+        "label": "集合",
+        "icon": "icon-jihe"
+      },
+      {
+        "name": "dict",
+        "label": "字典",
+        "icon": "icon-zidian"
+      },
+      {
+        "name": "Database",
+        "label": "数据库",
+        "icon": "icon-fuwuqi"
+      },
+      {
+        "name": "bivartable",
+        "label": "二维表",
+        "icon": "icon-erweibiao"
+      },
+      {
+        "name": "List",
+        "label": "一维列表",
+        "icon": "icon-yiweibiao"
+      }
+    ]
+  },
+  {
+    "name": "word",
+    "label": "Word",
+    "isTop": true,
+    "icon": "icon-word",
+    "children": [
+      {
+        "name": "word_operate",
+        "label": "Word文档操作",
+        "icon": "icon-wendangcaozuo"
+      },
+      {
+        "name": "word_edit",
+        "label": "Word文档编辑",
+        "icon": "icon-wordwenbenbianji"
+      },
+      {
+        "name": "cursor_set",
+        "label": "光标设置",
+        "icon": "icon-guangbiaoshezhi"
+      }
+    ]
+  },
+  {
+    "name": "excel",
+    "label": "Excel",
+    "isTop": true,
+    "icon": "icon-excel",
+    "children": [
+      {
+        "name": "excel_operator",
+        "label": "Excel文档操作",
+        "icon": "icon-wendangcaozuo"
+      },
+      {
+        "name": "excel_sheet",
+        "label": "Excel Sheet操作",
+        "icon": "icon-excelsheetcaozuo"
+      },
+      {
+        "name": "excel_fetch_data",
+        "label": "Excel信息读取",
+        "icon": "icon-excelxinxiduqu"
+      },
+      {
+        "name": "excel_editor",
+        "label": "Excel表格编辑",
+        "icon": "icon-excelbiaogebianji"
+      }
+    ]
+  },
+  {
+    "name": "pdf",
+    "label": "PDF",
+    "isTop": true,
+    "icon": "icon-PDF"
+  },
+  {
+    "name": "email",
+    "label": "邮件",
+    "isTop": true,
+    "icon": "icon-youjian",
+    "children": [
+      {
+        "name": "Outlook",
+        "label": "Outlook",
+        "icon": "icon-Outlook"
+      },
+      {
+        "name": "SMTP/POP",
+        "label": "SMTP/POP",
+        "icon": "icon-POP"
+      },
+      {
+        "name": "Exchange",
+        "label": "Exchange",
+        "icon": "icon-Exchange"
+      }
+    ]
+  },
+  {
+    "name": "file_parse",
+    "label": "文件处理",
+    "icon": "icon-wenjianchuli",
+    "isTop": true,
+    "children": [
+      {
+        "name": "file",
+        "label": "通用文件",
+        "icon": "icon-tongyongwenjian"
+      },
+      {
+        "name": "INI",
+        "label": "INI格式文件",
+        "icon": "icon-INNgeshi"
+      },
+      {
+        "name": "CSV",
+        "label": "CSV格式文件",
+        "icon": "icon-CSVgeshi"
+      }
+    ]
+  },
+  {
+    "name": "clipboard",
+    "label": "剪切板",
+    "isTop": true,
+    "icon": "icon-jianqieban"
+  },
+  {
+    "name": "trigger",
+    "label": "触发器",
+    "isTop": true,
+    "icon": "icon-kongzhiqi"
+  },
+  {
+    "name": "ai_software_automation",
+    "label": "AI组件",
+    "icon": "icon-AIzujian",
+    "isTop": true,
+    "children": [
+      {
+        "name": "aiBrowser",
+        "label": "selenium浏览器",
+        "icon": "icon-liulanqi"
+      },
+      {
+        "name": "OCR",
+        "label": "OCR-在线",
+        "icon": "icon-OCR"
+      },
+      {
+        "name": "OcrOffline",
+        "label": "OCR-离线",
+        "icon": "icon-OCR"
+      },
+      {
+        "name": "OCR_BaiDu",
+        "label": "OCR(百度)",
+        "icon": "icon-OCR"
+      },
+      {
+        "name": "NLP",
+        "label": "NLP",
+        "icon": "icon-NLP"
+      },
+      {
+        "name": "NLP_XunFei",
+        "label": "NLP（讯飞）",
+        "icon": "icon-NLP"
+      },
+      {
+        "name": "CV",
+        "label": "CV",
+        "icon": "icon-cv"
+      },
+      {
+        "name": "VerificationCode",
+        "label": "验证码",
+        "icon": "icon-yanzhengma"
+      },
+      {
+        "name": "WisdomText",
+        "label": "智慧文本",
+        "icon": "icon-zhinengwenben"
+      }
+    ]
+  },
+  {
+    "name": "system",
+    "label": "系统",
+    "icon": "icon-xitong",
+    "isTop": true,
+    "children": [
+      {
+        "name": "system_action",
+        "label": "系统操作",
+        "icon": "icon-xitongcaozuo"
+      },
+      {
+        "name": "app",
+        "label": "应用",
+        "icon": "icon-yingyong1"
+      },
+      {
+        "name": "ScreenControl",
+        "label": "锁屏解锁",
+        "icon": "icon-RDP"
+      }
+    ]
+  },
+  {
+    "name": "network",
+    "label": "网络",
+    "icon": "icon-wangluo",
+    "isTop": true
+  },
+  {
+    "name": "notification",
+    "label": "群通知机器人",
+    "icon": "icon-xiaoxitongzhi",
+    "isTop": true
+  }
+]

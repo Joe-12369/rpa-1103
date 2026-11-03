@@ -1,0 +1,3 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <UsingTask AssemblyFile="II.RPA.Build.VersionTask.dll" TaskName="II.RPA.Build.VersionTask.SetAppVersionTask"/>
+</Project>

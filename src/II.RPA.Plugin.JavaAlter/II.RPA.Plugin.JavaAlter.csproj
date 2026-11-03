@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Plugin.JavaAlter</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.JavaAlter</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>Library</OutputType>
+    
+    <RootNamespace>II.RPA.Plugin.JavaAlter</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.JavaAlter</AssemblyName>
+    
+    
+    <Deterministic>true</Deterministic>
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+<Reference Include="System.Management" />
+</ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agent\AwtFlavorElement.cs" />
+    <Compile Include="Agent\AwtWindowFlavorElement.cs" />
+    <Compile Include="Agent\BackgroundTextInput.cs" />
+    <Compile Include="Agent\CallStatus.cs" />
+    <Compile Include="Agent\Element.cs" />
+    <Compile Include="Agent\FakeJavaObjectWrapper.cs" />
+    <Compile Include="Agent\FlavorElement.cs" />
+    <Compile Include="Agent\FunctionId.cs" />
+    <Compile Include="Agent\JavaAgent.cs" />
+    <Compile Include="Agent\JavaBaseFlavorElement.cs" />
+    <Compile Include="Agent\JavaCellFlavorElement.cs" />
+    <Compile Include="Agent\JavaClassTypeCache.cs" />
+    <Compile Include="Agent\JavaColumnFlavorElement.cs" />
+    <Compile Include="Agent\JavaElement.cs" />
+    <Compile Include="Agent\JavaHeaderCellFlavorElement.cs" />
+    <Compile Include="Agent\JavaListItemFlavorElement.cs" />
+    <Compile Include="Agent\JavaObjectWrapper.cs" />
+    <Compile Include="Agent\JavaProcessLocator.cs" />
+    <Compile Include="Agent\JavaProxy.cs" />
+    <Compile Include="Agent\JavaRole.cs" />
+    <Compile Include="Agent\JavaRowFlavorElement.cs" />
+    <Compile Include="Agent\JavaTabFlavorElement.cs" />
+    <Compile Include="Agent\JavaTech.cs" />
+    <Compile Include="Agent\JavaTreeItemFlavorElement.cs" />
+    <Compile Include="Agent\ProcessInjector.cs" />
+    <Compile Include="Agent\Win32FlavorElement.cs" />
+    <Compile Include="Config\JavaConfigurations.cs" />
+    <Compile Include="GuiOperator.cs" />
+    <Compile Include="GuiModule.cs" />
+    <Compile Include="PluginPackage.cs" />
+    <Compile Include="JavaException.cs" />
+    <Compile Include="JavaNode.cs" />
+    <Compile Include="JMessage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlaUI.Core\FlaUI.Core.csproj" />
+    <ProjectReference Include="..\FlaUI.UIA3\FlaUI.UIA3.csproj" />
+    <ProjectReference Include="..\II.RPA.Core\II.RPA.Core\II.RPA.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.GUI.Commons\II.RPA.Plugin.GUI.Commons.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Config\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\plugin.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    
+  </ItemGroup>
+  <ItemGroup />
+  
+  <Target Name="DeployJavaAlterPlugin" AfterTargets="AfterBuild">
+    <PropertyGroup>
+      <_PluginName>GUIJavaAlter</_PluginName>
+      <_RuntimePluginDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimePluginDir>
+      <_RuntimeCsDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimeCsDir>
+    </PropertyGroup>
+    <RemoveDir Directories="$(_RuntimeCsDir)" Condition="Exists('$(_RuntimeCsDir)')" />
+    <MakeDir Directories="$(_RuntimePluginDir);$(_RuntimeCsDir)" />
+    <Copy SourceFiles="$(TargetDir)Config\config.json" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <ItemGroup>
+      <_MainOutput Include="$(TargetDir)$(TargetName).*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_MainOutput)" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+  </Target>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+</Project>
+
+
+
+

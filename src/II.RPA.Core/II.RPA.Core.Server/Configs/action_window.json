@@ -1,0 +1,412 @@
+{
+  "tabitem": [
+    {
+      "elementtype": "tabitem",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Mouse_MoveToV1",
+          "input": [ "args0.location" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "text": [
+    {
+      "elementtype": "text",
+      "actions": [
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Clipboard_SetTextV1",
+          "actionfeature": 1,
+          "actionflow": [
+            {
+              "action": "Element_GetValue",
+              "input": [ "args0.uiSelector" ],
+              "output": []
+            },
+            {
+              "action": "Clipboard_SetTextV1",
+              "input": [ "args0.text=strRet" ],
+              "output": []
+            }
+          ]
+        },
+        {
+          "action": "Mouse_MoveToV1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "button": [
+    {
+      "elementtype": "button",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "checkbox": [
+    {
+      "elementtype": "checkbox",
+      "actions": [
+        {
+          "action": "Element_SetCheck",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "radio": [
+    {
+      "elementtype": "radio",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Mouse_MoveToV1",
+          "input": [ "args0.location" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "listitem": [
+    {
+      "elementtype": "listitem",
+      "priority": 1,
+      "rules": [
+        "windows.explorer.picture"
+      ],
+      "actions": [
+        {
+          "action": "Image_Click",
+          "input": [ "args0.image" ]
+        },
+        {
+          "action": "Image_Move",
+          "input": [ "args0.image" ]
+        },
+        {
+          "action": "Image_Find",
+          "input": [ "args0.image" ]
+        },
+        {
+          "action": "File_Rename",
+          "input": [ "args0.file_path" ]
+        },
+        {
+          "action": "File_File_Move",
+          "input": [ "args0.pathSrc" ]
+        }
+      ]
+    },
+    {
+      "elementtype": "listitem",
+      "priority": 2,
+      "rules": [
+        "combobox.list.listitem"
+      ],
+      "actions": [
+        {
+          "action": "Element_SetSelect",
+          "input": [ "args0.uiSelector", "args0.operation_type=1", "args0.choose=1", "args0.itemsToSelect" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        }
+
+      ]
+    },
+    {
+      "elementtype": "listitem",
+      "actions": [
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "loop_similar_elements",
+          "input": [ "args0.similar_element_object" ]
+        },
+        {
+          "action": "logic_control_count_for"
+        }
+      ]
+    }
+  ],
+  "list": [
+    {
+      "elementtype": "list",
+      "priority": 1,
+      "rules": [
+        "combobox.list"
+      ],
+      "actions": [
+        {
+          "action": "Element_SetSelect",
+          "input": [ "args0.uiSelector", "args0.operation_type=1" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        }
+
+      ]
+    },
+    {
+      "ElementType": "list",
+      "actions": [
+        {
+          "action": "Element_Children_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        }
+      ]
+    }
+  ],
+  "edit": [
+    {
+      "ElementType": "edit",
+      "actions": [
+        {
+          "action": "Element_SetValue",
+          "input": [ "args0.uiSelector", "args0.text" ]
+        },
+        {
+          "action": "Keyboard_PressNew"
+        },
+        {
+          "action": "Element_SetValuePassword_V1"
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        }
+      ]
+    }
+  ],
+  "combobox": [
+    {
+      "ElementType": "combobox",
+      "actions": [
+        {
+          "action": "Element_SetSelect",
+          "input": [ "args0.uiSelector", "args0.operation_type=1" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        }
+
+      ]
+    }
+  ],
+  "calender": [
+    {
+      "ElementType": "calender",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        }
+      ]
+    }
+  ],
+  "image": [
+    {
+      "ElementType": "image",
+      "actions": [
+        {
+          "action": "Image_Click",
+          "input": [ "args0.image" ]
+        },
+        {
+          "action": "logic_control_if_image",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Image_Find",
+          "input": [ "args0.image" ]
+        },
+        {
+          "action": "Image_Move",
+          "input": [ "args0.image" ]
+        }
+      ]
+    }
+  ],
+  "thumb": [
+    {
+      "ElementType": "thumb",
+      "actions": [
+        {
+          "action": "Mouse_DragTo",
+          "input": [ "args0.uiSelector", "args0.dragType=1", "args0.End" ]
+        },
+        {
+          "action": "Mouse_RollTo"
+        },
+        {
+          "action": "Mouse_MoveTo",
+          "input": [ "args0.location" ]
+        }
+      ]
+    }
+  ],
+  "table": [
+    {
+      "ElementType": "table",
+      "actions": [
+        {
+          "action": "WebBrowser_BatchDataCrawl"
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Children_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "loop_similar_elements",
+          "input": [ "args0.uiSelector" ]
+        }
+      ]
+    }
+  ],
+  "dataitem": [
+    {
+      "ElementType": "dataitem",
+      "actions": [
+        {
+          "action": "WebBrowser_BatchDataCrawl"
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Children_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "loop_similar_elements",
+          "input": [ "args0.uiSelector" ]
+        }
+      ]
+    }
+  ],
+  "group": [
+    {
+      "ElementType": "group",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Children_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "loop_similar_elements",
+          "input": [ "args0.uiSelector" ]
+        }
+      ]
+    }
+  ]
+}

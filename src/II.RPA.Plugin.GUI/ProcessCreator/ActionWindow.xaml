@@ -1,0 +1,180 @@
+﻿<Window x:Class="II.RPA.Plugin.GUI.ProcessCreator.ActionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:II.RPA.Plugin.GUI.ProcessCreator"
+        xmlns:ap="clr-namespace:II.RPA.Plugin.GUI.ProcessCreator.AttachProperty"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:control="clr-namespace:II.RPA.Plugin.GUI.ProcessCreator.Controls"
+        ShowInTaskbar="False" 
+        Topmost="True"
+        WindowStartupLocation="Manual"
+        Width="190"
+        mc:Ignorable="d" 
+        WindowStyle="None"
+        Background="Transparent" 
+        AllowsTransparency="True"
+        SizeToContent="Height"
+        Title="ActionWindow"
+    xmlns:res="clr-namespace:II.RPA.WinAutomation.CommonUtility.Resource;assembly=II.RPA.WinAutomation.CommonUtility">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Theme/ColorDictionary.xaml"/>
+                <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Theme/SvgDictionary.xaml"/>
+                <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Controls/TFButton.xaml"/>
+                <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Theme/StyleDictionary.xaml"/>
+                <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Controls/ProgressRing.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Border x:Name="mainBorder" Background="{StaticResource Main.Bg}" Padding="2,3,2,3" 
+            CornerRadius="4"  
+            BorderThickness="0" Margin="10">
+            <Border.Effect>
+                <DropShadowEffect Color="{StaticResource DarkBorderColor}"  BlurRadius="12" ShadowDepth="0"/>
+            </Border.Effect>
+            <Grid Width="166"
+                  MinHeight="300"
+                  Height="Auto" 
+                  VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="34"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Panel.ZIndex="999"
+                    IsHitTestVisible="False"
+                    Height="330"
+                    Visibility="{Binding ProgressRingVisiblity}"
+                    Grid.Row="0"
+                    Margin="0,0,0,0"
+                    Grid.RowSpan="3"
+                    VerticalAlignment="Top">
+                <control:ProgressRing Height="30" Width="30" 
+                                      Margin="0,120,0,0"
+                                      VerticalAlignment="Top"
+                    IsIndeterminate="True" />
+            </Border>
+            <Border VerticalAlignment="Top">
+                <StackPanel Orientation="Horizontal" Margin="5,0,5,0">
+                    <Viewbox Height="25" VerticalAlignment="Center" Child="{StaticResource Logo}">
+                    </Viewbox>
+                    <TextBlock Text="{Binding ElementClassText}" FontSize="13" 
+                               Margin="5,0,0,0" MaxWidth="95" MinWidth="95"
+                               VerticalAlignment="Center"/>
+                    <Button Background="Transparent" 
+                            BorderThickness="0"
+                            HorizontalAlignment="Right"
+                            Click="Button_Click"
+                            Margin="5,0,0,0">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <Path
+                                   Width="20" Height="20"
+                                   Fill="{StaticResource LogoBlue}"
+                                   Stretch="Fill"
+                                   Data="{StaticResource ButtonClose}"/>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+            </Border>
+            <Border VerticalAlignment="Top"  Panel.ZIndex="2" 
+                             Height="32"
+                             Grid.Row="1"
+                             Width="160" 
+                             CornerRadius="4"  
+                             BorderThickness="2"
+                             Background="{StaticResource Main.Bg}">
+                <control:SearchComboBox x:Name="searchbox"
+                            ItemsSource="{Binding ComponentCollectionTask.Result,IsAsync=True}"  
+                            TextSearch.TextPath="SearchTags"
+                            IsReadOnly="False"
+                            IsEditable="True"
+                            SuggestionItems="{Binding SuggestionActions}"
+                            MaxDropDownHeight="330"
+                            Setting="{Binding ComboBoxSetting}"
+                            ap:ControlAttachProperty.Label="&#xe714;"
+                            ap:ControlAttachProperty.ComboxPopupVerticalOffset="30"
+                            ap:ControlAttachProperty.ComboxPopupHorizontalOffset="-5"
+                            ap:ControlAttachProperty.Watermark ="{x:Static res:II_RPA_Resource.ActionWindow_5B62836F}" 
+                            Style="{StaticResource ClearButtonComboBox}">
+                    <control:SearchComboBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel />
+                        </ItemsPanelTemplate>
+                    </control:SearchComboBox.ItemsPanel>
+                    <control:SearchComboBox.ItemTemplate>
+                        <DataTemplate DataType="{x:Type local:ComponentModel}">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding IconFontCode}"
+                                                   RenderTransformOrigin="0.5,0.5"
+                                                   Margin="1"
+                                                   Style="{StaticResource IconTextBlock}">
+                                </TextBlock>
+                                <TextBlock Text="{Binding ComponentLabel}"
+                                                   Margin="2,0,0,0"
+                                                   MaxWidth ="120"
+                                                   TextWrapping="NoWrap"
+                                                   ToolTip="{Binding ComponentDescription, Mode=OneTime}" 
+                                                   TextTrimming="CharacterEllipsis">
+                                </TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </control:SearchComboBox.ItemTemplate>
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <i:InvokeCommandAction 
+                                         Command="{Binding SelectionChangedCommand}" 
+                                         CommandParameter="{Binding ElementName=searchbox, Path=SelectedItem}"/>
+                        </i:EventTrigger>
+                        <i:EventTrigger EventName="DropDownClosed">
+                            <i:InvokeCommandAction 
+                                         Command="{Binding DropDownClosedCommand}" 
+                                         CommandParameter="{Binding ElementName=searchbox, Path=SelectedItem}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </control:SearchComboBox>
+                <Border.Style>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="BorderBrush">
+                            <Setter.Value>
+                                <SolidColorBrush x:Name="brush" Color="{StaticResource BorderColor}"/>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0:0:0.3" AutoReverse="False" To="{StaticResource LogoOrangeColor}" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0:0:0.3" AutoReverse="False" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+            </Border>
+            <Menu Grid.Row="2" Style="{StaticResource DefaultMenu}" 
+                    VerticalAlignment="Bottom"
+                    ItemTemplate="{StaticResource ActionDataTemplate}"
+                    ItemsSource="{Binding ActionCollectionTask.Result, IsAsync=True}">
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+            </Menu>
+            </Grid>
+    </Border>
+</Window>

@@ -1,0 +1,102 @@
+{
+  "fileName": "II.RPA.Plugin.Browsers.dll",
+  "extensionsWhitelist": [ "chrome-extension://hehijbfgiekmjfkfjpbkbammjbdenadd/nhc.htm#url=" ],
+  "matchConfigMap": {
+    "chrome": {
+      "windowType": "Chrome",
+      "configType": "Normal",
+      "productName": "chrome",
+      "lableName": "谷歌浏览器",
+      "browserWndClassNames": [ "Chrome_WidgetWin_1" ],
+      "titleFeatures": [ ".*\\s+-\\s+Google\\s+Chrome" ],
+      "processFeatures": [ "chrome" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "edge": {
+      "windowType": "Edge",
+      "configType": "Normal",
+      "productName": "edge",
+      "lableName": "Edge浏览器",
+      "browserWndClassNames": [ "Chrome_WidgetWin_.*" ],
+      "titleFeatures": [ ".*\\s+-\\s+Microsoft.*Edge" ],
+      "processFeatures": [ "msedge" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "firefox": {
+      "windowType": "FireFox",
+      "configType": "Normal",
+      "productName": "firefox",
+      "lableName": "火狐浏览器",
+      "browserWndClassNames": [ "MozillaWindowClass" ],
+      "titleFeatures": [],
+      "processFeatures": [ "firefox" ],
+      "renderClassNames": [],
+      "IERenderClassNames": [],
+      "appExePath": ""
+    },
+    "SogouV11": {
+      "windowType": "Sogou",
+      "configType": "Normal",
+      "productName": "Sogou",
+      "lableName": "搜狗浏览器",
+      "browserWndClassNames": [ "SE_SogouExplorer.*", "SE_AxControl" ],
+      "titleFeatures": [],
+      "processFeatures": [ "SogouExplorer" ],
+      "renderClassNames": [ "SE_TuotuoMDIClient" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "SogouV12": {
+      "windowType": "Sogou",
+      "configType": "Normal",
+      "productName": "Sogou",
+      "lableName": "搜狗浏览器",
+      "browserWndClassNames": [ "SogouExplorer_WidgetWin_1" ],
+      "titleFeatures": [],
+      "processFeatures": [ "SogouExplorer" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "superbrowser": {
+      "windowType": "SuperBrowser",
+      "configType": "Normal",
+      "productName": "superbrowser",
+      "lableName": "紫鸟浏览器",
+      "browserWndClassNames": [ "Chrome_WidgetWin_1" ],
+      "titleFeatures": [],
+      "processFeatures": [ "superbrowser" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "Web360se": {
+      "windowType": "Web360se",
+      "configType": "Normal",
+      "productName": "Web360se",
+      "lableName": "360安全浏览器",
+      "browserWndClassNames": [ "360se6_Frame" ],
+      "titleFeatures": [ ".*\\s+-\\s+360安全浏览器" ],
+      "processFeatures": [ "360se" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "web360x": {
+      "windowType": "Web360X",
+      "configType": "Normal",
+      "productName": "web360x",
+      "lableName": "360极速浏览器",
+      "browserWndClassNames": [ "Chrome_WidgetWin_1" ],
+      "titleFeatures": [ ".*\\s+-\\s+360极速浏览器.*" ],
+      "processFeatures": [ "360ChromeX", "360Chrome" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    }
+  }
+}

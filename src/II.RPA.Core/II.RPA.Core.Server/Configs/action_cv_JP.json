@@ -1,0 +1,952 @@
+{
+  "0": [
+    {
+      "elementtype": "文字列",
+      "actions": [
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "OCR_SourceMergeGeneralOCR",
+          "input": [ "args0.pictureSource=0", "args0.image_path" ]
+        },
+        {
+          "action": "OcrOffline_GetOcrTextPosition",
+          "input": [ "args0.pictureSource=1", "args0.image_path" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "1": [
+    {
+      "elementtype": "チェックされます",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetButtonEnable",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "2": [
+    {
+      "elementtype": "未チェックされます",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetButtonEnable",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "3": [
+    {
+      "elementtype": "入力欄",
+      "actions": [
+        {
+          "action": "Element_SetValue",
+          "input": [ "args0.uiSelector", "args0.text" ]
+        },
+        {
+          "action": "Element_SetValuePassword_V1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Keyboard_Send"
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "4": [
+    {
+      "elementtype": "戻る",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "5": [
+    {
+      "elementtype": "進む",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "6": [
+    {
+      "elementtype": "リフレッシュ",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "7": [
+    {
+      "elementtype": "最大化",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "8": [
+    {
+      "elementtype": "最小化",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "9": [
+    {
+      "elementtype": "リストア",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "10": [
+    {
+      "elementtype": "ドロップダウンリスト",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "11": [
+    {
+      "elementtype": "ボタン",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "12": [
+    {
+      "elementtype": "閉じる",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "13": [
+    {
+      "elementtype": "ログインセル範囲",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "14": [
+    {
+      "elementtype": "スライドオフ",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "15": [
+    {
+      "elementtype": "スライドオン",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "16": [
+    {
+      "elementtype": "検索",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "17": [
+    {
+      "elementtype": "17",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "18": [
+    {
+      "elementtype": "ダイアログ",
+      "actions": [
+        {
+          "action": "Element_SetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Keyboard_Press"
+        }
+      ],
+      "category": []
+    }
+  ],
+  "19": [
+    {
+      "elementtype": "そのほかのアイコン",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "OCR_SourceMergeGeneralOCR",
+          "input": [ "args0.pictureSource=0", "args0.image_path" ]
+        },
+        {
+          "action": "OcrOffline_GetOcrTextPosition",
+          "input": [ "args0.pictureSource=1", "args0.image_path" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "20": [
+    {
+      "elementtype": "スクロールバー",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "21": [
+    {
+      "elementtype": "21",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "22": [
+    {
+      "elementtype": "リスト",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "23": [
+    {
+      "elementtype": "日付",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "24": [
+    {
+      "elementtype": "メール",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "25": [
+    {
+      "elementtype": "画像",
+      "actions": [
+        {
+          "action": "Image_Click",
+          "input": [ "args0.image" ]
+        },
+        {
+          "action": "OCR_SourceMergeGeneralOCR",
+          "input": [ "args0.pictureSource=0", "args0.image_path" ]
+        },
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "26": [
+    {
+      "elementtype": "グループ",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "27": [
+    {
+      "elementtype": "27",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "28": [
+    {
+      "elementtype": "28",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "29": [
+    {
+      "elementtype": "テーブル",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "30": [
+    {
+      "elementtype": "テキスト認証コード",
+      "actions": [
+        {
+          "action": "OCR_SourceCommonEnglishNumbersCodeV1",
+          "input": [ "args0.pictureSource=1", "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "31": [
+    {
+      "elementtype": "クリックで認証コードを選択します",
+      "actions": [
+        {
+          "action": "OCR_ClickVerificationCode",
+          "input": [ "args0.verifyPicUiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "32": [
+    {
+      "elementtype": "スライド認証コード",
+      "actions": [
+        {
+          "action": "OCR_SliderCode",
+          "input": [ "args0.imageBackPath" ]
+        },
+        {
+          "action": "OCR_SliderVerificationCodeV2",
+          "input": [ "args0.backgroundUiSelector" ]
+        },
+        {
+          "action": "OCR_RotateVerificationCode"
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ]
+}
+    

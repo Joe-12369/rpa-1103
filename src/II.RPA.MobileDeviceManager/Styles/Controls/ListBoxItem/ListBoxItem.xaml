@@ -1,0 +1,224 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:rc="https://ii.rpa/control"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:res="clr-namespace:II.RPA.WinAutomation.CommonUtility.Resource;assembly=II.RPA.WinAutomation.CommonUtility">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/II.RPA.MobileDeviceManager;component/Styles/Controls/Menus/MenuStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <Style x:Key="UserInfoListStyle" TargetType="{x:Type ListBoxItem}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Grid
+                        x:Name="grid"
+                        Width="auto"
+                        Height="32">
+                        <StackPanel Orientation="Horizontal">
+                            <Border
+                                x:Name="NoReadyIcon"
+                                Width="10"
+                                Height="14"
+                                Margin="11,9,0,9"
+                                HorizontalAlignment="Left"
+                                CornerRadius="4">
+                                <TextBlock
+                                    x:Name="deviceIcon"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontFamily="/II.RPA.MobileDeviceManager;component/Icon/#iconfont"
+                                    FontSize="14"
+                                    Foreground="#7A8187"
+                                    Text="&#xe636;" />
+                            </Border>
+                            <Viewbox
+                                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                                x:Name="ReadyIcon"
+                                Width="12"
+                                Height="14"
+                                Margin="9,9,0,9"
+                                Stretch="UniformToFill">
+                                <Canvas
+                                    Name="svg23"
+                                    Width="1024"
+                                    Height="1024">
+                                    <Canvas.RenderTransform>
+                                        <TranslateTransform X="0" Y="0" />
+                                    </Canvas.RenderTransform>
+                                    <Canvas.Resources />
+                                    <!--  Unknown tag: sodipodi:namedview  -->
+                                    <Path
+                                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                                        Name="path19"
+                                        Fill="#FFFF8910">
+                                        <Path.Data>
+                                            <PathGeometry Figures="M725.333333 64a85.333333 85.333333 0 0 1 85.333334 85.333333v725.333334a85.333333 85.333333 0 0 1-85.333334 85.333333H298.666667a85.333333 85.333333 0 0 1-85.333334-85.333333v-725.333334a85.333333 85.333333 0 0 1 85.333334-85.333333h426.666666z" FillRule="NonZero" />
+                                        </Path.Data>
+                                    </Path>
+                                    <Path
+                                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                                        Name="path21"
+                                        Fill="#FFFFCF9F">
+                                        <Path.Data>
+                                            <PathGeometry Figures="M448 832h128a21.333333 21.333333 0 1 1 0 42.666667h-128a21.333333 21.333333 0 1 1 0-42.666667zM725.333333 746.666667v-597.333334H298.666667v597.333334z" FillRule="NonZero" />
+                                        </Path.Data>
+                                    </Path>
+                                </Canvas>
+                            </Viewbox>
+                            <!--</Border>-->
+                            <TextBlock
+                                x:Name="deviceName"
+                                Width="96"
+                                MaxWidth="96"
+                                Margin="10,7,0,0"
+                                FontFamily="Microsoft YaHei;"
+                                FontSize="13"
+                                Text="{Binding Name}"
+                                TextTrimming="CharacterEllipsis" />
+                            <StackPanel
+                                x:Name="btnControls"
+                                Margin="0,6,4,0"
+                                HorizontalAlignment="Right"
+                                Visibility="Hidden">
+                                <rc:CommonButton
+                                    Name="btnConnect"
+                                    Width="32"
+                                    Height="20"
+                                    Background="#FF8910"
+                                    Command="{Binding DataContext.ConnectCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                    CommandParameter="{Binding Udid}"
+                                    Content="{x:Static res:II_RPA_Resource.ListBoxItem_1EF591AC}"
+                                    CornerRadius="2"
+                                    FontSize="12"
+                                    Foreground="#FFFFFF" />
+                                <rc:CommonButton
+                                    Name="btnDisConnect"
+                                    Width="32"
+                                    Height="20"
+                                    BorderBrush="#CC9CABB9"
+                                    BorderThickness="1"
+                                    Command="{Binding DataContext.DisConnectCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                    CommandParameter="{Binding Udid}"
+                                    Content="{x:Static res:II_RPA_Resource.ListBoxItem_24865DA8}"
+                                    CornerRadius="2"
+                                    FontSize="12"
+                                    Foreground="#7A8187"
+                                    MouseOverBackground="#F4F6F8"
+                                    MouseOverBorderBrush="#CC9CABB9"
+                                    MouseOverForeground="#7A8187"
+                                    Visibility="Collapsed" />
+                            </StackPanel>
+                            <Menu
+                                Width="auto"
+                                Height="40"
+                                Margin="0,0,2,0"
+                                Padding="0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                VerticalContentAlignment="Center"
+                                Background="Transparent"
+                                FontSize="12"
+                                Foreground="Black">
+                                <MenuItem
+                                    Width="74"
+                                    Margin="-15,0,0,0"
+                                    HorizontalAlignment="Left"
+                                    Background="White"
+                                    FontSize="11"
+                                    Foreground="Black"
+                                    Style="{StaticResource IconMenuItem}">
+                                    <MenuItem.Header>
+                                        <Grid Width="16" Height="16">
+                                            <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+                                                <Canvas Width="1024" Height="1024">
+                                                    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Fill="#5E5E5E">
+                                                        <Path.Data>
+                                                            <PathGeometry Figures="M192 608a96 96 0 1 0 0-192 96 96 0 0 0 0 192z m320 0a96 96 0 1 0 0-192 96 96 0 0 0 0 192z m320 0a96 96 0 1 0 0-192 96 96 0 0 0 0 192z" FillRule="NonZero" />
+                                                        </Path.Data>
+                                                    </Path>
+                                                </Canvas>
+                                            </Viewbox>
+                                        </Grid>
+                                    </MenuItem.Header>
+                                    <MenuItem
+                                        Width="80"
+                                        Margin="0,4,0,2"
+                                        VerticalContentAlignment="Center"
+                                        Background="White"
+                                        BorderThickness="0"
+                                        Command="{Binding Path=DataContext.OpenModifyDialogCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"
+                                        CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}"
+                                        FontSize="12"
+                                        Foreground="#505962"
+                                        Header="{x:Static res:II_RPA_Resource.ListBoxItem_D47DF376}"
+                                        Style="{StaticResource DefaultMenuItem}" />
+                                    <!--<Separator />-->
+                                    <MenuItem
+                                        Width="80"
+                                        Margin="0,2,0,4"
+                                        VerticalContentAlignment="Center"
+                                        Background="White"
+                                        BorderThickness="0"
+                                        Command="{Binding Path=DataContext.DeleteCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"
+                                        CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}"
+                                        FontSize="12"
+                                        Foreground="#505962"
+                                        Header="{x:Static res:II_RPA_Resource.ListBoxItem_EA8D5381}"
+                                        Style="{StaticResource DefaultMenuItem}" />
+                                </MenuItem>
+                            </Menu>
+                        </StackPanel>
+                        <Grid.InputBindings>
+                            <MouseBinding
+                                Command="{Binding DataContext.ConnectCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                CommandParameter="{Binding Udid}"
+                                MouseAction="LeftDoubleClick" />
+                        </Grid.InputBindings>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="grid" Property="Background" Value="#F4F6F8" />
+                            <Setter TargetName="btnControls" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="false">
+                            <Setter TargetName="grid" Property="Background" Value="#FFFFFF" />
+                            <Setter TargetName="btnControls" Property="Visibility" Value="Hidden" />
+                        </Trigger>
+                        <DataTrigger Binding="{Binding IsReady}" Value="false">
+                            <Setter TargetName="deviceName" Property="Foreground" Value="#990C0F1B" />
+                            <Setter TargetName="btnControls" Property="Visibility" Value="Hidden" />
+                            <Setter TargetName="deviceIcon" Property="Foreground" Value="#997A8187" />
+                            <Setter TargetName="deviceIcon" Property="Text" Value="&#xe636;" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsReady}" Value="true">
+                            <Setter TargetName="deviceName" Property="Foreground" Value="#0C0F1B" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsConnected}" Value="true">
+                            <Setter TargetName="btnConnect" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="btnDisConnect" Property="Visibility" Value="Visible" />
+                            <!--<Setter TargetName="deviceIcon" Property="Foreground" Value="#FF8910" />
+                            <Setter TargetName="deviceIcon" Property="Text" Value="&#xe637;" />-->
+                            <Setter TargetName="ReadyIcon" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="NoReadyIcon" Property="Visibility" Value="Collapsed" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsConnected}" Value="false">
+                            <Setter TargetName="btnConnect" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="btnDisConnect" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="ReadyIcon" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="NoReadyIcon" Property="Visibility" Value="Visible" />
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <!--<Style.Triggers>
+            <DataTrigger Binding="{Binding Path=IsConnected}" Value="false">
+                <Setter TargetName="connectStatus" Property="Background" Value="#FFFFFF" />
+            </DataTrigger>
+        </Style.Triggers>-->
+    </Style>
+
+</ResourceDictionary>

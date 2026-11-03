@@ -1,0 +1,74 @@
+﻿<Window  Name="Windows"
+        x:Class="II.RPA.Plugin.Dialog.FormInput"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:conv="clr-namespace:II.RPA.Plugin.Dialog.Converts"
+        xmlns:template="clr-namespace:II.RPA.Plugin.Dialog.TemplateSelector"
+         xmlns:uccontrol="clr-namespace:II.RPA.Plugin.Dialog.UCControl"
+         mc:Ignorable="d"
+        MinHeight="191" MinWidth="468" Width="468"  WindowStartupLocation="CenterScreen"
+        SizeToContent="Height" WindowStyle="None" BorderThickness="1"
+        ShowInTaskbar="False" ResizeMode="CanResize"
+        WindowChrome.WindowChrome="{DynamicResource WindowChromeKey}"
+         >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../IIDefaultStyle.xaml"/>
+                <ResourceDictionary Source="../Skin/Title.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="{x:Type PasswordBox}"
+                       BasedOn="{StaticResource RubyerPasswordBox}" />
+            <conv:WidthConv x:Key="WidthConv"/>
+            <WindowChrome x:Key="WindowChromeKey"  ResizeBorderThickness="4" CaptionHeight="0" CornerRadius="3" />
+            <template:MaxTemplateSelector MaxTemplate="{StaticResource Max}" RestoreTemplate="{StaticResource Restore}" x:Key="selector"></template:MaxTemplateSelector>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.Effect>
+        <DropShadowEffect Color="#F7F7F7" ShadowDepth="3"  Opacity="1" BlurRadius="24" Direction="90" />
+    </Window.Effect>
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static SystemCommands.RestoreWindowCommand}" Executed="RestoreWindow_Exec" />
+        <CommandBinding Command="{x:Static SystemCommands.MaximizeWindowCommand}" Executed="MaximizeWindow_Exec" />
+    </Window.CommandBindings>
+    <DockPanel  Background="#FFFFFF" Margin="1,0,1,1">
+        <DockPanel DockPanel.Dock="Top" Height="30" Background="#F7F7F7" MouseLeftButtonDown="DockPanel_MouseLeftButtonDown">
+            <Button Click="btnCancel_Click" BorderThickness="0"  DockPanel.Dock="Right" Width="30" Background="Transparent" Margin="0,0,9,0">
+                <Canvas>
+                    <Line X1="-6" Y1="-6" X2="6" Y2="6" Stroke="#999DA8"></Line>
+                    <Line X1="-6" Y1="6" X2="6" Y2="-6" Stroke="#999DA8"></Line>
+                </Canvas>
+            </Button>
+            <Button Content="{Binding ElementName=Windows, Path=WindowState}" ContentTemplateSelector="{StaticResource selector}" DockPanel.Dock="Right" Width="30" Background="Transparent"  BorderThickness="0">
+            </Button>
+            <Button Click="Min_Click" DockPanel.Dock="Right" Width="30" Background="Transparent"  BorderThickness="0">
+                <Canvas>
+                    <Line X1="-6" Y1="0" X2="6" Y2="0" Stroke="#999DA8"></Line>
+                </Canvas>
+            </Button>
+            <TextBlock x:Name="TITLE" Background="#F7F7F7" Padding="16,7,0,0" FontSize="13" Text="{DynamicResource ShuRuDuiHuaKuang}"></TextBlock>
+        </DockPanel>
+        <Grid DockPanel.Dock="Top" Visibility="{Binding Path=IsEnable}" Height="30">
+            <Grid.Background>
+                <SolidColorBrush Color="#FF890F" Opacity="0.1"></SolidColorBrush>
+            </Grid.Background>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="{Binding Path=Tip}" HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
+                <TextBlock Text="{Binding Path=OutTime}" HorizontalAlignment="Center" Foreground="#FF890F" FontSize="18"></TextBlock>
+                <TextBlock Text="{DynamicResource ConfigSetWnd.xaml_Miao}" HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
+            </StackPanel>
+        </Grid>
+        <StackPanel Width="{Binding ActualWidth, ElementName=Windows}" DockPanel.Dock="Bottom"  Height="54" VerticalAlignment="Bottom" Margin="0,30,0,0" HorizontalAlignment="Left">
+            <Line  Stroke="#ECEEF2" StrokeThickness="1" X1="2" X2="{Binding Width, ElementName=Windows}" Y1="0" Y2="0"></Line>
+            <StackPanel Margin="0,12,0,0" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Height="30px" Width="80px" Style="{StaticResource BtnDeleteStyle}" x:Name="btnCancel" Content="{DynamicResource XMessageBox.xaml_QuXiao}" Margin="0,0,8,0" Click="btnCancel_Click" />
+                <Button Height="30px" Width="80px" Style="{StaticResource BtnInfoStyle}" x:Name="btnOK" Click="btnOK_Click"  Margin="0,0,30,0" Content="{DynamicResource ConfigSetWnd.xaml_QueRen}"/>
+            </StackPanel>
+        </StackPanel>
+        <ScrollViewer  Margin="16,0,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" VerticalScrollBarVisibility="Auto">
+            <StackPanel Width="{Binding ActualWidth, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window},Converter={StaticResource WidthConv}}"  MinWidth="436"  Orientation="Vertical" x:Name="ParameterPanl"/>
+        </ScrollViewer>
+    </DockPanel>
+</Window>

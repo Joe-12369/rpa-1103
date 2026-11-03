@@ -1,0 +1,59 @@
+{
+  "windows": [
+    {
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "chrome": [
+    {
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "edge": [
+    {
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ]
+}

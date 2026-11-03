@@ -1,0 +1,64 @@
+syntax = "proto3";
+import "base_resp.proto";
+import "google/protobuf/wrappers.proto";
+package rpa.core.record;
+
+enum Quality {
+  LOW = 0;
+  COMMON = 1;
+  HIGH = 2;
+  EX_HIGH = 3;
+}
+
+message ScreenRecordInstance
+{
+	string id = 1;
+    string directory = 2;
+    string file_name = 3;
+    string file_full_name = 4;
+    Quality quality = 5;
+    string ffmpeg_path = 6;
+	google.protobuf.BoolValue is_pending = 7;
+	string client_id = 8;
+}
+
+message GetRequest
+{
+    string request_id = 1;
+	string id = 2;
+	string client_id = 3;
+}
+
+message GetPendingsRequest
+{
+    string request_id = 1;
+	string client_id = 2;
+}
+
+message StartRequest
+{
+    string request_id = 1;
+    string id = 2;
+    string directory = 3;
+    string file_name = 4;
+    Quality quality = 5;
+    string ffmpeg_path = 6;
+	string client_id = 7;
+}
+
+message StopRequest
+{
+    string request_id = 1;
+    string id = 2;
+	string client_id = 3;
+    int32 cut_seconds = 4;
+    string file_name = 5;
+}
+
+service ScreenRecordService
+{
+	rpc GetUnary(GetRequest) returns (rpa.core.base.resp.Response);
+	rpc GetPendingsUnary(GetPendingsRequest) returns (rpa.core.base.resp.Response);
+	rpc StartUnary(StartRequest) returns (rpa.core.base.resp.Response);
+	rpc StopUnary(StopRequest) returns (rpa.core.base.resp.Response);
+}

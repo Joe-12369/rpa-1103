@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Plugin.Database</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.Database</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Plugin.Database</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.Database</AssemblyName>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(Platform)'=='x86'">
+    <Reference Include="IBM.Data.DB2, Version=9.7.4.4, Culture=neutral, PublicKeyToken=7c307b91aa13d208, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\x86\IBM.Data.DB2.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Platform)'=='x64'">
+    <Reference Include="IBM.Data.DB2, Version=9.7.4.4, Culture=neutral, PublicKeyToken=7c307b91aa13d208, processorArchitecture=x64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\x64\IBM.Data.DB2.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="HandyControl">
+      <HintPath>..\libs\HandyControl.dll</HintPath>
+    </Reference>
+<Reference Include="System.Management" />
+</ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database.cs" />
+    <Compile Include="PluginPackage.cs" />
+    <Compile Include="DataBaseException.cs" />
+    <Compile Include="Db2.cs" />
+    <Compile Include="DbAccess.cs" />
+    <Compile Include="DbDM.cs" />
+    <Compile Include="DbGauss.cs" />
+    <Compile Include="DbHelper.cs" />
+    <Compile Include="DbMySQL.cs" />
+    <Compile Include="DbOracle.cs" />
+    <Compile Include="DbPgsql.cs" />
+    <Compile Include="DbServerConnStr.cs" />
+    <Compile Include="DbSqlite.cs" />
+    <Compile Include="DbSqlServer.cs" />
+    <Compile Include="Params\Base\ParamBase.cs" />
+    <Compile Include="Params\ParamBatchInsertModel.cs" />
+    <Compile Include="Params\ParamBeginTransactionModel.cs" />
+    <Compile Include="Params\ParamCommitTransactionModel.cs" />
+    <Compile Include="Params\ParamQueryAllModel.cs" />
+    <Compile Include="Params\ParamQuerySingleModel.cs" />
+    <Compile Include="Params\ParamBatchExecuteSqlModel.cs" />
+    <Compile Include="Params\ParamExecuteSqlModel.cs" />
+    <Compile Include="Params\ParamCreateDbConnectionModel.cs" />
+    <Compile Include="Params\ParamCloseConnectionModel.cs" />
+    <Compile Include="Params\ParamRollbackTransactionModel.cs" />
+    <Compile Include="Params\ParamTestDbConnectionModel.cs" />
+    <Compile Include="Plugins\Base\DataBaseComponentBase.cs" />
+    <Compile Include="Plugins\BatchInsert.cs" />
+    <Compile Include="Plugins\BeginTransaction.cs" />
+    <Compile Include="Plugins\CommitTransaction.cs" />
+    <Compile Include="Plugins\QueryAll.cs" />
+    <Compile Include="Plugins\QuerySingle.cs" />
+    <Compile Include="Plugins\BatchExecuteSql.cs" />
+    <Compile Include="Plugins\ExecuteSql.cs" />
+    <Compile Include="Plugins\CloseConnection.cs" />
+    <Compile Include="Plugins\CreateDbConnection.cs" />
+    <Compile Include="Plugins\RollbackTransaction.cs" />
+    <Compile Include="Plugins\TestDbConnection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Config\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\plugin.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oracle.ManagedDataAccess.Client.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <!-- Target 閺囧じ鍞?PostBuildEvent閿涙碍澧嶉崚?Copy 缂傚搫銇戝┃鎰瀮娴犺泛宓嗘径杈Е閿涘瞼鏁撻幋鎰亼鐠愩儻绱濋柆鍨帳 cmd 閸欘亪鍣伴悽銊︽付閸氬簼绔撮弶锟犫偓鈧崙铏圭垳閼板被鈧矂娼ゆ妯煎繁閺傚洣娆㈤妴宥冣偓鍌炩偓姘跺帳缁楋附妫ら崠褰掑帳閺冭泛鍨悰銊よ礋缁岀尨绱濈€电懓绨?Copy 娑撳秵濮ら柨娆嶁偓?-->
+  <Target Name="DeployDatabasePlugin" AfterTargets="AfterBuild">
+    <PropertyGroup>
+      <_PluginName>Database</_PluginName>
+      <_RuntimePluginDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimePluginDir>
+      <_RuntimeCsDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimeCsDir>
+      <_PluginLoaderDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\</_PluginLoaderDir>
+    </PropertyGroup>
+    <RemoveDir Directories="$(_RuntimeCsDir)" Condition="Exists('$(_RuntimeCsDir)')" />
+    <MakeDir Directories="$(_RuntimePluginDir);$(_RuntimeCsDir);$(_PluginLoaderDir)x86;$(_PluginLoaderDir)x64" />
+    <!-- runtime 閹绘帊娆㈠〒鍛礋娑撳簼瀵屾潏鎾冲毉 -->
+    <Copy SourceFiles="$(TargetDir)Config\config.json" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <ItemGroup>
+      <_MainOutput Include="$(TargetDir)$(TargetName).*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_MainOutput)" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <!-- 鐎瑰じ瀵?Loader 閻╊喖缍嶆稉瀣畱娓氭繆绂嗛敍鍫モ偓姘跺帳缁楋附妫ら崠褰掑帳閺冭泛鍨悰銊よ礋缁岀尨绱濇稉宥嗗Г闁挎瑱绱?-->
+    <ItemGroup>
+      <_LoaderCopy Include="$(TargetDir)EntityFramework.*" />
+      <_LoaderCopy Include="$(TargetDir)Npgsql.*" />
+      <_LoaderCopy Include="$(TargetDir)System.Buffers.*" />
+      <_LoaderCopy Include="$(TargetDir)System.Data.SQLite.*" />
+      <_LoaderCopy Include="$(TargetDir)System.Memory.*" />
+      <_LoaderCopy Include="$(TargetDir)System.Runtime.CompilerServices.Unsafe.*" />
+      <_LoaderCopy Include="$(TargetDir)System.Threading.Tasks.Extensions.*" />
+      <_LoaderCopy Include="$(TargetDir)System.ValueTuple.*" />
+      <_LoaderCopy Include="$(TargetDir)K4os.*" />
+      <_LoaderCopy Include="$(TargetDir)Oracle.ManagedDataAccess.*" />
+      <!-- ODP.NET Core 3.21 requires this dependency in the dynamic loader directory. -->
+      <_LoaderCopy Include="$(TargetDir)System.DirectoryServices.Protocols.*" />
+      <!-- Without a RID, NuGet places Windows implementations below runtimes/win.
+           The loader does not probe that hierarchy: flatten only these implementations
+           after copying the portable assets, never the Linux/macOS implementations. -->
+      <_OracleWindowsRuntime Include="$(TargetDir)runtimes\win\lib\**\System.DirectoryServices.Protocols.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_LoaderCopy)" DestinationFolder="$(_PluginLoaderDir)" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="@(_OracleWindowsRuntime)" DestinationFolder="$(_PluginLoaderDir)" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="$(TargetDir)IBM.Data.DB2.dll" DestinationFolder="$(_PluginLoaderDir)" SkipUnchangedFiles="false" Condition="Exists('$(TargetDir)IBM.Data.DB2.dll')" />
+    <Copy SourceFiles="$(TargetDir)MySql.Data.dll" DestinationFolder="$(_PluginLoaderDir)" SkipUnchangedFiles="false" Condition="Exists('$(TargetDir)MySql.Data.dll')" />
+    <Copy SourceFiles="$(TargetDir)DmProvider.dll" DestinationFolder="$(_PluginLoaderDir)" SkipUnchangedFiles="false" Condition="Exists('$(TargetDir)DmProvider.dll')" />
+    <Copy SourceFiles="$(TargetDir)MySqlConnector.dll" DestinationFolder="$(_PluginLoaderDir)" SkipUnchangedFiles="false" Condition="Exists('$(TargetDir)MySqlConnector.dll')" />
+    <Copy SourceFiles="$(TargetDir)System.Diagnostics.DiagnosticSource.dll" DestinationFolder="$(_PluginLoaderDir)" SkipUnchangedFiles="false" Condition="Exists('$(TargetDir)System.Diagnostics.DiagnosticSource.dll')" />
+    <ItemGroup>
+      <_NativeX86 Include="$(TargetDir)x86\*.dll" />
+      <_NativeX64 Include="$(TargetDir)x64\*.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_NativeX86)" DestinationFolder="$(_PluginLoaderDir)x86\" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="@(_NativeX64)" DestinationFolder="$(_PluginLoaderDir)x64\" SkipUnchangedFiles="false" />
+  </Target>
+  <ItemGroup>
+    <PackageReference Include="DmProvider1.1.0" Version="1.1.0" />
+    <PackageReference Include="EntityFramework" Version="6.3.0" />
+    <PackageReference Include="Google.Protobuf" Version="3.35.1" />
+    <PackageReference Include="K4os.Compression.LZ4" Version="1.2.6" />
+    <PackageReference Include="K4os.Compression.LZ4.Streams" Version="1.2.6" />
+    <PackageReference Include="K4os.Hash.xxHash" Version="1.0.6" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="MySql.Data" Version="8.0.28" />
+    <PackageReference Include="MySqlConnector" Version="2.2.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Npgsql" Version="4.0.9" />
+    <!-- The Framework-only driver cannot be used by the .NET RuntimeHost. -->
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.140" />
+    <PackageReference Include="Stub.System.Data.SQLite.Core.NetFramework" Version="1.0.113.3" />
+    <PackageReference Include="System.Data.Odbc" Version="8.0.0" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.113.1" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.113.7" />
+    <PackageReference Include="System.Data.SQLite.EF6" Version="1.0.113.0" />
+    <PackageReference Include="System.Data.SQLite.Linq" Version="1.0.113.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Data.OleDb" Version="8.0.0" />
+  </ItemGroup>
+</Project>

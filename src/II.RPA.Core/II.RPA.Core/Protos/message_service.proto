@@ -1,0 +1,78 @@
+syntax = "proto3";
+package rpa.core.message;
+
+service MessageService 
+{
+	//server-engine双向流
+	rpc EngineMessageStreaming(stream EngineMessage) returns (stream ServerMessage);
+	//server-factory双向流
+	rpc ClientMessageStreaming(stream ClientMessage) returns (stream ServerMessage);
+	//服务端消息流
+	rpc ServerStreaming(Message) returns (stream Message);
+	//客户端消息流
+	rpc ClientStreaming(stream Message) returns (Message);
+	//server-bot双向流
+	rpc BotMessageStreaming(stream BotMessage) returns (stream ServerMessage);
+}
+message ServerMessage
+{
+	//消息Id、由server端创建、client端原样返回
+	//对于需要等待返回的消息推送、server端需要实现请求的一致性验证
+    int32 Message_Id = 1;
+    //行为类型
+	string Action = 2;
+	//当前流程package路径,由server端创建、clent端原样返回
+	string Package_Path = 3;
+	//消息体、一般为json字符串
+	string Message = 4;
+	//保留字段、留作扩展
+	string Reserve = 5;
+}
+message EngineMessage
+{
+    int32 MessageId = 1;
+	string Action = 2;
+	string PackagePath = 3;
+	string Message = 4;
+	//状态码 0-成功 1-失败
+	string StatusCode = 5;
+	string Reserve = 6;
+}
+message ClientMessage
+{
+    int32 Message_Id = 1;
+	string Action = 2;
+	string Package_Path = 3;
+	string Message = 4;
+	string Reserve = 5;
+}
+message BotMessage
+{
+    int32 Message_Id = 1;
+	string Action = 2;
+	string Package_Path = 3;
+	string Message = 4;
+	string Reserve = 5;
+}
+message Message
+{
+	//消息Id、由请求端创建、响应端原样返回
+	//请求端需要验证消息Id的一致
+    int32 Message_Id = 1;
+	//客户端身份 factory、engine
+    string Client_Id = 2;
+    //行为类型,内容为字符串
+	//flowedit.plugingenerate
+	//flowedit.start
+    //flowedit.pause
+	//flowedit.resume
+	//flowedit.stop
+	//...
+	string Action = 3;
+	//当前流程package路径,发起请求端传入，接收端原样返回
+	string Package_Path = 4;
+	//消息体、json字符串
+	string Payload = 5;
+	//保留字段、留作扩展
+	string Reserve = 6;
+}

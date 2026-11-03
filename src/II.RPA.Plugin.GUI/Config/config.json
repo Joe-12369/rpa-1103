@@ -1,0 +1,102 @@
+﻿{
+  "fileName": "II.RPA.Plugin.GUI.dll",
+  "remotePort": 61619,
+  // CV切换时间间隔
+  "CVElementSwitchInterval": 1000,
+  // 应用界面相似度(0~1)
+  "AppFaceProximity": 0.95,
+  // 应用界面相似度检测间隔时间
+  "AppFaceProximityMonitorInterval": 500,
+  //元素重叠百分比
+  "IntersectRatio": 0.5,
+  // 启用远程拾取
+  "EnableRemoteCapture": false,
+  // 数据采集-翻页按钮cssSelector模板
+  "DataCollectionTurnPageButtonCssSelectorList": [],
+  // 数据采集-页面垂直滚动后  延迟拾取时间（毫秒）【V1版本使用】
+  "ScrollVerticalDelay": 2000,
+  // 数据采集-页面垂直滚动后  延迟拾取时间（毫秒）【V2版本使用 v>=690】
+  "ScrollVerticalDelayV2": 1000,
+  //匹配元素后操作的默认超时时间（毫秒）
+  "OperationTimeout": 20000,
+  //extension 使用Java插件，agent: 使用Java代理
+  "JavaMode": "agent",
+  // 初次拾取时，根据Win32窗口类名强制使用UIA2；支持结尾*前缀匹配
+  "UIA2WindowClasses": [ "SunAwt*", "YonyouUWnd" ],
+  "ClientProcessNames": [ "实在设计器" ],
+  //IPA模式 需要检测的桌面工具进程
+  "DeskTopTools": [ "DesktopAssistant", "360DesktopLite64", "DesktopMgr64", "XZDesktop64", "kdesk64" ],
+  "CaptureElementChoose": {
+    "IntersectRatio": 0.5,
+    "MinWidth": 14,
+    "MinHeight": 14,
+    "MaxJammingPadding": 5
+  },
+  "CvToNomalMoveMouse": false,
+  "category": [
+    {
+      "name": "GUICV",
+      "sort": -100
+    },
+    {
+      "name": "GUIIE",
+      "sort": 100
+    },
+    {
+      "name": "GUIChrome",
+      "sort": 200
+    },
+    {
+      "name": "GUIEdge",
+      "sort": 300
+    },
+    {
+      "name": "GUIFireFox",
+      "sort": 310
+    },
+    {
+      "name": "GUIZExplorer",
+      "sort": 320
+    },
+    {
+      "name": "GUISogou",
+      "sort": 330
+    },
+    {
+      "name": "GUIWeb360se",
+      "sort": 340
+    },
+    {
+      "name": "GUIWeb360X",
+      "sort": 350
+    },
+    {
+      "name": "GUISuperBrowser",
+      "sort": 360
+    },
+    {
+      "name": "Chromium",
+      "sort": 380
+    },
+    {
+      "name": "GUIJavaAlter",
+      "sort": 390
+    },
+    {
+      "name": "GUIJava",
+      "sort": 400
+    },
+    {
+      "name": "GUISAP",
+      "sort": 450
+    },
+    {
+      "name": "WdtErp",
+      "sort": 500
+    },
+    {
+      "name": "GUIWindows",
+      "sort": 10000
+    }
+  ]
+}

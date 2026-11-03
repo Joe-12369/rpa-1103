@@ -1,0 +1,140 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:conv="clr-namespace:II.RPA.Plugin.Dialog.Converts"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <conv:RowToIndexConv x:Key="RowToIndexConv"/>
+    <!--<SolidColorBrush x:Key="TableBrackGround" Color="#F1F4F7"></SolidColorBrush>-->
+    <SolidColorBrush x:Key="TableBrackGround" Color="#F5F5F5"></SolidColorBrush>
+    <SolidColorBrush x:Key="GridLineColor" Color="#D9DDE6"></SolidColorBrush>
+    <!--Label -->
+    <Style TargetType="Label">
+        <Setter Property="Foreground" Value="#FF5C6F88" />
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Height" Value="18"/>
+        <!--<Setter Property="FontWeight" Value="Bold"/>-->
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Margin" Value="0,0,0,4"/>
+    </Style>
+
+    <Style TargetType="DataGrid">
+        <!--拖动改变单元格大小-->
+        <Setter Property="CanUserResizeColumns" Value="True"/>
+        <Setter Property="ColumnWidth" Value="Auto"/>
+        <Setter Property="MinColumnWidth" Value="73"/>
+        <Setter Property="AutoGenerateColumns" Value="True"/>
+        <!--网格线颜色-->
+        <Setter Property="HorizontalGridLinesBrush" Value="{StaticResource GridLineColor}"/>
+        <Setter Property="VerticalGridLinesBrush" Value="{StaticResource GridLineColor}"/>
+        <!--<Setter Property="BorderBrush" Value="{StaticResource GridLineColor}"/>-->
+    
+        <Setter Property="RowHeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock Width="36" FontSize="12" TextAlignment="Center" Text="{Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Converter={StaticResource RowToIndexConv}}"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <conv:ToConverter x:Key="T2"></conv:ToConverter>
+    <Style TargetType="DataGridCell">
+        <!--<Setter Property="Padding" Value="2,3,2,3"/>-->
+        <!--<Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGridCell}">
+                    <Border Padding="{TemplateBinding Padding}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                        <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>-->
+        <Setter Property="BorderThickness" Value="0"></Setter>
+        <Setter Property="Tag" >
+            <Setter.Value>
+                <MultiBinding Converter="{StaticResource T2}">
+                    <!--此处绑定为选择的列头项-->
+                    <Binding  Path="DataContext.SelectColumn" RelativeSource="{RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType=DataGrid}"/>
+                    <!--此处绑定为列头的名称-->
+                    <Binding  Path="Column.Header" RelativeSource="{RelativeSource Mode=Self}" />
+                </MultiBinding>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Tag,RelativeSource={RelativeSource Mode=Self}}" Value="True">
+                <Setter Property="Background" Value="#FFF3E7"></Setter>
+            </DataTrigger>
+            <!--<Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#E7F3FF"/>
+            </Trigger>-->
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Background" Value="#FFF3E7"></Setter>
+                <Setter Property="Foreground" Value="Black"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style  TargetType="DataGridColumnHeader">
+        <Setter  Property="Padding"  Value="2,3,0,3"/>
+        <Setter  Property="Background"  Value="{StaticResource TableBrackGround}"/>
+        <Setter  Property="BorderBrush"  Value="{StaticResource GridLineColor}"/>
+        <Setter  Property="BorderThickness"  Value="0,0,1,1"/>
+    </Style>
+    <Style  TargetType="DataGridRowHeader" >
+        <Setter Property="Padding"  Value="2,3,0,3"/>
+        <Setter Property="Width" Value="36"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Background" Value="{StaticResource TableBrackGround}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource GridLineColor}"></Setter>
+        <Setter Property="BorderThickness" Value="0,0,1,1"></Setter>
+    </Style>
+    <!--<Style TargetType="DataGridRow">
+        <Setter Property="BorderBrush" Value="{StaticResource GridLineColor}"></Setter>
+        <Setter Property="BorderThickness" Value="1"></Setter>
+    </Style>-->
+    <Style TargetType="MenuItem">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type MenuItem}">
+                    <Border x:Name="templateRoot" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                        <Grid VerticalAlignment="Center" Margin="6,8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <ContentPresenter x:Name="Icon" Content="{TemplateBinding Icon}" ContentSource="Icon" HorizontalAlignment="Center" Height="16" Margin="14,0,9,-0.8" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="Top" Width="16"/>
+                            <Path x:Name="GlyphPanel" Data="F1M10,1.2L4.7,9.1 4.5,9.1 0,5.2 1.3,3.5 4.3,6.1 8.3,0 10,1.2z" Fill="#FF212121" FlowDirection="LeftToRight" Margin="3" Visibility="Collapsed" VerticalAlignment="Center"/>
+                            <ContentPresenter Margin="0,0,15,0" ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" Grid.Column="1" ContentStringFormat="{TemplateBinding HeaderStringFormat}" ContentSource="Header" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Icon" Value="{x:Null}">
+                            <Setter Property="Visibility" TargetName="Icon" Value="Collapsed"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Visibility" TargetName="GlyphPanel" Value="Visible"/>
+                            <Setter Property="Visibility" TargetName="Icon" Value="Collapsed"/>
+                        </Trigger>
+                        <Trigger Property="IsHighlighted" Value="True">
+                            <Setter Property="Background" TargetName="templateRoot" Value="#F2F5F7"/>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="#FF26A0DA"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="TextElement.Foreground" TargetName="templateRoot" Value="#FF707070"/>
+                            <Setter Property="Fill" TargetName="GlyphPanel" Value="#FF707070"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsHighlighted" Value="True"/>
+                                <Condition Property="IsEnabled" Value="False"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="templateRoot" Value="#0A000000"/>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="#21000000"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

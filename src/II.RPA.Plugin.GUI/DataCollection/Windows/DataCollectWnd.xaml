@@ -1,0 +1,2204 @@
+﻿<Window x:Class="II.RPA.Plugin.GUI.DataCollection.Windows.DataCollectWnd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:II.RPA.Plugin.GUI.DataCollection.Windows"
+        xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:dataConverter="clr-namespace:II.RPA.Plugin.GUI.DataCollection.DataTypeConverter"
+        xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+        xmlns:dataTypeConverter="clr-namespace:II.RPA.Plugin.GUI.DataCollection.DataTypeConverter"
+       
+        Opacity="0"
+        mc:Ignorable="d"
+        Title="DataCollectWnd"
+        Loaded="Window_Loaded"
+        xmlns:customControls="https://HIK.Toolkit.WPF.CustomControls"
+        Background="Transparent"
+        Width="560" Height="442"
+        MinWidth="560" MinHeight="442"
+        ShowInTaskbar="False" WindowStyle="None" AllowsTransparency="True" Topmost="True"
+        
+       >
+   
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="-1" ResizeBorderThickness="11"  CaptionHeight="34" RenderOptions.EdgeMode="Aliased"/>
+    </WindowChrome.WindowChrome>
+
+  
+            <!--<Window.Template>
+        <ControlTemplate TargetType="{x:Type Window}">
+            <Grid x:Name="backGrid">
+                <Border x:Name="contentBorder" Margin="4" CornerRadius="4" Background="White">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="4" ShadowDepth="0"/>
+                    </Border.Effect>
+                    <Border.OpacityMask>
+                        <VisualBrush>
+                            <VisualBrush.Visual>
+                                <Border Background="Black"
+                                        SnapsToDevicePixels="True"
+                                        CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}"
+                                        Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}"
+                                        Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}" />
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Border.OpacityMask>
+                    <AdornerDecorator>
+                        <ContentPresenter />
+                    </AdornerDecorator>
+                </Border>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsActive" Value="True">
+                    <Setter TargetName="contentBorder" Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect BlurRadius="4" ShadowDepth="0" Color="#B2B2B2"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Template>-->
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary   Source="..\Resources\CommonStyle.xaml"/>
+                <ResourceDictionary   Source="..\Resources\ColumnHeaderOriginStyle.xaml"/>
+                <ResourceDictionary   Source="..\Resources\MyDataGridStyle.xaml" />
+                <ResourceDictionary   Source="..\Resources\MyTooltipStyle.xaml"/>
+                <ResourceDictionary   Source="..\Resources\DefaultTextToolTips.xaml"/>
+                <ResourceDictionary   Source="..\Resources\SVGResources.xaml"/>
+                <ResourceDictionary>
+                    <Storyboard x:Key="HideWindow">
+                        <DoubleAnimation Duration="0:0:0.6" From="1" To="0" Storyboard.TargetProperty="Opacity" FillBehavior="Stop" />
+                        <DoubleAnimation Duration="0:0:0.3" From="1" To="0.8" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleX)" FillBehavior="Stop" Storyboard.TargetName="MainGrid"/>
+                        <DoubleAnimation Duration="0:0:0.3" From="1" To="0.8" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleY)" FillBehavior="Stop" Storyboard.TargetName="MainGrid"/>
+                    </Storyboard>
+                    <Storyboard x:Key="ShowWindow">
+                        <DoubleAnimation Duration="0:0:0.4" From="0.2" To="1" Storyboard.TargetProperty="Opacity" FillBehavior="Stop"/>
+                        <DoubleAnimation Duration="0:0:0.3" From="0.8" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleX)" FillBehavior="Stop" Storyboard.TargetName="MainGrid"/>
+                        <DoubleAnimation Duration="0:0:0.3" From="0.8" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleY)" FillBehavior="Stop" Storyboard.TargetName="MainGrid"/>
+                    </Storyboard>
+
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+
+            <dataTypeConverter:Bool2StateColorConverter x:Key="Bool2StateColorConverter"/>
+            <dataConverter:TrimmedTextBlockVisibilityConverter x:Key="TrimmedTextBlockVisibilityConverter" />
+            <Style x:Key="MyImageStyle" TargetType="Image">
+                <Style.Setters>
+                    <Setter Property="RenderOptions.BitmapScalingMode" Value="HighQuality"/>
+                    <Setter Property="UseLayoutRounding" Value="True"/>
+                </Style.Setters>
+            </Style>
+
+            <Style x:Key="ImageBorderStyle" TargetType="{x:Type Border}">
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="CornerRadius" Value="4"/>
+                <Setter Property="Background" Value="Transparent"/>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#E3E8EE"/>
+                    </Trigger>
+                    <Trigger Property="IsMouseOver" Value="False">
+                        <Setter Property="Background" Value="Transparent"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+
+            <dataConverter:DictionaryConverter x:Key="DictionaryConverterKey" />
+            <dataConverter:MultiValueConverter x:Key="MultiValueConverterKey" />
+
+            <Style x:Key="MyMenuButtonStyle" TargetType="MenuItem">
+                <Setter Property="OverridesDefaultStyle" Value="true"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Border Name="borderBtn" CornerRadius="0" Width="auto" HorizontalAlignment="Stretch" Height="24" BorderThickness="0,0,0,0">
+                                <Border.Style>
+                                    <Style>
+                                        <Setter Property="Border.Background" Value="Transparent"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="Border.IsMouseOver" Value="True">
+                                                <Setter Property="Border.Background" Value="#FFEEDB"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+                                <TextBlock Text="{TemplateBinding MenuItem.Header}"  MaxWidth="115"
+                                           TextTrimming="CharacterEllipsis" Style="{StaticResource CommonTextBlock}"  FontSize="12" Margin="16,0,0,0" Foreground="#505962"
+                    VerticalAlignment="Center"  HorizontalAlignment="Left"></TextBlock>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="MyMenuButtonStyleEx" TargetType="MenuItem">
+                <Setter Property="ToolTipService.InitialShowDelay" Value="200"/>
+                <Setter Property="OverridesDefaultStyle" Value="true"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Border Name="borderBtn" CornerRadius="0" Width="auto" HorizontalAlignment="Stretch" Height="24" BorderThickness="0,0,0,0">
+                                <Border.Style>
+                                    <Style>
+                                        <Setter Property="Border.Background" Value="Transparent"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="Border.IsMouseOver" Value="True">
+                                                <Setter Property="Border.Background" Value="#FFEEDB"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+                                <TextBlock Text="{TemplateBinding MenuItem.Header}" 
+                                            MaxWidth="115"
+                                           TextTrimming="CharacterEllipsis" 
+                                           Style="{StaticResource CommonTextBlock}"  FontSize="12" Margin="16,0,0,0" Foreground="{TemplateBinding MenuItem.Foreground}"
+                    VerticalAlignment="Center"  HorizontalAlignment="Left"></TextBlock>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="MyFirstMenuButtonStyle" TargetType="MenuItem">
+                <Setter Property="OverridesDefaultStyle" Value="true"/>
+                <Setter Property="ToolTipService.InitialShowDelay" Value="200"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Border Name="borderBtn" CornerRadius="4,4,0,0" Width="auto" HorizontalAlignment="Stretch" Height="25" BorderThickness="0,0,0,0">
+                                <Border.Style>
+                                    <Style>
+                                        <Setter Property="Border.Background" Value="Transparent"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="Border.IsMouseOver" Value="True">
+                                                <Setter Property="Border.Background" Value="#FFEEDB"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+                                <TextBlock Text="{TemplateBinding MenuItem.Header}" 
+                                             MaxWidth="115"
+                                           TextTrimming="CharacterEllipsis"
+                                           Style="{StaticResource CommonTextBlock}"  FontSize="12" Margin="16,2,0,0" Foreground="#505962"
+                    VerticalAlignment="Center"  HorizontalAlignment="Left"></TextBlock>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="MyLastMenuButtonStyle" TargetType="MenuItem">
+                <Setter Property="ToolTipService.InitialShowDelay" Value="200"/>
+                <Setter Property="OverridesDefaultStyle" Value="true"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Border Name="borderBtn" CornerRadius="0,0,4,4" Width="auto" HorizontalAlignment="Stretch" Height="25" BorderThickness="0,0,0,0">
+                                <Border.Style>
+                                    <Style>
+                                        <Setter Property="Border.Background" Value="Transparent"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="Border.IsMouseOver" Value="True">
+                                                <Setter Property="Border.Background" Value="#FFEEDB"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+                                <TextBlock  MaxWidth="115"
+                                           TextTrimming="CharacterEllipsis" Text="{TemplateBinding MenuItem.Header}" Style="{StaticResource CommonTextBlock}"  FontSize="12" Margin="16,0,0,2" Foreground="#505962" VerticalAlignment="Center"  HorizontalAlignment="Left"></TextBlock>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="MyButtonStyle" TargetType="Button">
+                <Style.Setters>
+                    <Setter Property="ToolTipService.InitialShowDelay" Value="200"/>
+                    <Setter Property="ClickMode" Value="Release"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Name="ButtonBorder"
+                                    BorderThickness="0"
+                                    Padding="0,0"
+                                    CornerRadius="1"
+                                    Background="Transparent">
+                                    <Image Source="../Assets/Images/DeExpand.png" Height="14" Width="14" Style="{StaticResource MyImageStyle}"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style.Setters>
+            </Style>
+
+            <Style x:Key="MyArrowDownButtonStyle" TargetType="Button">
+                <Style.Setters>
+                    <Setter Property="ClickMode" Value="Release"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border 
+                                    BorderThickness="0"
+                                    Padding="0,0"
+                                    CornerRadius="1"
+                                    Background="Transparent">
+                                    <svgc:SvgViewbox Height="14" Width="14" Source="../Assets/SvgIcon/ArrowDown.svg"/>
+                                    <!--<Image  Source="../Assets/Images/ArrowDown.png" Height="14" Width="14" Style="{StaticResource MyImageStyle}"/>-->
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style.Setters>
+            </Style>
+
+            <Style x:Key="MyDataGridColumnHeaderStyle" TargetType="DataGridColumnHeader">
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="BorderThickness" Value="0"></Setter>
+                <Setter Property="BorderBrush">
+                    <Setter.Value>
+                        <SolidColorBrush Color="#D9DDE6" Opacity="1"></SolidColorBrush>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="#F1F4F7"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+                            <Border BorderBrush="#D9DDE6" Background="#F1F4F7" BorderThickness="0" Cursor="Hand">
+                                <Grid Name="HeaderGrid" Height="26" Margin="0,0,0,0"  HorizontalAlignment="Stretch" Background="Transparent">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Themes:DataGridHeaderBorder Grid.Column="1"  BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0,0,1,1"  Background="{TemplateBinding Background}" IsHovered="{TemplateBinding IsMouseOver}" IsClickable="{TemplateBinding CanUserSort}" IsPressed="{TemplateBinding IsPressed}"  Padding="{TemplateBinding Padding}" SortDirection="{TemplateBinding SortDirection}" SeparatorBrush="{TemplateBinding SeparatorBrush}" SeparatorVisibility="{TemplateBinding SeparatorVisibility}">
+                                        <Grid>
+                                            <Button x:Name="btnMore" ClickMode="Release" Background="Transparent"  IsHitTestVisible="True" Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.DataGridModel.OpenPopupCommand}">
+                                                <Button.Template>
+                                                    <ControlTemplate TargetType="Button">
+                                                        <Border BorderThickness="0" Background="Transparent">
+                                                            <Grid>
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="24"/>
+                                                                    <ColumnDefinition Width="*"/>
+                                                                </Grid.ColumnDefinitions>
+                                                                <!--<ContentPresenter Name="c_HeaderContent"  Grid.Column="0" Margin="10,0,0,0" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />-->
+                                                                <!--<TextBlock Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=StackPanel}, Path=Children[0].Text}" Foreground="Red" />-->
+                                                                <!--<TextBlock Foreground="Blue">
+                                                                <TextBlock.Text>
+                                                                    <MultiBinding StringFormat="{}{2}">
+                                                                        <Binding ElementName="TB1" Path="Text" />
+                                                                        <Binding ElementName="TB2" Path="Text" />
+                                                                        <Binding RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=StackPanel}" Path="Children[0].Text" />
+                                                                    </MultiBinding>
+                                                                </TextBlock.Text>
+                                                             Style="{StaticResource CommonTextBlock}"
+                                                            </TextBlock>-->
+                                                                <Border Grid.Column="0" Margin="5,0,5,0"  Background="#FFFFFF" BorderThickness="0" Width="14" Height="14" CornerRadius="3" VerticalAlignment="Center" >
+                                                                    <Path Data="{StaticResource SVG_ViewBoxArrowDown}"   HorizontalAlignment="Center" VerticalAlignment="Center"
+                                              Stretch="Uniform" Fill="#979797" Width="9" Height="9" RenderTransformOrigin="0.5,0.5" >
+                                                                    </Path>
+                                                                </Border>
+                                                                <TextBlock Padding="0,0,0,0" Grid.Column="1" FontSize="13"    VerticalAlignment="Center"  Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGridColumnHeader}, Path=Content}" TextTrimming="CharacterEllipsis"  Foreground="#505962"/>
+                                                                <!--<svgc:SvgViewbox  Stretch="Uniform" Width="9" Height="9" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Source="../Assets/SvgIcon/ArrowDown.svg"/>-->
+                                                            </Grid>
+                                                        </Border>
+                                                    </ControlTemplate>
+                                                </Button.Template>
+                                                <Button.CommandParameter>
+                                                    <Binding Path="Content" ElementName="c_HeaderContent"/>
+                                                    <!--<MultiBinding Converter="{StaticResource MultiValueConverterKey}">
+                                                        <Binding Path="Content" ElementName="c_HeaderContent"/>
+                                                        <Binding ElementName="popMore"></Binding>
+                                                    </MultiBinding>-->
+                                                </Button.CommandParameter>
+                                            </Button>
+
+                                            <ContentPresenter Visibility="Collapsed" Name="c_HeaderContent"  Grid.Column="0" Margin="10,0,0,0" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                        </Grid>
+                                    </Themes:DataGridHeaderBorder>
+                                    
+                                    <!--<Button Name="btnMore"  HorizontalAlignment="Right" Grid.Column="2"   Style="{StaticResource MyButtonStyle}"/>-->
+
+                                    <Thumb x:Name="PART_LeftHeaderGripper" Grid.Column="0"  HorizontalAlignment="Left" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                                    <Thumb x:Name="PART_RightHeaderGripper" Grid.Column="2" HorizontalAlignment="Right" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+
+                                    <!--IsOpen="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.PopupIsOpen, Mode=TwoWay}"-->
+                                    <Popup x:Name="popMore" PlacementTarget="{Binding ElementName=btnMore}" PopupAnimation="Slide" IsOpen="False"  StaysOpen="False"  Placement="Bottom"  AllowsTransparency="True" VerticalOffset="-1" >
+                                        <Border  Width="140" Margin="4" CornerRadius="4" Background="White">
+                                            <Border.Effect>
+                                                <DropShadowEffect BlurRadius="4" ShadowDepth="0" Color="#c0c0c0"/>
+                                            </Border.Effect>
+                                            <Grid>
+                                                <StackPanel HorizontalAlignment="Stretch"  Orientation="Vertical" >
+                                                    <!--Foreground="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.DataGridModel.CurrentColumnContentType}"-->
+                                                    <MenuItem Name="btn_EditColumeName" 
+                                                        Style="{StaticResource MyFirstMenuButtonStyle}"
+                                                              Header="{DynamicResource DataCollectWnd.xaml_BianJiBiaoTou}"
+                                                        Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.DataGridModel.EditColumnHeaderCommand}" >
+                                                        <!--Header="{DynamicResource DataCollectWnd.xaml_BianJiBiaoTou}"-->
+                                                        <MenuItem.CommandParameter>
+                                                            <MultiBinding Converter="{StaticResource MultiValueConverterKey}">
+                                                                <Binding Path="Content" ElementName="c_HeaderContent"/>
+                                                                <Binding ElementName="popMore"></Binding>
+                                                                <Binding ElementName="StaffAdminView"></Binding>
+                                                                <Binding ElementName="HeaderGrid"></Binding>
+                                                            </MultiBinding>
+                                                        </MenuItem.CommandParameter>
+                                                        <MenuItem.ToolTip>
+                                                            <ToolTip Content="{DynamicResource DataCollectWnd.xaml_BianJiBiaoTou}"/>
+                                                        </MenuItem.ToolTip>
+                                                    </MenuItem>
+
+                                                    <MenuItem Name="btn_EditColumn" Header="{DynamicResource DataCollectWnd.xaml_BianJiLieShuJu}"
+                                                        Style="{StaticResource MyMenuButtonStyle}"
+                                                        Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.DataGridModel.EditColumnSelectorCommand}">
+                                                        <MenuItem.CommandParameter>
+                                                            <MultiBinding Converter="{StaticResource MultiValueConverterKey}">
+                                                                <!--<Binding Path="Content" ElementName="c_HeaderContent"/>
+                                                                <Binding ElementName="popMore"></Binding>-->
+                                                                <Binding Path="Content" ElementName="c_HeaderContent"/>
+                                                                <Binding ElementName="popMore"></Binding>
+                                                                <Binding ElementName="StaffAdminView"></Binding>
+                                                                <Binding ElementName="HeaderGrid"></Binding>
+                                                            </MultiBinding>
+                                                        </MenuItem.CommandParameter>
+                                                        <MenuItem.ToolTip>
+                                                            <ToolTip Content="{DynamicResource DataCollectWnd.xaml_BianJiLieShuJu}"/>
+                                                        </MenuItem.ToolTip>
+                                                    </MenuItem>
+
+                                                    <MenuItem Name="btn_CaptureSimElement" Header="{DynamicResource DataCollectWnd.xaml_ShiQuTongLeiShuJu}"
+                                                    Style="{StaticResource MyMenuButtonStyle}" 
+                                                        Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.DataGridModel.GetSimulateItemCommand}">
+                                                        <MenuItem.CommandParameter>
+                                                            <MultiBinding Converter="{StaticResource MultiValueConverterKey}">
+                                                                <Binding Path="Content" ElementName="c_HeaderContent"/>
+                                                                <Binding ElementName="popMore"></Binding>
+                                                            </MultiBinding>
+                                                        </MenuItem.CommandParameter>
+                                                        <MenuItem.ToolTip>
+                                                            <ToolTip Content="{DynamicResource DataCollectWnd.xaml_ShiQuTongLeiShuJu}"/>
+                                                        </MenuItem.ToolTip>
+                                                    </MenuItem>
+
+                                                    <Separator Background="#D9DDE6" Height="1" Margin="16,0,16,0"/>
+
+                                                    <MenuItem Name="btn_GetContentText" Header="{DynamicResource DataCollectWnd.xaml_TiQuWenBenNeiRong}"
+                                                              Foreground="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.DataGridModel.CurrentColumnContentType,Converter={StaticResource Bool2StateColorConverter},Mode=OneWay}"
+                                                              Style="{StaticResource MyMenuButtonStyleEx}"
+                                                              Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.DataGridModel.GetTextContentCommand}">
+                                                        <MenuItem.CommandParameter>
+                                                            <MultiBinding Converter="{StaticResource MultiValueConverterKey}">
+                                                                <Binding Path="Content" ElementName="c_HeaderContent"/>
+                                                                <Binding ElementName="popMore"></Binding>
+                                                            </MultiBinding>
+                                                        </MenuItem.CommandParameter>
+                                                        <MenuItem.ToolTip>
+                                                            <ToolTip Content="{DynamicResource DataCollectWnd.xaml_TiQuWenBenNeiRong}"/>
+                                                        </MenuItem.ToolTip>
+                                                    </MenuItem>
+
+                                                    <MenuItem Name="btn_GetLink" Header="{DynamicResource DataCollectWnd.xaml_TiQuLianJieDiZhi}" 
+                                                              Foreground="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.DataGridModel.CurrentColumnHrefType,Converter={StaticResource Bool2StateColorConverter},Mode=OneWay}"
+                                                              Style="{StaticResource MyMenuButtonStyleEx}" 
+                                                              Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.DataGridModel.GetLinkCommand}">
+                                                        <MenuItem.CommandParameter>
+                                                            <MultiBinding Converter="{StaticResource MultiValueConverterKey}">
+                                                                <Binding Path="Content" ElementName="c_HeaderContent"/>
+                                                                <Binding ElementName="popMore"></Binding>
+                                                            </MultiBinding>
+                                                        </MenuItem.CommandParameter>
+                                                        <MenuItem.ToolTip>
+                                                            <ToolTip Content="{DynamicResource DataCollectWnd.xaml_TiQuLianJieDiZhi}"/>
+                                                        </MenuItem.ToolTip>
+                                                    </MenuItem>
+
+                                                    <MenuItem Name="btn_GetImageSrc" Header="{DynamicResource DataCollectWnd.xaml_TiQuTuPianDiZhi}"
+                                                              Foreground="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.DataGridModel.CurrentColumnSrcType,Converter={StaticResource Bool2StateColorConverter},Mode=OneWay}"
+                                                              Style="{StaticResource MyMenuButtonStyleEx}"    
+                                                              Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.DataGridModel.GetImageSrcCommand}">
+                                                        <MenuItem.CommandParameter>
+                                                            <MultiBinding Converter="{StaticResource MultiValueConverterKey}">
+                                                                <Binding Path="Content" ElementName="c_HeaderContent"/>
+                                                                <Binding ElementName="popMore"></Binding>
+                                                            </MultiBinding>
+                                                        </MenuItem.CommandParameter>
+                                                        <MenuItem.ToolTip>
+                                                            <ToolTip Content="{DynamicResource DataCollectWnd.xaml_TiQuTuPianDiZhi}"/>
+                                                        </MenuItem.ToolTip>
+                                                    </MenuItem>
+
+                                                    <MenuItem Name="btn_EditRegular" Header="{DynamicResource DataCollectWnd.xaml_GeShiHuaNeiRong}" 
+                                                        Style="{StaticResource MyMenuButtonStyle}"
+                                                        Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.DataGridModel.EditRegularExpressionCommand}">
+                                                        <MenuItem.CommandParameter>
+                                                            <MultiBinding Converter="{StaticResource MultiValueConverterKey}">
+                                                                <Binding Path="Content" ElementName="c_HeaderContent"/>
+                                                                <Binding ElementName="popMore"></Binding>
+                                                            </MultiBinding>
+                                                        </MenuItem.CommandParameter>
+                                                        <MenuItem.ToolTip>
+                                                            <ToolTip Content="{DynamicResource DataCollectWnd.xaml_GeShiHuaNeiRong}"/>
+                                                        </MenuItem.ToolTip>
+                                                    </MenuItem>
+
+                                                    <Separator Background="#D9DDE6" Height="1" Margin="16,0,16,0"/>
+
+                                                    <MenuItem Name="btn_MoveColumnForward" Header="{DynamicResource DataCollectWnd.xaml_QianYiYiLie}" 
+                                          Style="{StaticResource MyMenuButtonStyle}" Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.DataGridModel.MoveForewardCommand}">
+                                                        <MenuItem.CommandParameter>
+                                                            <MultiBinding Converter="{StaticResource MultiValueConverterKey}">
+                                                                <Binding Path="Content" ElementName="c_HeaderContent"/>
+                                                                <Binding ElementName="popMore"></Binding>
+                                                            </MultiBinding>
+                                                        </MenuItem.CommandParameter>
+                                                        <MenuItem.ToolTip>
+                                                            <ToolTip Content="{DynamicResource DataCollectWnd.xaml_QianYiYiLie}"/>
+                                                        </MenuItem.ToolTip>
+                                                    </MenuItem>
+
+                                                    <MenuItem Name="btn_MoveColumnBack" Header="{DynamicResource DataCollectWnd.xaml_HouYiYiLie}"
+                                                      Style="{StaticResource MyMenuButtonStyle}"
+                                                              Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.DataGridModel.MoveBackwardCommand}">
+                                                        <MenuItem.CommandParameter>
+                                                            <MultiBinding Converter="{StaticResource MultiValueConverterKey}">
+                                                                <Binding Path="Content" ElementName="c_HeaderContent"/>
+                                                                <Binding ElementName="popMore"></Binding>
+                                                            </MultiBinding>
+                                                        </MenuItem.CommandParameter>
+                                                        <MenuItem.ToolTip>
+                                                            <ToolTip Content="{DynamicResource DataCollectWnd.xaml_HouYiYiLie}"/>
+                                                        </MenuItem.ToolTip>
+                                                    </MenuItem>
+
+                                                    <MenuItem Name="btn_DeleteColumn" Header="{DynamicResource DataCollectWnd.xaml_ShanChuLie}" 
+                                          Style="{StaticResource MyLastMenuButtonStyle}" 
+                                          Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.DataGridModel.DeleteColumnCommand}">
+                                                        <MenuItem.CommandParameter>
+                                                            <MultiBinding Converter="{StaticResource MultiValueConverterKey}">
+                                                                <Binding Path="Content" ElementName="c_HeaderContent"/>
+                                                                <Binding ElementName="popMore"></Binding>
+                                                                <Binding ElementName="StaffAdminView"></Binding>
+                                                                <Binding ElementName="HeaderGrid"></Binding>
+                                                            </MultiBinding>
+                                                        </MenuItem.CommandParameter>
+                                                        <MenuItem.ToolTip>
+                                                            <ToolTip Content="{DynamicResource DataCollectWnd.xaml_ShanChuLie}"/>
+                                                        </MenuItem.ToolTip>
+                                                    </MenuItem>
+
+                                                </StackPanel>
+                                            </Grid>
+                                        </Border>
+                                    </Popup>
+
+                                    <Grid.Triggers>
+                                        
+                                        <EventTrigger RoutedEvent="ToggleButton.Click" SourceName="btnMore">
+                                            <BeginStoryboard Name="FocusTrueStoryboard">
+                                                <Storyboard >
+                                                    <BooleanAnimationUsingKeyFrames
+                        Storyboard.TargetName="popMore"
+                        Storyboard.TargetProperty="(Popup.IsOpen)">
+                                                        <DiscreteBooleanKeyFrame
+                            KeyTime="00:00:00"
+                            Value="True" />
+                                                    </BooleanAnimationUsingKeyFrames>
+
+                                                    <!--<DoubleAnimation Storyboard.TargetName="popMore"
+                             Storyboard.TargetProperty="(Popup.Opacity)"
+                            From="0" To="1"
+                            BeginTime="00:00:00"
+                            Duration="00:00:10">
+                                                    </DoubleAnimation>-->
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+
+                                        <EventTrigger RoutedEvent="MenuItem.Click" SourceName="btn_GetContentText">
+                                            <BeginStoryboard>
+                                                <Storyboard >
+                                                    <BooleanAnimationUsingKeyFrames
+                        Storyboard.TargetName="popMore"
+                        Storyboard.TargetProperty="(Popup.IsOpen)">
+                                                        <DiscreteBooleanKeyFrame
+                            KeyTime="00:00:00"
+                            Value="False" />
+                                                    </BooleanAnimationUsingKeyFrames>
+                                                   
+                                                   
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+
+                                        <EventTrigger RoutedEvent="MenuItem.Click" SourceName="btn_GetLink">
+                                            <BeginStoryboard>
+                                                <Storyboard >
+                                                    <BooleanAnimationUsingKeyFrames
+                        Storyboard.TargetName="popMore"
+                        Storyboard.TargetProperty="(Popup.IsOpen)">
+                                                        <DiscreteBooleanKeyFrame
+                            KeyTime="00:00:00"
+                            Value="False" />
+                                                    </BooleanAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+
+                                        <EventTrigger RoutedEvent="MenuItem.Click" SourceName="btn_GetImageSrc">
+                                            <BeginStoryboard>
+                                                <Storyboard >
+                                                    <BooleanAnimationUsingKeyFrames
+                        Storyboard.TargetName="popMore"
+                        Storyboard.TargetProperty="(Popup.IsOpen)">
+                                                        <DiscreteBooleanKeyFrame
+                            KeyTime="00:00:00"
+                            Value="False" />
+                                                    </BooleanAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+
+                                        <EventTrigger RoutedEvent="MenuItem.Click" SourceName="btn_EditColumn">
+                                            <BeginStoryboard>
+                                                <Storyboard >
+                                                    <BooleanAnimationUsingKeyFrames
+                                                    Storyboard.TargetName="popMore"
+                                                    Storyboard.TargetProperty="(Popup.IsOpen)">
+                                                        <DiscreteBooleanKeyFrame
+                                                     KeyTime="00:00:00"
+                                                     Value="False" />
+                                                    </BooleanAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+
+                                        <EventTrigger RoutedEvent="MenuItem.Click" SourceName="btn_EditColumeName">
+                                            <BeginStoryboard>
+                                                <Storyboard >
+                                                    <BooleanAnimationUsingKeyFrames
+                        Storyboard.TargetName="popMore"
+                        Storyboard.TargetProperty="(Popup.IsOpen)">
+                                                        <DiscreteBooleanKeyFrame
+                            KeyTime="00:00:00"
+                            Value="False" />
+                                                    </BooleanAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+
+                                        <EventTrigger RoutedEvent="MenuItem.Click" SourceName="btn_CaptureSimElement">
+                                            <BeginStoryboard>
+                                                <Storyboard >
+                                                    <BooleanAnimationUsingKeyFrames
+                        Storyboard.TargetName="popMore"
+                        Storyboard.TargetProperty="(Popup.IsOpen)">
+                                                        <DiscreteBooleanKeyFrame
+                            KeyTime="00:00:00"
+                            Value="False" />
+                                                    </BooleanAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+
+                                        <EventTrigger RoutedEvent="MenuItem.Click" SourceName="btn_MoveColumnForward">
+                                            <BeginStoryboard>
+                                                <Storyboard >
+                                                    <BooleanAnimationUsingKeyFrames
+                        Storyboard.TargetName="popMore"
+                        Storyboard.TargetProperty="(Popup.IsOpen)">
+                                                        <DiscreteBooleanKeyFrame
+                            KeyTime="00:00:00"
+                            Value="False" />
+                                                    </BooleanAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+
+                                        <EventTrigger RoutedEvent="MenuItem.Click" SourceName="btn_MoveColumnBack">
+                                            <BeginStoryboard>
+                                                <Storyboard >
+                                                    <BooleanAnimationUsingKeyFrames
+                        Storyboard.TargetName="popMore"
+                        Storyboard.TargetProperty="(Popup.IsOpen)">
+                                                        <DiscreteBooleanKeyFrame
+                            KeyTime="00:00:00"
+                            Value="False" />
+                                                    </BooleanAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+
+                                        <EventTrigger RoutedEvent="MenuItem.Click" SourceName="btn_DeleteColumn">
+                                            <BeginStoryboard>
+                                                <Storyboard >
+                                                    <BooleanAnimationUsingKeyFrames
+                        Storyboard.TargetName="popMore"
+                        Storyboard.TargetProperty="(Popup.IsOpen)">
+                                                        <DiscreteBooleanKeyFrame
+                            KeyTime="00:00:00"
+                            Value="False" />
+                                                    </BooleanAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                    </Grid.Triggers>
+                                </Grid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="MyDataGridColumnHeaderStyleForCommonTable" TargetType="DataGridColumnHeader">
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="BorderThickness" Value="0"></Setter>
+                <Setter Property="BorderBrush">
+                    <Setter.Value>
+                        <SolidColorBrush Color="#D9DDE6" Opacity="1"></SolidColorBrush>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="#F1F4F7"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+                            <Border BorderBrush="#D9DDE6" Background="#F1F4F7" BorderThickness="0">
+                                <Grid Name="CommonTableHeaderGrid" Height="26" Margin="0,0,0,0"  HorizontalAlignment="Stretch" Background="Transparent">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Themes:DataGridHeaderBorder Grid.Column="1"  BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0,0,1,1"  Background="{TemplateBinding Background}" IsHovered="{TemplateBinding IsMouseOver}" IsClickable="{TemplateBinding CanUserSort}" IsPressed="{TemplateBinding IsPressed}"  Padding="{TemplateBinding Padding}" SortDirection="{TemplateBinding SortDirection}" SeparatorBrush="{TemplateBinding SeparatorBrush}" SeparatorVisibility="{TemplateBinding SeparatorVisibility}">
+                                        <Grid>
+                                            <!--<Button x:Name="btnCommonTalbeMenu" ClickMode="Release" Background="Transparent"  IsHitTestVisible="True" Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.DataGridModel.CommonTable_OpenPopupCommand}">
+                                                <Button.Template>
+                                                    <ControlTemplate TargetType="Button">
+                                                        <Border BorderThickness="0" Background="Transparent">
+                                                            <Grid>
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="24"/>
+                                                                    <ColumnDefinition Width="*"/>
+                                                                </Grid.ColumnDefinitions>
+                                                                <Border Grid.Column="0" Margin="5,0,5,0"  Background="Transparent" BorderThickness="0" Width="14" Height="14" CornerRadius="3" VerticalAlignment="Center">
+                                                                    <Path Data="{StaticResource SVG_EditOnHeader}"   HorizontalAlignment="Center" VerticalAlignment="Center"
+                                              Stretch="Uniform" Fill="#979797" Width="9" Height="9" RenderTransformOrigin="0.5,0.5" >
+                                                                    </Path>
+                                                                </Border>
+                                                                <TextBlock Padding="0,0,0,0" Grid.Column="1" FontSize="13"    VerticalAlignment="Center"  Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGridColumnHeader}, Path=Content}" TextTrimming="CharacterEllipsis"  Foreground="#505962"/>
+                                                            </Grid>
+                                                        </Border>
+                                                    </ControlTemplate>
+                                                </Button.Template>
+                                                <Button.CommandParameter>
+                                                    <Binding Path="Content" ElementName="cCommonTalbe_HeaderContent"/>
+                                                </Button.CommandParameter>
+                                            </Button>-->
+
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="24"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <Button x:Name="btnCommonTalbeMenu" Background="Transparent"  IsHitTestVisible="True" Cursor="Hand" Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.DataGridModel.CommonTable_OpenPopupCommand}" ToolTipService.InitialShowDelay="200">
+                                                    <Button.Template>
+                                                        <ControlTemplate TargetType="Button">
+                                                            <Border BorderThickness="0" Background="Transparent">
+                                                                <Border Grid.Column="0" Margin="5,0,5,0"  Background="Transparent" BorderThickness="0" Width="14" Height="14" CornerRadius="3" VerticalAlignment="Center">
+                                                                    <Path Data="{StaticResource SVG_EditOnHeader}"   HorizontalAlignment="Center" VerticalAlignment="Center"
+                                              Stretch="Uniform" Fill="#979797" Width="9" Height="9" RenderTransformOrigin="0.5,0.5" >
+                                                                    </Path>
+                                                                </Border>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Button.Template>
+                                                    <Button.CommandParameter>
+                                                        <Binding Path="Content" ElementName="cCommonTalbe_HeaderContent"/>
+                                                    </Button.CommandParameter>
+                                                    <Button.ToolTip>
+                                                        <ToolTip Style="{StaticResource ToolTipStyleForCellContent}"
+                                                         Content="{DynamicResource DataCollectWnd.xaml_BiaoTouZhongMingMing}"
+			                                             Placement="Center" 
+                                                         VerticalOffset="-23"/>
+                                                    </Button.ToolTip>
+                                                </Button>
+
+                                                <TextBlock Padding="0,0,0,0" Grid.Column="1" FontSize="13"    VerticalAlignment="Center"  Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGridColumnHeader}, Path=Content}" TextTrimming="CharacterEllipsis"  Foreground="#505962"/>
+                                            </Grid>
+                                            <ContentPresenter Visibility="Collapsed" Name="cCommonTalbe_HeaderContent"  Grid.Column="0" Margin="10,0,0,0" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                        </Grid>
+                                    </Themes:DataGridHeaderBorder>
+
+                                    <!--<Button Name="btnMore"  HorizontalAlignment="Right" Grid.Column="2"   Style="{StaticResource MyButtonStyle}"/>-->
+
+                                    <Thumb x:Name="CommonTalbePART_LeftHeaderGripper" Grid.Column="0"  HorizontalAlignment="Left" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                                    <Thumb x:Name="CommonTalbePART_RightHeaderGripper" Grid.Column="2" HorizontalAlignment="Right" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+
+                                    <!--IsOpen="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.PopupIsOpen, Mode=TwoWay}"-->
+                                    <!--<Popup x:Name="CommonTalbePopupMenu" PlacementTarget="{Binding ElementName=btnCommonTalbeMenu}" PopupAnimation="Slide" IsOpen="False"  StaysOpen="False"  Placement="Bottom"  AllowsTransparency="True" VerticalOffset="-1" >
+                                        <Border  Width="140" Margin="4" CornerRadius="4" Background="White">
+                                            <Border.Effect>
+                                                <DropShadowEffect BlurRadius="4" ShadowDepth="0" Color="#c0c0c0"/>
+                                            </Border.Effect>
+                                            <Grid >
+                                                <StackPanel HorizontalAlignment="Left"  Orientation="Vertical">
+                                                   
+                                                    <MenuItem Name="btnCommonTable_EditColumeName" Header="编辑表头"
+                                          Style="{StaticResource MyFirstMenuButtonStyle}" 
+                                                        Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}, Path=DataContext.DataGridModel.CommonTable_EditColumnHeaderCommand}">
+                                                        <MenuItem.CommandParameter>
+                                                            <MultiBinding Converter="{StaticResource MultiValueConverterKey}">
+                                                                <Binding Path="Content" ElementName="cCommonTalbe_HeaderContent"/>
+                                                                <Binding ElementName="CommonTalbePopupMenu"></Binding>
+                                                                <Binding ElementName="dg_CaptureTable"></Binding>
+                                                                <Binding ElementName="CommonTableHeaderGrid"></Binding>
+                                                            </MultiBinding>
+                                                        </MenuItem.CommandParameter>
+                                                    </MenuItem>
+
+                                                </StackPanel>
+                                            </Grid>
+                                        </Border>
+                                    </Popup>-->
+
+                                    <!--<Grid.Triggers>
+
+                                        <EventTrigger RoutedEvent="ToggleButton.Click" SourceName="btnCommonTalbeMenu">
+                                            <BeginStoryboard Name="FocusTrueStoryboard">
+                                                <Storyboard >
+                                                    <BooleanAnimationUsingKeyFrames
+                        Storyboard.TargetName="CommonTalbePopupMenu"
+                        Storyboard.TargetProperty="(Popup.IsOpen)">
+                                                        <DiscreteBooleanKeyFrame
+                            KeyTime="00:00:00"
+                            Value="True" />
+                                                    </BooleanAnimationUsingKeyFrames>
+
+                                                    --><!--<DoubleAnimation Storyboard.TargetName="popMore"
+                             Storyboard.TargetProperty="(Popup.Opacity)"
+                            From="0" To="1"
+                            BeginTime="00:00:00"
+                            Duration="00:00:10">
+                                                    </DoubleAnimation>--><!--
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+
+
+                                        <EventTrigger RoutedEvent="MenuItem.Click" SourceName="btnCommonTable_EditColumeName">
+                                            <BeginStoryboard>
+                                                <Storyboard >
+                                                    <BooleanAnimationUsingKeyFrames
+                        Storyboard.TargetName="CommonTalbePopupMenu"
+                        Storyboard.TargetProperty="(Popup.IsOpen)">
+                                                        <DiscreteBooleanKeyFrame
+                            KeyTime="00:00:00"
+                            Value="False" />
+                                                    </BooleanAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                    </Grid.Triggers>-->
+                                </Grid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="MyDataGridRowStyle" TargetType="DataGridRow">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="Foreground" Value="#161923"/>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="LightGray"/>
+                    </Trigger>
+                    <Trigger Property="IsSelected" Value="True">
+                        <Setter Property="Background" Value="#F1F4F7"/>
+                        <Setter Property="Foreground" Value="#161923"/>
+                    </Trigger>
+                  
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="MyDataGridCellStyle" TargetType="DataGridCell" >
+                <!--文字居中-->
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type DataGridCell}">
+                            <Grid Background="{TemplateBinding Background}">
+                                <!--<ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center"/>-->
+                                <!--<TextBlock Margin="5,0,5,0" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Text="{Binding RelativeSource={RelativeSource TemplatedParent}, 
+                                  Path=Content.Text}" Foreground="#161923" FontSize="12" 505962 />-->
+                                <TextBlock Margin="5,0,5,0" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Text="{Binding RelativeSource={RelativeSource TemplatedParent}, 
+                                  Path=Content.Text}" Foreground="#505962" FontSize="12" ToolTipService.InitialShowDelay="200" >
+                                    <TextBlock.ToolTip>
+                                        <ToolTip Style="{StaticResource ToolTipStyleForCellContent}"
+                                                Content="{Binding RelativeSource={RelativeSource TemplatedParent},Path=Content.Text}"
+                                                 Visibility="{Binding RelativeSource={RelativeSource Self}, Path=PlacementTarget, Converter={StaticResource TrimmedTextBlockVisibilityConverter}}"
+			                     Placement="Center" 
+                                 VerticalOffset="-23"/>
+                                    </TextBlock.ToolTip>
+                                </TextBlock>
+                            </Grid>
+                        </ControlTemplate>
+
+                        <!--<DataTemplate>
+                            --><!--设置当单元格内容超过最大长度时，显示...--><!--
+                            <TextBlock Text="{Binding EditTime}" TextWrapping="Wrap"  Height="auto" TextTrimming="CharacterEllipsis"/>
+                        </DataTemplate>-->
+                    </Setter.Value>
+                </Setter>
+                <!--被选中时，背景色改变-->
+                <Style.Triggers>
+                    <Trigger Property="DataGridCell.IsSelected" Value="True">
+                        <Setter Property="Background" Value="#F1F4F7" />
+                        <Setter Property="Foreground" Value="#161923" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="MyImageButtonForReCapture" TargetType="{x:Type Button}">
+                <Setter Property="BorderThickness" Value="0"></Setter>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border x:Name="ContentContainer" Width="20" Height="20">
+                                <Border.Background >
+                                    <ImageBrush ImageSource="../Assets/Images/SD_CaptureElement.png" RenderOptions.BitmapScalingMode="HighQuality" Stretch="Fill"/>
+                                </Border.Background>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger  Property="IsMouseOver"  Value="True">
+                                    <Setter Property="Background" TargetName="ContentContainer">
+                                        <Setter.Value>
+                                            <ImageBrush ImageSource="../Assets/Images/captureElement.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+
+                                <Trigger  Property="IsMouseOver"  Value="False">
+                                    <Setter Property="Background" TargetName="ContentContainer">
+                                        <Setter.Value>
+                                            <ImageBrush ImageSource="../Assets/Images/SD_CaptureElement.png"  RenderOptions.BitmapScalingMode="HighQuality"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="MyImageButtonForReCaptureEx" TargetType="{x:Type Button}">
+                <Setter Property="BorderThickness" Value="0"></Setter>
+                <Setter Property="ClickMode" Value="Release"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="20" Height="20">
+                                <svgc:SvgViewbox Height="16" Width="16" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" Source="../Assets/SvgIcon/Capture.svg"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border  Width="20" Height="20">
+                                        <svgc:SvgViewbox Height="16" Width="16" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" Source="../Assets/SvgIcon/CaptureActive.svg"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Trigger>
+                    <Trigger Property="IsMouseOver" Value="False">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Width="20" Height="20">
+                                        <svgc:SvgViewbox Height="16" Width="15" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" Source="../Assets/SvgIcon/Capture.svg"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="MyImageButtonForEdit" TargetType="{x:Type Button}">
+                <Setter Property="BorderThickness" Value="0"></Setter>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border x:Name="ContentContainer" Width="20" Height="20">
+                                <Border.Background >
+                                    <ImageBrush ImageSource="../Assets/Images/SD_Edit.png" RenderOptions.BitmapScalingMode="HighQuality" Stretch="Fill"/>
+                                </Border.Background>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger  Property="IsMouseOver"  Value="True">
+                                    <Setter Property="Background" TargetName="ContentContainer">
+                                        <Setter.Value>
+                                            <ImageBrush ImageSource="../Assets/Images/EditHover.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+
+                                <Trigger  Property="IsMouseOver"  Value="False">
+                                    <Setter Property="Background" TargetName="ContentContainer">
+                                        <Setter.Value>
+                                            <ImageBrush ImageSource="../Assets/Images/SD_Edit.png"  RenderOptions.BitmapScalingMode="HighQuality"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="MyImageButtonForEditEx" TargetType="{x:Type Button}">
+                <Setter Property="BorderThickness" Value="0"></Setter>
+                <Setter Property="ClickMode" Value="Release"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="20" Height="20">
+                                <svgc:SvgViewbox Height="16" Width="16" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" Source="../Assets/SvgIcon/EditWhite.svg"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border  Width="20" Height="20">
+                                        <svgc:SvgViewbox Height="16" Width="16" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" Source="../Assets/SvgIcon/EditActive.svg"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Trigger>
+                    <Trigger Property="IsMouseOver" Value="False">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Width="20" Height="20">
+                                        <svgc:SvgViewbox Height="16" Width="15" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" Source="../Assets/SvgIcon/EditWhite.svg"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="MyImageButtonForDeleteEx" TargetType="{x:Type Button}">
+                <Setter Property="BorderThickness" Value="0"></Setter>
+                <Setter Property="ClickMode" Value="Release"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="20" Height="20">
+                                <svgc:SvgViewbox Height="16" Width="16" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" Source="../Assets/SvgIcon/DeleteWhite.svg"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border  Width="20" Height="20">
+                                        <svgc:SvgViewbox Height="16" Width="16" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" Source="../Assets/SvgIcon/DeleteActive.svg"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Trigger>
+                    <Trigger Property="IsMouseOver" Value="False">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Width="20" Height="20">
+                                        <svgc:SvgViewbox Height="16" Width="15" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" Source="../Assets/SvgIcon/DeleteWhite.svg"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard Storyboard="{StaticResource ShowWindow}"/>
+        </EventTrigger>
+    </Window.Triggers>
+
+
+    <Grid x:Name="BackGrid">
+        <!--<Border x:Name="GlobalBorder" Margin="5" CornerRadius="4" Background="White" BorderThickness="0">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="4" ShadowDepth="0"/>
+            </Border.Effect>
+        </Border>-->
+
+        <Border x:Name="GlobalBorder" Margin="5" CornerRadius="4" Background="White" SnapsToDevicePixels="True" RenderOptions.EdgeMode="Aliased">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="6" ShadowDepth="0"/>
+            </Border.Effect>
+            <Border.OpacityMask>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <Border Background="Black"
+                                        SnapsToDevicePixels="True"
+                                        CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}"
+                                        Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}"
+                                        Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}" />
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.OpacityMask>
+            <AdornerDecorator>
+                <ContentPresenter />
+            </AdornerDecorator>
+        </Border>
+
+        <Border Margin="5" CornerRadius="5" Background="White" BorderThickness="0">
+
+            <Grid x:Name="MainGrid"  RenderTransformOrigin="0.5,0.5">
+                <Grid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform  ScaleX="1" ScaleY="1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Grid.RenderTransform>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="36"/>
+                    <RowDefinition Height="*"/>
+                    <!--<RowDefinition Height="28"/>-->
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Background="Transparent"  MouseLeftButtonDown="Grid_MouseLeftButtonDown" IsHitTestVisible="True" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="150"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                        <Image Width="16" Height="16" Margin="16,10,0,10" Source="../Assets/Images/TitleIcon.png"/>
+                        <TextBlock Text="{DynamicResource DataCollectWnd.xaml_ShuJuCaiJi}" Margin="5,0,0,0" Style="{StaticResource CommonTextBlock}"/>
+                    </StackPanel>
+
+                    <!--窗体右上侧操作按钮-->
+                    <StackPanel Grid.Column="2" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Left" IsHitTestVisible="True">
+                        <Border Visibility="Collapsed" Width="20" Height="20" Margin="0,0,0,0"  HorizontalAlignment="Right" Style="{StaticResource ImageBorderStyle}" WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand" ToolTipService.InitialShowDelay="200">
+                            <Border.ToolTip>
+                                <ToolTip Style="{StaticResource ToolTipStyleForCellContent}"
+			                     Content="{DynamicResource DataCollectWnd.xaml_BangZhu}"
+			                     Placement="Center" 
+                                 VerticalOffset="-23"/>
+                            </Border.ToolTip>
+                            <svgc:SvgViewbox  HorizontalAlignment="Center" VerticalAlignment="Center" Width="14" Height="14"  Source="../Assets/SvgIcon/Helper.svg" Cursor="Hand"/>
+                            <!--<Image x:Name="img_MaxIcon" Width="14" Height="14" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="../Assets/Images/maxsize.png" Cursor="Hand"/>-->
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="MouseLeftButtonDown">
+                                    <i:InvokeCommandAction Command="{Binding HelperCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </Border>
+
+                        <Border Width="20" Height="20" Margin="10,0,0,0" x:Name="btn_NormalSize" HorizontalAlignment="Right" Style="{StaticResource ImageBorderStyle}" WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand" ToolTipService.InitialShowDelay="200">
+                            <Border.ToolTip>
+                                <ToolTip Style="{StaticResource ToolTipStyleForCellContent}"
+			                     Content="{DynamicResource DataCollectWnd.xaml_WeiZhiHaiYuan}"
+			                     Placement="Center" 
+                                 VerticalOffset="-23"/>
+                            </Border.ToolTip>
+
+                            <!--<Image x:Name="img_NormalStateImg" Width="14" Height="14" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="../Assets/Images/normalWndB.png">
+                    </Image>-->
+                            <svgc:SvgViewbox Name="img_NormalStateImg" HorizontalAlignment="Center" VerticalAlignment="Center" Width="14" Height="14"  Source="../Assets/SvgIcon/WindowInitActive.svg" Cursor="Hand"/>
+                            <!--<Image Width="14" Height="14" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="{Binding NormalStateImg}">
+                    </Image>-->
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="MouseLeftButtonDown">
+                                    <i:InvokeCommandAction Command="{Binding InitWndStateCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+
+                        </Border>
+
+                        <Border Width="20" Height="20" Margin="10,0,0,0" x:Name="btn_PopButtom"  HorizontalAlignment="Right" Style="{StaticResource ImageBorderStyle}" WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand" ToolTipService.InitialShowDelay="200">
+                            <Border.ToolTip>
+                                <ToolTip Style="{StaticResource ToolTipStyleForCellContent}"
+			                     Content="{DynamicResource DataCollectWnd.xaml_DiBuGuDing}"
+			                     Placement="Center"
+                                 VerticalOffset="-23"/>
+                            </Border.ToolTip>
+                            <svgc:SvgViewbox Name="img_BottonPanelImg" HorizontalAlignment="Center" VerticalAlignment="Center" Width="14" Height="14"  Source="../Assets/SvgIcon/WindowButtom.svg" Cursor="Hand"/>
+                            <!--<Image x:Name="img_BottonPanelImg" Width="14" Height="14" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="../Assets/Images/popButtom.png" />-->
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="MouseLeftButtonDown">
+                                    <i:InvokeCommandAction Command="{Binding ButtomWndStateCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </Border>
+
+                        <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" Margin="8,5,0,5" BorderBrush="#D8D8D8" BorderThickness="0.5"/>
+                        <Border Width="20" Height="20" Margin="8,0,0,0" x:Name="btn_Maxsize"  HorizontalAlignment="Right" Style="{StaticResource ImageBorderStyle}" WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand" ToolTipService.InitialShowDelay="200">
+                            <Border.ToolTip>
+                                <ToolTip x:Name="tooltip_MaxSize" Style="{StaticResource ToolTipStyleForCellContent}"
+			                     Content="{DynamicResource Title.xaml_ZuiDaHua}"
+			                     Placement="Center"
+                                 VerticalOffset="-23"/>
+                            </Border.ToolTip>
+                            <svgc:SvgViewbox Name="img_MaxIcon" HorizontalAlignment="Center" VerticalAlignment="Center" Width="14" Height="14"  Source="../Assets/SvgIcon/WindowMaxize.svg" Cursor="Hand"/>
+                            <!--<Image x:Name="img_MaxIcon" Width="14" Height="14" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="../Assets/Images/maxsize.png" Cursor="Hand"/>-->
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="MouseLeftButtonDown">
+                                    <i:InvokeCommandAction Command="{Binding MaxOrNormalWndStateCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </Border>
+                        <Border Width="20" Height="20" Margin="8,0,0,0" x:Name="btn_Close"  HorizontalAlignment="Right" Style="{StaticResource ImageBorderStyle}" WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand" MouseLeftButtonDown="btn_Close_Click">
+                            <!--<Image Width="14" Height="14" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="../Assets/Images/close.png" Cursor="Hand"/>-->
+                            <svgc:SvgViewbox  HorizontalAlignment="Center" VerticalAlignment="Center" Width="14" Height="14"  Source="../Assets/SvgIcon/Close.svg" Cursor="Hand"/>
+                        </Border>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="1" Background="Transparent">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="46"/>
+                        <RowDefinition Height="2"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" IsHitTestVisible="True">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="180"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                            <TextBlock Text="{DynamicResource DataCollectWnd.xaml_CaiJi}" Margin="20,0,0,0" Style="{StaticResource ContentCommonTextBlock}"/>
+                            <Border x:Name="Border_PageCapture" Width="128" Height="28" CornerRadius="4" BorderThickness="1" Margin="5" IsHitTestVisible="True">
+                                <Border.Style>
+                                    <Style TargetType="Border">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="False">
+                                                <Setter Property="BorderBrush" Value="#D9E0E8"/>
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="BorderBrush" Value="#FF8900"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+                                <Grid Width="120" Height="28" VerticalAlignment="Center">
+                                    <Button x:Name="Btn_ArrowDown" Height="28" Background="White" Cursor="Hand">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border CornerRadius="4" BorderThickness="0" Background="Transparent">
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="*"/>
+                                                            <ColumnDefinition Width="14"/>
+                                                            <ColumnDefinition Width="4"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <TextBlock  Text="{Binding CapturePageModel.CapturePageInfoText}" Grid.Column="0" Margin="6,0,0,0"  VerticalAlignment="Center" TextTrimming="CharacterEllipsis"  Style="{StaticResource SpecialCommonTextBlock}"/>
+                                                        <Path Grid.Column="1" Data="{StaticResource SVG_ViewBoxArrowDown}" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                              Stretch="Uniform" Fill="#979797" Width="9" Height="9"  RenderTransformOrigin="0.5,0.5" >
+                                                        </Path>
+                                                        <!--<svgc:SvgViewbox  Stretch="Uniform" Width="9" Height="9" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Source="../Assets/SvgIcon/ArrowDown.svg"/>-->
+                                                    </Grid>
+                                                </Border>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="true">
+                                                        <Setter Property="Background" Value="Transparent" />
+                                                    </Trigger>
+                                                    <Trigger Property="IsMouseOver" Value="false">
+                                                        <Setter Property="Background" Value="Transparent" />
+                                                    </Trigger>
+                                                    <Trigger Property="IsPressed" Value="true">
+                                                        <Setter Property="Background" Value="Transparent" />
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+
+                                    <Popup x:Name="Pop_PageCapture" 
+                               Loaded="Pop_PageCapture_Loaded"
+                               PlacementTarget="{Binding ElementName=Btn_ArrowDown}"
+                               PopupAnimation="Slide"
+                               StaysOpen="False"
+                               IsOpen="False"
+                               Placement="Bottom"
+                               AllowsTransparency="True"
+                               VerticalOffset="4"
+                               HorizontalOffset="-3">
+
+                                        <i:Interaction.Triggers>
+                                            <i:EventTrigger EventName="IsVisibleChanged">
+                                                <i:InvokeCommandAction Command="{Binding CapturePageModel.IsVisibleChangedCommand}" 
+                                                           CommandParameter="{Binding Path=IsOpen,ElementName=Pop_PageCapture}" />
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
+
+                                        <Border x:Name="border_CaptureTurnPageBorder" Margin="4" Background="White" MinHeight="44" Width="238" CornerRadius="4">
+                                            <Border.Effect>
+                                                <!--<DropShadowEffect ShadowDepth="0" Color="#c0c0c0" BlurRadius="6" B7B7B7/>-->
+                                                <DropShadowEffect BlurRadius="4" ShadowDepth="0" />
+                                            </Border.Effect>
+                                            <Grid Height="auto">
+                                                <StackPanel Orientation="Vertical">
+                                                    <StackPanel Height="44" Orientation="Horizontal" VerticalAlignment="Center">
+                                                        <RadioButton Content="{DynamicResource Suoyouye}" Margin="8,0,0,0" MaxWidth="70"  Style="{StaticResource RadioCommonTextBlock}" VerticalContentAlignment="Center" IsChecked="{Binding CapturePageModel.IsCheckedAllPage, Mode=TwoWay}" Command="{Binding CapturePageModel.AllPageRadioClickCommand}" Template="{DynamicResource RadioButtonControlTemplate}"/>
+                                                        <RadioButton Content="{DynamicResource Dangqianye}" Margin="8,0,0,0"  MaxWidth="70" Style="{StaticResource RadioCommonTextBlock}" VerticalContentAlignment="Center" IsChecked="{Binding CapturePageModel.IsCheckedCurrentPage, Mode=TwoWay}" Command="{Binding CapturePageModel.CurrentPageRadioClickCommand}" Template="{DynamicResource RadioButtonControlTemplate}"/>
+                                                        <RadioButton Content="{DynamicResource DataCollectWnd.xaml_CaiJiYeShu}"  MaxWidth="75" Margin="8,0,0,0" Style="{StaticResource RadioCommonTextBlock}" VerticalContentAlignment="Center" IsChecked="{Binding CapturePageModel.IsCheckedCustomPage, Mode=TwoWay}" Command="{Binding CapturePageModel.CustomPageRadioClickCommand}" Template="{DynamicResource RadioButtonControlTemplate}"/>
+                                                    </StackPanel>
+                                                    <Separator BorderBrush="#F1F4F7" BorderThickness="0.3" Margin="10,0,10,0" Visibility="{Binding CapturePageModel.SeparatorVisibility}"/>
+
+                                                    <customControls:Numberic Visibility="{Binding CapturePageModel.PageCountVisibility}" Margin="0,12,0,0" Width="218" Height="35"  Padding="8,0,0,0" VerticalAlignment="Center" VerticalContentAlignment="Center" MinValue="0" MaxValue="10000" 
+                                                                 Value="{Binding CapturePageModel.PageCount,Mode=TwoWay}" Increment="1"   Foreground="#161923"/>
+
+                                                    <Grid Visibility="{Binding CapturePageModel.PageCapturePanelVisibility}">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="10"/>
+                                                            <RowDefinition Height="35"/>
+                                                            <RowDefinition Height="10"/>
+                                                            <RowDefinition Height="56"/>
+                                                            <RowDefinition Height="12"/>
+                                                        </Grid.RowDefinitions>
+                                                        <StackPanel Grid.Row="1" Width="238" Orientation="Horizontal" VerticalAlignment="Center">
+                                                            <TextBlock Text="{DynamicResource DataCollectWnd.xaml_MeiYeYanChiHaoMiao}" Margin="10,0,0,0" Style="{StaticResource ContentCommonTextBlock}" FontSize="12" />
+                                                            <customControls:Numberic Width="133" Height="35" MinValue="0" MaxValue="3600000" 
+                                                                         Value="{Binding CapturePageModel.PerPageDelayTime,Mode=TwoWay}" Increment="1" Margin="5,0,8,0" Padding="8,0,0,0" VerticalAlignment="Center" VerticalContentAlignment="Center"  Foreground="#161923"/>
+                                                        </StackPanel>
+
+                                                        <Border x:Name="Border_CaptureOperation" MouseEnter="Border_CaptureOperation_MouseEnter"  MouseLeave="Border_CaptureOperation_MouseLeave" Grid.Row="3" Width="218" Height="56" Background="#F1F4F7" BorderBrush="#D9DDE6" BorderThickness="1" CornerRadius="4">
+                                                            <Grid VerticalAlignment="Center" HorizontalAlignment="Center" >
+
+                                                                <Button  Width="112" Height="22" x:Name="btn_OriginCaptureTurnPageButton" 
+                                                             Visibility="{Binding CapturePageModel.OriginCaptureTurnPageButtonVisibility}" 
+                            VerticalAlignment="Center"  HorizontalAlignment="Center"  WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand"  
+                              Command="{Binding CapturePageModel.OriginCaptureTurnPageButtonCommand}">
+
+                                                                    <Button.Style>
+                                                                        <Style TargetType="Button">
+                                                                            <Style.Setters>
+                                                                                <Setter Property="ClickMode" Value="Release"/>
+                                                                                <Setter Property="Cursor" Value="Hand"/>
+                                                                                <Setter Property="Template">
+                                                                                    <Setter.Value>
+                                                                                        <ControlTemplate TargetType="Button">
+                                                                                            <Border  CornerRadius="14" Background="White" >
+                                                                                                <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                                                                    <Image  Name="img_OriginCaptureTurnPageButton" Width="13.3" Height="13.3" Margin="11,0,0,0" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="../Assets/Images/captureElement.png" />
+                                                                                                    <TextBlock Name="img_ClearListText" Text="{DynamicResource DataCollectWnd.xaml_ShiQuFanYeYuanSu}" Margin="2,0,0,0" Width="72" Height="16" FontSize="12" Foreground="#505962" Style="{StaticResource CommonTextBlock}"/>
+                                                                                                </StackPanel>
+                                                                                            </Border>
+                                                                                        </ControlTemplate>
+                                                                                    </Setter.Value>
+                                                                                </Setter>
+                                                                            </Style.Setters>
+
+                                                                        </Style>
+                                                                    </Button.Style>
+                                                                </Button>
+
+
+                                                                <Image x:Name="img_CapturedButtonImage" Panel.ZIndex="-1" Width="210" Height="48"  Visibility="{Binding CapturePageModel.ImageTurnPageButtonVisibility}"   Source="../Assets/Images/TurnPageDefultImg.png">
+                                                                </Image>
+
+                                                                <Border Name="border_EditPanel" Panel.ZIndex="1" IsHitTestVisible="True" Width="210" Height="48" Background="Gray" Opacity="0.8" 
+                                                            Visibility="{Binding CapturePageModel.EditPanelTurnPageButtonVisibility}" >
+                                                                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                                                        <Grid Width="120" Height="20">
+                                                                            <Grid.ColumnDefinitions>
+                                                                                <ColumnDefinition Width="*"/>
+                                                                                <ColumnDefinition Width="*"/>
+                                                                                <ColumnDefinition Width="*"/>
+                                                                            </Grid.ColumnDefinitions>
+                                                                            <Button Grid.Column="0" x:Name="img_ReCaptureTurnPageButton" Opacity="1" Style="{StaticResource MyImageButtonForReCapture}" Command="{Binding CapturePageModel.ReCaptureTurnPageButtonCommand}"/>
+
+                                                                            <Button Grid.Column="1" x:Name="img_EditCaptureTurnPageButtonSelector" Opacity="1" Style="{StaticResource MyImageButtonForEditEx}" Command="{Binding CapturePageModel.EditCaptureTurnPageButtonSelectorCommand}"/>
+
+                                                                            <Button Grid.Column="2" x:Name="img_DeleteCaptureTurnPageButtonSelector" Opacity="1" Style="{StaticResource MyImageButtonForDeleteEx}" Command="{Binding CapturePageModel.DeleteCaptureTurnPageButtonSelectorCommand}"/>
+
+                                                                            <!--<Image Grid.Column="2" x:Name="img_DeleteCaptureTurnPageButtonSelector" Opacity="1">
+                                                                        <i:Interaction.Triggers>
+                                                                            <i:EventTrigger EventName="MouseLeftButtonUp">
+                                                                                <i:InvokeCommandAction  Command="{Binding CapturePageModel.DeleteCaptureTurnPageButtonSelectorCommand}"/>
+                                                                            </i:EventTrigger>
+                                                                        </i:Interaction.Triggers>
+                                                                        <Image.Style>
+                                                                            <Style TargetType="Image">
+                                                                                <Style.Triggers>
+                                                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                                                        -->
+                                                                            <!--<svgc:SvgViewbox Height="12" Width="12" Source="../Assets/SvgIcon/Refresh.svg"/>-->
+                                                                            <!--
+                                                                                        <Setter Property="Source" Value="../Assets/Images/DeleteHover.png"/>
+                                                                                    </Trigger>
+                                                                                    <Trigger Property="IsMouseOver" Value="False">
+                                                                                        <Setter Property="Source" Value="../Assets/Images/SD_Delete.png"/>
+                                                                                    </Trigger>
+                                                                                </Style.Triggers>
+                                                                            </Style>
+                                                                        </Image.Style>
+                                                                    </Image>-->
+
+                                                                        </Grid>
+                                                                    </StackPanel>
+                                                                </Border>
+
+                                                            </Grid>
+                                                        </Border>
+                                                    </Grid>
+                                                </StackPanel>
+                                            </Grid>
+                                        </Border>
+                                    </Popup>
+
+                                    <Grid.Triggers>
+
+                                        <EventTrigger RoutedEvent="ToggleButton.Click" SourceName="Btn_ArrowDown">
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <BooleanAnimationUsingKeyFrames
+                         Storyboard.TargetName="Pop_PageCapture"
+                        Storyboard.TargetProperty="(Popup.IsOpen)">
+                                                        <DiscreteBooleanKeyFrame
+                            KeyTime="00:00:00"
+                            Value="True" />
+                                                    </BooleanAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+
+                                        <EventTrigger RoutedEvent="ToggleButton.Click" SourceName="btn_OriginCaptureTurnPageButton">
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <BooleanAnimationUsingKeyFrames
+                         Storyboard.TargetName="Pop_PageCapture"
+                        Storyboard.TargetProperty="(Popup.IsOpen)">
+                                                        <DiscreteBooleanKeyFrame
+                            KeyTime="00:00:00"
+                            Value="False" />
+                                                    </BooleanAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+
+                                        <EventTrigger RoutedEvent="ToggleButton.Click" SourceName="img_ReCaptureTurnPageButton">
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <BooleanAnimationUsingKeyFrames
+                                            Storyboard.TargetName="Pop_PageCapture"
+                                            Storyboard.TargetProperty="(Popup.IsOpen)">
+                                                        <DiscreteBooleanKeyFrame KeyTime="00:00:00" Value="False"/>
+                                                    </BooleanAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+
+                                        <EventTrigger RoutedEvent="ToggleButton.Click" SourceName="img_EditCaptureTurnPageButtonSelector">
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <BooleanAnimationUsingKeyFrames
+                                            Storyboard.TargetName="Pop_PageCapture"
+                                            Storyboard.TargetProperty="(Popup.IsOpen)">
+                                                        <DiscreteBooleanKeyFrame KeyTime="00:00:00" Value="False"/>
+                                                    </BooleanAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+
+
+                                    </Grid.Triggers>
+                                </Grid>
+                            </Border>
+
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal" IsHitTestVisible="True">
+
+                            <Button Visibility="Collapsed" Width="80" Height="24" x:Name="btn_ClearCurrentData" Margin="10,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right"  WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand"  
+                            Command="{Binding DataGridModel.EmptyDataGridCommand}">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Name="ButtonBorder"  CornerRadius="3"   BorderBrush="#C5C9D5" BorderThickness="1" Background="White" >
+                                            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,0,2,0">
+                                                <svgc:SvgViewbox Height="12" Width="12" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,2,0,0" Source="../Assets/SvgIcon/Delete.svg"/>
+                                                <!--<Image Name="img_ClearTableData" Width="13.3" Height="13.3" Margin="0,2,0,0" VerticalAlignment="Center" RenderOptions.BitmapScalingMode="HighQuality" Stretch="Fill"  UseLayoutRounding="True" Source="../Assets/Images/Delete.png" />-->
+                                                <TextBlock Name="tb_ClearTableData" Text="{DynamicResource DataCollectWnd.xaml_QingKongPeiZhi}" Margin="2,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="auto" Height="16" FontSize="13"  Style="{StaticResource ContentCommonTextBlock}"/>
+                                            </StackPanel>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="ButtonBorder" Property="Background" Value="#F1F4F7"/>
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver" Value="False">
+                                                <Setter  TargetName="ButtonBorder" Property="Background" Value="White"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                                <!--<Image Width="16" Height="16"  VerticalAlignment="Center" HorizontalAlignment="Center"  Source="pack://application:,,,/II.RPA.Plugin.GUI;component/Assets/Images/normalWnd.png"/>-->
+                                <!--<Button.Style>
+                            <Style TargetType="Button">
+                                <Style.Setters>
+                                    <Setter Property="ClickMode" Value="Release"/>
+                                    <Setter Property="Cursor" Value="Hand"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border  >
+                                                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                                        <Image Name="img_ClearTableData" Width="13.3" Height="13.3" Margin="0,2,0,0" VerticalAlignment="Center" RenderOptions.BitmapScalingMode="HighQuality" Stretch="Fill"  UseLayoutRounding="True" Source="../Assets/Images/Delete.png" />
+                                                        <TextBlock Name="tb_ClearTableData" Text="清空配置" Margin="2,0,0,0" VerticalAlignment="Center" Width="72" Height="16" FontSize="13"  Style="{StaticResource ContentCommonTextBlock}"/>
+                                                        -->
+                                <!--ContentCommonTextBlock-->
+                                <!--CommonTextBlock-->
+                                <!--
+                                                    </StackPanel>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style.Setters>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="False">
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="Button">
+                                                    <Border  >
+                                                        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                            <Image Name="img_ClearTableData" Width="13.3" Height="13.3" Margin="0,2,0,0" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="../Assets/Images/Delete.png" />
+                                                            <TextBlock Name="tb_ClearTableData" Text="清空配置" Margin="2,0,0,0" Width="72" Height="16" FontSize="13" Style="{StaticResource ContentCommonTextBlock}"/>
+                                                        </StackPanel>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Trigger>
+
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="Button">
+                                                    <Border  >
+                                                        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                            <Image Name="img_ClearTableData" Width="13.3" Height="13.3" Margin="0,2,0,0" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="../Assets/Images/DeleteHover.png" />
+                                                            <TextBlock Name="tb_ClearTableData" Text="清空配置" Margin="2,0,0,0" Width="72" Height="16" FontSize="13" Foreground="#FF8901" Style="{StaticResource ContentCommonTextBlock}"/>
+                                                        </StackPanel>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>-->
+                            </Button>
+
+                            <Button MinWidth="56" Height="28" x:Name="btn_Cancel" HorizontalAlignment="Right" Margin="0,6,10,6"   Cursor="Hand" Click="btn_Cancel_Click">
+                                <!--Command="{Binding CancelCommand}"-->
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Name="ButtonBorder" CornerRadius="3"  BorderBrush="#C5C9D5" BorderThickness="1" Background="White"  >
+                                            <TextBlock  Grid.Column="1" Text="{DynamicResource XMessageBox.xaml_QuXiao}" VerticalAlignment="Center" Style="{StaticResource ContentCommonTextBlock}"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="ButtonBorder" Property="Background" Value="#F1F4F7"/>
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver" Value="False">
+                                                <Setter  TargetName="ButtonBorder" Property="Background" Value="White"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+
+                            <Button Width="56" Height="28" x:Name="btn_Confirm" HorizontalAlignment="Right" Margin="0,6,20,6" BorderBrush="#ECEEF2" BorderThickness="0" Style="{StaticResource NoHoverButtonStyle}"  Cursor="Hand" Click="btn_Confirm_Click">
+                                <!--Command="{Binding ConfirmCommand}"-->
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Name="ButtonBorder" CornerRadius="3" BorderThickness="0"  Background="#FF8900"  >
+                                            <TextBlock  Text="{DynamicResource Queding}" VerticalAlignment="Center" Foreground="#FFFFFF" Style="{StaticResource ContentCommonTextBlock}"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="ButtonBorder" Property="Background" Value="#FF9810"/>
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver" Value="False">
+                                                <Setter  TargetName="ButtonBorder" Property="Background" Value="#FF8900"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+
+                        </StackPanel>
+                    </Grid>
+
+                    <!--<Separator Grid.Row="1" BorderBrush="#C5C9D5"  BorderThickness="0.3" Margin="5,0,5,0" UseLayoutRounding="False" SnapsToDevicePixels="False"/>-->
+                    <Border  Grid.Row="1"  Background="DarkGray"  Height="0.3" BorderThickness="0"  UseLayoutRounding="False" SnapsToDevicePixels="False"/>
+
+                    <!--列相似元素数据相关-->
+                    <Grid  Grid.Row="2" Visibility="{Binding DataGridModel.ColumnsDataVisibility}" IsHitTestVisible="True">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="36"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="56"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="250"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="200"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                                <TextBlock Text="{DynamicResource DataCollectWnd.xaml_DangQianYeYiCaiJi}" Margin="20,0,0,0" Foreground="#505962" Style="{StaticResource CommonTextBlock}"/>
+                                <TextBlock Text="{Binding CurrentMaxLineCount}" Margin="5,0,5,0" Foreground="#FF8900" Style="{StaticResource CommonTextBlock}"/>
+                                <TextBlock Text="{DynamicResource DataCollectWnd.xaml_TiaoShuJu}" Margin="0,0,0,0" Foreground="#505962" Style="{StaticResource CommonTextBlock}"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal" IsHitTestVisible="True">
+                                <Button Width="70" Height="20" Visibility="Collapsed" x:Name="btn_DataWrong" HorizontalAlignment="Right"   WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand" 
+                            Command="{Binding DataGridModel.DataVerifyCommand}">
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Style.Setters>
+                                                <Setter Property="ClickMode" Value="Release"/>
+                                                <Setter Property="Cursor" Value="Hand"/>
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="Button">
+                                                            <Border  >
+                                                                <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                                    <svgc:SvgViewbox Height="13" Width="13" Source="../Assets/SvgIcon/Helper.svg"/>
+                                                                    <!--<Image Name="img_DataWrong" Width="13.3" Height="13.3"  Source="../Assets/Images/Help.png" />-->
+                                                                    <TextBlock Name="img_DataWrongText" Text="{DynamicResource DataCollectWnd.xaml_ShuJuJiuCuo}" Margin="2,0,0,0" Width="72" Height="16" FontSize="12" Foreground="#505962" Style="{StaticResource CommonTextBlock}"/>
+                                                                </StackPanel>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style.Setters>
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="False">
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate TargetType="Button">
+                                                                <Border  >
+                                                                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                                        <svgc:SvgViewbox Height="13" Width="13" Source="../Assets/SvgIcon/Helper.svg"/>
+                                                                        <!--<Image Name="img_DataWrong" Width="13.3" Height="13.3" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="../Assets/Images/Help.png" />-->
+                                                                        <TextBlock Name="img_DataWrongText" Text="{DynamicResource DataCollectWnd.xaml_ShuJuJiuCuo}" Margin="2,0,0,0" Width="72" Height="16" FontSize="12" Foreground="#505962" Style="{StaticResource CommonTextBlock}"/>
+                                                                    </StackPanel>
+                                                                </Border>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </Trigger>
+
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate TargetType="Button">
+                                                                <Border  >
+                                                                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                                        <svgc:SvgViewbox Height="13" Width="13" Source="../Assets/SvgIcon/HelperActive.svg"/>
+                                                                        <!--<Image Name="img_DataWrong" Width="13.3" Height="13.3" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="../Assets/Images/HelpHover.png" />-->
+                                                                        <TextBlock Name="img_DataWrongText" Text="{DynamicResource DataCollectWnd.xaml_ShuJuJiuCuo}" Margin="2,0,0,0" Width="72" Height="16" FontSize="12" Foreground="#FF8901" Style="{StaticResource CommonTextBlock}"/>
+                                                                    </StackPanel>
+                                                                </Border>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+
+                                    </Button.Style>
+                                </Button>
+
+
+                                <Button Width="40" Height="20" x:Name="btn_RefreshData" Margin="0,0,12,0"  HorizontalAlignment="Right"  WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand"  
+                            Command="{Binding DataGridModel.RefreshDataGridCommand}">
+                                    <!--<Image Width="16" Height="16"  VerticalAlignment="Center" HorizontalAlignment="Center"  Source="pack://application:,,,/II.RPA.Plugin.GUI;component/Assets/Images/normalWnd.png"/>-->
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Style.Setters>
+                                                <Setter Property="ClickMode" Value="Release"/>
+                                                <Setter Property="Cursor" Value="Hand"/>
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="Button">
+                                                            <Border  >
+                                                                <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                                    <svgc:SvgViewbox Height="12" Width="12" Source="../Assets/SvgIcon/Refresh.svg"/>
+                                                                    <!--<Image Name="img_ClearTableData" Width="13.3" Height="13.3" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="../Assets/Images/Refresh.png" />-->
+                                                                    <TextBlock Name="tb_ClearTableData" Text="{DynamicResource DataCollectWnd.xaml_ShuaXin}" Margin="4,0,0,0" Width="24" Height="16" FontSize="12" Foreground="#505962" Style="{StaticResource CommonTextBlock}"/>
+                                                                </StackPanel>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style.Setters>
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="False">
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate TargetType="Button">
+                                                                <Border  >
+                                                                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                                        <svgc:SvgViewbox Height="12" Width="12" Source="../Assets/SvgIcon/Refresh.svg"/>
+                                                                        <!--<Image Name="img_ClearTableData" Width="13.3" Height="13.3" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="../Assets/Images/Refresh.png" />-->
+                                                                        <TextBlock Name="tb_ClearTableData" Text="{DynamicResource DataCollectWnd.xaml_ShuaXin}" Margin="4,0,0,0" Width="24" Height="16" FontSize="12" Foreground="#505962" Style="{StaticResource CommonTextBlock}"/>
+                                                                    </StackPanel>
+                                                                </Border>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </Trigger>
+
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate TargetType="Button">
+                                                                <Border  >
+                                                                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                                        <svgc:SvgViewbox Height="12" Width="12" Source="../Assets/SvgIcon/RefreshActive.svg"/>
+                                                                        <!--<Image Name="img_ClearTableData" Width="13.3" Height="13.3" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="../Assets/Images/RefreshHover.png" />-->
+                                                                        <TextBlock Name="tb_ClearTableData" Text="{DynamicResource DataCollectWnd.xaml_ShuaXin}" Margin="4,0,0,0" Width="24" Height="16" FontSize="12" Foreground="#FF8901" Style="{StaticResource CommonTextBlock}"/>
+                                                                    </StackPanel>
+                                                                </Border>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
+
+
+                                <Button Width="40" Height="20" x:Name="btn_EmptyData" Margin="0,0,20,0"  HorizontalAlignment="Right"  WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand"  
+                            Command="{Binding DataGridModel.EmptyDataGridCommand}">
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Style.Setters>
+                                                <Setter Property="ClickMode" Value="Release"/>
+                                                <Setter Property="Cursor" Value="Hand"/>
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="Button">
+                                                            <Border  >
+                                                                <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                                    <svgc:SvgViewbox Height="12" Width="12" Source="../Assets/SvgIcon/Delete.svg"/>
+                                                                    <TextBlock Name="tb_ClearTableDataEx" Text="{DynamicResource Image.xaml_QingKong}" Margin="4,0,0,0" Width="24" Height="16" FontSize="12" Foreground="#505962" Style="{StaticResource CommonTextBlock}"/>
+                                                                </StackPanel>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style.Setters>
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="False">
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate TargetType="Button">
+                                                                <Border  >
+                                                                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                                        <svgc:SvgViewbox Height="12" Width="12" Source="../Assets/SvgIcon/Delete.svg"/>
+                                                                        <!--<Image Name="img_ClearTableData" Width="13.3" Height="13.3" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="../Assets/Images/Refresh.png" />-->
+                                                                        <TextBlock Name="tb_ClearTableDataEx" Text="{DynamicResource Image.xaml_QingKong}" Margin="4,0,0,0" Width="24" Height="16" FontSize="12" Foreground="#505962" Style="{StaticResource CommonTextBlock}"/>
+                                                                    </StackPanel>
+                                                                </Border>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </Trigger>
+
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate TargetType="Button">
+                                                                <Border  >
+                                                                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                                        <svgc:SvgViewbox Height="12" Width="12" Source="../Assets/SvgIcon/DeleteActive.svg"/>
+                                                                        <!--<Image Name="img_ClearTableData" Width="13.3" Height="13.3" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="../Assets/Images/RefreshHover.png" />-->
+                                                                        <TextBlock Name="tb_ClearTableDataEx" Text="{DynamicResource Image.xaml_QingKong}" Margin="4,0,0,0" Width="24" Height="16" FontSize="12" Foreground="#FF8901" Style="{StaticResource CommonTextBlock}"/>
+                                                                    </StackPanel>
+                                                                </Border>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
+                            </StackPanel>
+
+
+
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"  />
+                                    <!--<RowDefinition Height="24" />-->
+                                </Grid.RowDefinitions>
+
+                                <DataGrid x:Name="StaffAdminView"   
+                      Grid.Row="0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" 
+                      MinHeight="200" MinWidth="500"
+                      CanUserReorderColumns="True"
+                      CanUserSortColumns="False"
+                      CanUserDeleteRows="False"
+                      CanUserAddRows="False"
+                      CanUserResizeRows="False"
+                      IsReadOnly="True"
+                      RowHeight="23"
+                      RowHeaderWidth="0"
+                      Foreground="#161923"
+                      CellStyle="{StaticResource MyDataGridCellStyle}"
+                      SelectionMode="Single"
+                      HorizontalGridLinesBrush="#D9DDE6"
+                      VerticalGridLinesBrush="#D9DDE6"
+                      Width="Auto"
+                      Height="Auto"
+                      Margin="20,0,20,0" 
+                      Background="White"
+                      BorderBrush="#C5C9D5"
+                      BorderThickness="1"
+                      AutoGenerateColumns="True"  
+                      HorizontalScrollBarVisibility="Disabled"
+                      ItemsSource="{Binding Path=DataGridModel.DymDataTable.DefaultView, IsAsync=True, BindsDirectlyToSource=True,
+                            UpdateSourceTrigger=PropertyChanged, PresentationTraceSources.TraceLevel=High}"
+                      VirtualizingPanel.IsContainerVirtualizable="True"
+                      VirtualizingPanel.IsVirtualizing="True"
+                      VirtualizingPanel.VirtualizationMode="Recycling"
+                      ScrollViewer.CanContentScroll="True"
+                      EnableColumnVirtualization="True"
+                      EnableRowVirtualization="True"
+                      ColumnHeaderStyle="{DynamicResource MyDataGridColumnHeaderStyle}"
+                              Style="{StaticResource MyDataGridStyleEx}"
+                       AutoGeneratingColumn="StaffAdminView_AutoGeneratingColumn"
+                              />
+
+                                <StackPanel Grid.Row="1" Orientation="Horizontal" Visibility="Visible">
+                                    <!--<StackPanel Grid.Row="1" Orientation="Horizontal" Visibility="Visible">
+                                <Button Content="新增一列" Command="{Binding DataGridModel.AddDataCmd}"  Margin="5,0,0,0"/>
+                            </StackPanel>-->
+                                </StackPanel>
+                            </Grid>
+                        </Grid>
+
+                        <Grid Grid.Row="2">
+                            <Grid.RowDefinitions>
+                                <!--<RowDefinition Height="2"/>-->
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <!--<Separator Grid.Row="0" BorderBrush="#F1F4F7" BorderThickness="0.3" Margin="0" VerticalAlignment="Top"/>-->
+                            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{DynamicResource DataCollectWnd.xaml_LieBiaoJinZhanShiBuFenShuJu}" Foreground="#848A90"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+
+                    <!--普通表格相关-->
+                    <Grid Grid.Row="2" Visibility="{Binding DataGridModel.TableDataVisibility}" IsHitTestVisible="True">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="36"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="56"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="250"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="250"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                                <TextBlock Text="{DynamicResource DataCollectWnd.xaml_DangQianYeYiCaiJi}" Margin="20,0,0,0" Foreground="#505962" Style="{StaticResource CommonTextBlock}"/>
+                                <TextBlock Text="{Binding CurrentMaxLineCount}" Margin="5,0,5,0" Foreground="#FF8900" Style="{StaticResource CommonTextBlock}"/>
+                                <TextBlock Text="{DynamicResource DataCollectWnd.xaml_TiaoShuJu}" Margin="0,0,0,0" Foreground="#505962" Style="{StaticResource CommonTextBlock}"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal" IsHitTestVisible="True">
+                                <Button Width="90" Height="20" x:Name="btn_EditTableData" Margin="0,0,10,0" HorizontalAlignment="Right"   WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand" 
+                            Command="{Binding DataGridModel.EditTableSelectorCommand}">
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Style.Setters>
+                                                <Setter Property="ClickMode" Value="Release"/>
+                                                <Setter Property="Cursor" Value="Hand"/>
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="Button">
+                                                            <Border>
+                                                                <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                                    <svgc:SvgViewbox Height="12" Width="12" Source="../Assets/SvgIcon/Edit.svg"/>
+                                                                    <!--<Image Name="img_EditTableData" Width="13.3" Height="13.3"  Source="../Assets/Images/edit.png" />-->
+                                                                    <TextBlock Name="tb_EditTableData" Text="{DynamicResource DataCollectWnd.xaml_BianJiBiaoGeYuanSu}" Margin="4,0,0,0" Width="72" Height="16" FontSize="12" Foreground="#505962" Style="{StaticResource CommonTextBlock}"/>
+                                                                </StackPanel>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style.Setters>
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="False">
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate TargetType="Button">
+                                                                <Border  >
+                                                                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                                        <!--<Image Name="img_EditTableData" Width="13.3" Height="13.3" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="../Assets/Images/edit.png" />-->
+                                                                        <svgc:SvgViewbox Height="12" Width="12" Source="../Assets/SvgIcon/Edit.svg"/>
+                                                                        <TextBlock Name="tb_EditTableData" Text="{DynamicResource DataCollectWnd.xaml_BianJiBiaoGeYuanSu}" Margin="4,0,0,0" Width="72" Height="16" FontSize="12" Foreground="#505962" Style="{StaticResource CommonTextBlock}"/>
+                                                                    </StackPanel>
+                                                                </Border>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </Trigger>
+
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate TargetType="Button">
+                                                                <Border  >
+                                                                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                                        <svgc:SvgViewbox Height="12" Width="12" Source="../Assets/SvgIcon/EditActive.svg"/>
+                                                                        <!--<Image Name="img_EditTableData" Width="13.3" Height="13.3" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="../Assets/Images/EditHover.png" />-->
+                                                                        <TextBlock Name="tb_EditTableData" Text="{DynamicResource DataCollectWnd.xaml_BianJiBiaoGeYuanSu}" Margin="4,0,0,0" Width="72" Height="16" FontSize="12" Foreground="#FF8901" Style="{StaticResource CommonTextBlock}"/>
+                                                                    </StackPanel>
+                                                                </Border>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
+
+                                <Button Width="40" Height="20" x:Name="btn_RefreshDataTableData" Margin="0,0,12,0"  HorizontalAlignment="Right"  WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand"  
+                            Command="{Binding DataGridModel.RefreshDataGridCommand}">
+                                    <!--<Image Width="16" Height="16"  VerticalAlignment="Center" HorizontalAlignment="Center"  Source="pack://application:,,,/II.RPA.Plugin.GUI;component/Assets/Images/normalWnd.png"/>-->
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Style.Setters>
+                                                <Setter Property="ClickMode" Value="Release"/>
+                                                <Setter Property="Cursor" Value="Hand"/>
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="Button">
+                                                            <Border>
+                                                                <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                                    <svgc:SvgViewbox Height="12" Width="12" Source="../Assets/SvgIcon/Refresh.svg"/>
+                                                                    <!--<Image Name="img_ClearTableData" Width="13.3" Height="13.3" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="../Assets/Images/Refresh.png" />-->
+                                                                    <TextBlock Name="tb_ClearTableData" Text="{DynamicResource DataCollectWnd.xaml_ShuaXin}" Margin="4,0,0,0" Width="24" Height="16" FontSize="12" Foreground="#505962" Style="{StaticResource CommonTextBlock}"/>
+                                                                </StackPanel>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style.Setters>
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="False">
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate TargetType="Button">
+                                                                <Border  >
+                                                                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                                        <!--<Image Name="img_ClearTableData" Width="13.3" Height="13.3" RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" Source="../Assets/Images/Refresh.png" />-->
+                                                                        <svgc:SvgViewbox Height="12" Width="12" Source="../Assets/SvgIcon/Refresh.svg"/>
+                                                                        <TextBlock Name="tb_ClearTableData" Text="{DynamicResource DataCollectWnd.xaml_ShuaXin}" Margin="4,0,0,0" Width="24" Height="16" FontSize="12" Foreground="#505962" Style="{StaticResource CommonTextBlock}"/>
+                                                                    </StackPanel>
+                                                                </Border>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </Trigger>
+
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate TargetType="Button">
+                                                                <Border  >
+                                                                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                                        <svgc:SvgViewbox Height="12" Width="12" Source="../Assets/SvgIcon/RefreshActive.svg"/>
+                                                                        <TextBlock Name="tb_ClearTableData" Text="{DynamicResource DataCollectWnd.xaml_ShuaXin}" Margin="4,0,0,0" Width="24" Height="16" FontSize="12" Foreground="#FF8901" Style="{StaticResource CommonTextBlock}"/>
+                                                                    </StackPanel>
+                                                                </Border>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
+
+                                <Button Width="40" Height="20" x:Name="btn_EmptyTableData" Margin="0,0,20,0"  HorizontalAlignment="Right"  WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand"  
+                            Command="{Binding DataGridModel.EmptyDataGridCommand}">
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Style.Setters>
+                                                <Setter Property="ClickMode" Value="Release"/>
+                                                <Setter Property="Cursor" Value="Hand"/>
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="Button">
+                                                            <Border  >
+                                                                <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                                    <svgc:SvgViewbox Height="12" Width="12" Source="../Assets/SvgIcon/Delete.svg"/>
+                                                                    <TextBlock Name="tb_ClearTableData" Text="{DynamicResource Image.xaml_QingKong}" Margin="4,0,0,0" Width="24" Height="16" FontSize="12" Foreground="#505962" Style="{StaticResource CommonTextBlock}"/>
+                                                                </StackPanel>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style.Setters>
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="False">
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate TargetType="Button">
+                                                                <Border  >
+                                                                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                                        <svgc:SvgViewbox Height="12" Width="12" Source="../Assets/SvgIcon/Delete.svg"/>
+                                                                        <TextBlock Name="tb_ClearTableData" Text="{DynamicResource Image.xaml_QingKong}" Margin="4,0,0,0" Width="24" Height="16" FontSize="12" Foreground="#505962" Style="{StaticResource CommonTextBlock}"/>
+                                                                    </StackPanel>
+                                                                </Border>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </Trigger>
+
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate TargetType="Button">
+                                                                <Border  >
+                                                                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                                                                        <svgc:SvgViewbox Height="12" Width="12" Source="../Assets/SvgIcon/DeleteActive.svg"/>
+                                                                        <TextBlock Name="tb_ClearTableData" Text="{DynamicResource Image.xaml_QingKong}" Margin="4,0,0,0" Width="24" Height="16" FontSize="12" Foreground="#FF8901" Style="{StaticResource CommonTextBlock}"/>
+                                                                    </StackPanel>
+                                                                </Border>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <!--<RowDefinition Height="24" />-->
+                                </Grid.RowDefinitions>
+
+                                <DataGrid  x:Name="dg_CaptureTable"   
+                      Grid.Row="0" 
+                      HorizontalAlignment="Stretch"  
+                      VerticalAlignment="Stretch" 
+                      MinHeight="200" MinWidth="500"
+                      CanUserReorderColumns="True"
+                      CanUserSortColumns="False"
+                      CanUserDeleteRows="False"
+                      CanUserAddRows="False"
+                      CanUserResizeRows="False"
+                      IsReadOnly="True"
+                      RowHeaderWidth="0"
+                      RowHeight="23"
+                      Foreground="#505962"
+                      CellStyle="{StaticResource MyDataGridCellStyle}"
+                      SelectionMode="Single"
+                      HorizontalGridLinesBrush="#D9DDE6"
+                      VerticalGridLinesBrush="#D9DDE6"
+                      Width="Auto"
+                      Height="Auto"
+                      Margin="20,0,20,0" 
+                      Background="White"
+                      BorderBrush="#C5C9D5"
+                      BorderThickness="1"
+                      AutoGenerateColumns="True"
+                      HorizontalScrollBarVisibility="Disabled"
+                      ItemsSource="{Binding Path=DataGridModel.DymTable.DefaultView, IsAsync=True, BindsDirectlyToSource=True, PresentationTraceSources.TraceLevel=High}"
+                      VirtualizingPanel.IsContainerVirtualizable="True"
+                      VirtualizingPanel.IsVirtualizing = "True"
+                      VirtualizingPanel.VirtualizationMode="Recycling"
+                      ScrollViewer.CanContentScroll="True"
+                      EnableColumnVirtualization="True"
+                      EnableRowVirtualization="True"
+                                   ColumnHeaderStyle="{DynamicResource MyDataGridColumnHeaderStyleForCommonTable}"
+                                   Style="{StaticResource MyDataGridStyleEx}"
+                                  
+                                   AutoGeneratingColumn="dg_CaptureTable_AutoGeneratingColumn"
+                                   />
+                                <!--ColumnHeaderStyle="{StaticResource TableHeaderStyle}"-->
+                            </Grid>
+                        </Grid>
+
+                        <Grid Grid.Row="2">
+                            <Grid.RowDefinitions>
+                                <!--<RowDefinition Height="2"/>-->
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <!--<Separator Grid.Row="0" BorderBrush="#F1F4F7" BorderThickness="0.3" Margin="0" VerticalAlignment="Top"/>-->
+                            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{DynamicResource DataCollectWnd.xaml_LieBiaoJinZhanShiBuFenShuJu}" Foreground="#848A90"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+
+                    <!--初始蒙版-->
+                    <Grid  Grid.Row="2" Visibility="{Binding DataGridModel.InitPanelVisibility}" IsHitTestVisible="True">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="36"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="56"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="200"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                                <TextBlock Text="{DynamicResource ataCollectWnd.xaml_ShuJuYuLan}" Margin="20,0,0,0" Foreground="#505962" Style="{StaticResource CommonTextBlock}"/>
+                            </StackPanel>
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <Border  BorderBrush="#C5C9D5" BorderThickness="1" Margin="20,0,20,0">
+                                <!--<Viewbox>-->
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"  />
+                                        <!--<RowDefinition Height="24" />-->
+                                    </Grid.RowDefinitions>
+                                    <Grid Background="White" >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="60"/>
+                                            <RowDefinition Height="40"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Image Grid.Row="1" Source="../Assets/Images/InitPicture.png"/>
+                                        <StackPanel Grid.Row="2" Margin="0,10,0,0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            <Border Width="29" Height="22" BorderBrush="#D9DDE6" BorderThickness="1" CornerRadius="2">
+                                                <TextBlock Foreground="#848A90" FontSize="12" Text="Ctrl" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            </Border>
+                                            <TextBlock Foreground="#848A90" FontSize="12" Text="+" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            <Border Width="56" Height="22" BorderBrush="#D9DDE6" BorderThickness="1" CornerRadius="2">
+                                                <TextBlock Foreground="#848A90" FontSize="12" Text="{DynamicResource DataCollectOverlayWnd.xaml_ShuBiaoZuoJian}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            </Border>
+                                            <TextBlock Margin="4,0,0,0" Foreground="#848A90" FontSize="12" Text="{DynamicResource DataCollectOverlayWnd.xaml_HuoQuCaiJiShuJu}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Grid>
+                                <!--</Viewbox>-->
+                            </Border>
+                        </Grid>
+                    </Grid>
+
+
+                </Grid>
+
+                <Border Visibility="{Binding OverlayVisibility}" Grid.Row="0" Grid.RowSpan="2" Panel.ZIndex="0"  CornerRadius="5" Margin="0" Opacity="0.3" Background="Black" BorderThickness="0">
+                </Border>
+
+                <Border Visibility="{Binding LoadingLogoVisibility}" Background="White" Grid.Row="0" Grid.RowSpan="2" CornerRadius="4" BorderThickness="1" Panel.ZIndex="1"   Height="52" Width="166">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="42"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Image RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" SnapsToDevicePixels="True" 
+                       x:Name="im_RunLog" Grid.Column="0"  VerticalAlignment="Center" HorizontalAlignment="Center"
+                       Width="40" Height="40"/>
+
+
+                        <StackPanel  VerticalAlignment="Center" Grid.Column="1" Margin="4,0,0,0">
+                            <Label Grid.Column="1" x:Name="txt" FontSize="10px" Foreground="#2E2E2E" Content="{DynamicResource DataCollectWnd.xaml_ShuJuCaiJiZhongQingShaoDeng}" Margin="0,0,0,0"></Label>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <Border Visibility="{Binding ShowWeakErrorVisibility}" Grid.Row="0" Grid.RowSpan="2" Panel.ZIndex="0" CornerRadius="5" Opacity="0.3" Background="Black">
+                </Border>
+
+                <Border Visibility="{Binding ShowWeakErrorVisibility}" MaxWidth="{Binding ShowWeakErrorMaxWidth,Mode=TwoWay}" Background="White" Grid.Row="1" BorderThickness="1" Panel.ZIndex="1" Margin="0,60,0,0" VerticalAlignment="Top"   Height="40"  CornerRadius="4,4,4,4" >
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="42"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <svgc:SvgViewbox Height="20" Width="20" VerticalAlignment="Center" HorizontalAlignment="Right" Source="../Assets/SvgIcon/Warning.svg"/>
+                        <!--<StackPanel x:Name="mMessage" VerticalAlignment="Center" Grid.Column="1" Margin="4,0,0,0">
+                    <Label Grid.Column="1" x:Name="ErrorMessage" FontSize="10px" Foreground="#2E2E2E" Content="{Binding ShowWeakErrorContent, Mode=TwoWay}" Width="auto" Margin="0,0,0,0" SizeChanged="ErrorMessage_SizeChanged"></Label>
+                </StackPanel>-->
+
+                        <Label Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"  x:Name="ErrorMessage" FontSize="10px" Foreground="#2E2E2E" Content="{Binding ShowWeakErrorContent, Mode=TwoWay}" Width="auto" Margin="0,0,0,0" SizeChanged="ErrorMessage_SizeChanged"></Label>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

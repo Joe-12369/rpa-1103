@@ -1,0 +1,6 @@
+node_modules/
+.github/*
+.temp/
+dist/**
+!dist/**/*.gitkeep
+!dist/.gitkeep

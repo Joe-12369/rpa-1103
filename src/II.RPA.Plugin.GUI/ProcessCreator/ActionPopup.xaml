@@ -1,0 +1,92 @@
+﻿<Popup x:Class="II.RPA.Plugin.GUI.ProcessCreator.ActionPopup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:II.RPA.Plugin.GUI.ProcessCreator"
+             xmlns:ap="clr-namespace:II.RPA.Plugin.GUI.ProcessCreator.AttachProperty"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:control="clr-namespace:II.RPA.Plugin.GUI.ProcessCreator.Controls"
+             AllowsTransparency="True"
+             Focusable="True"
+             mc:Ignorable="d" Width="210">
+    <Popup.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Theme/ColorDictionary.xaml"/>
+                <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Theme/SvgDictionary.xaml"/>
+                <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Controls/TFButton.xaml"/>
+                <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Theme/StyleDictionary.xaml"/>
+                <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Controls/ProgressRing.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Popup.Resources>
+    <Border x:Name="mainBorder" Background="#33333333"
+            CornerRadius="4"  
+            BorderThickness="0" Margin="10" Padding="20">
+        <Border.Effect>
+            <DropShadowEffect Color="{StaticResource DarkBorderColor}"  BlurRadius="12" ShadowDepth="0"/>
+        </Border.Effect>
+        <Grid
+                  Height="Auto" 
+                  VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--<StackPanel Orientation="Horizontal" Grid.Row="0">
+                <Border Background="#FFC53A" BorderThickness="0" CornerRadius="4">
+                    <TextBlock Text="Ctrl" FontSize="12" Foreground="Black" Margin="2"/>
+                </Border>
+                <TextBlock Text="+" Foreground="#848A90"/>
+                <Border Background="#FFC53A" BorderThickness="0" CornerRadius="4">
+                    <TextBlock Text="鼠标左键" FontSize="12" Foreground="Black" Margin="2"/>
+                </Border>
+                <TextBlock Text="选择动作" Foreground="#848A90"/>
+
+            </StackPanel>-->
+            <Border Panel.ZIndex="999"
+                    IsHitTestVisible="False"
+                    Visibility = "{Binding ProgressRingVisiblity}"
+                    Grid.Row="0"
+                    Margin="0,0,0,0"
+                    Grid.RowSpan="2"
+                    VerticalAlignment="Top">
+                <control:ProgressRing Height="30" Width="30" 
+                                      Margin="0,50,0,0"
+                                      VerticalAlignment="Top"
+                    IsIndeterminate="True" />
+            </Border>
+            <Border VerticalAlignment="Top" Grid.Row="0">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                    <!--<Viewbox Height="25" VerticalAlignment="Center" Child="{StaticResource Logo}">
+                    </Viewbox>-->
+                    <!--<TextBlock Text="{Binding ElementClassText}" FontSize="13" 
+                               Margin="5,0,0,0" MaxWidth="95" MinWidth="95"
+                               VerticalAlignment="Center"/>-->
+                    <Border Background="#FFC53A" BorderThickness="0" CornerRadius="4">
+                        <TextBlock Text="Ctrl" Foreground="Black" Margin="2" VerticalAlignment="Center"/>
+                    </Border>
+                    <TextBlock Text="+" Foreground="White"/>
+                    <Border Background="#FFC53A" BorderThickness="0" CornerRadius="4">
+                        <TextBlock Text="鼠标左键" Foreground="Black" Margin="2" VerticalAlignment="Center"/>
+                    </Border>
+                    <TextBlock Text="更多动作" Foreground="White" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+            <TextBox  x:Name="txt" Grid.Row="1"/>
+            <Menu Grid.Row="2" Style="{StaticResource TranparentMenu}" 
+                      VerticalAlignment="Top"
+                      Background="#77FFFFFF"
+                      ItemTemplate="{StaticResource ActionDataTemplate}"
+                      ItemsSource="{Binding ActionCollectionTask.Result, IsAsync=True}">
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+            </Menu>
+        </Grid>
+    </Border>
+</Popup>

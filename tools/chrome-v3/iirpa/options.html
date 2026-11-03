@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实在RPA-浏览器插件设置</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="options.js" defer></script>
+    <script src="iconfont.js" defer></script>
+    <style>
+        .svgfont {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            fill: currentColor;
+            vertical-align: -0.1em;
+            font-size: 28px;
+        }
+        #content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; 
+        }
+        #tabList {
+            flex: 1;
+            overflow-y: auto;
+            border-top: 0px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+        #header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        #header-title {
+            margin-left: 10px;
+        }
+        .setting-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .custom-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 5px 5px;
+            white-space: nowrap;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .custom-button:hover {
+            background-color: #45a049;
+        }
+
+        .custom-button:active {
+            background-color: #3e8e41;
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="header-content">
+                <svg class="icon svgfont" aria-hidden="true">
+                    <use xlink:href="#icon-TARSshezhi"></use>
+                </svg>
+                <h1 id="header-title">实在RPA-浏览器插件设置</h1>
+            </div>
+        </div>
+        <div id="content">
+            <div class="setting-item">
+                <label for="trace_switch" class="setting-label">开启调试日志</label>
+                <div class="setting-control">
+                    <label class="switch">
+                        <input type="checkbox" id="trace_switch">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="setting-item">
+                <label for="trace_switch" class="setting-label">获取当前页面信息</label>
+                <span id="page_info_count" style="margin-left: 2px;"></span>
+                <div class="setting-control">
+                    <label class="switch">
+                        <button id="get_page" class="custom-button">点击获取</button>
+                    </label>
+                </div>
+            </div>
+            <div id="tabList"></div>
+        </div>
+        <div id="result">
+            <p id="p_status"></p>
+            <p id="p_url"></p>
+        </div>
+        <div id="footer">
+            浙江实在智能科技有限公司
+        </div>
+    </div>
+</body>
+</html>

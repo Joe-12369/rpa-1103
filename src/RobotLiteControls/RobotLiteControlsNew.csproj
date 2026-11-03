@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RobotLiteControls</RootNamespace>
+    <AssemblyName>RobotLiteControlsNew</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\LiteControls\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\LiteControls\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CommonServiceLocator" Version="2.0.7" />
+    <PackageReference Include="ControlzEx" Version="4.2.2" />
+    <PackageReference Include="Fluent.Ribbon" Version="7.1.0" />
+    <PackageReference Include="HandyControl" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+    <PackageReference Include="MvvmLight" Version="5.4.1.1" />
+    <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Panuon.UI" Version="1.0.0" />
+    <PackageReference Include="Panuon.UI.Silver" Version="1.1.3.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Rubyer">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\Rubyer.dll</HintPath>
+    </Reference>
+    <Reference Include="II.RPA.WinAutomation.CommonUtility">
+      <HintPath>Achives\II.RPA.WinAutomation.CommonUtility.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>Achives\NLog.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttachmentControl.xaml.cs">
+      <DependentUpon>AttachmentControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BroswerControl.xaml.cs">
+      <DependentUpon>BroswerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigSetWnd.xaml.cs">
+      <DependentUpon>ConfigSetWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LiteSdkNew.cs" />
+    <Compile Include="MultiInputModel.cs" />
+    <Compile Include="UCControl\IGetInputModelControl.cs" />
+    <Compile Include="UCControl\IRpaCustomControl.cs" />
+    <Compile Include="UCControl\SubAnnex.xaml.cs">
+      <DependentUpon>SubAnnex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\SubUpload.xaml.cs">
+      <DependentUpon>SubUpload.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\UCAnnex.xaml.cs">
+      <DependentUpon>UCAnnex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\UCBrowserFile.xaml.cs">
+      <DependentUpon>UCBrowserFile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\UCCheck.xaml.cs">
+      <DependentUpon>UCCheck.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\UCComboBox.xaml.cs">
+      <DependentUpon>UCComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\UCDate.xaml.cs">
+      <DependentUpon>UCDate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\UCLabel.xaml.cs">
+      <DependentUpon>UCLabel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\UCMultiComboBox.xaml.cs">
+      <DependentUpon>UCMultiComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\UCPassword.xaml.cs">
+      <DependentUpon>UCPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\UCRedioH.xaml.cs">
+      <DependentUpon>UCRedioH.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\UCSeparator.xaml.cs">
+      <DependentUpon>UCSeparator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\UCSwitch.xaml.cs">
+      <DependentUpon>UCSwitch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\UCTable.xaml.cs">
+      <DependentUpon>UCTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\UCTextBox.xaml.cs">
+      <DependentUpon>UCTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\UCTextField.xaml.cs">
+      <DependentUpon>UCTextField.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\UCUpload.xaml.cs">
+      <DependentUpon>UCUpload.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\WatermarkViewModel.cs" />
+    <Compile Include="WatermarkCombox.xaml.cs">
+      <DependentUpon>WatermarkCombox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WatermarkTextBox.xaml.cs">
+      <DependentUpon>WatermarkTextBox.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="AttachmentControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BroswerControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConfigSetWnd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IIDefaultStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skin\ComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skin\Font.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skin\GroupBox_Dotted.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skin\Switch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCControl\SubAnnex.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCControl\SubUpload.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCControl\UCAnnex.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCControl\UCBrowserFile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCControl\UCCheck.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCControl\UCComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCControl\UCDate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCControl\UCLabel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCControl\UCMultiComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCControl\UCPassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCControl\UCRedioH.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCControl\UCSeparator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCControl\UCSwitch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCControl\UCTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCControl\UCTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCControl\UCTextField.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCControl\UCUpload.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WatermarkCombox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WatermarkTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="II.RPA.WinAutomation.CommonUtility.dll.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="NLog.dll.nlog">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\annex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\annexblue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="II.RPA.WinAutomation.CommonUtility.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Newtonsoft.Json.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Newtonsoft.Json.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="NLog.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

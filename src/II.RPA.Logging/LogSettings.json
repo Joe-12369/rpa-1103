@@ -1,0 +1,6 @@
+﻿{
+	"serilog:log-remain-file-count": 50,
+	"serilog:minimum-level": "Information",
+	"serilog:log-hold-days": 7,
+	"serilog:root-dir": ""
+}

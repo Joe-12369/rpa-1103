@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.PluginLoader</RootNamespace>
+    <AssemblyName>II.RPA.PluginLoader</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>Library</OutputType>
+    
+    <RootNamespace>II.RPA.PluginLoader</RootNamespace>
+    <AssemblyName>II.RPA.PluginLoader</AssemblyName>
+    
+    
+    <Deterministic>true</Deterministic>
+    
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Trace</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>5</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>5</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Trace</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>5</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>5</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    
+    <Reference Include="HIK.Toolkit.WPF.CustomControls">
+      <HintPath>..\libs\HIK.Toolkit.WPF.CustomControls.dll</HintPath>
+    </Reference>
+    <ProjectReference Include="..\..\tools\NativeMessagingHost\II.RPA.IPC\II.RPA.IPC.csproj" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Reference Include="System.Management" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InterceptorFactory.cs" />
+    <Compile Include="PluginLoader.cs" />
+    <Compile Include="AsyncPluginRuntime.cs" />
+    <Compile Include="PluginPackageDescriptor.cs" />
+    <Compile Include="PluginPackageDiscovery.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlaUI.Core\FlaUI.Core.csproj" />
+    <ProjectReference Include="..\FlaUI.UIA2\FlaUI.UIA2.csproj" />
+    <ProjectReference Include="..\FlaUI.UIA3\FlaUI.UIA3.csproj" />
+    <ProjectReference Include="..\Gma.UserActivityMonitor\Gma.UserActivityMonitor.csproj" />
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.NamedPipeWrapper\II.RPA.NamedPipeWrapper.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Abstractions\II.RPA.Plugin.Abstractions.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="aero_working.ani">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <AdditionalFiles Include="HelpInfo.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AdditionalFiles>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    
+  </ItemGroup>
+  <ItemGroup Condition="'$(Platform)'=='x64'">
+    <Files Include="$(SolutionDir)libs\x64\msvcp120.dll" />
+    <Files Include="$(SolutionDir)libs\x64\msvcr120.dll" />
+    <Files Include="$(SolutionDir)libs\x64\msvcp140.dll" />
+    <Files Include="$(SolutionDir)libs\x64\actionCheck.dll" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Platform)'=='x86'">
+    <Files Include="$(SolutionDir)libs\x86\msvcp120.dll" />
+    <Files Include="$(SolutionDir)libs\x86\msvcr120.dll" />
+    <Files Include="$(SolutionDir)libs\x86\msvcp140.dll" />
+    <Files Include="$(SolutionDir)libs\x86\actionCheck.dll" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Platform)'=='x64' OR '$(Platform)'=='AnyCPU'">
+    <Files Include="$(SolutionDir)libs\AccEnabler.x64.dll" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Platform)'=='x86' OR '$(Platform)'=='AnyCPU'">
+    <Files Include="$(SolutionDir)libs\AccEnabler.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Files Include="$(SolutionDir)libs\AccHelper_SupportedExe.ini" />
+    <Files Include="$(SolutionDir)libs\AccHelperQt5.x64.dll" />
+    <Files Include="$(SolutionDir)libs\AccHelperQt5.x86.dll" />
+    <Files Include="$(SolutionDir)libs\AccHelperQt6.x64.dll" />
+    <Files Include="$(SolutionDir)libs\AccHelperQt6.x86.dll" />
+    <Files Include="$(SolutionDir)libs\ChromiumAccSpyDll.x64.dll" />
+    <Files Include="$(SolutionDir)libs\ChromiumAccSpyDll.x86.dll" />
+    <Files Include="$(SolutionDir)libs\dbrtl70.bpl" />
+    <Files Include="$(SolutionDir)libs\dbrtl140.bpl" />
+    <Files Include="$(SolutionDir)libs\DelphiRttiBridge.dll" />
+    <Files Include="$(SolutionDir)libs\EhLib_Helper70.dll" />
+    <Files Include="$(SolutionDir)libs\EhLib_Helper140.dll" />
+    <Files Include="$(SolutionDir)libs\EhLib70.bpl" />
+    <Files Include="$(SolutionDir)libs\EhLib140.bpl" />
+    <Files Include="$(SolutionDir)libs\rtl70.bpl" />
+    <Files Include="$(SolutionDir)libs\rtl140.bpl" />
+    <Files Include="$(SolutionDir)libs\rtl160.bpl" />
+    <Files Include="$(SolutionDir)libs\vcl70.bpl" />
+    <Files Include="$(SolutionDir)libs\vcl140.bpl" />
+    <Files Include="$(SolutionDir)libs\vcldb70.bpl" />
+    <Files Include="$(SolutionDir)libs\vcldb140.bpl" />
+    <Files Include="$(SolutionDir)libs\vclimg140.bpl" />
+    <Files Include="$(SolutionDir)libs\VirtualTreesD7.bpl" />
+    <Files Include="$(SolutionDir)libs\wow64ext.x64.dll" />
+    <Files Include="$(SolutionDir)libs\wow64ext.ARM64.dll" />
+    <Files Include="$(SolutionDir)libs\htmlayout_automation.dll" />
+    <Files Include="$(SolutionDir)libs\htmlayout_automation.runtimeconfig.json" />
+    <Files Include="$(SolutionDir)libs\htmlayout_automation.deps.json" />
+    <Files Include="$(SolutionDir)libs\htmlayout_bootstrap.dll" />
+    <Files Include="$(SolutionDir)libs\htmlayout_bootstrap32.dll" />
+    <Files Include="$(SolutionDir)libs\Newtonsoft.Json.dll" />
+    <Files Include="$(SolutionDir)libs\AutoItX3.dll" />
+    <Files Include="$(SolutionDir)libs\AutoItX3_x64.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Net35Files Include="$(SolutionDir)libs\net35\ClrAccHelper.dll" />
+  </ItemGroup>
+  
+  <Target Name="DeployPluginLoaderLibs" AfterTargets="AfterBuild">
+    <PropertyGroup>
+      <_LoaderBin>$(SolutionDir)..\bin\II.RPA.PluginLoader\</_LoaderBin>
+    </PropertyGroup>
+    <MakeDir Directories="$(_LoaderBin);$(_LoaderBin)net35\" />
+    <ItemGroup>
+      <_LibDevExpress Include="$(SolutionDir)libs\devexpress\**\*.*"
+                      Exclude="$(SolutionDir)libs\devexpress\Microsoft.AspNet.SignalR.Client.dll" />
+      <_LibDialog Include="$(SolutionDir)libs\dialog\**\*.*" />
+      <_LibCdp Include="$(SolutionDir)libs\cdp\**\*.*" />
+      <_LibGoogleTable Include="$(SolutionDir)libs\googletable\**\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_LibDevExpress)" DestinationFolder="$(_LoaderBin)%(_LibDevExpress.RecursiveDir)" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="@(_LibDialog)" DestinationFolder="$(_LoaderBin)%(_LibDialog.RecursiveDir)" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="@(_LibCdp)" DestinationFolder="$(_LoaderBin)%(_LibCdp.RecursiveDir)" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="@(_LibGoogleTable)" DestinationFolder="$(_LoaderBin)%(_LibGoogleTable.RecursiveDir)" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="$(SolutionDir)libs\IndeedInjector.exe" DestinationFolder="$(_LoaderBin)" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="$(SolutionDir)libs\IndeedInjector32.exe" DestinationFolder="$(_LoaderBin)" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="@(Files)" DestinationFolder="$(_LoaderBin)" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="@(Net35Files)" DestinationFolder="$(_LoaderBin)net35\" SkipUnchangedFiles="false" />
+    <MSBuild Projects="$(SolutionDir)II.RPA.WebBrowser.Common\II.RPA.WebBrowser.Common.csproj"
+             Targets="GetResolvedSignalRClientAssembly"
+             Properties="Configuration=$(Configuration);Platform=$(Platform);TargetFramework=$(TargetFramework)"
+             BuildInParallel="false">
+      <Output TaskParameter="TargetOutputs" ItemName="_ResolvedSignalRClientAssembly" />
+    </MSBuild>
+    <Error Condition="'@(_ResolvedSignalRClientAssembly)' == ''"
+           Text="II.RPA.WebBrowser.Common did not resolve Microsoft.AspNet.SignalR.Client.dll." />
+    <Copy SourceFiles="@(_ResolvedSignalRClientAssembly)" DestinationFolder="$(_LoaderBin)" SkipUnchangedFiles="false" />
+    <ItemGroup>
+      <_IpcRuntimeFiles Include="$(TargetDir)II.RPA.IPC.dll" />
+      <_IpcRuntimeFiles Include="$(TargetDir)II.RPA.IPC.pdb" />
+      <_IpcRuntimeFiles Include="$(TargetDir)System.ServiceModel*.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_IpcRuntimeFiles)" DestinationFolder="$(_LoaderBin)" SkipUnchangedFiles="false" />
+  </Target>
+  
+  
+  <ItemGroup>
+    <PackageReference Include="Expression.Blend.Sdk.WPF" Version="1.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="SharpVectors" Version="1.7.7" />
+    <PackageReference Include="System.Reactive" Version="6.0.1" />
+    <PackageReference Include="System.Reactive.Core" Version="5.0.0" />
+    <PackageReference Include="System.Reactive.Interfaces" Version="5.0.0" />
+    <PackageReference Include="System.Reactive.Linq" Version="5.0.0" />
+    <PackageReference Include="System.Reactive.PlatformServices" Version="5.0.0" />
+    <PackageReference Include="System.Reactive.Windows.Threading" Version="5.0.0" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+    <PackageReference Include="System.ServiceModel.Primitives" Version="8.1.2" />
+    <PackageReference Include="System.ServiceModel.NetNamedPipe" Version="8.1.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AutoItX3.Assembly">
+      <HintPath>..\libs\AutoItX3.Assembly.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
+
+
+
+
+
+

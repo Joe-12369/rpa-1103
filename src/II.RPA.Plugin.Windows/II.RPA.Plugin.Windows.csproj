@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Plugin.Windows</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.Windows</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>Library</OutputType>
+    
+    <RootNamespace>II.RPA.Plugin.Windows</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.Windows</AssemblyName>
+    
+    
+    <Deterministic>true</Deterministic>
+    <LangVersion>8.0</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Trace</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Trace</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>8.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>8.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_OwnerDrawRuntimeDir>$(MSBuildProjectDirectory)\..\..\bin\II.RPA.PluginLoader\runtime\GUIWindows\OwnerDraw\</_OwnerDrawRuntimeDir>
+    <DeployOwnerDraw Condition="'$(DeployOwnerDraw)' == ''">true</DeployOwnerDraw>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Platform)' == 'x86'">
+    <_OwnerDrawArchitecture>x86</_OwnerDrawArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Platform)' == 'x64'">
+    <_OwnerDrawArchitecture>x64</_OwnerDrawArchitecture>
+  </PropertyGroup>
+  <ItemGroup>
+    
+    <Reference Include="IAccessible2Lib">
+      <HintPath>.\IAccessible2Lib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutomationElements\ChrominumHtmlTableCell.cs" />
+    <Compile Include="AutomationElements\ChrominumHtmlTableColumnHeader.cs" />
+    <Compile Include="AutomationElements\ChrominumHtmlTableRow.cs" />
+    <Compile Include="AutomationElements\ChrominumHtmlTable.cs" />
+    <Compile Include="CacheData.cs" />
+    <Compile Include="CompareRule\ICompareRule.cs" />
+    <Compile Include="CompareRule\RuleNotContains.cs" />
+    <Compile Include="CompareRule\RuleDeciamlEqualRule.cs" />
+    <Compile Include="CompareRule\RuleNotEndwith.cs" />
+    <Compile Include="CompareRule\RuleNotEqual.cs" />
+    <Compile Include="CompareRule\RuleFactory.cs" />
+    <Compile Include="CompareRule\RuleLessThanRule.cs" />
+    <Compile Include="CompareRule\RuleLessThanOrEqualRule.cs" />
+    <Compile Include="CompareRule\RuleMoreThanOrEqualRule.cs" />
+    <Compile Include="CompareRule\RuleSmallerRule.cs" />
+    <Compile Include="CompareRule\RuleBiggerRule.cs" />
+    <Compile Include="CompareRule\RuleEqual.cs" />
+    <Compile Include="CompareRule\RuleEndwith.cs" />
+    <Compile Include="CompareRule\RuleContains.cs" />
+    <Compile Include="CompareRule\RuleRegular.cs" />
+    <Compile Include="CompareRule\RuleNotStartwith.cs" />
+    <Compile Include="CompareRule\RuleStartwith.cs" />
+    <Compile Include="CompareRule\RuleMoreThanRule.cs" />
+    <Compile Include="Config\WinConfigurations.cs" />
+    <Compile Include="ConstFields.cs" />
+    <Compile Include="Core\AccEnabler.cs" />
+    <Compile Include="Core\SelectorBuilder.cs" />
+    <Compile Include="Core\WindowElement.cs" />
+    <Compile Include="Core\WindowsElementMatcher.cs" />
+    <Compile Include="FlaUIExtensions.cs" />
+    <Compile Include="LegacyIAccessiblePatternExtensions.cs" />
+    <Compile Include="GuiOperator.cs" />
+    <Compile Include="GuiModule.cs" />
+    <Compile Include="PluginPackage.cs" />
+    <Compile Include="Interop.IAccessibleEx.cs" />
+    <Compile Include="Interop.IAccessibleInternal.cs" />
+    <Compile Include="Interop.UIA.cs" />
+    <Compile Include="ISimpleDOM\ISimpleDOMDocument.cs" />
+    <Compile Include="ISimpleDOM\ISimpleDOMNode.cs" />
+    <Compile Include="ISimpleDOM\ISimpleDOMText.cs" />
+    <Compile Include="Interop.IAccessibleInternal.cs" />
+    <Compile Include="OwnerDraw\**\*.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectorAdapter.cs" />
+    <Compile Include="UIANode.cs" />
+    <Compile Include="UIAutomationInterop.cs" />
+    <Compile Include="TmsPanelHelper.cs" />
+    <Compile Include="WeChatElement.cs" />
+    <Compile Include="WindowsException.cs" />
+    <Compile Include="WindowsSelectorItem.cs" />
+    <Compile Include="WinSelectorItemProperty.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlaUI.Core\FlaUI.Core.csproj" />
+    <ProjectReference Include="..\FlaUI.UIA3\FlaUI.UIA3.csproj" />
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.GUI.Commons\II.RPA.Plugin.GUI.Commons.csproj" />
+    <ProjectReference Include="..\II.RPA.WebBrowser.Common\II.RPA.WebBrowser.Common.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Config\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    
+    <None Include="Config\plugin.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup Condition="'$(_OwnerDrawArchitecture)' != ''">
+    <!-- Owner-draw native bridges are prebuilt and versioned under libs, like the
+         other third-party binaries. Their C++ sources live outside this repo. -->
+    <_OwnerDrawBridge Include="$(MSBuildProjectDirectory)\..\libs\MfcGdiAccBridge.$(_OwnerDrawArchitecture).dll" />
+    <_OwnerDrawBridge Include="$(MSBuildProjectDirectory)\..\libs\VclGridAccBridge.$(_OwnerDrawArchitecture).dll" />
+    <!-- The x86 Delphi RTTI helper imports rtl160.bpl. Keep both siblings beside
+         VclGridAccBridge so the injected process does not depend on global paths. -->
+    <_OwnerDrawBridge Include="$(MSBuildProjectDirectory)\..\libs\DelphiRttiBridge.dll" Condition="'$(Platform)' == 'x86'" />
+    <_OwnerDrawBridge Include="$(MSBuildProjectDirectory)\..\libs\rtl160.bpl" Condition="'$(Platform)' == 'x86'" />
+    <_OwnerDrawPinnedDependency Include="$(MSBuildProjectDirectory)\..\libs\DelphiRttiBridge.dll"
+                                Condition="'$(Platform)' == 'x86'">
+      <ExpectedSha256>8685D085F47BDA465ACC635211B3375BBA0A35200AE24BCB10218AE6D0FA591F</ExpectedSha256>
+    </_OwnerDrawPinnedDependency>
+    <_OwnerDrawPinnedDependency Include="$(MSBuildProjectDirectory)\..\libs\rtl160.bpl"
+                                Condition="'$(Platform)' == 'x86'">
+      <ExpectedSha256>AD3622C8E2B743BFC33AED054920050650B3ECD707BA86166EF6922F51050092</ExpectedSha256>
+    </_OwnerDrawPinnedDependency>
+  </ItemGroup>
+  <!-- A 64-bit controller can inject the 64-bit Bridges directly. For the
+       explicitly supported x64-controller -> x86-PowerBuilder route, also
+       publish the x86 PB Bridge and its small x86 injector broker from libs.
+       VCL remains same-bitness and its x86 RTTI dependencies must not leak
+       into a 64-bit product layout. -->
+  <ItemGroup Condition="'$(Platform)' == 'x64'">
+    <_OwnerDrawBridge Include="$(MSBuildProjectDirectory)\..\libs\MfcGdiAccBridge.x86.dll" />
+    <_OwnerDrawBridge Include="$(MSBuildProjectDirectory)\..\libs\OwnerDrawInjectorBroker.x86.exe" />
+  </ItemGroup>
+  <Target Name="ValidateOwnerDrawPinnedDependencies"
+          BeforeTargets="DeployOwnerDrawBridges"
+          Condition="'$(Platform)' == 'x86' and '$(DeployOwnerDraw)' != 'false'">
+    <Error Condition="!Exists('%(_OwnerDrawPinnedDependency.Identity)')"
+           Text="Pinned OwnerDraw dependency is missing: %(_OwnerDrawPinnedDependency.Identity)" />
+    <GetFileHash Files="@(_OwnerDrawPinnedDependency)" Algorithm="SHA256">
+      <Output TaskParameter="Items" ItemName="_OwnerDrawPinnedDependencyHash" />
+    </GetFileHash>
+    <Error Condition="'%(_OwnerDrawPinnedDependencyHash.FileHash)' != '%(_OwnerDrawPinnedDependencyHash.ExpectedSha256)'"
+           Text="Pinned OwnerDraw dependency hash mismatch: %(_OwnerDrawPinnedDependencyHash.Identity) expected=%(_OwnerDrawPinnedDependencyHash.ExpectedSha256) actual=%(_OwnerDrawPinnedDependencyHash.FileHash)" />
+  </Target>
+  <Target Name="DeployWindowsPlugin" AfterTargets="AfterBuild"
+          Condition="'$(DeployWindowsPlugin)' != 'false'">
+    <PropertyGroup>
+      <_PluginName>GUIWindows</_PluginName>
+      <_RuntimePluginDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimePluginDir>
+      <_RuntimeCsDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimeCsDir>
+    </PropertyGroup>
+    <RemoveDir Directories="$(_RuntimeCsDir)" Condition="Exists('$(_RuntimeCsDir)')" />
+    <MakeDir Directories="$(_RuntimePluginDir);$(_RuntimeCsDir)" />
+    <Copy SourceFiles="$(TargetDir)Config\config.json" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="$(TargetDir)$(TargetFileName)" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+  </Target>
+  <Target Name="DeployOwnerDrawBridges"
+          AfterTargets="DeployWindowsPlugin"
+          Condition="'$(_OwnerDrawArchitecture)' != '' and '$(DeployOwnerDraw)' != 'false'">
+    <PropertyGroup>
+      <_OwnerDrawTargetDir>$(TargetDir)OwnerDraw\</_OwnerDrawTargetDir>
+    </PropertyGroup>
+    <Error Condition="!Exists('%(_OwnerDrawBridge.Identity)')"
+           Text="OwnerDraw native dependency is missing: %(_OwnerDrawBridge.Identity)" />
+    <RemoveDir Directories="$(_OwnerDrawTargetDir);$(_OwnerDrawRuntimeDir)" />
+    <MakeDir Directories="$(_OwnerDrawTargetDir);$(_OwnerDrawRuntimeDir)" />
+    <Copy SourceFiles="@(_OwnerDrawBridge)"
+          DestinationFolder="$(_OwnerDrawTargetDir)"
+          SkipUnchangedFiles="false" />
+    <Copy SourceFiles="@(_OwnerDrawBridge)"
+          DestinationFolder="$(_OwnerDrawRuntimeDir)"
+          SkipUnchangedFiles="false" />
+  </Target>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+</Project>

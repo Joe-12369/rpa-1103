@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.nlog-project.org/schemas/NLog.xsd NLog.xsd"
+      autoReload="true"
+      throwExceptions="false"
+      internalLogLevel="Off" internalLogFile="c:\temp\nlog-internal.log">
+
+	<!-- optional, add some variables
+  https://github.com/nlog/NLog/wiki/Configuration-file#variables
+  -->
+	<variable name="user" value="default"/>
+
+	<targets async="true">
+		<target name="AppLogger" xsi:type="File" fileName="Logs/${shortdate}/${shortdate}.log"
+	  layout="[${longdate}] [${processid}] [${threadid}] [${level}]: ${message}${newline}${exception}" archiveFileName="Logs/${shortdate}/${shortdate}.{#####}.log" archiveAboveSize="10240000" archiveNumbering="Sequence" maxArchiveFiles="3"/>
+	</targets>
+
+	<!--Trace，Debug，Info，Warn，Error，Fatal-->
+	<rules>
+		<logger name="FactoryLogger" minlevel="Info" writeTo="FactoryLogger" />
+		<logger name="BotLogger" minlevel="Info" writeTo="BotLogger" />
+		<logger name="AppLogger" minlevel="Info" writeTo="AppLogger" />
+	</rules>
+</nlog>

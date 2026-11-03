@@ -1,0 +1,164 @@
+{
+  "BrowserConfigMap": {
+    "hubstudio": {
+      "configType": "Normal",
+      "productName": "hubstudio",
+      "lableName": "指纹浏览器",
+      "browserWndClassNames": [],
+      "titleFeatures": [],
+      "processFeatures": [ "hubstudio" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "eDecker": {
+      "configType": "Normal",
+      "productName": "eDecker",
+      "lableName": "易得客浏览器",
+      "browserWndClassNames": [],
+      "titleFeatures": [],
+      "processFeatures": [ "edecker" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "eDecker6": {
+      "configType": "Normal",
+      "productName": "eDecker6",
+      "lableName": "易得客浏览器",
+      "browserWndClassNames": [],
+      "titleFeatures": [],
+      "processFeatures": [ "edecker" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "Cent Browser": {
+      "configType": "Normal",
+      "productName": "Cent Browser",
+      "lableName": "百分浏览器",
+      "browserWndClassNames": [],
+      "titleFeatures": [],
+      "processFeatures": [ "chrome" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "zhanfubrowser": {
+      "configType": "Normal",
+      "productName": "zhanfubrowser",
+      "lableName": "战斧浏览器",
+      "browserWndClassNames": [],
+      "titleFeatures": [],
+      "processFeatures": [ "zhanfubrowser" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "KuajingVSCore": {
+      "configType": "Normal",
+      "productName": "KuajingVSCore",
+      "lableName": "跨境卫士浏览器",
+      "browserWndClassNames": [],
+      "titleFeatures": [],
+      "processFeatures": [ "KuajingVSCore" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "Kuajingvs": {
+      "configType": "Normal",
+      "productName": "Kuajingvs",
+      "lableName": "跨境卫士浏览器",
+      "browserWndClassNames": [],
+      "titleFeatures": [],
+      "processFeatures": [ "KuajingVSCore" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "360企业安全浏览器": {
+      "configType": "Normal",
+      "productName": "360ent",
+      "lableName": "360企业安全浏览器",
+      "browserWndClassNames": [],
+      "titleFeatures": [],
+      "processFeatures": [ "360ent" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "BitBrowser": {
+      "configType": "Normal",
+      "productName": "BitBrowser",
+      "lableName": "比特浏览器",
+      "browserWndClassNames": [],
+      "titleFeatures": [],
+      "processFeatures": [ "BitBrowser" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "SunBrowser": {
+      "configType": "Normal",
+      "productName": "SunBrowser",
+      "lableName": "AdsPower",
+      "browserWndClassNames": [],
+      "titleFeatures": [],
+      "processFeatures": [ "SunBrowser" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "ziniaobrowser": {
+      "configType": "Normal",
+      "productName": "ziniaobrowser",
+      "lableName": "紫鸟浏览器v6",
+      "browserWndClassNames": [],
+      "titleFeatures": [],
+      "processFeatures": [ "ziniaobrowser" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "江苏公安安全浏览器": {
+      "configType": "Normal",
+      "productName": "江苏公安安全浏览器",
+      "lableName": "江苏公安安全浏览器",
+      "browserWndClassNames": [],
+      "titleFeatures": [],
+      "processFeatures": [
+        "qaxbrowser"
+      ],
+      "renderClassNames": [
+        "Chrome_RenderWidgetHostHWND"
+      ],
+      "IERenderClassNames": [
+        "Internet Explorer_Server"
+      ],
+      "appExePath": ""
+    },
+    "waxiang": {
+      "configType": "Normal",
+      "productName": "waxiang",
+      "lableName": "挖象浏览器",
+      "browserWndClassNames": [],
+      "titleFeatures": [],
+      "processFeatures": [ "waxiang" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "中国海油企业安全浏览器": {
+      "configType": "Normal",
+      "productName": "中国海油企业安全浏览器",
+      "lableName": "中国海油企业安全浏览器",
+      "browserWndClassNames": [],
+      "titleFeatures": [],
+      "processFeatures": [ "360ent" ],
+      "renderClassNames": [ "Chrome_RenderWidgetHostHWND" ],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    }
+  }
+}

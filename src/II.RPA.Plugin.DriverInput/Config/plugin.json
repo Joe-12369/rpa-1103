@@ -1,0 +1,21 @@
+{
+  "name": "DriverInput",
+  "title": "驱动输入功能依赖包",
+  "version": "3.3.5.0",
+  "type": "1",
+  "depend": "7.3.5",
+  "isBasic": 1,
+  "DependRef": [
+    {
+      "name": "CommonDLLBase",
+      "version": "3.3.5.0"
+    },
+    {
+      "name": "Element",
+      "version": "3.3.5.0"
+    }
+  ],
+  "introduction": "为驱动输入提供了底层能力支持",
+  "description": "在使用驱动输入能力时需要依赖此基础组件包。",
+  "releaseTime": 1634054400
+}

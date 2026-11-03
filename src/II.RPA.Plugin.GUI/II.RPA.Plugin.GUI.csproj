@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Plugin.GUI</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.GUI</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>Library</OutputType>
+    
+    <RootNamespace>II.RPA.Plugin.GUI</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.GUI</AssemblyName>
+    
+    
+    <Deterministic>true</Deterministic>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8</LangVersion>
+    
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Trace</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>8</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>8</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\II.RPA.Plugin.Abstractions\II.RPA.Plugin.Abstractions.csproj" />
+    
+    
+    
+    
+    <Reference Include="HIK.Toolkit.WPF.CustomControls">
+      <HintPath>..\libs\HIK.Toolkit.WPF.CustomControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Shell32, Version=1.2.107.0, Culture=neutral">
+      <HintPath>..\libs\Interop.Shell32.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+<Reference Include="System.Management" />
+<Reference Include="System.Runtime.Caching" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AiRepair\AiRepairUtils.cs" />
+    <Compile Include="AiRepair\ElementSceneRecoveryService.cs" />
+    <Compile Include="ConstFields.cs" />
+    <Compile Include="Plugins\OverlayCaptureAbilityBase.cs" />
+    <Compile Include="DataCollection\DataCollectingManager.cs" />
+    <Compile Include="DataCollection\DataTypeConverter\Bool2StateColorConverter.cs" />
+    <Compile Include="DataCollection\DataTypeConverter\Bool2VisibilityConverter.cs" />
+    <Compile Include="DataCollection\DataTypeConverter\MultiValueConverter.cs" />
+    <Compile Include="DataCollection\DataTypeConverter\TrimmedTextBlockVisibilityConverter .cs" />
+    <Compile Include="DataCollection\Utils\ColumnEditHelper.cs" />
+    <Compile Include="DataCollection\Utils\RegexHelper.cs" />
+    <Compile Include="DataCollection\V2\DataCollectingManagerV2.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\Filters\DateAfterFilter.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\Filters\DateBetweenFilter.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\Filters\DateBeforeFilter.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\Filters\NotEndWithFilter.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\Filters\NotStartWithFilter.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\Filters\EndWithFilter.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\Filters\RegularTestFilter.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\Filters\StartWithFilter.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\Filters\NotEmptyFilter.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\Filters\IsEmptyFilter.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\Filters\NotContainFilter.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\Filters\ContainFilter.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\Filters\GreaterEquelFilter.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\Filters\LessEquelFilter.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\Filters\LessThanFilter.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\Filters\GreaterThanFilter.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\Filters\UnequalFilter.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\Filters\EquelFilter.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\IDataFilter.cs" />
+    <Compile Include="DataCollection\V2\DataFilter\DataFilterFactory.cs" />
+    <Compile Include="DataCollection\V2\DataProcessing\ProcessingFactory.cs" />
+    <Compile Include="DataCollection\V2\DataProcessing\processing\RemoveLineBreaksProcessing.cs" />
+    <Compile Include="DataCollection\V2\DataProcessing\processing\ReplaceProcessing.cs" />
+    <Compile Include="DataCollection\V2\DataProcessing\processing\ExtractNumProcessing.cs" />
+    <Compile Include="DataCollection\V2\DataProcessing\processing\FormatTimeProcessing.cs" />
+    <Compile Include="DataCollection\V2\DataProcessing\processing\RegularProcessing.cs" />
+    <Compile Include="DataCollection\V2\DataProcessing\processing\TrimProcessing.cs" />
+    <Compile Include="DataCollection\V2\DataProcessing\processing\SuffixProcessing.cs" />
+    <Compile Include="DataCollection\V2\DataProcessing\processing\PrefixProcessing.cs" />
+    <Compile Include="DataCollection\V2\DataProcessing\IProcessing.cs" />
+    <Compile Include="DataCollection\V2\DataProcessor.cs" />
+    <Compile Include="DataCollection\V2\ViewModels\DLHighLightViewModel.cs" />
+    <Compile Include="DataCollection\V2\Windows\DataCollectHighLightWnd.xaml.cs">
+      <DependentUpon>DataCollectHighLightWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataCollection\ViewModels\CapturePageViewModel.cs" />
+    <Compile Include="DataCollection\ViewModels\DataGridViewModel.cs" />
+    <Compile Include="DataCollection\ViewModels\GlobalData.cs" />
+    <Compile Include="DataCollection\ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="IWshRuntimeLibraryCompatibility.cs" />
+    <Compile Include="DataCollection\ViewModels\MessageHelper.cs" />
+    <Compile Include="DataCollection\ViewModels\ModelBase.cs" />
+    <Compile Include="DataCollection\ViewModels\SingleInstance.cs" />
+    <Compile Include="DataCollection\ViewModels\TableViewModel.cs" />
+    <Compile Include="DataCollection\Windows\DataCollectWnd.xaml.cs">
+      <DependentUpon>DataCollectWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataCollection\Windows\EditColumnHeaderWnd.xaml.cs">
+      <DependentUpon>EditColumnHeaderWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataCollection\Windows\EditRegularExpressWnd.xaml.cs">
+      <DependentUpon>EditRegularExpressWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataCollection\Windows\ErrorMessageWnd.xaml.cs">
+      <DependentUpon>ErrorMessageWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataCollection\Windows\LoadWaitingWnd.xaml.cs">
+      <DependentUpon>LoadWaitingWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataCollection\Windows\PopupHelper.cs" />
+    <Compile Include="DataCollection\Windows\WarningWnd.xaml.cs">
+      <DependentUpon>WarningWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataCollection\Windows\DataCollectOverlayWnd.xaml.cs">
+      <DependentUpon>DataCollectOverlayWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Deeps\Actions\ActionRouter.cs" />
+    <Compile Include="Deeps\Actions\ActionNames.cs" />
+    <Compile Include="Deeps\Actions\ActionInterceptor.cs" />
+    <Compile Include="Deeps\Actions\IActionHandler.cs" />
+    <Compile Include="Deeps\ITreeBuilder.cs" />
+    <Compile Include="Deeps\Models\BuildSelectorDto.cs" />
+    <Compile Include="Deeps\Models\ElementDescendantsDto.cs" />
+    <Compile Include="Deeps\Models\ElementCountDto.cs" />
+    <Compile Include="Deeps\Models\ElementDetailDto.cs" />
+    <Compile Include="Deeps\Highlight\HighlightService.cs" />
+    <Compile Include="Deeps\Highlight\HighlightBorder.cs" />
+    <Compile Include="Deeps\ElementPropertiesProvider.cs" />
+    <Compile Include="Deeps\Models\PayloadDto.cs" />
+    <Compile Include="Deeps\Models\WindowCacheInfo.cs" />
+    <Compile Include="Deeps\Models\WndModel.cs" />
+    <Compile Include="Deeps\Models\ElementPropertyDto.cs" />
+    <Compile Include="Deeps\PushMessageService.cs" />
+    <Compile Include="Deeps\RxTreeBuilder.cs" />
+    <Compile Include="Deeps\ElementCacheService.cs" />
+    <Compile Include="Deeps\IElementService.cs" />
+    <Compile Include="Deeps\Models\BaseAutomationModel.cs" />
+    <Compile Include="Deeps\Models\UiaTreeResultDto.cs" />
+    <Compile Include="Deeps\Models\ElementDto.cs" />
+    <Compile Include="Deeps\Models\ElementExtension.cs" />
+    <Compile Include="Deeps\Models\ElementModel.cs" />
+    <Compile Include="Deeps\Models\MapExtensions.cs" />
+    <Compile Include="Deeps\InspectMode.cs" />
+    <Compile Include="Deeps\DeepInpectService.cs" />
+    <Compile Include="Deeps\Models\ElementReqestDto.cs" />
+    <Compile Include="Deeps\Models\Track.cs" />
+    <Compile Include="Deeps\SelectorBuilder.cs" />
+    <Compile Include="Deeps\TreeBuilder.cs" />
+    <Compile Include="Deeps\TrackService.cs" />
+    <Compile Include="Deeps\ElementService.cs" />
+    <Compile Include="Deeps\Utils.cs" />
+    <Compile Include="Deeps\WndService.cs" />
+    <Compile Include="ElementHighlight\ElementHighLighterParam.cs" />
+    <Compile Include="ElementHighlight\ElementInfoDealHelper.cs" />
+    <Compile Include="ElementHighlight\HighlightPolicy.cs" />
+    <Compile Include="ElementHighlight\ElementHighlighter.cs" />
+    <Compile Include="ElementHighlight\FontIcon.xaml.cs">
+      <DependentUpon>FontIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ElementHighlight\HighlightBorder.cs" />
+    <Compile Include="ElementHighlight\HighlightTag.cs" />
+    <Compile Include="ElementHighlight\HighlightUtils.cs" />
+    <Compile Include="ElementHighlight\HightLightWndHideParam.cs" />
+    <Compile Include="ElementHighlight\KeyboardHelper.cs" />
+    <Compile Include="ElementHighlight\ShowRectsWnd.xaml.cs">
+      <DependentUpon>ShowRectsWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CaptureCVForOcrTableWnd.xaml.cs">
+      <DependentUpon>CaptureCVForOcrTableWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CursorPositionWnd.xaml.cs">
+      <DependentUpon>CursorPositionWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CVScreenWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CVScreenWnd.designer.cs">
+      <DependentUpon>CVScreenWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InspectInfoWnd.xaml.cs">
+      <DependentUpon>InspectInfoWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CaptureScreenWnd.xaml.cs">
+      <DependentUpon>CaptureScreenWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MousePosition.xaml.cs">
+      <DependentUpon>MousePosition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GuiManager.cs" />
+    <Compile Include="GuiExtension.cs" />
+    <Compile Include="HighLight\AiLoadingRect.cs" />
+    <Compile Include="HighLight\HighLightManager.cs" />
+    <Compile Include="HighLight\GuiHighlightService.cs" />
+    <Compile Include="HighLight\HighLightParam.cs" />
+    <Compile Include="HighLight\HighLightAgentWnd.xaml.cs">
+      <DependentUpon>HighLightAgentWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HighLight\HighLightWnd.xaml.cs">
+      <DependentUpon>HighLightWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HighLight\IHighlightWindow.cs" />
+    <Compile Include="HighLight\ViewModels\HLAgentWndViewModel.cs" />
+    <Compile Include="HighLight\ViewModels\HLWndViewModel.cs" />
+    <Compile Include="Params\Base\ParamBase.cs" />
+    <Compile Include="Params\Base\EmptyElementParameter.cs" />
+    <Compile Include="Params\ParamSmartSelectorModel.cs" />
+    <Compile Include="Params\ParamCheckImage.cs" />
+    <Compile Include="Params\ParamDeepModeModel.cs" />
+    <Compile Include="Params\GetSelectorByPointModel.cs" />
+    <Compile Include="Params\GetTargetElementInfoModel.cs" />
+    <Compile Include="Params\ParamCancelCaptureModel.cs" />
+    <Compile Include="Params\ParamCaptureWindowModel.cs" />
+    <Compile Include="Params\ParamChartRpaSpeedModel.cs" />
+    <Compile Include="Params\ParamCheckElementsExistModel.cs" />
+    <Compile Include="Params\ParamClearChatRpaCacheElementModel.cs" />
+    <Compile Include="Params\ParamCyclicSimilarElementConfigModel.cs" />
+    <Compile Include="Params\ParamDataCollectCaptureModel.cs" />
+    <Compile Include="Params\ParamCaptureRenovateModel.cs" />
+    <Compile Include="Params\ParamDataCollectConfigModel.cs" />
+    <Compile Include="Params\ParamDownloaderModel.cs" />
+    <Compile Include="Params\ParamDownloadModel.cs" />
+    <Compile Include="Params\ParamElementExecutejsModel.cs" />
+    <Compile Include="Params\ParamExtractWinndowInfoModel.cs" />
+    <Compile Include="Params\ParamFileUploaderModel.cs" />
+    <Compile Include="Params\ParamGetElementInfoModel.cs" />
+    <Compile Include="Params\ParamGetElementModel.cs" />
+    <Compile Include="Params\ParamGetElementSelectorModel.cs" />
+    <Compile Include="Params\ParamGetAllElementsInWindowModel.cs" />
+    <Compile Include="Params\ParamGetPieChartDataModel.cs" />
+    <Compile Include="Params\ParamGetLineAndBarChartDataModel.cs" />
+    <Compile Include="Params\ParamGetMemoryElementSelectorModel.cs" />
+    <Compile Include="Params\ParamGetSimilarElementListModel.cs" />
+    <Compile Include="Params\ParamHighlightScriptElementModel.cs" />
+    <Compile Include="Params\ParamScreenshotCaptureModel.cs" />
+    <Compile Include="Params\ParamScreenShotExecutorModel.cs" />
+    <Compile Include="Params\ParamScreenShotModel.cs" />
+    <Compile Include="Params\ParamCaptureByRegionModel.cs" />
+    <Compile Include="Params\ParamCaptureCVForOcrTableModel.cs" />
+    <Compile Include="Params\ParamCapturePositionModel.cs" />
+    <Compile Include="Params\ParamCaptureScreenForOcrTableModel.cs" />
+    <Compile Include="Params\ParamCaptureSimilarModel.cs" />
+    <Compile Include="Params\ParamClickTableCellModel.cs" />
+    <Compile Include="Params\ParamDataCollectConfigurationModel.cs" />
+    <Compile Include="Params\ParamDataCollectModel.cs" />
+    <Compile Include="Params\ParamElementScreenshotModel.cs" />
+    <Compile Include="Params\ParamFindRelativeElementsInfoModel.cs" />
+    <Compile Include="Params\ParamGetButtonEnableModel.cs" />
+    <Compile Include="Params\ParamGetCVPriceAmount.cs" />
+    <Compile Include="Params\ParamGetCVTextModel.cs" />
+    <Compile Include="Params\ParamGetElementCheckModel.cs" />
+    <Compile Include="Params\ParamGetElementForOcrTableModel.cs" />
+    <Compile Include="Params\ParamGetElementSelectExModel.cs" />
+    <Compile Include="Params\ParamGetElementSelectModel.cs" />
+    <Compile Include="Params\ParamGetElementSelectorAllModel.cs" />
+    <Compile Include="Params\ParamGetHtmlModel.cs" />
+    <Compile Include="Params\ParamGetImageByCaptureScreenOnApp.cs" />
+    <Compile Include="Params\ParamGetRegionModel.cs" />
+    <Compile Include="Params\ParamGetSiblingsElementsModel.cs" />
+    <Compile Include="Params\ParamGetParentModel.cs" />
+    <Compile Include="Params\ParamGetSubElementsModel.cs" />
+    <Compile Include="Params\ParamGetTableModel.cs" />
+    <Compile Include="Params\ParamGetTextModel.cs" />
+    <Compile Include="Params\ParamIsElementExistModel.cs" />
+    <Compile Include="Params\ParamIsSimilarElementExistModel.cs" />
+    <Compile Include="Params\ParamMouseHoverModel.cs" />
+    <Compile Include="Params\ParamCaptureScreenModel.cs" />
+    <Compile Include="Params\ParamScrollIntoViewIfNeededModel.cs" />
+    <Compile Include="Params\ParamSetAttributeModel.cs" />
+    <Compile Include="Params\ParamSetElementSelectModel_V2.cs" />
+    <Compile Include="Params\ParamSetElementSelectModel.cs" />
+    <Compile Include="Params\ParamSetElementCheckModel.cs" />
+    <Compile Include="Params\ParamSetTextModel.cs" />
+    <Compile Include="Params\ParamProcessCreatorModel.cs" />
+    <Compile Include="Params\ParamSharpUIProviderModel.cs" />
+    <Compile Include="PluginPackage.cs" />
+    <Compile Include="Plugins\CancelCapture.cs" />
+    <Compile Include="Plugins\CaptureForAgent.cs" />
+    <Compile Include="Plugins\CaptureCV.cs" />
+    <Compile Include="Plugins\Capture.cs" />
+    <Compile Include="Config\Configurations.cs" />
+    <Compile Include="Forms\CursorPositionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CursorPositionForm.Designer.cs">
+      <DependentUpon>CursorPositionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InspectorStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InspectorStatusForm.Designer.cs">
+      <DependentUpon>InspectorStatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OverlayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OverlayForm.Designer.cs">
+      <DependentUpon>OverlayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitingWnd.xaml.cs">
+      <DependentUpon>WaitingWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GuiElement.cs" />
+    <Compile Include="Plugins\CaptureByRegion.cs" />
+    <Compile Include="Plugins\CaptureCVForOcrTable.cs" />
+    <Compile Include="Plugins\CapturePosition.cs" />
+    <Compile Include="Plugins\CaptureRenovate.cs" />
+    <Compile Include="Plugins\CaptureScreenForOcrTable.cs" />
+    <Compile Include="Plugins\CaptureWindow.cs" />
+    <Compile Include="Plugins\Chatrpa\CheckElementsExist.cs" />
+    <Compile Include="Plugins\Chatrpa\ClearChatRpaCacheElement.cs" />
+    <Compile Include="Plugins\Chatrpa\CollectRawPageData.cs" />
+    <Compile Include="Plugins\Chatrpa\CyclicSimilarElementConfig.cs" />
+    <Compile Include="Plugins\Chatrpa\DataCollectConfig.cs" />
+    <Compile Include="Plugins\Chatrpa\ExtractWinndowInfo.cs" />
+    <Compile Include="Plugins\Chatrpa\GetElementSelector.cs" />
+    <Compile Include="Plugins\Chatrpa\GetMemoryElementSelector.cs" />
+    <Compile Include="Plugins\Chatrpa\GetTargetElementInfo.cs" />
+    <Compile Include="Plugins\Chatrpa\ScreenshotCapture.cs" />
+    <Compile Include="Plugins\SmartSelector.cs" />
+    <Compile Include="Plugins\GetLineAndBarChartData.cs" />
+    <Compile Include="Plugins\GetPieChartData.cs" />
+    <Compile Include="Plugins\ReleaseGuiResources.cs" />
+    <Compile Include="Plugins\CheckImage.cs" />
+    <Compile Include="Plugins\DeepCapture.cs" />
+    <Compile Include="Plugins\DataCollection\DataCollect_v2.cs" />
+    <Compile Include="Plugins\DataCollection\DataCollectCapture.cs" />
+    <Compile Include="Plugins\Downloader.cs" />
+    <Compile Include="Plugins\FileUploader.cs" />
+    <Compile Include="Plugins\GetElementInfo.cs" />
+    <Compile Include="Plugins\GetElement_V2.cs" />
+    <Compile Include="Plugins\GetElementSelect.cs" />
+    <Compile Include="Plugins\Download.cs" />
+    <Compile Include="Plugins\ElementExecutejs.cs" />
+    <Compile Include="Plugins\GetElement.cs" />
+    <Compile Include="Plugins\GetSelectorByPoint.cs" />
+    <Compile Include="Plugins\GetSimilarElementList.cs" />
+    <Compile Include="Plugins\HighlightScriptElement.cs" />
+    <Compile Include="Plugins\ScreenShotExecutor.cs" />
+    <Compile Include="Plugins\ProcessCreator.cs" />
+    <Compile Include="Plugins\ClickSapTableCell.cs" />
+    <Compile Include="Plugins\DataCollection\v1\DataCollect.cs" />
+    <Compile Include="Plugins\DataCollection\v1\DataCollectConfiguration.cs" />
+    <Compile Include="Plugins\ElementScreenshot.cs" />
+    <Compile Include="Plugins\FindRelativeElementsInfo.cs" />
+    <Compile Include="Plugins\GetAttribute.cs" />
+    <Compile Include="Plugins\GetButtonEnable.cs" />
+    <Compile Include="Plugins\GetCVPriceAmount.cs" />
+    <Compile Include="Plugins\GetCVText.cs" />
+    <Compile Include="Plugins\GetElementCheck.cs" />
+    <Compile Include="Plugins\GetElementForOcrTable.cs" />
+    <Compile Include="Plugins\GetElementSelectEx.cs" />
+    <Compile Include="Plugins\GetElementSelectorAll.cs" />
+    <Compile Include="Plugins\GetHtml.cs" />
+    <Compile Include="Plugins\GetImageByCaptureScreenOnAPP.cs" />
+    <Compile Include="Plugins\GetRegion.cs" />
+    <Compile Include="Plugins\GetSapTableData.cs" />
+    <Compile Include="Plugins\GetSiblingsElements.cs" />
+    <Compile Include="Plugins\GetParent.cs" />
+    <Compile Include="Plugins\GetSubElements.cs" />
+    <Compile Include="Plugins\GetText.cs" />
+    <Compile Include="Plugins\Base\GuiComponentBase.cs" />
+    <Compile Include="Plugins\Base\ElementAbilityBase.cs" />
+    <Compile Include="Plugins\IsElementExist.cs" />
+    <Compile Include="Plugins\IsSimilarElementExist.cs" />
+    <Compile Include="Plugins\MouseClick.cs" />
+    <Compile Include="Params\ParamCaptureModel.cs" />
+    <Compile Include="Params\ParamMouseClickModel.cs" />
+    <Compile Include="Params\ParamGetAttributeModel.cs" />
+    <Compile Include="Plugins\MouseHover.cs" />
+    <Compile Include="Params\ParamCaptureCVModel.cs" />
+    <Compile Include="Plugins\RemoteCapture\StopCapture.cs" />
+    <Compile Include="Plugins\RemoteCapture\RemoteCapture.cs" />
+    <Compile Include="Plugins\CaptureScreen.cs" />
+    <Compile Include="Plugins\ScreenShot.cs" />
+    <Compile Include="Plugins\ScreenShotV2.cs" />
+    <Compile Include="Plugins\ScrollIntoViewIfNeeded.cs" />
+    <Compile Include="Plugins\SetAttribute.cs" />
+    <Compile Include="Plugins\SetElementCheck.cs" />
+    <Compile Include="Plugins\SetElementSelect_V2.cs" />
+    <Compile Include="Plugins\SetElementSelect.cs" />
+    <Compile Include="Plugins\Test.cs" />
+    <Compile Include="Plugins\SetText.cs" />
+    <Compile Include="Plugins\CaptureSimilar.cs" />
+    <Compile Include="Plugins\SharpUIProvider.cs" />
+    <Compile Include="ProcessCreator\ActionPopupWindow.xaml.cs">
+      <DependentUpon>ActionPopupWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessCreator\ActionProvider\ActionPopupViewModel.cs" />
+    <Compile Include="ProcessCreator\ActionProvider\ActionViewModelBase.cs" />
+    <Compile Include="ProcessCreator\ActionProvider\ElementActionProvider.cs" />
+    <Compile Include="ProcessCreator\ActionProvider\InputVarViewModel.cs" />
+    <Compile Include="ProcessCreator\ActionProvider\NotifyTaskCompletion.cs" />
+    <Compile Include="ProcessCreator\ActionProvider\TextToVisiblityConverter.cs" />
+    <Compile Include="ProcessCreator\ActionDataModels.cs" />
+    <Compile Include="ProcessCreator\AttachProperty\BindingProxy.cs" />
+    <Compile Include="ProcessCreator\AttachProperty\PopupFocusBehavior.cs" />
+    <Compile Include="ProcessCreator\AttachProperty\TextBoxAttachedProperties.cs" />
+    <Compile Include="ProcessCreator\AttachProperty\ListBoxItemMouseDownCommand.cs" />
+    <Compile Include="ProcessCreator\Controls\ActionToggleButton.cs" />
+    <Compile Include="ProcessCreator\Controls\BoolToCursorConverter.cs" />
+    <Compile Include="ProcessCreator\Controls\HighlightTextBlock.xaml.cs">
+      <DependentUpon>HighlightTextBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessCreator\Controls\HlContentConverter.cs" />
+    <Compile Include="ProcessCreator\Controls\ItemTextBox.cs" />
+    <Compile Include="ProcessCreator\Controls\OriginCheckBox.cs" />
+    <Compile Include="ProcessCreator\Controls\PasswordTextBox.cs" />
+    <Compile Include="ProcessCreator\Controls\TextChangedCommand.cs" />
+    <Compile Include="ProcessCreator\Controls\VariableDataTemplateSelector.cs" />
+    <Compile Include="ProcessCreator\Controls\VariableItemStyleSelector.cs" />
+    <Compile Include="ProcessCreator\ElementTrack\ConcurrencyPointSet.cs" />
+    <Compile Include="ProcessCreator\ElementTrack\ElementCacheProvider.cs" />
+    <Compile Include="ProcessCreator\LocalDataModels.cs" />
+    <Compile Include="ProcessCreator\IconFontConverter.cs" />
+    <Compile Include="ProcessCreator\Controls\FontIcon.xaml.cs">
+      <DependentUpon>FontIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessCreator\Controls\HoverToggle.xaml.cs">
+      <DependentUpon>HoverToggle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessCreator\Controls\ScanAnimationControl.xaml.cs">
+      <DependentUpon>ScanAnimationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessCreator\Controls\SimplePanel.cs" />
+    <Compile Include="ProcessCreator\ElementAnalyze\Abstract\AnalyzeResult.cs" />
+    <Compile Include="ProcessCreator\ElementAnalyze\AnalyzerAI.cs" />
+    <Compile Include="ProcessCreator\ElementTrack\ElementHighlightTag.cs" />
+    <Compile Include="ProcessCreator\Models\BaseVariableModel.cs" />
+    <Compile Include="ProcessCreator\Models\EventTrackerModel.cs" />
+    <Compile Include="ProcessCreator\Models\RootModel.cs" />
+    <Compile Include="ProcessCreator\Models\RootSource.cs" />
+    <Compile Include="ProcessCreator\Models\RootType.cs" />
+    <Compile Include="ProcessCreator\Models\SubVariableModel.cs" />
+    <Compile Include="ProcessCreator\Models\VariableDataProvider.cs" />
+    <Compile Include="ProcessCreator\Models\VariableModel.cs" />
+    <Compile Include="ProcessCreator\Models\VarTypeModel.cs" />
+    <Compile Include="ProcessCreator\Mvvm\NMCommand.cs" />
+    <Compile Include="ProcessCreator\Mvvm\NMCommandAction.cs" />
+    <Compile Include="ProcessCreator\Screenshot\ShotPolicy.cs" />
+    <Compile Include="ProcessCreator\Screenshot\ImageActionBar.cs" />
+    <Compile Include="ProcessCreator\ElementAnalyze\AnalyzerSlimDefault.cs" />
+    <Compile Include="ProcessCreator\Screenshot\ImageTracker.cs" />
+    <Compile Include="ProcessCreator\Theme\Converters.cs" />
+    <Compile Include="ProcessCreator\Theme\DataTemplateKeyConverter.cs" />
+    <Compile Include="ProcessCreator\Theme\LogicItemTemplateSelector.cs" />
+    <Compile Include="ProcessCreator\SomeUtils.cs" />
+    <Compile Include="ProcessCreator\SomeExtensions.cs" />
+    <Compile Include="ProcessCreator\Controls\Arc.cs" />
+    <Compile Include="ProcessCreator\Controls\ProgressThicknessConverter.cs" />
+    <Compile Include="ProcessCreator\Controls\ProgressRing.cs" />
+    <Compile Include="ProcessCreator\ElementAnalyze\Abstract\AnalyzerBase.cs" />
+    <Compile Include="ProcessCreator\ElementAnalyze\AnalyzerForInput.cs" />
+    <Compile Include="ProcessCreator\ElementAnalyze\AnalyzerForNativeDefault.cs" />
+    <Compile Include="ProcessCreator\ElementAnalyze\AnalyzerForDeskTopApp.cs" />
+    <Compile Include="ProcessCreator\ElementAnalyze\AnalyzerForExplorer.cs" />
+    <Compile Include="ProcessCreator\ElementAnalyze\AnalyzerForWeb.cs" />
+    <Compile Include="ProcessCreator\ElementAnalyze\AnalyzerForWindows.cs" />
+    <Compile Include="ProcessCreator\ElementAnalyze\AnalyzerContainer.cs" />
+    <Compile Include="ProcessCreator\ElementAnalyze\AnalyzerForBrowserAddressBar.cs" />
+    <Compile Include="ProcessCreator\ElementAnalyze\AnalyzerForCv.cs" />
+    <Compile Include="ProcessCreator\ElementAnalyze\Abstract\IAnalyzer.cs" />
+    <Compile Include="ProcessCreator\AttachProperty\ControlAttachProperty.cs" />
+    <Compile Include="ProcessCreator\Models.cs" />
+    <Compile Include="ProcessCreator\Controls\SearchComboBoxSetting.cs" />
+    <Compile Include="ProcessCreator\Controls\SearchComboBox.xaml.cs">
+      <DependentUpon>SearchComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessCreator\Controls\TFButton.xaml.cs">
+      <DependentUpon>TFButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessCreator\ElementTrack\ConcurrencyItemContainer.cs" />
+    <Compile Include="ProcessCreator\ElementTrack\ElementHighlighter.cs" />
+    <Compile Include="ProcessCreator\ElementTrack\ElementHighlightBorder.cs" />
+    <Compile Include="ProcessCreator\ElementTrack\ElementTracker.cs" />
+    <Compile Include="ProcessCreator\Screenshot\CaptureWindow.xaml.cs">
+      <DependentUpon>CaptureWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessCreator\Screenshot\ScreenHelper.cs" />
+    <Compile Include="ProcessCreator\Screenshot\ImageHelper.cs" />
+    <Compile Include="ProcessCreator\Screenshot\MainImage.cs" />
+    <Compile Include="ProcessCreator\Screenshot\ZoomThumb.cs" />
+    <Compile Include="ProcessCreator\Screenshot\DataContextModel.cs" />
+    <Compile Include="ProcessCreator\Theme\MenuItemTemplateSelector.cs" />
+    <Compile Include="ProcessCreator\CaptureCursorWindow.xaml.cs">
+      <DependentUpon>CaptureCursorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessCreator\ZbrainService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoteCaptureManager.cs" />
+    <Compile Include="ScreenShot\ImageDataProvider.cs" />
+    <Compile Include="ScreenShot\ElementShoter.cs" />
+    <Compile Include="ScreenShot\Interop.cs" />
+    <Compile Include="ScreenShot\ScreenShoter.cs" />
+    <Compile Include="ScreenShot\ScreenshotWindow.cs" />
+    <Compile Include="ScreenShot\SimplePanel.cs" />
+    <Compile Include="ScreenShot\TipElement.cs" />
+    <Compile Include="Tasks\CaptureTask.cs" />
+    <Compile Include="Tasks\CaptureTickExceptionLog.cs" />
+    <Compile Include="Tasks\CaptureTaskStopedException.cs" />
+    <Compile Include="Tasks\CVCaptureTask.cs" />
+    <Compile Include="Tasks\DataCollectingCaptureTask.cs" />
+    <Compile Include="Tasks\DataCollectingCaptureTaskV2.cs" />
+    <Compile Include="Tasks\OrdinaryCaptureTask.cs" />
+    <Compile Include="Tasks\OverlayFormCaptureTask.cs" />
+    <Compile Include="Tasks\WindowCaptureTask.cs" />
+    <Compile Include="UIProviders\Controls\IconControl.cs" />
+    <Compile Include="UIProviders\ScanAnimation\ScanAnimationWindow.xaml.cs">
+      <DependentUpon>ScanAnimationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIProviders\Tips\DesktopToolDialog.xaml.cs">
+      <DependentUpon>DesktopToolDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIProviders\Tips\TipLevel.cs" />
+    <Compile Include="UIProviders\Tips\TipWindow.xaml.cs">
+      <DependentUpon>TipWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIProviders\UIProvider.cs" />
+    <Compile Include="Utils\ElementProvider.cs" />
+    <Compile Include="Utils\ForegroundWinUtils.cs" />
+    <Compile Include="Utils\GuiOperatorProvider.cs" />
+    <Compile Include="Utils\MemoryCacheManager.cs" />
+    <Compile Include="Utils\PointDiffrence.cs" />
+    <Compile Include="Utils\ZbrainAPIService.cs" />
+    <Compile Include="Windows\ViewModels\WindowHighLightViewModel.cs" />
+    <Compile Include="Windows\WindowCaptureManager.cs" />
+    <Compile Include="Windows\WindowHighLightWnd.xaml.cs">
+      <DependentUpon>WindowHighLightWnd.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlaUI.Core\FlaUI.Core.csproj" />
+    <ProjectReference Include="..\FlaUI.UIA2\FlaUI.UIA2.csproj" />
+    <ProjectReference Include="..\FlaUI.UIA3\FlaUI.UIA3.csproj" />
+    <ProjectReference Include="..\Gma.UserActivityMonitor\Gma.UserActivityMonitor.csproj" />
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.GUI.Commons\II.RPA.Plugin.GUI.Commons.csproj" />
+    <ProjectReference Include="..\II.RPA.WebBrowser.Common\II.RPA.WebBrowser.Common.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAPI\II.RPA.WinAPI.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="aero_working.ani">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="app.config" />
+    <None Include="Config\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    
+    <None Include="Config\plugin.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Styles\FactoryFont\iconfont.json" />
+    <Resource Include="Styles\FactoryFont\iconfont.ttf" />
+    <None Include="Styles\FactoryFont\iconfont1.json" />
+    <Resource Include="Styles\FactoryFont\iconfont1.ttf" />
+    <Resource Include="ProcessCreator\Theme\DIN-PRO-Bold.ttf" />
+    <Resource Include="ProcessCreator\Theme\component\iconfont.ttf" />
+    <Resource Include="ProcessCreator\Theme\iconfont.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\CursorPositionForm.resx">
+      <DependentUpon>CursorPositionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CVScreenWnd.resx">
+      <DependentUpon>CVScreenWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InspectorStatusForm.resx">
+      <DependentUpon>InspectorStatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OverlayForm.resx">
+      <DependentUpon>OverlayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="DataCollection\Resources\ColumnHeaderOriginStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataCollection\Resources\CommonStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataCollection\Resources\CommonTextBoxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataCollection\Resources\DefaultTextToolTips.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataCollection\Resources\MyDataGridStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataCollection\Resources\MyTooltipStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataCollection\Resources\SVGResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataCollection\Resources\TextResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataCollection\V2\Windows\DataCollectHighLightWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataCollection\Windows\DataCollectWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataCollection\Windows\EditColumnHeaderWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataCollection\Windows\EditRegularExpressWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataCollection\Windows\ErrorMessageWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataCollection\Windows\LoadWaitingWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataCollection\Windows\WarningWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataCollection\Windows\DataCollectOverlayWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ElementHighlight\FontIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ElementHighlight\HighlightStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ElementHighlight\ShowRectsWnd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\CaptureCVForOcrTableWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\CursorPositionWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\IIDefaultStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\InspectInfoWnd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\CaptureScreenWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\MousePosition.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\WaitingWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HighLight\HighLightAgentWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HighLight\HighLightWnd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProcessCreator\ActionPopupWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProcessCreator\Controls\PasswordTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProcessCreator\Controls\FontIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProcessCreator\Controls\HighlightTextBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProcessCreator\Controls\HoverToggle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProcessCreator\Controls\ItemTextBoxDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProcessCreator\Controls\OriginCheckBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProcessCreator\Controls\ProgressRing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProcessCreator\Controls\ScanAnimationControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProcessCreator\Controls\SearchComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProcessCreator\Controls\TFButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProcessCreator\Screenshot\CaptureWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProcessCreator\Theme\ActionDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProcessCreator\Theme\ColorDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProcessCreator\Theme\ElementHighlightDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProcessCreator\Theme\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProcessCreator\Theme\StyleDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProcessCreator\Theme\SvgDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProcessCreator\Theme\VariableStyleDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProcessCreator\CaptureCursorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ScreenShot\Style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIProviders\Controls\IconControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIProviders\ScanAnimation\ScanAnimationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIProviders\Tips\DesktopToolDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIProviders\Tips\TipWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\WindowHighLightWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\loading.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Resource Include="DataCollection\Assets\Images\ArrowDown.png" />
+    <Resource Include="DataCollection\Assets\Images\ArrowUp.png" />
+    <Resource Include="DataCollection\Assets\Images\captureElement.png" />
+    <Resource Include="DataCollection\Assets\Images\close.png" />
+    <Resource Include="DataCollection\Assets\Images\DeExpand.png" />
+    <Resource Include="DataCollection\Assets\Images\Delete.png" />
+    <Resource Include="DataCollection\Assets\Images\DeleteHover.png" />
+    <Resource Include="DataCollection\Assets\Images\Drag.png" />
+    <Resource Include="DataCollection\Assets\Images\edit.png" />
+    <Resource Include="DataCollection\Assets\Images\EditHover.png" />
+    <Resource Include="DataCollection\Assets\Images\End.png" />
+    <Resource Include="DataCollection\Assets\Images\Expand.png" />
+    <Resource Include="DataCollection\Assets\Images\Help.png" />
+    <Resource Include="DataCollection\Assets\Images\HelpHover.png" />
+    <Resource Include="DataCollection\Assets\Images\hint_window_close_click.png" />
+    <Resource Include="DataCollection\Assets\Images\hint_window_close_hover.png" />
+    <Resource Include="DataCollection\Assets\Images\hint_window_close_normal.png" />
+    <Resource Include="DataCollection\Assets\Images\icon_arrow_click.png" />
+    <Resource Include="DataCollection\Assets\Images\icon_arrow_normal.png" />
+    <Resource Include="DataCollection\Assets\Images\icon_CloseButton.png" />
+    <Resource Include="DataCollection\Assets\Images\icon_Helper.png" />
+    <Resource Include="DataCollection\Assets\Images\icon_HelperHover.png" />
+    <Resource Include="DataCollection\Assets\Images\icon_loading.png" />
+    <Resource Include="DataCollection\Assets\Images\icon_ng.png" />
+    <Resource Include="DataCollection\Assets\Images\icon_ok.png" />
+    <Resource Include="DataCollection\Assets\Images\icon_question.png" />
+    <Resource Include="DataCollection\Assets\Images\icon_warn.png" />
+    <Resource Include="DataCollection\Assets\Images\ic_nav_close_normal.png" />
+    <Resource Include="DataCollection\Assets\Images\ic_toast_error_s.png" />
+    <Resource Include="DataCollection\Assets\Images\ic_toast_notice_s.png" />
+    <Resource Include="DataCollection\Assets\Images\ic_toast_question_s.png" />
+    <Resource Include="DataCollection\Assets\Images\ic_toast_success_s.png" />
+    <Resource Include="DataCollection\Assets\Images\maxsize.png" />
+    <Resource Include="DataCollection\Assets\Images\normalWnd.png" />
+    <Resource Include="DataCollection\Assets\Images\normalWndB.png" />
+    <Resource Include="DataCollection\Assets\Images\popButtom.png" />
+    <Resource Include="DataCollection\Assets\Images\popButtomB.png" />
+    <Resource Include="DataCollection\Assets\Images\restore.png" />
+    <Resource Include="DataCollection\Assets\Images\SD_CaptureElement.png" />
+    <Resource Include="DataCollection\Assets\Images\SD_Delete.png" />
+    <Resource Include="DataCollection\Assets\Images\SD_Edit.png" />
+    <Resource Include="DataCollection\Assets\Images\TitleIcon.png" />
+    <EmbeddedResource Include="DataCollection\Windows\DualBall.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Resource Include="DataCollection\Assets\Images\TurnPageDefultImg.png" />
+    <Resource Include="DataCollection\Assets\Images\Refresh.png" />
+    <Resource Include="DataCollection\Assets\Images\RefreshHover.png" />
+    <Resource Include="DataCollection\Assets\Images\InitPicture.png" />
+    <Resource Include="DataCollection\Assets\SvgIcon\ArrowDown.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\ArrowUp.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\Capture.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\CaptureActive.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\Close.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\Delete.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\DeleteActive.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\Edit.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\EditActive.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\WindowMaxize.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\Refresh.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\RefreshActive.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\Warning.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\WindowButtom.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\WindowButtomActive.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\WindowInit.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\WindowInitActive.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\WindowNormal.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\DeleteWhite.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\EditWhite.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\Helper.svg" />
+    <Resource Include="DataCollection\Assets\SvgIcon\HelperActive.svg" />
+    <EmbeddedResource Include="DataCollection\Assets\Images\TurnPageDefultImg_Embedded.png" />
+    <Resource Include="ProcessCreator\Theme\Images\click.png" />
+    <Resource Include="ProcessCreator\Theme\Images\drag.png" />
+    <Resource Include="ProcessCreator\Theme\Images\input.png" />
+    <Resource Include="ProcessCreator\Theme\Images\keyboard.png" />
+    <Resource Include="ProcessCreator\Theme\Images\mouse.png" />
+    <Resource Include="ProcessCreator\Theme\Images\text.png" />
+    <Resource Include="ProcessCreator\Theme\Images\元素点击.png" />
+    <Resource Include="ProcessCreator\Theme\Images\文本输入.png" />
+    <Resource Include="ProcessCreator\Theme\Images\模拟键盘.png" />
+    <Resource Include="ProcessCreator\Theme\Images\获取文本.png" />
+    <Resource Include="ProcessCreator\Theme\Images\鼠标拖拽.png" />
+    <Resource Include="ProcessCreator\Theme\Images\鼠标点击.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-chazhaotuxiang.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-chuangkouzuidahua.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-dakaiexcel.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-dakaiwendang.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-dakaiwenjianjia.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-dengdaituxiang.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-dianjijiemianyuansu.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-dianjitupian.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-excelguanbi.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-excelxinjian.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-fuzhiwenjian.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-gouxuankuangcaozuo.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-guanbichuangkou.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-guanbiwendang.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-guanbiyingyongchengxu.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-gundongyemian.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-huoquchuangkou.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-huoquexcellujing.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-huoqugundongtiaoweizhi.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-huoqujiemianyuansuwenben.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-huoquwangyeyuansushuxing.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-huoquwendanglujing.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-huoquyuansuzuobiao.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-huoquziyuansu.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-jiangwenbentianjiadaojianqieban.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-jianpanmonianjian.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-jicixunhuanfor.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-jihuochuangkou.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-panduantuxiangcunzai.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-panduanyuansucunzai.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-qidongyingyongchengxu.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-shezhichuangkou.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-shezhigundongtiaoweizhi.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-shubiaodianji.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-shubiaogundong.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-shubiaotuozhuai.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-shujucaiji.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-shurumima.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-shuruwenbenkuang.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-tongyongwenzishibie.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-xialakuangcaozuo.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-xinjianword.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-xunhuanxiangsiyuansu.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-yidongdaotuxiang.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-yidongshubiao.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-yidongwenjianjia.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-zhongmingmingwenjian.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-default.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-shubiaoyidongdaoyuansushang.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-dengdaiyuansu.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-dakaiwangye.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-login.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-tuxiangOCRshibiehanzuobiao.png" />
+    <Resource Include="ProcessCreator\Theme\Images\icon-shujuchuli.png" />
+    <Content Include="README .txt" />
+  </ItemGroup>
+  <ItemGroup />
+  
+  <!-- Target 鏇夸唬 PostBuildEvent锛欳opy 澶辫触鍗崇敓鎴愬け璐ワ紱涓嶅啀閮ㄧ讲 plugin_ja-JP.json -->
+  <Target Name="DeployGUIPlugin" AfterTargets="AfterBuild">
+    <PropertyGroup>
+      <_PluginName>Element</_PluginName>
+      <_RuntimePluginDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimePluginDir>
+      <_RuntimeCsDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimeCsDir>
+    </PropertyGroup>
+    <RemoveDir Directories="$(_RuntimeCsDir)" Condition="Exists('$(_RuntimeCsDir)')" />
+    <MakeDir Directories="$(_RuntimePluginDir);$(_RuntimeCsDir)" />
+    <Copy SourceFiles="$(TargetDir)Config\config.json" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <ItemGroup>
+      <_MainOutput Include="$(TargetDir)$(TargetName).*" />
+      <_RuntimeDeps Include="$(TargetDir)Fluent.*" />
+      <_RuntimeDeps Include="$(TargetDir)SuperSocket.*" />
+      <_RuntimeDeps Include="$(TargetDir)FlaUI.*" />
+      <_RuntimeDeps Include="$(TargetDir)Interop.UIAutomationClient.*" />
+      <_RuntimeDeps Include="$(TargetDir)WpfAnimatedGif.*" />
+      <_RuntimeDeps Include="$(TargetDir)AForge.*" />
+      <_RuntimeDeps Include="$(TargetDir)HIK.Toolkit.WPF.CustomControls.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_MainOutput)" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="@(_RuntimeDeps)" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="$(TargetDir)aero_working.ani" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="$(TargetDir)PinYinConverterCore.dll" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+  </Target>
+  <ItemGroup>
+    <PackageReference Include="AForge" Version="2.2.5" />
+    <PackageReference Include="AForge.Imaging" Version="2.2.5" />
+    <PackageReference Include="AForge.Math" Version="2.2.5" />
+    <PackageReference Include="Expression.Blend.Sdk.WPF" Version="1.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="PinYinConverterCore" Version="1.0.2" />
+    <PackageReference Include="SharpVectors" Version="1.7.7" />
+    <PackageReference Include="System.Management" Version="8.0.0" />
+    <PackageReference Include="System.Reactive" Version="6.0.1" />
+    <PackageReference Include="System.Reactive.Core" Version="5.0.0" />
+    <PackageReference Include="System.Reactive.Interfaces" Version="5.0.0" />
+    <PackageReference Include="System.Reactive.Linq" Version="5.0.0" />
+    <PackageReference Include="System.Reactive.PlatformServices" Version="5.0.0" />
+    <PackageReference Include="System.Reactive.Windows.Threading" Version="5.0.0" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+<PackageReference Include="Microsoft.PowerShell.SDK" Version="7.4.6" />
+    <PackageReference Include="System.Runtime.Caching" Version="8.0.1" />
+</ItemGroup>
+</Project>
+
+
+
+
+
+
+
+

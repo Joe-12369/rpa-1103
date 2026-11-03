@@ -1,0 +1,5891 @@
+[
+    {
+        "name": "custom",
+        "label": "代码组件",
+        "icon": "icon-zijianzujian",
+        "isTop": true,
+        "searchContent": {
+            "label": {
+                "character": "代码组件",
+                "firstLetter": "dmzj",
+                "allLetter": [
+                    "dai",
+                    "ma",
+                    "zu",
+                    "jian"
+                ]
+            }
+        },
+        "components": [],
+        "bgComponents": [],
+        "mobileComponents": []
+    },
+    {
+        "name": "task_component",
+        "label": "自建组件",
+        "icon": "icon-zujian2x",
+        "isTop": true,
+        "searchContent": {
+            "label": {
+                "character": "自建组件",
+                "firstLetter": "zjzj",
+                "allLetter": [
+                    "zi",
+                    "jian",
+                    "zu",
+                    "jian"
+                ]
+            }
+        },
+        "components": [],
+        "bgComponents": [],
+        "mobileComponents": []
+    },
+    {
+        "name": "download-extension",
+        "label": "扩展组件",
+        "icon": "icon-RPAzujian",
+        "isTop": true,
+        "searchContent": {
+            "label": {
+                "character": "扩展组件",
+                "firstLetter": "kzzj",
+                "allLetter": [
+                    "kuo",
+                    "zhan",
+                    "zu",
+                    "jian"
+                ]
+            }
+        },
+        "components": [],
+        "bgComponents": [],
+        "mobileComponents": []
+    },
+    {
+        "name": "mobile",
+        "label": "手机自动化",
+        "icon": "icon-shoujizidonghua",
+        "isTop": true,
+        "children": [
+            {
+                "name": "connect_mobile",
+                "label": "手机连接",
+                "icon": "icon-shoujilianjie",
+                "searchContent": {
+                    "label": {
+                        "character": "手机连接",
+                        "firstLetter": "sjlj",
+                        "allLetter": [
+                            "shou",
+                            "ji",
+                            "lian",
+                            "jie"
+                        ]
+                    }
+                },
+                "components": [],
+                "bgComponents": [],
+                "mobileComponents": [
+                    "Mobile_ConnectPhone",
+                    "Mobile_GetPhoneInfomation",
+                    "Mobile_ClosePhone"
+                ]
+            }
+        ],
+        "searchContent": {
+            "label": {
+                "character": "手机自动化",
+                "firstLetter": "sjzdh",
+                "allLetter": [
+                    "shou",
+                    "ji",
+                    "zi",
+                    "dong",
+                    "hua"
+                ]
+            }
+        },
+        "components": [],
+        "bgComponents": [],
+        "mobileComponents": [
+            "Mobile_ClickLocation",
+            "Mobile_TouchSlide",
+            "Mobile_ScreenShot",
+            "Mobile_ElementClick",
+            "Mobile_ElementShot",
+            "Mobile_ClickButton",
+            "Mobile_GetScreenOrientation",
+            "Mobile_SetScreenOrientation",
+            "Mobile_GetChildren",
+            "Mobile_GetText",
+            "Mobile_GetAttribute",
+            "Mobile_SetInput",
+            "Mobile_GetClipboardText",
+            "Mobile_SetClipboardText",
+            "Mobile_GetPhoneFiles",
+            "Mobile_SaveFilePhone",
+            "Mobile_Call",
+            "Mobile_MobileCvClick",
+            "Mobile_MobileCvSetText",
+            "Mobile_MobileSetText",
+            "loop_similar_elements_mobile"
+        ]
+    },
+    {
+        "name": "connect_mobile",
+        "label": "手机连接",
+        "icon": "icon-shoujilianjie",
+        "searchContent": {
+            "label": {
+                "character": "手机连接",
+                "firstLetter": "sjlj",
+                "allLetter": [
+                    "shou",
+                    "ji",
+                    "lian",
+                    "jie"
+                ]
+            }
+        },
+        "components": [],
+        "bgComponents": [],
+        "mobileComponents": [
+            "Mobile_ConnectPhone",
+            "Mobile_GetPhoneInfomation",
+            "Mobile_ClosePhone"
+        ]
+    },
+    {
+        "name": "IPA_Chatbot",
+        "label": "AI扩展能力",
+        "icon": "icon-yingyongjichuzujian",
+        "isTop": true,
+        "searchContent": {
+            "label": {
+                "character": "ai扩展能力",
+                "firstLetter": "aikznl",
+                "allLetter": [
+                    "a",
+                    "i",
+                    "kuo",
+                    "zhan",
+                    "nai",
+                    "li"
+                ]
+            }
+        },
+        "components": [],
+        "bgComponents": [],
+        "mobileComponents": []
+    },
+    {
+        "name": "logical_judgment",
+        "label": "逻辑判断",
+        "icon": "icon-luojikongzhi",
+        "isTop": true,
+        "searchContent": {
+            "label": {
+                "character": "逻辑判断",
+                "firstLetter": "ljpd",
+                "allLetter": [
+                    "luo",
+                    "ji",
+                    "pan",
+                    "duan"
+                ]
+            }
+        },
+        "components": [
+            "logic_control_if_else",
+            "logic_control_if_file",
+            "logic_control_if_file_path",
+            "hidden_components_folder",
+            "Basic_IsArray",
+            "Basic_IsNull",
+            "Basic_IsDictionary",
+            "Basic_IsNumber",
+            "logic_control_if_element",
+            "logic_control_if_image"
+        ],
+        "bgComponents": [
+            "logic_control_if_else",
+            "logic_control_if_file",
+            "logic_control_if_file_path",
+            "hidden_components_folder",
+            "Basic_IsArray",
+            "Basic_IsNull",
+            "Basic_IsDictionary",
+            "Basic_IsNumber",
+            "logic_control_if_element",
+            "logic_control_if_image"
+        ],
+        "mobileComponents": [
+            "logic_control_if_else",
+            "logic_control_if_file",
+            "logic_control_if_file_path",
+            "hidden_components_folder",
+            "Basic_IsArray",
+            "Basic_IsNull",
+            "Basic_IsDictionary",
+            "Basic_IsNumber"
+        ]
+    },
+    {
+        "name": "loop_repeat",
+        "label": "循环重复",
+        "icon": "icon-xunhuanchongfu",
+        "isTop": true,
+        "searchContent": {
+            "label": {
+                "character": "循环重复",
+                "firstLetter": "xhzf",
+                "allLetter": [
+                    "xun",
+                    "huan",
+                    "chong",
+                    "fu"
+                ]
+            }
+        },
+        "components": [],
+        "bgComponents": [],
+        "mobileComponents": []
+    },
+    {
+        "name": "process_control",
+        "label": "流程控制",
+        "icon": "icon-liuchengtu",
+        "isTop": true,
+        "searchContent": {
+            "label": {
+                "character": "流程控制",
+                "firstLetter": "lckz",
+                "allLetter": [
+                    "liu",
+                    "cheng",
+                    "kong",
+                    "zhi"
+                ]
+            }
+        },
+        "components": [
+            "logic_control_if_v1",
+            "logic_control_else_if_v1",
+            "logic_control_else",
+            "logic_control_while_v1",
+            "logic_control_if",
+            "logic_control_if_new",
+            "logic_control_else_if",
+            "logic_control_else_if_new",
+            "logic_control_count_for",
+            "logic_control_while",
+            "logic_control_while_new",
+            "logic_control_next_for",
+            "logic_control_break_for",
+            "logic_control_try_catch",
+            "logic_control_stop",
+            "logic_control_stop_return",
+            "process_remark",
+            "child_process"
+        ],
+        "bgComponents": [
+            "logic_control_if_v1",
+            "logic_control_else_if_v1",
+            "logic_control_else",
+            "logic_control_while_v1",
+            "logic_control_if",
+            "logic_control_if_new",
+            "logic_control_else_if",
+            "logic_control_else_if_new",
+            "logic_control_count_for",
+            "logic_control_while",
+            "logic_control_while_new",
+            "logic_control_next_for",
+            "logic_control_break_for",
+            "logic_control_try_catch",
+            "logic_control_stop",
+            "logic_control_stop_return",
+            "process_remark",
+            "child_process"
+        ],
+        "mobileComponents": [
+            "logic_control_if_v1",
+            "logic_control_else_if_v1",
+            "logic_control_else",
+            "logic_control_while_v1",
+            "logic_control_if",
+            "logic_control_if_new",
+            "logic_control_else_if",
+            "logic_control_else_if_new",
+            "logic_control_count_for",
+            "logic_control_while",
+            "logic_control_next_for",
+            "logic_control_break_for",
+            "logic_control_try_catch",
+            "logic_control_stop",
+            "logic_control_stop_return",
+            "process_remark",
+            "child_process"
+        ]
+    },
+    {
+        "name": "base_command",
+        "label": "代码命令",
+        "icon": "icon-jichumingling",
+        "isTop": true,
+        "searchContent": {
+            "label": {
+                "character": "代码命令",
+                "firstLetter": "dmml",
+                "allLetter": [
+                    "dai",
+                    "ma",
+                    "ming",
+                    "ling"
+                ]
+            }
+        },
+        "components": [
+            "main",
+            "base_command_custom",
+            "logic_control_var",
+            "label",
+            "text",
+            "textArea",
+            "code",
+            "radio",
+            "radioLeft",
+            "screenShot",
+            "screenRegion",
+            "captureSimilarElements",
+            "captureSimilarElementsWithPhone",
+            "selectUi",
+            "phoneSelector",
+            "phoneSelectorCv",
+            "cvselectUi",
+            "screenshotSelectUi",
+            "uiselectorOcr",
+            "uiwindowselector",
+            "selectFile",
+            "dropDownSelect",
+            "dropDownSelect1",
+            "multipleDropDownSelect",
+            "mobileDeviceDropDownSelect",
+            "crawlData",
+            "multiInput",
+            "customModal",
+            "customModalV4",
+            "encryption",
+            "link",
+            "dependency",
+            "databaseConfig",
+            "dataService",
+            "USBGetComs",
+            "mouseRecord",
+            "mouseRecordPhone",
+            "collectData",
+            "batchIncrease",
+            "mergePdfFile",
+            "hidden",
+            "QRCode",
+            "itemGroup",
+            "rangeInput",
+            "number",
+            "inputNumber",
+            "checkbox",
+            "customDialogVarName",
+            "comboSelector",
+            "brainTeamplate",
+            "setCheck",
+            "keyboardInput",
+            "buttonGroup",
+            "placementCheckbox",
+            "textarea",
+            "unitInput",
+            "checkBoxGroup",
+            "movingSpeed",
+            "colorPicker",
+            "excelRule",
+            "clickPosition",
+            "radioGroup",
+            "customRenderDropdown",
+            "multipleTextArea",
+            "makeOcrTableSelector",
+            "chooseRegion",
+            "collectDataSelector",
+            "checkCode",
+            "logInput",
+            "variableAssignment",
+            "jsonEditor",
+            "webhookTestBtn",
+            "quillInput",
+            "oracleConnection",
+            "textAndCheckbox",
+            "mailSelection",
+            "multifile",
+            "Basic_Delay",
+            "Basic_Type",
+            "Basic_JudgeDataType",
+            "Basic_Rnd",
+            "Basic_Clone",
+            "Basic_Dodecryption",
+            "Basic_DebugOutput",
+            "Log_Error",
+            "Log_Info"
+        ],
+        "bgComponents": [
+            "main",
+            "base_command_custom",
+            "logic_control_var",
+            "label",
+            "text",
+            "textArea",
+            "code",
+            "radio",
+            "radioLeft",
+            "screenShot",
+            "screenRegion",
+            "captureSimilarElements",
+            "captureSimilarElementsWithPhone",
+            "selectUi",
+            "phoneSelector",
+            "phoneSelectorCv",
+            "cvselectUi",
+            "screenshotSelectUi",
+            "uiselectorOcr",
+            "uiwindowselector",
+            "selectFile",
+            "dropDownSelect",
+            "dropDownSelect1",
+            "multipleDropDownSelect",
+            "mobileDeviceDropDownSelect",
+            "crawlData",
+            "multiInput",
+            "customModal",
+            "customModalV4",
+            "encryption",
+            "link",
+            "dependency",
+            "databaseConfig",
+            "dataService",
+            "USBGetComs",
+            "mouseRecord",
+            "mouseRecordPhone",
+            "collectData",
+            "batchIncrease",
+            "mergePdfFile",
+            "hidden",
+            "QRCode",
+            "itemGroup",
+            "rangeInput",
+            "number",
+            "inputNumber",
+            "checkbox",
+            "customDialogVarName",
+            "comboSelector",
+            "brainTeamplate",
+            "setCheck",
+            "keyboardInput",
+            "buttonGroup",
+            "placementCheckbox",
+            "textarea",
+            "unitInput",
+            "checkBoxGroup",
+            "movingSpeed",
+            "colorPicker",
+            "excelRule",
+            "clickPosition",
+            "radioGroup",
+            "customRenderDropdown",
+            "multipleTextArea",
+            "makeOcrTableSelector",
+            "chooseRegion",
+            "collectDataSelector",
+            "checkCode",
+            "logInput",
+            "variableAssignment",
+            "jsonEditor",
+            "webhookTestBtn",
+            "quillInput",
+            "oracleConnection",
+            "textAndCheckbox",
+            "mailSelection",
+            "multifile",
+            "Basic_Delay",
+            "Basic_Type",
+            "Basic_JudgeDataType",
+            "Basic_Rnd",
+            "Basic_Clone",
+            "Basic_Dodecryption",
+            "Basic_DebugOutput",
+            "Log_Error",
+            "Log_Info"
+        ],
+        "mobileComponents": [
+            "main",
+            "base_command_custom",
+            "logic_control_var",
+            "label",
+            "text",
+            "textArea",
+            "code",
+            "radio",
+            "radioLeft",
+            "screenShot",
+            "screenRegion",
+            "captureSimilarElements",
+            "captureSimilarElementsWithPhone",
+            "selectUi",
+            "phoneSelector",
+            "phoneSelectorCv",
+            "cvselectUi",
+            "screenshotSelectUi",
+            "uiselectorOcr",
+            "uiwindowselector",
+            "selectFile",
+            "dropDownSelect",
+            "dropDownSelect1",
+            "multipleDropDownSelect",
+            "mobileDeviceDropDownSelect",
+            "crawlData",
+            "multiInput",
+            "customModal",
+            "customModalV4",
+            "encryption",
+            "link",
+            "dependency",
+            "databaseConfig",
+            "dataService",
+            "USBGetComs",
+            "mouseRecord",
+            "mouseRecordPhone",
+            "collectData",
+            "batchIncrease",
+            "mergePdfFile",
+            "hidden",
+            "QRCode",
+            "itemGroup",
+            "rangeInput",
+            "number",
+            "inputNumber",
+            "checkbox",
+            "customDialogVarName",
+            "comboSelector",
+            "brainTeamplate",
+            "setCheck",
+            "keyboardInput",
+            "buttonGroup",
+            "placementCheckbox",
+            "textarea",
+            "unitInput",
+            "checkBoxGroup",
+            "movingSpeed",
+            "colorPicker",
+            "excelRule",
+            "clickPosition",
+            "radioGroup",
+            "customRenderDropdown",
+            "multipleTextArea",
+            "makeOcrTableSelector",
+            "chooseRegion",
+            "collectDataSelector",
+            "checkCode",
+            "logInput",
+            "variableAssignment",
+            "jsonEditor",
+            "webhookTestBtn",
+            "quillInput",
+            "oracleConnection",
+            "textAndCheckbox",
+            "mailSelection",
+            "multifile",
+            "Basic_Delay",
+            "Basic_Type",
+            "Basic_JudgeDataType",
+            "Basic_Rnd",
+            "Basic_Clone",
+            "Basic_Dodecryption",
+            "Basic_DebugOutput",
+            "Log_Error",
+            "Log_Info"
+        ]
+    },
+    {
+        "name": "interface_element",
+        "label": "界面元素操作",
+        "icon": "icon-jiemiancaozuo",
+        "isTop": true,
+        "children": [
+            {
+                "name": "image",
+                "label": "图像",
+                "icon": "icon-img",
+                "searchContent": {
+                    "label": {
+                        "character": "图像",
+                        "firstLetter": "tx",
+                        "allLetter": [
+                            "tu",
+                            "xiang"
+                        ]
+                    }
+                },
+                "components": [
+                    "Image_Base64Encode",
+                    "Image_Base64Decode",
+                    "Image_Find",
+                    "Image_Wait",
+                    "Image_Exists",
+                    "Image_Click",
+                    "Image_RelativePosition",
+                    "Image_Location",
+                    "Image_Move",
+                    "Image_CropImg",
+                    "logic_control_if_image_v1"
+                ],
+                "bgComponents": [
+                    "logic_control_if_image_v1"
+                ],
+                "mobileComponents": [
+                    "Image_Base64Encode",
+                    "Image_Base64Decode",
+                    "Image_Find",
+                    "Image_Wait",
+                    "Image_Exists",
+                    "Image_Click",
+                    "Image_RelativePosition",
+                    "Image_Location",
+                    "Image_Move",
+                    "Image_CropImg",
+                    "logic_control_if_image_v1"
+                ]
+            }
+        ],
+        "searchContent": {
+            "label": {
+                "character": "界面元素操作",
+                "firstLetter": "jmyscz",
+                "allLetter": [
+                    "jie",
+                    "mian",
+                    "yuan",
+                    "su",
+                    "cao",
+                    "zuo"
+                ]
+            }
+        },
+        "components": [
+            "Element_ChildrenV1",
+            "Element_Exists",
+            "Element_SetAttribute",
+            "Element_GetAttribute",
+            "Element_GetSelect",
+            "Element_SetSelect",
+            "Element_SelectOperation",
+            "Element_GetCheck",
+            "Element_SetCheck",
+            "Element_CheckBoxOperation",
+            "Element_ScrollIntoView",
+            "Element_Click",
+            "Element_Click_V1",
+            "Element_Click_V2",
+            "Element_Shot",
+            "Element_Region",
+            "Element_Region2",
+            "Element_GetValue",
+            "Element_GetText",
+            "Element_SetValue",
+            "Element_SetValue_V1",
+            "Element_SetValue_V3",
+            "Element_GetButtonEnable",
+            "Element_MouseTo",
+            "Element_MouseTo_V1",
+            "Element_GetTableData",
+            "Element_WaitElement",
+            "Element_DoubleClickSap",
+            "Element_ElementAarray",
+            "Element_ElementCaptureSimilar",
+            "Element_GetHtml",
+            "Element_GetText_V1",
+            "Mobile_MobileElementAarray",
+            "loop_similar_elements",
+            "logic_control_if_element_v1"
+        ],
+        "bgComponents": [
+            "Element_ChildrenGround",
+            "Element_ExistsGround",
+            "Element_SetAttributeGround",
+            "Element_GetAttributeGround",
+            "Element_GetSelectGround",
+            "Element_SetSelectGround",
+            "Element_GetCheckGround",
+            "Element_SetCheckGround",
+            "Element_ScrollIntoViewGround",
+            "Element_ClickGround",
+            "Element_ShotGround",
+            "Element_RegionGround",
+            "Element_GetValueGround",
+            "Element_SetValueGround",
+            "Element_GetButtonEnableGround",
+            "Element_MouseToGround",
+            "Element_WaitElementGround",
+            "loop_similar_elements",
+            "logic_control_if_element_v1"
+        ],
+        "mobileComponents": [
+            "Element_ChildrenV1",
+            "Element_Exists",
+            "Element_SetAttribute",
+            "Element_GetAttribute",
+            "Element_GetSelect",
+            "Element_SetSelect",
+            "Element_SelectOperation",
+            "Element_GetCheck",
+            "Element_SetCheck",
+            "Element_CheckBoxOperation",
+            "Element_ScrollIntoView",
+            "Element_Click",
+            "Element_Click_V1",
+            "Element_Click_V2",
+            "Element_Shot",
+            "Element_Region",
+            "Element_Region2",
+            "Element_GetValue",
+            "Element_GetText",
+            "Element_SetValue",
+            "Element_SetValue_V1",
+            "Element_SetValue_V3",
+            "Element_GetButtonEnable",
+            "Element_MouseTo",
+            "Element_MouseTo_V1",
+            "Element_GetTableData",
+            "Element_WaitElement",
+            "Element_DoubleClickSap",
+            "Element_ElementAarray",
+            "Element_ElementCaptureSimilar",
+            "Element_GetHtml",
+            "Element_GetText_V1",
+            "Mobile_MobileElementAarray",
+            "logic_control_if_element_v1"
+        ]
+    },
+    {
+        "name": "image",
+        "label": "图像",
+        "icon": "icon-img",
+        "searchContent": {
+            "label": {
+                "character": "图像",
+                "firstLetter": "tx",
+                "allLetter": [
+                    "tu",
+                    "xiang"
+                ]
+            }
+        },
+        "components": [
+            "Image_Base64Encode",
+            "Image_Base64Decode",
+            "Image_Find",
+            "Image_Wait",
+            "Image_Exists",
+            "Image_Click",
+            "Image_RelativePosition",
+            "Image_Location",
+            "Image_Move",
+            "Image_CropImg",
+            "logic_control_if_image_v1"
+        ],
+        "bgComponents": [
+            "logic_control_if_image_v1"
+        ],
+        "mobileComponents": [
+            "Image_Base64Encode",
+            "Image_Base64Decode",
+            "Image_Find",
+            "Image_Wait",
+            "Image_Exists",
+            "Image_Click",
+            "Image_RelativePosition",
+            "Image_Location",
+            "Image_Move",
+            "Image_CropImg",
+            "logic_control_if_image_v1"
+        ]
+    },
+    {
+        "name": "dialog_operator",
+        "label": "窗口对话框操作",
+        "isTop": true,
+        "icon": "icon-chuangkouduihuakuangcaozuo",
+        "children": [
+            {
+                "name": "window",
+                "label": "窗口",
+                "icon": "icon-chuangkou",
+                "searchContent": {
+                    "label": {
+                        "character": "窗口",
+                        "firstLetter": "ck",
+                        "allLetter": [
+                            "chuang",
+                            "kou"
+                        ]
+                    }
+                },
+                "components": [
+                    "Window_Get",
+                    "Window_SetActive",
+                    "Window_Close",
+                    "Window_GetActive",
+                    "Window_GetRect",
+                    "Window_GetScreenSize",
+                    "Window_MaximumSize",
+                    "Window_SetPos"
+                ],
+                "bgComponents": [],
+                "mobileComponents": [
+                    "Window_Get",
+                    "Window_SetActive",
+                    "Window_Close",
+                    "Window_GetActive",
+                    "Window_GetRect",
+                    "Window_GetScreenSize",
+                    "Window_MaximumSize",
+                    "Window_SetPos"
+                ]
+            },
+            {
+                "name": "dialog",
+                "label": "对话框",
+                "icon": "icon-duihuakuang",
+                "searchContent": {
+                    "label": {
+                        "character": "对话框",
+                        "firstLetter": "dhk",
+                        "allLetter": [
+                            "dui",
+                            "hua",
+                            "kuang"
+                        ]
+                    }
+                },
+                "components": [
+                    "Dialog_GetConfig",
+                    "Dialog_GetConfigV1",
+                    "Dialog_GetConfigV2",
+                    "Dialog_GetConfigV3",
+                    "Dialog_GetConfigV4",
+                    "Dialog_MsgBox",
+                    "Dialog_InputBox",
+                    "Dialog_SaveFile",
+                    "Dialog_Notice",
+                    "Dialog_OpenFile",
+                    "Dialog_OpenFiles"
+                ],
+                "bgComponents": [],
+                "mobileComponents": [
+                    "Dialog_GetConfig",
+                    "Dialog_GetConfigV1",
+                    "Dialog_GetConfigV2",
+                    "Dialog_GetConfigV3",
+                    "Dialog_GetConfigV4",
+                    "Dialog_MsgBox",
+                    "Dialog_InputBox",
+                    "Dialog_SaveFile",
+                    "Dialog_Notice",
+                    "Dialog_OpenFile",
+                    "Dialog_OpenFiles"
+                ]
+            }
+        ],
+        "searchContent": {
+            "label": {
+                "character": "窗口对话框操作",
+                "firstLetter": "ckdhkcz",
+                "allLetter": [
+                    "chuang",
+                    "kou",
+                    "dui",
+                    "hua",
+                    "kuang",
+                    "cao",
+                    "zuo"
+                ]
+            }
+        },
+        "components": [],
+        "bgComponents": [],
+        "mobileComponents": []
+    },
+    {
+        "name": "window",
+        "label": "窗口",
+        "icon": "icon-chuangkou",
+        "searchContent": {
+            "label": {
+                "character": "窗口",
+                "firstLetter": "ck",
+                "allLetter": [
+                    "chuang",
+                    "kou"
+                ]
+            }
+        },
+        "components": [
+            "Window_Get",
+            "Window_SetActive",
+            "Window_Close",
+            "Window_GetActive",
+            "Window_GetRect",
+            "Window_GetScreenSize",
+            "Window_MaximumSize",
+            "Window_SetPos"
+        ],
+        "bgComponents": [],
+        "mobileComponents": [
+            "Window_Get",
+            "Window_SetActive",
+            "Window_Close",
+            "Window_GetActive",
+            "Window_GetRect",
+            "Window_GetScreenSize",
+            "Window_MaximumSize",
+            "Window_SetPos"
+        ]
+    },
+    {
+        "name": "dialog",
+        "label": "对话框",
+        "icon": "icon-duihuakuang",
+        "searchContent": {
+            "label": {
+                "character": "对话框",
+                "firstLetter": "dhk",
+                "allLetter": [
+                    "dui",
+                    "hua",
+                    "kuang"
+                ]
+            }
+        },
+        "components": [
+            "Dialog_GetConfig",
+            "Dialog_GetConfigV1",
+            "Dialog_GetConfigV2",
+            "Dialog_GetConfigV3",
+            "Dialog_GetConfigV4",
+            "Dialog_MsgBox",
+            "Dialog_InputBox",
+            "Dialog_SaveFile",
+            "Dialog_Notice",
+            "Dialog_OpenFile",
+            "Dialog_OpenFiles"
+        ],
+        "bgComponents": [],
+        "mobileComponents": [
+            "Dialog_GetConfig",
+            "Dialog_GetConfigV1",
+            "Dialog_GetConfigV2",
+            "Dialog_GetConfigV3",
+            "Dialog_GetConfigV4",
+            "Dialog_MsgBox",
+            "Dialog_InputBox",
+            "Dialog_SaveFile",
+            "Dialog_Notice",
+            "Dialog_OpenFile",
+            "Dialog_OpenFiles"
+        ]
+    },
+    {
+        "name": "peripheral_device",
+        "label": "键盘鼠标外设",
+        "icon": "icon-jianpanshubiao",
+        "isTop": true,
+        "children": [
+            {
+                "name": "keyboard",
+                "label": "键盘",
+                "icon": "icon-jianpan",
+                "searchContent": {
+                    "label": {
+                        "character": "键盘",
+                        "firstLetter": "jp",
+                        "allLetter": [
+                            "jian",
+                            "pan"
+                        ]
+                    }
+                },
+                "components": [
+                    "Keyboard_Press",
+                    "Keyboard_PressNew",
+                    "Keyboard_Send",
+                    "Keyboard_DriveSend"
+                ],
+                "bgComponents": [],
+                "mobileComponents": [
+                    "Keyboard_Press",
+                    "Keyboard_PressNew",
+                    "Keyboard_Send",
+                    "Keyboard_DriveSend"
+                ]
+            },
+            {
+                "name": "mouse",
+                "label": "鼠标",
+                "icon": "icon-shubiao",
+                "searchContent": {
+                    "label": {
+                        "character": "鼠标",
+                        "firstLetter": "sb",
+                        "allLetter": [
+                            "shu",
+                            "biao"
+                        ]
+                    }
+                },
+                "components": [
+                    "Mouse_MoveTo",
+                    "Mouse_MoveToV1",
+                    "Mouse_Click",
+                    "Mouse_ClickCombine",
+                    "Mouse_DragTo",
+                    "Mouse_DragToNew",
+                    "Mouse_DragToV1",
+                    "Mouse_RollTo"
+                ],
+                "bgComponents": [],
+                "mobileComponents": [
+                    "Mouse_MoveTo",
+                    "Mouse_MoveToV1",
+                    "Mouse_Click",
+                    "Mouse_ClickCombine",
+                    "Mouse_DragTo",
+                    "Mouse_DragToNew",
+                    "Mouse_DragToV1",
+                    "Mouse_RollTo"
+                ]
+            },
+            {
+                "name": "peripherals",
+                "label": "USBhub",
+                "icon": "icon-waishe",
+                "searchContent": {
+                    "label": {
+                        "character": "usbhub",
+                        "firstLetter": "usbhub",
+                        "allLetter": [
+                            "u",
+                            "s",
+                            "b",
+                            "h",
+                            "u",
+                            "b"
+                        ]
+                    }
+                },
+                "components": [
+                    "peripherals_OpenUsbCom",
+                    "peripherals_CloseUsbCom",
+                    "peripherals_UsbCom",
+                    "peripherals_OpenNetworkUsbCom",
+                    "peripherals_CloseNetworkUsbCom",
+                    "peripherals_NetworkUsbCom"
+                ],
+                "bgComponents": [],
+                "mobileComponents": [
+                    "peripherals_OpenUsbCom",
+                    "peripherals_CloseUsbCom",
+                    "peripherals_UsbCom",
+                    "peripherals_OpenNetworkUsbCom",
+                    "peripherals_CloseNetworkUsbCom",
+                    "peripherals_NetworkUsbCom"
+                ]
+            }
+        ],
+        "searchContent": {
+            "label": {
+                "character": "键盘鼠标外设",
+                "firstLetter": "jpsbws",
+                "allLetter": [
+                    "jian",
+                    "pan",
+                    "shu",
+                    "biao",
+                    "wai",
+                    "she"
+                ]
+            }
+        },
+        "components": [],
+        "bgComponents": [],
+        "mobileComponents": []
+    },
+    {
+        "name": "keyboard",
+        "label": "键盘",
+        "icon": "icon-jianpan",
+        "searchContent": {
+            "label": {
+                "character": "键盘",
+                "firstLetter": "jp",
+                "allLetter": [
+                    "jian",
+                    "pan"
+                ]
+            }
+        },
+        "components": [
+            "Keyboard_Press",
+            "Keyboard_PressNew",
+            "Keyboard_Send",
+            "Keyboard_DriveSend"
+        ],
+        "bgComponents": [],
+        "mobileComponents": [
+            "Keyboard_Press",
+            "Keyboard_PressNew",
+            "Keyboard_Send",
+            "Keyboard_DriveSend"
+        ]
+    },
+    {
+        "name": "mouse",
+        "label": "鼠标",
+        "icon": "icon-shubiao",
+        "searchContent": {
+            "label": {
+                "character": "鼠标",
+                "firstLetter": "sb",
+                "allLetter": [
+                    "shu",
+                    "biao"
+                ]
+            }
+        },
+        "components": [
+            "Mouse_MoveTo",
+            "Mouse_MoveToV1",
+            "Mouse_Click",
+            "Mouse_ClickCombine",
+            "Mouse_DragTo",
+            "Mouse_DragToNew",
+            "Mouse_DragToV1",
+            "Mouse_RollTo"
+        ],
+        "bgComponents": [],
+        "mobileComponents": [
+            "Mouse_MoveTo",
+            "Mouse_MoveToV1",
+            "Mouse_Click",
+            "Mouse_ClickCombine",
+            "Mouse_DragTo",
+            "Mouse_DragToNew",
+            "Mouse_DragToV1",
+            "Mouse_RollTo"
+        ]
+    },
+    {
+        "name": "peripherals",
+        "label": "USBhub",
+        "icon": "icon-waishe",
+        "searchContent": {
+            "label": {
+                "character": "usbhub",
+                "firstLetter": "usbhub",
+                "allLetter": [
+                    "u",
+                    "s",
+                    "b",
+                    "h",
+                    "u",
+                    "b"
+                ]
+            }
+        },
+        "components": [
+            "peripherals_OpenUsbCom",
+            "peripherals_CloseUsbCom",
+            "peripherals_UsbCom",
+            "peripherals_OpenNetworkUsbCom",
+            "peripherals_CloseNetworkUsbCom",
+            "peripherals_NetworkUsbCom"
+        ],
+        "bgComponents": [],
+        "mobileComponents": [
+            "peripherals_OpenUsbCom",
+            "peripherals_CloseUsbCom",
+            "peripherals_UsbCom",
+            "peripherals_OpenNetworkUsbCom",
+            "peripherals_CloseNetworkUsbCom",
+            "peripherals_NetworkUsbCom"
+        ]
+    },
+    {
+        "name": "webBrowser",
+        "label": "浏览器",
+        "isTop": true,
+        "icon": "icon-liulanqi",
+        "children": [
+            {
+                "name": "webBrowser_operate",
+                "label": "浏览器操作",
+                "icon": "icon-liulanqicaozuo",
+                "searchContent": {
+                    "label": {
+                        "character": "浏览器操作",
+                        "firstLetter": "llqcz",
+                        "allLetter": [
+                            "liu",
+                            "lan",
+                            "qi",
+                            "cao",
+                            "zuo"
+                        ]
+                    }
+                },
+                "components": [
+                    "WebBrowser_Switch",
+                    "WebBrowser_GoBack",
+                    "WebBrowser_GoForward",
+                    "WebBrowser_Reload",
+                    "WebBrowser_Wait",
+                    "WebBrowser_Stop",
+                    "WebBrowser_SetCookies",
+                    "WebBrowser_SetScrollPos",
+                    "WebBrowser_Maximize",
+                    "WebBrowser_Minimize"
+                ],
+                "bgComponents": [
+                    "WebBrowser_Switch",
+                    "WebBrowser_GoBack",
+                    "WebBrowser_GoForward",
+                    "WebBrowser_Reload",
+                    "WebBrowser_Wait",
+                    "WebBrowser_Stop",
+                    "WebBrowser_SetCookies",
+                    "WebBrowser_SetScrollPos",
+                    "WebBrowser_Maximize",
+                    "WebBrowser_Minimize"
+                ],
+                "mobileComponents": [
+                    "WebBrowser_Switch",
+                    "WebBrowser_GoBack",
+                    "WebBrowser_GoForward",
+                    "WebBrowser_Reload",
+                    "WebBrowser_Wait",
+                    "WebBrowser_Stop",
+                    "WebBrowser_SetCookies",
+                    "WebBrowser_SetScrollPos",
+                    "WebBrowser_Maximize",
+                    "WebBrowser_Minimize"
+                ]
+            },
+            {
+                "name": "webBrowser_data",
+                "label": "数据获取",
+                "icon": "icon-shujuhuoqu",
+                "searchContent": {
+                    "label": {
+                        "character": "数据获取",
+                        "firstLetter": "sjhq",
+                        "allLetter": [
+                            "shu",
+                            "ju",
+                            "huo",
+                            "qu"
+                        ]
+                    }
+                },
+                "components": [
+                    "WebBrowser_DownFile",
+                    "WebBrowser_GetCookies",
+                    "WebBrowser_GetCookie",
+                    "WebBrowser_GetDocument",
+                    "WebBrowser_GetScrollPos",
+                    "WebBrowser_GetUrl",
+                    "WebBrowser_GetTitle",
+                    "WebBrowser_GetBrowserPic",
+                    "WebBrowser_DataCrawler",
+                    "WebBrowser_SaveAs",
+                    "WebBrowser_GetTAB",
+                    "WebBrowser_BatchDataCrawl",
+                    "WebBrowser_BatchDataCrawlNew"
+                ],
+                "bgComponents": [
+                    "WebBrowser_DownFile",
+                    "WebBrowser_GetCookies",
+                    "WebBrowser_GetCookie",
+                    "WebBrowser_GetDocument",
+                    "WebBrowser_GetScrollPos",
+                    "WebBrowser_GetUrl",
+                    "WebBrowser_GetTitle",
+                    "WebBrowser_GetBrowserPic",
+                    "WebBrowser_GetTAB"
+                ],
+                "mobileComponents": [
+                    "WebBrowser_DownFile",
+                    "WebBrowser_GetCookies",
+                    "WebBrowser_GetCookie",
+                    "WebBrowser_GetDocument",
+                    "WebBrowser_GetScrollPos",
+                    "WebBrowser_GetUrl",
+                    "WebBrowser_GetTitle",
+                    "WebBrowser_GetBrowserPic",
+                    "WebBrowser_DataCrawler",
+                    "WebBrowser_SaveAs",
+                    "WebBrowser_GetTAB",
+                    "WebBrowser_BatchDataCrawl",
+                    "WebBrowser_BatchDataCrawlNew"
+                ]
+            }
+        ],
+        "searchContent": {
+            "label": {
+                "character": "浏览器",
+                "firstLetter": "llq",
+                "allLetter": [
+                    "liu",
+                    "lan",
+                    "qi"
+                ]
+            }
+        },
+        "components": [
+            "WebBrowser_Create",
+            "WebBrowser_GoUrl",
+            "WebBrowser_CloseWeb",
+            "WebBrowser_Close",
+            "WebBrowser_RunJsInIeByTitle",
+            "WebBrowser_RunJsInIeBySelector",
+            "WebBrowser_Upload"
+        ],
+        "bgComponents": [
+            "WebBrowser_CreateBackground",
+            "WebBrowser_GoUrl",
+            "WebBrowser_CloseWeb",
+            "WebBrowser_Close",
+            "WebBrowser_RunJsInIeByTitle",
+            "WebBrowser_RunJsInIeBySelectorGround"
+        ],
+        "mobileComponents": [
+            "WebBrowser_Create",
+            "WebBrowser_GoUrl",
+            "WebBrowser_CloseWeb",
+            "WebBrowser_Close",
+            "WebBrowser_RunJsInIeByTitle",
+            "WebBrowser_RunJsInIeBySelector",
+            "WebBrowser_Upload"
+        ]
+    },
+    {
+        "name": "webBrowser_operate",
+        "label": "浏览器操作",
+        "icon": "icon-liulanqicaozuo",
+        "searchContent": {
+            "label": {
+                "character": "浏览器操作",
+                "firstLetter": "llqcz",
+                "allLetter": [
+                    "liu",
+                    "lan",
+                    "qi",
+                    "cao",
+                    "zuo"
+                ]
+            }
+        },
+        "components": [
+            "WebBrowser_Switch",
+            "WebBrowser_GoBack",
+            "WebBrowser_GoForward",
+            "WebBrowser_Reload",
+            "WebBrowser_Wait",
+            "WebBrowser_Stop",
+            "WebBrowser_SetCookies",
+            "WebBrowser_SetScrollPos",
+            "WebBrowser_Maximize",
+            "WebBrowser_Minimize"
+        ],
+        "bgComponents": [
+            "WebBrowser_Switch",
+            "WebBrowser_GoBack",
+            "WebBrowser_GoForward",
+            "WebBrowser_Reload",
+            "WebBrowser_Wait",
+            "WebBrowser_Stop",
+            "WebBrowser_SetCookies",
+            "WebBrowser_SetScrollPos",
+            "WebBrowser_Maximize",
+            "WebBrowser_Minimize"
+        ],
+        "mobileComponents": [
+            "WebBrowser_Switch",
+            "WebBrowser_GoBack",
+            "WebBrowser_GoForward",
+            "WebBrowser_Reload",
+            "WebBrowser_Wait",
+            "WebBrowser_Stop",
+            "WebBrowser_SetCookies",
+            "WebBrowser_SetScrollPos",
+            "WebBrowser_Maximize",
+            "WebBrowser_Minimize"
+        ]
+    },
+    {
+        "name": "webBrowser_data",
+        "label": "数据获取",
+        "icon": "icon-shujuhuoqu",
+        "searchContent": {
+            "label": {
+                "character": "数据获取",
+                "firstLetter": "sjhq",
+                "allLetter": [
+                    "shu",
+                    "ju",
+                    "huo",
+                    "qu"
+                ]
+            }
+        },
+        "components": [
+            "WebBrowser_DownFile",
+            "WebBrowser_GetCookies",
+            "WebBrowser_GetCookie",
+            "WebBrowser_GetDocument",
+            "WebBrowser_GetScrollPos",
+            "WebBrowser_GetUrl",
+            "WebBrowser_GetTitle",
+            "WebBrowser_GetBrowserPic",
+            "WebBrowser_DataCrawler",
+            "WebBrowser_SaveAs",
+            "WebBrowser_GetTAB",
+            "WebBrowser_BatchDataCrawl",
+            "WebBrowser_BatchDataCrawlNew"
+        ],
+        "bgComponents": [
+            "WebBrowser_DownFile",
+            "WebBrowser_GetCookies",
+            "WebBrowser_GetCookie",
+            "WebBrowser_GetDocument",
+            "WebBrowser_GetScrollPos",
+            "WebBrowser_GetUrl",
+            "WebBrowser_GetTitle",
+            "WebBrowser_GetBrowserPic",
+            "WebBrowser_GetTAB"
+        ],
+        "mobileComponents": [
+            "WebBrowser_DownFile",
+            "WebBrowser_GetCookies",
+            "WebBrowser_GetCookie",
+            "WebBrowser_GetDocument",
+            "WebBrowser_GetScrollPos",
+            "WebBrowser_GetUrl",
+            "WebBrowser_GetTitle",
+            "WebBrowser_GetBrowserPic",
+            "WebBrowser_DataCrawler",
+            "WebBrowser_SaveAs",
+            "WebBrowser_GetTAB",
+            "WebBrowser_BatchDataCrawl",
+            "WebBrowser_BatchDataCrawlNew"
+        ]
+    },
+    {
+        "name": "data_parse",
+        "label": "数据处理",
+        "icon": "icon-shujuchuli",
+        "isTop": true,
+        "children": [
+            {
+                "name": "data_analysis",
+                "label": "数据分析服务",
+                "icon": "icon-shujufenxifuwu",
+                "searchContent": {
+                    "label": {
+                        "character": "数据分析服务",
+                        "firstLetter": "sjfxfw",
+                        "allLetter": [
+                            "shu",
+                            "ju",
+                            "fen",
+                            "xi",
+                            "fu",
+                            "wu"
+                        ]
+                    }
+                },
+                "components": [
+                    "DataService_Service",
+                    "WebBrowser_BatchDataCrawlNewV1"
+                ],
+                "bgComponents": [],
+                "mobileComponents": [
+                    "DataService_Service",
+                    "WebBrowser_BatchDataCrawlNewV1"
+                ]
+            },
+            {
+                "name": "data_type_conversion",
+                "label": "数据类型转换",
+                "icon": "icon-shujuleixingzhuanhua",
+                "searchContent": {
+                    "label": {
+                        "character": "数据类型转换",
+                        "firstLetter": "sjlxzh",
+                        "allLetter": [
+                            "shu",
+                            "ju",
+                            "lei",
+                            "xing",
+                            "zhuan",
+                            "huan"
+                        ]
+                    }
+                },
+                "components": [
+                    "Basic_ConvertBool",
+                    "Basic_ConvertInt",
+                    "Basic_ConvertNumber",
+                    "Basic_StringToNum",
+                    "Basic_ConvertString",
+                    "Basic_DataTypeConversion",
+                    "JSON_Stringify",
+                    "JSON_Parse",
+                    "StrUtil_CharAsc",
+                    "StrUtil_CharCode",
+                    "Time_FormatNew",
+                    "Time_DateToTimestamp"
+                ],
+                "bgComponents": [
+                    "Basic_ConvertBool",
+                    "Basic_ConvertInt",
+                    "Basic_ConvertNumber",
+                    "Basic_StringToNum",
+                    "Basic_ConvertString",
+                    "Basic_DataTypeConversion",
+                    "JSON_Stringify",
+                    "JSON_Parse",
+                    "StrUtil_CharAsc",
+                    "StrUtil_CharCode",
+                    "Time_FormatNew",
+                    "Time_DateToTimestamp"
+                ],
+                "mobileComponents": [
+                    "Basic_ConvertBool",
+                    "Basic_ConvertInt",
+                    "Basic_ConvertNumber",
+                    "Basic_StringToNum",
+                    "Basic_ConvertString",
+                    "Basic_DataTypeConversion",
+                    "JSON_Stringify",
+                    "JSON_Parse",
+                    "StrUtil_CharAsc",
+                    "StrUtil_CharCode",
+                    "Time_FormatNew",
+                    "Time_DateToTimestamp"
+                ]
+            },
+            {
+                "name": "string",
+                "label": "文本操作String",
+                "icon": "icon-zifuchuan",
+                "searchContent": {
+                    "label": {
+                        "character": "文本操作string",
+                        "firstLetter": "wbczstring",
+                        "allLetter": [
+                            "wen",
+                            "ben",
+                            "cao",
+                            "zuo",
+                            "s",
+                            "t",
+                            "r",
+                            "i",
+                            "n",
+                            "g"
+                        ]
+                    }
+                },
+                "components": [
+                    "Regex_TestNew",
+                    "Regex_FindStr",
+                    "StrUtil_Replace",
+                    "StrUtil_InStr",
+                    "StrUtil_LookUpStr",
+                    "StrUtil_AddToStr",
+                    "StrUtil_Left",
+                    "StrUtil_Right",
+                    "StrUtil_Mid",
+                    "StrUtil_CutOutStr",
+                    "StrUtil_Len",
+                    "StrUtil_UpperCase",
+                    "StrUtil_LowerCase",
+                    "StrUtil_CaseChange",
+                    "StrUtil_Ltrim",
+                    "StrUtil_Rtrim",
+                    "StrUtil_Trim",
+                    "StrUtil_DelTrim",
+                    "StrUtil_Split",
+                    "StrUtil_SplitStr",
+                    "StrUtil_ReverseStr",
+                    "StrUtil_CompleteStr",
+                    "StrUtil_CreateRandomStr"
+                ],
+                "bgComponents": [
+                    "Regex_TestNew",
+                    "Regex_FindStr",
+                    "StrUtil_Replace",
+                    "StrUtil_InStr",
+                    "StrUtil_LookUpStr",
+                    "StrUtil_AddToStr",
+                    "StrUtil_Left",
+                    "StrUtil_Right",
+                    "StrUtil_Mid",
+                    "StrUtil_CutOutStr",
+                    "StrUtil_Len",
+                    "StrUtil_UpperCase",
+                    "StrUtil_LowerCase",
+                    "StrUtil_CaseChange",
+                    "StrUtil_Ltrim",
+                    "StrUtil_Rtrim",
+                    "StrUtil_Trim",
+                    "StrUtil_DelTrim",
+                    "StrUtil_Split",
+                    "StrUtil_SplitStr",
+                    "StrUtil_ReverseStr",
+                    "StrUtil_CompleteStr",
+                    "StrUtil_CreateRandomStr"
+                ],
+                "mobileComponents": [
+                    "Regex_TestNew",
+                    "Regex_FindStr",
+                    "StrUtil_Replace",
+                    "StrUtil_InStr",
+                    "StrUtil_LookUpStr",
+                    "StrUtil_AddToStr",
+                    "StrUtil_Left",
+                    "StrUtil_Right",
+                    "StrUtil_Mid",
+                    "StrUtil_CutOutStr",
+                    "StrUtil_Len",
+                    "StrUtil_UpperCase",
+                    "StrUtil_LowerCase",
+                    "StrUtil_CaseChange",
+                    "StrUtil_Ltrim",
+                    "StrUtil_Rtrim",
+                    "StrUtil_Trim",
+                    "StrUtil_DelTrim",
+                    "StrUtil_Split",
+                    "StrUtil_SplitStr",
+                    "StrUtil_ReverseStr",
+                    "StrUtil_CompleteStr",
+                    "StrUtil_CreateRandomStr"
+                ]
+            },
+            {
+                "name": "regexp",
+                "label": "文本查找提取",
+                "icon": "icon-zhengze",
+                "searchContent": {
+                    "label": {
+                        "character": "文本查找提取",
+                        "firstLetter": "wbcztq",
+                        "allLetter": [
+                            "wen",
+                            "ben",
+                            "cha",
+                            "zhao",
+                            "di",
+                            "qu"
+                        ]
+                    }
+                },
+                "components": [
+                    "Regex_Test",
+                    "Regex_Find",
+                    "Regex_FindAll",
+                    "Regex_FindNew",
+                    "Regex_FindAllNew",
+                    "Regex_FindNew_1"
+                ],
+                "bgComponents": [
+                    "Regex_Test",
+                    "Regex_Find",
+                    "Regex_FindAll",
+                    "Regex_FindNew",
+                    "Regex_FindAllNew",
+                    "Regex_FindNew_1"
+                ],
+                "mobileComponents": [
+                    "Regex_Test",
+                    "Regex_Find",
+                    "Regex_FindAll",
+                    "Regex_FindNew",
+                    "Regex_FindAllNew",
+                    "Regex_FindNew_1"
+                ]
+            },
+            {
+                "name": "math",
+                "label": "数学",
+                "icon": "icon-shuxue",
+                "searchContent": {
+                    "label": {
+                        "character": "数学",
+                        "firstLetter": "sx",
+                        "allLetter": [
+                            "shu",
+                            "xue"
+                        ]
+                    }
+                },
+                "components": [
+                    "Math_Abs",
+                    "Math_Cos",
+                    "Math_Exp",
+                    "Math_Pow",
+                    "Math_Int",
+                    "Math_Round",
+                    "Math_Sgn",
+                    "Math_Sin",
+                    "Math_Sqrt",
+                    "Math_Tan",
+                    "Math_Hex",
+                    "Math_Oct",
+                    "Math_Scale"
+                ],
+                "bgComponents": [
+                    "Math_Abs",
+                    "Math_Cos",
+                    "Math_Exp",
+                    "Math_Pow",
+                    "Math_Int",
+                    "Math_Round",
+                    "Math_Sgn",
+                    "Math_Sin",
+                    "Math_Sqrt",
+                    "Math_Tan",
+                    "Math_Hex",
+                    "Math_Oct",
+                    "Math_Scale"
+                ],
+                "mobileComponents": [
+                    "Math_Abs",
+                    "Math_Cos",
+                    "Math_Exp",
+                    "Math_Pow",
+                    "Math_Int",
+                    "Math_Round",
+                    "Math_Sgn",
+                    "Math_Sin",
+                    "Math_Sqrt",
+                    "Math_Tan",
+                    "Math_Hex",
+                    "Math_Oct",
+                    "Math_Scale"
+                ]
+            },
+            {
+                "name": "time",
+                "label": "日期/时间处理",
+                "icon": "icon-shijian",
+                "searchContent": {
+                    "label": {
+                        "character": "日期/时间处理",
+                        "firstLetter": "rq/sjcl",
+                        "allLetter": [
+                            "ri",
+                            "qi",
+                            "/",
+                            "shi",
+                            "jian",
+                            "chu",
+                            "li"
+                        ]
+                    }
+                },
+                "components": [
+                    "Time_TimeStamp",
+                    "Time_Now",
+                    "Time_Date",
+                    "Time_Time",
+                    "Time_Format",
+                    "Time_DatetimeToTimestamp",
+                    "Time_TimeTypeConversion",
+                    "Time_Year",
+                    "Time_Month",
+                    "Time_Day",
+                    "Time_Hour",
+                    "Time_Minute",
+                    "Time_Second",
+                    "Time_WeekDay",
+                    "Time_GetDate",
+                    "Time_CalDate"
+                ],
+                "bgComponents": [
+                    "Time_TimeStamp",
+                    "Time_Now",
+                    "Time_Date",
+                    "Time_Time",
+                    "Time_Format",
+                    "Time_DatetimeToTimestamp",
+                    "Time_TimeTypeConversion",
+                    "Time_Year",
+                    "Time_Month",
+                    "Time_Day",
+                    "Time_Hour",
+                    "Time_Minute",
+                    "Time_Second",
+                    "Time_WeekDay",
+                    "Time_GetDate",
+                    "Time_CalDate"
+                ],
+                "mobileComponents": [
+                    "Time_TimeStamp",
+                    "Time_Now",
+                    "Time_Date",
+                    "Time_Time",
+                    "Time_Format",
+                    "Time_DatetimeToTimestamp",
+                    "Time_TimeTypeConversion",
+                    "Time_Year",
+                    "Time_Month",
+                    "Time_Day",
+                    "Time_Hour",
+                    "Time_Minute",
+                    "Time_Second",
+                    "Time_WeekDay",
+                    "Time_GetDate",
+                    "Time_CalDate"
+                ]
+            },
+            {
+                "name": "collection",
+                "label": "集合",
+                "icon": "icon-jihe",
+                "searchContent": {
+                    "label": {
+                        "character": "集合",
+                        "firstLetter": "jh",
+                        "allLetter": [
+                            "ji",
+                            "he"
+                        ]
+                    }
+                },
+                "components": [
+                    "logic_control_array_for",
+                    "Collection_Create",
+                    "Collection_Count",
+                    "Collection_Add",
+                    "Collection_Remove",
+                    "Collection_HasItem"
+                ],
+                "bgComponents": [
+                    "logic_control_array_for",
+                    "Collection_Create",
+                    "Collection_Count",
+                    "Collection_Add",
+                    "Collection_Remove",
+                    "Collection_HasItem"
+                ],
+                "mobileComponents": [
+                    "logic_control_array_for",
+                    "Collection_Create",
+                    "Collection_Count",
+                    "Collection_Add",
+                    "Collection_Remove",
+                    "Collection_HasItem"
+                ]
+            },
+            {
+                "name": "dict",
+                "label": "字典",
+                "icon": "icon-zidian",
+                "searchContent": {
+                    "label": {
+                        "character": "字典",
+                        "firstLetter": "zd",
+                        "allLetter": [
+                            "zi",
+                            "dian"
+                        ]
+                    }
+                },
+                "components": [
+                    "logic_control_dictionary_for",
+                    "Dict_Create",
+                    "Dict_Keys",
+                    "Dict_Values",
+                    "Dict_Items",
+                    "Dict_SetItem",
+                    "Dict_GetItem",
+                    "Dict_Clear",
+                    "Dict_Update",
+                    "Dict_Delete"
+                ],
+                "bgComponents": [
+                    "logic_control_dictionary_for"
+                ],
+                "mobileComponents": [
+                    "logic_control_dictionary_for",
+                    "Dict_Create",
+                    "Dict_Keys",
+                    "Dict_Values",
+                    "Dict_Items",
+                    "Dict_SetItem",
+                    "Dict_GetItem",
+                    "Dict_Clear",
+                    "Dict_Update",
+                    "Dict_Delete"
+                ]
+            },
+            {
+                "name": "Database",
+                "label": "数据库",
+                "icon": "icon-fuwuqi",
+                "searchContent": {
+                    "label": {
+                        "character": "数据库",
+                        "firstLetter": "sjk",
+                        "allLetter": [
+                            "shu",
+                            "ju",
+                            "ku"
+                        ]
+                    }
+                },
+                "components": [
+                    "Database_DBConnect",
+                    "Database_SingleSQLQuery",
+                    "Database_AllSQLQuery",
+                    "Database_SQLExecute",
+                    "Database_BatchSQLExecute",
+                    "Database_CloseDBConnect"
+                ],
+                "bgComponents": [
+                    "Database_DBConnect",
+                    "Database_SingleSQLQuery",
+                    "Database_AllSQLQuery",
+                    "Database_SQLExecute",
+                    "Database_BatchSQLExecute",
+                    "Database_CloseDBConnect"
+                ],
+                "mobileComponents": [
+                    "Database_DBConnect",
+                    "Database_SingleSQLQuery",
+                    "Database_AllSQLQuery",
+                    "Database_SQLExecute",
+                    "Database_BatchSQLExecute",
+                    "Database_CloseDBConnect"
+                ]
+            },
+            {
+                "name": "bivartable",
+                "label": "二维表",
+                "icon": "icon-erweibiao",
+                "searchContent": {
+                    "label": {
+                        "character": "二维表",
+                        "firstLetter": "ewb",
+                        "allLetter": [
+                            "er",
+                            "wei",
+                            "biao"
+                        ]
+                    }
+                },
+                "components": [
+                    "Bivartable_data_table_loop",
+                    "Bivartable_DoCreate",
+                    "Bivartable_DoOpenExcel",
+                    "Bivartable_DoSave",
+                    "Bivartable_DoJoint",
+                    "Bivartable_DoCal",
+                    "Bivartable_GetMaxValue",
+                    "Bivartable_GetMinValue",
+                    "Bivartable_GetAvgValue",
+                    "Bivartable_GetSumValue",
+                    "Bivartable_ModifyColName",
+                    "Bivartable_DoSort",
+                    "Bivartable_DoMerge",
+                    "Bivartable_DoFilter",
+                    "Bivartable_WriteTable",
+                    "Bivartable_ReadTable"
+                ],
+                "bgComponents": [
+                    "Bivartable_data_table_loop",
+                    "Bivartable_DoCreate",
+                    "Bivartable_DoOpenExcel",
+                    "Bivartable_DoSave",
+                    "Bivartable_DoJoint",
+                    "Bivartable_DoCal",
+                    "Bivartable_GetMaxValue",
+                    "Bivartable_GetMinValue",
+                    "Bivartable_GetAvgValue",
+                    "Bivartable_GetSumValue",
+                    "Bivartable_ModifyColName",
+                    "Bivartable_DoSort",
+                    "Bivartable_DoMerge",
+                    "Bivartable_DoFilter",
+                    "Bivartable_WriteTable",
+                    "Bivartable_ReadTable"
+                ],
+                "mobileComponents": [
+                    "Bivartable_DoCreate",
+                    "Bivartable_DoOpenExcel",
+                    "Bivartable_DoSave",
+                    "Bivartable_DoJoint",
+                    "Bivartable_DoCal",
+                    "Bivartable_GetMaxValue",
+                    "Bivartable_GetMinValue",
+                    "Bivartable_GetAvgValue",
+                    "Bivartable_GetSumValue",
+                    "Bivartable_ModifyColName",
+                    "Bivartable_DoSort",
+                    "Bivartable_DoMerge",
+                    "Bivartable_DoFilter",
+                    "Bivartable_WriteTable",
+                    "Bivartable_ReadTable"
+                ]
+            },
+            {
+                "name": "List",
+                "label": "一维列表",
+                "icon": "icon-yiweibiao",
+                "searchContent": {
+                    "label": {
+                        "character": "一维列表",
+                        "firstLetter": "ywlb",
+                        "allLetter": [
+                            "yi",
+                            "wei",
+                            "lie",
+                            "biao"
+                        ]
+                    }
+                },
+                "components": [
+                    "List_CreateList",
+                    "List_ClearList",
+                    "List_InsertList",
+                    "List_DeleteList",
+                    "List_GetListItem",
+                    "List_SetListItem",
+                    "List_ListLength",
+                    "List_ListIntersection",
+                    "List_ListDuplication",
+                    "List_ListSorted",
+                    "List_ListMerge"
+                ],
+                "bgComponents": [
+                    "List_CreateList",
+                    "List_ClearList",
+                    "List_InsertList",
+                    "List_DeleteList",
+                    "List_GetListItem",
+                    "List_SetListItem",
+                    "List_ListLength",
+                    "List_ListIntersection",
+                    "List_ListDuplication",
+                    "List_ListSorted",
+                    "List_ListMerge"
+                ],
+                "mobileComponents": [
+                    "List_CreateList",
+                    "List_ClearList",
+                    "List_InsertList",
+                    "List_DeleteList",
+                    "List_GetListItem",
+                    "List_SetListItem",
+                    "List_ListLength",
+                    "List_ListIntersection",
+                    "List_ListDuplication",
+                    "List_ListSorted",
+                    "List_ListMerge"
+                ]
+            }
+        ],
+        "searchContent": {
+            "label": {
+                "character": "数据处理",
+                "firstLetter": "sjcl",
+                "allLetter": [
+                    "shu",
+                    "ju",
+                    "chu",
+                    "li"
+                ]
+            }
+        },
+        "components": [],
+        "bgComponents": [],
+        "mobileComponents": []
+    },
+    {
+        "name": "data_analysis",
+        "label": "数据分析服务",
+        "icon": "icon-shujufenxifuwu",
+        "searchContent": {
+            "label": {
+                "character": "数据分析服务",
+                "firstLetter": "sjfxfw",
+                "allLetter": [
+                    "shu",
+                    "ju",
+                    "fen",
+                    "xi",
+                    "fu",
+                    "wu"
+                ]
+            }
+        },
+        "components": [
+            "DataService_Service",
+            "WebBrowser_BatchDataCrawlNewV1"
+        ],
+        "bgComponents": [],
+        "mobileComponents": [
+            "DataService_Service",
+            "WebBrowser_BatchDataCrawlNewV1"
+        ]
+    },
+    {
+        "name": "data_type_conversion",
+        "label": "数据类型转换",
+        "icon": "icon-shujuleixingzhuanhua",
+        "searchContent": {
+            "label": {
+                "character": "数据类型转换",
+                "firstLetter": "sjlxzh",
+                "allLetter": [
+                    "shu",
+                    "ju",
+                    "lei",
+                    "xing",
+                    "zhuan",
+                    "huan"
+                ]
+            }
+        },
+        "components": [
+            "Basic_ConvertBool",
+            "Basic_ConvertInt",
+            "Basic_ConvertNumber",
+            "Basic_StringToNum",
+            "Basic_ConvertString",
+            "Basic_DataTypeConversion",
+            "JSON_Stringify",
+            "JSON_Parse",
+            "StrUtil_CharAsc",
+            "StrUtil_CharCode",
+            "Time_FormatNew",
+            "Time_DateToTimestamp"
+        ],
+        "bgComponents": [
+            "Basic_ConvertBool",
+            "Basic_ConvertInt",
+            "Basic_ConvertNumber",
+            "Basic_StringToNum",
+            "Basic_ConvertString",
+            "Basic_DataTypeConversion",
+            "JSON_Stringify",
+            "JSON_Parse",
+            "StrUtil_CharAsc",
+            "StrUtil_CharCode",
+            "Time_FormatNew",
+            "Time_DateToTimestamp"
+        ],
+        "mobileComponents": [
+            "Basic_ConvertBool",
+            "Basic_ConvertInt",
+            "Basic_ConvertNumber",
+            "Basic_StringToNum",
+            "Basic_ConvertString",
+            "Basic_DataTypeConversion",
+            "JSON_Stringify",
+            "JSON_Parse",
+            "StrUtil_CharAsc",
+            "StrUtil_CharCode",
+            "Time_FormatNew",
+            "Time_DateToTimestamp"
+        ]
+    },
+    {
+        "name": "string",
+        "label": "文本操作String",
+        "icon": "icon-zifuchuan",
+        "searchContent": {
+            "label": {
+                "character": "文本操作string",
+                "firstLetter": "wbczstring",
+                "allLetter": [
+                    "wen",
+                    "ben",
+                    "cao",
+                    "zuo",
+                    "s",
+                    "t",
+                    "r",
+                    "i",
+                    "n",
+                    "g"
+                ]
+            }
+        },
+        "components": [
+            "Regex_TestNew",
+            "Regex_FindStr",
+            "StrUtil_Replace",
+            "StrUtil_InStr",
+            "StrUtil_LookUpStr",
+            "StrUtil_AddToStr",
+            "StrUtil_Left",
+            "StrUtil_Right",
+            "StrUtil_Mid",
+            "StrUtil_CutOutStr",
+            "StrUtil_Len",
+            "StrUtil_UpperCase",
+            "StrUtil_LowerCase",
+            "StrUtil_CaseChange",
+            "StrUtil_Ltrim",
+            "StrUtil_Rtrim",
+            "StrUtil_Trim",
+            "StrUtil_DelTrim",
+            "StrUtil_Split",
+            "StrUtil_SplitStr",
+            "StrUtil_ReverseStr",
+            "StrUtil_CompleteStr",
+            "StrUtil_CreateRandomStr"
+        ],
+        "bgComponents": [
+            "Regex_TestNew",
+            "Regex_FindStr",
+            "StrUtil_Replace",
+            "StrUtil_InStr",
+            "StrUtil_LookUpStr",
+            "StrUtil_AddToStr",
+            "StrUtil_Left",
+            "StrUtil_Right",
+            "StrUtil_Mid",
+            "StrUtil_CutOutStr",
+            "StrUtil_Len",
+            "StrUtil_UpperCase",
+            "StrUtil_LowerCase",
+            "StrUtil_CaseChange",
+            "StrUtil_Ltrim",
+            "StrUtil_Rtrim",
+            "StrUtil_Trim",
+            "StrUtil_DelTrim",
+            "StrUtil_Split",
+            "StrUtil_SplitStr",
+            "StrUtil_ReverseStr",
+            "StrUtil_CompleteStr",
+            "StrUtil_CreateRandomStr"
+        ],
+        "mobileComponents": [
+            "Regex_TestNew",
+            "Regex_FindStr",
+            "StrUtil_Replace",
+            "StrUtil_InStr",
+            "StrUtil_LookUpStr",
+            "StrUtil_AddToStr",
+            "StrUtil_Left",
+            "StrUtil_Right",
+            "StrUtil_Mid",
+            "StrUtil_CutOutStr",
+            "StrUtil_Len",
+            "StrUtil_UpperCase",
+            "StrUtil_LowerCase",
+            "StrUtil_CaseChange",
+            "StrUtil_Ltrim",
+            "StrUtil_Rtrim",
+            "StrUtil_Trim",
+            "StrUtil_DelTrim",
+            "StrUtil_Split",
+            "StrUtil_SplitStr",
+            "StrUtil_ReverseStr",
+            "StrUtil_CompleteStr",
+            "StrUtil_CreateRandomStr"
+        ]
+    },
+    {
+        "name": "regexp",
+        "label": "文本查找提取",
+        "icon": "icon-zhengze",
+        "searchContent": {
+            "label": {
+                "character": "文本查找提取",
+                "firstLetter": "wbcztq",
+                "allLetter": [
+                    "wen",
+                    "ben",
+                    "cha",
+                    "zhao",
+                    "di",
+                    "qu"
+                ]
+            }
+        },
+        "components": [
+            "Regex_Test",
+            "Regex_Find",
+            "Regex_FindAll",
+            "Regex_FindNew",
+            "Regex_FindAllNew",
+            "Regex_FindNew_1"
+        ],
+        "bgComponents": [
+            "Regex_Test",
+            "Regex_Find",
+            "Regex_FindAll",
+            "Regex_FindNew",
+            "Regex_FindAllNew",
+            "Regex_FindNew_1"
+        ],
+        "mobileComponents": [
+            "Regex_Test",
+            "Regex_Find",
+            "Regex_FindAll",
+            "Regex_FindNew",
+            "Regex_FindAllNew",
+            "Regex_FindNew_1"
+        ]
+    },
+    {
+        "name": "math",
+        "label": "数学",
+        "icon": "icon-shuxue",
+        "searchContent": {
+            "label": {
+                "character": "数学",
+                "firstLetter": "sx",
+                "allLetter": [
+                    "shu",
+                    "xue"
+                ]
+            }
+        },
+        "components": [
+            "Math_Abs",
+            "Math_Cos",
+            "Math_Exp",
+            "Math_Pow",
+            "Math_Int",
+            "Math_Round",
+            "Math_Sgn",
+            "Math_Sin",
+            "Math_Sqrt",
+            "Math_Tan",
+            "Math_Hex",
+            "Math_Oct",
+            "Math_Scale"
+        ],
+        "bgComponents": [
+            "Math_Abs",
+            "Math_Cos",
+            "Math_Exp",
+            "Math_Pow",
+            "Math_Int",
+            "Math_Round",
+            "Math_Sgn",
+            "Math_Sin",
+            "Math_Sqrt",
+            "Math_Tan",
+            "Math_Hex",
+            "Math_Oct",
+            "Math_Scale"
+        ],
+        "mobileComponents": [
+            "Math_Abs",
+            "Math_Cos",
+            "Math_Exp",
+            "Math_Pow",
+            "Math_Int",
+            "Math_Round",
+            "Math_Sgn",
+            "Math_Sin",
+            "Math_Sqrt",
+            "Math_Tan",
+            "Math_Hex",
+            "Math_Oct",
+            "Math_Scale"
+        ]
+    },
+    {
+        "name": "time",
+        "label": "日期/时间处理",
+        "icon": "icon-shijian",
+        "searchContent": {
+            "label": {
+                "character": "日期/时间处理",
+                "firstLetter": "rq/sjcl",
+                "allLetter": [
+                    "ri",
+                    "qi",
+                    "/",
+                    "shi",
+                    "jian",
+                    "chu",
+                    "li"
+                ]
+            }
+        },
+        "components": [
+            "Time_TimeStamp",
+            "Time_Now",
+            "Time_Date",
+            "Time_Time",
+            "Time_Format",
+            "Time_DatetimeToTimestamp",
+            "Time_TimeTypeConversion",
+            "Time_Year",
+            "Time_Month",
+            "Time_Day",
+            "Time_Hour",
+            "Time_Minute",
+            "Time_Second",
+            "Time_WeekDay",
+            "Time_GetDate",
+            "Time_CalDate"
+        ],
+        "bgComponents": [
+            "Time_TimeStamp",
+            "Time_Now",
+            "Time_Date",
+            "Time_Time",
+            "Time_Format",
+            "Time_DatetimeToTimestamp",
+            "Time_TimeTypeConversion",
+            "Time_Year",
+            "Time_Month",
+            "Time_Day",
+            "Time_Hour",
+            "Time_Minute",
+            "Time_Second",
+            "Time_WeekDay",
+            "Time_GetDate",
+            "Time_CalDate"
+        ],
+        "mobileComponents": [
+            "Time_TimeStamp",
+            "Time_Now",
+            "Time_Date",
+            "Time_Time",
+            "Time_Format",
+            "Time_DatetimeToTimestamp",
+            "Time_TimeTypeConversion",
+            "Time_Year",
+            "Time_Month",
+            "Time_Day",
+            "Time_Hour",
+            "Time_Minute",
+            "Time_Second",
+            "Time_WeekDay",
+            "Time_GetDate",
+            "Time_CalDate"
+        ]
+    },
+    {
+        "name": "collection",
+        "label": "集合",
+        "icon": "icon-jihe",
+        "searchContent": {
+            "label": {
+                "character": "集合",
+                "firstLetter": "jh",
+                "allLetter": [
+                    "ji",
+                    "he"
+                ]
+            }
+        },
+        "components": [
+            "logic_control_array_for",
+            "Collection_Create",
+            "Collection_Count",
+            "Collection_Add",
+            "Collection_Remove",
+            "Collection_HasItem"
+        ],
+        "bgComponents": [
+            "logic_control_array_for",
+            "Collection_Create",
+            "Collection_Count",
+            "Collection_Add",
+            "Collection_Remove",
+            "Collection_HasItem"
+        ],
+        "mobileComponents": [
+            "logic_control_array_for",
+            "Collection_Create",
+            "Collection_Count",
+            "Collection_Add",
+            "Collection_Remove",
+            "Collection_HasItem"
+        ]
+    },
+    {
+        "name": "dict",
+        "label": "字典",
+        "icon": "icon-zidian",
+        "searchContent": {
+            "label": {
+                "character": "字典",
+                "firstLetter": "zd",
+                "allLetter": [
+                    "zi",
+                    "dian"
+                ]
+            }
+        },
+        "components": [
+            "logic_control_dictionary_for",
+            "Dict_Create",
+            "Dict_Keys",
+            "Dict_Values",
+            "Dict_Items",
+            "Dict_SetItem",
+            "Dict_GetItem",
+            "Dict_Clear",
+            "Dict_Update",
+            "Dict_Delete"
+        ],
+        "bgComponents": [
+            "logic_control_dictionary_for"
+        ],
+        "mobileComponents": [
+            "logic_control_dictionary_for",
+            "Dict_Create",
+            "Dict_Keys",
+            "Dict_Values",
+            "Dict_Items",
+            "Dict_SetItem",
+            "Dict_GetItem",
+            "Dict_Clear",
+            "Dict_Update",
+            "Dict_Delete"
+        ]
+    },
+    {
+        "name": "Database",
+        "label": "数据库",
+        "icon": "icon-fuwuqi",
+        "searchContent": {
+            "label": {
+                "character": "数据库",
+                "firstLetter": "sjk",
+                "allLetter": [
+                    "shu",
+                    "ju",
+                    "ku"
+                ]
+            }
+        },
+        "components": [
+            "Database_DBConnect",
+            "Database_SingleSQLQuery",
+            "Database_AllSQLQuery",
+            "Database_SQLExecute",
+            "Database_BatchSQLExecute",
+            "Database_CloseDBConnect"
+        ],
+        "bgComponents": [
+            "Database_DBConnect",
+            "Database_SingleSQLQuery",
+            "Database_AllSQLQuery",
+            "Database_SQLExecute",
+            "Database_BatchSQLExecute",
+            "Database_CloseDBConnect"
+        ],
+        "mobileComponents": [
+            "Database_DBConnect",
+            "Database_SingleSQLQuery",
+            "Database_AllSQLQuery",
+            "Database_SQLExecute",
+            "Database_BatchSQLExecute",
+            "Database_CloseDBConnect"
+        ]
+    },
+    {
+        "name": "bivartable",
+        "label": "二维表",
+        "icon": "icon-erweibiao",
+        "searchContent": {
+            "label": {
+                "character": "二维表",
+                "firstLetter": "ewb",
+                "allLetter": [
+                    "er",
+                    "wei",
+                    "biao"
+                ]
+            }
+        },
+        "components": [
+            "Bivartable_data_table_loop",
+            "Bivartable_DoCreate",
+            "Bivartable_DoOpenExcel",
+            "Bivartable_DoSave",
+            "Bivartable_DoJoint",
+            "Bivartable_DoCal",
+            "Bivartable_GetMaxValue",
+            "Bivartable_GetMinValue",
+            "Bivartable_GetAvgValue",
+            "Bivartable_GetSumValue",
+            "Bivartable_ModifyColName",
+            "Bivartable_DoSort",
+            "Bivartable_DoMerge",
+            "Bivartable_DoFilter",
+            "Bivartable_WriteTable",
+            "Bivartable_ReadTable"
+        ],
+        "bgComponents": [
+            "Bivartable_data_table_loop",
+            "Bivartable_DoCreate",
+            "Bivartable_DoOpenExcel",
+            "Bivartable_DoSave",
+            "Bivartable_DoJoint",
+            "Bivartable_DoCal",
+            "Bivartable_GetMaxValue",
+            "Bivartable_GetMinValue",
+            "Bivartable_GetAvgValue",
+            "Bivartable_GetSumValue",
+            "Bivartable_ModifyColName",
+            "Bivartable_DoSort",
+            "Bivartable_DoMerge",
+            "Bivartable_DoFilter",
+            "Bivartable_WriteTable",
+            "Bivartable_ReadTable"
+        ],
+        "mobileComponents": [
+            "Bivartable_DoCreate",
+            "Bivartable_DoOpenExcel",
+            "Bivartable_DoSave",
+            "Bivartable_DoJoint",
+            "Bivartable_DoCal",
+            "Bivartable_GetMaxValue",
+            "Bivartable_GetMinValue",
+            "Bivartable_GetAvgValue",
+            "Bivartable_GetSumValue",
+            "Bivartable_ModifyColName",
+            "Bivartable_DoSort",
+            "Bivartable_DoMerge",
+            "Bivartable_DoFilter",
+            "Bivartable_WriteTable",
+            "Bivartable_ReadTable"
+        ]
+    },
+    {
+        "name": "List",
+        "label": "一维列表",
+        "icon": "icon-yiweibiao",
+        "searchContent": {
+            "label": {
+                "character": "一维列表",
+                "firstLetter": "ywlb",
+                "allLetter": [
+                    "yi",
+                    "wei",
+                    "lie",
+                    "biao"
+                ]
+            }
+        },
+        "components": [
+            "List_CreateList",
+            "List_ClearList",
+            "List_InsertList",
+            "List_DeleteList",
+            "List_GetListItem",
+            "List_SetListItem",
+            "List_ListLength",
+            "List_ListIntersection",
+            "List_ListDuplication",
+            "List_ListSorted",
+            "List_ListMerge"
+        ],
+        "bgComponents": [
+            "List_CreateList",
+            "List_ClearList",
+            "List_InsertList",
+            "List_DeleteList",
+            "List_GetListItem",
+            "List_SetListItem",
+            "List_ListLength",
+            "List_ListIntersection",
+            "List_ListDuplication",
+            "List_ListSorted",
+            "List_ListMerge"
+        ],
+        "mobileComponents": [
+            "List_CreateList",
+            "List_ClearList",
+            "List_InsertList",
+            "List_DeleteList",
+            "List_GetListItem",
+            "List_SetListItem",
+            "List_ListLength",
+            "List_ListIntersection",
+            "List_ListDuplication",
+            "List_ListSorted",
+            "List_ListMerge"
+        ]
+    },
+    {
+        "name": "word",
+        "label": "Word",
+        "isTop": true,
+        "icon": "icon-word",
+        "children": [
+            {
+                "name": "word_operate",
+                "label": "Word文档操作",
+                "icon": "icon-wendangcaozuo",
+                "searchContent": {
+                    "label": {
+                        "character": "word文档操作",
+                        "firstLetter": "wordwdcz",
+                        "allLetter": [
+                            "w",
+                            "o",
+                            "r",
+                            "d",
+                            "wen",
+                            "dang",
+                            "cao",
+                            "zuo"
+                        ]
+                    }
+                },
+                "components": [
+                    "Word_New",
+                    "Word_Open",
+                    "Word_ReadAll",
+                    "Word_Save",
+                    "Word_SaveAs",
+                    "Word_Close",
+                    "Word_GetPath"
+                ],
+                "bgComponents": [
+                    "Word_New",
+                    "Word_Open",
+                    "Word_ReadAll",
+                    "Word_Save",
+                    "Word_SaveAs",
+                    "Word_Close",
+                    "Word_GetPath"
+                ],
+                "mobileComponents": [
+                    "Word_New",
+                    "Word_Open",
+                    "Word_ReadAll",
+                    "Word_Save",
+                    "Word_SaveAs",
+                    "Word_Close",
+                    "Word_GetPath"
+                ]
+            },
+            {
+                "name": "word_edit",
+                "label": "Word文档编辑",
+                "icon": "icon-wordwenbenbianji",
+                "searchContent": {
+                    "label": {
+                        "character": "word文档编辑",
+                        "firstLetter": "wordwdbj",
+                        "allLetter": [
+                            "w",
+                            "o",
+                            "r",
+                            "d",
+                            "wen",
+                            "dang",
+                            "bian",
+                            "ji"
+                        ]
+                    }
+                },
+                "components": [
+                    "Word_CutSelect",
+                    "Word_CopySelect",
+                    "Word_PasteSelect",
+                    "Word_DeleteSelect",
+                    "Word_Enter",
+                    "Word_InsertPage",
+                    "Word_InsertPicture",
+                    "Word_Write",
+                    "Word_Replace",
+                    "Word_SetFontName",
+                    "Word_SetFontSize",
+                    "Word_SetFontColor",
+                    "Word_SetFontStyle",
+                    "Word_SetAlign"
+                ],
+                "bgComponents": [
+                    "Word_CutSelect",
+                    "Word_CopySelect",
+                    "Word_PasteSelect",
+                    "Word_DeleteSelect",
+                    "Word_Enter",
+                    "Word_InsertPage",
+                    "Word_InsertPicture",
+                    "Word_Write",
+                    "Word_Replace",
+                    "Word_SetFontName",
+                    "Word_SetFontSize",
+                    "Word_SetFontColor",
+                    "Word_SetFontStyle",
+                    "Word_SetAlign"
+                ],
+                "mobileComponents": [
+                    "Word_CutSelect",
+                    "Word_CopySelect",
+                    "Word_PasteSelect",
+                    "Word_DeleteSelect",
+                    "Word_Enter",
+                    "Word_InsertPage",
+                    "Word_InsertPicture",
+                    "Word_Write",
+                    "Word_Replace",
+                    "Word_SetFontName",
+                    "Word_SetFontSize",
+                    "Word_SetFontColor",
+                    "Word_SetFontStyle",
+                    "Word_SetAlign"
+                ]
+            },
+            {
+                "name": "cursor_set",
+                "label": "光标设置",
+                "icon": "icon-guangbiaoshezhi",
+                "searchContent": {
+                    "label": {
+                        "character": "光标设置",
+                        "firstLetter": "gbsz",
+                        "allLetter": [
+                            "guang",
+                            "biao",
+                            "she",
+                            "zhi"
+                        ]
+                    }
+                },
+                "components": [
+                    "Word_SetPosition",
+                    "Word_MovePosition",
+                    "Word_PositionToSelect",
+                    "Word_SelectRow",
+                    "Word_SelectAll",
+                    "Word_ReadSelect"
+                ],
+                "bgComponents": [
+                    "Word_SetPosition",
+                    "Word_MovePosition",
+                    "Word_PositionToSelect",
+                    "Word_SelectRow",
+                    "Word_SelectAll",
+                    "Word_ReadSelect"
+                ],
+                "mobileComponents": [
+                    "Word_SetPosition",
+                    "Word_MovePosition",
+                    "Word_PositionToSelect",
+                    "Word_SelectRow",
+                    "Word_SelectAll",
+                    "Word_ReadSelect"
+                ]
+            }
+        ],
+        "searchContent": {
+            "label": {
+                "character": "word",
+                "firstLetter": "word",
+                "allLetter": [
+                    "w",
+                    "o",
+                    "r",
+                    "d"
+                ]
+            }
+        },
+        "components": [],
+        "bgComponents": [],
+        "mobileComponents": []
+    },
+    {
+        "name": "word_operate",
+        "label": "Word文档操作",
+        "icon": "icon-wendangcaozuo",
+        "searchContent": {
+            "label": {
+                "character": "word文档操作",
+                "firstLetter": "wordwdcz",
+                "allLetter": [
+                    "w",
+                    "o",
+                    "r",
+                    "d",
+                    "wen",
+                    "dang",
+                    "cao",
+                    "zuo"
+                ]
+            }
+        },
+        "components": [
+            "Word_New",
+            "Word_Open",
+            "Word_ReadAll",
+            "Word_Save",
+            "Word_SaveAs",
+            "Word_Close",
+            "Word_GetPath"
+        ],
+        "bgComponents": [
+            "Word_New",
+            "Word_Open",
+            "Word_ReadAll",
+            "Word_Save",
+            "Word_SaveAs",
+            "Word_Close",
+            "Word_GetPath"
+        ],
+        "mobileComponents": [
+            "Word_New",
+            "Word_Open",
+            "Word_ReadAll",
+            "Word_Save",
+            "Word_SaveAs",
+            "Word_Close",
+            "Word_GetPath"
+        ]
+    },
+    {
+        "name": "word_edit",
+        "label": "Word文档编辑",
+        "icon": "icon-wordwenbenbianji",
+        "searchContent": {
+            "label": {
+                "character": "word文档编辑",
+                "firstLetter": "wordwdbj",
+                "allLetter": [
+                    "w",
+                    "o",
+                    "r",
+                    "d",
+                    "wen",
+                    "dang",
+                    "bian",
+                    "ji"
+                ]
+            }
+        },
+        "components": [
+            "Word_CutSelect",
+            "Word_CopySelect",
+            "Word_PasteSelect",
+            "Word_DeleteSelect",
+            "Word_Enter",
+            "Word_InsertPage",
+            "Word_InsertPicture",
+            "Word_Write",
+            "Word_Replace",
+            "Word_SetFontName",
+            "Word_SetFontSize",
+            "Word_SetFontColor",
+            "Word_SetFontStyle",
+            "Word_SetAlign"
+        ],
+        "bgComponents": [
+            "Word_CutSelect",
+            "Word_CopySelect",
+            "Word_PasteSelect",
+            "Word_DeleteSelect",
+            "Word_Enter",
+            "Word_InsertPage",
+            "Word_InsertPicture",
+            "Word_Write",
+            "Word_Replace",
+            "Word_SetFontName",
+            "Word_SetFontSize",
+            "Word_SetFontColor",
+            "Word_SetFontStyle",
+            "Word_SetAlign"
+        ],
+        "mobileComponents": [
+            "Word_CutSelect",
+            "Word_CopySelect",
+            "Word_PasteSelect",
+            "Word_DeleteSelect",
+            "Word_Enter",
+            "Word_InsertPage",
+            "Word_InsertPicture",
+            "Word_Write",
+            "Word_Replace",
+            "Word_SetFontName",
+            "Word_SetFontSize",
+            "Word_SetFontColor",
+            "Word_SetFontStyle",
+            "Word_SetAlign"
+        ]
+    },
+    {
+        "name": "cursor_set",
+        "label": "光标设置",
+        "icon": "icon-guangbiaoshezhi",
+        "searchContent": {
+            "label": {
+                "character": "光标设置",
+                "firstLetter": "gbsz",
+                "allLetter": [
+                    "guang",
+                    "biao",
+                    "she",
+                    "zhi"
+                ]
+            }
+        },
+        "components": [
+            "Word_SetPosition",
+            "Word_MovePosition",
+            "Word_PositionToSelect",
+            "Word_SelectRow",
+            "Word_SelectAll",
+            "Word_ReadSelect"
+        ],
+        "bgComponents": [
+            "Word_SetPosition",
+            "Word_MovePosition",
+            "Word_PositionToSelect",
+            "Word_SelectRow",
+            "Word_SelectAll",
+            "Word_ReadSelect"
+        ],
+        "mobileComponents": [
+            "Word_SetPosition",
+            "Word_MovePosition",
+            "Word_PositionToSelect",
+            "Word_SelectRow",
+            "Word_SelectAll",
+            "Word_ReadSelect"
+        ]
+    },
+    {
+        "name": "excel",
+        "label": "Excel",
+        "isTop": true,
+        "icon": "icon-excel",
+        "children": [
+            {
+                "name": "excel_operator",
+                "label": "Excel文档操作",
+                "icon": "icon-wendangcaozuo",
+                "searchContent": {
+                    "label": {
+                        "character": "excel文档操作",
+                        "firstLetter": "excelwdcz",
+                        "allLetter": [
+                            "e",
+                            "x",
+                            "c",
+                            "e",
+                            "l",
+                            "wen",
+                            "dang",
+                            "cao",
+                            "zuo"
+                        ]
+                    }
+                },
+                "components": [
+                    "Excel_Cs_New",
+                    "Excel_Cs_Open",
+                    "Excel_Cs_Load",
+                    "Excel_Cs_Save",
+                    "Excel_Cs_SaveAs",
+                    "Excel_Cs_Close",
+                    "Excel_Cs_Export",
+                    "Excel_Cs_Encrypt",
+                    "Excel_Cs_GetPath",
+                    "Excel_NewExcel",
+                    "Excel_OpenExcel",
+                    "Excel_OpenExcelNew",
+                    "Excel_Save",
+                    "Excel_SaveAs",
+                    "Excel_Close",
+                    "Excel_GetPath"
+                ],
+                "bgComponents": [
+                    "Excel_Cs_New",
+                    "Excel_Cs_Open",
+                    "Excel_Cs_Load",
+                    "Excel_Cs_Save",
+                    "Excel_Cs_SaveAs",
+                    "Excel_Cs_Close",
+                    "Excel_Cs_Export",
+                    "Excel_Cs_Encrypt",
+                    "Excel_Cs_GetPath",
+                    "Excel_NewExcel",
+                    "Excel_OpenExcel",
+                    "Excel_OpenExcelNew",
+                    "Excel_Save",
+                    "Excel_SaveAs",
+                    "Excel_Close",
+                    "Excel_GetPath"
+                ],
+                "mobileComponents": [
+                    "Excel_Cs_New",
+                    "Excel_Cs_Open",
+                    "Excel_Cs_Load",
+                    "Excel_Cs_Save",
+                    "Excel_Cs_SaveAs",
+                    "Excel_Cs_Close",
+                    "Excel_Cs_Export",
+                    "Excel_Cs_Encrypt",
+                    "Excel_Cs_GetPath",
+                    "Excel_NewExcel",
+                    "Excel_OpenExcel",
+                    "Excel_OpenExcelNew",
+                    "Excel_Save",
+                    "Excel_SaveAs",
+                    "Excel_Close",
+                    "Excel_GetPath"
+                ]
+            },
+            {
+                "name": "excel_sheet",
+                "label": "Excel Sheet操作",
+                "icon": "icon-excelsheetcaozuo",
+                "searchContent": {
+                    "label": {
+                        "character": "excel sheet操作",
+                        "firstLetter": "excel sheetcz",
+                        "allLetter": [
+                            "e",
+                            "x",
+                            "c",
+                            "e",
+                            "l",
+                            "s",
+                            "h",
+                            "e",
+                            "e",
+                            "t",
+                            "cao",
+                            "zuo"
+                        ]
+                    }
+                },
+                "components": [
+                    "Excel_Cs_Insert",
+                    "Excel_Cs_GetName",
+                    "Excel_Cs_Rename",
+                    "Excel_Cs_Copy",
+                    "Excel_Cs_Active",
+                    "Excel_Cs_Delete",
+                    "Excel_Cs_Move",
+                    "Excel_CreateSheet",
+                    "Excel_GetSheetsName",
+                    "Excel_RenameSheet",
+                    "Excel_CopySheet",
+                    "Excel_ActiveSheet",
+                    "Excel_DeleteSheet"
+                ],
+                "bgComponents": [
+                    "Excel_Cs_Insert",
+                    "Excel_Cs_GetName",
+                    "Excel_Cs_Rename",
+                    "Excel_Cs_Copy",
+                    "Excel_Cs_Active",
+                    "Excel_Cs_Delete",
+                    "Excel_Cs_Move",
+                    "Excel_CreateSheet",
+                    "Excel_GetSheetsName",
+                    "Excel_RenameSheet",
+                    "Excel_CopySheet",
+                    "Excel_ActiveSheet",
+                    "Excel_DeleteSheet"
+                ],
+                "mobileComponents": [
+                    "Excel_Cs_Insert",
+                    "Excel_Cs_GetName",
+                    "Excel_Cs_Rename",
+                    "Excel_Cs_Copy",
+                    "Excel_Cs_Active",
+                    "Excel_Cs_Delete",
+                    "Excel_Cs_Move",
+                    "Excel_CreateSheet",
+                    "Excel_GetSheetsName",
+                    "Excel_RenameSheet",
+                    "Excel_CopySheet",
+                    "Excel_ActiveSheet",
+                    "Excel_DeleteSheet"
+                ]
+            },
+            {
+                "name": "excel_fetch_data",
+                "label": "Excel信息读取",
+                "icon": "icon-excelxinxiduqu",
+                "searchContent": {
+                    "label": {
+                        "character": "excel信息读取",
+                        "firstLetter": "excelxxdq",
+                        "allLetter": [
+                            "e",
+                            "x",
+                            "c",
+                            "e",
+                            "l",
+                            "shen",
+                            "xi",
+                            "dou",
+                            "qu"
+                        ]
+                    }
+                },
+                "components": [
+                    "excel_loop_data",
+                    "Excel_Cs_ReadCell",
+                    "Excel_Cs_ReadRange",
+                    "Excel_Cs_ReadRangeV2",
+                    "Excel_Cs_ReadRow",
+                    "Excel_Cs_ReadColumn",
+                    "Excel_Cs_ReadRowCount",
+                    "Excel_Cs_ReadColumnCount",
+                    "Excel_Cs_GetEmptyCell",
+                    "Excel_Cs_GetLastEmptyCell",
+                    "Excel_Cs_GetEditRange",
+                    "Excel_Cs_Loop",
+                    "Excel_ReadCell",
+                    "Excel_ReadCellNew",
+                    "Excel_ReadRangeNew",
+                    "Excel_GetRowDataNew",
+                    "Excel_GetColDataNew",
+                    "Excel_GetRowsCount",
+                    "Excel_GetColumnsCount",
+                    "Excel_Loop"
+                ],
+                "bgComponents": [
+                    "excel_loop_data",
+                    "Excel_Cs_ReadCell",
+                    "Excel_Cs_ReadRange",
+                    "Excel_Cs_ReadRangeV2",
+                    "Excel_Cs_ReadRow",
+                    "Excel_Cs_ReadColumn",
+                    "Excel_Cs_ReadRowCount",
+                    "Excel_Cs_ReadColumnCount",
+                    "Excel_Cs_GetEmptyCell",
+                    "Excel_Cs_GetLastEmptyCell",
+                    "Excel_Cs_GetEditRange",
+                    "Excel_Cs_Loop",
+                    "Excel_ReadCell",
+                    "Excel_ReadCellNew",
+                    "Excel_ReadRangeNew",
+                    "Excel_GetRowDataNew",
+                    "Excel_GetColDataNew",
+                    "Excel_GetRowsCount",
+                    "Excel_GetColumnsCount",
+                    "Excel_Loop"
+                ],
+                "mobileComponents": [
+                    "Excel_Cs_ReadCell",
+                    "Excel_Cs_ReadRange",
+                    "Excel_Cs_ReadRangeV2",
+                    "Excel_Cs_ReadRow",
+                    "Excel_Cs_ReadColumn",
+                    "Excel_Cs_ReadRowCount",
+                    "Excel_Cs_ReadColumnCount",
+                    "Excel_Cs_GetEmptyCell",
+                    "Excel_Cs_GetLastEmptyCell",
+                    "Excel_Cs_GetEditRange",
+                    "Excel_Cs_Loop",
+                    "Excel_ReadCell",
+                    "Excel_ReadCellNew",
+                    "Excel_ReadRangeNew",
+                    "Excel_GetRowDataNew",
+                    "Excel_GetColDataNew",
+                    "Excel_GetRowsCount",
+                    "Excel_GetColumnsCount",
+                    "Excel_Loop"
+                ]
+            },
+            {
+                "name": "excel_editor",
+                "label": "Excel表格编辑",
+                "icon": "icon-excelbiaogebianji",
+                "searchContent": {
+                    "label": {
+                        "character": "excel表格编辑",
+                        "firstLetter": "excelbgbj",
+                        "allLetter": [
+                            "e",
+                            "x",
+                            "c",
+                            "e",
+                            "l",
+                            "biao",
+                            "ge",
+                            "bian",
+                            "ji"
+                        ]
+                    }
+                },
+                "components": [
+                    "Excel_Cs_WriteCell",
+                    "Excel_Cs_WriteRow",
+                    "Excel_Cs_DeleteRow",
+                    "Excel_Cs_WriteColumn",
+                    "Excel_Cs_DeleteColumn",
+                    "Excel_Cs_InsertRow",
+                    "Excel_Cs_InsertColumn",
+                    "Excel_Cs_Hide",
+                    "Excel_Cs_InsertPicture",
+                    "Excel_Cs_DeletePicture",
+                    "Excel_Cs_WriteRange",
+                    "Excel_Cs_SelectRange",
+                    "Excel_Cs_SelectRangeV2",
+                    "Excel_Cs_ClearRange",
+                    "Excel_Cs_ClearRangeV2",
+                    "Excel_Cs_DeleteRange",
+                    "Excel_Cs_DeleteRangeV2",
+                    "Excel_Cs_SetRangeBackground",
+                    "Excel_Cs_SetRangeBackgroundV2",
+                    "Excel_Cs_SetRangeFont",
+                    "Excel_Cs_SetRangeFontV2",
+                    "Excel_Cs_CopyRange",
+                    "Excel_Cs_PastRange",
+                    "Excel_Cs_DeleteDuplicates",
+                    "Excel_Cs_SetWidth",
+                    "Excel_Cs_SetHeight",
+                    "Excel_Cs_SetCellBackground",
+                    "Excel_Cs_SetCellFont",
+                    "Excel_Cs_InsertPivotTable",
+                    "Excel_Cs_InsertPivotView",
+                    "Excel_Cs_Refresh",
+                    "Excel_Cs_Sort",
+                    "Excel_Cs_Filter",
+                    "Excel_Cs_RunMacro",
+                    "Excel_WriteCell",
+                    "Excel_WriteCellNew",
+                    "Excel_WriteRowNew",
+                    "Excel_DeleteRow",
+                    "Excel_WriteColumnNew",
+                    "Excel_DeleteColumn",
+                    "Excel_InsertRow",
+                    "Excel_InsertColumn",
+                    "Excel_InsertImage",
+                    "Excel_DeleteImage",
+                    "Excel_WriteRangeNew",
+                    "Excel_SelectRange",
+                    "Excel_ClearRange",
+                    "Excel_DeleteRange",
+                    "Excel_SetColumnWidth",
+                    "Excel_SetRowHeight",
+                    "Excel_SetCellColor",
+                    "Excel_SetCellFontColor",
+                    "Excel_SetRangeColor",
+                    "Excel_SetRangeFontColor",
+                    "Excel_ExecuteMacro",
+                    "Excel_CopyRange",
+                    "Excel_PasteRange",
+                    "Excel_GetColumnId"
+                ],
+                "bgComponents": [
+                    "Excel_Cs_WriteCell",
+                    "Excel_Cs_WriteRow",
+                    "Excel_Cs_DeleteRow",
+                    "Excel_Cs_WriteColumn",
+                    "Excel_Cs_DeleteColumn",
+                    "Excel_Cs_InsertRow",
+                    "Excel_Cs_InsertColumn",
+                    "Excel_Cs_Hide",
+                    "Excel_Cs_InsertPicture",
+                    "Excel_Cs_DeletePicture",
+                    "Excel_Cs_WriteRange",
+                    "Excel_Cs_SelectRange",
+                    "Excel_Cs_SelectRangeV2",
+                    "Excel_Cs_ClearRange",
+                    "Excel_Cs_ClearRangeV2",
+                    "Excel_Cs_DeleteRange",
+                    "Excel_Cs_DeleteRangeV2",
+                    "Excel_Cs_SetRangeBackground",
+                    "Excel_Cs_SetRangeBackgroundV2",
+                    "Excel_Cs_SetRangeFont",
+                    "Excel_Cs_SetRangeFontV2",
+                    "Excel_Cs_CopyRange",
+                    "Excel_Cs_PastRange",
+                    "Excel_Cs_DeleteDuplicates",
+                    "Excel_Cs_SetWidth",
+                    "Excel_Cs_SetHeight",
+                    "Excel_Cs_SetCellBackground",
+                    "Excel_Cs_SetCellFont",
+                    "Excel_Cs_InsertPivotTable",
+                    "Excel_Cs_InsertPivotView",
+                    "Excel_Cs_Refresh",
+                    "Excel_Cs_Sort",
+                    "Excel_Cs_Filter",
+                    "Excel_Cs_RunMacro",
+                    "Excel_WriteCell",
+                    "Excel_WriteCellNew",
+                    "Excel_WriteRowNew",
+                    "Excel_DeleteRow",
+                    "Excel_WriteColumnNew",
+                    "Excel_DeleteColumn",
+                    "Excel_InsertRow",
+                    "Excel_InsertColumn",
+                    "Excel_InsertImage",
+                    "Excel_DeleteImage",
+                    "Excel_WriteRangeNew",
+                    "Excel_SelectRange",
+                    "Excel_ClearRange",
+                    "Excel_DeleteRange",
+                    "Excel_SetColumnWidth",
+                    "Excel_SetRowHeight",
+                    "Excel_SetCellColor",
+                    "Excel_SetCellFontColor",
+                    "Excel_SetRangeColor",
+                    "Excel_SetRangeFontColor",
+                    "Excel_ExecuteMacro",
+                    "Excel_CopyRange",
+                    "Excel_PasteRange",
+                    "Excel_GetColumnId"
+                ],
+                "mobileComponents": [
+                    "Excel_Cs_WriteCell",
+                    "Excel_Cs_WriteRow",
+                    "Excel_Cs_DeleteRow",
+                    "Excel_Cs_WriteColumn",
+                    "Excel_Cs_DeleteColumn",
+                    "Excel_Cs_InsertRow",
+                    "Excel_Cs_InsertColumn",
+                    "Excel_Cs_Hide",
+                    "Excel_Cs_InsertPicture",
+                    "Excel_Cs_DeletePicture",
+                    "Excel_Cs_WriteRange",
+                    "Excel_Cs_SelectRange",
+                    "Excel_Cs_SelectRangeV2",
+                    "Excel_Cs_ClearRange",
+                    "Excel_Cs_ClearRangeV2",
+                    "Excel_Cs_DeleteRange",
+                    "Excel_Cs_DeleteRangeV2",
+                    "Excel_Cs_SetRangeBackground",
+                    "Excel_Cs_SetRangeBackgroundV2",
+                    "Excel_Cs_SetRangeFont",
+                    "Excel_Cs_SetRangeFontV2",
+                    "Excel_Cs_CopyRange",
+                    "Excel_Cs_PastRange",
+                    "Excel_Cs_DeleteDuplicates",
+                    "Excel_Cs_SetWidth",
+                    "Excel_Cs_SetHeight",
+                    "Excel_Cs_SetCellBackground",
+                    "Excel_Cs_SetCellFont",
+                    "Excel_Cs_InsertPivotTable",
+                    "Excel_Cs_InsertPivotView",
+                    "Excel_Cs_Refresh",
+                    "Excel_Cs_Sort",
+                    "Excel_Cs_Filter",
+                    "Excel_Cs_RunMacro",
+                    "Excel_WriteCell",
+                    "Excel_WriteCellNew",
+                    "Excel_WriteRowNew",
+                    "Excel_DeleteRow",
+                    "Excel_WriteColumnNew",
+                    "Excel_DeleteColumn",
+                    "Excel_InsertRow",
+                    "Excel_InsertColumn",
+                    "Excel_InsertImage",
+                    "Excel_DeleteImage",
+                    "Excel_WriteRangeNew",
+                    "Excel_SelectRange",
+                    "Excel_ClearRange",
+                    "Excel_DeleteRange",
+                    "Excel_SetColumnWidth",
+                    "Excel_SetRowHeight",
+                    "Excel_SetCellColor",
+                    "Excel_SetCellFontColor",
+                    "Excel_SetRangeColor",
+                    "Excel_SetRangeFontColor",
+                    "Excel_ExecuteMacro",
+                    "Excel_CopyRange",
+                    "Excel_PasteRange",
+                    "Excel_GetColumnId"
+                ]
+            }
+        ],
+        "searchContent": {
+            "label": {
+                "character": "excel",
+                "firstLetter": "excel",
+                "allLetter": [
+                    "e",
+                    "x",
+                    "c",
+                    "e",
+                    "l"
+                ]
+            }
+        },
+        "components": [
+            "Excel_ReadRange",
+            "Excel_GetRowData",
+            "Excel_GetColData",
+            "Excel_WriteRow",
+            "Excel_WriteColumn",
+            "Excel_WriteRange"
+        ],
+        "bgComponents": [
+            "Excel_ReadRange",
+            "Excel_GetRowData",
+            "Excel_GetColData",
+            "Excel_WriteRow",
+            "Excel_WriteColumn",
+            "Excel_WriteRange"
+        ],
+        "mobileComponents": [
+            "Excel_ReadRange",
+            "Excel_GetRowData",
+            "Excel_GetColData",
+            "Excel_WriteRow",
+            "Excel_WriteColumn",
+            "Excel_WriteRange"
+        ]
+    },
+    {
+        "name": "excel_operator",
+        "label": "Excel文档操作",
+        "icon": "icon-wendangcaozuo",
+        "searchContent": {
+            "label": {
+                "character": "excel文档操作",
+                "firstLetter": "excelwdcz",
+                "allLetter": [
+                    "e",
+                    "x",
+                    "c",
+                    "e",
+                    "l",
+                    "wen",
+                    "dang",
+                    "cao",
+                    "zuo"
+                ]
+            }
+        },
+        "components": [
+            "Excel_Cs_New",
+            "Excel_Cs_Open",
+            "Excel_Cs_Load",
+            "Excel_Cs_Save",
+            "Excel_Cs_SaveAs",
+            "Excel_Cs_Close",
+            "Excel_Cs_Export",
+            "Excel_Cs_Encrypt",
+            "Excel_Cs_GetPath",
+            "Excel_NewExcel",
+            "Excel_OpenExcel",
+            "Excel_OpenExcelNew",
+            "Excel_Save",
+            "Excel_SaveAs",
+            "Excel_Close",
+            "Excel_GetPath"
+        ],
+        "bgComponents": [
+            "Excel_Cs_New",
+            "Excel_Cs_Open",
+            "Excel_Cs_Load",
+            "Excel_Cs_Save",
+            "Excel_Cs_SaveAs",
+            "Excel_Cs_Close",
+            "Excel_Cs_Export",
+            "Excel_Cs_Encrypt",
+            "Excel_Cs_GetPath",
+            "Excel_NewExcel",
+            "Excel_OpenExcel",
+            "Excel_OpenExcelNew",
+            "Excel_Save",
+            "Excel_SaveAs",
+            "Excel_Close",
+            "Excel_GetPath"
+        ],
+        "mobileComponents": [
+            "Excel_Cs_New",
+            "Excel_Cs_Open",
+            "Excel_Cs_Load",
+            "Excel_Cs_Save",
+            "Excel_Cs_SaveAs",
+            "Excel_Cs_Close",
+            "Excel_Cs_Export",
+            "Excel_Cs_Encrypt",
+            "Excel_Cs_GetPath",
+            "Excel_NewExcel",
+            "Excel_OpenExcel",
+            "Excel_OpenExcelNew",
+            "Excel_Save",
+            "Excel_SaveAs",
+            "Excel_Close",
+            "Excel_GetPath"
+        ]
+    },
+    {
+        "name": "excel_sheet",
+        "label": "Excel Sheet操作",
+        "icon": "icon-excelsheetcaozuo",
+        "searchContent": {
+            "label": {
+                "character": "excel sheet操作",
+                "firstLetter": "excel sheetcz",
+                "allLetter": [
+                    "e",
+                    "x",
+                    "c",
+                    "e",
+                    "l",
+                    "s",
+                    "h",
+                    "e",
+                    "e",
+                    "t",
+                    "cao",
+                    "zuo"
+                ]
+            }
+        },
+        "components": [
+            "Excel_Cs_Insert",
+            "Excel_Cs_GetName",
+            "Excel_Cs_Rename",
+            "Excel_Cs_Copy",
+            "Excel_Cs_Active",
+            "Excel_Cs_Delete",
+            "Excel_Cs_Move",
+            "Excel_CreateSheet",
+            "Excel_GetSheetsName",
+            "Excel_RenameSheet",
+            "Excel_CopySheet",
+            "Excel_ActiveSheet",
+            "Excel_DeleteSheet"
+        ],
+        "bgComponents": [
+            "Excel_Cs_Insert",
+            "Excel_Cs_GetName",
+            "Excel_Cs_Rename",
+            "Excel_Cs_Copy",
+            "Excel_Cs_Active",
+            "Excel_Cs_Delete",
+            "Excel_Cs_Move",
+            "Excel_CreateSheet",
+            "Excel_GetSheetsName",
+            "Excel_RenameSheet",
+            "Excel_CopySheet",
+            "Excel_ActiveSheet",
+            "Excel_DeleteSheet"
+        ],
+        "mobileComponents": [
+            "Excel_Cs_Insert",
+            "Excel_Cs_GetName",
+            "Excel_Cs_Rename",
+            "Excel_Cs_Copy",
+            "Excel_Cs_Active",
+            "Excel_Cs_Delete",
+            "Excel_Cs_Move",
+            "Excel_CreateSheet",
+            "Excel_GetSheetsName",
+            "Excel_RenameSheet",
+            "Excel_CopySheet",
+            "Excel_ActiveSheet",
+            "Excel_DeleteSheet"
+        ]
+    },
+    {
+        "name": "excel_fetch_data",
+        "label": "Excel信息读取",
+        "icon": "icon-excelxinxiduqu",
+        "searchContent": {
+            "label": {
+                "character": "excel信息读取",
+                "firstLetter": "excelxxdq",
+                "allLetter": [
+                    "e",
+                    "x",
+                    "c",
+                    "e",
+                    "l",
+                    "shen",
+                    "xi",
+                    "dou",
+                    "qu"
+                ]
+            }
+        },
+        "components": [
+            "excel_loop_data",
+            "Excel_Cs_ReadCell",
+            "Excel_Cs_ReadRange",
+            "Excel_Cs_ReadRangeV2",
+            "Excel_Cs_ReadRow",
+            "Excel_Cs_ReadColumn",
+            "Excel_Cs_ReadRowCount",
+            "Excel_Cs_ReadColumnCount",
+            "Excel_Cs_GetEmptyCell",
+            "Excel_Cs_GetLastEmptyCell",
+            "Excel_Cs_GetEditRange",
+            "Excel_Cs_Loop",
+            "Excel_ReadCell",
+            "Excel_ReadCellNew",
+            "Excel_ReadRangeNew",
+            "Excel_GetRowDataNew",
+            "Excel_GetColDataNew",
+            "Excel_GetRowsCount",
+            "Excel_GetColumnsCount",
+            "Excel_Loop"
+        ],
+        "bgComponents": [
+            "excel_loop_data",
+            "Excel_Cs_ReadCell",
+            "Excel_Cs_ReadRange",
+            "Excel_Cs_ReadRangeV2",
+            "Excel_Cs_ReadRow",
+            "Excel_Cs_ReadColumn",
+            "Excel_Cs_ReadRowCount",
+            "Excel_Cs_ReadColumnCount",
+            "Excel_Cs_GetEmptyCell",
+            "Excel_Cs_GetLastEmptyCell",
+            "Excel_Cs_GetEditRange",
+            "Excel_Cs_Loop",
+            "Excel_ReadCell",
+            "Excel_ReadCellNew",
+            "Excel_ReadRangeNew",
+            "Excel_GetRowDataNew",
+            "Excel_GetColDataNew",
+            "Excel_GetRowsCount",
+            "Excel_GetColumnsCount",
+            "Excel_Loop"
+        ],
+        "mobileComponents": [
+            "Excel_Cs_ReadCell",
+            "Excel_Cs_ReadRange",
+            "Excel_Cs_ReadRangeV2",
+            "Excel_Cs_ReadRow",
+            "Excel_Cs_ReadColumn",
+            "Excel_Cs_ReadRowCount",
+            "Excel_Cs_ReadColumnCount",
+            "Excel_Cs_GetEmptyCell",
+            "Excel_Cs_GetLastEmptyCell",
+            "Excel_Cs_GetEditRange",
+            "Excel_Cs_Loop",
+            "Excel_ReadCell",
+            "Excel_ReadCellNew",
+            "Excel_ReadRangeNew",
+            "Excel_GetRowDataNew",
+            "Excel_GetColDataNew",
+            "Excel_GetRowsCount",
+            "Excel_GetColumnsCount",
+            "Excel_Loop"
+        ]
+    },
+    {
+        "name": "excel_editor",
+        "label": "Excel表格编辑",
+        "icon": "icon-excelbiaogebianji",
+        "searchContent": {
+            "label": {
+                "character": "excel表格编辑",
+                "firstLetter": "excelbgbj",
+                "allLetter": [
+                    "e",
+                    "x",
+                    "c",
+                    "e",
+                    "l",
+                    "biao",
+                    "ge",
+                    "bian",
+                    "ji"
+                ]
+            }
+        },
+        "components": [
+            "Excel_Cs_WriteCell",
+            "Excel_Cs_WriteRow",
+            "Excel_Cs_DeleteRow",
+            "Excel_Cs_WriteColumn",
+            "Excel_Cs_DeleteColumn",
+            "Excel_Cs_InsertRow",
+            "Excel_Cs_InsertColumn",
+            "Excel_Cs_Hide",
+            "Excel_Cs_InsertPicture",
+            "Excel_Cs_DeletePicture",
+            "Excel_Cs_WriteRange",
+            "Excel_Cs_SelectRange",
+            "Excel_Cs_SelectRangeV2",
+            "Excel_Cs_ClearRange",
+            "Excel_Cs_ClearRangeV2",
+            "Excel_Cs_DeleteRange",
+            "Excel_Cs_DeleteRangeV2",
+            "Excel_Cs_SetRangeBackground",
+            "Excel_Cs_SetRangeBackgroundV2",
+            "Excel_Cs_SetRangeFont",
+            "Excel_Cs_SetRangeFontV2",
+            "Excel_Cs_CopyRange",
+            "Excel_Cs_PastRange",
+            "Excel_Cs_DeleteDuplicates",
+            "Excel_Cs_SetWidth",
+            "Excel_Cs_SetHeight",
+            "Excel_Cs_SetCellBackground",
+            "Excel_Cs_SetCellFont",
+            "Excel_Cs_InsertPivotTable",
+            "Excel_Cs_InsertPivotView",
+            "Excel_Cs_Refresh",
+            "Excel_Cs_Sort",
+            "Excel_Cs_Filter",
+            "Excel_Cs_RunMacro",
+            "Excel_WriteCell",
+            "Excel_WriteCellNew",
+            "Excel_WriteRowNew",
+            "Excel_DeleteRow",
+            "Excel_WriteColumnNew",
+            "Excel_DeleteColumn",
+            "Excel_InsertRow",
+            "Excel_InsertColumn",
+            "Excel_InsertImage",
+            "Excel_DeleteImage",
+            "Excel_WriteRangeNew",
+            "Excel_SelectRange",
+            "Excel_ClearRange",
+            "Excel_DeleteRange",
+            "Excel_SetColumnWidth",
+            "Excel_SetRowHeight",
+            "Excel_SetCellColor",
+            "Excel_SetCellFontColor",
+            "Excel_SetRangeColor",
+            "Excel_SetRangeFontColor",
+            "Excel_ExecuteMacro",
+            "Excel_CopyRange",
+            "Excel_PasteRange",
+            "Excel_GetColumnId"
+        ],
+        "bgComponents": [
+            "Excel_Cs_WriteCell",
+            "Excel_Cs_WriteRow",
+            "Excel_Cs_DeleteRow",
+            "Excel_Cs_WriteColumn",
+            "Excel_Cs_DeleteColumn",
+            "Excel_Cs_InsertRow",
+            "Excel_Cs_InsertColumn",
+            "Excel_Cs_Hide",
+            "Excel_Cs_InsertPicture",
+            "Excel_Cs_DeletePicture",
+            "Excel_Cs_WriteRange",
+            "Excel_Cs_SelectRange",
+            "Excel_Cs_SelectRangeV2",
+            "Excel_Cs_ClearRange",
+            "Excel_Cs_ClearRangeV2",
+            "Excel_Cs_DeleteRange",
+            "Excel_Cs_DeleteRangeV2",
+            "Excel_Cs_SetRangeBackground",
+            "Excel_Cs_SetRangeBackgroundV2",
+            "Excel_Cs_SetRangeFont",
+            "Excel_Cs_SetRangeFontV2",
+            "Excel_Cs_CopyRange",
+            "Excel_Cs_PastRange",
+            "Excel_Cs_DeleteDuplicates",
+            "Excel_Cs_SetWidth",
+            "Excel_Cs_SetHeight",
+            "Excel_Cs_SetCellBackground",
+            "Excel_Cs_SetCellFont",
+            "Excel_Cs_InsertPivotTable",
+            "Excel_Cs_InsertPivotView",
+            "Excel_Cs_Refresh",
+            "Excel_Cs_Sort",
+            "Excel_Cs_Filter",
+            "Excel_Cs_RunMacro",
+            "Excel_WriteCell",
+            "Excel_WriteCellNew",
+            "Excel_WriteRowNew",
+            "Excel_DeleteRow",
+            "Excel_WriteColumnNew",
+            "Excel_DeleteColumn",
+            "Excel_InsertRow",
+            "Excel_InsertColumn",
+            "Excel_InsertImage",
+            "Excel_DeleteImage",
+            "Excel_WriteRangeNew",
+            "Excel_SelectRange",
+            "Excel_ClearRange",
+            "Excel_DeleteRange",
+            "Excel_SetColumnWidth",
+            "Excel_SetRowHeight",
+            "Excel_SetCellColor",
+            "Excel_SetCellFontColor",
+            "Excel_SetRangeColor",
+            "Excel_SetRangeFontColor",
+            "Excel_ExecuteMacro",
+            "Excel_CopyRange",
+            "Excel_PasteRange",
+            "Excel_GetColumnId"
+        ],
+        "mobileComponents": [
+            "Excel_Cs_WriteCell",
+            "Excel_Cs_WriteRow",
+            "Excel_Cs_DeleteRow",
+            "Excel_Cs_WriteColumn",
+            "Excel_Cs_DeleteColumn",
+            "Excel_Cs_InsertRow",
+            "Excel_Cs_InsertColumn",
+            "Excel_Cs_Hide",
+            "Excel_Cs_InsertPicture",
+            "Excel_Cs_DeletePicture",
+            "Excel_Cs_WriteRange",
+            "Excel_Cs_SelectRange",
+            "Excel_Cs_SelectRangeV2",
+            "Excel_Cs_ClearRange",
+            "Excel_Cs_ClearRangeV2",
+            "Excel_Cs_DeleteRange",
+            "Excel_Cs_DeleteRangeV2",
+            "Excel_Cs_SetRangeBackground",
+            "Excel_Cs_SetRangeBackgroundV2",
+            "Excel_Cs_SetRangeFont",
+            "Excel_Cs_SetRangeFontV2",
+            "Excel_Cs_CopyRange",
+            "Excel_Cs_PastRange",
+            "Excel_Cs_DeleteDuplicates",
+            "Excel_Cs_SetWidth",
+            "Excel_Cs_SetHeight",
+            "Excel_Cs_SetCellBackground",
+            "Excel_Cs_SetCellFont",
+            "Excel_Cs_InsertPivotTable",
+            "Excel_Cs_InsertPivotView",
+            "Excel_Cs_Refresh",
+            "Excel_Cs_Sort",
+            "Excel_Cs_Filter",
+            "Excel_Cs_RunMacro",
+            "Excel_WriteCell",
+            "Excel_WriteCellNew",
+            "Excel_WriteRowNew",
+            "Excel_DeleteRow",
+            "Excel_WriteColumnNew",
+            "Excel_DeleteColumn",
+            "Excel_InsertRow",
+            "Excel_InsertColumn",
+            "Excel_InsertImage",
+            "Excel_DeleteImage",
+            "Excel_WriteRangeNew",
+            "Excel_SelectRange",
+            "Excel_ClearRange",
+            "Excel_DeleteRange",
+            "Excel_SetColumnWidth",
+            "Excel_SetRowHeight",
+            "Excel_SetCellColor",
+            "Excel_SetCellFontColor",
+            "Excel_SetRangeColor",
+            "Excel_SetRangeFontColor",
+            "Excel_ExecuteMacro",
+            "Excel_CopyRange",
+            "Excel_PasteRange",
+            "Excel_GetColumnId"
+        ]
+    },
+    {
+        "name": "pdf",
+        "label": "PDF",
+        "isTop": true,
+        "icon": "icon-PDF",
+        "searchContent": {
+            "label": {
+                "character": "pdf",
+                "firstLetter": "pdf",
+                "allLetter": [
+                    "p",
+                    "d",
+                    "f"
+                ]
+            }
+        },
+        "components": [
+            "PDF_PdfToImg",
+            "PDF_GetPdfText",
+            "PDF_GetPdfTable",
+            "PDF_GetPdfImg",
+            "PDF_GetPdfPageNum",
+            "PDF_CreateNewPdf",
+            "PDF_ConcatPdf",
+            "PDF_PdfEncryption",
+            "PDF_GetPdfInformation",
+            "PDF_SetPdfWaterMark"
+        ],
+        "bgComponents": [],
+        "mobileComponents": [
+            "PDF_PdfToImg",
+            "PDF_GetPdfText",
+            "PDF_GetPdfTable",
+            "PDF_GetPdfImg",
+            "PDF_GetPdfPageNum",
+            "PDF_CreateNewPdf",
+            "PDF_ConcatPdf",
+            "PDF_PdfEncryption",
+            "PDF_GetPdfInformation",
+            "PDF_SetPdfWaterMark"
+        ]
+    },
+    {
+        "name": "email",
+        "label": "邮件",
+        "isTop": true,
+        "icon": "icon-youjian",
+        "children": [
+            {
+                "name": "Outlook",
+                "label": "Outlook",
+                "icon": "icon-Outlook",
+                "searchContent": {
+                    "label": {
+                        "character": "outlook",
+                        "firstLetter": "outlook",
+                        "allLetter": [
+                            "o",
+                            "u",
+                            "t",
+                            "l",
+                            "o",
+                            "o",
+                            "k"
+                        ]
+                    }
+                },
+                "components": [
+                    "Mail_DoReplyMail",
+                    "Mail_DoSendMail",
+                    "Mail_DoMoveMail",
+                    "Mail_DoGetMailMessage"
+                ],
+                "bgComponents": [],
+                "mobileComponents": [
+                    "Mail_DoReplyMail",
+                    "Mail_DoSendMail",
+                    "Mail_DoMoveMail",
+                    "Mail_DoGetMailMessage"
+                ]
+            },
+            {
+                "name": "SMTP/POP",
+                "label": "SMTP/POP",
+                "icon": "icon-POP",
+                "searchContent": {
+                    "label": {
+                        "character": "smtp/pop",
+                        "firstLetter": "smtp/pop",
+                        "allLetter": [
+                            "s",
+                            "m",
+                            "t",
+                            "p",
+                            "/",
+                            "p",
+                            "o",
+                            "p"
+                        ]
+                    }
+                },
+                "components": [
+                    "Mail_Send",
+                    "Mail_Send_V1",
+                    "Mail_RecvConnect",
+                    "Mail_RecvCount",
+                    "Mail_RecvMailGet",
+                    "Mail_MarkSeen",
+                    "Mail_UnmarkSeen",
+                    "Mail_RecvClose",
+                    "Mail_RecvGetList"
+                ],
+                "bgComponents": [
+                    "Mail_Send",
+                    "Mail_Send_V1",
+                    "Mail_RecvConnect",
+                    "Mail_RecvCount",
+                    "Mail_RecvMailGet",
+                    "Mail_MarkSeen",
+                    "Mail_UnmarkSeen",
+                    "Mail_RecvClose",
+                    "Mail_RecvGetList"
+                ],
+                "mobileComponents": [
+                    "Mail_Send",
+                    "Mail_Send_V1",
+                    "Mail_RecvConnect",
+                    "Mail_RecvCount",
+                    "Mail_RecvMailGet",
+                    "Mail_MarkSeen",
+                    "Mail_UnmarkSeen",
+                    "Mail_RecvClose",
+                    "Mail_RecvGetList"
+                ]
+            },
+            {
+                "name": "Exchange",
+                "label": "Exchange",
+                "icon": "icon-Exchange",
+                "searchContent": {
+                    "label": {
+                        "character": "exchange",
+                        "firstLetter": "exchange",
+                        "allLetter": [
+                            "e",
+                            "x",
+                            "c",
+                            "h",
+                            "a",
+                            "n",
+                            "g",
+                            "e"
+                        ]
+                    }
+                },
+                "components": [
+                    "Mail_ExConnect",
+                    "Mail_ExSendMail",
+                    "Mail_ExSearchMail",
+                    "Mail_ExOperateMail"
+                ],
+                "bgComponents": [
+                    "Mail_ExConnect",
+                    "Mail_ExSendMail",
+                    "Mail_ExSearchMail",
+                    "Mail_ExOperateMail"
+                ],
+                "mobileComponents": [
+                    "Mail_ExConnect",
+                    "Mail_ExSendMail",
+                    "Mail_ExSearchMail",
+                    "Mail_ExOperateMail"
+                ]
+            }
+        ],
+        "searchContent": {
+            "label": {
+                "character": "邮件",
+                "firstLetter": "yj",
+                "allLetter": [
+                    "you",
+                    "jian"
+                ]
+            }
+        },
+        "components": [],
+        "bgComponents": [],
+        "mobileComponents": []
+    },
+    {
+        "name": "Outlook",
+        "label": "Outlook",
+        "icon": "icon-Outlook",
+        "searchContent": {
+            "label": {
+                "character": "outlook",
+                "firstLetter": "outlook",
+                "allLetter": [
+                    "o",
+                    "u",
+                    "t",
+                    "l",
+                    "o",
+                    "o",
+                    "k"
+                ]
+            }
+        },
+        "components": [
+            "Mail_DoReplyMail",
+            "Mail_DoSendMail",
+            "Mail_DoMoveMail",
+            "Mail_DoGetMailMessage"
+        ],
+        "bgComponents": [],
+        "mobileComponents": [
+            "Mail_DoReplyMail",
+            "Mail_DoSendMail",
+            "Mail_DoMoveMail",
+            "Mail_DoGetMailMessage"
+        ]
+    },
+    {
+        "name": "SMTP/POP",
+        "label": "SMTP/POP",
+        "icon": "icon-POP",
+        "searchContent": {
+            "label": {
+                "character": "smtp/pop",
+                "firstLetter": "smtp/pop",
+                "allLetter": [
+                    "s",
+                    "m",
+                    "t",
+                    "p",
+                    "/",
+                    "p",
+                    "o",
+                    "p"
+                ]
+            }
+        },
+        "components": [
+            "Mail_Send",
+            "Mail_Send_V1",
+            "Mail_RecvConnect",
+            "Mail_RecvCount",
+            "Mail_RecvMailGet",
+            "Mail_MarkSeen",
+            "Mail_UnmarkSeen",
+            "Mail_RecvClose",
+            "Mail_RecvGetList"
+        ],
+        "bgComponents": [
+            "Mail_Send",
+            "Mail_Send_V1",
+            "Mail_RecvConnect",
+            "Mail_RecvCount",
+            "Mail_RecvMailGet",
+            "Mail_MarkSeen",
+            "Mail_UnmarkSeen",
+            "Mail_RecvClose",
+            "Mail_RecvGetList"
+        ],
+        "mobileComponents": [
+            "Mail_Send",
+            "Mail_Send_V1",
+            "Mail_RecvConnect",
+            "Mail_RecvCount",
+            "Mail_RecvMailGet",
+            "Mail_MarkSeen",
+            "Mail_UnmarkSeen",
+            "Mail_RecvClose",
+            "Mail_RecvGetList"
+        ]
+    },
+    {
+        "name": "Exchange",
+        "label": "Exchange",
+        "icon": "icon-Exchange",
+        "searchContent": {
+            "label": {
+                "character": "exchange",
+                "firstLetter": "exchange",
+                "allLetter": [
+                    "e",
+                    "x",
+                    "c",
+                    "h",
+                    "a",
+                    "n",
+                    "g",
+                    "e"
+                ]
+            }
+        },
+        "components": [
+            "Mail_ExConnect",
+            "Mail_ExSendMail",
+            "Mail_ExSearchMail",
+            "Mail_ExOperateMail"
+        ],
+        "bgComponents": [
+            "Mail_ExConnect",
+            "Mail_ExSendMail",
+            "Mail_ExSearchMail",
+            "Mail_ExOperateMail"
+        ],
+        "mobileComponents": [
+            "Mail_ExConnect",
+            "Mail_ExSendMail",
+            "Mail_ExSearchMail",
+            "Mail_ExOperateMail"
+        ]
+    },
+    {
+        "name": "file_parse",
+        "label": "文件处理",
+        "icon": "icon-wenjianchuli",
+        "isTop": true,
+        "children": [
+            {
+                "name": "file",
+                "label": "通用文件",
+                "icon": "icon-tongyongwenjian",
+                "searchContent": {
+                    "label": {
+                        "character": "通用文件",
+                        "firstLetter": "tywj",
+                        "allLetter": [
+                            "tong",
+                            "yong",
+                            "wen",
+                            "jian"
+                        ]
+                    }
+                },
+                "components": [
+                    "File_Read",
+                    "File_Write",
+                    "File_FileExists",
+                    "File_PathExists",
+                    "File_PathSize",
+                    "File_PathSizeNew",
+                    "File_Copy",
+                    "File_MoveFolder",
+                    "File_File_Move",
+                    "File_Rename",
+                    "File_Delete",
+                    "File_MakeDir",
+                    "File_ReadXml",
+                    "File_CreateFolder",
+                    "File_UploadFolder",
+                    "File_OpenFile",
+                    "FileTypeConversion_Office2pdf",
+                    "FileTypeConversion_Pdf2image2",
+                    "logic_control_if_file_v1",
+                    "logic_control_if_file_path_v1"
+                ],
+                "bgComponents": [
+                    "logic_control_if_file_v1",
+                    "logic_control_if_file_path_v1"
+                ],
+                "mobileComponents": [
+                    "File_Read",
+                    "File_Write",
+                    "File_FileExists",
+                    "File_PathExists",
+                    "File_PathSize",
+                    "File_PathSizeNew",
+                    "File_Copy",
+                    "File_MoveFolder",
+                    "File_File_Move",
+                    "File_Rename",
+                    "File_Delete",
+                    "File_MakeDir",
+                    "File_ReadXml",
+                    "File_CreateFolder",
+                    "File_UploadFolder",
+                    "File_OpenFile",
+                    "FileTypeConversion_Office2pdf",
+                    "FileTypeConversion_Pdf2image2",
+                    "logic_control_if_file_v1",
+                    "logic_control_if_file_path_v1"
+                ]
+            },
+            {
+                "name": "INI",
+                "label": "INI格式文件",
+                "icon": "icon-INNgeshi",
+                "searchContent": {
+                    "label": {
+                        "character": "ini格式文件",
+                        "firstLetter": "inigswj",
+                        "allLetter": [
+                            "i",
+                            "n",
+                            "i",
+                            "ge",
+                            "shi",
+                            "wen",
+                            "jian"
+                        ]
+                    }
+                },
+                "components": [
+                    "Ini_Read",
+                    "Ini_Write",
+                    "Ini_ListSection",
+                    "Ini_ListKey",
+                    "Ini_DeleteSection",
+                    "Ini_DeleteKey"
+                ],
+                "bgComponents": [
+                    "Ini_Read",
+                    "Ini_Write",
+                    "Ini_ListSection",
+                    "Ini_ListKey",
+                    "Ini_DeleteSection",
+                    "Ini_DeleteKey"
+                ],
+                "mobileComponents": [
+                    "Ini_Read",
+                    "Ini_Write",
+                    "Ini_ListSection",
+                    "Ini_ListKey",
+                    "Ini_DeleteSection",
+                    "Ini_DeleteKey"
+                ]
+            },
+            {
+                "name": "CSV",
+                "label": "CSV格式文件",
+                "icon": "icon-CSVgeshi",
+                "searchContent": {
+                    "label": {
+                        "character": "csv格式文件",
+                        "firstLetter": "csvgswj",
+                        "allLetter": [
+                            "c",
+                            "s",
+                            "v",
+                            "ge",
+                            "shi",
+                            "wen",
+                            "jian"
+                        ]
+                    }
+                },
+                "components": [
+                    "CSV_Read",
+                    "CSV_Write",
+                    "CSV_ReadNew",
+                    "CSV_WriteNew"
+                ],
+                "bgComponents": [
+                    "CSV_Read",
+                    "CSV_Write",
+                    "CSV_ReadNew",
+                    "CSV_WriteNew"
+                ],
+                "mobileComponents": [
+                    "CSV_Read",
+                    "CSV_Write",
+                    "CSV_ReadNew",
+                    "CSV_WriteNew"
+                ]
+            }
+        ],
+        "searchContent": {
+            "label": {
+                "character": "文件处理",
+                "firstLetter": "wjcl",
+                "allLetter": [
+                    "wen",
+                    "jian",
+                    "chu",
+                    "li"
+                ]
+            }
+        },
+        "components": [],
+        "bgComponents": [],
+        "mobileComponents": []
+    },
+    {
+        "name": "file",
+        "label": "通用文件",
+        "icon": "icon-tongyongwenjian",
+        "searchContent": {
+            "label": {
+                "character": "通用文件",
+                "firstLetter": "tywj",
+                "allLetter": [
+                    "tong",
+                    "yong",
+                    "wen",
+                    "jian"
+                ]
+            }
+        },
+        "components": [
+            "File_Read",
+            "File_Write",
+            "File_FileExists",
+            "File_PathExists",
+            "File_PathSize",
+            "File_PathSizeNew",
+            "File_Copy",
+            "File_MoveFolder",
+            "File_File_Move",
+            "File_Rename",
+            "File_Delete",
+            "File_MakeDir",
+            "File_ReadXml",
+            "File_CreateFolder",
+            "File_UploadFolder",
+            "File_OpenFile",
+            "FileTypeConversion_Office2pdf",
+            "FileTypeConversion_Pdf2image2",
+            "logic_control_if_file_v1",
+            "logic_control_if_file_path_v1"
+        ],
+        "bgComponents": [
+            "logic_control_if_file_v1",
+            "logic_control_if_file_path_v1"
+        ],
+        "mobileComponents": [
+            "File_Read",
+            "File_Write",
+            "File_FileExists",
+            "File_PathExists",
+            "File_PathSize",
+            "File_PathSizeNew",
+            "File_Copy",
+            "File_MoveFolder",
+            "File_File_Move",
+            "File_Rename",
+            "File_Delete",
+            "File_MakeDir",
+            "File_ReadXml",
+            "File_CreateFolder",
+            "File_UploadFolder",
+            "File_OpenFile",
+            "FileTypeConversion_Office2pdf",
+            "FileTypeConversion_Pdf2image2",
+            "logic_control_if_file_v1",
+            "logic_control_if_file_path_v1"
+        ]
+    },
+    {
+        "name": "INI",
+        "label": "INI格式文件",
+        "icon": "icon-INNgeshi",
+        "searchContent": {
+            "label": {
+                "character": "ini格式文件",
+                "firstLetter": "inigswj",
+                "allLetter": [
+                    "i",
+                    "n",
+                    "i",
+                    "ge",
+                    "shi",
+                    "wen",
+                    "jian"
+                ]
+            }
+        },
+        "components": [
+            "Ini_Read",
+            "Ini_Write",
+            "Ini_ListSection",
+            "Ini_ListKey",
+            "Ini_DeleteSection",
+            "Ini_DeleteKey"
+        ],
+        "bgComponents": [
+            "Ini_Read",
+            "Ini_Write",
+            "Ini_ListSection",
+            "Ini_ListKey",
+            "Ini_DeleteSection",
+            "Ini_DeleteKey"
+        ],
+        "mobileComponents": [
+            "Ini_Read",
+            "Ini_Write",
+            "Ini_ListSection",
+            "Ini_ListKey",
+            "Ini_DeleteSection",
+            "Ini_DeleteKey"
+        ]
+    },
+    {
+        "name": "CSV",
+        "label": "CSV格式文件",
+        "icon": "icon-CSVgeshi",
+        "searchContent": {
+            "label": {
+                "character": "csv格式文件",
+                "firstLetter": "csvgswj",
+                "allLetter": [
+                    "c",
+                    "s",
+                    "v",
+                    "ge",
+                    "shi",
+                    "wen",
+                    "jian"
+                ]
+            }
+        },
+        "components": [
+            "CSV_Read",
+            "CSV_Write",
+            "CSV_ReadNew",
+            "CSV_WriteNew"
+        ],
+        "bgComponents": [
+            "CSV_Read",
+            "CSV_Write",
+            "CSV_ReadNew",
+            "CSV_WriteNew"
+        ],
+        "mobileComponents": [
+            "CSV_Read",
+            "CSV_Write",
+            "CSV_ReadNew",
+            "CSV_WriteNew"
+        ]
+    },
+    {
+        "name": "clipboard",
+        "label": "剪切板",
+        "isTop": true,
+        "icon": "icon-jianqieban",
+        "searchContent": {
+            "label": {
+                "character": "剪切板",
+                "firstLetter": "jqb",
+                "allLetter": [
+                    "jian",
+                    "qie",
+                    "ban"
+                ]
+            }
+        },
+        "components": [
+            "Clipboard_SetText",
+            "Clipboard_GetText",
+            "Clipboard_SetImage",
+            "Clipboard_SaveImage",
+            "Clipboard_SetTextV1",
+            "Clipboard_GetTextV1",
+            "Clipboard_SetImageV1",
+            "Clipboard_SaveImageV1",
+            "Clipboard_ClearClipboard"
+        ],
+        "bgComponents": [],
+        "mobileComponents": [
+            "Clipboard_SetText",
+            "Clipboard_GetText",
+            "Clipboard_SetImage",
+            "Clipboard_SaveImage",
+            "Clipboard_SetTextV1",
+            "Clipboard_GetTextV1",
+            "Clipboard_SetImageV1",
+            "Clipboard_SaveImageV1",
+            "Clipboard_ClearClipboard"
+        ]
+    },
+    {
+        "name": "trigger",
+        "label": "触发器",
+        "isTop": true,
+        "icon": "icon-kongzhiqi",
+        "searchContent": {
+            "label": {
+                "character": "触发器",
+                "firstLetter": "cfq",
+                "allLetter": [
+                    "chu",
+                    "fa",
+                    "qi"
+                ]
+            }
+        },
+        "components": [
+            "trigger_wrap",
+            "fileTriggers",
+            "mailTriggers",
+            "hotkeyTriggers",
+            "mouseTriggers"
+        ],
+        "bgComponents": [],
+        "mobileComponents": [
+            "trigger_wrap",
+            "fileTriggers",
+            "mailTriggers",
+            "hotkeyTriggers",
+            "mouseTriggers"
+        ]
+    },
+    {
+        "name": "ai_software_automation",
+        "label": "AI组件",
+        "icon": "icon-AIzujian",
+        "isTop": true,
+        "children": [
+            {
+                "name": "aiBrowser",
+                "label": "selenium浏览器",
+                "icon": "icon-liulanqi",
+                "searchContent": {
+                    "label": {
+                        "character": "selenium浏览器",
+                        "firstLetter": "seleniumllq",
+                        "allLetter": [
+                            "s",
+                            "e",
+                            "l",
+                            "e",
+                            "n",
+                            "i",
+                            "u",
+                            "m",
+                            "liu",
+                            "lan",
+                            "qi"
+                        ]
+                    }
+                },
+                "components": [],
+                "bgComponents": [],
+                "mobileComponents": []
+            },
+            {
+                "name": "OCR",
+                "label": "OCR-在线",
+                "icon": "icon-OCR",
+                "searchContent": {
+                    "label": {
+                        "character": "ocr-在线",
+                        "firstLetter": "ocr-zx",
+                        "allLetter": [
+                            "o",
+                            "c",
+                            "r",
+                            "-",
+                            "zai",
+                            "xian"
+                        ]
+                    }
+                },
+                "components": [
+                    "OCR_AccountPageV2",
+                    "OCR_BankCardV2",
+                    "OCR_BankCardV3",
+                    "OCR_BusinessCardV2",
+                    "OCR_BusinessLicenseV2",
+                    "OCR_BusinessLicenseV3",
+                    "OCR_DriverLicenseV2",
+                    "OCR_DrivingLicenseV2",
+                    "OCR_GeneralTextV2",
+                    "OCR_HouseCertV2",
+                    "OCR_IdCardV2",
+                    "OCR_IdCardV3",
+                    "OCR_OfficialSealV2",
+                    "OCR_PassportV2",
+                    "OCR_PlateLicenseV2",
+                    "OCR_RealEstateCertV2",
+                    "OCR_TaxiInvoiceV2",
+                    "OCR_TrainTicketV2",
+                    "OCR_VatInvoiceV2",
+                    "OCR_VatInvoiceV3",
+                    "OCR_VehicleInvoiceV2",
+                    "OCR_VinV2",
+                    "OCR_MergeGeneralOCR",
+                    "OCR_MergeCardOCR",
+                    "OCR_MergePaperOCR",
+                    "OCR_MergeCarOCR",
+                    "OCR_MergeEducationOCR",
+                    "OCR_MergeOtherOCR",
+                    "OCR_SourceMergeGeneralOCR",
+                    "OCR_SourceMergeCardOCR",
+                    "OCR_SourceMergePaperOCR",
+                    "OCR_SourceMergeCarOCR",
+                    "OCR_SourceMergeEducationOCR",
+                    "OCR_SourceMergeOtherOCR"
+                ],
+                "bgComponents": [
+                    "OCR_AccountPageV2",
+                    "OCR_BankCardV2",
+                    "OCR_BankCardV3",
+                    "OCR_BusinessCardV2",
+                    "OCR_BusinessLicenseV2",
+                    "OCR_BusinessLicenseV3",
+                    "OCR_DriverLicenseV2",
+                    "OCR_DrivingLicenseV2",
+                    "OCR_GeneralTextV2",
+                    "OCR_HouseCertV2",
+                    "OCR_IdCardV2",
+                    "OCR_IdCardV3",
+                    "OCR_OfficialSealV2",
+                    "OCR_PassportV2",
+                    "OCR_PlateLicenseV2",
+                    "OCR_RealEstateCertV2",
+                    "OCR_TaxiInvoiceV2",
+                    "OCR_TrainTicketV2",
+                    "OCR_VatInvoiceV2",
+                    "OCR_VatInvoiceV3",
+                    "OCR_VehicleInvoiceV2",
+                    "OCR_VinV2",
+                    "OCR_MergeGeneralOCR",
+                    "OCR_MergeCardOCR",
+                    "OCR_MergePaperOCR",
+                    "OCR_MergeCarOCR",
+                    "OCR_MergeEducationOCR",
+                    "OCR_MergeOtherOCR",
+                    "OCR_SourceMergeGeneralOCR",
+                    "OCR_SourceMergeCardOCR",
+                    "OCR_SourceMergePaperOCR",
+                    "OCR_SourceMergeCarOCR",
+                    "OCR_SourceMergeEducationOCR",
+                    "OCR_SourceMergeOtherOCR"
+                ],
+                "mobileComponents": [
+                    "OCR_AccountPageV2",
+                    "OCR_BankCardV2",
+                    "OCR_BankCardV3",
+                    "OCR_BusinessCardV2",
+                    "OCR_BusinessLicenseV2",
+                    "OCR_BusinessLicenseV3",
+                    "OCR_DriverLicenseV2",
+                    "OCR_DrivingLicenseV2",
+                    "OCR_GeneralTextV2",
+                    "OCR_HouseCertV2",
+                    "OCR_IdCardV2",
+                    "OCR_IdCardV3",
+                    "OCR_OfficialSealV2",
+                    "OCR_PassportV2",
+                    "OCR_PlateLicenseV2",
+                    "OCR_RealEstateCertV2",
+                    "OCR_TaxiInvoiceV2",
+                    "OCR_TrainTicketV2",
+                    "OCR_VatInvoiceV2",
+                    "OCR_VatInvoiceV3",
+                    "OCR_VehicleInvoiceV2",
+                    "OCR_VinV2",
+                    "OCR_MergeGeneralOCR",
+                    "OCR_MergeCardOCR",
+                    "OCR_MergePaperOCR",
+                    "OCR_MergeCarOCR",
+                    "OCR_MergeEducationOCR",
+                    "OCR_MergeOtherOCR",
+                    "OCR_SourceMergeGeneralOCR",
+                    "OCR_SourceMergeCardOCR",
+                    "OCR_SourceMergePaperOCR",
+                    "OCR_SourceMergeCarOCR",
+                    "OCR_SourceMergeEducationOCR",
+                    "OCR_SourceMergeOtherOCR"
+                ]
+            },
+            {
+                "name": "OcrOffline",
+                "label": "OCR-离线",
+                "icon": "icon-OCR",
+                "searchContent": {
+                    "label": {
+                        "character": "ocr-离线",
+                        "firstLetter": "ocr-lx",
+                        "allLetter": [
+                            "o",
+                            "c",
+                            "r",
+                            "-",
+                            "li",
+                            "xian"
+                        ]
+                    }
+                },
+                "components": [
+                    "OcrOffline_MoveToOcrText",
+                    "OcrOffline_ClickOcrText",
+                    "OcrOffline_GetOcrTextNew",
+                    "OcrOffline_GetOcrTextPosition",
+                    "OcrOffline_GetOcrTable"
+                ],
+                "bgComponents": [],
+                "mobileComponents": [
+                    "OcrOffline_MoveToOcrText",
+                    "OcrOffline_ClickOcrText",
+                    "OcrOffline_GetOcrTextNew",
+                    "OcrOffline_GetOcrTextPosition",
+                    "OcrOffline_GetOcrTable"
+                ]
+            },
+            {
+                "name": "OCR_BaiDu",
+                "label": "OCR(百度)",
+                "icon": "icon-OCR",
+                "searchContent": {
+                    "label": {
+                        "character": "ocr(百度)",
+                        "firstLetter": "ocr(bd)",
+                        "allLetter": [
+                            "o",
+                            "c",
+                            "r",
+                            "(",
+                            "bai",
+                            "duo",
+                            ")"
+                        ]
+                    }
+                },
+                "components": [
+                    "OCR_BaiDu_GeneralOCR",
+                    "OCR_BaiDu_CardOCR",
+                    "OCR_BaiDu_PaperOCR",
+                    "OCR_BaiDu_CarOCR",
+                    "OCR_BaiDu_EducationOCR",
+                    "OCR_BaiDu_OtherOCR"
+                ],
+                "bgComponents": [
+                    "OCR_BaiDu_GeneralOCR",
+                    "OCR_BaiDu_CardOCR",
+                    "OCR_BaiDu_PaperOCR",
+                    "OCR_BaiDu_CarOCR",
+                    "OCR_BaiDu_EducationOCR",
+                    "OCR_BaiDu_OtherOCR"
+                ],
+                "mobileComponents": [
+                    "OCR_BaiDu_GeneralOCR",
+                    "OCR_BaiDu_CardOCR",
+                    "OCR_BaiDu_PaperOCR",
+                    "OCR_BaiDu_CarOCR",
+                    "OCR_BaiDu_EducationOCR",
+                    "OCR_BaiDu_OtherOCR"
+                ]
+            },
+            {
+                "name": "NLP",
+                "label": "NLP",
+                "icon": "icon-NLP",
+                "searchContent": {
+                    "label": {
+                        "character": "nlp",
+                        "firstLetter": "nlp",
+                        "allLetter": [
+                            "n",
+                            "l",
+                            "p"
+                        ]
+                    }
+                },
+                "components": [
+                    "NLP_SplitWords",
+                    "NLP_SplitText",
+                    "NLP_EmotionalAnalysis",
+                    "NLP_PerspectiveAnalysis",
+                    "NLP_SemanticSimilarity",
+                    "NLP_KeyWordsAnalysis",
+                    "NLP_AnalyseProductReview",
+                    "NLP_BatchAnalyseProductReview"
+                ],
+                "bgComponents": [
+                    "NLP_SplitWords",
+                    "NLP_SplitText",
+                    "NLP_EmotionalAnalysis",
+                    "NLP_PerspectiveAnalysis",
+                    "NLP_SemanticSimilarity",
+                    "NLP_KeyWordsAnalysis",
+                    "NLP_AnalyseProductReview",
+                    "NLP_BatchAnalyseProductReview"
+                ],
+                "mobileComponents": [
+                    "NLP_SplitWords",
+                    "NLP_SplitText",
+                    "NLP_EmotionalAnalysis",
+                    "NLP_PerspectiveAnalysis",
+                    "NLP_SemanticSimilarity",
+                    "NLP_KeyWordsAnalysis",
+                    "NLP_AnalyseProductReview",
+                    "NLP_BatchAnalyseProductReview"
+                ]
+            },
+            {
+                "name": "NLP_XunFei",
+                "label": "NLP（讯飞）",
+                "icon": "icon-NLP",
+                "searchContent": {
+                    "label": {
+                        "character": "nlp（讯飞）",
+                        "firstLetter": "nlp（xf）",
+                        "allLetter": [
+                            "n",
+                            "l",
+                            "p",
+                            "（",
+                            "xun",
+                            "fei",
+                            "）"
+                        ]
+                    }
+                },
+                "components": [
+                    "NLP_XunFei_MachineTranslation",
+                    "NLP_XunFei_NLPBaseServer",
+                    "NLP_XunFei_FeelingAnalysis",
+                    "NLP_XunFei_KeywordExtraction"
+                ],
+                "bgComponents": [
+                    "NLP_XunFei_MachineTranslation",
+                    "NLP_XunFei_NLPBaseServer",
+                    "NLP_XunFei_FeelingAnalysis",
+                    "NLP_XunFei_KeywordExtraction"
+                ],
+                "mobileComponents": [
+                    "NLP_XunFei_MachineTranslation",
+                    "NLP_XunFei_NLPBaseServer",
+                    "NLP_XunFei_FeelingAnalysis",
+                    "NLP_XunFei_KeywordExtraction"
+                ]
+            },
+            {
+                "name": "CV",
+                "label": "CV",
+                "icon": "icon-cv",
+                "searchContent": {
+                    "label": {
+                        "character": "cv",
+                        "firstLetter": "cv",
+                        "allLetter": [
+                            "c",
+                            "v"
+                        ]
+                    }
+                },
+                "components": [
+                    "CV_MouseHover",
+                    "CV_MouseClick",
+                    "CV_SetText",
+                    "CV_GetText"
+                ],
+                "bgComponents": [],
+                "mobileComponents": [
+                    "CV_MouseHover",
+                    "CV_MouseClick",
+                    "CV_SetText",
+                    "CV_GetText"
+                ]
+            },
+            {
+                "name": "VerificationCode",
+                "label": "验证码",
+                "icon": "icon-yanzhengma",
+                "searchContent": {
+                    "label": {
+                        "character": "验证码",
+                        "firstLetter": "yzm",
+                        "allLetter": [
+                            "yan",
+                            "zheng",
+                            "ma"
+                        ]
+                    }
+                },
+                "components": [
+                    "OCR_CommonEnglishNumbersCode",
+                    "OCR_SourceCommonEnglishNumbersCode",
+                    "OCR_SliderCode",
+                    "OCR_CalculationCode",
+                    "OCR_SliderVerificationCode",
+                    "OCR_SliderVerificationCodeV2",
+                    "OCR_SimpleSliderVerificationCode",
+                    "OCR_RotateVerificationCode",
+                    "OCR_ClickVerificationCode",
+                    "OCR_PuzzleVerificationCode"
+                ],
+                "bgComponents": [
+                    "OCR_CommonEnglishNumbersCode",
+                    "OCR_SourceCommonEnglishNumbersCode",
+                    "OCR_SliderCode",
+                    "OCR_CalculationCode",
+                    "OCR_SliderVerificationCode",
+                    "OCR_SliderVerificationCodeV2",
+                    "OCR_SimpleSliderVerificationCode",
+                    "OCR_RotateVerificationCode",
+                    "OCR_ClickVerificationCode",
+                    "OCR_PuzzleVerificationCode"
+                ],
+                "mobileComponents": [
+                    "OCR_CommonEnglishNumbersCode",
+                    "OCR_SourceCommonEnglishNumbersCode",
+                    "OCR_SliderCode",
+                    "OCR_CalculationCode",
+                    "OCR_SliderVerificationCode",
+                    "OCR_SliderVerificationCodeV2",
+                    "OCR_SimpleSliderVerificationCode",
+                    "OCR_RotateVerificationCode",
+                    "OCR_ClickVerificationCode",
+                    "OCR_PuzzleVerificationCode"
+                ]
+            },
+            {
+                "name": "WisdomText",
+                "label": "智慧文本",
+                "icon": "icon-zhinengwenben",
+                "searchContent": {
+                    "label": {
+                        "character": "智慧文本",
+                        "firstLetter": "zhwb",
+                        "allLetter": [
+                            "zhi",
+                            "hui",
+                            "wen",
+                            "ben"
+                        ]
+                    }
+                },
+                "components": [
+                    "DataService_Review",
+                    "DataService_Diff",
+                    "DataService_Correct",
+                    "DataService_KeyWord"
+                ],
+                "bgComponents": [],
+                "mobileComponents": [
+                    "DataService_Review",
+                    "DataService_Diff",
+                    "DataService_Correct",
+                    "DataService_KeyWord"
+                ]
+            }
+        ],
+        "searchContent": {
+            "label": {
+                "character": "ai组件",
+                "firstLetter": "aizj",
+                "allLetter": [
+                    "a",
+                    "i",
+                    "zu",
+                    "jian"
+                ]
+            }
+        },
+        "components": [
+            "DataService_ChatBot",
+            "DataService_ZBrain"
+        ],
+        "bgComponents": [],
+        "mobileComponents": [
+            "DataService_ChatBot",
+            "DataService_ZBrain"
+        ]
+    },
+    {
+        "name": "aiBrowser",
+        "label": "selenium浏览器",
+        "icon": "icon-liulanqi",
+        "searchContent": {
+            "label": {
+                "character": "selenium浏览器",
+                "firstLetter": "seleniumllq",
+                "allLetter": [
+                    "s",
+                    "e",
+                    "l",
+                    "e",
+                    "n",
+                    "i",
+                    "u",
+                    "m",
+                    "liu",
+                    "lan",
+                    "qi"
+                ]
+            }
+        },
+        "components": [],
+        "bgComponents": [],
+        "mobileComponents": []
+    },
+    {
+        "name": "OCR",
+        "label": "OCR-在线",
+        "icon": "icon-OCR",
+        "searchContent": {
+            "label": {
+                "character": "ocr-在线",
+                "firstLetter": "ocr-zx",
+                "allLetter": [
+                    "o",
+                    "c",
+                    "r",
+                    "-",
+                    "zai",
+                    "xian"
+                ]
+            }
+        },
+        "components": [
+            "OCR_AccountPageV2",
+            "OCR_BankCardV2",
+            "OCR_BankCardV3",
+            "OCR_BusinessCardV2",
+            "OCR_BusinessLicenseV2",
+            "OCR_BusinessLicenseV3",
+            "OCR_DriverLicenseV2",
+            "OCR_DrivingLicenseV2",
+            "OCR_GeneralTextV2",
+            "OCR_HouseCertV2",
+            "OCR_IdCardV2",
+            "OCR_IdCardV3",
+            "OCR_OfficialSealV2",
+            "OCR_PassportV2",
+            "OCR_PlateLicenseV2",
+            "OCR_RealEstateCertV2",
+            "OCR_TaxiInvoiceV2",
+            "OCR_TrainTicketV2",
+            "OCR_VatInvoiceV2",
+            "OCR_VatInvoiceV3",
+            "OCR_VehicleInvoiceV2",
+            "OCR_VinV2",
+            "OCR_MergeGeneralOCR",
+            "OCR_MergeCardOCR",
+            "OCR_MergePaperOCR",
+            "OCR_MergeCarOCR",
+            "OCR_MergeEducationOCR",
+            "OCR_MergeOtherOCR",
+            "OCR_SourceMergeGeneralOCR",
+            "OCR_SourceMergeCardOCR",
+            "OCR_SourceMergePaperOCR",
+            "OCR_SourceMergeCarOCR",
+            "OCR_SourceMergeEducationOCR",
+            "OCR_SourceMergeOtherOCR"
+        ],
+        "bgComponents": [
+            "OCR_AccountPageV2",
+            "OCR_BankCardV2",
+            "OCR_BankCardV3",
+            "OCR_BusinessCardV2",
+            "OCR_BusinessLicenseV2",
+            "OCR_BusinessLicenseV3",
+            "OCR_DriverLicenseV2",
+            "OCR_DrivingLicenseV2",
+            "OCR_GeneralTextV2",
+            "OCR_HouseCertV2",
+            "OCR_IdCardV2",
+            "OCR_IdCardV3",
+            "OCR_OfficialSealV2",
+            "OCR_PassportV2",
+            "OCR_PlateLicenseV2",
+            "OCR_RealEstateCertV2",
+            "OCR_TaxiInvoiceV2",
+            "OCR_TrainTicketV2",
+            "OCR_VatInvoiceV2",
+            "OCR_VatInvoiceV3",
+            "OCR_VehicleInvoiceV2",
+            "OCR_VinV2",
+            "OCR_MergeGeneralOCR",
+            "OCR_MergeCardOCR",
+            "OCR_MergePaperOCR",
+            "OCR_MergeCarOCR",
+            "OCR_MergeEducationOCR",
+            "OCR_MergeOtherOCR",
+            "OCR_SourceMergeGeneralOCR",
+            "OCR_SourceMergeCardOCR",
+            "OCR_SourceMergePaperOCR",
+            "OCR_SourceMergeCarOCR",
+            "OCR_SourceMergeEducationOCR",
+            "OCR_SourceMergeOtherOCR"
+        ],
+        "mobileComponents": [
+            "OCR_AccountPageV2",
+            "OCR_BankCardV2",
+            "OCR_BankCardV3",
+            "OCR_BusinessCardV2",
+            "OCR_BusinessLicenseV2",
+            "OCR_BusinessLicenseV3",
+            "OCR_DriverLicenseV2",
+            "OCR_DrivingLicenseV2",
+            "OCR_GeneralTextV2",
+            "OCR_HouseCertV2",
+            "OCR_IdCardV2",
+            "OCR_IdCardV3",
+            "OCR_OfficialSealV2",
+            "OCR_PassportV2",
+            "OCR_PlateLicenseV2",
+            "OCR_RealEstateCertV2",
+            "OCR_TaxiInvoiceV2",
+            "OCR_TrainTicketV2",
+            "OCR_VatInvoiceV2",
+            "OCR_VatInvoiceV3",
+            "OCR_VehicleInvoiceV2",
+            "OCR_VinV2",
+            "OCR_MergeGeneralOCR",
+            "OCR_MergeCardOCR",
+            "OCR_MergePaperOCR",
+            "OCR_MergeCarOCR",
+            "OCR_MergeEducationOCR",
+            "OCR_MergeOtherOCR",
+            "OCR_SourceMergeGeneralOCR",
+            "OCR_SourceMergeCardOCR",
+            "OCR_SourceMergePaperOCR",
+            "OCR_SourceMergeCarOCR",
+            "OCR_SourceMergeEducationOCR",
+            "OCR_SourceMergeOtherOCR"
+        ]
+    },
+    {
+        "name": "OcrOffline",
+        "label": "OCR-离线",
+        "icon": "icon-OCR",
+        "searchContent": {
+            "label": {
+                "character": "ocr-离线",
+                "firstLetter": "ocr-lx",
+                "allLetter": [
+                    "o",
+                    "c",
+                    "r",
+                    "-",
+                    "li",
+                    "xian"
+                ]
+            }
+        },
+        "components": [
+            "OcrOffline_MoveToOcrText",
+            "OcrOffline_ClickOcrText",
+            "OcrOffline_GetOcrTextNew",
+            "OcrOffline_GetOcrTextPosition",
+            "OcrOffline_GetOcrTable"
+        ],
+        "bgComponents": [],
+        "mobileComponents": [
+            "OcrOffline_MoveToOcrText",
+            "OcrOffline_ClickOcrText",
+            "OcrOffline_GetOcrTextNew",
+            "OcrOffline_GetOcrTextPosition",
+            "OcrOffline_GetOcrTable"
+        ]
+    },
+    {
+        "name": "OCR_BaiDu",
+        "label": "OCR(百度)",
+        "icon": "icon-OCR",
+        "searchContent": {
+            "label": {
+                "character": "ocr(百度)",
+                "firstLetter": "ocr(bd)",
+                "allLetter": [
+                    "o",
+                    "c",
+                    "r",
+                    "(",
+                    "bai",
+                    "duo",
+                    ")"
+                ]
+            }
+        },
+        "components": [
+            "OCR_BaiDu_GeneralOCR",
+            "OCR_BaiDu_CardOCR",
+            "OCR_BaiDu_PaperOCR",
+            "OCR_BaiDu_CarOCR",
+            "OCR_BaiDu_EducationOCR",
+            "OCR_BaiDu_OtherOCR"
+        ],
+        "bgComponents": [
+            "OCR_BaiDu_GeneralOCR",
+            "OCR_BaiDu_CardOCR",
+            "OCR_BaiDu_PaperOCR",
+            "OCR_BaiDu_CarOCR",
+            "OCR_BaiDu_EducationOCR",
+            "OCR_BaiDu_OtherOCR"
+        ],
+        "mobileComponents": [
+            "OCR_BaiDu_GeneralOCR",
+            "OCR_BaiDu_CardOCR",
+            "OCR_BaiDu_PaperOCR",
+            "OCR_BaiDu_CarOCR",
+            "OCR_BaiDu_EducationOCR",
+            "OCR_BaiDu_OtherOCR"
+        ]
+    },
+    {
+        "name": "NLP",
+        "label": "NLP",
+        "icon": "icon-NLP",
+        "searchContent": {
+            "label": {
+                "character": "nlp",
+                "firstLetter": "nlp",
+                "allLetter": [
+                    "n",
+                    "l",
+                    "p"
+                ]
+            }
+        },
+        "components": [
+            "NLP_SplitWords",
+            "NLP_SplitText",
+            "NLP_EmotionalAnalysis",
+            "NLP_PerspectiveAnalysis",
+            "NLP_SemanticSimilarity",
+            "NLP_KeyWordsAnalysis",
+            "NLP_AnalyseProductReview",
+            "NLP_BatchAnalyseProductReview"
+        ],
+        "bgComponents": [
+            "NLP_SplitWords",
+            "NLP_SplitText",
+            "NLP_EmotionalAnalysis",
+            "NLP_PerspectiveAnalysis",
+            "NLP_SemanticSimilarity",
+            "NLP_KeyWordsAnalysis",
+            "NLP_AnalyseProductReview",
+            "NLP_BatchAnalyseProductReview"
+        ],
+        "mobileComponents": [
+            "NLP_SplitWords",
+            "NLP_SplitText",
+            "NLP_EmotionalAnalysis",
+            "NLP_PerspectiveAnalysis",
+            "NLP_SemanticSimilarity",
+            "NLP_KeyWordsAnalysis",
+            "NLP_AnalyseProductReview",
+            "NLP_BatchAnalyseProductReview"
+        ]
+    },
+    {
+        "name": "NLP_XunFei",
+        "label": "NLP（讯飞）",
+        "icon": "icon-NLP",
+        "searchContent": {
+            "label": {
+                "character": "nlp（讯飞）",
+                "firstLetter": "nlp（xf）",
+                "allLetter": [
+                    "n",
+                    "l",
+                    "p",
+                    "（",
+                    "xun",
+                    "fei",
+                    "）"
+                ]
+            }
+        },
+        "components": [
+            "NLP_XunFei_MachineTranslation",
+            "NLP_XunFei_NLPBaseServer",
+            "NLP_XunFei_FeelingAnalysis",
+            "NLP_XunFei_KeywordExtraction"
+        ],
+        "bgComponents": [
+            "NLP_XunFei_MachineTranslation",
+            "NLP_XunFei_NLPBaseServer",
+            "NLP_XunFei_FeelingAnalysis",
+            "NLP_XunFei_KeywordExtraction"
+        ],
+        "mobileComponents": [
+            "NLP_XunFei_MachineTranslation",
+            "NLP_XunFei_NLPBaseServer",
+            "NLP_XunFei_FeelingAnalysis",
+            "NLP_XunFei_KeywordExtraction"
+        ]
+    },
+    {
+        "name": "CV",
+        "label": "CV",
+        "icon": "icon-cv",
+        "searchContent": {
+            "label": {
+                "character": "cv",
+                "firstLetter": "cv",
+                "allLetter": [
+                    "c",
+                    "v"
+                ]
+            }
+        },
+        "components": [
+            "CV_MouseHover",
+            "CV_MouseClick",
+            "CV_SetText",
+            "CV_GetText"
+        ],
+        "bgComponents": [],
+        "mobileComponents": [
+            "CV_MouseHover",
+            "CV_MouseClick",
+            "CV_SetText",
+            "CV_GetText"
+        ]
+    },
+    {
+        "name": "VerificationCode",
+        "label": "验证码",
+        "icon": "icon-yanzhengma",
+        "searchContent": {
+            "label": {
+                "character": "验证码",
+                "firstLetter": "yzm",
+                "allLetter": [
+                    "yan",
+                    "zheng",
+                    "ma"
+                ]
+            }
+        },
+        "components": [
+            "OCR_CommonEnglishNumbersCode",
+            "OCR_SourceCommonEnglishNumbersCode",
+            "OCR_SliderCode",
+            "OCR_CalculationCode",
+            "OCR_SliderVerificationCode",
+            "OCR_SliderVerificationCodeV2",
+            "OCR_SimpleSliderVerificationCode",
+            "OCR_RotateVerificationCode",
+            "OCR_ClickVerificationCode",
+            "OCR_PuzzleVerificationCode"
+        ],
+        "bgComponents": [
+            "OCR_CommonEnglishNumbersCode",
+            "OCR_SourceCommonEnglishNumbersCode",
+            "OCR_SliderCode",
+            "OCR_CalculationCode",
+            "OCR_SliderVerificationCode",
+            "OCR_SliderVerificationCodeV2",
+            "OCR_SimpleSliderVerificationCode",
+            "OCR_RotateVerificationCode",
+            "OCR_ClickVerificationCode",
+            "OCR_PuzzleVerificationCode"
+        ],
+        "mobileComponents": [
+            "OCR_CommonEnglishNumbersCode",
+            "OCR_SourceCommonEnglishNumbersCode",
+            "OCR_SliderCode",
+            "OCR_CalculationCode",
+            "OCR_SliderVerificationCode",
+            "OCR_SliderVerificationCodeV2",
+            "OCR_SimpleSliderVerificationCode",
+            "OCR_RotateVerificationCode",
+            "OCR_ClickVerificationCode",
+            "OCR_PuzzleVerificationCode"
+        ]
+    },
+    {
+        "name": "WisdomText",
+        "label": "智慧文本",
+        "icon": "icon-zhinengwenben",
+        "searchContent": {
+            "label": {
+                "character": "智慧文本",
+                "firstLetter": "zhwb",
+                "allLetter": [
+                    "zhi",
+                    "hui",
+                    "wen",
+                    "ben"
+                ]
+            }
+        },
+        "components": [
+            "DataService_Review",
+            "DataService_Diff",
+            "DataService_Correct",
+            "DataService_KeyWord"
+        ],
+        "bgComponents": [],
+        "mobileComponents": [
+            "DataService_Review",
+            "DataService_Diff",
+            "DataService_Correct",
+            "DataService_KeyWord"
+        ]
+    },
+    {
+        "name": "system",
+        "label": "系统",
+        "icon": "icon-xitong",
+        "isTop": true,
+        "children": [
+            {
+                "name": "system_action",
+                "label": "系统操作",
+                "icon": "icon-xitongcaozuo",
+                "searchContent": {
+                    "label": {
+                        "character": "系统操作",
+                        "firstLetter": "xtcz",
+                        "allLetter": [
+                            "xi",
+                            "tong",
+                            "cao",
+                            "zuo"
+                        ]
+                    }
+                },
+                "components": [
+                    "System_PlaySound",
+                    "System_GetEnv",
+                    "System_SetEnv",
+                    "System_ExecuteCommand",
+                    "System_GetSystemPath",
+                    "System_GetTempPath",
+                    "System_GetHomePath",
+                    "System_GetMobileMessage",
+                    "System_ConnectRemoteDesktop",
+                    "System_CloseRemoteDesktop"
+                ],
+                "bgComponents": [
+                    "System_GetEnv",
+                    "System_GetTempPath",
+                    "System_GetHomePath"
+                ],
+                "mobileComponents": [
+                    "System_PlaySound",
+                    "System_GetEnv",
+                    "System_SetEnv",
+                    "System_ExecuteCommand",
+                    "System_GetSystemPath",
+                    "System_GetTempPath",
+                    "System_GetHomePath",
+                    "System_GetMobileMessage",
+                    "System_ConnectRemoteDesktop",
+                    "System_CloseRemoteDesktop"
+                ]
+            },
+            {
+                "name": "app",
+                "label": "应用",
+                "icon": "icon-yingyong1",
+                "searchContent": {
+                    "label": {
+                        "character": "应用",
+                        "firstLetter": "yy",
+                        "allLetter": [
+                            "ying",
+                            "yong"
+                        ]
+                    }
+                },
+                "components": [
+                    "App_Run",
+                    "App_Kill",
+                    "App_KillV1",
+                    "App_GetPids",
+                    "App_GetPid"
+                ],
+                "bgComponents": [
+                    "App_GetPids",
+                    "App_GetPid"
+                ],
+                "mobileComponents": [
+                    "App_Run",
+                    "App_Kill",
+                    "App_KillV1",
+                    "App_GetPids",
+                    "App_GetPid"
+                ]
+            },
+            {
+                "name": "ScreenControl",
+                "label": "锁屏解锁",
+                "icon": "icon-RDP",
+                "searchContent": {
+                    "label": {
+                        "character": "锁屏解锁",
+                        "firstLetter": "spjs",
+                        "allLetter": [
+                            "suo",
+                            "bing",
+                            "jie",
+                            "suo"
+                        ]
+                    }
+                },
+                "components": [
+                    "ScreenControl_Screenlock",
+                    "ScreenControl_ScreenUnlock"
+                ],
+                "bgComponents": [],
+                "mobileComponents": [
+                    "ScreenControl_Screenlock",
+                    "ScreenControl_ScreenUnlock"
+                ]
+            }
+        ],
+        "searchContent": {
+            "label": {
+                "character": "系统",
+                "firstLetter": "xt",
+                "allLetter": [
+                    "xi",
+                    "tong"
+                ]
+            }
+        },
+        "components": [],
+        "bgComponents": [],
+        "mobileComponents": []
+    },
+    {
+        "name": "system_action",
+        "label": "系统操作",
+        "icon": "icon-xitongcaozuo",
+        "searchContent": {
+            "label": {
+                "character": "系统操作",
+                "firstLetter": "xtcz",
+                "allLetter": [
+                    "xi",
+                    "tong",
+                    "cao",
+                    "zuo"
+                ]
+            }
+        },
+        "components": [
+            "System_PlaySound",
+            "System_GetEnv",
+            "System_SetEnv",
+            "System_ExecuteCommand",
+            "System_GetSystemPath",
+            "System_GetTempPath",
+            "System_GetHomePath",
+            "System_GetMobileMessage",
+            "System_ConnectRemoteDesktop",
+            "System_CloseRemoteDesktop"
+        ],
+        "bgComponents": [
+            "System_GetEnv",
+            "System_GetTempPath",
+            "System_GetHomePath"
+        ],
+        "mobileComponents": [
+            "System_PlaySound",
+            "System_GetEnv",
+            "System_SetEnv",
+            "System_ExecuteCommand",
+            "System_GetSystemPath",
+            "System_GetTempPath",
+            "System_GetHomePath",
+            "System_GetMobileMessage",
+            "System_ConnectRemoteDesktop",
+            "System_CloseRemoteDesktop"
+        ]
+    },
+    {
+        "name": "app",
+        "label": "应用",
+        "icon": "icon-yingyong1",
+        "searchContent": {
+            "label": {
+                "character": "应用",
+                "firstLetter": "yy",
+                "allLetter": [
+                    "ying",
+                    "yong"
+                ]
+            }
+        },
+        "components": [
+            "App_Run",
+            "App_Kill",
+            "App_KillV1",
+            "App_GetPids",
+            "App_GetPid"
+        ],
+        "bgComponents": [
+            "App_GetPids",
+            "App_GetPid"
+        ],
+        "mobileComponents": [
+            "App_Run",
+            "App_Kill",
+            "App_KillV1",
+            "App_GetPids",
+            "App_GetPid"
+        ]
+    },
+    {
+        "name": "ScreenControl",
+        "label": "锁屏解锁",
+        "icon": "icon-RDP",
+        "searchContent": {
+            "label": {
+                "character": "锁屏解锁",
+                "firstLetter": "spjs",
+                "allLetter": [
+                    "suo",
+                    "bing",
+                    "jie",
+                    "suo"
+                ]
+            }
+        },
+        "components": [
+            "ScreenControl_Screenlock",
+            "ScreenControl_ScreenUnlock"
+        ],
+        "bgComponents": [],
+        "mobileComponents": [
+            "ScreenControl_Screenlock",
+            "ScreenControl_ScreenUnlock"
+        ]
+    },
+    {
+        "name": "network",
+        "label": "网络",
+        "icon": "icon-wangluo",
+        "isTop": true,
+        "searchContent": {
+            "label": {
+                "character": "网络",
+                "firstLetter": "wl",
+                "allLetter": [
+                    "wang",
+                    "luo"
+                ]
+            }
+        },
+        "components": [
+            "Http_Get",
+            "Http_Post"
+        ],
+        "bgComponents": [],
+        "mobileComponents": [
+            "Http_Get",
+            "Http_Post"
+        ]
+    },
+    {
+        "name": "notification",
+        "label": "消息通知",
+        "icon": "icon-xiaoxitongzhi",
+        "isTop": true,
+        "searchContent": {
+            "label": {
+                "character": "消息通知",
+                "firstLetter": "xxtz",
+                "allLetter": [
+                    "xiao",
+                    "xi",
+                    "tong",
+                    "zhi"
+                ]
+            }
+        },
+        "components": [],
+        "bgComponents": [],
+        "mobileComponents": []
+    },
+    {
+        "name": "R6WPbcM1645753087658@1.0.1",
+        "label": "白月初测试组件增长下载2",
+        "icon": "icon-zujian2x",
+        "isTop": false,
+        "introduction": "13243",
+        "searchContent": {
+            "label": {
+                "character": "白月初测试组件增长下载2",
+                "firstLetter": "byccszjzzxz2",
+                "allLetter": [
+                    "bai",
+                    "yue",
+                    "chu",
+                    "ce",
+                    "shi",
+                    "zu",
+                    "jian",
+                    "zeng",
+                    "chang",
+                    "xia",
+                    "zai",
+                    "2"
+                ]
+            }
+        },
+        "components": [
+            "TASK_COMPONENT_PVmODCv1645753121573_1_0_0",
+            "TASK_COMPONENT_PVmODCv1645753121573"
+        ],
+        "bgComponents": [],
+        "mobileComponents": [
+            "TASK_COMPONENT_PVmODCv1645753121573_1_0_0",
+            "TASK_COMPONENT_PVmODCv1645753121573"
+        ]
+    }
+]

@@ -1,0 +1,50 @@
+dll名称：II.RPA.dll
+引用类名：SDK；
+
+接口：返回值均为json字符串；
+     
+    拾取：
+	 string Capture(string filepath,bool isCVCapture,string cvServer)
+     filepath:元素截图，
+     isCVCapture:是否是CV拾取，
+     cvServer：如果是CV拾取需要配置cv服务器
+    鼠标点击：
+          string MouseClick(string selector,int clickType,int offsetX,int offsetY,int issimulate,int timeout)
+       
+          clickType:0,鼠标左单击；1，鼠标左双击；2：鼠标右单击；3：鼠标右双击
+		  offsetX:横坐标偏移量，offsetY：纵坐标偏移量；
+		  timeout：超时时间，目前没用，默认写0即可，下同。
+		  issimulate:是否是模拟点击，1：是，0：否，对于java的情形发现，有的时候两种点击方式的点击结果不一样。
+
+    文本设置：
+          string SetText（string selector，string txt,int timeout）
+
+    文本获取：
+          string GetText（string selector,int timeout）
+
+    获取元素选择：
+          string GetElementSelect(string selector, int timeout)
+     
+    设置元素选择：
+            string SetElementSelect(string selector,int selectType,string setValue, int timeout)
+
+            selectType：0：按顺序选择；1：按文本选择
+
+    获取元素勾选：
+          string GetElementCheck(string selector, int timeout)
+
+    元素是否存在：
+          string IsElementExist(string selector, int timeout)
+    
+    获取元素区域：
+          string GetRegion(string selector, int timeout)
+    元素截图：
+           string ElementShot(string selector,string filepath, int timeout)
+    获取元素子元素：目前只有在java应用对表格有效
+	       string GetSubElments(string selector,int timeout)；
+    CV 获取文本：
+	    拾取： string CaptureByRegion(string filepath)
+		        filepath：拾取的元素截图存放位置
+		执行： string GetCVText(string selector,string cvserver,int timeout)
+		       cvserver:cv文本获取服务地址
+		   

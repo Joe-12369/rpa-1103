@@ -1,0 +1,36 @@
+syntax = "proto3";
+import "google/protobuf/struct.proto";
+package rpa.core.worker.engine;
+
+message ActionMessage
+{
+  string action = 1;
+  string payload = 2;
+  bool within_zdesktop = 3;
+  string inner_action = 4;
+}
+
+message ActionEvent
+{
+  enum ActionEventType {
+    UNKNOWN = 0;
+    START = 1;
+    DONE = 2;
+    ERROR = 3;
+    FINISH = 4;
+  }
+  string action = 1;
+  string request_id = 2;
+  ActionEventType type = 3;
+}
+
+message Command
+{
+  enum CommandType {
+    UNKNOWN = 0;
+    MARK_BANISHED = 1;
+  }
+  CommandType type = 1;
+  google.protobuf.ListValue args = 2;
+  google.protobuf.Struct kvargs = 3;
+}

@@ -1,0 +1,53 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace II.RPA.Plugin.GoogleSheets.SheetsWrapper
+{
+    public abstract class BaseRecord
+    {
+        public int RowId { get; set; }
+
+        public BaseRecord() { }
+
+        /// <summary>
+        /// Convert a Google Sheet API row result into a BaseRecord with an column id offset
+        /// </summary>
+        /// <param name="row"></param>
+        /// <param name="rowId"></param>
+        /// <param name="minColumnId"></param>
+        public BaseRecord(IList<object> row, int rowId, int minColumnId = 1)
+        {
+            this.RowId = rowId;
+            SheetFieldAttributeUtils.PopulateRecord(this, row, minColumnId);
+        }
+
+        /// <summary>
+        /// Converts this current object into the Google Sheet's associated CellData format required for the Google Sheets API
+        /// </summary>
+        /// <param name="tabName"></param>
+        /// <returns></returns>
+        public List<BatchUpdateRequestObject> ConvertToCellData(string tabName)
+        {
+            var results = new List<BatchUpdateRequestObject>();
+
+            var attributes = SheetFieldAttributeUtils.GetAllSheetFieldAttributes(this.GetType());
+
+            foreach (var attribute in attributes)
+            {
+                var sheetRange = new SheetRange(tabName, attribute.Key.ColumnID, this.RowId);
+
+                results.Add(new BatchUpdateRequestObject()
+                {
+                    Range = sheetRange,
+                    Data = SheetFieldAttributeUtils.GetCellDataForSheetField(this, attribute.Key, attribute.Value),
+                    FieldAttribute = attribute.Key,
+                });
+            }
+
+            return results;
+        }
+    }
+}

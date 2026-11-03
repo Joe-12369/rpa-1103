@@ -1,0 +1,328 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Pack://application:,,,/II.RPA.WinAutomation.CommonUtility;component/XamlResource/GlobalLangResource.xaml"></ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+    <Style x:Key="CommonTextBoxStyle" TargetType="TextBox">
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Padding" Value="10 0"></Setter>
+        <Setter Property="FontFamily" Value="{DynamicResource CodeMasterFontFamily}"></Setter>
+        <Setter Property="FontSize" Value="14"></Setter>
+        <Setter Property="Foreground" Value="#808080"></Setter>
+        <Setter Property="MaxLength" Value="128"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border BorderBrush="#CCCCCD" BorderThickness="1" CornerRadius="2,2,2,2" Name="PART_Background">
+                        <ScrollViewer x:Name="PART_ContentHost"
+                                          VerticalAlignment="Center"
+                                          Background="#FCFCFC"
+                                          BorderThickness="1"
+                                          IsTabStop="False" 
+                                          Foreground="#D8D8D8"
+                                          Height="32"
+                                          Padding="10 0 0 0"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="PART_Background" Property="BorderBrush" Value="#FFCCCCCD"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="PART_Background" Property="BorderBrush" Value="#FFF76900"></Setter>
+                        </Trigger>
+                        <!--<Trigger Property="BorderThickness" Value="0">
+                            <Setter TargetName="PART_Background" Property="BorderBrush" Value="#FFE80000"></Setter>
+                        </Trigger>
+                        <Trigger Property="BorderThickness" Value="1">
+                            <Setter TargetName="PART_Background" Property="BorderBrush" Value="#FFCCCCCD"></Setter>
+                        </Trigger>-->
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter TargetName="PART_Background" Property="BorderBrush" Value="#FFF76900"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Black"></Setter>
+                            <Setter TargetName="PART_Background" Property="Background" Value="Black"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+   
+    <Style x:Key="FilterRuleTextBoxStyle" TargetType="TextBox">
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Padding" Value="10 0"></Setter>
+        <Setter Property="FontFamily" Value="{DynamicResource CodeMasterFontFamily}"></Setter>
+        <Setter Property="FontSize" Value="14"></Setter>
+        <Setter Property="Foreground" Value="#808080"></Setter>
+        <Setter Property="MaxLength" Value="128"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border BorderBrush="#CCCCCD" BorderThickness="1" CornerRadius="2,2,2,2" Name="PART_Background">
+                        <ScrollViewer x:Name="PART_ContentHost"
+                                          VerticalAlignment="Center"
+                                          Background="#FCFCFC"
+                                          BorderThickness="1"
+                                          IsTabStop="False" 
+                                          Foreground="#D8D8D8"
+                                          Height="32"
+                                          Padding="10 0 0 0"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="PART_Background" Property="BorderBrush" Value="#FFCCCCCD"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="PART_Background" Property="BorderBrush" Value="#FFF76900"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter TargetName="PART_Background" Property="BorderBrush" Value="#FFF76900"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Black"></Setter>
+                            <Setter TargetName="PART_Background" Property="Background" Value="Black"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="MinMaxTextBoxStyle" TargetType="TextBox">
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="FontFamily" Value="{DynamicResource CodeMasterFontFamily}"></Setter>
+        <Setter Property="FontSize" Value="14"></Setter>
+        <Setter Property="Foreground" Value="#808080"></Setter>
+        <Setter Property="Background" Value="#F2F3F5"></Setter>
+        <Setter Property="MaxLength" Value="128"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border BorderBrush="#CCCCCD" BorderThickness="0 0 0 1" CornerRadius="0" Name="PART_Background">
+                        <ScrollViewer x:Name="PART_ContentHost"
+                                          VerticalAlignment="Center"
+                                          Background="#F2F3F5"
+                                          BorderThickness="1"
+                                          IsTabStop="False" 
+                                          Foreground="#808080"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="PART_Background" Property="BorderBrush" Value="#CCCCCD"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="PART_Background" Property="BorderBrush" Value="#FFF76900"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter TargetName="PART_Background" Property="BorderBrush" Value="#FFF76900"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ButtonTextBoxStyle" TargetType="TextBox">
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Padding" Value="10,0"></Setter>
+        <Setter Property="FontFamily" Value="{DynamicResource CodeMasterFontFamily}"></Setter>
+        <Setter Property="FontSize" Value="14"></Setter>
+        <Setter Property="Foreground" Value="#808080"></Setter>
+        <Setter Property="MaxLength" Value="128"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border BorderBrush="#CCCCCD" BorderThickness="1" CornerRadius="2,2,2,2" Name="PART_Background">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="32"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Grid.Column="0" Text="{Binding Text}"></TextBox>
+                            <Button Grid.Column="1"></Button>
+                        </Grid>
+                        <!--<ScrollViewer x:Name="PART_ContentHost"
+                                          VerticalAlignment="Center"
+                                          Background="#FCFCFC"
+                                          BorderThickness="1"
+                                          IsTabStop="False" 
+                                          Foreground="#D8D8D8"
+                                          Height="32"/>-->
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="PART_Background" Property="BorderBrush" Value="#FFCCCCCD"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="PART_Background" Property="BorderBrush" Value="#FFF76900"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter TargetName="PART_Background" Property="BorderBrush" Value="#FFF76900"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <VisualBrush x:Key="HintInputText" TileMode="None"  Stretch="None" AlignmentX="Left" >
+        <VisualBrush.Visual >
+            <TextBlock Margin="8,0,0,0" Padding="8,0,0,0" FontSize="12"  Foreground="#FF808080" Text="{DynamicResource res_WaterMarkContentEditColumnName}"/>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="HintInputTextForRegular" TileMode="None"  Stretch="None" AlignmentX="Left" >
+        <VisualBrush.Visual >
+            <TextBlock Margin="8,0,0,0" Padding="8,0,0,0" FontSize="12"  Foreground="#FF808080" Text="{DynamicResource res_WaterMarkContentRegular}"/>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="HintInputText4Filter" TileMode="None"  Stretch="None" AlignmentX="Left" >
+        <VisualBrush.Visual >
+            <TextBlock  FontSize="14"  Foreground="#FF808080" Opacity="0.5" Text="{DynamicResource res_WaterMarkContentEditColumnName}"/>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <Style x:Key="NormalTextBox" TargetType="TextBox">
+        <Setter Property="FontFamily" Value="{DynamicResource CodeMasterFontFamily}"></Setter>
+        <Setter Property="FontSize" Value="14"></Setter>
+        <Setter Property="Foreground" Value="#808080"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="MaxLength" Value="128"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Grid>
+                        <Border x:Name="borderContentHost"  >
+                             <ScrollViewer x:Name="PART_ContentHost" HorizontalAlignment="Stretch" ></ScrollViewer>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    
+    <Style x:Key="WaterMark4FilterTextBox" TargetType="TextBox">
+        <Setter Property="FontFamily" Value="{DynamicResource CodeMasterFontFamily}"></Setter>
+        <Setter Property="FontSize" Value="14"></Setter>
+        <Setter Property="Foreground" Value="#808080"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="MaxLength" Value="128"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Grid Background="#FCFCFC">
+                        <Border Grid.Column="1" x:Name="borderContentHost" BorderBrush="#CCCCCD" BorderThickness="1" CornerRadius="2" Height="32">
+                            <Border Margin="10,3,10,5" x:Name="borderWaterMark"  VerticalAlignment="Center">
+                                <ScrollViewer x:Name="PART_ContentHost" ></ScrollViewer>
+                            </Border>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="borderContentHost" Property="BorderBrush" Value="#FFCCCCCD"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="borderContentHost" Property="BorderBrush" Value="#FFF76900"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter TargetName="borderContentHost" Property="BorderBrush" Value="#FFF76900"></Setter>
+                        </Trigger>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter TargetName="borderWaterMark" Property="Background" Value="{StaticResource HintInputText4Filter}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter TargetName="borderWaterMark" Property="Background" Value="{StaticResource HintInputText4Filter}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="StringHitInputTextBox" TargetType="TextBox">
+        <Setter Property="FontFamily" Value="{DynamicResource CodeMasterFontFamily}"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Grid>
+                        <Border  x:Name="borderWaterMark"  VerticalAlignment="Center">
+                                <ScrollViewer x:Name="PART_ContentHost" ></ScrollViewer>
+                            </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter TargetName="borderWaterMark" Property="Background" Value="{StaticResource HintInputText}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter TargetName="borderWaterMark" Property="Background" Value="{StaticResource HintInputText}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="StringHitInputTextBoxForRegular" TargetType="TextBox">
+        <Setter Property="FontFamily" Value="{DynamicResource CodeMasterFontFamily}"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Grid>
+                        <Border  x:Name="borderWaterMark"  VerticalAlignment="Top">
+                            <ScrollViewer x:Name="PART_ContentHost" ></ScrollViewer>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter TargetName="borderWaterMark" Property="Background" Value="{StaticResource HintInputTextForRegular}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter TargetName="borderWaterMark" Property="Background" Value="{StaticResource HintInputTextForRegular}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="StrinPasswdgInputTextBox" TargetType="PasswordBox">
+        <Setter Property="FontFamily" Value="{DynamicResource CodeMasterFontFamily}"></Setter>
+        <Setter Property="FontSize" Value="14"></Setter>
+        <Setter Property="Foreground" Value="#808080"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="MaxLength" Value="128"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type PasswordBox}">
+                    <Grid>
+                        <Border Grid.Column="1" x:Name="borderContentHost" BorderBrush="#CCCCCD" BorderThickness="1" CornerRadius="2" Height="32" Background="{TemplateBinding Background}">
+                            <Border Margin="10,3,10,5" x:Name="borderWaterMark"  VerticalAlignment="Center">
+                                <ScrollViewer x:Name="PART_ContentHost" ></ScrollViewer>
+                            </Border>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="borderContentHost" Property="BorderBrush" Value="#FFCCCCCD"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="borderContentHost" Property="BorderBrush" Value="#FFF76900"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter TargetName="borderContentHost" Property="BorderBrush" Value="#FFF76900"></Setter>
+                        </Trigger>
+                     
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

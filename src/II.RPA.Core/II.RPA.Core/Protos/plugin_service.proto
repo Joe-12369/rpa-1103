@@ -1,0 +1,231 @@
+syntax = "proto3";
+import "google/protobuf/wrappers.proto";
+package rpa.core.plugin;
+
+enum NullValue {
+  // Null value.
+  NULL_VALUE = 0;
+}
+
+message ListValue {
+  // Repeated field of dynamically typed values.
+  repeated Value values = 1;
+}
+message Struct {
+  // Unordered map of dynamically typed values.
+  map<string, Value> fields = 1;
+}
+
+message Value {
+  // The kind of value.
+  oneof kind {
+    // Represents a null value.
+    NullValue null_value = 1;
+    // Represents a double value.
+    double number_value = 2;
+    // Represents a string value.
+    string string_value = 3;
+    // Represents a boolean value.
+    bool bool_value = 4;
+    // Represents a structured value.
+    Struct struct_value = 5;
+    // Represents a repeated `Value`.
+    ListValue list_value = 6;
+
+	int32 int_value = 7;
+  }
+}
+message BoolValue 
+{
+  bool value = 1;
+}
+
+enum WinState 
+{
+  Restore = 0;
+  Hiden = 1;
+}
+
+enum WinType
+{
+    AllWindow = 0;
+    MainWindow = 1;
+    RunPopWindow = 2;
+}
+
+enum PayloadType 
+{
+  // Compressable text format.
+  COMPRESSABLE = 0;
+}
+message SomeJSONMessage {
+    // Attributes of your JSON here
+}
+// A block of data, to simply increase gRPC message size.
+message PayloadInit
+{
+	string package_path = 1;
+	string install_dir_path = 2;
+}
+message PayloadRun 
+{
+	string packagePath = 1;
+	string pluginName = 2;
+	string pluginAction = 3;
+	string pluginParamBase64 = 4;
+	string pluginRunTimeSpan = 5;
+	string pluginRunTimeJson = 6;
+	string pluginRunRetryContext = 7;
+	string run_mode = 8;
+}
+message PayloadRunFromClient 
+{
+	string package_path = 1;
+	string plugin_action = 2;
+	string plugin_param = 3;
+	string plugin_version = 4;
+}
+message PayloadDispose 
+{
+	string package_path = 1;
+	bool wait_ready = 2;
+	bool reuse_runtime = 3;
+}
+message PayloadSetParam 
+{ 
+	string packagePath = 1;
+	string ParamBase64 = 2;
+}
+message PayloadSwitchPythonEnv
+{
+	string version = 1;
+	bool IsUpgrade = 2;
+}
+enum BatterySaverOptions {
+  Opened = 0;
+  Closed = 1;
+  Unkonw = 9;
+}
+
+message PayloadEnvironmentDiagnostic
+{
+	BatterySaverOptions BatterySaverOptions = 1;
+}
+service PluginService 
+{
+	// 切换python解释器
+	rpc SwitchPythonEnvUnary (SwitchPythonEnvRequest) returns (BaseResponse);
+	//engine运行plugin
+	rpc PluginRunUnary (RunPluginRequest) returns (BaseResponse);
+	//参数设置
+	rpc PluginSetParamUnary (SetParamPluginRequest) returns (BaseResponse);
+    //释放
+	rpc PluginDisposeUnary (DisposePluginRequest) returns (BaseResponse);
+	//流程停止
+	rpc PluginStopUnary (StopPluginRequest) returns (BaseResponse);
+	//client运行plugin
+	rpc PluginRunFromClientUnary (RunPluginFromClientRequest) returns (ClientResponse);
+	//清理
+	rpc PluginClearUnary (ClearPluginRequest) returns (BaseResponse);
+    //异步清理
+	rpc PluginClearAsyncUnary (ClearPluginRequest) returns (BaseResponse);
+	//数据交换-用于大数据量传输、无额外的反序列化操作
+	rpc PluginDataTransferUnary (DataTransferRequest) returns (BaseResponse);
+	//操作运行浮窗隐藏或恢复
+	rpc SetRunPopWinStateUnary (SetRunPopWinStateRequest) returns (BaseResponse);
+	rpc EnvironmentDiagnosticUnary (EnvironmentDiagnosticRequest) returns (EnvironmentDiagnosticResponse);
+	rpc SetClientWindowStateUnary (SetWindowRequest) returns (BaseResponse);
+	rpc SetClientWindowStateUnary1 (SetWindowRequest) returns (BaseResponse);
+}
+message EnvironmentDiagnosticRequest
+{
+	string client_Id = 1;
+}
+
+message SwitchPythonEnvRequest
+{
+	string client_Id = 1;
+	PayloadSwitchPythonEnv payload = 2;
+	bool within_zdesktop = 3;
+}
+message RunPluginRequest 
+{
+	string clientId = 1;
+	PayloadRun payload = 2;
+}
+message RunPluginFromClientRequest 
+{
+	string client_id = 1;
+	PayloadRunFromClient payload = 2;
+	bool within_zdesktop = 3;
+}
+message InitPluginRequest 
+{
+	string client_Id = 1;
+	PayloadInit payload = 2;
+}
+message SetParamPluginRequest 
+{
+	string clientId = 1;
+	PayloadSetParam payload = 2;
+}
+message DisposePluginRequest 
+{
+	string client_Id = 1;
+	PayloadDispose payload = 2;
+}
+message ClientResponse 
+{
+    int32 code = 1;
+    string message = 2;
+	string result = 3;
+	string plugin_action = 4;
+}
+message EnvironmentDiagnosticResponse 
+{
+    int32 code = 1;
+    PayloadEnvironmentDiagnostic payloadData = 2;
+}
+message BaseResponse 
+{
+    int32 code = 1;
+    string message = 2;
+	string result = 3;
+}
+message ClearPluginRequest 
+{
+	string clientId = 1;
+	string packagePath = 2;
+}
+message DataTransferRequest 
+{
+	//客户端身份Z-Factory
+	string client_id = 1;
+	//流程包路径
+	string package_path = 2;
+	//data Key:e.g. componentList
+	string data_key = 3;
+	//data json
+	string data_json = 4;
+}
+message SetWindowRequest 
+{
+	string client_id = 1;
+    WinState WinState = 2;
+    WinType WinType = 3;
+}
+message SetRunPopWinStateRequest 
+{
+	string client_id = 1;
+	WinState WinState = 2;
+}
+message StopPluginRequest 
+{
+	//客户端身份Z-Factory;Z-Bot
+	string client_id = 1;
+	//流程包路径
+	string package_path = 2;
+	//运行时路径
+	//是否同步 true：同步；false：异步 目前使用false
+	google.protobuf.BoolValue is_sync = 3;
+}

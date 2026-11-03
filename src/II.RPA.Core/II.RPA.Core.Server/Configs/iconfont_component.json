@@ -1,0 +1,3894 @@
+{
+  "id": "2336574",
+  "name": "factory组件icon",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "2022组件icon双色图标",
+  "glyphs": [
+    {
+      "icon_id": "36382632",
+      "name": "获取文件信息",
+      "font_class": "cp-huoquwenjianxinxi",
+      "unicode": "ea81",
+      "unicode_decimal": 60033
+    },
+    {
+      "icon_id": "36338065",
+      "name": "读取单元格公式",
+      "font_class": "cp-duqudanyuangegongshi",
+      "unicode": "ea80",
+      "unicode_decimal": 60032
+    },
+    {
+      "icon_id": "36272888",
+      "name": "折叠",
+      "font_class": "cp-zhedie",
+      "unicode": "ea7f",
+      "unicode_decimal": 60031
+    },
+    {
+      "icon_id": "35223536",
+      "name": "增加减少时间",
+      "font_class": "cp-zengjiajianshaoshijian",
+      "unicode": "ea7e",
+      "unicode_decimal": 60030
+    },
+    {
+      "icon_id": "34820768",
+      "name": "AI生成图片",
+      "font_class": "AIshengchengtupian",
+      "unicode": "e6d4",
+      "unicode_decimal": 59092
+    },
+    {
+      "icon_id": "34820769",
+      "name": "AI生成文本",
+      "font_class": "AIshengchengwenben",
+      "unicode": "e6d5",
+      "unicode_decimal": 59093
+    },
+    {
+      "icon_id": "34820770",
+      "name": "AIGC",
+      "font_class": "AIGC",
+      "unicode": "e6d6",
+      "unicode_decimal": 59094
+    },
+    {
+      "icon_id": "34181857",
+      "name": "获取文件夹列表",
+      "font_class": "cp-huoquwenjianjialiebiao",
+      "unicode": "ea73",
+      "unicode_decimal": 60019
+    },
+    {
+      "icon_id": "34181858",
+      "name": "获取文件列表",
+      "font_class": "cp-huoquwenjianliebiao",
+      "unicode": "ea74",
+      "unicode_decimal": 60020
+    },
+    {
+      "icon_id": "34181859",
+      "name": "解压文件",
+      "font_class": "cp-jieyawenjian",
+      "unicode": "ea7c",
+      "unicode_decimal": 60028
+    },
+    {
+      "icon_id": "34181860",
+      "name": "压缩文件",
+      "font_class": "cp-yasuowenjian",
+      "unicode": "ea7d",
+      "unicode_decimal": 60029
+    },
+    {
+      "icon_id": "34048101",
+      "name": "智能门户",
+      "font_class": "cp-zhinengmenhu",
+      "unicode": "ea58",
+      "unicode_decimal": 59992
+    },
+    {
+      "icon_id": "34048102",
+      "name": "上报办理业务(法院 )",
+      "font_class": "cp-a-shangbaobanliyewufayuan",
+      "unicode": "ea65",
+      "unicode_decimal": 60005
+    },
+    {
+      "icon_id": "34048103",
+      "name": "上报采集数据(法院)",
+      "font_class": "cp-a-shangbaocaijishujufayuan",
+      "unicode": "ea69",
+      "unicode_decimal": 60009
+    },
+    {
+      "icon_id": "33773177",
+      "name": "icon-shoujizidonghua",
+      "font_class": "shoujizidonghua",
+      "unicode": "ea4c",
+      "unicode_decimal": 59980
+    },
+    {
+      "icon_id": "33765028",
+      "name": "控制器Dat",
+      "font_class": "cp-kongzhiqiDat",
+      "unicode": "ea33",
+      "unicode_decimal": 59955
+    },
+    {
+      "icon_id": "33734567",
+      "name": "队列取出",
+      "font_class": "cp-duiliequchu",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "33734568",
+      "name": "存入队列",
+      "font_class": "cp-cunruduilie",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "33734569",
+      "name": "下载控制器文件",
+      "font_class": "cp-xiazaikongzhiqiwenjian",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "33734570",
+      "name": "上传控制器文件",
+      "font_class": "cp-shangchuankongzhiqiwenjian",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "33389211",
+      "name": "断开机械臂",
+      "font_class": "duankaijixiebi",
+      "unicode": "e9da",
+      "unicode_decimal": 59866
+    },
+    {
+      "icon_id": "33389212",
+      "name": "复位机械臂",
+      "font_class": "fuweijixiebi",
+      "unicode": "e9e9",
+      "unicode_decimal": 59881
+    },
+    {
+      "icon_id": "33389213",
+      "name": "连接U盾",
+      "font_class": "lianjieUdun",
+      "unicode": "e9f1",
+      "unicode_decimal": 59889
+    },
+    {
+      "icon_id": "33389214",
+      "name": "机械臂点击",
+      "font_class": "jixiebidianji",
+      "unicode": "ea14",
+      "unicode_decimal": 59924
+    },
+    {
+      "icon_id": "33389215",
+      "name": "机械臂",
+      "font_class": "jixiebi",
+      "unicode": "ea16",
+      "unicode_decimal": 59926
+    },
+    {
+      "icon_id": "33389216",
+      "name": "断开U盾",
+      "font_class": "duankaiUdun",
+      "unicode": "ea20",
+      "unicode_decimal": 59936
+    },
+    {
+      "icon_id": "33389217",
+      "name": "连接机械臂",
+      "font_class": "lianjiejixiebi",
+      "unicode": "ea23",
+      "unicode_decimal": 59939
+    },
+    {
+      "icon_id": "33357561",
+      "name": "折叠开始",
+      "font_class": "zhediekaishi",
+      "unicode": "e9db",
+      "unicode_decimal": 59867
+    },
+    {
+      "icon_id": "33357562",
+      "name": "折叠结束",
+      "font_class": "zhediejieshu",
+      "unicode": "e9dc",
+      "unicode_decimal": 59868
+    },
+    {
+      "icon_id": "32843385",
+      "name": "获取列表项的位置",
+      "font_class": "huoquliebiaoxiangdeweizhi",
+      "unicode": "e9d1",
+      "unicode_decimal": 59857
+    },
+    {
+      "icon_id": "32656356",
+      "name": "异常监控",
+      "font_class": "yichangjiankong",
+      "unicode": "e8dc",
+      "unicode_decimal": 59612
+    },
+    {
+      "icon_id": "32656357",
+      "name": "结束监控",
+      "font_class": "jieshujiankong",
+      "unicode": "e90e",
+      "unicode_decimal": 59662
+    },
+    {
+      "icon_id": "32335380",
+      "name": "拆分单元格",
+      "font_class": "chaifendanyuange",
+      "unicode": "e939",
+      "unicode_decimal": 59705
+    },
+    {
+      "icon_id": "32335381",
+      "name": "合并单元格",
+      "font_class": "hebingdanyuange",
+      "unicode": "e943",
+      "unicode_decimal": 59715
+    },
+    {
+      "icon_id": "32335382",
+      "name": "获取文件夹内容",
+      "font_class": "huoquwenjianjianeirong",
+      "unicode": "e98f",
+      "unicode_decimal": 59791
+    },
+    {
+      "icon_id": "32335383",
+      "name": "列表转文本",
+      "font_class": "liebiaozhuanwenben",
+      "unicode": "e991",
+      "unicode_decimal": 59793
+    },
+    {
+      "icon_id": "32335384",
+      "name": "系统截图_1",
+      "font_class": "xitongjietu_1",
+      "unicode": "e9a1",
+      "unicode_decimal": 59809
+    },
+    {
+      "icon_id": "32335385",
+      "name": "数据表格去重",
+      "font_class": "shujubiaogequzhong",
+      "unicode": "e9a3",
+      "unicode_decimal": 59811
+    },
+    {
+      "icon_id": "32335386",
+      "name": "删除文件夹",
+      "font_class": "shanchuwenjianjia",
+      "unicode": "e9a4",
+      "unicode_decimal": 59812
+    },
+    {
+      "icon_id": "32111580",
+      "name": "排序数据表格",
+      "font_class": "paixushujubiaoge",
+      "unicode": "e8b9",
+      "unicode_decimal": 59577
+    },
+    {
+      "icon_id": "32111581",
+      "name": "按列汇总计算",
+      "font_class": "anliehuizongjisuan",
+      "unicode": "e8ba",
+      "unicode_decimal": 59578
+    },
+    {
+      "icon_id": "32104240",
+      "name": "生成数据透视表",
+      "font_class": "shengchengshujutoushibiao",
+      "unicode": "e8b8",
+      "unicode_decimal": 59576
+    },
+    {
+      "icon_id": "32016631",
+      "name": "获取系统账号(门户专用)",
+      "font_class": "a-huoquxitongzhanghaomenhuzhuanyong",
+      "unicode": "e8b3",
+      "unicode_decimal": 59571
+    },
+    {
+      "icon_id": "31980246",
+      "name": "业务结果上传",
+      "font_class": "yewujieguoshangchuan",
+      "unicode": "e8b2",
+      "unicode_decimal": 59570
+    },
+    {
+      "icon_id": "31729245",
+      "name": "合并sheet",
+      "font_class": "hebingsheet",
+      "unicode": "e8ad",
+      "unicode_decimal": 59565
+    },
+    {
+      "icon_id": "31728655",
+      "name": "读取Excel内容",
+      "font_class": "duquExcelneirong",
+      "unicode": "e8ab",
+      "unicode_decimal": 59563
+    },
+    {
+      "icon_id": "31728656",
+      "name": "写入Excel内容",
+      "font_class": "xieruExcelneirong",
+      "unicode": "e8ac",
+      "unicode_decimal": 59564
+    },
+    {
+      "icon_id": "31211608",
+      "name": "删除重复行",
+      "font_class": "shanchuchongfuhang",
+      "unicode": "e897",
+      "unicode_decimal": 59543
+    },
+    {
+      "icon_id": "31050809",
+      "name": "icon-kfckfc",
+      "font_class": "SQLpiliangcharushuju",
+      "unicode": "e892",
+      "unicode_decimal": 59538
+    },
+    {
+      "icon_id": "31050810",
+      "name": "设置单元格格式",
+      "font_class": "shezhidanyuangegeshi",
+      "unicode": "e893",
+      "unicode_decimal": 59539
+    },
+    {
+      "icon_id": "31050811",
+      "name": "获取兄弟元素",
+      "font_class": "huoquxiongdiyuansu",
+      "unicode": "e894",
+      "unicode_decimal": 59540
+    },
+    {
+      "icon_id": "31050812",
+      "name": "执行事务",
+      "font_class": "zhihangshiwu",
+      "unicode": "e895",
+      "unicode_decimal": 59541
+    },
+    {
+      "icon_id": "31050813",
+      "name": "获取父元素",
+      "font_class": "huoqufuyuansu",
+      "unicode": "e896",
+      "unicode_decimal": 59542
+    },
+    {
+      "icon_id": "30803604",
+      "name": "滑块验证码",
+      "font_class": "huakuaiyanzhengma",
+      "unicode": "e886",
+      "unicode_decimal": 59526
+    },
+    {
+      "icon_id": "30803605",
+      "name": "缺失值处理",
+      "font_class": "queshizhichuli",
+      "unicode": "e887",
+      "unicode_decimal": 59527
+    },
+    {
+      "icon_id": "30803469",
+      "name": "删除行列",
+      "font_class": "shanchuhanglie",
+      "unicode": "e884",
+      "unicode_decimal": 59524
+    },
+    {
+      "icon_id": "30616256",
+      "name": "icon-kfckfc",
+      "font_class": "charushuju",
+      "unicode": "e935",
+      "unicode_decimal": 59701
+    },
+    {
+      "icon_id": "30609488",
+      "name": "获取拼图滑块位置",
+      "font_class": "huoqupintuhuakuaiweizhi",
+      "unicode": "e882",
+      "unicode_decimal": 59522
+    },
+    {
+      "icon_id": "30609709",
+      "name": "键值对结构识别",
+      "font_class": "jianzhiduijiegoushibie",
+      "unicode": "e883",
+      "unicode_decimal": 59523
+    },
+    {
+      "icon_id": "30609334",
+      "name": "a-ASCII 转文本",
+      "font_class": "a-ASCIIzhuanwenben",
+      "unicode": "e881",
+      "unicode_decimal": 59521
+    },
+    {
+      "icon_id": "30609082",
+      "name": "修改行名-列名",
+      "font_class": "xiugaihangming-lieming",
+      "unicode": "e87e",
+      "unicode_decimal": 59518
+    },
+    {
+      "icon_id": "30609084",
+      "name": "写入数据",
+      "font_class": "xierushuju",
+      "unicode": "e880",
+      "unicode_decimal": 59520
+    },
+    {
+      "icon_id": "30584495",
+      "name": "定义触发器",
+      "font_class": "dingyichufaqi",
+      "unicode": "e87d",
+      "unicode_decimal": 59517
+    },
+    {
+      "icon_id": "30508656",
+      "name": "设置密文变量",
+      "font_class": "shezhimiwenbianliang",
+      "unicode": "e87c",
+      "unicode_decimal": 59516
+    },
+    {
+      "icon_id": "30480955",
+      "name": "手机连接",
+      "font_class": "shoujilianjie",
+      "unicode": "e87b",
+      "unicode_decimal": 59515
+    },
+    {
+      "icon_id": "30457073",
+      "name": "icon-轻触滑动",
+      "font_class": "qingchuhuadong",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "30457079",
+      "name": "icon-设置剪切板文本（手机）",
+      "font_class": "shezhijianqiebanwenben-shouji",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "30456971",
+      "name": "连接手机",
+      "font_class": "lianjieshouji",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "30455233",
+      "name": "USBhub",
+      "font_class": "USBhub",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
+      "icon_id": "30455466",
+      "name": "数据获取",
+      "font_class": "shujuhuoqu",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "30455103",
+      "name": "浏览器操作",
+      "font_class": "liulanqicaozuo",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "30454669",
+      "name": "CSV格式文件",
+      "font_class": "CSVgeshiwenjian",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "30454739",
+      "name": "INI 格式文件",
+      "font_class": "INIgeshiwenjian",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "30454495",
+      "name": "通用文件",
+      "font_class": "tongyongwenjian",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "30454569",
+      "name": "图像",
+      "font_class": "tuxiang",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "30454017",
+      "name": "对话框",
+      "font_class": "duihuakuang",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "30454146",
+      "name": "光标设置",
+      "font_class": "guangbiaoshezhi",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    },
+    {
+      "icon_id": "30453640",
+      "name": "应用",
+      "font_class": "yingyong",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "30453683",
+      "name": "Exchange",
+      "font_class": "Exchange",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "30453716",
+      "name": "SMTP-POP",
+      "font_class": "SMTP-POP",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "30453751",
+      "name": "窗口",
+      "font_class": "chuangkou",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "30451714",
+      "name": "OCR",
+      "font_class": "OCR",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "30451729",
+      "name": "NLP",
+      "font_class": "NLP",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "30451845",
+      "name": "icon-yuansuwenbenshiqu-shouji",
+      "font_class": "yuansuwenbenshiqu-shouji",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "30451895",
+      "name": "icon-zhinengyuansudianji-shouji",
+      "font_class": "zhinengyuansudianji-shouji",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "30451566",
+      "name": "icon-yuansushuxingshiqu-shouji",
+      "font_class": "yuansushuxingshiqu-shouji",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "30451387",
+      "name": "验证码",
+      "font_class": "yanzhengma",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "30451474",
+      "name": "icon-yuansujietu-shouji",
+      "font_class": "yuansujietu-shouji",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "30451343",
+      "name": "系统操作",
+      "font_class": "xitongcaozuo",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "30451247",
+      "name": "icon-yuansudianji-shouji",
+      "font_class": "yuansudianji-shouji",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "30451000",
+      "name": "icon-xiugailieming",
+      "font_class": "xiugailieming",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "30450608",
+      "name": "icon-wenbenshuru-shouji",
+      "font_class": "wenbenshuru-shouji",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "30449478",
+      "name": "字典获取值",
+      "font_class": "icon-zidianhuoqujian",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "30449361",
+      "name": "icon-kuozhanzujian",
+      "font_class": "kuozhanzujian",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "30449380",
+      "name": "icon-kuozhanzujianbao",
+      "font_class": "kuozhanzujianbao",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "30448960",
+      "name": "元素操作",
+      "font_class": "yuansucaozuo",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "30449032",
+      "name": "组件缺失",
+      "font_class": "zujianqueshi",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "30447617",
+      "name": "获取Excel列标识",
+      "font_class": "huoquExcelliebiaoshi",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "30447895",
+      "name": "循环",
+      "font_class": "xunhuan",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "30448028",
+      "name": "移动窗口位置",
+      "font_class": "yidongchuangkouweizhi",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "30446667",
+      "name": "excel文档操作",
+      "font_class": "excelwendangcaozuo",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "30446827",
+      "name": "excel信息读取",
+      "font_class": "excelxinxiduqu",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "30446945",
+      "name": "设置下拉框选项值",
+      "font_class": "shezhixialakuangxuanxiangzhi",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "30446510",
+      "name": "设置文本-填写输入框",
+      "font_class": "shezhiwenben-tianxieshurukuang",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "30445875",
+      "name": "excel sheet操作",
+      "font_class": "excelsheetcaozuo",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "30446068",
+      "name": "excel表格编辑",
+      "font_class": "excelbiaogebianji",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "30444077",
+      "name": "数据服务-松塔",
+      "font_class": "shujufuwu-songta",
+      "unicode": "e917",
+      "unicode_decimal": 59671
+    },
+    {
+      "icon_id": "30445587",
+      "name": "设置勾选框选项值",
+      "font_class": "shezhigouxuankuangxuanxiangzhi",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "30445667",
+      "name": "设置屏幕方向（手机）",
+      "font_class": "shezhipingmufangxiang-shouji",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "30445075",
+      "name": "设置窗口是否显示",
+      "font_class": "shezhichuangkoushifouxianshi",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "30445130",
+      "name": "设置窗口状态",
+      "font_class": "shezhichuangkouzhuangtai",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "30444473",
+      "name": "群通知机器人",
+      "font_class": "quntongzhijiqiren",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "30444588",
+      "name": "日志",
+      "font_class": "rizhi",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "30443906",
+      "name": "word文档操作",
+      "font_class": "wordwendangcaozuo",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "30443948",
+      "name": "判断",
+      "font_class": "panduan",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "30444071",
+      "name": "其它",
+      "font_class": "qita",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "30443335",
+      "name": "流程",
+      "font_class": "liucheng",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "30443639",
+      "name": "一维列表",
+      "font_class": "yiweiliebiao",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "30442682",
+      "name": "判断集合元素是否存在",
+      "font_class": "panduanjiheyuansucunzai",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "30442757",
+      "name": "获取子元素（手机）",
+      "font_class": "huoquziyuansu-shouji",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "30442816",
+      "name": "截屏（手机）",
+      "font_class": "jieping-shouji",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "30442333",
+      "name": "获取手机连接详情（手机）",
+      "font_class": "huoqushoujilianjiexiangqing-shouji",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "30440796",
+      "name": "获取剪切板文本(手机)",
+      "font_class": "huoqujianqiebanwenben-shouji",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "30440850",
+      "name": "获取屏幕方向（手机）",
+      "font_class": "huoqupingmufangxiang-shouji",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "30440453",
+      "name": "关闭手机连接",
+      "font_class": "guanbilianjieshouji",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "30440574",
+      "name": "获取窗口范围",
+      "font_class": "huoquchuangkoufanwei",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "30440176",
+      "name": "读取行数-列数",
+      "font_class": "duquhangshu-lieshu",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "30439842",
+      "name": "读取行名-列名",
+      "font_class": "duquhangming-lieming",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "30438529",
+      "name": "点击按键（手机）",
+      "font_class": "dianjianjian-shouji",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "30439037",
+      "name": "点击屏幕指定位置（手机）",
+      "font_class": "dianjipingmuzhidingweizhi-shouji",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "30439153",
+      "name": "数字转文本",
+      "font_class": "shuzizhuanwenben",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "30437971",
+      "name": "数据库",
+      "font_class": "shujuku",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "30438107",
+      "name": "拨打电话",
+      "font_class": "bodadianhua",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "30438119",
+      "name": "等待",
+      "font_class": "dengdai",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "30438167",
+      "name": "二维表",
+      "font_class": "erweibiao",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "30438293",
+      "name": "文本转数字",
+      "font_class": "wenbenzhuanshuzi",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "30437951",
+      "name": "字典",
+      "font_class": "zidian",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "30437739",
+      "name": "集合",
+      "font_class": "jihe",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "30437687",
+      "name": "日期时间处理",
+      "font_class": "riqishijianchuli",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "30437616",
+      "name": "数学",
+      "font_class": "shuxue",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "30437470",
+      "name": "文本操作",
+      "font_class": "wenbencaozuo",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "30436736",
+      "name": "数据类型转换",
+      "font_class": "shujuleixingzhuanhuan",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "30422360",
+      "name": "SAP表格",
+      "font_class": "SAPbiaoge",
+      "unicode": "e87a",
+      "unicode_decimal": 59514
+    },
+    {
+      "icon_id": "30263677",
+      "name": "停止网页监听",
+      "font_class": "tingzhiwangyejianting",
+      "unicode": "e873",
+      "unicode_decimal": 59507
+    },
+    {
+      "icon_id": "30263678",
+      "name": "启动网页监听",
+      "font_class": "qidongwangyejianting",
+      "unicode": "e874",
+      "unicode_decimal": 59508
+    },
+    {
+      "icon_id": "30263745",
+      "name": "获取监听结果",
+      "font_class": "huoqujiantingjieguo",
+      "unicode": "e875",
+      "unicode_decimal": 59509
+    },
+    {
+      "icon_id": "22369497",
+      "name": "组件",
+      "font_class": "zujian",
+      "unicode": "e7bd",
+      "unicode_decimal": 59325
+    },
+    {
+      "icon_id": "29915149",
+      "name": "设置输入法",
+      "font_class": "shezhishurufa",
+      "unicode": "ea79",
+      "unicode_decimal": 60025
+    },
+    {
+      "icon_id": "29915150",
+      "name": "获取输入法",
+      "font_class": "huoqushurufa",
+      "unicode": "ea7a",
+      "unicode_decimal": 60026
+    },
+    {
+      "icon_id": "29915151",
+      "name": "输入法",
+      "font_class": "shurufa",
+      "unicode": "ea7b",
+      "unicode_decimal": 60027
+    },
+    {
+      "icon_id": "29844698",
+      "name": "下载文件（点击按钮）",
+      "font_class": "a-xiazaiwenjiandianjianniu",
+      "unicode": "ea78",
+      "unicode_decimal": 60024
+    },
+    {
+      "icon_id": "29843736",
+      "name": "写入到文件",
+      "font_class": "xierudaowenjian",
+      "unicode": "ea77",
+      "unicode_decimal": 60023
+    },
+    {
+      "icon_id": "29843521",
+      "name": "excel读取行",
+      "font_class": "excelduquhang",
+      "unicode": "ea6e",
+      "unicode_decimal": 60014
+    },
+    {
+      "icon_id": "29843522",
+      "name": "excel关闭",
+      "font_class": "excelguanbi",
+      "unicode": "ea6f",
+      "unicode_decimal": 60015
+    },
+    {
+      "icon_id": "29843523",
+      "name": "备注",
+      "font_class": "beizhu",
+      "unicode": "ea70",
+      "unicode_decimal": 60016
+    },
+    {
+      "icon_id": "29843524",
+      "name": "excel内容循环",
+      "font_class": "excelneirongxunhuan",
+      "unicode": "ea71",
+      "unicode_decimal": 60017
+    },
+    {
+      "icon_id": "29843525",
+      "name": "excel新建",
+      "font_class": "excelxinjian",
+      "unicode": "ea72",
+      "unicode_decimal": 60018
+    },
+    {
+      "icon_id": "29843528",
+      "name": "Outlook",
+      "font_class": "Outlook",
+      "unicode": "ea75",
+      "unicode_decimal": 60021
+    },
+    {
+      "icon_id": "29843529",
+      "name": "excel读取行数",
+      "font_class": "excelduquhangshu",
+      "unicode": "ea76",
+      "unicode_decimal": 60022
+    },
+    {
+      "icon_id": "29843384",
+      "name": "数据筛选",
+      "font_class": "shujushaixuan",
+      "unicode": "ea5c",
+      "unicode_decimal": 59996
+    },
+    {
+      "icon_id": "29843385",
+      "name": "停止加载",
+      "font_class": "tingzhijiazai",
+      "unicode": "ea5d",
+      "unicode_decimal": 59997
+    },
+    {
+      "icon_id": "29843386",
+      "name": "下载文件（指定链接）",
+      "font_class": "a-xiazaiwenjianzhidinglianjie",
+      "unicode": "ea5e",
+      "unicode_decimal": 59998
+    },
+    {
+      "icon_id": "29843387",
+      "name": "移动鼠标",
+      "font_class": "yidongshubiao",
+      "unicode": "ea5f",
+      "unicode_decimal": 59999
+    },
+    {
+      "icon_id": "29843388",
+      "name": "执行JS",
+      "font_class": "zhihangJS",
+      "unicode": "ea60",
+      "unicode_decimal": 60000
+    },
+    {
+      "icon_id": "29843389",
+      "name": "刷新",
+      "font_class": "shuaxin",
+      "unicode": "ea61",
+      "unicode_decimal": 60001
+    },
+    {
+      "icon_id": "29843390",
+      "name": "跳转网页",
+      "font_class": "tiaozhuanwangye",
+      "unicode": "ea62",
+      "unicode_decimal": 60002
+    },
+    {
+      "icon_id": "29843391",
+      "name": "下拉框操作",
+      "font_class": "xialakuangcaozuo",
+      "unicode": "ea63",
+      "unicode_decimal": 60003
+    },
+    {
+      "icon_id": "29843392",
+      "name": "循环相似元素",
+      "font_class": "xunhuanxiangsiyuansu",
+      "unicode": "ea64",
+      "unicode_decimal": 60004
+    },
+    {
+      "icon_id": "29843394",
+      "name": "消息确认对话框",
+      "font_class": "xiaoxiquerenduihuakuang",
+      "unicode": "ea66",
+      "unicode_decimal": 60006
+    },
+    {
+      "icon_id": "29843395",
+      "name": "自定义对话框",
+      "font_class": "zidingyiduihuakuang",
+      "unicode": "ea67",
+      "unicode_decimal": 60007
+    },
+    {
+      "icon_id": "29843396",
+      "name": "最大化浏览器",
+      "font_class": "zuidahualiulanqi",
+      "unicode": "ea68",
+      "unicode_decimal": 60008
+    },
+    {
+      "icon_id": "29843398",
+      "name": "PDF转图片",
+      "font_class": "PDFzhuantupian",
+      "unicode": "ea6a",
+      "unicode_decimal": 60010
+    },
+    {
+      "icon_id": "29843399",
+      "name": "PDF加水印",
+      "font_class": "PDFjiashuiyin",
+      "unicode": "ea6b",
+      "unicode_decimal": 60011
+    },
+    {
+      "icon_id": "29843400",
+      "name": "最小化浏览器",
+      "font_class": "zuixiaohualiulanqi",
+      "unicode": "ea6c",
+      "unicode_decimal": 60012
+    },
+    {
+      "icon_id": "29843401",
+      "name": "PDF",
+      "font_class": "PDF",
+      "unicode": "ea6d",
+      "unicode_decimal": 60013
+    },
+    {
+      "icon_id": "29843363",
+      "name": "浏览器",
+      "font_class": "liulanqi",
+      "unicode": "ea4a",
+      "unicode_decimal": 59978
+    },
+    {
+      "icon_id": "29843364",
+      "name": "企业微信机器人",
+      "font_class": "qiyeweixinjiqiren",
+      "unicode": "ea4b",
+      "unicode_decimal": 59979
+    },
+    {
+      "icon_id": "29843366",
+      "name": "浏览器截图",
+      "font_class": "liulanqijietu",
+      "unicode": "ea4d",
+      "unicode_decimal": 59981
+    },
+    {
+      "icon_id": "29843367",
+      "name": "切换页面",
+      "font_class": "qiehuanyemian",
+      "unicode": "ea4e",
+      "unicode_decimal": 59982
+    },
+    {
+      "icon_id": "29843368",
+      "name": "判断元素存在",
+      "font_class": "panduanyuansucunzai",
+      "unicode": "ea4f",
+      "unicode_decimal": 59983
+    },
+    {
+      "icon_id": "29843369",
+      "name": "前进",
+      "font_class": "qianjin",
+      "unicode": "ea50",
+      "unicode_decimal": 59984
+    },
+    {
+      "icon_id": "29843370",
+      "name": "设置滚动条位置",
+      "font_class": "shezhigundongtiaoweizhi",
+      "unicode": "ea51",
+      "unicode_decimal": 59985
+    },
+    {
+      "icon_id": "29843371",
+      "name": "生成新的PDF文档",
+      "font_class": "shengchengxindePDFwendang",
+      "unicode": "ea52",
+      "unicode_decimal": 59986
+    },
+    {
+      "icon_id": "29843372",
+      "name": "设置Cookies",
+      "font_class": "shezhiCookies",
+      "unicode": "ea53",
+      "unicode_decimal": 59987
+    },
+    {
+      "icon_id": "29843373",
+      "name": "手动触发",
+      "font_class": "shoudongchufa",
+      "unicode": "ea54",
+      "unicode_decimal": 59988
+    },
+    {
+      "icon_id": "29843374",
+      "name": "输入文本框",
+      "font_class": "shuruwenbenkuang",
+      "unicode": "ea55",
+      "unicode_decimal": 59989
+    },
+    {
+      "icon_id": "29843375",
+      "name": "鼠标",
+      "font_class": "shubiao",
+      "unicode": "ea56",
+      "unicode_decimal": 59990
+    },
+    {
+      "icon_id": "29843376",
+      "name": "鼠标拖拽",
+      "font_class": "shubiaotuozhuai",
+      "unicode": "ea57",
+      "unicode_decimal": 59991
+    },
+    {
+      "icon_id": "29843378",
+      "name": "鼠标滚动",
+      "font_class": "shubiaogundong",
+      "unicode": "ea59",
+      "unicode_decimal": 59993
+    },
+    {
+      "icon_id": "29843379",
+      "name": "鼠标点击",
+      "font_class": "shubiaodianji",
+      "unicode": "ea5a",
+      "unicode_decimal": 59994
+    },
+    {
+      "icon_id": "29843380",
+      "name": "输入对话框",
+      "font_class": "shuruduihuakuang",
+      "unicode": "ea5b",
+      "unicode_decimal": 59995
+    },
+    {
+      "icon_id": "29843344",
+      "name": "获取滚动条位置",
+      "font_class": "huoqugundongtiaoweizhi",
+      "unicode": "ea38",
+      "unicode_decimal": 59960
+    },
+    {
+      "icon_id": "29843345",
+      "name": "获取网页源码",
+      "font_class": "huoquwangyeyuanma",
+      "unicode": "ea39",
+      "unicode_decimal": 59961
+    },
+    {
+      "icon_id": "29843346",
+      "name": "获取PDF总页数",
+      "font_class": "huoquPDFzongyeshu",
+      "unicode": "ea3a",
+      "unicode_decimal": 59962
+    },
+    {
+      "icon_id": "29843347",
+      "name": "获取Tab页",
+      "font_class": "huoquTabye",
+      "unicode": "ea3b",
+      "unicode_decimal": 59963
+    },
+    {
+      "icon_id": "29843348",
+      "name": "获取Title",
+      "font_class": "huoquTitle",
+      "unicode": "ea3c",
+      "unicode_decimal": 59964
+    },
+    {
+      "icon_id": "29843349",
+      "name": "获取Cookies",
+      "font_class": "huoquCookies",
+      "unicode": "ea3d",
+      "unicode_decimal": 59965
+    },
+    {
+      "icon_id": "29843350",
+      "name": "键盘输入",
+      "font_class": "jianpanshuru",
+      "unicode": "ea3e",
+      "unicode_decimal": 59966
+    },
+    {
+      "icon_id": "29843351",
+      "name": "获取界面元素文本",
+      "font_class": "huoqujiemianyuansuwenben",
+      "unicode": "ea3f",
+      "unicode_decimal": 59967
+    },
+    {
+      "icon_id": "29843352",
+      "name": "获取Cookies(指定)",
+      "font_class": "a-huoquCookieszhiding",
+      "unicode": "ea40",
+      "unicode_decimal": 59968
+    },
+    {
+      "icon_id": "29843353",
+      "name": "获取URL",
+      "font_class": "huoquURL",
+      "unicode": "ea41",
+      "unicode_decimal": 59969
+    },
+    {
+      "icon_id": "29843354",
+      "name": "键盘",
+      "font_class": "jianpan",
+      "unicode": "ea42",
+      "unicode_decimal": 59970
+    },
+    {
+      "icon_id": "29843355",
+      "name": "加密PDF文档",
+      "font_class": "jiamiPDFwendang",
+      "unicode": "ea43",
+      "unicode_decimal": 59971
+    },
+    {
+      "icon_id": "29843356",
+      "name": "键盘鼠标外设",
+      "font_class": "jianpanshubiaowaishe",
+      "unicode": "ea44",
+      "unicode_decimal": 59972
+    },
+    {
+      "icon_id": "29843357",
+      "name": "键盘模拟按键",
+      "font_class": "jianpanmonianjian",
+      "unicode": "ea45",
+      "unicode_decimal": 59973
+    },
+    {
+      "icon_id": "29843358",
+      "name": "键盘驱动输入",
+      "font_class": "jianpanqudongshuru",
+      "unicode": "ea46",
+      "unicode_decimal": 59974
+    },
+    {
+      "icon_id": "29843359",
+      "name": "开-关USB通道",
+      "font_class": "kai-guanUSBtongdao",
+      "unicode": "ea47",
+      "unicode_decimal": 59975
+    },
+    {
+      "icon_id": "29843360",
+      "name": "获取PDF文档信息",
+      "font_class": "huoquPDFwendangxinxi",
+      "unicode": "ea48",
+      "unicode_decimal": 59976
+    },
+    {
+      "icon_id": "29843361",
+      "name": "开-关NetworkUSB通道",
+      "font_class": "kai-guanNetworkUSBtongdao",
+      "unicode": "ea49",
+      "unicode_decimal": 59977
+    },
+    {
+      "icon_id": "29843324",
+      "name": "等待加载",
+      "font_class": "dengdaijiazai",
+      "unicode": "ea26",
+      "unicode_decimal": 59942
+    },
+    {
+      "icon_id": "29843325",
+      "name": "钉钉机器人",
+      "font_class": "dingdingjiqiren",
+      "unicode": "ea27",
+      "unicode_decimal": 59943
+    },
+    {
+      "icon_id": "29843326",
+      "name": "点击界面元素",
+      "font_class": "dianjijiemianyuansu",
+      "unicode": "ea28",
+      "unicode_decimal": 59944
+    },
+    {
+      "icon_id": "29843327",
+      "name": "打开网页",
+      "font_class": "dakaiwangye",
+      "unicode": "ea29",
+      "unicode_decimal": 59945
+    },
+    {
+      "icon_id": "29843328",
+      "name": "创建数据表",
+      "font_class": "chuangjianshujubiao",
+      "unicode": "ea2a",
+      "unicode_decimal": 59946
+    },
+    {
+      "icon_id": "29843329",
+      "name": "定时触发",
+      "font_class": "dingshichufa",
+      "unicode": "ea2b",
+      "unicode_decimal": 59947
+    },
+    {
+      "icon_id": "29843330",
+      "name": "飞书机器人",
+      "font_class": "feishujiqiren",
+      "unicode": "ea2c",
+      "unicode_decimal": 59948
+    },
+    {
+      "icon_id": "29843331",
+      "name": "关闭网页",
+      "font_class": "guanbiwangye",
+      "unicode": "ea2d",
+      "unicode_decimal": 59949
+    },
+    {
+      "icon_id": "29843332",
+      "name": "读取PDF表格",
+      "font_class": "duquPDFbiaoge",
+      "unicode": "ea2e",
+      "unicode_decimal": 59950
+    },
+    {
+      "icon_id": "29843333",
+      "name": "勾选框操作",
+      "font_class": "gouxuankuangcaozuo",
+      "unicode": "ea2f",
+      "unicode_decimal": 59951
+    },
+    {
+      "icon_id": "29843334",
+      "name": "关闭浏览器",
+      "font_class": "guanbiliulanqi",
+      "unicode": "ea30",
+      "unicode_decimal": 59952
+    },
+    {
+      "icon_id": "29843335",
+      "name": "读取PDF文本",
+      "font_class": "duquPDFwenben",
+      "unicode": "ea31",
+      "unicode_decimal": 59953
+    },
+    {
+      "icon_id": "29843336",
+      "name": "读取PDF图片",
+      "font_class": "duquPDFtupian",
+      "unicode": "ea32",
+      "unicode_decimal": 59954
+    },
+    {
+      "icon_id": "29843338",
+      "name": "合并PDF文档",
+      "font_class": "hebingPDFwendang",
+      "unicode": "ea34",
+      "unicode_decimal": 59956
+    },
+    {
+      "icon_id": "29843339",
+      "name": "后退",
+      "font_class": "houtui",
+      "unicode": "ea35",
+      "unicode_decimal": 59957
+    },
+    {
+      "icon_id": "29843340",
+      "name": "OFFICE文档转PDF",
+      "font_class": "OFFICEwendangzhuanPDF",
+      "unicode": "ea36",
+      "unicode_decimal": 59958
+    },
+    {
+      "icon_id": "29843341",
+      "name": "word",
+      "font_class": "word",
+      "unicode": "ea37",
+      "unicode_decimal": 59959
+    },
+    {
+      "icon_id": "29843305",
+      "name": "消息通知",
+      "font_class": "xiaoxitongzhi",
+      "unicode": "ea15",
+      "unicode_decimal": 59925
+    },
+    {
+      "icon_id": "29843308",
+      "name": "图片转base64编码二进制",
+      "font_class": "tupianzhuanbase64bianmaerjinzhi",
+      "unicode": "ea17",
+      "unicode_decimal": 59927
+    },
+    {
+      "icon_id": "29843309",
+      "name": "文件处理",
+      "font_class": "wenjianchuli",
+      "unicode": "ea18",
+      "unicode_decimal": 59928
+    },
+    {
+      "icon_id": "29843310",
+      "name": "写入内容",
+      "font_class": "xieruneirong",
+      "unicode": "ea19",
+      "unicode_decimal": 59929
+    },
+    {
+      "icon_id": "29843311",
+      "name": "图片转base64编码",
+      "font_class": "tupianzhuanbase64bianma",
+      "unicode": "ea1a",
+      "unicode_decimal": 59930
+    },
+    {
+      "icon_id": "29843312",
+      "name": "写入键值",
+      "font_class": "xierujianzhi",
+      "unicode": "ea1b",
+      "unicode_decimal": 59931
+    },
+    {
+      "icon_id": "29843313",
+      "name": "写入文件",
+      "font_class": "xieruwenjian",
+      "unicode": "ea1c",
+      "unicode_decimal": 59932
+    },
+    {
+      "icon_id": "29843314",
+      "name": "移动到图像",
+      "font_class": "yidongdaotuxiang",
+      "unicode": "ea1d",
+      "unicode_decimal": 59933
+    },
+    {
+      "icon_id": "29843315",
+      "name": "图像位置",
+      "font_class": "tuxiangweizhi",
+      "unicode": "ea1e",
+      "unicode_decimal": 59934
+    },
+    {
+      "icon_id": "29843316",
+      "name": "重命名文件",
+      "font_class": "zhongmingmingwenjian",
+      "unicode": "ea1f",
+      "unicode_decimal": 59935
+    },
+    {
+      "icon_id": "29843318",
+      "name": "移动文件夹",
+      "font_class": "yidongwenjianjia",
+      "unicode": "ea21",
+      "unicode_decimal": 59937
+    },
+    {
+      "icon_id": "29843319",
+      "name": "自然语言处理",
+      "font_class": "ziranyuyanchuli",
+      "unicode": "ea22",
+      "unicode_decimal": 59938
+    },
+    {
+      "icon_id": "29843321",
+      "name": "元素截图",
+      "font_class": "yuansujietu",
+      "unicode": "ea24",
+      "unicode_decimal": 59940
+    },
+    {
+      "icon_id": "29843322",
+      "name": "移动文件",
+      "font_class": "yidongwenjian",
+      "unicode": "ea25",
+      "unicode_decimal": 59941
+    },
+    {
+      "icon_id": "29843283",
+      "name": "排序",
+      "font_class": "paixu",
+      "unicode": "ea02",
+      "unicode_decimal": 59906
+    },
+    {
+      "icon_id": "29843284",
+      "name": "枚举键",
+      "font_class": "meijujian",
+      "unicode": "ea03",
+      "unicode_decimal": 59907
+    },
+    {
+      "icon_id": "29843285",
+      "name": "清空剪切板",
+      "font_class": "qingkongjianqieban",
+      "unicode": "ea04",
+      "unicode_decimal": 59908
+    },
+    {
+      "icon_id": "29843286",
+      "name": "判断图像存在",
+      "font_class": "panduantuxiangcunzai",
+      "unicode": "ea05",
+      "unicode_decimal": 59909
+    },
+    {
+      "icon_id": "29843287",
+      "name": "判断文件夹存在",
+      "font_class": "panduanwenjianjiacunzai",
+      "unicode": "ea06",
+      "unicode_decimal": 59910
+    },
+    {
+      "icon_id": "29843288",
+      "name": "删除键",
+      "font_class": "shanchujian",
+      "unicode": "ea07",
+      "unicode_decimal": 59911
+    },
+    {
+      "icon_id": "29843289",
+      "name": "判断元素是否可点击",
+      "font_class": "panduanyuansushifoukedianji",
+      "unicode": "ea08",
+      "unicode_decimal": 59912
+    },
+    {
+      "icon_id": "29843290",
+      "name": "枚举小节",
+      "font_class": "meijuxiaojie",
+      "unicode": "ea09",
+      "unicode_decimal": 59913
+    },
+    {
+      "icon_id": "29843291",
+      "name": "设置窗口",
+      "font_class": "shezhichuangkou",
+      "unicode": "ea0a",
+      "unicode_decimal": 59914
+    },
+    {
+      "icon_id": "29843292",
+      "name": "删除小节",
+      "font_class": "shanchuxiaojie",
+      "unicode": "ea0b",
+      "unicode_decimal": 59915
+    },
+    {
+      "icon_id": "29843293",
+      "name": "删除文件",
+      "font_class": "shanchuwenjian",
+      "unicode": "ea0c",
+      "unicode_decimal": 59916
+    },
+    {
+      "icon_id": "29843294",
+      "name": "生成上传路径（SaaS 专用）",
+      "font_class": "a-shengchengshangchuanlujingSaaSzhuanyong",
+      "unicode": "ea0d",
+      "unicode_decimal": 59917
+    },
+    {
+      "icon_id": "29843295",
+      "name": "设置网页元素属性",
+      "font_class": "shezhiwangyeyuansushuxing",
+      "unicode": "ea0e",
+      "unicode_decimal": 59918
+    },
+    {
+      "icon_id": "29843296",
+      "name": "判断文件存在",
+      "font_class": "panduanwenjiancunzai",
+      "unicode": "ea0f",
+      "unicode_decimal": 59919
+    },
+    {
+      "icon_id": "29843297",
+      "name": "取文件大小",
+      "font_class": "quwenjiandaxiao",
+      "unicode": "ea10",
+      "unicode_decimal": 59920
+    },
+    {
+      "icon_id": "29843298",
+      "name": "数据表写入内容",
+      "font_class": "shujubiaoxieruneirong",
+      "unicode": "ea11",
+      "unicode_decimal": 59921
+    },
+    {
+      "icon_id": "29843299",
+      "name": "双击SAP表格单元格",
+      "font_class": "shuangjiSAPbiaogedanyuange",
+      "unicode": "ea12",
+      "unicode_decimal": 59922
+    },
+    {
+      "icon_id": "29843300",
+      "name": "鼠标移动到元素上",
+      "font_class": "shubiaoyidongdaoyuansushang",
+      "unicode": "ea13",
+      "unicode_decimal": 59923
+    },
+    {
+      "icon_id": "29843268",
+      "name": "获取SPA表格数据",
+      "font_class": "huoquSPAbiaogeshuju",
+      "unicode": "e9fb",
+      "unicode_decimal": 59899
+    },
+    {
+      "icon_id": "29843269",
+      "name": "截取图像",
+      "font_class": "jiequtuxiang",
+      "unicode": "e9fc",
+      "unicode_decimal": 59900
+    },
+    {
+      "icon_id": "29843270",
+      "name": "激活窗口",
+      "font_class": "jihuochuangkou",
+      "unicode": "e9fd",
+      "unicode_decimal": 59901
+    },
+    {
+      "icon_id": "29843271",
+      "name": "获取元素坐标",
+      "font_class": "huoquyuansuzuobiao",
+      "unicode": "e9fe",
+      "unicode_decimal": 59902
+    },
+    {
+      "icon_id": "29843272",
+      "name": "结果打包上传（SaaS 专用）",
+      "font_class": "a-jieguodabaoshangchuanSaaSzhuanyong",
+      "unicode": "e9ff",
+      "unicode_decimal": 59903
+    },
+    {
+      "icon_id": "29843273",
+      "name": "获取网页元素属性",
+      "font_class": "huoquwangyeyuansushuxing",
+      "unicode": "ea00",
+      "unicode_decimal": 59904
+    },
+    {
+      "icon_id": "29843274",
+      "name": "界面元素操作",
+      "font_class": "jiemianyuansucaozuo",
+      "unicode": "ea01",
+      "unicode_decimal": 59905
+    },
+    {
+      "icon_id": "29843257",
+      "name": "关闭窗口",
+      "font_class": "guanbichuangkou",
+      "unicode": "e9f0",
+      "unicode_decimal": 59888
+    },
+    {
+      "icon_id": "29843259",
+      "name": "获取表格数据（OCR）",
+      "font_class": "a-huoqubiaogeshujuOCR",
+      "unicode": "e9f2",
+      "unicode_decimal": 59890
+    },
+    {
+      "icon_id": "29843260",
+      "name": "获取屏幕尺寸",
+      "font_class": "huoqupingmuchicun",
+      "unicode": "e9f3",
+      "unicode_decimal": 59891
+    },
+    {
+      "icon_id": "29843261",
+      "name": "获取窗口",
+      "font_class": "huoquchuangkou",
+      "unicode": "e9f4",
+      "unicode_decimal": 59892
+    },
+    {
+      "icon_id": "29843262",
+      "name": "滚动页面",
+      "font_class": "gundongyemian",
+      "unicode": "e9f5",
+      "unicode_decimal": 59893
+    },
+    {
+      "icon_id": "29843263",
+      "name": "获取子元素",
+      "font_class": "huoquziyuansu",
+      "unicode": "e9f6",
+      "unicode_decimal": 59894
+    },
+    {
+      "icon_id": "29843264",
+      "name": "关键字提取",
+      "font_class": "guanjianzitiqu",
+      "unicode": "e9f7",
+      "unicode_decimal": 59895
+    },
+    {
+      "icon_id": "29843265",
+      "name": "获取活动窗口",
+      "font_class": "huoquhuodongchuangkou",
+      "unicode": "e9f8",
+      "unicode_decimal": 59896
+    },
+    {
+      "icon_id": "29843266",
+      "name": "合并二维表",
+      "font_class": "hebingerweibiao",
+      "unicode": "e9f9",
+      "unicode_decimal": 59897
+    },
+    {
+      "icon_id": "29843267",
+      "name": "价格金额识别",
+      "font_class": "jiagejineshibie",
+      "unicode": "e9fa",
+      "unicode_decimal": 59898
+    },
+    {
+      "icon_id": "29843237",
+      "name": "窗口属性",
+      "font_class": "chuangkoushuxing",
+      "unicode": "e9de",
+      "unicode_decimal": 59870
+    },
+    {
+      "icon_id": "29843238",
+      "name": "打开文件对话框（多选）",
+      "font_class": "a-dakaiwenjianduihuakuangduoxuan",
+      "unicode": "e9df",
+      "unicode_decimal": 59871
+    },
+    {
+      "icon_id": "29843239",
+      "name": "创建文件夹",
+      "font_class": "chuangjianwenjianjia",
+      "unicode": "e9e0",
+      "unicode_decimal": 59872
+    },
+    {
+      "icon_id": "29843240",
+      "name": "打开文件对话框",
+      "font_class": "dakaiwenjianduihuakuang",
+      "unicode": "e9e1",
+      "unicode_decimal": 59873
+    },
+    {
+      "icon_id": "29843241",
+      "name": "窗口最大化",
+      "font_class": "chuangkouzuidahua",
+      "unicode": "e9e2",
+      "unicode_decimal": 59874
+    },
+    {
+      "icon_id": "29843242",
+      "name": "等待图像",
+      "font_class": "dengdaituxiang",
+      "unicode": "e9e3",
+      "unicode_decimal": 59875
+    },
+    {
+      "icon_id": "29843243",
+      "name": "打开文件夹",
+      "font_class": "dakaiwenjianjia",
+      "unicode": "e9e4",
+      "unicode_decimal": 59876
+    },
+    {
+      "icon_id": "29843244",
+      "name": "等待元素",
+      "font_class": "dengdaiyuansu",
+      "unicode": "e9e5",
+      "unicode_decimal": 59877
+    },
+    {
+      "icon_id": "29843245",
+      "name": "读取数据表内容",
+      "font_class": "duqushujubiaoneirong",
+      "unicode": "e9e6",
+      "unicode_decimal": 59878
+    },
+    {
+      "icon_id": "29843246",
+      "name": "读取文件",
+      "font_class": "duquwenjian",
+      "unicode": "e9e7",
+      "unicode_decimal": 59879
+    },
+    {
+      "icon_id": "29843247",
+      "name": "读取xml文件",
+      "font_class": "duquxmlwenjian",
+      "unicode": "e9e8",
+      "unicode_decimal": 59880
+    },
+    {
+      "icon_id": "29843249",
+      "name": "读取键值",
+      "font_class": "duqujianzhi",
+      "unicode": "e9ea",
+      "unicode_decimal": 59882
+    },
+    {
+      "icon_id": "29843250",
+      "name": "复制文件",
+      "font_class": "fuzhiwenjian",
+      "unicode": "e9eb",
+      "unicode_decimal": 59883
+    },
+    {
+      "icon_id": "29843251",
+      "name": "对比图片相对位置",
+      "font_class": "duibitupianxiangduiweizhi",
+      "unicode": "e9ec",
+      "unicode_decimal": 59884
+    },
+    {
+      "icon_id": "29843252",
+      "name": "读取内容",
+      "font_class": "duquneirong",
+      "unicode": "e9ed",
+      "unicode_decimal": 59885
+    },
+    {
+      "icon_id": "29843253",
+      "name": "点击图片",
+      "font_class": "dianjitupian",
+      "unicode": "e9ee",
+      "unicode_decimal": 59886
+    },
+    {
+      "icon_id": "29843254",
+      "name": "感情分析",
+      "font_class": "ganqingfenxi",
+      "unicode": "e9ef",
+      "unicode_decimal": 59887
+    },
+    {
+      "icon_id": "29843198",
+      "name": "生成随机数",
+      "font_class": "shengchengsuijishu",
+      "unicode": "e9cd",
+      "unicode_decimal": 59853
+    },
+    {
+      "icon_id": "29843199",
+      "name": "查找图像",
+      "font_class": "chazhaotuxiang",
+      "unicode": "e9ce",
+      "unicode_decimal": 59854
+    },
+    {
+      "icon_id": "29843200",
+      "name": "窗口对话框操作 ",
+      "font_class": "chuangkouduihuakuangcaozuo",
+      "unicode": "e9cf",
+      "unicode_decimal": 59855
+    },
+    {
+      "icon_id": "29843201",
+      "name": "锁屏解锁",
+      "font_class": "suopingjiesuo",
+      "unicode": "e9d0",
+      "unicode_decimal": 59856
+    },
+    {
+      "icon_id": "29843203",
+      "name": "设置字体样式",
+      "font_class": "shezhizitiyangshi",
+      "unicode": "e9d2",
+      "unicode_decimal": 59858
+    },
+    {
+      "icon_id": "29843204",
+      "name": "表格过滤",
+      "font_class": "biaogeguolv",
+      "unicode": "e9d3",
+      "unicode_decimal": 59859
+    },
+    {
+      "icon_id": "29843205",
+      "name": "输入密码",
+      "font_class": "shurumima",
+      "unicode": "e9d4",
+      "unicode_decimal": 59860
+    },
+    {
+      "icon_id": "29843206",
+      "name": "替换",
+      "font_class": "tihuan",
+      "unicode": "e9d5",
+      "unicode_decimal": 59861
+    },
+    {
+      "icon_id": "29843207",
+      "name": "写入文字",
+      "font_class": "xieruwenzi",
+      "unicode": "e9d6",
+      "unicode_decimal": 59862
+    },
+    {
+      "icon_id": "29843208",
+      "name": "自动填充",
+      "font_class": "zidongtianchong",
+      "unicode": "e9d7",
+      "unicode_decimal": 59863
+    },
+    {
+      "icon_id": "29843209",
+      "name": "邮件筛选",
+      "font_class": "youjianshaixuan",
+      "unicode": "e9d8",
+      "unicode_decimal": 59864
+    },
+    {
+      "icon_id": "29843210",
+      "name": "执行命令行",
+      "font_class": "zhihangminglinghang",
+      "unicode": "e9d9",
+      "unicode_decimal": 59865
+    },
+    {
+      "icon_id": "29843214",
+      "name": "文本纠错",
+      "font_class": "wenbenjiucuo",
+      "unicode": "e9dd",
+      "unicode_decimal": 59869
+    },
+    {
+      "icon_id": "29843092",
+      "name": "流程延迟执行",
+      "font_class": "liuchengyanchizhihang",
+      "unicode": "e9bb",
+      "unicode_decimal": 59835
+    },
+    {
+      "icon_id": "29843093",
+      "name": "列表去重",
+      "font_class": "liebiaoquzhong",
+      "unicode": "e9bc",
+      "unicode_decimal": 59836
+    },
+    {
+      "icon_id": "29843094",
+      "name": "列表排序",
+      "font_class": "liebiaopaixu",
+      "unicode": "e9bd",
+      "unicode_decimal": 59837
+    },
+    {
+      "icon_id": "29843095",
+      "name": "判断数据类型值",
+      "font_class": "panduanshujuleixingzhi",
+      "unicode": "e9be",
+      "unicode_decimal": 59838
+    },
+    {
+      "icon_id": "29843096",
+      "name": "启动应用程序",
+      "font_class": "qidongyingyongchengxu",
+      "unicode": "e9bf",
+      "unicode_decimal": 59839
+    },
+    {
+      "icon_id": "29843097",
+      "name": "取全部匹配PID",
+      "font_class": "ququanbupipeiPID",
+      "unicode": "e9c0",
+      "unicode_decimal": 59840
+    },
+    {
+      "icon_id": "29843098",
+      "name": "判断数据类型",
+      "font_class": "panduanshujuleixing",
+      "unicode": "e9c1",
+      "unicode_decimal": 59841
+    },
+    {
+      "icon_id": "29843099",
+      "name": "取临时文件夹路径",
+      "font_class": "qulinshiwenjianjialujing",
+      "unicode": "e9c2",
+      "unicode_decimal": 59842
+    },
+    {
+      "icon_id": "29843100",
+      "name": "屏幕解锁",
+      "font_class": "pingmujiesuo",
+      "unicode": "e9c3",
+      "unicode_decimal": 59843
+    },
+    {
+      "icon_id": "29843101",
+      "name": "屏幕锁屏",
+      "font_class": "pingmusuoping",
+      "unicode": "e9c4",
+      "unicode_decimal": 59844
+    },
+    {
+      "icon_id": "29843102",
+      "name": "取一个匹配PID",
+      "font_class": "quyigepipeiPID",
+      "unicode": "e9c5",
+      "unicode_decimal": 59845
+    },
+    {
+      "icon_id": "29843103",
+      "name": "设置字体颜色",
+      "font_class": "shezhizitiyanse",
+      "unicode": "e9c6",
+      "unicode_decimal": 59846
+    },
+    {
+      "icon_id": "29843104",
+      "name": "设置字体大小",
+      "font_class": "shezhizitidaxiao",
+      "unicode": "e9c7",
+      "unicode_decimal": 59847
+    },
+    {
+      "icon_id": "29843105",
+      "name": "设置字体",
+      "font_class": "shezhiziti",
+      "unicode": "e9c8",
+      "unicode_decimal": 59848
+    },
+    {
+      "icon_id": "29843106",
+      "name": "设置对齐方式",
+      "font_class": "shezhiduiqifangshi",
+      "unicode": "e9c9",
+      "unicode_decimal": 59849
+    },
+    {
+      "icon_id": "29843107",
+      "name": "取收件箱邮件数",
+      "font_class": "qushoujianxiangyoujianshu",
+      "unicode": "e9ca",
+      "unicode_decimal": 59850
+    },
+    {
+      "icon_id": "29843108",
+      "name": "取第几封邮件",
+      "font_class": "qudijifengyoujian",
+      "unicode": "e9cb",
+      "unicode_decimal": 59851
+    },
+    {
+      "icon_id": "29843109",
+      "name": "取用户文件夹路径",
+      "font_class": "quyonghuwenjianjialujing",
+      "unicode": "e9cc",
+      "unicode_decimal": 59852
+    },
+    {
+      "icon_id": "29843070",
+      "name": "关闭应用程序",
+      "font_class": "guanbiyingyongchengxu",
+      "unicode": "e9a9",
+      "unicode_decimal": 59817
+    },
+    {
+      "icon_id": "29843071",
+      "name": "复制数据",
+      "font_class": "fuzhishuju",
+      "unicode": "e9aa",
+      "unicode_decimal": 59818
+    },
+    {
+      "icon_id": "29843072",
+      "name": "获取两列表的重复项",
+      "font_class": "huoquliangliebiaodezhongfuxiang",
+      "unicode": "e9ab",
+      "unicode_decimal": 59819
+    },
+    {
+      "icon_id": "29843073",
+      "name": "获取统计总和",
+      "font_class": "huoqutongjizonghe",
+      "unicode": "e9ac",
+      "unicode_decimal": 59820
+    },
+    {
+      "icon_id": "29843074",
+      "name": "回复邮件",
+      "font_class": "huifuyoujian",
+      "unicode": "e9ad",
+      "unicode_decimal": 59821
+    },
+    {
+      "icon_id": "29843075",
+      "name": "获取系统文件夹路径",
+      "font_class": "huoquxitongwenjianjialujing",
+      "unicode": "e9ae",
+      "unicode_decimal": 59822
+    },
+    {
+      "icon_id": "29843076",
+      "name": "关键词抽取",
+      "font_class": "guanjiancichouqu",
+      "unicode": "e9af",
+      "unicode_decimal": 59823
+    },
+    {
+      "icon_id": "29843077",
+      "name": "获取列表长度",
+      "font_class": "huoquliebiaochangdu",
+      "unicode": "e9b0",
+      "unicode_decimal": 59824
+    },
+    {
+      "icon_id": "29843078",
+      "name": "关闭连接_1",
+      "font_class": "guanbilianjie_1",
+      "unicode": "e9b1",
+      "unicode_decimal": 59825
+    },
+    {
+      "icon_id": "29843079",
+      "name": "获取手机短信",
+      "font_class": "huoqushoujiduanxin",
+      "unicode": "e9b2",
+      "unicode_decimal": 59826
+    },
+    {
+      "icon_id": "29843080",
+      "name": "获取最小值",
+      "font_class": "huoquzuixiaozhi",
+      "unicode": "e9b3",
+      "unicode_decimal": 59827
+    },
+    {
+      "icon_id": "29843081",
+      "name": "连接Exchange邮箱",
+      "font_class": "lianjieExchangeyouxiang",
+      "unicode": "e9b4",
+      "unicode_decimal": 59828
+    },
+    {
+      "icon_id": "29843082",
+      "name": "列表合并",
+      "font_class": "liebiaohebing",
+      "unicode": "e9b5",
+      "unicode_decimal": 59829
+    },
+    {
+      "icon_id": "29843083",
+      "name": "获取最大值",
+      "font_class": "huoquzuidazhi",
+      "unicode": "e9b6",
+      "unicode_decimal": 59830
+    },
+    {
+      "icon_id": "29843084",
+      "name": "连接邮箱",
+      "font_class": "lianjieyouxiang",
+      "unicode": "e9b7",
+      "unicode_decimal": 59831
+    },
+    {
+      "icon_id": "29843085",
+      "name": "连接远程桌面",
+      "font_class": "lianjieyuanchengzhuomian",
+      "unicode": "e9b8",
+      "unicode_decimal": 59832
+    },
+    {
+      "icon_id": "29843086",
+      "name": "关闭远程连接",
+      "font_class": "guanbiyuanchenglianjie",
+      "unicode": "e9b9",
+      "unicode_decimal": 59833
+    },
+    {
+      "icon_id": "29843087",
+      "name": "获取平均值",
+      "font_class": "huoqupingjunzhi",
+      "unicode": "e9ba",
+      "unicode_decimal": 59834
+    },
+    {
+      "icon_id": "29843044",
+      "name": "标为未读",
+      "font_class": "biaoweiweidu",
+      "unicode": "e997",
+      "unicode_decimal": 59799
+    },
+    {
+      "icon_id": "29843045",
+      "name": "标为已读",
+      "font_class": "biaoweiyidu",
+      "unicode": "e998",
+      "unicode_decimal": 59800
+    },
+    {
+      "icon_id": "29843046",
+      "name": "插入图片",
+      "font_class": "charutupian",
+      "unicode": "e999",
+      "unicode_decimal": 59801
+    },
+    {
+      "icon_id": "29843047",
+      "name": "查找邮件",
+      "font_class": "chazhaoyoujian",
+      "unicode": "e99a",
+      "unicode_decimal": 59802
+    },
+    {
+      "icon_id": "29843048",
+      "name": "打印错误日志",
+      "font_class": "dayincuowurizhi",
+      "unicode": "e99b",
+      "unicode_decimal": 59803
+    },
+    {
+      "icon_id": "29843049",
+      "name": "查找-替换数据",
+      "font_class": "chazhao-tihuanshuju",
+      "unicode": "e99c",
+      "unicode_decimal": 59804
+    },
+    {
+      "icon_id": "29843050",
+      "name": "调试输出",
+      "font_class": "tiaoshishuchu",
+      "unicode": "e99d",
+      "unicode_decimal": 59805
+    },
+    {
+      "icon_id": "29843051",
+      "name": "chatbot对话机器人",
+      "font_class": "chatbotduihuajiqiren",
+      "unicode": "e99e",
+      "unicode_decimal": 59806
+    },
+    {
+      "icon_id": "29843052",
+      "name": "操作邮件 ",
+      "font_class": "caozuoyoujian",
+      "unicode": "e99f",
+      "unicode_decimal": 59807
+    },
+    {
+      "icon_id": "29843053",
+      "name": "发送邮件 ",
+      "font_class": "fasongyoujian",
+      "unicode": "e9a0",
+      "unicode_decimal": 59808
+    },
+    {
+      "icon_id": "29843055",
+      "name": "AI组件",
+      "font_class": "AIzujian",
+      "unicode": "e9a2",
+      "unicode_decimal": 59810
+    },
+    {
+      "icon_id": "29843058",
+      "name": "Get网页数据",
+      "font_class": "Getwangyeshuju",
+      "unicode": "e9a5",
+      "unicode_decimal": 59813
+    },
+    {
+      "icon_id": "29843059",
+      "name": "Post数据到网页",
+      "font_class": "Postshujudaowangye",
+      "unicode": "e9a6",
+      "unicode_decimal": 59814
+    },
+    {
+      "icon_id": "29843060",
+      "name": "打印普通日志",
+      "font_class": "dayinputongrizhi",
+      "unicode": "e9a7",
+      "unicode_decimal": 59815
+    },
+    {
+      "icon_id": "29843061",
+      "name": "读取文档",
+      "font_class": "duquwendang",
+      "unicode": "e9a8",
+      "unicode_decimal": 59816
+    },
+    {
+      "icon_id": "29843011",
+      "name": "实体抽取",
+      "font_class": "shitichouqu",
+      "unicode": "e985",
+      "unicode_decimal": 59781
+    },
+    {
+      "icon_id": "29843012",
+      "name": "鼠标触发",
+      "font_class": "shubiaochufa",
+      "unicode": "e986",
+      "unicode_decimal": 59782
+    },
+    {
+      "icon_id": "29843013",
+      "name": "鼠标移动到OCR文本上",
+      "font_class": "shubiaoyidongdaoOCRwenbenshang",
+      "unicode": "e987",
+      "unicode_decimal": 59783
+    },
+    {
+      "icon_id": "29843014",
+      "name": "文本比对",
+      "font_class": "wenbenbidui",
+      "unicode": "e988",
+      "unicode_decimal": 59784
+    },
+    {
+      "icon_id": "29843015",
+      "name": "图像OCR识别(含坐标)",
+      "font_class": "tuxiangOCRshibiehanzuobiao",
+      "unicode": "e989",
+      "unicode_decimal": 59785
+    },
+    {
+      "icon_id": "29843016",
+      "name": "鼠标点击OCR文本",
+      "font_class": "shubiaodianjiOCRwenben",
+      "unicode": "e98a",
+      "unicode_decimal": 59786
+    },
+    {
+      "icon_id": "29843017",
+      "name": "通用文字识别",
+      "font_class": "tongyongwenzishibie",
+      "unicode": "e98b",
+      "unicode_decimal": 59787
+    },
+    {
+      "icon_id": "29843018",
+      "name": "文本审核",
+      "font_class": "wenbenshenhe",
+      "unicode": "e98c",
+      "unicode_decimal": 59788
+    },
+    {
+      "icon_id": "29843019",
+      "name": "系统",
+      "font_class": "xitong",
+      "unicode": "e98d",
+      "unicode_decimal": 59789
+    },
+    {
+      "icon_id": "29843020",
+      "name": "推理拼图验证码",
+      "font_class": "tuilipintuyanzhengma",
+      "unicode": "e98e",
+      "unicode_decimal": 59790
+    },
+    {
+      "icon_id": "29843022",
+      "name": "文件触发",
+      "font_class": "wenjianchufa",
+      "unicode": "e990",
+      "unicode_decimal": 59792
+    },
+    {
+      "icon_id": "29843024",
+      "name": "智慧文本",
+      "font_class": "zhihuiwenben",
+      "unicode": "e992",
+      "unicode_decimal": 59794
+    },
+    {
+      "icon_id": "29843025",
+      "name": "网络",
+      "font_class": "wangluo",
+      "unicode": "e993",
+      "unicode_decimal": 59795
+    },
+    {
+      "icon_id": "29843026",
+      "name": "邮件触发",
+      "font_class": "youjianchufa",
+      "unicode": "e994",
+      "unicode_decimal": 59796
+    },
+    {
+      "icon_id": "29843027",
+      "name": "语义相似度",
+      "font_class": "yuyixiangsidu",
+      "unicode": "e995",
+      "unicode_decimal": 59797
+    },
+    {
+      "icon_id": "29843028",
+      "name": "自定义AI模型",
+      "font_class": "zidingyiAImoxing",
+      "unicode": "e996",
+      "unicode_decimal": 59798
+    },
+    {
+      "icon_id": "29842991",
+      "name": "获取剪切板文本",
+      "font_class": "huoqujianqiebanwenben",
+      "unicode": "e973",
+      "unicode_decimal": 59763
+    },
+    {
+      "icon_id": "29842992",
+      "name": "将文件添加到剪切板",
+      "font_class": "jiangwenjiantianjiadaojianqieban",
+      "unicode": "e974",
+      "unicode_decimal": 59764
+    },
+    {
+      "icon_id": "29842993",
+      "name": "机器翻译",
+      "font_class": "jiqifanyi",
+      "unicode": "e975",
+      "unicode_decimal": 59765
+    },
+    {
+      "icon_id": "29842994",
+      "name": "获取剪切板文件",
+      "font_class": "huoqujianqiebanwenjian",
+      "unicode": "e976",
+      "unicode_decimal": 59766
+    },
+    {
+      "icon_id": "29842995",
+      "name": "卡证文字识别",
+      "font_class": "kazhengwenzishibie",
+      "unicode": "e977",
+      "unicode_decimal": 59767
+    },
+    {
+      "icon_id": "29842996",
+      "name": "教育场景文字识别",
+      "font_class": "jiaoyuchangjingwenzishibie",
+      "unicode": "e978",
+      "unicode_decimal": 59768
+    },
+    {
+      "icon_id": "29842997",
+      "name": "滑块验证码(旋转)",
+      "font_class": "a-huakuaiyanzhengmaxuanzhuan",
+      "unicode": "e979",
+      "unicode_decimal": 59769
+    },
+    {
+      "icon_id": "29842998",
+      "name": "票据文字识别",
+      "font_class": "piaojuwenzishibie",
+      "unicode": "e97a",
+      "unicode_decimal": 59770
+    },
+    {
+      "icon_id": "29842999",
+      "name": "将文本添加到剪切板",
+      "font_class": "jiangwenbentianjiadaojianqieban",
+      "unicode": "e97b",
+      "unicode_decimal": 59771
+    },
+    {
+      "icon_id": "29843000",
+      "name": "取环境变量",
+      "font_class": "quhuanjingbianliang",
+      "unicode": "e97c",
+      "unicode_decimal": 59772
+    },
+    {
+      "icon_id": "29843001",
+      "name": "普通验证码",
+      "font_class": "putongyanzhengma",
+      "unicode": "e97d",
+      "unicode_decimal": 59773
+    },
+    {
+      "icon_id": "29843002",
+      "name": "汽车场景文字识别",
+      "font_class": "qichechangjingwenzishibie",
+      "unicode": "e97e",
+      "unicode_decimal": 59774
+    },
+    {
+      "icon_id": "29843003",
+      "name": "商品评论分析",
+      "font_class": "shangpinpinglunfenxi",
+      "unicode": "e97f",
+      "unicode_decimal": 59775
+    },
+    {
+      "icon_id": "29843004",
+      "name": "情感分析",
+      "font_class": "qingganfenxi",
+      "unicode": "e980",
+      "unicode_decimal": 59776
+    },
+    {
+      "icon_id": "29843005",
+      "name": "其他场景文字识别",
+      "font_class": "qitachangjingwenzishibie",
+      "unicode": "e981",
+      "unicode_decimal": 59777
+    },
+    {
+      "icon_id": "29843006",
+      "name": "商品评论分析(批量)",
+      "font_class": "a-shangpinpinglunfenxipiliang",
+      "unicode": "e982",
+      "unicode_decimal": 59778
+    },
+    {
+      "icon_id": "29843007",
+      "name": "热键触发",
+      "font_class": "rejianchufa",
+      "unicode": "e983",
+      "unicode_decimal": 59779
+    },
+    {
+      "icon_id": "29843008",
+      "name": "设置环境变量",
+      "font_class": "shezhihuanjingbianliang",
+      "unicode": "e984",
+      "unicode_decimal": 59780
+    },
+    {
+      "icon_id": "29842971",
+      "name": "触发器",
+      "font_class": "chufaqi",
+      "unicode": "e961",
+      "unicode_decimal": 59745
+    },
+    {
+      "icon_id": "29842972",
+      "name": "分词",
+      "font_class": "fenci",
+      "unicode": "e962",
+      "unicode_decimal": 59746
+    },
+    {
+      "icon_id": "29842973",
+      "name": "滑块验证码(滑动) ",
+      "font_class": "a-huakuaiyanzhengmahuadong",
+      "unicode": "e963",
+      "unicode_decimal": 59747
+    },
+    {
+      "icon_id": "29842974",
+      "name": "播放音频",
+      "font_class": "bofangyinpin",
+      "unicode": "e964",
+      "unicode_decimal": 59748
+    },
+    {
+      "icon_id": "29842975",
+      "name": "触发条件",
+      "font_class": "chufatiaojian",
+      "unicode": "e965",
+      "unicode_decimal": 59749
+    },
+    {
+      "icon_id": "29842976",
+      "name": "观点分析",
+      "font_class": "guandianfenxi",
+      "unicode": "e966",
+      "unicode_decimal": 59750
+    },
+    {
+      "icon_id": "29842977",
+      "name": "滑块验证码(拼图)",
+      "font_class": "a-huakuaiyanzhengmapintu",
+      "unicode": "e967",
+      "unicode_decimal": 59751
+    },
+    {
+      "icon_id": "29842978",
+      "name": "关键词",
+      "font_class": "guanjianci",
+      "unicode": "e968",
+      "unicode_decimal": 59752
+    },
+    {
+      "icon_id": "29842979",
+      "name": "隐藏-显示行列",
+      "font_class": "yincang-xianshihanglie",
+      "unicode": "e969",
+      "unicode_decimal": 59753
+    },
+    {
+      "icon_id": "29842980",
+      "name": "点选验证码",
+      "font_class": "dianxuanyanzhengma",
+      "unicode": "e96a",
+      "unicode_decimal": 59754
+    },
+    {
+      "icon_id": "29842981",
+      "name": "Excel插入图片",
+      "font_class": "Excelcharutupian",
+      "unicode": "e96b",
+      "unicode_decimal": 59755
+    },
+    {
+      "icon_id": "29842982",
+      "name": "邮件",
+      "font_class": "youjian",
+      "unicode": "e96c",
+      "unicode_decimal": 59756
+    },
+    {
+      "icon_id": "29842983",
+      "name": "执行宏",
+      "font_class": "zhihanghong",
+      "unicode": "e96d",
+      "unicode_decimal": 59757
+    },
+    {
+      "icon_id": "29842984",
+      "name": "excel",
+      "font_class": "excel",
+      "unicode": "e96e",
+      "unicode_decimal": 59758
+    },
+    {
+      "icon_id": "29842985",
+      "name": "excel读取列数",
+      "font_class": "excelduqulieshu",
+      "unicode": "e96f",
+      "unicode_decimal": 59759
+    },
+    {
+      "icon_id": "29842986",
+      "name": "粘贴表格内容",
+      "font_class": "niantiebiaogeneirong",
+      "unicode": "e970",
+      "unicode_decimal": 59760
+    },
+    {
+      "icon_id": "29842987",
+      "name": "字典获取键",
+      "font_class": "zidianhuoqujian",
+      "unicode": "e971",
+      "unicode_decimal": 59761
+    },
+    {
+      "icon_id": "29842988",
+      "name": "Excel删除图片",
+      "font_class": "Excelshanchutupian",
+      "unicode": "e972",
+      "unicode_decimal": 59762
+    },
+    {
+      "icon_id": "29842936",
+      "name": "清空字典",
+      "font_class": "qingkongzidian",
+      "unicode": "e94f",
+      "unicode_decimal": 59727
+    },
+    {
+      "icon_id": "29842937",
+      "name": "删除键值对",
+      "font_class": "shanchujianzhidui",
+      "unicode": "e950",
+      "unicode_decimal": 59728
+    },
+    {
+      "icon_id": "29842938",
+      "name": "区域背景颜色",
+      "font_class": "quyubeijingyanse",
+      "unicode": "e951",
+      "unicode_decimal": 59729
+    },
+    {
+      "icon_id": "29842939",
+      "name": "区域字体颜色",
+      "font_class": "quyuzitiyanse",
+      "unicode": "e952",
+      "unicode_decimal": 59730
+    },
+    {
+      "icon_id": "29842940",
+      "name": "引用子流程",
+      "font_class": "yinyongziliucheng",
+      "unicode": "e953",
+      "unicode_decimal": 59731
+    },
+    {
+      "icon_id": "29842941",
+      "name": "设置列宽",
+      "font_class": "shezhiliekuan",
+      "unicode": "e954",
+      "unicode_decimal": 59732
+    },
+    {
+      "icon_id": "29842942",
+      "name": "跳出流程",
+      "font_class": "tiaochuliucheng",
+      "unicode": "e955",
+      "unicode_decimal": 59733
+    },
+    {
+      "icon_id": "29842943",
+      "name": "添加条件判断（if）",
+      "font_class": "tianjiatiaojianpanduanif",
+      "unicode": "e956",
+      "unicode_decimal": 59734
+    },
+    {
+      "icon_id": "29842944",
+      "name": "删除区域",
+      "font_class": "shanchuquyu",
+      "unicode": "e957",
+      "unicode_decimal": 59735
+    },
+    {
+      "icon_id": "29842945",
+      "name": "设置行高",
+      "font_class": "shezhihanggao",
+      "unicode": "e958",
+      "unicode_decimal": 59736
+    },
+    {
+      "icon_id": "29842946",
+      "name": "删除重复",
+      "font_class": "shanchuzhongfu",
+      "unicode": "e959",
+      "unicode_decimal": 59737
+    },
+    {
+      "icon_id": "29842947",
+      "name": "设置变量",
+      "font_class": "shezhibianliang",
+      "unicode": "e95a",
+      "unicode_decimal": 59738
+    },
+    {
+      "icon_id": "29842948",
+      "name": "退出流程（exit）",
+      "font_class": "tuichuliuchengexit",
+      "unicode": "e95b",
+      "unicode_decimal": 59739
+    },
+    {
+      "icon_id": "29842949",
+      "name": "跳出循环（break）",
+      "font_class": "tiaochuxunhuanbreak",
+      "unicode": "e95c",
+      "unicode_decimal": 59740
+    },
+    {
+      "icon_id": "29842950",
+      "name": "写入区域",
+      "font_class": "xieruquyu",
+      "unicode": "e95d",
+      "unicode_decimal": 59741
+    },
+    {
+      "icon_id": "29842951",
+      "name": "异常捕获（try catch）",
+      "font_class": "yichangbuhuotrycatch",
+      "unicode": "e95e",
+      "unicode_decimal": 59742
+    },
+    {
+      "icon_id": "29842952",
+      "name": "选中区域",
+      "font_class": "xuanzhongquyu",
+      "unicode": "e95f",
+      "unicode_decimal": 59743
+    },
+    {
+      "icon_id": "29842953",
+      "name": "条件循环（while）",
+      "font_class": "tiaojianxunhuanwhile",
+      "unicode": "e960",
+      "unicode_decimal": 59744
+    },
+    {
+      "icon_id": "29842923",
+      "name": "计次循环（for）",
+      "font_class": "jicixunhuanfor",
+      "unicode": "e94b",
+      "unicode_decimal": 59723
+    },
+    {
+      "icon_id": "29842924",
+      "name": "清除区域",
+      "font_class": "qingchuquyu",
+      "unicode": "e94c",
+      "unicode_decimal": 59724
+    },
+    {
+      "icon_id": "29842925",
+      "name": "继续下次循环（continue）",
+      "font_class": "jixuxiacixunhuancontinue",
+      "unicode": "e94d",
+      "unicode_decimal": 59725
+    },
+    {
+      "icon_id": "29842926",
+      "name": "剪切板",
+      "font_class": "jianqieban",
+      "unicode": "e94e",
+      "unicode_decimal": 59726
+    },
+    {
+      "icon_id": "29842909",
+      "name": "插入列",
+      "font_class": "charulie",
+      "unicode": "e93d",
+      "unicode_decimal": 59709
+    },
+    {
+      "icon_id": "29842910",
+      "name": "单元格字体颜色",
+      "font_class": "danyuangezitiyanse",
+      "unicode": "e93e",
+      "unicode_decimal": 59710
+    },
+    {
+      "icon_id": "29842911",
+      "name": "代码命令",
+      "font_class": "daimamingling",
+      "unicode": "e93f",
+      "unicode_decimal": 59711
+    },
+    {
+      "icon_id": "29842912",
+      "name": "插入代码",
+      "font_class": "charudaima",
+      "unicode": "e940",
+      "unicode_decimal": 59712
+    },
+    {
+      "icon_id": "29842913",
+      "name": "复制表格内容",
+      "font_class": "fuzhibiaogeneirong",
+      "unicode": "e941",
+      "unicode_decimal": 59713
+    },
+    {
+      "icon_id": "29842914",
+      "name": "单元格背景颜色",
+      "font_class": "danyuangebeijingyanse",
+      "unicode": "e942",
+      "unicode_decimal": 59714
+    },
+    {
+      "icon_id": "29842916",
+      "name": "合并字典",
+      "font_class": "hebingzidian",
+      "unicode": "e944",
+      "unicode_decimal": 59716
+    },
+    {
+      "icon_id": "29842917",
+      "name": "否则（else） ",
+      "font_class": "fouzeelse",
+      "unicode": "e945",
+      "unicode_decimal": 59717
+    },
+    {
+      "icon_id": "29842918",
+      "name": "获取第一个单元格",
+      "font_class": "huoqudiyigedanyuange",
+      "unicode": "e946",
+      "unicode_decimal": 59718
+    },
+    {
+      "icon_id": "29842919",
+      "name": "否则如果（else-if） ",
+      "font_class": "fouzeruguoelse-if",
+      "unicode": "e947",
+      "unicode_decimal": 59719
+    },
+    {
+      "icon_id": "29842920",
+      "name": "获取已编辑区域",
+      "font_class": "huoquyibianjiquyu",
+      "unicode": "e948",
+      "unicode_decimal": 59720
+    },
+    {
+      "icon_id": "29842921",
+      "name": "流程控制",
+      "font_class": "liuchengkongzhi",
+      "unicode": "e949",
+      "unicode_decimal": 59721
+    },
+    {
+      "icon_id": "29842922",
+      "name": "获取尾部单元格",
+      "font_class": "huoquweibudanyuange",
+      "unicode": "e94a",
+      "unicode_decimal": 59722
+    },
+    {
+      "icon_id": "29842809",
+      "name": "删除列",
+      "font_class": "shanchulie",
+      "unicode": "e92b",
+      "unicode_decimal": 59691
+    },
+    {
+      "icon_id": "29842810",
+      "name": "设置光标位置",
+      "font_class": "shezhiguangbiaoweizhi",
+      "unicode": "e92c",
+      "unicode_decimal": 59692
+    },
+    {
+      "icon_id": "29842811",
+      "name": "删除行",
+      "font_class": "shanchuhang",
+      "unicode": "e92d",
+      "unicode_decimal": 59693
+    },
+    {
+      "icon_id": "29842812",
+      "name": "删除sheet",
+      "font_class": "shanchusheet",
+      "unicode": "e92e",
+      "unicode_decimal": 59694
+    },
+    {
+      "icon_id": "29842813",
+      "name": "写入列",
+      "font_class": "xierulie",
+      "unicode": "e92f",
+      "unicode_decimal": 59695
+    },
+    {
+      "icon_id": "29842814",
+      "name": "写入单元格",
+      "font_class": "xierudanyuange",
+      "unicode": "e930",
+      "unicode_decimal": 59696
+    },
+    {
+      "icon_id": "29842815",
+      "name": "移动光标位置",
+      "font_class": "yidongguangbiaoweizhi",
+      "unicode": "e931",
+      "unicode_decimal": 59697
+    },
+    {
+      "icon_id": "29842816",
+      "name": "正弦值",
+      "font_class": "zhengxianzhi",
+      "unicode": "e932",
+      "unicode_decimal": 59698
+    },
+    {
+      "icon_id": "29842817",
+      "name": "excel读取单元格",
+      "font_class": "excelduqudanyuange",
+      "unicode": "e933",
+      "unicode_decimal": 59699
+    },
+    {
+      "icon_id": "29842818",
+      "name": "excel读取列",
+      "font_class": "excelduqulie",
+      "unicode": "e934",
+      "unicode_decimal": 59700
+    },
+    {
+      "icon_id": "29842820",
+      "name": "移动sheet",
+      "font_class": "yidongsheet",
+      "unicode": "e936",
+      "unicode_decimal": 59702
+    },
+    {
+      "icon_id": "29842821",
+      "name": "excel读取区域",
+      "font_class": "excelduququyu",
+      "unicode": "e937",
+      "unicode_decimal": 59703
+    },
+    {
+      "icon_id": "29842822",
+      "name": "选择行",
+      "font_class": "xuanzehang",
+      "unicode": "e938",
+      "unicode_decimal": 59704
+    },
+    {
+      "icon_id": "29842824",
+      "name": "重命名sheet",
+      "font_class": "zhongmingmingsheet",
+      "unicode": "e93a",
+      "unicode_decimal": 59706
+    },
+    {
+      "icon_id": "29842825",
+      "name": "写入行",
+      "font_class": "xieruhang",
+      "unicode": "e93b",
+      "unicode_decimal": 59707
+    },
+    {
+      "icon_id": "29842826",
+      "name": "移动邮件",
+      "font_class": "yidongyoujian",
+      "unicode": "e93c",
+      "unicode_decimal": 59708
+    },
+    {
+      "icon_id": "29842772",
+      "name": "查找文本后设置光标位置",
+      "font_class": "chazhaowenbenhoushezhiguangbiaoweizhi",
+      "unicode": "e919",
+      "unicode_decimal": 59673
+    },
+    {
+      "icon_id": "29842773",
+      "name": "插入行",
+      "font_class": "charuhang",
+      "unicode": "e91a",
+      "unicode_decimal": 59674
+    },
+    {
+      "icon_id": "29842774",
+      "name": "保存excel",
+      "font_class": "baocunexcel",
+      "unicode": "e91b",
+      "unicode_decimal": 59675
+    },
+    {
+      "icon_id": "29842775",
+      "name": "打开excel",
+      "font_class": "dakaiexcel",
+      "unicode": "e91c",
+      "unicode_decimal": 59676
+    },
+    {
+      "icon_id": "29842776",
+      "name": "获取excel路径",
+      "font_class": "huoquexcellujing",
+      "unicode": "e91d",
+      "unicode_decimal": 59677
+    },
+    {
+      "icon_id": "29842777",
+      "name": "激活sheet",
+      "font_class": "jihuosheet",
+      "unicode": "e91e",
+      "unicode_decimal": 59678
+    },
+    {
+      "icon_id": "29842778",
+      "name": "加密excel",
+      "font_class": "jiamiexcel",
+      "unicode": "e91f",
+      "unicode_decimal": 59679
+    },
+    {
+      "icon_id": "29842779",
+      "name": "获取已打开excel",
+      "font_class": "huoquyidakaiexcel",
+      "unicode": "e920",
+      "unicode_decimal": 59680
+    },
+    {
+      "icon_id": "29842780",
+      "name": "平方根",
+      "font_class": "pingfanggen",
+      "unicode": "e921",
+      "unicode_decimal": 59681
+    },
+    {
+      "icon_id": "29842781",
+      "name": "插入sheet",
+      "font_class": "charusheet",
+      "unicode": "e922",
+      "unicode_decimal": 59682
+    },
+    {
+      "icon_id": "29842782",
+      "name": "导出excel为pdf",
+      "font_class": "daochuexcelweipdf",
+      "unicode": "e923",
+      "unicode_decimal": 59683
+    },
+    {
+      "icon_id": "29842783",
+      "name": "获取sheet名",
+      "font_class": "huoqusheetming",
+      "unicode": "e924",
+      "unicode_decimal": 59684
+    },
+    {
+      "icon_id": "29842784",
+      "name": "取正负符号",
+      "font_class": "quzhengfufuhao",
+      "unicode": "e925",
+      "unicode_decimal": 59685
+    },
+    {
+      "icon_id": "29842785",
+      "name": "全选",
+      "font_class": "quanxuan",
+      "unicode": "e926",
+      "unicode_decimal": 59686
+    },
+    {
+      "icon_id": "29842786",
+      "name": "进制转化",
+      "font_class": "jinzhizhuanhua",
+      "unicode": "e927",
+      "unicode_decimal": 59687
+    },
+    {
+      "icon_id": "29842787",
+      "name": "另存为excel",
+      "font_class": "lingcunweiexcel",
+      "unicode": "e928",
+      "unicode_decimal": 59688
+    },
+    {
+      "icon_id": "29842788",
+      "name": "查看邮件",
+      "font_class": "chakanyoujian",
+      "unicode": "e929",
+      "unicode_decimal": 59689
+    },
+    {
+      "icon_id": "29842789",
+      "name": "复制sheet",
+      "font_class": "fuzhisheet",
+      "unicode": "e92a",
+      "unicode_decimal": 59690
+    },
+    {
+      "icon_id": "29842737",
+      "name": "去除文本两端空格",
+      "font_class": "quchuwenbenliangduankongge",
+      "unicode": "e907",
+      "unicode_decimal": 59655
+    },
+    {
+      "icon_id": "29842738",
+      "name": "时间戳转时间",
+      "font_class": "shijianchuozhuanshijian",
+      "unicode": "e908",
+      "unicode_decimal": 59656
+    },
+    {
+      "icon_id": "29842739",
+      "name": "删除",
+      "font_class": "shanchu",
+      "unicode": "e909",
+      "unicode_decimal": 59657
+    },
+    {
+      "icon_id": "29842740",
+      "name": "四舍五入",
+      "font_class": "sishewuru",
+      "unicode": "e90a",
+      "unicode_decimal": 59658
+    },
+    {
+      "icon_id": "29842741",
+      "name": "时间转时间戳",
+      "font_class": "shijianzhuanshijianchuo",
+      "unicode": "e90b",
+      "unicode_decimal": 59659
+    },
+    {
+      "icon_id": "29842742",
+      "name": "删除列表项",
+      "font_class": "shanchuliebiaoxiang",
+      "unicode": "e90c",
+      "unicode_decimal": 59660
+    },
+    {
+      "icon_id": "29842743",
+      "name": "新建word",
+      "font_class": "xinjianword",
+      "unicode": "e90d",
+      "unicode_decimal": 59661
+    },
+    {
+      "icon_id": "29842745",
+      "name": "文本转ASCII",
+      "font_class": "wenbenzhuanASCII",
+      "unicode": "e90f",
+      "unicode_decimal": 59663
+    },
+    {
+      "icon_id": "29842746",
+      "name": "文档另存为",
+      "font_class": "wendanglingcunwei",
+      "unicode": "e910",
+      "unicode_decimal": 59664
+    },
+    {
+      "icon_id": "29842747",
+      "name": "正切值",
+      "font_class": "zhengqiezhi",
+      "unicode": "e911",
+      "unicode_decimal": 59665
+    },
+    {
+      "icon_id": "29842748",
+      "name": "WORD文档编辑",
+      "font_class": "WORDwendangbianji",
+      "unicode": "e912",
+      "unicode_decimal": 59666
+    },
+    {
+      "icon_id": "29842749",
+      "name": "粘贴",
+      "font_class": "niantie",
+      "unicode": "e913",
+      "unicode_decimal": 59667
+    },
+    {
+      "icon_id": "29842750",
+      "name": "修改指定位置项的数据",
+      "font_class": "xiugaizhidingweizhixiangdeshuju",
+      "unicode": "e914",
+      "unicode_decimal": 59668
+    },
+    {
+      "icon_id": "29842751",
+      "name": "字典设置值",
+      "font_class": "zidianshezhizhi",
+      "unicode": "e915",
+      "unicode_decimal": 59669
+    },
+    {
+      "icon_id": "29842752",
+      "name": "ASCII 转文本",
+      "font_class": "ASCIIzhuanwenben",
+      "unicode": "e916",
+      "unicode_decimal": 59670
+    },
+    {
+      "icon_id": "29842754",
+      "name": "新增列表项",
+      "font_class": "xinzengliebiaoxiang",
+      "unicode": "e918",
+      "unicode_decimal": 59672
+    },
+    {
+      "icon_id": "29842695",
+      "name": "读取选中文本",
+      "font_class": "duquxuanzhongwenben",
+      "unicode": "e8f5",
+      "unicode_decimal": 59637
+    },
+    {
+      "icon_id": "29842696",
+      "name": "大小写转换",
+      "font_class": "daxiaoxiezhuanhuan",
+      "unicode": "e8f6",
+      "unicode_decimal": 59638
+    },
+    {
+      "icon_id": "29842697",
+      "name": "复制",
+      "font_class": "fuzhi",
+      "unicode": "e8f7",
+      "unicode_decimal": 59639
+    },
+    {
+      "icon_id": "29842698",
+      "name": "关闭连接",
+      "font_class": "guanbilianjie",
+      "unicode": "e8f8",
+      "unicode_decimal": 59640
+    },
+    {
+      "icon_id": "29842699",
+      "name": "分割文本为列表",
+      "font_class": "fengewenbenweiliebiao",
+      "unicode": "e8f9",
+      "unicode_decimal": 59641
+    },
+    {
+      "icon_id": "29842700",
+      "name": "关闭文档",
+      "font_class": "guanbiwendang",
+      "unicode": "e8fa",
+      "unicode_decimal": 59642
+    },
+    {
+      "icon_id": "29842701",
+      "name": "获取文本长度",
+      "font_class": "huoquwenbenchangdu",
+      "unicode": "e8fb",
+      "unicode_decimal": 59643
+    },
+    {
+      "icon_id": "29842702",
+      "name": "回车",
+      "font_class": "huiche",
+      "unicode": "e8fc",
+      "unicode_decimal": 59644
+    },
+    {
+      "icon_id": "29842703",
+      "name": "获取指定位置项的数据",
+      "font_class": "huoquzhidingweizhixiangdeshuju",
+      "unicode": "e8fd",
+      "unicode_decimal": 59645
+    },
+    {
+      "icon_id": "29842704",
+      "name": "获取文档路径",
+      "font_class": "huoquwendanglujing",
+      "unicode": "e8fe",
+      "unicode_decimal": 59646
+    },
+    {
+      "icon_id": "29842705",
+      "name": "将文本反转",
+      "font_class": "jiangwenbenfanzhuan",
+      "unicode": "e8ff",
+      "unicode_decimal": 59647
+    },
+    {
+      "icon_id": "29842706",
+      "name": "截取文本",
+      "font_class": "jiequwenben",
+      "unicode": "e900",
+      "unicode_decimal": 59648
+    },
+    {
+      "icon_id": "29842707",
+      "name": "批量执行SQL语句",
+      "font_class": "piliangzhihangSQLyuju",
+      "unicode": "e901",
+      "unicode_decimal": 59649
+    },
+    {
+      "icon_id": "29842708",
+      "name": "剪切",
+      "font_class": "jianqie",
+      "unicode": "e902",
+      "unicode_decimal": 59650
+    },
+    {
+      "icon_id": "29842709",
+      "name": "清空列表",
+      "font_class": "qingkongliebiao",
+      "unicode": "e903",
+      "unicode_decimal": 59651
+    },
+    {
+      "icon_id": "29842710",
+      "name": "列计算",
+      "font_class": "liejisuan",
+      "unicode": "e904",
+      "unicode_decimal": 59652
+    },
+    {
+      "icon_id": "29842711",
+      "name": "拼接列",
+      "font_class": "pinjielie",
+      "unicode": "e905",
+      "unicode_decimal": 59653
+    },
+    {
+      "icon_id": "29842712",
+      "name": "判断元素是否存在",
+      "font_class": "panduanjiheyuansushifoucunzai",
+      "unicode": "e906",
+      "unicode_decimal": 59654
+    },
+    {
+      "icon_id": "29842670",
+      "name": "创建列表",
+      "font_class": "chuangjianliebiao",
+      "unicode": "e8e3",
+      "unicode_decimal": 59619
+    },
+    {
+      "icon_id": "29842671",
+      "name": "保存文档",
+      "font_class": "baocunwendang",
+      "unicode": "e8e4",
+      "unicode_decimal": 59620
+    },
+    {
+      "icon_id": "29842672",
+      "name": "补齐文本",
+      "font_class": "buqiwenben",
+      "unicode": "e8e5",
+      "unicode_decimal": 59621
+    },
+    {
+      "icon_id": "29842673",
+      "name": "打开文档",
+      "font_class": "dakaiwendang",
+      "unicode": "e8e6",
+      "unicode_decimal": 59622
+    },
+    {
+      "icon_id": "29842674",
+      "name": "创建随机文本",
+      "font_class": "chuangjiansuijiwenben",
+      "unicode": "e8e7",
+      "unicode_decimal": 59623
+    },
+    {
+      "icon_id": "29842675",
+      "name": "插入分页符",
+      "font_class": "charufenyefu",
+      "unicode": "e8e8",
+      "unicode_decimal": 59624
+    },
+    {
+      "icon_id": "29842676",
+      "name": "执行全SQL查询",
+      "font_class": "zhihangquanSQLchaxun",
+      "unicode": "e8e9",
+      "unicode_decimal": 59625
+    },
+    {
+      "icon_id": "29842677",
+      "name": "删除元素",
+      "font_class": "shanchuyuansu",
+      "unicode": "e8ea",
+      "unicode_decimal": 59626
+    },
+    {
+      "icon_id": "29842678",
+      "name": "替换文本",
+      "font_class": "tihuanwenben",
+      "unicode": "e8eb",
+      "unicode_decimal": 59627
+    },
+    {
+      "icon_id": "29842679",
+      "name": "转换数据类型",
+      "font_class": "zhuanhuanshujuleixing",
+      "unicode": "e8ec",
+      "unicode_decimal": 59628
+    },
+    {
+      "icon_id": "29842680",
+      "name": "执行SQL语句",
+      "font_class": "zhihangSQLyuju",
+      "unicode": "e8ed",
+      "unicode_decimal": 59629
+    },
+    {
+      "icon_id": "29842681",
+      "name": "文本转JSON",
+      "font_class": "wenbenzhuanJSON",
+      "unicode": "e8ee",
+      "unicode_decimal": 59630
+    },
+    {
+      "icon_id": "29842682",
+      "name": "JSON转文本",
+      "font_class": "JSONzhuanwenben",
+      "unicode": "e8ef",
+      "unicode_decimal": 59631
+    },
+    {
+      "icon_id": "29842683",
+      "name": "e的n次幂",
+      "font_class": "edencimi",
+      "unicode": "e8f0",
+      "unicode_decimal": 59632
+    },
+    {
+      "icon_id": "29842684",
+      "name": "x的y次幂",
+      "font_class": "xdeycimi",
+      "unicode": "e8f1",
+      "unicode_decimal": 59633
+    },
+    {
+      "icon_id": "29842685",
+      "name": "执行单SQL查询",
+      "font_class": "zhihangdanSQLchaxun",
+      "unicode": "e8f2",
+      "unicode_decimal": 59634
+    },
+    {
+      "icon_id": "29842686",
+      "name": "追加文本",
+      "font_class": "zhuijiawenben",
+      "unicode": "e8f3",
+      "unicode_decimal": 59635
+    },
+    {
+      "icon_id": "29842687",
+      "name": "添加元素",
+      "font_class": "tianjiayuansu",
+      "unicode": "e8f4",
+      "unicode_decimal": 59636
+    },
+    {
+      "icon_id": "29842644",
+      "name": "查找文本",
+      "font_class": "chazhaowenben",
+      "unicode": "e8d1",
+      "unicode_decimal": 59601
+    },
+    {
+      "icon_id": "29842645",
+      "name": "创建二维表",
+      "font_class": "chuangjianerweibiao",
+      "unicode": "e8d2",
+      "unicode_decimal": 59602
+    },
+    {
+      "icon_id": "29842646",
+      "name": "保存二维表至Excel",
+      "font_class": "baocunerweibiaozhiExcel",
+      "unicode": "e8d3",
+      "unicode_decimal": 59603
+    },
+    {
+      "icon_id": "29842647",
+      "name": "获取日期时间",
+      "font_class": "huoquriqishijian",
+      "unicode": "e8d4",
+      "unicode_decimal": 59604
+    },
+    {
+      "icon_id": "29842648",
+      "name": "创建集合",
+      "font_class": "chuangjianjihe",
+      "unicode": "e8d5",
+      "unicode_decimal": 59605
+    },
+    {
+      "icon_id": "29842649",
+      "name": "创建字典",
+      "font_class": "chuangjianzidian",
+      "unicode": "e8d6",
+      "unicode_decimal": 59606
+    },
+    {
+      "icon_id": "29842650",
+      "name": "获取字典所有键",
+      "font_class": "huoquzidiansuoyoujian",
+      "unicode": "e8d7",
+      "unicode_decimal": 59607
+    },
+    {
+      "icon_id": "29842651",
+      "name": "取集合大小",
+      "font_class": "qujihedaxiao",
+      "unicode": "e8d8",
+      "unicode_decimal": 59608
+    },
+    {
+      "icon_id": "29842652",
+      "name": "基于Excel创建二维表",
+      "font_class": "jiyuExcelchuangjianerweibiao",
+      "unicode": "e8d9",
+      "unicode_decimal": 59609
+    },
+    {
+      "icon_id": "29842653",
+      "name": "计算时长",
+      "font_class": "jisuanshichang",
+      "unicode": "e8da",
+      "unicode_decimal": 59610
+    },
+    {
+      "icon_id": "29842654",
+      "name": "获取字典所有值",
+      "font_class": "huoquzidiansuoyouzhi",
+      "unicode": "e8db",
+      "unicode_decimal": 59611
+    },
+    {
+      "icon_id": "29842656",
+      "name": "数据采集",
+      "font_class": "shujucaiji",
+      "unicode": "e8dd",
+      "unicode_decimal": 59613
+    },
+    {
+      "icon_id": "29842657",
+      "name": "余弦值",
+      "font_class": "yuxianzhi",
+      "unicode": "e8de",
+      "unicode_decimal": 59614
+    },
+    {
+      "icon_id": "29842658",
+      "name": "数据表内容循环",
+      "font_class": "shujubiaoneirongxunhuan",
+      "unicode": "e8df",
+      "unicode_decimal": 59615
+    },
+    {
+      "icon_id": "29842659",
+      "name": "文本内容提取",
+      "font_class": "wenbenneirongtiqu",
+      "unicode": "e8e0",
+      "unicode_decimal": 59616
+    },
+    {
+      "icon_id": "29842660",
+      "name": "获取字典所有键值",
+      "font_class": "huoquzidiansuoyoujianzhi",
+      "unicode": "e8e1",
+      "unicode_decimal": 59617
+    },
+    {
+      "icon_id": "29842661",
+      "name": "取整",
+      "font_class": "quzheng",
+      "unicode": "e8e2",
+      "unicode_decimal": 59618
+    },
+    {
+      "icon_id": "29842599",
+      "name": "遍历列表",
+      "font_class": "bianliliebiao",
+      "unicode": "e8c0",
+      "unicode_decimal": 59584
+    },
+    {
+      "icon_id": "29842600",
+      "name": "遍历字典",
+      "font_class": "bianlizidian",
+      "unicode": "e8c1",
+      "unicode_decimal": 59585
+    },
+    {
+      "icon_id": "29842601",
+      "name": "绝对值",
+      "font_class": "jueduizhi",
+      "unicode": "e8c2",
+      "unicode_decimal": 59586
+    },
+    {
+      "icon_id": "29842602",
+      "name": "连接数据库",
+      "font_class": "lianjieshujuku",
+      "unicode": "e8c3",
+      "unicode_decimal": 59587
+    },
+    {
+      "icon_id": "29842604",
+      "name": "数据处理",
+      "font_class": "shujuchuli",
+      "unicode": "e8c5",
+      "unicode_decimal": 59589
+    },
+    {
+      "icon_id": "29842606",
+      "name": "日期时间格式转换",
+      "font_class": "riqishijiangeshizhuanhuan",
+      "unicode": "e8c7",
+      "unicode_decimal": 59591
+    },
+    {
+      "icon_id": "29842608",
+      "name": "文本匹配判断",
+      "font_class": "wenbenpipeipanduan",
+      "unicode": "e8c9",
+      "unicode_decimal": 59593
+    },
+    {
+      "icon_id": "29842610",
+      "name": "数据分析服务",
+      "font_class": "shujufenxifuwu",
+      "unicode": "e8cb",
+      "unicode_decimal": 59595
+    },
+    {
+      "icon_id": "29842614",
+      "name": "数据服务",
+      "font_class": "shujufuwu",
+      "unicode": "e8cf",
+      "unicode_decimal": 59599
+    }
+  ]
+}

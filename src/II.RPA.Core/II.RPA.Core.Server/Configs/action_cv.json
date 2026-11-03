@@ -1,0 +1,952 @@
+{
+  "0": [
+    {
+      "elementtype": "文字",
+      "actions": [
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "OCR_SourceMergeGeneralOCR",
+          "input": [ "args0.pictureSource=0", "args0.image_path" ]
+        },
+        {
+          "action": "OcrOffline_GetOcrTextPosition",
+          "input": [ "args0.pictureSource=1", "args0.image_path" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "1": [
+    {
+      "elementtype": "勾选",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetButtonEnable",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "2": [
+    {
+      "elementtype": "未勾选",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetButtonEnable",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "3": [
+    {
+      "elementtype": "输入栏",
+      "actions": [
+        {
+          "action": "Element_SetValue",
+          "input": [ "args0.uiSelector", "args0.text" ]
+        },
+        {
+          "action": "Element_SetValuePassword_V1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Keyboard_Send"
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "4": [
+    {
+      "elementtype": "后退",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "5": [
+    {
+      "elementtype": "前进",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "6": [
+    {
+      "elementtype": "刷新",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "7": [
+    {
+      "elementtype": "最大化",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "8": [
+    {
+      "elementtype": "最小化",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "9": [
+    {
+      "elementtype": "还原",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "10": [
+    {
+      "elementtype": "下拉列表",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "11": [
+    {
+      "elementtype": "按钮",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "12": [
+    {
+      "elementtype": "关闭",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "13": [
+    {
+      "elementtype": "登录区域",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "14": [
+    {
+      "elementtype": "滑动关",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "15": [
+    {
+      "elementtype": "滑动开",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "16": [
+    {
+      "elementtype": "搜索",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "17": [
+    {
+      "elementtype": "17",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "18": [
+    {
+      "elementtype": "对话框",
+      "actions": [
+        {
+          "action": "Element_SetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Keyboard_Press"
+        }
+      ],
+      "category": []
+    }
+  ],
+  "19": [
+    {
+      "elementtype": "其他图标",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "OCR_SourceMergeGeneralOCR",
+          "input": [ "args0.pictureSource=0", "args0.image_path" ]
+        },
+        {
+          "action": "OcrOffline_GetOcrTextPosition",
+          "input": [ "args0.pictureSource=1", "args0.image_path" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "20": [
+    {
+      "elementtype": "滚动条",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "21": [
+    {
+      "elementtype": "21",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "22": [
+    {
+      "elementtype": "列表",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "23": [
+    {
+      "elementtype": "日期",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "24": [
+    {
+      "elementtype": "邮件",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "25": [
+    {
+      "elementtype": "图片",
+      "actions": [
+        {
+          "action": "Image_Click",
+          "input": [ "args0.image" ]
+        },
+        {
+          "action": "OCR_SourceMergeGeneralOCR",
+          "input": [ "args0.pictureSource=0", "args0.image_path" ]
+        },
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "26": [
+    {
+      "elementtype": "群组",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "27": [
+    {
+      "elementtype": "27",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "28": [
+    {
+      "elementtype": "28",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "29": [
+    {
+      "elementtype": "表格",
+      "actions": [
+        {
+          "action": "Element_Click_v3",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "30": [
+    {
+      "elementtype": "文字验证码",
+      "actions": [
+        {
+          "action": "OCR_SourceCommonEnglishNumbersCodeV1",
+          "input": [ "args0.pictureSource=1", "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "31": [
+    {
+      "elementtype": "点选验证码",
+      "actions": [
+        {
+          "action": "OCR_ClickVerificationCode",
+          "input": [ "args0.verifyPicUiSelector" ]
+        },
+        {
+          "action": "Element_MouseTo_v2",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "32": [
+    {
+      "elementtype": "滑块验证码",
+      "actions": [
+        {
+          "action": "OCR_SliderCode",
+          "input": [ "args0.imageBackPath" ]
+        },
+        {
+          "action": "OCR_SliderVerificationCodeV2",
+          "input": [ "args0.backgroundUiSelector" ]
+        },
+        {
+          "action": "OCR_RotateVerificationCode"
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        }
+      ],
+      "category": []
+    }
+  ]
+}
+    

@@ -1,0 +1,47 @@
+syntax = "proto3";
+package rpa.core.admin;
+
+message AdminResponse
+{
+	string Status = 1;
+}
+message AdminRequest
+{
+	Payload Payload = 1;
+}
+message Payload
+{
+	string Client_Id = 1;
+	string Admin_Key = 2;
+}
+message SetLogLevelRequest
+{
+	//e.g. Z-Factory
+	string Client_Id = 1;
+	//e.g. 暂不需要传值、默认为所有端:前端、engine、grpc、dll
+	string Client_Type = 2;
+	//e.g. 0:Debug;1:Information;2:Warning;3:Error;4:Critical
+	string Log_Level = 3;
+}
+message PackageLogRequest
+{
+	//e.g. Z-Factory
+	string Client_Id = 1;
+	//e.g. 0:当天;1:近3天;2:近7天
+    string Log_Time = 2;
+	//前端的日志绝对路径需要传入
+	string Log_Path = 3;
+}
+service AdminService 
+{
+	//结束进程
+	rpc ShutDownUnary(AdminRequest) returns (AdminResponse);
+	//重启所有serviceboot
+	rpc ReStartUnary(AdminRequest) returns (AdminResponse);
+	//设置运行模式为debug模式
+	rpc SetDebugModeUnary(AdminRequest) returns (AdminResponse);
+	//设置运行模式为release模式
+	rpc SetReleaseModeUnary(AdminRequest) returns (AdminResponse);
+	//设置日志级别
+	rpc SetLogLevelUnary(SetLogLevelRequest)returns(AdminResponse);
+}

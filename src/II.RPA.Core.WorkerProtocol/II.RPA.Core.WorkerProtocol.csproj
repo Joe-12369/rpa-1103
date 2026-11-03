@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.35.1" />
+    <PackageReference Include="Grpc.Core.Api" Version="2.70.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.82.0" PrivateAssets="all" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\II.RPA.Core.Contracts\II.RPA.Core.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\II.RPA.Core\II.RPA.Core\Protos\worker_service.proto"
+              GrpcServices="Both"
+              Link="Protos\worker_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\II.RPA.Core\Protos\plugin_service.proto"
+              GrpcServices="Both"
+              Link="Protos\plugin_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\II.RPA.Core\Protos\z_brain_service.proto"
+              GrpcServices="None"
+              Link="Protos\z_brain_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\II.RPA.Core\Protos\rpa_engine_service.proto"
+              GrpcServices="None"
+              Link="Protos\rpa_engine_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\II.RPA.Core\Protos\z_desktop_service.proto"
+              GrpcServices="None"
+              Link="Protos\z_desktop_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\II.RPA.Core\Protos\settings_service.proto"
+              GrpcServices="None"
+              Link="Protos\settings_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\II.RPA.Core\Protos\sharpruntime_service.proto"
+              GrpcServices="None"
+              Link="Protos\sharpruntime_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\II.RPA.Core\Protos\mobile_plugin_service.proto"
+              GrpcServices="Both"
+              Link="Protos\mobile_plugin_service.proto" />
+  </ItemGroup>
+
+</Project>

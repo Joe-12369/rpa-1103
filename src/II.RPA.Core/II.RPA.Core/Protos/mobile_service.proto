@@ -1,0 +1,68 @@
+syntax = "proto3";
+package rpa.core.mobile;
+
+message MobileRequest
+{
+    string request_id=1;
+    //0-正常打开 1-安装插件
+    int32 operation_type=2;
+	string client_id=3;
+    string file_path=4;
+    int32 time_out=5;
+    string is_sssimilar=6;//1是相似元素 0-普通
+    string is_cvmodel=7;//1是CV拾取 0-普通
+    string cv_url=8;//cvUrl
+    //入参 比如连接的历史设备信息
+    string in_parameter=9;
+}
+message MobileResponse
+{
+	string code = 1;
+    string message=2;
+    string info=3;
+}
+message Message
+{
+    //消息Id、由请求端创建、响应端原样返回
+	//请求端需要验证消息Id的一致
+    int32 message_id = 1;
+	//行为函数 目前存在 1-安装插件完成消息提醒  、2-编辑完成后的设备连接信息  
+    string action = 2;
+	//消息体、json字符串、目前只传入流程编辑器的状态"{"processcreatorstatus":0/1}" 0:启动 1:未启动
+	string pay_load = 3;
+}
+
+
+service MobileDeviceManagerService
+{
+    //拾取
+	rpc CaptureMobileUnary(MobileRequest) returns (MobileResponse);
+    //校验
+	rpc CheckMobileUnary(MobileRequest) returns (MobileResponse);
+    //获取坐标
+	rpc GetPointUnary(MobileRequest) returns (MobileResponse);
+    //开启手机设备管理窗口 、插件安装
+	rpc StartDeviceUnary(MobileRequest) returns (MobileResponse);
+    //关闭手机管理窗口
+	rpc CloseDeviceUnary(MobileRequest) returns (MobileResponse);
+    //获取插件安装状态
+	rpc GetPluginStatusUnary(MobileRequest) returns (MobileResponse);
+    //设备连接状态
+    rpc GetConnectStatusUnary(MobileRequest) returns (MobileResponse);
+    //获取设备的连接信息[全部]
+    rpc GetDeviceInfoUnary(MobileRequest) returns (MobileRequest);
+     //获取当前app的包名
+    rpc GetCurrentAppPackageNameUnary(MobileRequest) returns (MobileResponse);
+    //插件安装结果
+    rpc PluginInstallResultToClintUnary(Message) returns (Message);
+     //供订阅的推送插件安装结果
+    rpc SubMessageInfoServerStreaming(Message) returns (stream Message);
+     //手机元素图像截图
+	rpc CaptureMobileElementShotUnary(MobileRequest) returns (MobileResponse);
+     //获取图像范围
+	rpc CaptureDomainScopeUnary(MobileRequest) returns (MobileResponse);
+    //图像校验
+	rpc CheckMobileImageUnary(MobileRequest) returns (MobileResponse);
+     //测试滑动
+	rpc TestSlidUnary(MobileRequest) returns (MobileResponse);
+}

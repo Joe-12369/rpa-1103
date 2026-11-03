@@ -1,0 +1,32 @@
+<Project DefaultTargets="BuildVersion" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <Import Project="II.RPA.Build.VersionTask.targets" />
+   <Import Project="C:\Program Files (x86)\MSBuild\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" />
+    <PropertyGroup>
+        <RPA_MainVersion>0.0.0</RPA_MainVersion>
+        <Build_Version>0000</Build_Version>
+    </PropertyGroup>
+     <Target Name="BuildVersion">
+	 <SetAppVersionTask MainVersion="$(RPA_MainVersion)" BuildVersion="$(Build_Version)">
+		<Output TaskParameter="FullVersionNumber" PropertyName="AppFullVersionNumber"/>
+		<Output TaskParameter="MajorNumber" PropertyName="AppMajorNumber"/>
+		<Output TaskParameter="MinorNumber" PropertyName="AppMinorNumber"/>
+		<Output TaskParameter="RevisionNumber" PropertyName="AppRevisionNumber"/>
+		<Output TaskParameter="BuildNumber" PropertyName="AppBuildNumber"/>
+	</SetAppVersionTask>
+
+	<PropertyGroup>
+		<InternalVersion>$(AppMajorNumber).$(AppMinorNumber).$(AppRevisionNumber).$(AppBuildNumber)</InternalVersion>
+		<RegExVersion>(\[\s*assembly:\s*AssemblyVersion\(\s*"[^\.]+\.[^\.]+)\.([^\.]+)(\.)([^\.]+)("\)\s*\])</RegExVersion>
+		<RegExVersion2>(\[\s*assembly:\s*AssemblyFileVersion\(\s*"[^\.]+\.[^\.]+)\.([^\.]+)(\.)([^\.]+)("\)\s*\])</RegExVersion2>
+	</PropertyGroup>
+	<Message Text = "SetAppVersionTask: $(InternalVersion)"/>
+	<FileUpdate Files="II.RPA.Core\CoreAssemblyInfo.cs"
+			Regex="$(RegExVersion)"
+			ReplacementText='[assembly: AssemblyVersion("$(AppMajorNumber).$(AppMinorNumber).$(AppRevisionNumber).$(AppBuildNumber)")]'  
+			Encoding="utf-8-without-bom"/>
+	<FileUpdate Files="II.RPA.Core\CoreAssemblyInfo.cs"
+			Regex="$(RegExVersion2)"
+			ReplacementText='[assembly: AssemblyFileVersion("$(AppMajorNumber).$(AppMinorNumber).$(AppRevisionNumber).$(AppBuildNumber)")]'
+			Encoding="utf-8-without-bom"/>	
+	</Target>
+</Project>

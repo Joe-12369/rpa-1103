@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Plugin.Excel</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.Excel</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>false</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>Library</OutputType>
+    
+    <RootNamespace>II.RPA.Plugin.Excel</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.Excel</AssemblyName>
+    
+    
+    <Deterministic>true</Deterministic>
+    
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+<ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v22.1">
+      <HintPath>..\libs\devexpress\DevExpress.BonusSkins.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v22.1.Core">
+      <HintPath>..\libs\devexpress\DevExpress.Charts.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v22.1">
+      <HintPath>..\libs\devexpress\DevExpress.CodeParser.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\devexpress\DevExpress.Data.Desktop.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\devexpress\DevExpress.Data.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v22.1">
+      <HintPath>..\libs\devexpress\DevExpress.DataAccess.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataVisualization.v22.1.Core">
+      <HintPath>..\libs\devexpress\DevExpress.DataVisualization.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Docs.v22.1">
+      <HintPath>..\libs\devexpress\DevExpress.Docs.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Drawing.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\devexpress\DevExpress.Drawing.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v22.1.Core">
+      <HintPath>..\libs\devexpress\DevExpress.Office.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v22.1.Core">
+      <HintPath>..\libs\devexpress\DevExpress.Pdf.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v22.1.Drawing">
+      <HintPath>..\libs\devexpress\DevExpress.Pdf.v22.1.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\devexpress\DevExpress.Printing.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Snap.v22.1.Core">
+      <HintPath>..\libs\devexpress\DevExpress.Snap.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v22.1.Core">
+      <HintPath>..\libs\devexpress\DevExpress.Sparkline.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v22.1.Core">
+      <HintPath>..\libs\devexpress\DevExpress.Spreadsheet.v22.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\devexpress\DevExpress.Utils.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v22.1.UI">
+      <HintPath>..\libs\devexpress\DevExpress.Utils.v22.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\devexpress\DevExpress.XtraEditors.v22.1.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader">
+      <HintPath>..\libs\devexpress\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet">
+      <HintPath>..\libs\devexpress\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat">
+      <HintPath>..\libs\devexpress\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagePack, Version=2.5.0.0, Culture=neutral, PublicKeyToken=b4a0369545f0a1be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\devexpress\MessagePack.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagePack.Annotations, Version=2.5.0.0, Culture=neutral, PublicKeyToken=b4a0369545f0a1be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\devexpress\MessagePack.Annotations.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Microsoft.NET.StringTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\devexpress\Microsoft.NET.StringTools.dll</HintPath>
+    </Reference>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\Software\ComLateBinding.cs" />
+    <Compile Include="PluginPackage.cs" />
+    <Compile Include="Actions\Software\ComScope.cs" />
+    <Compile Include="Actions\Software\ExcelWindow.cs" />
+    <Compile Include="Actions\Software\ExcelExtension.cs" />
+    <Compile Include="Actions\Software\ExcelObject.cs" />
+    <Compile Include="Actions\Software\SoftwareExcel.ExportRangeAsPicture.cs" />
+    <Compile Include="Filter\Executing\SaveInstanceFilter.cs" />
+    <Compile Include="Filter\Executing\CloseFilter.cs" />
+    <Compile Include="Models\ActionContext.cs" />
+    <Compile Include="Addin\MacroArgs.cs" />
+    <Compile Include="Config\ExcelConfigurations.cs" />
+    <Compile Include="ExcelException.cs" />
+    <Compile Include="Filter\Executed\AddinFilter.cs" />
+    <Compile Include="Filter\Executing\ActionParamsFilter.cs" />
+    <Compile Include="Filter\Executing\InsertActionFilter.cs" />
+    <Compile Include="Filter\Executing\MacroActionFilter.cs" />
+    <Compile Include="Filter\Executing\ReadContentFilter.cs" />
+    <Compile Include="Filter\Executing\TimoutFilter.cs" />
+    <Compile Include="Filter\Executing\DisposeFilter.cs" />
+    <Compile Include="Filter\Executing\ExcelInstanceFilter.cs" />
+    <Compile Include="Filter\Exception\ExceptionFilter.cs" />
+    <Compile Include="Filter\Executing\NegativeColumnRowFilter.cs" />
+    <Compile Include="Filter\Executed\SaveActionFilter.cs" />
+    <Compile Include="Filter\Executed\SaveWorkbookFilter.cs" />
+    <Compile Include="Filter\Executed\TimeoutFilter.cs" />
+    <Compile Include="Filter\Executing\WriteContentFilter.cs" />
+    <Compile Include="Forms\ExcelForm.xaml.cs">
+      <DependentUpon>ExcelForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CellFormat.cs" />
+    <Compile Include="Models\RangeMode.cs" />
+    <Compile Include="Models\SerializeData.cs" />
+    <Compile Include="Models\SortRule.cs" />
+    <Compile Include="Params\CellFormatParams.cs" />
+    <Compile Include="Params\ColumnSplitParam.cs" />
+    <Compile Include="Params\ParamSaveInstance.cs" />
+    <Compile Include="Params\ParamGetSystemFont.cs" />
+    <Compile Include="Plugins\SaveInstance.cs" />
+    <Compile Include="Plugins\GetSystemFont.cs" />
+    <Compile Include="Plugins\Base\ExcelAbilityBase.cs" />
+    <Compile Include="Utils\HookManager.cs" />
+    <Compile Include="Utils\NativeUtils.cs" />
+    <Compile Include="Filter\FilterType.cs" />
+    <Compile Include="Filter\ActionFilter.cs" />
+    <Compile Include="Utils\ProcessUtils.cs" />
+    <Compile Include="Utils\StringCipher.cs" />
+    <Compile Include="Excel.cs" />
+    <Compile Include="Utils\ExcelUtils.cs" />
+    <Compile Include="Utils\CellChunkFiles.cs" />
+    <Compile Include="Actions\Software\SheetEdit.Legacy.cs" />
+    <Compile Include="Actions\Software\SheetInfo.Legacy.cs" />
+    <Compile Include="Actions\Non-Software\SheetInfo.Legacy.cs" />
+    <Compile Include="Actions\Non-Software\SheetEdit.Legacy.cs" />
+    <Compile Include="Utils\ExcelTransferPerformance.cs" />
+    <Compile Include="Forms\ExcelFormContext.cs" />
+    <Compile Include="IExcel.cs" />
+    <Compile Include="Actions\Non-Software\NonSoftwareExcel.cs" />
+    <Compile Include="Actions\Non-Software\SheetEdit.cs" />
+    <Compile Include="Actions\Non-Software\SheetInfo.cs" />
+    <Compile Include="Actions\Non-Software\Workbook.cs" />
+    <Compile Include="Actions\Non-Software\Worksheet.cs" />
+    <Compile Include="Params\ParamRuleModel.cs" />
+    <Compile Include="Params\ParamRunModel.cs" />
+    <Compile Include="Plugins\GetExcelRule.cs" />
+    <Compile Include="Plugins\Run.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\ExcelRange.cs" />
+    <Compile Include="Models\FilterRule.cs" />
+    <Compile Include="Models\PivotTableRule.cs" />
+    <Compile Include="Actions\Software\SheetEdit.cs" />
+    <Compile Include="Actions\Software\SheetInfo.cs" />
+    <Compile Include="Actions\Software\SoftwareExcel.cs" />
+    <Compile Include="Actions\Software\Workbook.cs" />
+    <Compile Include="Actions\Software\Worksheet.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AGENTS.md" />
+    <None Include="app.config" />
+    <None Include="Config\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\plugin.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Forms\ExcelForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Forms\Range.png" />
+    <Resource Include="Forms\PivotTable.png" />
+    <Resource Include="Forms\CellFormat.png" />
+    <Resource Include="Forms\Sort.png" />
+    <Resource Include="Forms\Default.png" />
+    <Content Include="VBScript\瀹?.bas">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\II.RPA.Core\II.RPA.Core.Provider\II.RPA.Core.Provider.csproj" />
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  <Target Name="DeployExcelPlugin" AfterTargets="AfterBuild" Condition="'$(SkipExcelPluginDeployment)' != 'true'">
+    <PropertyGroup>
+      <_PluginName>Excel</_PluginName>
+      <_SolutionDir Condition="'$(SolutionDir)' != '' And '$(SolutionDir)' != '*Undefined*'">$(SolutionDir)</_SolutionDir>
+      <_SolutionDir Condition="'$(SolutionDir)' == '' Or '$(SolutionDir)' == '*Undefined*'">$(MSBuildProjectDirectory)\..\</_SolutionDir>
+      <_RuntimePluginDir>$(_SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimePluginDir>
+      <_RuntimeCsDir>$(_SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimeCsDir>
+      <_RuntimeVbDir>$(_SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\vb\</_RuntimeVbDir>
+    </PropertyGroup>
+    <RemoveDir Directories="$(_RuntimeCsDir)" Condition="Exists('$(_RuntimeCsDir)')" />
+    <RemoveDir Directories="$(_RuntimeVbDir)" Condition="Exists('$(_RuntimeVbDir)')" />
+    <MakeDir Directories="$(_RuntimePluginDir);$(_RuntimeCsDir);$(_RuntimeVbDir)" />
+    <Copy SourceFiles="$(TargetDir)Config\config.json" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <ItemGroup>
+      <_MainOutput Include="$(TargetDir)$(TargetName).*" />
+      <_VbScript Include="$(TargetDir)VBScript\**\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_MainOutput)" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="@(_VbScript)" DestinationFolder="$(_RuntimeVbDir)%(_VbScript.RecursiveDir)" SkipUnchangedFiles="false" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>echo //taskkill /f /im II.RPA.RuntimeHost.exe</PreBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    </ItemGroup>
+</Project>
+
+
+
+
+
+
+

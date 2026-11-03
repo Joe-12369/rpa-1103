@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Plugin.IE</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.IE</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>Library</OutputType>
+    
+    <RootNamespace>II.RPA.Plugin.IE</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.IE</AssemblyName>
+    
+    
+    <Deterministic>true</Deterministic>
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    
+    
+    <Reference Include="Interop.MSHTML">
+      <HintPath>..\libs\Interop.MSHTML.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.SHDocVw">
+      <HintPath>..\libs\Interop.SHDocVw.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\Configurations.cs" />
+    <Compile Include="IEException.cs" />
+    <Compile Include="PluginPackage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="V2\Automation\Core\IEHelper.cs" />
+    <Compile Include="V2\Automation\Core\LowKernelQuerySelector.cs" />
+    <Compile Include="V2\Automation\Provider\BrowserProvider.cs" />
+    <Compile Include="V2\Automation\Provider\DocumentProvider.cs" />
+    <Compile Include="V2\Automation\IEAutomation.cs" />
+    <Compile Include="V2\Automation\Provider\EnumWindow\WindowHandleInfo.cs" />
+    <Compile Include="V2\Automation\Core\ThreadManager.cs" />
+    <Compile Include="V2\CreateBrowserBasic\IECreater.cs" />
+    <Compile Include="V2\DownloaderBasic\IEDownloader.cs" />
+    <Compile Include="V2\Extentions\IHTMLElement2Ext.cs" />
+    <Compile Include="V2\IEWebDataProvider.cs" />
+    <Compile Include="V2\Automation\ParamsModel.cs" />
+    <Compile Include="V2\Automation\ParamsResolver.cs" />
+    <Compile Include="V2\Automation\Provider\EnumWindow\HTMLDocumentEnumerator.cs" />
+    <Compile Include="V2\Automation\Provider\EnumWindow\WindowEnumerator.cs" />
+    <Compile Include="V2\Automation\Provider\EnumWindow\WindowInfo.cs" />
+    <Compile Include="V2\Automation\Provider\DocumentHelper.cs" />
+    <Compile Include="V2\Automation\Provider\FindWebBrowser.cs" />
+    <Compile Include="V2\Automation\Provider\WebWindowHelper.cs" />
+    <Compile Include="V2\Automation\Provider\IEExtensionProvider.cs" />
+    <Compile Include="V2\Automation\Provider\IEModel.cs" />
+    <Compile Include="V2\Automation\Provider\OLEACC.cs" />
+    <Compile Include="V2\Automation\Provider\RunJavaScript.cs" />
+    <Compile Include="V2\Automation\Provider\TabActivator.cs" />
+    <Compile Include="V2\Automation\Provider\Utils.cs" />
+    <Compile Include="V2\BrowserAction.cs" />
+    <Compile Include="V2\GuiOperator.cs" />
+    <Compile Include="V2\IEBrowser.cs" />
+    <Compile Include="V2\IEBrowserTabPage.cs" />
+    <Compile Include="V2\IEGuiNode.cs" />
+    <Compile Include="V2\IEPageElement.cs" />
+    <Compile Include="V2\JavaScriptExecutor.cs" />
+    <Compile Include="V2\PublicDefineIE.cs" />
+    <Compile Include="V2\SwitchToIEWebbrowser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Config\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\plugin.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlaUI.Core\FlaUI.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.GUI.Commons\II.RPA.Plugin.GUI.Commons.csproj" />
+    <ProjectReference Include="..\II.RPA.Screenshot\II.RPA.Screenshot.csproj" />
+    <ProjectReference Include="..\II.RPA.WebBrowser.Common\II.RPA.WebBrowser.Common.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  <ItemGroup />
+  
+  <Target Name="DeployIEPlugin" AfterTargets="AfterBuild">
+    <PropertyGroup>
+      <_PluginName>GUIIE</_PluginName>
+      <_RuntimePluginDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimePluginDir>
+      <_RuntimeCsDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimeCsDir>
+    </PropertyGroup>
+    <RemoveDir Directories="$(_RuntimeCsDir)" Condition="Exists('$(_RuntimeCsDir)')" />
+    <MakeDir Directories="$(_RuntimePluginDir);$(_RuntimeCsDir)" />
+    <Copy SourceFiles="$(TargetDir)Config\config.json" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <ItemGroup>
+      <_MainOutput Include="$(TargetDir)$(TargetName).*" />
+      <_RuntimeDeps Include="$(TargetDir)HtmlAgilityPack.*" />
+      <_RuntimeDeps Include="$(TargetDir)Interop.SHDocVw.*" />
+      <_RuntimeDeps Include="$(TargetDir)II.RPA.DataCapture.*" />
+      <_RuntimeDeps Include="$(TargetDir)II.RPA.Screenshot.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_MainOutput)" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="@(_RuntimeDeps)" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+  </Target>
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.39" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+</Project>
+
+
+
+

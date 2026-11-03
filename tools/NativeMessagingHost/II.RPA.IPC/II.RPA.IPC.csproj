@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net48;net10.0-windows</TargetFrameworks>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.IPC</RootNamespace>
+    <AssemblyName>II.RPA.IPC</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <LangVersion>latest</LangVersion>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+
+  <!-- .NET 10 consumers use the WCF client and Named Pipe transport.
+       The net48 target also retains the legacy WCF server for NativeMessagingHost. -->
+  <ItemGroup>
+    <Compile Include="NamedPipe\Abstractions\INamedPipeRequestHandler.cs" />
+    <Compile Include="NamedPipe\Abstractions\NamedPipeRequestContext.cs" />
+    <Compile Include="NamedPipe\Client\NamedPipeClient.cs" />
+    <Compile Include="NamedPipe\Framing\NamedPipeFrameProtocol.cs" />
+    <Compile Include="NamedPipe\Framing\NamedPipeFrameReader.cs" />
+    <Compile Include="NamedPipe\Framing\NamedPipeFrameWriter.cs" />
+    <Compile Include="NamedPipe\Connections\NamedPipeServerConnection.cs" />
+    <Compile Include="NamedPipe\NamedPipeClientOptions.cs" />
+    <Compile Include="NamedPipe\NamedPipeServerOptions.cs" />
+    <Compile Include="NamedPipe\Security\CurrentUserPipeSecurity.cs" />
+    <Compile Include="NamedPipe\Server\NamedPipeServer.cs" />
+    <Compile Include="Wcf\Client\ClientGenerator.cs" />
+    <Compile Include="Wcf\Config\PipeConfig.cs" />
+    <Compile Include="Wcf\Client\IClient.cs" />
+    <Compile Include="Wcf\Contracts\IMessageExchange.cs" />
+    <Compile Include="Wcf\Client\IPCGenericDecoratorExtension.cs" />
+    <Compile Include="Wcf\Client\IPCPipeClient.cs" />
+    <Compile Include="Wcf\Server\IPCPipeServer.cs" Condition="'$(TargetFramework)' == 'net48'" />
+    <Compile Include="Wcf\Contracts\IResponseResult.cs" />
+    <Compile Include="Wcf\Server\IServer.cs" Condition="'$(TargetFramework)' == 'net48'" />
+    <Compile Include="Wcf\Server\IServerBuilder.cs" Condition="'$(TargetFramework)' == 'net48'" />
+    <Compile Include="Wcf\Server\IServiceConfig.cs" />
+    <Compile Include="Wcf\Contracts\IRequestParams.cs" />
+    <Compile Include="Wcf\Builder\PipeServerBuilder.cs" Condition="'$(TargetFramework)' == 'net48'" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Wcf\Server\ServerGenerator.cs" Condition="'$(TargetFramework)' == 'net48'" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Condition="'$(TargetFramework)' != 'net48'" Include="System.ServiceModel.Primitives" Version="8.1.2" />
+    <PackageReference Condition="'$(TargetFramework)' != 'net48'" Include="System.ServiceModel.NetNamedPipe" Version="8.1.2" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+</Project>

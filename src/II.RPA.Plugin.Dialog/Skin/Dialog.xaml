@@ -1,0 +1,93 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:conv="clr-namespace:II.RPA.Plugin.Dialog.Converts"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <DataTemplate x:Key="Error">
+        <ContentControl x:Name="PART_Max" Background="Transparent"
+        BorderThickness="0"
+        Focusable="False"
+        UseLayoutRounding="True">
+            <!--  normal state  -->
+            <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+                <Canvas Canvas.Left="0" Canvas.Top="0" Width="24" Height="24">
+                    <Canvas.RenderTransform>
+                        <TranslateTransform X="0" Y="0"/>
+                    </Canvas.RenderTransform>
+                    <Canvas.Resources/>
+                    <!--Unknown tag: sodipodi:namedview-->
+                    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path20" Fill="#FF6151">
+                        <Path.Data>
+                            <PathGeometry Figures="M12 2C6.5 2 2 6.5 2 12c0 5.5 4.5 10 10 10c5.5 0 10-4.5 10-10C22 6.5 17.5 2 12 2z M16.7 15.3  c0.4 0.4 0.4 1 0 1.4C16.5 16.9 16.3 17 16 17c-0.3 0-0.5-0.1-0.7-0.3L12 13.4l-3.3 3.3C8.5 16.9 8.3 17 8 17s-0.5-0.1-0.7-0.3  c-0.4-0.4-0.4-1 0-1.4l3.3-3.3L7.3 8.7c-0.4-0.4-0.4-1 0-1.4s1-0.4 1.4 0l3.3 3.3l3.3-3.3c0.4-0.4 1-0.4 1.4 0s0.4 1 0 1.4L13.4 12  L16.7 15.3z" FillRule="NonZero"/>
+                        </Path.Data>
+                    </Path>
+                </Canvas>
+            </Viewbox>
+        </ContentControl>
+    </DataTemplate>
+
+    <DataTemplate x:Key="Question">
+        <ContentControl x:Name="PART_Restore" Background="Transparent"
+        BorderThickness="0"
+        Focusable="False"
+        UseLayoutRounding="True">
+            <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+                <Canvas  Canvas.Left="0" Canvas.Top="0" Width="24" Height="24">
+                    <Canvas.RenderTransform>
+                        <TranslateTransform X="0" Y="0"/>
+                    </Canvas.RenderTransform>
+                    <Canvas.Resources/>
+                    <!--Unknown tag: sodipodi:namedview-->
+                    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path128" Fill="#848A90">
+                        <Path.Data>
+                            <PathGeometry Figures="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2z M12.5 19h-1c-0.3 0-0.5-0.2-0.5-0.5v-1  c0-0.3 0.2-0.5 0.5-0.5h1c0.3 0 0.5 0.2 0.5 0.5v1C13 18.8 12.8 19 12.5 19z M15.1 11.2l-0.9 0.9C13.4 12.9 13 13.5 13 15h-2v-0.5  c0-1.1 0.4-2.1 1.2-2.8l1.2-1.3c0.5-0.4 0.7-1.1 0.6-1.8c-0.1-0.7-0.7-1.3-1.4-1.5c-1.1-0.3-2.1 0.3-2.5 1.3C10 8.7 9.7 9 9.3 9H9  C8.4 9 8 8.4 8.2 7.9C8.6 6.4 9.8 5.3 11.4 5c1.5-0.2 3 0.5 3.9 1.8C16.4 8.5 16.1 10.2 15.1 11.2z" FillRule="NonZero"/>
+                        </Path.Data>
+                    </Path>
+                </Canvas>
+            </Viewbox>
+        </ContentControl>
+    </DataTemplate>
+
+    <DataTemplate x:Key="Info">
+        <ContentControl x:Name="PART_Restore" Background="Transparent"
+        BorderThickness="0"
+        Focusable="False"
+        UseLayoutRounding="True">
+            <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+                <Canvas Canvas.Left="0" Canvas.Top="0" Width="24" Height="24">
+                    <Canvas.RenderTransform>
+                        <TranslateTransform X="0" Y="0"/>
+                    </Canvas.RenderTransform>
+                    <Canvas.Resources/>
+                    <!--Unknown tag: sodipodi:namedview-->
+                    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path151" Fill="#FF8910">
+                        <Path.Data>
+                            <PathGeometry Figures="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2z M12 17L12 17c-0.6 0-1-0.4-1-1v-4  c0-0.6 0.4-1 1-1l0 0c0.6 0 1 0.4 1 1v4C13 16.6 12.6 17 12 17z M12.5 9h-1C11.2 9 11 8.8 11 8.5v-1C11 7.2 11.2 7 11.5 7h1  C12.8 7 13 7.2 13 7.5v1C13 8.8 12.8 9 12.5 9z" FillRule="NonZero"/>
+                        </Path.Data>
+                    </Path>
+                </Canvas>
+            </Viewbox>
+        </ContentControl>
+    </DataTemplate>
+
+    <DataTemplate x:Key="Warn">
+        <ContentControl x:Name="PART_Restore" Background="Transparent"
+        BorderThickness="0"
+        Focusable="False"
+        UseLayoutRounding="True">
+            <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+                <Canvas Canvas.Left="0" Canvas.Top="0" Width="24" Height="24">
+                    <Canvas.RenderTransform>
+                        <TranslateTransform X="0" Y="0"/>
+                    </Canvas.RenderTransform>
+                    <Canvas.Resources/>
+                    <!--Unknown tag: sodipodi:namedview-->
+                    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path174" Fill="#FF8910">
+                        <Path.Data>
+                            <PathGeometry Figures="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2z M12.5 17h-1c-0.3 0-0.5-0.2-0.5-0.5v-1  c0-0.3 0.2-0.5 0.5-0.5h1c0.3 0 0.5 0.2 0.5 0.5v1C13 16.8 12.8 17 12.5 17z M12 13L12 13c-0.6 0-1-0.4-1-1V8c0-0.6 0.4-1 1-1l0 0  c0.6 0 1 0.4 1 1v4C13 12.6 12.6 13 12 13z" FillRule="NonZero"/>
+                        </Path.Data>
+                    </Path>
+                </Canvas>
+            </Viewbox>
+        </ContentControl>
+    </DataTemplate>
+</ResourceDictionary>

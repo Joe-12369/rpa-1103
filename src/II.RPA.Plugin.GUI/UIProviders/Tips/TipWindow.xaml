@@ -1,0 +1,50 @@
+﻿<Window
+    x:Class="II.RPA.Plugin.GUI.UIProviders.Tips.TipWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:control="clr-namespace:II.RPA.Plugin.GUI.UIProviders.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:II.RPA.Plugin.GUI.UIProviders.Tips"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="TipWindow"
+    AllowsTransparency="True"
+    Background="Transparent"
+    ShowActivated="False"
+    ShowInTaskbar="False"
+    SizeToContent="WidthAndHeight"
+    Topmost="True"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/UIProviders/Controls/IconControl.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Border
+            Name="PART_Border"
+            Width="auto"
+            Height="64"
+            Margin="8"
+            Background="#EAFAF1"
+            BorderBrush="#D9DDE6"
+            BorderThickness="1"
+            CornerRadius="8">
+            <Border.Effect>
+                <DropShadowEffect
+                    BlurRadius="8"
+                    ShadowDepth="0"
+                    Color="#B7B7B7" />
+            </Border.Effect>
+        </Border>
+        <StackPanel
+            x:Name="PART_MainPanel"
+            Margin="1,1,20,0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Center"
+            Orientation="Horizontal" />
+    </Grid>
+</Window>

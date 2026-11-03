@@ -1,0 +1,28 @@
+﻿<UserControl
+    x:Class="II.RPA.Plugin.GUI.UIProviders.Controls.Done"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:II.RPA.Plugin.GUI.UIProviders.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <Grid>
+        <Viewbox Stretch="Uniform">
+            <Canvas Width="1024" Height="1024">
+                <Ellipse
+                    Width="1024"
+                    Height="1024"
+                    Fill="White"
+                    Stroke="Transparent"
+                    StrokeThickness="172" />
+                <Path Fill="#00B856">
+                    <Path.Data>
+                        <PathGeometry Figures="M512 85.333333C277.333333 85.333333 85.333333 277.333333 85.333333 512s192 426.666667 426.666667 426.666667 426.666667-192 426.666667-426.666667S746.666667 85.333333 512 85.333333z m243.2 328.533334l-298.666667 298.666666c-8.533333 8.533333-17.066667 12.8-29.866666 12.8s-21.333333-4.266667-29.866667-12.8l-128-128c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l98.133334 98.133333 268.8-268.8c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733334z" FillRule="NonZero" />
+                    </Path.Data>
+                </Path>
+            </Canvas>
+        </Viewbox>
+    </Grid>
+</UserControl>

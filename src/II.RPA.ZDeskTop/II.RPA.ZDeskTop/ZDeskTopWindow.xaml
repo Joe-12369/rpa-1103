@@ -1,0 +1,384 @@
+﻿<iiui:BaseIIWindow
+    x:Class="II.RPA.ZDeskTop.ZDeskTopWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:axrdp="clr-namespace:AxMSTSCLib;assembly=AxInterop.MSTSCLib"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:res="clr-namespace:II.Framework.Resource;assembly=II.Framework"
+    xmlns:ii="clr-namespace:II.Framework;assembly=II.Framework"
+    xmlns:iiui="clr-namespace:II.Framework.UI;assembly=II.Framework.UI"
+    xmlns:local="clr-namespace:II.RPA.ZDeskTop"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    Name="MainWindow"
+    Title="{Binding Path=AppName, Source={x:Static ii:AppMeta.Default}}"
+    Icon="/Resources/z-decktop.ico"
+    UseLayoutRounding="True"
+    WindowStyle="SingleBorderWindow"
+    mc:Ignorable="d">
+    <iiui:BaseIIWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/II.Framework.UI;component/Styles/II.Brushes.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/II.RPA.ZDesktop;component/Resources/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <iiui:BoolToVisibiliyConverter x:Key="BoolToVisibiliyConverter" />
+            <iiui:BoolsToVisibiliyConverter x:Key="BoolsToVisibiliyConverter" />
+            <Style x:Key="TitleBarButtonStyle" TargetType="{x:Type Button}">
+                <Setter Property="Foreground" Value="{StaticResource TitleBarForegroundGrayBrush}" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border
+                                Width="25"
+                                Height="25"
+                                Padding="0"
+                                CornerRadius="5">
+                                <Border.Background>
+                                    <SolidColorBrush x:Name="BackgroundColor" Color="#00000000" />
+                                </Border.Background>
+                                <Viewbox
+                                    Width="16.7"
+                                    Height="16.7"
+                                    Stretch="Uniform">
+                                    <Canvas
+                                        Canvas.Left="0"
+                                        Canvas.Top="0"
+                                        Width="1024"
+                                        Height="1024">
+                                        <Path Data="{TemplateBinding Tag}" Fill="{TemplateBinding Foreground}" />
+                                    </Canvas>
+                                </Viewbox>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="true">
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard>
+                                            <Storyboard Storyboard.TargetName="BackgroundColor" Storyboard.TargetProperty="Color">
+                                                <ColorAnimation To="{StaticResource ButtonMouseOverBackground}" Duration="0:0:0.1" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.EnterActions>
+                                    <Trigger.ExitActions>
+                                        <BeginStoryboard>
+                                            <Storyboard Storyboard.TargetName="BackgroundColor" Storyboard.TargetProperty="Color">
+                                                <ColorAnimation To="#00000000" Duration="0:0:0.1" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.ExitActions>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="TitleBarContentButtonStyle" TargetType="{x:Type Button}">
+                <Setter Property="Foreground" Value="#FFFFFF" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border
+                                Width="auto"
+                                Height="25"
+                                Padding="0"
+                                CornerRadius="5">
+                                <Border.Background>
+                                    <SolidColorBrush x:Name="BackgroundColor" Color="#44464E" />
+                                </Border.Background>
+                                <StackPanel Margin="9,0,9,0" Orientation="Horizontal">
+                                    <Viewbox
+                                        Width="16.7"
+                                        Height="16.7"
+                                        RenderTransformOrigin="0.5,0.5"
+                                        Stretch="Uniform">
+                                        <Canvas
+                                            Canvas.Left="0"
+                                            Canvas.Top="0"
+                                            Width="1024"
+                                            Height="1024">
+                                            <Path Data="{TemplateBinding Tag}" Fill="{TemplateBinding Foreground}" />
+                                        </Canvas>
+                                        <Viewbox.RenderTransform>
+                                            <RotateTransform x:Name="rotate" Angle="0" />
+                                        </Viewbox.RenderTransform>
+                                    </Viewbox>
+                                    <ContentPresenter
+                                        Margin="8,0,0,0"
+                                        VerticalAlignment="Center"
+                                        Content="{TemplateBinding Content}" />
+                                </StackPanel>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsHitTestVisible" Value="False">
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard x:Name="Rotate">
+                                            <Storyboard>
+                                                <DoubleAnimation
+                                                    RepeatBehavior="Forever"
+                                                    Storyboard.TargetName="rotate"
+                                                    Storyboard.TargetProperty="Angle"
+                                                    To="360"
+                                                    Duration="0:0:3" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.EnterActions>
+                                    <Trigger.ExitActions>
+                                        <StopStoryboard BeginStoryboardName="Rotate" />
+                                    </Trigger.ExitActions>
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="true">
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard>
+                                            <Storyboard Storyboard.TargetName="BackgroundColor" Storyboard.TargetProperty="Color">
+                                                <ColorAnimation
+                                                    From="#44464E"
+                                                    To="{StaticResource ButtonMouseOverBackground}"
+                                                    Duration="0:0:0.1" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.EnterActions>
+                                    <Trigger.ExitActions>
+                                        <BeginStoryboard>
+                                            <Storyboard Storyboard.TargetName="BackgroundColor" Storyboard.TargetProperty="Color">
+                                                <ColorAnimation Duration="0:0:0.1" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.ExitActions>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </iiui:BaseIIWindow.Resources>
+    <iiui:BaseIIWindow.WindowCenterTitleBar>
+        <iiui:WindowTitleBar>
+            <StackPanel
+                Margin="150,0,0,0"
+                HorizontalAlignment="Center"
+                Orientation="Horizontal"
+                Visibility="{Binding MiniOperationVisibility, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <StackPanel
+                    Orientation="Horizontal"
+                    Visibility="{Binding PauseOperationVisibility, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                    <Button
+                        Command="{Binding PauseCommand}"
+                        CommandParameter="{x:Static sys:Boolean.TrueString}"
+                        Content="{x:Static res:i18n_Resource.ZDeskTopWindow_5A010A8}"
+                        Cursor="Hand"
+                        Style="{StaticResource TitleBarContentButtonStyle}"
+                        ToolTip="{x:Static res:i18n_Resource.ZDeskTopWindow_5A010A8}">
+                        <Button.Tag>
+                            <PathGeometry Figures="M 512 73.1429 a 438.857 438.857 0 1 1 0 877.714 A 438.857 438.857 0 0 1 512 73.1429 z M 438.857 365.714 H 365.714 v 292.571 h 73.1429 V 365.714 z m 219.429 0 H 585.143 v 292.571 h 73.1429 V 365.714 z" FillRule="Nonzero" />
+                        </Button.Tag>
+                        <Button.Visibility>
+                            <MultiBinding Converter="{StaticResource BoolsToVisibiliyConverter}" ConverterParameter="{x:Static sys:Boolean.FalseString}">
+                                <Binding Path="IsPaused" />
+                                <Binding Path="IsPausing" />
+                            </MultiBinding>
+                        </Button.Visibility>
+                    </Button>
+                    <Button
+                        Command="{Binding PauseCommand}"
+                        CommandParameter="{x:Static sys:Boolean.FalseString}"
+                        Content="{x:Static res:i18n_Resource.ZDeskTopWindow_E7F8BEAA}"
+                        Cursor="Hand"
+                        Style="{StaticResource TitleBarContentButtonStyle}"
+                        Visibility="{Binding IsPaused, ConverterParameter={x:Static sys:Boolean.TrueString}, Converter={StaticResource BoolToVisibiliyConverter}}">
+                        <Button.Tag>
+                            <PathGeometry Figures="M 512 73.1429 a 438.857 438.857 0 1 1 0 877.714 A 438.857 438.857 0 0 1 512 73.1429 z m -58.5143 281.6 a 36.5714 36.5714 0 0 0 -36.5714 36.5714 v 228.937 a 36.5714 36.5714 0 0 0 56.832 30.5006 L 645.559 536.137 a 36.5714 36.5714 0 0 0 0 -60.8549 L 473.746 360.814 A 36.5714 36.5714 0 0 0 453.486 354.743 z" FillRule="Nonzero" />
+                        </Button.Tag>
+                    </Button>
+                    <Button
+                        Content="{x:Static res:i18n_Resource.ZDeskTopWindow_14FBDD42}"
+                        IsHitTestVisible="False"
+                        Style="{StaticResource TitleBarContentButtonStyle}"
+                        ToolTip="{x:Static res:i18n_Resource.ZDeskTopWindow_14FBDD42}"
+                        Visibility="{Binding IsPausing, ConverterParameter={x:Static sys:Boolean.TrueString}, Converter={StaticResource BoolToVisibiliyConverter}}">
+                        <Button.Tag>
+                            <PathGeometry Figures="M 512 64 c 247.424 0 448 200.576 448 448 c 0 98.56 -32 192.427 -90.0693 269.483 a 42.6667 42.6667 0 0 1 -68.1387 -51.3707 A 360.832 360.832 0 0 0 874.667 512 a 362.667 362.667 0 1 0 -362.667 362.667 a 42.6667 42.6667 0 0 1 0 85.3333 C 264.576 960 64 759.424 64 512 S 264.576 64 512 64 z" FillRule="Nonzero" />
+                        </Button.Tag>
+                    </Button>
+                </StackPanel>
+                <Button
+                    Margin="6,0,0,0"
+                    Command="{Binding SetMiniCommand}"
+                    Content="{x:Static res:i18n_Resource.ZDeskTopWindow_11703F4D}"
+                    Cursor="Hand"
+                    Style="{StaticResource TitleBarContentButtonStyle}"
+                    ToolTip="{x:Static res:i18n_Resource.ZDeskTopWindow_11703F4D}">
+                    <Button.Tag>
+                        <PathGeometry Figures="M 835.84 128 l -183.467 183.04 L 554.667 213.333 v 256 h 256 l -97.7067 -97.7067 L 896 188.16 z M 213.333 554.667 l 97.7067 97.7067 L 128 835.84 L 188.16 896 l 183.467 -183.04 L 469.333 810.667 v -256 z" FillRule="Nonzero" />
+                    </Button.Tag>
+                </Button>
+            </StackPanel>
+        </iiui:WindowTitleBar>
+    </iiui:BaseIIWindow.WindowCenterTitleBar>
+    <iiui:BaseIIWindow.WindowTitleBar>
+        <iiui:WindowTitleBar>
+            <ToggleButton
+                Width="auto"
+                Margin="2,2,0,0"
+                VerticalAlignment="Center"
+                Content="{x:Static res:i18n_Resource.ZDeskTopWindow_F3B57A9A}"
+                Cursor="Hand"
+                Foreground="#D9DDE6"
+                IsChecked="{Binding IsAllowOperation}">
+                <ToggleButton.Template>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <StackPanel Orientation="Horizontal">
+                            <Border
+                                x:Name="Border"
+                                Width="16"
+                                Height="16"
+                                Background="#30333C"
+                                BorderBrush="#838A90"
+                                BorderThickness="2"
+                                CornerRadius="4">
+                                <Viewbox
+                                    Name="CheckMark"
+                                    Width="20"
+                                    Height="20"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Visibility="Collapsed">
+                                    <Canvas Width="24" Height="24">
+                                        <Path
+                                            x:Name="gou"
+                                            Data="M16.6,7.2c0.4,0.3,0.6,0.9,0.2,1.4l-5,7c-0.3,0.5-1,0.6-1.5,0.2l-3-2.6c-0.4-0.4-0.5-1-0.1-1.4c0.4-0.4,1-0.5,1.4-0.1l2.2,1.9l4.4-6.1C15.5,7,16.1,6.9,16.6,7.2z"
+                                            Fill="#0085FF" />
+                                    </Canvas>
+                                </Viewbox>
+                            </Border>
+                            <TextBlock
+                                Margin="3,0,0,0"
+                                VerticalAlignment="Center"
+                                Foreground="{TemplateBinding Foreground}"
+                                Text="{TemplateBinding Content}" />
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal" />
+                                    <VisualState x:Name="MouseOver" />
+                                    <VisualState x:Name="Pressed" />
+                                    <VisualState x:Name="Disabled" />
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckMark" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked" />
+                                    <VisualState x:Name="Indeterminate" />
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </StackPanel>
+                    </ControlTemplate>
+                </ToggleButton.Template>
+            </ToggleButton>
+            <ToggleButton
+                Margin="5,0,-10,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Cursor="Hand"
+                IsChecked="{Binding IsTopMost}"
+                ToolTip="{x:Static res:i18n_Resource.ZDeskTopWindow_E75E55AF}">
+                <ToggleButton.Template>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <StackPanel Orientation="Horizontal">
+                            <Border
+                                Width="16"
+                                Height="16"
+                                Background="Transparent"
+                                BorderBrush="#838A90"
+                                BorderThickness="0"
+                                CornerRadius="4">
+                                <Viewbox
+                                    x:Name="icon"
+                                    Width="16"
+                                    Height="16"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                                    <Canvas Width="24" Height="24">
+                                        <Path
+                                            x:Name="gou"
+                                            Data="M17.2,2.5c0.5,0,1.1,0.2,1.5,0.5l0.2,0.1l2,2C21.7,6,21.7,7.3,21,8.3l-0.1,0.2l-4.4,4.3c1,2.8,0.4,5.9-1.5,8.2  l-0.2,0.2c-0.1,0.2-0.3,0.3-0.5,0.3l0,0c-0.2,0-0.4-0.1-0.5-0.2l-4.5-4.4l-4,4c-0.2,0.3-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.2-0.9-0.4  C3.2,20.6,3,20.3,3,20c0-0.3,0.2-0.6,0.4-0.9l4-4l-4.6-4.7c-0.3-0.3-0.4-0.8-0.1-1.2l0.1-0.1c2.3-2,5.5-2.6,8.4-1.6l4.4-4.3  C15.9,2.8,16.5,2.5,17.2,2.5z M8.3,8.9C7.1,8.9,6,9.2,4.9,9.8l9.2,9.2c1.5-2.5,1.2-5.7-0.8-7.9l-0.2-0.2C11.8,9.6,10.1,8.9,8.3,8.9z   M17.2,4.4c-0.1,0-0.2,0-0.2,0.1l-0.1,0.1L13,8.4c0.5,0.3,1,0.7,1.4,1.1c0.4,0.4,0.8,0.9,1.1,1.4l3.9-3.9c0.1-0.1,0.2-0.4,0-0.5  l-0.1-0.1l-1.9-1.9C17.4,4.4,17.3,4.4,17.2,4.4z"
+                                            Fill="#0085FF" />
+                                    </Canvas>
+                                </Viewbox>
+                            </Border>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal" />
+                                    <VisualState x:Name="MouseOver" />
+                                    <VisualState x:Name="Pressed" />
+                                    <VisualState x:Name="Disabled" />
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Checked" />
+                                    <VisualState x:Name="Unchecked">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetName="gou" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                                                <EasingColorKeyFrame KeyTime="0" Value="#D9DDE6" />
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Indeterminate" />
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </StackPanel>
+                    </ControlTemplate>
+                </ToggleButton.Template>
+            </ToggleButton>
+            <Button
+                Click="Setting_Click"
+                Style="{StaticResource TitleBarButtonStyle}"
+                ToolTip="{x:Static res:i18n_Resource.ZDeskTopWindow_F3C259DD}">
+                <Button.Tag>
+                    <PathGeometry Figures="M413.866667 85.333333l-21.333334 106.666667c-34.133333 12.8-68.266667 34.133333-98.133333 55.466667L192 213.333333 93.866667 384l81.066666 72.533333c-4.266667 21.333333-4.266667 38.4-4.266666 55.466667s0 34.133333 4.266666 55.466667L93.866667 640l98.133333 170.666667 102.4-34.133334c29.866667 21.333333 59.733333 42.666667 93.866667 55.466667l25.6 106.666667h200.533333l21.333333-106.666667c34.133333-12.8 68.266667-29.866667 93.866667-55.466667l102.4 34.133334 98.133333-170.666667-81.066666-72.533333c4.266667-21.333333 4.266667-38.4 4.266666-55.466667s0-34.133333-4.266666-55.466667L930.133333 384l-98.133333-170.666667-102.4 34.133334c-29.866667-21.333333-59.733333-42.666667-93.866667-55.466667L610.133333 85.333333H413.866667z m68.266666 85.333334h59.733334l17.066666 85.333333 42.666667 17.066667c25.6 8.533333 51.2 25.6 72.533333 42.666666l38.4 29.866667 81.066667-29.866667 29.866667 51.2-64 55.466667 8.533333 46.933333c4.266667 17.066667 4.266667 29.866667 4.266667 42.666667s0 25.6-4.266667 42.666667l-8.533333 46.933333 64 55.466667-29.866667 51.2-81.066667-29.866667-38.4 29.866667c-21.333333 17.066667-46.933333 29.866667-72.533333 42.666666l-42.666667 17.066667-17.066666 85.333333h-59.733334l-17.066666-85.333333-42.666667-17.066667c-25.6-8.533333-51.2-25.6-72.533333-42.666666l-38.4-29.866667-81.066667 29.866667-29.866667-51.2 64-55.466667-4.266666-46.933333c-4.266667-17.066667-4.266667-29.866667-4.266667-42.666667 0-12.8 0-25.6 4.266667-42.666667l8.533333-46.933333-68.266667-55.466667 29.866667-51.2 81.066667 29.866667 38.4-29.866667c21.333333-17.066667 46.933333-29.866667 72.533333-42.666666l42.666667-17.066667 17.066666-85.333333z m29.866667 170.666666c-93.866667 0-170.666667 76.8-170.666667 170.666667s76.8 170.666667 170.666667 170.666667 170.666667-76.8 170.666667-170.666667-76.8-170.666667-170.666667-170.666667z m0 85.333334c46.933333 0 85.333333 38.4 85.333333 85.333333s-38.4 85.333333-85.333333 85.333333-85.333333-38.4-85.333333-85.333333 38.4-85.333333 85.333333-85.333333z" FillRule="NonZero" />
+                </Button.Tag>
+            </Button>
+            <Button
+                Click="Button_Click"
+                Style="{StaticResource TitleBarButtonStyle}"
+                ToolTip="{x:Static res:i18n_Resource.ZDeskTopWindow_7AB0B288}">
+                <Button.Tag>
+                    <PathGeometry Figures="M 512 96 c 229.76 0 416 186.24 416 416 s -186.24 416 -416 416 S 96 741.76 96 512 S 282.24 96 512 96 z m 0 64 C 317.6 160 160 317.6 160 512 s 157.6 352 352 352 s 352 -157.6 352 -352 S 706.4 160 512 160 z m -7.136 487.52 c 13.344 0 24.8 3.68 33.696 12.32 c 8.896 8 13.344 18.464 13.344 31.36 c 0 12.928 -5.088 23.392 -13.984 32 a 48.64 48.64 0 0 1 -33.056 12.32 a 46.4 46.4 0 0 1 -33.056 -12.928 a 42.048 42.048 0 0 1 -13.344 -31.36 c 0 -12.928 4.448 -23.392 13.344 -31.392 c 8.896 -8.64 20.352 -12.32 33.056 -12.32 z m 11.456 -360 c 40.672 0 73.728 10.464 99.168 32.64 c 25.44 21.504 38.144 51.04 38.144 88 c 0 30.144 -8.256 55.36 -24.16 75.04 c -5.728 6.784 -23.52 22.784 -53.408 48 a 102.848 102.848 0 0 0 -26.688 32 a 80.544 80.544 0 0 0 -10.176 40.64 v 10.464 h -68.032 v -10.464 c 0 -22.784 3.84 -42.464 12.704 -58.464 c 8.288 -17.248 32.448 -42.464 71.84 -76.32 l 10.816 -11.68 c 11.456 -14.176 17.792 -28.928 17.792 -44.928 c 0 -21.536 -6.336 -38.144 -18.432 -50.464 c -12.704 -12.32 -31.136 -18.464 -54.016 -18.464 c -28.608 0 -49.6 8.64 -62.304 26.464 c -11.456 14.784 -17.184 35.68 -17.184 62.784 h -66.752 c 0 -44.928 13.344 -80 40.064 -105.856 c 26.688 -26.464 63.552 -39.36 110.624 -39.36 z" FillRule="Nonzero" />
+                </Button.Tag>
+            </Button>
+            <Line
+                Margin="1,0,7,0"
+                Opacity="0.2"
+                Stroke="{StaticResource TitleBarForegroundGrayBrush}"
+                StrokeThickness="1"
+                X1="2"
+                X2="2"
+                Y1="3"
+                Y2="23" />
+        </iiui:WindowTitleBar>
+    </iiui:BaseIIWindow.WindowTitleBar>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="TitleRow" Height="0" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Border
+            x:Name="mainBorder"
+            Grid.Row="1"
+            Margin="-1"
+            Background="{Binding ElementName=MainWindow, Path=Background}"
+            BorderBrush="{Binding ElementName=MainWindow, Path=BorderBrush}"
+            BorderThickness="{Binding ElementName=MainWindow, Path=BorderThickness}">
+            <WindowsFormsHost
+                x:Name="host"
+                Margin="0,0,0,0"
+                Padding="0">
+                <axrdp:AxMsTscAxNotSafeForScripting x:Name="axRDP" />
+            </WindowsFormsHost>
+        </Border>
+    </Grid>
+</iiui:BaseIIWindow>

@@ -1,0 +1,5 @@
+{
+  "fileName": "II.RPA.Plugin.Java.dll",
+  //Java拾取模式 0:直接获取，1:逐层获取
+  "JavaCaptureMode": 1
+}

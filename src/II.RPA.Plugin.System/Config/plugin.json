@@ -1,0 +1,11 @@
+{
+  "name": "RPASystem",
+  "title": "系统类功能依赖包",
+  "version": "3.3.5.0",
+  "type": "1",
+  "depend": "7.3.5",
+  "DependRef": [],
+  "introduction": "提供了操作电脑系统类功能的底层能力。",
+  "description": "操作电脑系统类功能时需要依赖此组件包。",
+  "releaseTime": 1634054400
+}

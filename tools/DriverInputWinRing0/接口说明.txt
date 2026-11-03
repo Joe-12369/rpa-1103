@@ -1,0 +1,7 @@
+启动项 DriverInput.exe
+启动参数 --value=!@#$%^&WER34256768YJCDYIOJK^&*(I 
+              --timeout=1
+回车 
+--value="{ENTER}" --timeout=3
+--value="{enter}" --timeout=3
+启动案例 python代码截图

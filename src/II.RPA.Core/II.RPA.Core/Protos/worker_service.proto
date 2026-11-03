@@ -1,0 +1,96 @@
+syntax = "proto3";
+import "google/protobuf/any.proto";
+import "google/protobuf/struct.proto";
+package rpa.core.worker;
+
+message KernelCommand
+{
+  enum Type {
+    UNKNOWN = 0;
+    SHUTDONW = 1;
+    SUBSCRIBE_BROADCAST_BUS = 2;
+  }
+  Type type = 1;
+  google.protobuf.ListValue args = 2;
+  google.protobuf.Struct kvargs = 3;
+  google.protobuf.Any payload = 4;
+}
+
+message KernelRequest
+{
+  enum Type {
+    UNKNOWN = 0;
+    WAIT_SHARE = 1;
+    SUBSCRIBE_BROADCAST = 2;
+    WRITE_TOP_SHARE_CHANNEL = 3;
+    READ_TOP_SHARE_CHANNEL = 4;
+    COUNT_TOP_SHARE_CHANNEL = 5;
+    READ_TOP_SHARE = 6;
+    WRITE_TOP_SHARE = 7;
+    REMOVE_TOP_SHARE = 8;
+    TOP_SHARE_KEYS = 9;
+    CONTAIN_TOP_SHARE = 10;
+    START_TALKER = 11;
+    GET_TALKER = 12;
+  }
+  Type type = 1;
+  google.protobuf.ListValue args = 2;
+  google.protobuf.Struct kvargs = 3;
+  google.protobuf.Any payload = 4;
+}
+
+message ShareEvent
+{
+  enum Type {
+    UNKNOWN = 0;
+    SET = 1;
+    UNSET = 2;
+    WRITE = 3;
+    READ = 4;
+  }
+  string key = 1;
+  string id = 2;
+  string role = 3;
+  string name = 4;
+  Type type = 5;
+}
+
+message Reply
+{
+  google.protobuf.Any body = 1;
+}
+
+message FrameStream
+{
+  enum Type {
+    PING = 0;
+    REQUEST = 1;
+    COMMAND = 2;
+    REPLY = 3;
+    EVENT = 4;
+    PROXY = 5;
+  }
+  string id = 1;
+  string reply_id = 2;
+  Type type = 3;
+  string message = 4;
+  int32 code = 5;
+  google.protobuf.Any payload = 6;
+}
+
+message ChunkFrameStream
+{
+  repeated FrameStream frames = 1;
+}
+
+message ProxyFrameStream
+{
+  map<string, string> target_meta = 1;
+  FrameStream frame = 2;
+}
+
+service WorkerService
+{
+  rpc Talk(stream FrameStream) returns (stream FrameStream);
+  rpc ChunkTalk(stream ChunkFrameStream) returns (stream ChunkFrameStream);
+}

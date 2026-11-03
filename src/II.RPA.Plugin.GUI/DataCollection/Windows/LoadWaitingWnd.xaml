@@ -1,0 +1,97 @@
+﻿<Window x:Class="II.RPA.Plugin.GUI.DataCollection.Windows.LoadWaitingWnd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:II.RPA.Plugin.GUI.DataCollection.Windows"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Title="LoadWaitingWnd" Height="52" Width="166"
+        ShowInTaskbar="False" WindowStyle="None" AllowsTransparency="True" Topmost="True"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        Loaded="Window_Loaded"
+        >
+    <!--<Window.Template>
+        <ControlTemplate TargetType="{x:Type Window}">
+            <Grid x:Name="backGrid">
+                <Border x:Name="contentBorder" Margin="4" CornerRadius="4" Background="#fefefc">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="4" ShadowDepth="0" Color="#B7B7B7"/>
+                    </Border.Effect>
+                    <Border.OpacityMask>
+                        <VisualBrush>
+                            <VisualBrush.Visual>
+                                <Border Background="Black"
+                                        SnapsToDevicePixels="True"
+                                        CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}"
+                                        Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}"
+                                        Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}" />
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Border.OpacityMask>
+                    <AdornerDecorator>
+                        <ContentPresenter />
+                    </AdornerDecorator>
+                </Border>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsActive" Value="True">
+                    <Setter TargetName="contentBorder" Property="Effect" >
+                        <Setter.Value>
+                            <DropShadowEffect BlurRadius="4" ShadowDepth="0" Color="#B2B2B2"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Template>-->
+
+    <Window.Background>
+        <SolidColorBrush Color="Transparent"/>
+    </Window.Background>
+
+    <Grid Background="White">
+        <Border BorderThickness="1" BorderBrush="#E1E7EE"  CornerRadius="4,4,4,4" >
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="42"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+               
+                <Image RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True" SnapsToDevicePixels="True" 
+                       x:Name="im_RunLog" Grid.Column="0"  VerticalAlignment="Center" HorizontalAlignment="Center"
+                       Width="40" Height="40"/>
+
+                <StackPanel  VerticalAlignment="Center" Grid.Column="1" Margin="4,0,0,0">
+                    <Label Grid.Column="1" x:Name="txt" FontSize="10px" Foreground="#2E2E2E" Content="{DynamicResource LoadWaitingWnd.xaml_ZhengZaiTongBuSheBei}" Margin="0,0,0,0"></Label>
+                </StackPanel>
+
+            </Grid>
+        </Border>
+    </Grid>
+
+    <!--<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="42"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        --><!--<Image Source="DualBall.gif" Width="30" Height="30" Grid.Column="0" Margin="12,0,0,0" />-->
+        <!--<MediaElement  Source="../Assets/Images/DualBall.gif" VerticalAlignment="Center"  Width="30" Height="30" Grid.Column="0" Margin="12,0,0,0"/>--><!--
+        <MediaElement  x:Name="im_RunLog" VerticalAlignment="Center"  Width="30" Height="30" Grid.Column="0" Source="../Assets/Images/DualBall.gif" 
+                               />
+        --><!--MediaEnded="gifMedia_MediaEnded" UnloadedBehavior="Manual"  LoadedBehavior="Play"-->
+        <!--<Image  x:Name="im_RunLog" VerticalAlignment="Center"  Width="30" Height="30" Grid.Column="0" Source="../Assets/Images/Drag.png" />--><!--
+        <StackPanel  VerticalAlignment="Center" Grid.Column="1" Margin="4,0,0,0">
+            <Label Grid.Column="1" x:Name="txt" FontSize="11px" Foreground="#2E2E2E" Content="数据采集中请稍等~" Margin="0,0,0,0"></Label>
+        </StackPanel>
+
+    </Grid>-->
+
+
+</Window>

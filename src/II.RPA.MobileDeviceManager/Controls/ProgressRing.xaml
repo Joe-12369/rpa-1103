@@ -1,0 +1,112 @@
+﻿<UserControl
+    x:Class="II.RPA.MobileDeviceManager.Controls.ProgressRing"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:II.RPA.MobileDeviceManager.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <Grid>
+        <Ellipse
+            Width="92"
+            Height="92"
+            Margin="15"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            StrokeThickness="0">
+            <Ellipse.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Offset="0" Color="#FFF7F0" />
+                        <GradientStop Offset="1" Color="#ECD7C1" />
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.Effect>
+                <DropShadowEffect
+                    BlurRadius="5"
+                    Direction="0"
+                    ShadowDepth="0"
+                    Color="#D5BDA6" />
+            </Ellipse.Effect>
+        </Ellipse>
+        <Ellipse
+            Width="56"
+            Height="56"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            StrokeThickness="1">
+            <Ellipse.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Offset="0" Color="#FFFFFF" />
+                        <GradientStop Offset="1" Color="#FBF4ED" />
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.Stroke>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Offset="0" Color="#FEE6CC" />
+                        <GradientStop Offset="1" Color="#FCCCA6" />
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Ellipse.Stroke>
+        </Ellipse>
+        <Path
+            Data="M60,33 L60,31"
+            Stroke="#D2B48E"
+            StrokeEndLineCap="Round"
+            StrokeStartLineCap="Round"
+            StrokeThickness="1" />
+        <Path
+            Data="M60,89 L60,91"
+            Stroke="#D2B48E"
+            StrokeEndLineCap="Round"
+            StrokeStartLineCap="Round"
+            StrokeThickness="1" />
+        <Path
+            Data="M33,59 L31,59"
+            Stroke="#D2B48E"
+            StrokeEndLineCap="Round"
+            StrokeStartLineCap="Round"
+            StrokeThickness="1" />
+        <Path
+            Data="M89,59 L91,59"
+            Stroke="#D2B48E"
+            StrokeEndLineCap="Round"
+            StrokeStartLineCap="Round"
+            StrokeThickness="1" />
+        <TextBlock
+            x:Name="ProgressValue"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontFamily="Microsoft YaHei"
+            FontSize="24"
+            FontWeight="DemiBold"
+            Foreground="#161923"
+            SnapsToDevicePixels="True"
+            Text="0"
+            TextOptions.TextFormattingMode="Display" />
+        <local:Arc
+            x:Name="ProgressArc"
+            Margin="0,0,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            EndAngle="360"
+            Rect="0,0,92,92"
+            StartAngle="90"
+            Stroke="#FF8910"
+            StrokeThickness="6" />
+        <!--<Ellipse
+            x:Name="EndEllipse"
+            Width="4"
+            Height="4"
+            Margin="95,0,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Fill="White" />-->
+    </Grid>
+</UserControl>

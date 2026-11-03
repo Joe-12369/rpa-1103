@@ -1,0 +1,41 @@
+syntax = "proto3";
+package rpa.core.worker.zbrain;
+
+message Command
+{
+  enum CommandType {
+    UNKNOWN = 0;
+    LOAD_PLUGIN = 1;
+    CHECK_PLUGIN = 2;
+  }
+  CommandType type = 1;
+  repeated string arguments = 2;
+}
+
+message ReplyDict
+{
+  string code = 1;
+  string status = 2;
+  string message = 3;
+  string result = 4;
+}
+
+message Request
+{
+  string method = 1;
+  string path = 2;
+  string content_type = 3;
+  map<string, string> headers = 4;
+  string body = 5;
+}
+
+message AppEvent
+{
+  enum AppEventType {
+    UNKNOWN = 0;
+    LOADING = 1;
+    READY = 2;
+    BROKEN = 3;
+  }
+  AppEventType type = 1;
+}

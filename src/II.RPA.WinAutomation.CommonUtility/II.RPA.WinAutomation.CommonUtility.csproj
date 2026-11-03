@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.WinAutomation.CommonUtility</RootNamespace>
+    <AssemblyName>II.RPA.WinAutomation.CommonUtility</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Platforms>x64;x86</Platforms>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>Library</OutputType>
+    
+    <RootNamespace>II.RPA.WinAutomation.CommonUtility</RootNamespace>
+    <AssemblyName>II.RPA.WinAutomation.CommonUtility</AssemblyName>
+    
+    
+    <Deterministic>true</Deterministic>
+    
+    
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+</PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+</PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    
+  </PropertyGroup>
+  <ItemGroup>
+<Reference Include="System.Management" />
+</ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppInstallLocationHelper.cs" />
+    <Compile Include="AutomationHelper.cs" />
+    <Compile Include="Enums\eCommonMessageType.cs" />
+    <Compile Include="Enums\eGuiType.cs" />
+    <Compile Include="Enums\ErrorEnum.cs" />
+    <Compile Include="Localization\CommonMessageConfig.cs" />
+    <Compile Include="CommonParseSelector.cs" />
+    <Compile Include="MobileSelectorRules.cs" />
+    <Compile Include="Configurations.cs" />
+    <Compile Include="EncryptUtils.cs" />
+    <Compile Include="EnumExtensions.cs" />
+    <Compile Include="Enums\eErrorMessageType.cs" />
+    <Compile Include="Localization\ErrorMessageConfig.cs" />
+    <Compile Include="Resource\II.RPA.ResourceHash.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>II.RPA.ResourceHash.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RPAException.cs" />
+    <Compile Include="ExtractViewData.cs" />
+    <Compile Include="GlobleClintInfo.cs" />
+    <Compile Include="HttpHelper.cs" />
+    <Compile Include="ImageHelper.cs" />
+    <Compile Include="JsonHelper.cs" />
+    <Compile Include="Localization\ConfResourceExtension.cs" />
+    <Compile Include="Localization\ConfResourceLoader.cs" />
+    <Compile Include="Localization\LocalizationService.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="NLogger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecoverViewData.cs" />
+    <Compile Include="RegexHelper.cs" />
+    <Compile Include="Resource\II.RPA.Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>II.RPA.Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenUtils.cs" />
+    <Compile Include="ProcessHelper.cs" />
+    <Compile Include="Localization\ComponentMessageConfig.cs" />
+    <Compile Include="Enums\eComponentType.cs" />
+    <Compile Include="Localization\TargrtXmlHelper.cs" />
+    <Compile Include="Utils\ConfigInfoReader.cs" />
+    <Compile Include="Utils\LanguageChangedEventArgs.cs" />
+    <Compile Include="Utils\LanguageCultureEnum.cs" />
+    <Compile Include="Utils\RegionTypeEnum.cs" />
+    <Compile Include="Utils\RPAEnvironment.cs" />
+    <Compile Include="Utils\SingleInstance.cs" />
+    <Compile Include="Utils\TimeTrackHelper.cs" />
+    <Compile Include="VersionHelper.cs" />
+    <Compile Include="Localization\LanguageResourceHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Config\controlType.xml" />
+    <EmbeddedResource Include="Resource\II.RPA.Resource.en-US.resx" />
+    <EmbeddedResource Include="Resource\II.RPA.Resource.ja-JP.resx" />
+    <EmbeddedResource Include="Resource\II.RPA.Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>II.RPA.Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\II.RPA.ResourceHash.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>II.RPA.ResourceHash.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <EmbeddedResource Include="Config\eErrorMessageType.conf" />
+    <EmbeddedResource Include="Config\eCommonMessageType.conf" />
+    <None Include="Config\eGuiType.conf" />
+    <None Include="Config\SpecialMessage.conf" />
+    
+    <EmbeddedResource Include="Config\eComponentType.conf" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Config\xamlResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\libs\RPAnalyzer.dll" />
+  </ItemGroup>
+  
+  
+  
+  
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.3.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Management" Version="8.0.0" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.113.1" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.113.7" />
+    <PackageReference Include="System.Data.SQLite.EF6" Version="1.0.113.0" />
+    <PackageReference Include="System.Data.SQLite.Linq" Version="1.0.113.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.1" />
+    </ItemGroup>
+</Project>
+
+
+
+
+

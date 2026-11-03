@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Plugin.Window</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.Window</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>Library</OutputType>
+    
+    <RootNamespace>II.RPA.Plugin.Window</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.Window</AssemblyName>
+    
+    
+    <Deterministic>true</Deterministic>
+    
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    
+    
+    
+    
+    
+    
+    
+    <Reference Include="System.Management" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PluginPackage.cs" />
+    <Compile Include="Core\User32X.cs" />
+    <Compile Include="Core\WindowData.cs" />
+    <Compile Include="Core\WindowOperator.cs" />
+    <Compile Include="Params\ParamActiveWindowModel.cs" />
+    <Compile Include="Params\ParamBase\ParamBase.cs" />
+    <Compile Include="Params\ParamCloseWindowModel.cs" />
+    <Compile Include="Params\ParamGetWindowDataListModel.cs" />
+    <Compile Include="Params\ParamGetWindowDataModel.cs" />
+    <Compile Include="Params\ParamGetWindowListModel.cs" />
+    <Compile Include="Params\ParamGetWindowRectModel.cs" />
+    <Compile Include="Params\ParamMoveWindowModel.cs" />
+    <Compile Include="Params\ParamSetWindowShowModel.cs" />
+    <Compile Include="Params\ParamSetWindowStateModel.cs" />
+    <Compile Include="Params\ParamSizeWindowModel.cs" />
+    <Compile Include="Params\ParamWaitWindowModel.cs" />
+    <Compile Include="Params\ParamWindowIsExistsModel.cs" />
+    <Compile Include="Plugins\ActiveWindow.cs" />
+    <Compile Include="Plugins\Base\WindowComponentBase.cs" />
+    <Compile Include="Plugins\CloseWindow.cs" />
+    <Compile Include="Plugins\GetWindowData.cs" />
+    <Compile Include="Plugins\GetWindowDataList.cs" />
+    <Compile Include="Plugins\GetWindowList.cs" />
+    <Compile Include="Plugins\GetWindowRect.cs" />
+    <Compile Include="Plugins\MoveWindow.cs" />
+    <Compile Include="Plugins\SetWindowShow.cs" />
+    <Compile Include="Plugins\SetWindowState.cs" />
+    <Compile Include="Plugins\SizeWindow.cs" />
+    <Compile Include="Plugins\WaitWindow.cs" />
+    <Compile Include="Plugins\WindowIsExists.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WindowException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Config\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\plugin.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlaUI.Core\FlaUI.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.GUI.Commons\II.RPA.Plugin.GUI.Commons.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAPI\II.RPA.WinAPI.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  
+  <Target Name="DeployWindowPlugin" AfterTargets="AfterBuild">
+    <PropertyGroup>
+      <_PluginName>Window</_PluginName>
+      <_RuntimePluginDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimePluginDir>
+      <_RuntimeCsDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimeCsDir>
+    </PropertyGroup>
+    <RemoveDir Directories="$(_RuntimeCsDir)" Condition="Exists('$(_RuntimeCsDir)')" />
+    <MakeDir Directories="$(_RuntimePluginDir);$(_RuntimeCsDir)" />
+    <Copy SourceFiles="$(TargetDir)Config\config.json" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <ItemGroup>
+      <_MainOutput Include="$(TargetDir)$(TargetName).*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_MainOutput)" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+  </Target>
+  
+  
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties config_4plugin_1json__JsonSchema="https://geojson.org/schema/GeoJSON.json" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Polly" Version="7.2.3" />
+    <PackageReference Include="Polly.Contrib.WaitAndRetry" Version="1.1.1" />
+    </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AutoItX3.Assembly">
+      <HintPath>..\libs\AutoItX3.Assembly.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
+
+
+
+
+
+

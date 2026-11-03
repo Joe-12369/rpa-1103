@@ -1,0 +1,790 @@
+{
+  "edit": [
+    {
+      "elementtype": "edit",
+      "class": [ "edit" ],
+      "actions": [
+        {
+          "action": "Element_SetValue",
+          "input": [ "args0.uiSelector", "args0.text" ]
+        },
+        {
+          "action": "Keyboard_PressNew"
+        },
+        {
+          "action": "Element_SetValuePassword_V1"
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "input": [
+    {
+      "elementtype": "input",
+      "type": "text",
+      "class": [ "input", "text", "edit" ],
+      "actions": [
+        {
+          "action": "Element_SetValue",
+          "input": [ "args0.uiSelector", "args0.text" ]
+        },
+        {
+          "action": "Keyboard_PressNew"
+        },
+        {
+          "action": "Element_SetValuePassword_V1"
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    },
+    {
+      "elementtype": "input",
+      "type": "button",
+      "class": [ "btn", "button" ],
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    },
+    {
+      "elementtype": "input",
+      "type": "checkbox",
+      "class": [ "checkbox", "check", "radio" ],
+      "actions": [
+        {
+          "action": "Element_SetCheck",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args.uiSelector" ]
+        }
+      ],
+      "category": []
+    },
+    {
+      "elementtype": "input",
+      "type": "submit",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_SetValue",
+          "input": [ "args0.uiSelector", "args0.text" ]
+        },
+        {
+          "action": "Keyboard_PressNew"
+        },
+        {
+          "action": "Element_SetValuePassword_V1"
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "text": [
+    {
+      "elementtype": "text",
+      "class": [ "text" ],
+      "actions": [
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Clipboard_SetTextV1",
+          "input": [ "args0.text" ]
+        },
+        {
+          "action": "Mouse_MoveToV1",
+          "input": [ "args0.location" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "span": [
+    {
+      "elementtype": "span",
+      "actions": [
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Clipboard_SetTextV1",
+          "input": [ "args0.text" ]
+        },
+        {
+          "action": "Mouse_MoveToV1",
+          "input": [ "args0.location" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  //"a": [
+  //  {
+  //    "elementtype": "a",
+  //    "actions": [
+  //      {
+  //        "action": "Element_GetValue",
+  //        "input": [ "args0.uiSelector" ]
+  //      },
+  //      {
+  //        "action": "Element_Click",
+  //        "input": [ "args0.uiSelector" ]
+  //      },
+  //      {
+  //        "action": "logic_control_if_element_v1",
+  //        "input": [ "args0.uiSelector" ]
+  //      },
+  //      {
+  //        "action": "Element_Region2_v1",
+  //        "input": [ "args0.uiSelector" ]
+  //      }
+  //    ],
+  //    "category": []
+  //  }
+  //],
+  "b": [
+    {
+      "elementtype": "b",
+      "actions": [
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Clipboard_SetTextV1",
+          "input": [ "args0.text" ]
+        },
+        {
+          "action": "Mouse_MoveToV1",
+          "input": [ "args0.location" ]
+        },
+        {
+          "action": "Mouse_ClickCombine",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "p": [
+    {
+      "elementtype": "p",
+      "actions": [
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Clipboard_SetTextV1",
+          "input": [ "args0.text" ]
+        },
+        {
+          "action": "Mouse_MoveToV1",
+          "input": [ "args0.location" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "textarea": [
+    {
+      "elementtype": "textarea",
+      "actions": [
+        {
+          "action": "Element_SetValue",
+          "input": [ "args0.uiSelector", "args0.text" ]
+        },
+        {
+          "action": "Clipboard_SetTextV1",
+          "input": [ "args0.text" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Keyboard_PressNew"
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "button": [
+    {
+      "elementtype": "button",
+      "class": [ "button" ],
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "select": [
+    {
+      "elementtype": "select",
+      "class": [ "select", "combobox", "combox" ],
+      "actions": [
+        {
+          "action": "Element_SetSelect",
+          "input": [ "args0.uiSelector", "args0.operation_type=1", "args0.choose=1", "args0.itemsToSelect" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "checkbox": [
+    {
+      "elementtype": "checkbox",
+      "class": [ "checkbox", "radio", "check" ],
+      "actions": [
+        {
+          "action": "Element_SetCheck",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "img": [
+    {
+      "elementtype": "img",
+      "actions": [
+        {
+          "action": "Image_Click",
+          "input": [ "args0.image" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Image_Move",
+          "input": [ "args0.image" ]
+        },
+        {
+          "action": "Image_Wait",
+          "input": [ "args0.image" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "group": [
+    {
+      "elementtype": "group",
+      "actions": [
+        {
+          "action": "Mouse_MoveToV1",
+          "input": [ "args0.location" ]
+        }
+      ]
+    }
+  ],
+  "li": [
+    {
+      "ElementType": "li",
+      "class": [ "listitem" ],
+      "actions": [
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "loop_similar_elements",
+          "input": [ "args0.similar_element_object" ]
+        },
+        {
+          "action": "logic_control_count_for"
+        },
+        {
+          "action": "Element_Children_v1",
+          "input": [ "args0.uiSelector" ]
+        }
+      ]
+    }
+  ],
+  "list": [
+    {
+      "ElementType": "list",
+      "class": [ "list" ],
+      "actions": [
+        {
+          "action": "Element_Children_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "loop_similar_elements",
+          "input": [ "args0.similar_element_object" ]
+        },
+        {
+          "action": "WebBrowser_BatchDataCrawl"
+        }
+      ]
+    }
+  ],
+  "table": [
+    {
+      "ElementType": "table",
+      "actions": [
+        {
+          "action": "WebBrowser_BatchDataCrawl"
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        }
+      ]
+    }
+  ],
+  "grid": [
+    {
+      "ElementType": "grid",
+      "actions": [
+        {
+          "action": "WebBrowser_BatchDataCrawl"
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        }
+      ]
+    }
+  ],
+  "label": [
+    {
+      "ElementType": "label",
+      "actions": [
+        {
+          "action": "Clipboard_SetTextV1",
+          "input": [ "args0.text" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Mouse_MoveToV1",
+          "input": [ "args0.location" ]
+        }
+
+      ]
+    }
+  ],
+  "link": [
+    {
+      "ElementType": "link",
+      "actions": [
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        }
+      ]
+    }
+  ],
+  "switch": [
+    {
+      "ElementType": "switch",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        }
+      ]
+    }
+  ],
+  "slider": [
+    {
+      "ElementType": "slider",
+      "actions": [
+        {
+          "action": "Mouse_DragTo",
+          "input": [ "args0.uiSelector", "args0.dragType=1", "args0.End" ]
+        },
+        {
+          "action": "Mouse_RollTo"
+        },
+        {
+          "action": "Mouse_MoveTo",
+          "input": [ "args0.location" ]
+        }
+      ]
+    }
+  ],
+  "th": [
+    {
+      "ElementType": "th",
+      "actions": [
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "loop_similar_elements",
+          "input": [ "args0.similar_element_object" ]
+        },
+        {
+          "action": "Mouse_MoveToV1",
+          "input": [ "args0.location" ]
+        },
+        {
+          "action": "Element_GetAttribute",
+          "input": [ "args0.uiSelector" ]
+        }
+      ]
+    }
+  ],
+  "td": [
+    {
+      "ElementType": "td",
+      "actions": [
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "WebBrowser_BatchDataCrawl"
+        },
+        {
+          "action": "Clipboard_SetTextV1",
+          "input": [ "args0.text" ]
+        },
+        {
+          "action": "Mouse_MoveToV1",
+          "input": [ "args0.location" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        }
+      ]
+    }
+  ],
+  "tree": [
+    {
+      "ElementType": "tree",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_Children_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Mouse_MoveToV1",
+          "input": [ "args0.location" ]
+        },
+        {
+          "action": "Element_Region2_v1",
+          "input": [ "args0.uiSelector" ]
+        }
+      ]
+    }
+  ],
+  "menu": [
+    {
+      "ElementType": "menu",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Children_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Mouse_MoveToV1",
+          "input": [ "args0.location" ]
+        },
+        {
+          "action": "logic_control_count_for"
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        }
+      ]
+    }
+  ],
+  "menuitem": [
+    {
+      "ElementType": "menuitem",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Mouse_MoveToV1",
+          "input": [ "args0.location" ]
+        },
+        {
+          "action": "loop_similar_elements",
+          "input": [ "args0.similar_element_object" ]
+        }
+      ]
+    }
+  ],
+  "items_list": [
+    {
+      "rules": [
+        "s.taobao.com/search",
+        "search.jd.com/Search",
+        "list.jd.com",
+        "list.vip.com",
+        "category.vip.com",
+        "list.tmall.com"
+      ],
+      "actions": [
+        {
+          "action": "WebBrowser_BatchDataCrawl"
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Mouse_MoveToV1",
+          "input": [ "args0.location" ]
+        },
+        {
+          "action": "loop_similar_elements",
+          "input": [ "args0.similar_element_object" ]
+        }
+      ]
+    }
+  ],
+  "ul": [
+    {
+      "ElementType": "ul",
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_Children_v1",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "loop_similar_elements",
+          "input": [ "args0.similar_element_object" ]
+        }
+      ]
+    }
+  ]
+  //"div": [
+  //  {
+  //    "ElementType": "div",
+  //    "actions": [
+  //      {
+  //        "action": "Element_Click",
+  //        "input": [ "args0.uiSelector" ]
+  //      },
+  //      {
+  //        "action": "Element_GetValue",
+  //        "input": [ "args0.uiSelector" ]
+  //      },
+  //      {
+  //        "action": "logic_control_if_element_v1",
+  //        "input": [ "args0.uiSelector" ]
+  //      },
+  //      {
+  //        "action": "Element_ChildrenV1",
+  //        "input": [ "args0.uiSelector" ]
+  //      },
+  //      {
+  //        "action": "loop_similar_elements",
+  //        "input": [ "args0.similar_element_object" ]
+  //      }
+  //    ]
+  //  }
+  //]
+}

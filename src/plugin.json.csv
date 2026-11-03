@@ -1,0 +1,65 @@
+﻿key,zh-CN,ja-JP,en-US
+Chromium_title,Chromium浏览器功能依赖包,Chromiumブラウザ機能依存パッケージ,Chromium browser feature dependency package
+CommonDLLBase_title,公共类库组件包,共通クラスライブラリコンポーネントパッケージ,Common Library Component Package
+Database_title,数据库操作组件包,データベース操作コンポーネントパッケージ,Database Operations Component Package
+Dialog_title,自定义对话框依赖包,カスタマイズしたダイアログの依存パッケージ,Custom Dialog Dependency Package
+DriverInput_title,驱动输入功能依赖包,ドライバー入力機能依存パッケージ,Input Driver Functionality Package
+Element_title,界面元素组件包,インターフェース要素コンポーネントパッケージ,Interface Elements Component Package
+Excel_title,Excel 文件操作组件包,Excel ファイル操作コンポーネントパッケージ,Excel File Operations Component Package
+GoogleTable_title,谷歌表组件包,Googleスプレッドシートコンポーネントパッケージ,Google Sheets Component Package
+GUIChrome_title,Chrome浏览器功能依赖包,Chromeブラウザー機能依存パッケージ,Chrome Browser Functionality Dependency Package
+GUICV_title,CV功能相关依赖包,CV機能関連依存パッケージ,CV Functionality-Related Dependency Package
+GUIEdge_title,Edge浏览器功能依赖包,Edgeブラウザー機能依存パッケージ,Edge Browser Functionality Dependency Package
+GUIFireFox_title,FireFox程序功能依赖包,FireFoxプログラム依存パッケージ,FireFox Program Functionality Dependency Package
+GUIIE_title,IE程序功能依赖包,IEプログラム機能依存パッケージ,IE Program Functionality Dependency Package
+GUIJavaAlter_introduction,为操作 Java 程序提供底层能力支持,Java プログラムを操作するための基本的な機能サポートを提供します。,Provides underlying capabilities to support the operation of Java programs.
+GUIJavaAlter_title,Java程序界面元素功能依赖包,Javaプログラムインターフェース要素機能依存パッケージ,Java Program Interface Element Functionality Dependency Package
+GUIJava_title,Java程序界面元素功能依赖包,Javaプログラムインターフェース要素機能依存パッケージ,Java Program Interface Element Functionality Dependency Package
+GUISAP_introduction,为操作? SAP 程序提供底层能力支持,SAPプログラム操作のための基盤機能を提供,Provide underlying capability support for operating SAP programs.
+GUISAP_title,SAP界面元素功能依赖包,SAPインターフェース要素機能依存パッケージ,SAP Interface Element Functionality Dependency Package
+GUISogou_introduction,为操作搜狗浏览器提供底层能力支持,搜狗(Sogou)ブラウザーに基本的な機能サポートを提供します。,Provides underlying support for operating the Sogou browser.
+GUISogou_title,搜狗浏览器功能依赖包,搜狗(Sogou)ブラウザーの機能に必要なパッケージ,Sogou Browser Function Dependency Package
+GUISuperBrowser_introduction,为操作 紫鸟 浏览器提供底层能力支持,紫鳥ブラウザの操作に基盤能力サポートを提供します,Provide underlying capabilities support for operating the Purple Bird browser.
+GUISuperBrowser_title,紫鸟浏览器功能依赖包,紫鳥ブラウザ機能依存パッケージ,Purple Bird browser function dependency package
+GUIWeb360se_title,360se浏览器功能依赖包,360SEブラウザー機能依存パッケージ,360SE Browser Functionality Package
+GUIWeb360X_introduction,为操作 360 浏览器提供底层能力支持,360 ブラウザーを操作するための基本的な機能サポートを提供します。,Provides underlying capabilities for operating the 360 SE browser
+GUIWeb360X_title,360X浏览器功能依赖包,360Xブラウザ機能依存パッケージ,360X Browser Function Dependency Package
+GUIWindows_introduction,为操作 Windows 界面元素提供了底层能力支持,Windows インターフェース要素を操作するための基本的な機能サポートを提供します。,Provides underlying capabilities to support the operation of Windows interface elements.
+GUIWindows_title,Windows界面元素功能依赖包,Windowsインターフェース要素機能依存パッケージ,Windows Interface Element Functionality Dependency Package
+GUIZExplorer_title,实在浏览器功能依赖包,Z-Browser機能依存パッケージ,Z-Browser feature dependencies package
+InputMethod_title,输入法组件包,入力方式コンポーネントパッケージ,Input Method Component Package
+Mobile_introduction,提供了手机自动化操作能力，包含元素操作和手机连接、截屏等核心能力。,要素操作、携帯接続、画面キャプチャなどのコア機能を含める、携帯自動操作機能を提供します。,"Provides capabilities for automating mobile phone operations, including element operations, mobile phone connectivity, screenshot capture, and other core capabilities."
+Mobile_title,手机自动化组件包,携帯自動化コンポーネントパッケージ,Mobile Automation Component Package
+Mouse_introduction,包含了鼠标操作类的核心能力,マウス操作型のコア機能を含めます,Contains core capabilities for mouse operations.
+Mouse_title,鼠标操作组件包,マウス操作コンポーネントパッケージ,Mouse Operation Component Package
+OcrOffline_introduction,提供了自研 OCR 鼠标操作能力,自社開発の OCR マウス操作機能を提供します。,Provides in-house OCR mouse operation capabilities.
+OcrOffline_title,OCR 鼠标操作组件包,OCR マウス操作コンポーネントパッケージ,OCR Mouse Operation Component Package
+OutLook_introduction,OutLook邮箱功能提供了底层能力支持,OutLookメールボックスは基本機能のサポートを提供しています,The OutLook mailbox function provides underlying capability support.
+OutLook_title,OutLook邮箱功能依赖库,OutLookメールボックスの機能はライブラリに依存しています。,Outlook email function relies on libraries.
+RPASystem_introduction,提供了操作电脑系统类功能的底层能力。,コンピューターシステム機能を操作するための基本的な機能を提供します。,Provides underlying capabilities for operating computer system basic functions.
+RPASystem_title,系统类功能依赖包,システム型機能依存パッケージ,System Class Function Dependency Package
+UsbHub_introduction,提供了操作 UsbhHub的底层支持能力。,UsbhHubを操作するための基本的なサポート機能を提供します。,Provides underlying support for operating UsbhHub.
+UsbHub_title,UsbHub依赖包,UsbHub依存パッケージ,UsbHub Dependency Package
+WdtErp_introduction,为操作 旺店通 程序提供底层能力支持,旺店通 プログラムを操作するための基本的な機能サポートを提供します。,Provides underlying support for operating the Wangdiantong program.
+WdtErp_title,旺店通界面元素功能依赖包,旺店通 インターフェース要素機能依存パッケージ,Wangdiantong User Interface Element Function Dependency Package
+WebBrowser_introduction,提供了针对浏览器网页操作的能力，包含打开、跳转新网页、数据采集、下载文件等核心能力。,新しいページを開く、新しいページにジャンプする、データの取得、ファイルのダウンロードなどのコア機能を含める、ブラウザーーでWebページを操作する機能を提供します。,"Provides capabilities for operating web pages, including opening, navigating to new web pages, data collection, downloading files, and other core capabilities."
+WebBrowser_title,浏览器操作组加包,ブラウザー操作コンポーネントパッケージ,Browser Operation Component Package
+Window_introduction,为操作 Window 窗口提供了底层能力支持,Windows ウィンドウを操作するための基本的な機能サポートを提供します。,Provides underlying support for operating Windows windows.
+Window_title,Window窗口功能依赖包,Windowウィンドウ機能依存パッケージ,Window Window Function Dependency Package
+GUIWeb360se_introduction,为操作 360 浏览器提供底层能力支持,360 ブラウザーを操作するための基本的な機能サポートを提供します。,Provides underlying capabilities for operating the 360 SE browser
+GUIChrome_introduction,为操作 Chrome 浏览器提供底层能力支持,Chrome ブラウザーを操作するための基本的な機能サポートを提供します。,Provides underlying capabilities to support the operation of Chrome browser.
+Chromium_introduction,为操作 Chromium 浏览器提供底层能力支持,Chromiumブラウザーを操作するための基本的な機能サポートを提供します。,Provides underlying capabilities to support the operation of Chromium browser.
+CommonDLLBase_introduction,包含了其余组件引用的基础类库,ほかのコンポーネント参照を含める基本クラスライブラリ,Includes basic libraries referenced by other components
+GUICV_introduction,为智能拾取提供底层能力支持，在拾取智能拾取元素时需要依赖此组件包。,スマート抽出に基本的な機能サポートを提供します。スマート抽出で要素を抽出するとき、このコンポーネントパッケージに依存します。,Provides underlying capabilities to support intelligent picking. This component package is required when picking intelligent elements.
+Database_introduction,提供了操作数据库的能力，包含数据库有 MySQL、Oracle、SQL Server、Access、BD2、PostgreSQL、SQLite,MySQL、Oracle、SQL Server、Access、BD2、PostgreSQL、SQLiteを含めるデータベースを操作する機能を提供します。,"Provides the ability to work with databases, including databases like MySQL, Oracle, SQL Server, Access, BD2, PostgreSQL, and SQLite."
+Dialog_introduction,自定义对话框能力支持,カスタマイズしたダイアログの機能サポート,Supports custom dialog capabilities
+DriverInput_introduction,为驱动输入提供了底层能力支持,ドライバー入力に基本的な機能サポートを提供します。,Provides underlying capabilities for input drivers
+GUIEdge_introduction,为操作 Edge 浏览器提供底层能力支持,Edge ブラウザーを操作するための基本的な機能サポートを提供します。,Provides underlying capabilities to support the operation of Edge browser.
+Excel_introduction,提供了Excel文件操作的核心能力，可操作 WPS 和office的 Excel 文件,WPSとofficeのExcelファイルを操作するExcelファイルコア機能を提供します。,Provides core capabilities for Excel file operations and can operate on both WPS and Office Excel files.
+GUIFireFox_introduction,为操作 Firefox 浏览器提供底层能力支持,Firefox ブラウザーを操作するための基本的な機能サポートを提供します。,Provides underlying capabilities to support the operation of Firefox browser.
+GoogleTable_introduction,包含了谷歌表的能力,Googleテーブルの機能を搭載しています,Includes the capability to interact with Google Sheets.
+Element_introduction,包含了元素操作类的核心能力,要素操作型のコア機能を含めます,Contains core capabilities for element operations.
+GUIIE_introduction,为操作 IE 浏览器提供底层能力支持,IE ブラウザーを操作するための基本的な機能サポートを提供します。,Provides underlying capabilities to support the operation of IE browser.
+InputMethod_introduction,获取和设置输入法状态的能力,入力方式ステータスを取得および設定する機能,Capability to Get and Set Input Method State
+GUIJava_introduction,为操作 Java 程序提供底层能力支持,Java プログラムを操作するための基本的な機能サポートを提供します。,Provides underlying capabilities to support the operation of Java programs.
+GUIZExplorer_introduction,为实在浏览器提供了底层能力支持,Z-Browser ブラウザーを操作するための基本的な機能サポートを提供します。,Provides underlying capabilities for operating the Z-Browser

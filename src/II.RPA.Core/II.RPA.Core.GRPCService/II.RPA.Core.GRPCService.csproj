@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Core.GRPCService</RootNamespace>
+    <AssemblyName>II.RPA.Core.GRPCService</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>Library</OutputType>
+    
+    <RootNamespace>II.RPA.Core.GRPCService</RootNamespace>
+    <AssemblyName>II.RPA.Core.GRPCService</AssemblyName>
+    
+    
+    <Deterministic>true</Deterministic>
+    <LangVersion>8.0</LangVersion>
+    
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>8.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>8.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA|x86'">
+    <OutputPath>bin\x86\QA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>8.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>8.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>8.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA|x64'">
+    <OutputPath>bin\x64\QA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>8.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Protobuf Include="..\II.RPA.Core\Protos\power_message.proto" GrpcServices="Server" Link="Protos\power_message.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\power_request.proto" GrpcServices="Server" Link="Protos\power_request.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\power_response.proto" GrpcServices="Server" Link="Protos\power_response.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\power_service.proto" GrpcServices="Server" Link="Protos\power_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\simple_service.proto" GrpcServices="Server" Link="Protos\simple_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\beep_service.proto" GrpcServices="Server" Link="Protos\beep_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\admin_service.proto" GrpcServices="Server" Link="Protos\admin_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\message_service.proto" GrpcServices="Server" Link="Protos\message_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\win32_service.proto" GrpcServices="Server" Link="Protos\win32_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\base.proto" GrpcServices="Server" Link="Protos\base.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\flowedit_service.proto" GrpcServices="Server" Link="Protos\flowedit_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\visual_data_service.proto" GrpcServices="Server" Link="Protos\visual_data_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\process_service.proto" GrpcServices="Server" Link="Protos\process_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\base_resp.proto" GrpcServices="Server" Link="Protos\base_resp.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\screen_record_service.proto" GrpcServices="Server" Link="Protos\screen_record_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\childsession_service.proto" GrpcServices="Server" Link="Protos\childsession_service.proto" />
+    <Protobuf Include="..\II.RPA.Core\Protos\mobile_service.proto" GrpcServices="Both" Link="Protos\mobile_service.proto" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CoreAssemblyInfo.cs">
+      <Link>CoreAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Clients\ChildCoreserverClient.cs" />
+    <Compile Include="Extension\SettingsConverter.cs" />
+    <Compile Include="Interception\AdminServiceAuthorityInterceptor.cs" />
+    <Compile Include="Interception\ServicePollyInterceptor.cs" />
+    <Compile Include="Interception\ServiceLogInterceptor.cs" />
+    <Compile Include="Interception\ServiceTraceBehavior.cs" />
+    <Compile Include="ServiceBoot\GRPCServiceBoot.cs" />
+    <Compile Include="Service\ChildSessionGRPCService.cs" />
+    <Compile Include="Service\ZDeskTopProcessResolver.cs" />
+    <Compile Include="Service\MobileDeviceManagerGRPCService.cs" />
+    <Compile Include="Service\ScreenRecordGRPCService.cs" />
+    <Compile Include="Service\VisualDataGRPCService.cs" />
+    <Compile Include="Service\ProcessGRPCService.cs" />
+    <Compile Include="Service\Win32GRPCService.cs" />
+    <Compile Include="Service\BeepGRPCService.cs" />
+    <Compile Include="Service\AdminGRPCService.cs" />
+    <Compile Include="Service\MessageGRPCService.cs" />
+    <Compile Include="Service\PluginGRPCService.cs" />
+    <Compile Include="Service\WorkerGRPCService.cs" />
+    <Compile Include="Util\MouseRelease.cs" />
+    <Compile Include="Util\MessageIdGenerator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\II.RPA.Core.Abstractions\II.RPA.Core.Abstractions.csproj" />
+    <ProjectReference Include="..\..\II.RPA.Core.Contracts\II.RPA.Core.Contracts.csproj" />
+    <ProjectReference Include="..\..\II.RPA.Core.Talker\II.RPA.Core.Talker.csproj" />
+    <ProjectReference Include="..\..\II.RPA.Core.WorkerProtocol\II.RPA.Core.WorkerProtocol.csproj" />
+    <ProjectReference Include="..\..\FlaUI.Core\FlaUI.Core.csproj" />
+    <ProjectReference Include="..\..\II.RPA.Communication\II.RPA.Communication.csproj" />
+    <ProjectReference Include="..\..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\..\II.RPA.Plugin.GUI.Commons\II.RPA.Plugin.GUI.Commons.csproj" />
+    <ProjectReference Include="..\..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+    <ProjectReference Include="..\II.RPA.Core.Provider\II.RPA.Core.Provider.csproj">
+      <PrivateAssets>all</PrivateAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\II.RPA.Core\II.RPA.Core.csproj" />
+  </ItemGroup>
+  
+  
+  
+  
+  <ItemGroup>
+    <PackageReference Include="CommonServiceLocator" Version="2.0.7" />
+    <PackageReference Include="DynamicData" Version="9.0.4" />
+    <PackageReference Include="Google.Protobuf" Version="3.35.1" />
+    <PackageReference Include="Grpc.Core" Version="2.46.6" />
+    <PackageReference Include="Grpc.Core.Api" Version="2.70.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.82.0" PrivateAssets="all" />
+    <PackageReference Include="IPA.Ubases" Version="1.0.0.22" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Polly" Version="7.2.3" />
+    <PackageReference Include="Unity.Abstractions" Version="5.11.7" />
+    <PackageReference Include="Unity.Container" Version="5.11.11" />
+    <PackageReference Include="Unity.Interception" Version="5.11.1" />
+  </ItemGroup>
+</Project>
+
+
+
+
+

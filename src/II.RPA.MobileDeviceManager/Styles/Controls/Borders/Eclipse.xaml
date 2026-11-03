@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="EclipseBorderStyle" TargetType="Border">
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="BorderBrush" Value="Gray" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <!--<Border.Background TargetType="{x:Type Border}">-->
+                <!--<Grid>
+                        <Ellipse Stroke="Red" StrokeThickness="1" Width="90" Height="90" Panel.ZIndex="1"/>
+                        <Path Stroke="Black" Fill="White" StrokeThickness="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Path.Data>
+                                <EllipseGeometry Center="100,100" RadiusX="100" RadiusY="100">
+                                </EllipseGeometry>
+                            </Path.Data>
+                        </Path>
+                    </Grid>-->
+                <!--</Border.Background>-->
+                <DrawingBrush>
+                    <DrawingBrush.Drawing>
+                        <GeometryDrawing Brush="{Binding Brush}">
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="Black" Thickness="3" />
+                            </GeometryDrawing.Pen>
+                            <GeometryDrawing.Geometry>
+                                <PathGeometry Figures="m-70 -80 L200 -80 L230 0 L200 80  L-70 80 A 10,10 0 0 1 -80,70  L-80 70 L-80 -70  A 10,10 0 0 1 -70,-80" />
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                    </DrawingBrush.Drawing>
+                </DrawingBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

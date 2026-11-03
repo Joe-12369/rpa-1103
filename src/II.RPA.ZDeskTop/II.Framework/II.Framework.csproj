@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.Framework</RootNamespace>
+    <AssemblyName>II.Framework</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.Framework</RootNamespace>
+    <AssemblyName>II.Framework</AssemblyName>
+    <Deterministic>true</Deterministic>
+    <LangVersion>11.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\II.RPA.ZDeskTop\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\II.RPA.ZDeskTop\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\bin\II.RPA.ZDeskTop\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>11.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\..\bin\II.RPA.ZDeskTop\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>11.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\bin\II.RPA.ZDeskTop\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>11.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\..\bin\II.RPA.ZDeskTop\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>11.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Compatibility\WindowsDpi.cs" Link="Compatibility\WindowsDpi.cs" />
+    <Compile Include="AppMeta.cs" />
+    <Compile Include="gRPC\WorkerServiceConnection.cs" />
+    <Compile Include="gRPC\WorkerServiceProvider.cs" />
+    <Compile Include="Models\Extensions.cs" />
+    <Compile Include="Models\ZdesktopInfoModel.cs" />
+    <Compile Include="Models\ZdesktopActionMessage.cs" />
+    <Compile Include="Models\ZdesktopMessage.cs" />
+    <Compile Include="Models\SnapshotModel.cs" />
+    <Compile Include="PInvoker\CaptureProvider.cs" />
+    <Compile Include="PInvoker\PowerWindowInvoker.cs" />
+    <Compile Include="PInvoker\Win32Invoker.cs" />
+    <Compile Include="PInvoker\Wtsapi32Invoker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource\i18n.Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>i18n.Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\i18n.ResourceHash.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>i18n.ResourceHash.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\BotConfigService.cs" />
+    <Compile Include="Utility\ChildSessionHelper.cs" />
+    <Compile Include="Utility\ZDeskTopProcessFile.cs" />
+    <Compile Include="Utility\Global.cs" />
+    <Compile Include="Utility\ImageCompressor.cs" />
+    <Compile Include="Utility\SercurityUtils.cs" />
+    <Compile Include="Utility\EnvironmentHelper.cs" />
+    <Compile Include="Utility\InputHook.cs" />
+    <Compile Include="Utility\OSVersionHelper.cs" />
+    <Compile Include="Utility\PowerOSVersionHelper.cs" />
+    <Compile Include="Utility\SchedulerTaskHelper.cs" />
+    <Compile Include="Utility\StartUpProgramHelper.cs" />
+    <Compile Include="Utility\WindowsLogon.cs" />
+    <Compile Include="Utility\WMIHelper.cs" />
+    <Compile Include="LocalizationService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="..\..\II.RPA.Core\II.RPA.Core\Protos\worker_service.proto">
+      <Link>gRPC\worker_service.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\..\II.RPA.Core\II.RPA.Core\Protos\rpa_engine_service.proto">
+      <Link>gRPC\rpa_engine_service.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\..\II.RPA.Core\II.RPA.Core\Protos\z_desktop_service.proto">
+      <Link>gRPC\z_desktop_service.proto</Link>
+    </Protobuf>
+    <None Include="app.config" />
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\i18n.Resource.en-US.resx" />
+    <EmbeddedResource Include="Resource\i18n.Resource.ja-JP.resx" />
+    <EmbeddedResource Include="Resource\i18n.Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>i18n.Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\i18n.ResourceHash.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>i18n.ResourceHash.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.35.1" />
+    <PackageReference Include="Grpc.Core" Version="2.46.6" />
+    <PackageReference Include="Grpc.Core.Api" Version="2.70.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.82.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Primitives" Version="10.0.10" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NLog" Version="5.3.4" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="5.3.13" />
+    <PackageReference Include="System.Management" Version="8.0.0" />
+    <PackageReference Include="System.Reactive" Version="6.0.1" />
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+    <PackageReference Include="TaskScheduler" Version="2.11.0" />
+  </ItemGroup>
+</Project>

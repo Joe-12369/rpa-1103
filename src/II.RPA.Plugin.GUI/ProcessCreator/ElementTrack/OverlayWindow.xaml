@@ -1,0 +1,35 @@
+﻿<Window x:Class="II.RPA.Plugin.GUI.ProcessCreator.ElementTrack.OverlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:II.RPA.Plugin.GUI.ProcessCreator.ElementTrack"
+        mc:Ignorable="d"
+        Title="" 
+        WindowStyle="None"
+        Background="{x:Null}"
+        Topmost="True"
+        BorderThickness="0"
+        Left="0"
+        Top="0"
+        Name="overlay"
+        WindowStartupLocation="Manual"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        IsHitTestVisible="False"
+        AllowsTransparency="True">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Theme/ColorDictionary.xaml"/>
+                <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Theme/SvgDictionary.xaml"/>
+                <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Controls/TFButton.xaml"/>
+                <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.GUI;Component/ProcessCreator/Theme/StyleDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Canvas>
+        <Rectangle x:Name="highLightRect" Fill="#29FF8900" StrokeThickness="3">
+        </Rectangle>
+    </Canvas>
+</Window>

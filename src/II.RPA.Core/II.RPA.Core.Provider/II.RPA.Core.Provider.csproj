@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Core.Provider</RootNamespace>
+    <AssemblyName>II.RPA.Core.Provider</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>Library</OutputType>
+    
+    <RootNamespace>II.RPA.Core.Provider</RootNamespace>
+    <AssemblyName>II.RPA.Core.Provider</AssemblyName>
+    
+    
+    <Deterministic>true</Deterministic>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    
+    
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA|x86'">
+    <OutputPath>bin\x86\QA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+</PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\..\bin\II.RPA.PluginLoader\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+</PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA|x64'">
+    <OutputPath>bin\x64\QA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+</PropertyGroup>
+  <ItemGroup>
+    
+    
+    
+    
+    
+    <ProjectReference Include="..\..\..\tools\NativeMessagingHost\II.RPA.IPC\II.RPA.IPC.csproj" />
+
+</ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CoreAssemblyInfo.cs">
+      <Link>CoreAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="EngineProxyProvider\EngineProxyProvider.cs" />
+    <Compile Include="EngineProxyProvider\Startup.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_Agent_Provider.cs" />
+    <Compile Include="PluginProvider\Verification.cs" />
+    <Compile Include="MobileHostProvider\MobileHostProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\CaptureWindowProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\DriverSearchProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\GetWindowSizeProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\OutLookAccountsProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\GetSystemFontProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\TransferPluginActonProvider.cs" />
+    <Compile Include="PluginInterfere\ElementPlugin.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\CancelCaptureProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\ExcelProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\GetWindowListProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\ConfigDialogPreviewProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\NewDataCollectProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\ProcessCreatorProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\ScreenShotProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\SharpUIProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_OcrTableAnalyse_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_Phone_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_CV_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_Combo_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_Phone_CV_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_Ocr_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_CS_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_Renovate_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_Screenshot_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Selector_Similar_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Verify_Selector_Similar_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\UI_Verify_Selector_Provider.cs" />
+    <Compile Include="PluginLoaderProvider\Command\CommandConsumer.cs" />
+    <Compile Include="PluginLoaderProvider\Command\FuncTaskConsumer.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\MouseRecordPhoneProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\BaseActionProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\CheckDriveProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\ConnectPhoneProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\CollectDataProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\DBTestProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\USBGetComsProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionNameAttribute.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProvider\MouseRecordProvider.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\ClientActionProviderFactory.cs" />
+    <Compile Include="PluginLoaderProvider\ClientAction\IClientActionProvider.cs" />
+    <Compile Include="PluginLoaderProvider\Command\IDispatchCommand.cs" />
+    <Compile Include="PluginLoaderProvider\IPluginLoaderProvider.cs" />
+    <Compile Include="PluginLoaderProvider\PluginLoaderModel.cs" />
+    <Compile Include="PluginProvider\PluginProviderFactory.cs" />
+    <Compile Include="PluginProvider\ScreenSaveWindow.xaml.cs">
+      <DependentUpon>ScreenSaveWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenRecordProvider\FFmpegWrapper.cs" />
+    <Compile Include="ScreenRecordProvider\FFmpeg\DirectShowDevices.cs" />
+    <Compile Include="ScreenRecordProvider\FFmpeg\Enums.cs" />
+    <Compile Include="ScreenRecordProvider\FFmpeg\ExternalCLIManager.cs" />
+    <Compile Include="ScreenRecordProvider\FFmpeg\FFmpegCLIManager.cs" />
+    <Compile Include="ScreenRecordProvider\FFmpeg\FFmpegOptions.cs" />
+    <Compile Include="ScreenRecordProvider\FFmpeg\ScreencastOptions.cs" />
+    <Compile Include="ScreenRecordProvider\FFmpeg\VideoInfo.cs" />
+    <Compile Include="ScreenRecordProvider\RecordOptions.cs" />
+    <Compile Include="ScreenRecordProvider\ScreenRecorder.cs" />
+    <Compile Include="ScreenRecordProvider\ScreenRecordProvider.cs" />
+    <Compile Include="PluginProvider\ScreenSaver.cs" />
+    <Compile Include="SubProcessManage\JavaBridgeHostManager.cs" />
+    <Compile Include="Utility\Cancel.cs" />
+    <Compile Include="Utility\ConcurrentDictionaryExtensions.cs" />
+    <Compile Include="Utility\CtsTimeout.cs" />
+    <Compile Include="Utility\FileUtils.cs" />
+    <Compile Include="Utility\InterlockedEx.cs" />
+    <Compile Include="Utility\InterlockedEnum.cs" />
+    <Compile Include="Utility\JsonDecoder.cs" />
+    <Compile Include="Utility\StateMachineExtensions.cs" />
+    <Compile Include="Utility\StringExtensions.cs" />
+    <Compile Include="Utility\SM4Utils.cs" />
+    <Compile Include="Utility\SubjectExtensions.cs" />
+    <Compile Include="Utility\TaskQueue.cs" />
+    <Compile Include="ZBrainProxyProvider\ChildStartup.cs" />
+    <Compile Include="ZBrainProxyProvider\CoreTalkerKestrelOwinServer.cs" />
+    <Compile Include="ZBrainProxyProvider\Extensions.cs" />
+    <Compile Include="ZBrainProxyProvider\LoggingMiddleware.cs" />
+    <Compile Include="ZBrainProxyProvider\Startup.cs" />
+    <Compile Include="ZBrainProxyProvider\WorkerApiController.cs" />
+    <Compile Include="ZBrainProxyProvider\ZBrainProxyProvider.cs" />
+    <Compile Include="ZBrainProxyProvider\ZBrainResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="..\..\II.RPA.RunTimeHost\Protos\runtime_service.proto" GrpcServices="Client">
+      <Link>ClientProtos\runtime_service.proto</Link>
+    </Protobuf>
+    <None Include="app.config" />
+    
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\II.RPA.Core.Contracts\II.RPA.Core.Contracts.csproj" />
+    <ProjectReference Include="..\..\GrpcDotNetNamedPipes\GrpcDotNetNamedPipes.csproj" />
+    <ProjectReference Include="..\..\II.RPA.Core.GRPCServiceClient\II.RPA.Core.GRPCServiceClient.csproj" />
+    <ProjectReference Include="..\..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+    
+    <ProjectReference Include="..\II.RPA.Core\II.RPA.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="PluginProvider\ScreenSaveWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="CommonServiceLocator" Version="2.0.7" />
+    <PackageReference Include="DynamicData" Version="9.0.4" />
+    <PackageReference Include="Google.Protobuf" Version="3.35.1" />
+    <PackageReference Include="Grpc.Core.Api" Version="2.70.0" />
+    <PackageReference Include="IPA.Ubases" Version="1.0.0.22" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.3.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Owin" Version="5.3.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.OwinSelfHost" Version="5.3.0" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Owin" Version="4.2.2" />
+    <PackageReference Include="Microsoft.Owin.Host.HttpListener" Version="4.2.2" />
+    <PackageReference Include="Microsoft.Owin.Hosting" Version="4.2.2" />
+    <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.2" />
+    <PackageReference Include="Owin" Version="1.0" />
+    <PackageReference Include="Polly" Version="7.2.3" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
+    <PackageReference Include="Stateless" Version="5.15.0" />
+    <PackageReference Include="System.Reactive" Version="6.0.1" />
+    <PackageReference Include="Unity.Abstractions" Version="5.11.7" />
+    <PackageReference Include="Unity.Container" Version="5.11.11" />
+    <PackageReference Include="Unity.ServiceLocation" Version="5.11.1" />
+  </ItemGroup>
+</Project>
+
+
+
+

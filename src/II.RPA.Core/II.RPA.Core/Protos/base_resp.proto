@@ -1,0 +1,17 @@
+syntax = "proto3";
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/any.proto";
+package rpa.core.base.resp;
+
+message Response
+{
+	string request_id = 1;                       // 返回客户端请求时的requestId参数
+	string client_id = 2;                        // 返回客户端请求时的clientId参数
+	google.protobuf.BoolValue is_success = 3;    // 请求是否成功
+	string message = 4;                          // 通常为excption的message
+	int32 code = 5;                              // 响应码, 成功为200
+	google.protobuf.BoolValue multiple = 6;      // 标示数据存储在data或list中
+    google.protobuf.Any data = 7;                // map结构数据
+    repeated google.protobuf.Any list = 8;       // list结构数据
+    string reserve = 9;                          // 预留
+}

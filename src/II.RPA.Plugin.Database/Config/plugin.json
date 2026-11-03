@@ -1,0 +1,11 @@
+{
+  "name": "Database",
+  "title": "数据库操作组件包",
+  "version": "3.3.5.0",
+  "type": "1",
+  "depend": "7.3.5",
+  "introduction": "提供了操作数据库的能力，包含数据库有 MySQL、Oracle、SQL Server、Access、BD2、PostgreSQL、SQLite",
+  "description": "·连接数据库-连接数据库\n·执行单SQL查询-单SQL查询\n·执行全SQL查询-全SQL查询\n·执行SQL语句-执行SQL\n·批量执行SQL语句-批量执行SQL\n·关闭连接-关闭数据库连接",
+  "releaseTime": 1634054400,
+  "DependRef": []
+}

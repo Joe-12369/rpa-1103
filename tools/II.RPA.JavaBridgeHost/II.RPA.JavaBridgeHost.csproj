@@ -1,0 +1,172 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>II.RPA.JavaBridgeHost</RootNamespace>
+    <AssemblyName>II.RPA.JavaBridgeHost</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>javahost.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\II.RPA.JavaHost\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\II.RPA.JavaHost\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\II.RPA.JavaHost\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\bin\II.RPA.JavaHost\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\II.RPA.JavaHost\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\bin\II.RPA.JavaHost\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Interop.UIAutomationClient" Version="10.18362.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Management" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Management" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\FlaUI.Core\FlaUI.Core.csproj" />
+    <ProjectReference Include="..\..\src\FlaUI.UIA2\FlaUI.UIA2.csproj" />
+    <ProjectReference Include="..\..\src\FlaUI.UIA3\FlaUI.UIA3.csproj" />
+    <ProjectReference Include="..\NativeMessagingHost\II.RPA.IPC\II.RPA.IPC.csproj" />
+    <ProjectReference Include="..\..\src\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\..\src\II.RPA.NamedPipeWrapper\II.RPA.NamedPipeWrapper.csproj" />
+    <ProjectReference Include="..\..\src\II.RPA.Plugin.GUI.Commons\II.RPA.Plugin.GUI.Commons.csproj" />
+    <ProjectReference Include="..\..\src\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+    <ProjectReference Include="..\..\src\II.RPA.WindowsAccessBridgeInterop\II.RPA.WindowsAccessBridgeInterop.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CompareRule\ICompareRule.cs" />
+    <Compile Include="CompareRule\RuleBiggerRule.cs" />
+    <Compile Include="CompareRule\RuleContains.cs" />
+    <Compile Include="CompareRule\RuleDeciamlEqualRule.cs" />
+    <Compile Include="CompareRule\RuleEndwith.cs" />
+    <Compile Include="CompareRule\RuleEqual.cs" />
+    <Compile Include="CompareRule\RuleFactory.cs" />
+    <Compile Include="CompareRule\RuleRegular.cs" />
+    <Compile Include="CompareRule\RuleSmallerRule.cs" />
+    <Compile Include="CompareRule\RuleStartwith.cs" />
+    <Compile Include="ConditionExtension.cs" />
+    <Compile Include="ConstFields.cs" />
+    <Compile Include="HwndCache.cs" />
+    <Compile Include="IIRPAJavaHost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IIRPAJavaHost.Designer.cs">
+      <DependentUpon>IIRPAJavaHost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPC\MessageReader.cs" />
+    <Compile Include="IPC\MessageWriter.cs" />
+    <Compile Include="IPC\NamedPipeServer.cs" />
+    <Compile Include="IPC\PipeHostService.cs" />
+    <Compile Include="IPC\PipeWrapService.cs" />
+    <Compile Include="JavaControlElement.cs" />
+    <Compile Include="JavaException.cs" />
+    <Compile Include="JavaNode.cs" />
+    <Compile Include="JavaSelectorItem.cs" />
+    <Compile Include="IPC\JavaIPCService.cs" />
+    <Compile Include="JMessage.cs" />
+    <Compile Include="KeyboardSimulateEx.cs" />
+    <Compile Include="MessageHandler.cs" />
+    <Compile Include="Mode\GetElementSelectExParamModel.cs" />
+    <Compile Include="Mode\JsonArrayClass.cs" />
+    <Compile Include="NativeMessagingMessage.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="PatternMatcher.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="JavaExecutor.cs" />
+    <Compile Include="Selector.cs" />
+    <Compile Include="SelectorAdapter.cs" />
+    <Compile Include="SelectorItem.cs" />
+    <Compile Include="JavaSelectorItemProperty.cs" />
+    <Compile Include="SelectorProps.cs" />
+    <Compile Include="UiCommon.cs" />
+    <EmbeddedResource Include="IIRPAJavaHost.resx">
+      <DependentUpon>IIRPAJavaHost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="javahost.ico" />
+  </ItemGroup>
+</Project>

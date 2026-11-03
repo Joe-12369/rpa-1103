@@ -1,0 +1,6 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.Core;Component/Wpf/Styles/FluentWindow.xaml" />
+        <ResourceDictionary Source="Pack://application:,,,/II.RPA.Plugin.Core;Component/Wpf/Styles/FluentWindowTitleBar.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

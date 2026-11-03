@@ -1,0 +1,10 @@
+{
+  "name": "GoogleTable",
+  "title": "谷歌表组件包",
+  "type": "1",
+  "version": "3.3.5.0",
+  "depend": "7.3.5",
+  "introduction": "包含了谷歌表的能力",
+  "description": "包含了谷歌表的能力",
+  "releaseTime": 1640161156000
+}

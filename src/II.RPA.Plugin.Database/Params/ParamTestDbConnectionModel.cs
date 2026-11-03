@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+
+namespace II.RPA.Plugin.Database.Params
+{
+    public class ParamTestDbConnectionModel : ParamBase
+    {
+        public EmDbType DbType { get; set; }
+
+        public string ConnectStr { get; set; }
+    }
+}

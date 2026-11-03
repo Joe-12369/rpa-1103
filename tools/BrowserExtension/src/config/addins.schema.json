@@ -1,0 +1,187 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "AddinsConfig",
+    "type": "object",
+    "required": [
+        "items"
+    ],
+    "properties": {
+        "version": {
+            "type": "integer"
+        },
+        "defaults": {
+            "type": "object",
+            "properties": {
+                "outputDir": {
+                    "type": "string"
+                },
+                "enabled": {
+                    "type": "boolean"
+                },
+                "type": {
+                    "enum": [
+                        "content",
+                        "background",
+                        "lib",
+                        "page"
+                    ]
+                },
+                "kind": {
+                    "enum": [
+                        "legacy",
+                        "module"
+                    ]
+                },
+                "entry": {
+                    "type": "string"
+                },
+                "build": {
+                    "type": "object",
+                    "properties": {
+                        "minify": {
+                            "type": "boolean"
+                        },
+                        "obfuscate": {
+                            "oneOf": [
+                                {
+                                    "type": "boolean"
+                                },
+                                {
+                                    "enum": [
+                                        "low",
+                                        "medium",
+                                        "high"
+                                    ]
+                                }
+                            ]
+                        },
+                        "sourcemap": {
+                            "type": "boolean"
+                        },
+                        "embed": {
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "publish": {
+                    "type": "object",
+                    "properties": {
+                        "minify": {
+                            "type": "boolean"
+                        },
+                        "obfuscate": {
+                            "oneOf": [
+                                {
+                                    "type": "boolean"
+                                },
+                                {
+                                    "enum": [
+                                        "low",
+                                        "medium",
+                                        "high"
+                                    ]
+                                }
+                            ]
+                        },
+                        "sourcemap": {
+                            "type": "boolean"
+                        }
+                    }
+                }
+            }
+        },
+        "items": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "name",
+                    "description"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "enum": [
+                            "content",
+                            "background",
+                            "lib"
+                        ]
+                    },
+                    "kind": {
+                        "enum": [
+                            "legacy",
+                            "module"
+                        ]
+                    },
+                    "entry": {
+                        "type": "string"
+                    },
+                    "enabled": {
+                        "type": "boolean"
+                    },
+                    "file": {
+                        "type": "string"
+                    },
+                    "build": {
+                        "type": "object",
+                        "properties": {
+                            "minify": {
+                                "type": "boolean"
+                            },
+                            "obfuscate": {
+                                "oneOf": [
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "enum": [
+                                            "low",
+                                            "medium",
+                                            "high"
+                                        ]
+                                    }
+                                ]
+                            },
+                            "sourcemap": {
+                                "type": "boolean"
+                            },
+                            "embed": {
+                                "type": "boolean"
+                            }
+                        }
+                    },
+                    "publish": {
+                        "type": "object",
+                        "properties": {
+                            "minify": {
+                                "type": "boolean"
+                            },
+                            "obfuscate": {
+                                "oneOf": [
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "enum": [
+                                            "low",
+                                            "medium",
+                                            "high"
+                                        ]
+                                    }
+                                ]
+                            },
+                            "sourcemap": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

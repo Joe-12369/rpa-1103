@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Plugin.RPASystem</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.RPASystem</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Plugin.RPASystem</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.RPASystem</AssemblyName>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Trace</DefineConstants>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Trace</DefineConstants>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="PluginPackage.cs" />
+    <Compile Include="Plugins\SystemComponentBase.cs" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\HIDDrivePreCheck.cs" />
+    <Compile Include="Config\SysConfigurations.cs" />
+    <Compile Include="Connected Services\SR\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\RdpHelper.cs" />
+    <Compile Include="Helper\RegisHelper.cs" />
+    <Compile Include="Helper\ScreenStateHelper.cs" />
+    <Compile Include="Helper\SocketHelper.cs" />
+    <Compile Include="Helper\SupportSocketClient.cs" />
+    <Compile Include="Helper\User32Helper.cs" />
+    <Compile Include="Params\ParamCheckPlugModel.cs" />
+    <Compile Include="Params\ParamEmptyModel.cs" />
+    <Compile Include="Params\ParamCredential.cs" />
+    <Compile Include="Params\ParamGetApplicationPathModel.cs" />
+    <Compile Include="Params\ParamLocalRemoteConModel.cs" />
+    <Compile Include="Params\ParamLocalRemoteOffModel.cs" />
+    <Compile Include="Params\ParamRDPUnlockModel.cs" />
+    <Compile Include="Params\ParamRDPLockModel.cs" />
+    <Compile Include="Params\ParamReadCredential.cs" />
+    <Compile Include="Params\ParamRemoteCancelModel.cs" />
+    <Compile Include="Params\ParamRemoteLockModel.cs" />
+    <Compile Include="Plugins\CpCheckPlug.cs" />
+    <Compile Include="Plugins\CheckScreenState.cs" />
+    <Compile Include="Plugins\credential\AddCredential.cs" />
+    <Compile Include="Plugins\credential\CredentialManager.cs" />
+    <Compile Include="Plugins\credential\DeleteCredential.cs" />
+    <Compile Include="Plugins\credential\ReadCredential.cs" />
+    <Compile Include="Plugins\GetApplicationPath.cs" />
+    <Compile Include="Plugins\HIDDriveCheck.cs" />
+    <Compile Include="Plugins\LocalRemoteConnection.cs" />
+    <Compile Include="Plugins\LocalRemoteOff.cs" />
+    <Compile Include="Plugins\RDPUnlock.cs" />
+    <Compile Include="Plugins\RDPLock.cs" />
+    <Compile Include="Plugins\RemoteCancel.cs" />
+    <Compile Include="Plugins\RemoteUnLock.cs" />
+    <Compile Include="Plugins\ScreenInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Config\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\plugin.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Connected Services\SR\service.wsdl" />
+    <None Include="Connected Services\SR\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SR\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\SR\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SR\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SR\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SR\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README .txt" />
+  </ItemGroup>
+  <Target Name="DeployRPASystemPlugin" AfterTargets="AfterBuild">
+    <PropertyGroup>
+      <_PluginName>RPASystem</_PluginName>
+      <_RuntimePluginDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimePluginDir>
+      <_RuntimeCsDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimeCsDir>
+    </PropertyGroup>
+    <RemoveDir Directories="$(_RuntimeCsDir)" Condition="Exists('$(_RuntimeCsDir)')" />
+    <MakeDir Directories="$(_RuntimePluginDir);$(_RuntimeCsDir)" />
+    <Copy SourceFiles="$(TargetDir)Config\config.json" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <ItemGroup>
+      <_MainOutput Include="$(TargetDir)$(TargetName).*" />
+      <_RuntimeDeps Include="$(TargetDir)SuperSocket.*" />
+      <_RuntimeDeps Include="$(TargetDir)Cassia.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_MainOutput)" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="@(_RuntimeDeps)" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+  </Target>
+  <ItemGroup>
+    <PackageReference Include="Cassia" Version="2.0.0.60" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.ServiceModel.Primitives" Version="8.1.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.ServiceModel.Http" Version="8.1.2" />
+  </ItemGroup>
+</Project>

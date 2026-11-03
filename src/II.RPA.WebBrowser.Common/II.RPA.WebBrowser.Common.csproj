@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.WebBrowser.Common</RootNamespace>
+    <AssemblyName>II.RPA.WebBrowser.Common</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>Library</OutputType>
+    
+    <RootNamespace>II.RPA.WebBrowser.Common</RootNamespace>
+    <AssemblyName>II.RPA.WebBrowser.Common</AssemblyName>
+    
+    
+    <Deterministic>true</Deterministic>
+    
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    
+    <ProjectReference Include="..\..\tools\NativeMessagingHost\II.RPA.IPC\II.RPA.IPC.csproj" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Reference Include="System.Management" />
+</ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionLab\AbActionBase.cs" />
+    <Compile Include="ActionLab\IActionBase.cs" />
+    <Compile Include="Basic\Browser.cs" />
+    <Compile Include="Basic\BrowserActionBase.cs" />
+    <Compile Include="Basic\BrowserManagers\BrowserShutdownManager.cs" />
+    <Compile Include="Basic\BrowserTabPage.cs" />
+    <Compile Include="Basic\connection\ConnectionFactory.cs" />
+    <Compile Include="Basic\connection\BrowserConnectionException.cs" />
+    <Compile Include="Basic\connection\ClientTransfer\ClientTransferCompletionReason.cs" />
+    <Compile Include="Basic\connection\ClientTransfer\ClientTransferDispatchResult.cs" />
+    <Compile Include="Basic\connection\ClientTransfer\ClientTransferEntry.cs" />
+    <Compile Include="Basic\connection\ClientTransfer\ClientTransferRequestDispatcher.cs" />
+    <Compile Include="Basic\connection\Entities\Command.cs" />
+    <Compile Include="Basic\connection\Entities\ConnectionResult.cs" />
+    <Compile Include="Basic\connection\Entities\TransferEntry.cs" />
+    <Compile Include="Basic\connection\Entities\TransferMessage.cs" />
+    <Compile Include="Basic\connection\IPCConnection.cs" />
+    <Compile Include="Basic\connection\NamePipeConnection.cs" />
+    <Compile Include="Basic\connection\NamedPipe\INamedPipeClientAdapter.cs" />
+    <Compile Include="Basic\connection\NamedPipe\INamedPipeRequestDiagnosticSink.cs" />
+    <Compile Include="Basic\connection\NamedPipe\NamedPipeClientAdapter.cs" />
+    <Compile Include="Basic\connection\NamedPipe\NamedPipeRequestDiagnosticSink.cs" />
+    <Compile Include="Basic\connection\NmhConnectionCapabilityResolver.cs" />
+    <Compile Include="Basic\connection\NmhConnectionFactory.cs" />
+    <Compile Include="Basic\connection\ServiceHubConnection.cs" />
+    <Compile Include="Basic\connection\ServiceHub\IServiceHubSession.cs" />
+    <Compile Include="Basic\connection\ServiceHub\SignalRServiceHubSession.cs" />
+    <Compile Include="Basic\connection\WcfConnectionProbe.cs" />
+    <Compile Include="Basic\ScriptInitialization\CrxScriptInitializationModels.cs" />
+    <Compile Include="Basic\ScriptInitialization\CrxScriptInitializer.cs" />
+    <Compile Include="Basic\BrowserManagers\BrowserTabCreaterBase.cs" />
+    <Compile Include="Basic\DownloaderBasic\DownloadDataInfo.cs" />
+    <Compile Include="Basic\DownloaderBasic\ElementDownloader.cs" />
+    <Compile Include="Basic\ElementGuiNode.cs" />
+    <Compile Include="Basic\ExtensionProvider.cs" />
+    <Compile Include="Basic\GuiOperatorBase.cs" />
+    <Compile Include="Basic\IBasic\IBrowserConnectionNew.cs" />
+    <Compile Include="Basic\MatchBrowser\EmbeddedIEWindowProvider.cs" />
+    <Compile Include="Basic\NMH\ProcessSnapshot.cs" />
+    <Compile Include="Basic\PageElement.cs" />
+    <Compile Include="Basic\Params\ParamAssociatedElementModel.cs" />
+    <Compile Include="Basic\Params\ParamAttributeModel.cs" />
+    <Compile Include="Basic\Params\ParamBuildSelectorModel.cs" />
+    <Compile Include="Basic\Params\ParamCheckStatusModel.cs" />
+    <Compile Include="Basic\Params\ParamCookieModel.cs" />
+    <Compile Include="Basic\Params\ParamCreateBrowserTabPageModel.cs" />
+    <Compile Include="Basic\Params\ParamCreateTabModel.cs" />
+    <Compile Include="Basic\Params\ParamcssSelectorModel.cs" />
+    <Compile Include="Basic\Params\ParamDownloadModel.cs" />
+    <Compile Include="Basic\Params\ParamElementGuiNodeModel.cs" />
+    <Compile Include="Basic\Params\ParamExecuteJavaScriptModel.cs" />
+    <Compile Include="Basic\Params\ParamExecuteScriptOnFrameModel.cs" />
+    <Compile Include="Basic\Params\ParamExtensionModel.cs" />
+    <Compile Include="Basic\Params\ParamGetChartDataModel.cs" />
+    <Compile Include="Basic\Params\ParamGetPropertyModel.cs" />
+    <Compile Include="Basic\Params\ParamGetTabIdsModel.cs" />
+    <Compile Include="Basic\Params\ParamInputModel.cs" />
+    <Compile Include="Basic\Params\ParamInspectNetworkModel.cs" />
+    <Compile Include="Basic\Params\ParamModel.cs" />
+    <Compile Include="Basic\Params\ParamMultipleCloseModel.cs" />
+    <Compile Include="Basic\Params\ParamNavigateModel.cs" />
+    <Compile Include="Basic\Params\ParamQueryCollectionDataModel.cs" />
+    <Compile Include="Basic\Params\ParamQuerySelectorModel.cs" />
+    <Compile Include="Basic\Params\ParamScrollModel.cs" />
+    <Compile Include="Basic\Params\ParamScrollToModel.cs" />
+    <Compile Include="Basic\Params\ParamSelectOptionModel.cs" />
+    <Compile Include="Basic\Params\ParamTabIdsModel.cs" />
+    <Compile Include="Basic\WebDataProvider.cs" />
+    <Compile Include="Basic\BrowserWindowProvider.cs" />
+    <Compile Include="MultiInstance\BrowserContext.cs" />
+    <Compile Include="MultiInstance\BrowserContextProvider.cs" />
+    <Compile Include="Basic\BrowserParams.cs" />
+    <Compile Include="BrowserSelectorItem.cs" />
+    <Compile Include="MultiInstance\BrowserProcessMatcher.cs" />
+    <Compile Include="MultiInstance\BrowserSpec.cs" />
+    <Compile Include="CrxVersion.cs" />
+    <Compile Include="MultiInstance\BrowserSpecRepository.cs" />
+    <Compile Include="MultiInstance\ChromiumBrowserDiscovery.cs" />
+    <Compile Include="MultiInstance\MultiInstanceMatcher.cs" />
+    <Compile Include="MultiInstance\NMHProcessLifeWatcher.cs" />
+    <Compile Include="MultiInstance\BrowserContextInventory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\DialogHelper.cs" />
+    <Compile Include="Utils\DownloadFileUtils.cs" />
+    <Compile Include="Utils\FileHelper.cs" />
+    <Compile Include="Utils\PredicateFilter.cs" />
+    <Compile Include="Utils\ProcessKiller.cs" />
+    <Compile Include="Utils\UtilsHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExtensionScripts\commonscript.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlaUI.Core\FlaUI.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.NamedPipeWrapper\II.RPA.NamedPipeWrapper.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.GUI.Commons\II.RPA.Plugin.GUI.Commons.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAPI\II.RPA.WinAPI.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExtensionScripts\utils.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExtensionScripts\sizzle.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExtensionScripts\json2.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExtensionScripts\dataCollectionScript.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExtensionScripts\webselect.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExtensionScripts\CrawlScript\Crawlbackground.js" />
+    <EmbeddedResource Include="ExtensionScripts\CrawlScript\Crawlcontent.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Basic\Entities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExtensionScripts\backgroundscript.js" />
+    <EmbeddedResource Include="ExtensionScripts\contentscript.js" />
+  </ItemGroup>
+  
+  
+  
+  <PropertyGroup>
+    <PreBuildEvent>echo //taskkill /F /IM II.RPA.Runtimehost.exe &amp;exit 0</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.SignalR.Client" Version="2.4.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AutoItX3.Assembly">
+      <HintPath>..\libs\AutoItX3.Assembly.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.ServiceModel.Primitives" Version="8.1.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.ServiceModel.NetNamedPipe" Version="8.1.2" />
+  </ItemGroup>
+  <Target Name="GetResolvedSignalRClientAssembly"
+          DependsOnTargets="ResolveReferences"
+          Returns="@(_ResolvedSignalRClientAssembly)">
+    <ItemGroup>
+      <_ResolvedSignalRClientAssembly Include="@(ReferenceCopyLocalPaths)"
+          Condition="'%(ReferenceCopyLocalPaths.Filename)%(ReferenceCopyLocalPaths.Extension)' == 'Microsoft.AspNet.SignalR.Client.dll'" />
+    </ItemGroup>
+  </Target>
+</Project>
+
+
+
+
+
+
+
+

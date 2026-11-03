@@ -1,0 +1,481 @@
+{
+  "desktop.app": [
+    {
+      "actions": [
+        {
+          "action": "App_Run",
+          "input": [ "args0.executeable" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Mouse_MoveToV1",
+          "input": [ "args0.location" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector", "args0.clickfunc=1" ]
+        }
+      ],
+      "category": []
+    },
+    {
+      "actions": [
+        {
+          "action": "WebBrowser_Create",
+          "input": [ "args0.type" ]
+        },
+        {
+          "action": "App_Run",
+          "input": [ "args0.executeable" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Mouse_MoveToV1",
+          "input": [ "args0.location" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector", "args0.clickfunc=1" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "explorer.excel": [
+    {
+      "actions": [
+        {
+          "action": "Excel_Cs_OpenV3",
+          "input": [ "args0.file" ]
+        },
+        {
+          "action": "File_Copy",
+          "input": [ "args0.pathSrc" ]
+        },
+        {
+          "action": "File_Rename",
+          "input": [ "args0.file_path" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector", "args0.clickfunc=1" ]
+        },
+        {
+          "action": "Excel_Cs_GetPath",
+          "input": []
+        },
+        {
+          "action": "File_File_Move",
+          "input": [ "args0.pathSrc" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "explorer.excel.wps": [
+    {
+      "actions": [
+        {
+          "action": "Excel_Cs_OpenV3",
+          "input": [ "args0.file", "args0.software=\"WPS\"" ]
+        },
+        {
+          "action": "File_Copy",
+          "input": [ "args0.pathSrc" ]
+        },
+        {
+          "action": "File_Rename",
+          "input": [ "args0.file_path" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector", "args0.clickfunc=1" ]
+        },
+        {
+          "action": "Word_GetPath",
+          "input": []
+        },
+        {
+          "action": "File_File_Move",
+          "input": [ "args0.pathSrc" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "explorer.word": [
+    {
+      "actions": [
+        {
+          "action": "Word_Open",
+          "input": [ "args0.filePath" ]
+        },
+        {
+          "action": "File_Copy",
+          "input": [ "args0.pathSrc" ]
+        },
+        {
+          "action": "File_Rename",
+          "input": [ "args0.file_path" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector", "args0.clickfunc=1" ]
+        },
+        {
+          "action": "Word_GetPath",
+          "input": []
+        },
+        {
+          "action": "File_File_Move",
+          "input": [ "args0.pathSrc" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "explorer.pdf": [
+    {
+      "actions": [
+        {
+          "action": "PDF_GetPdfText",
+          "input": [ "args0.fileInPath" ]
+        },
+        {
+          "action": "File_Copy",
+          "input": [ "args0.pathSrc" ]
+        },
+        {
+          "action": "File_Rename",
+          "input": [ "args0.file_path" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector", "args0.clickfunc=1" ]
+        },
+        {
+          "action": "File_File_Move",
+          "input": [ "args0.pathSrc" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "explorer.folder": [
+    {
+      "actions": [
+        {
+          "action": "File_OpenFile",
+          "input": [ "args0.path" ]
+        },
+        {
+          "action": "logic_control_if_file_path",
+          "input": [ "args0.path" ]
+        },
+        {
+          "action": "File_MoveFolder",
+          "input": [ "args0.pathSrc" ]
+        },
+        {
+          "action": "logic_control_count_for"
+        },
+        {
+          "action": "Mouse_MoveToV1",
+          "input": [ "args0.location" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "explorer.default": [
+    {
+      "actions": [
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector", "args0.clickfunc=1" ]
+        },
+        {
+          "action": "Mouse_MoveToV1",
+          "input": [ "args0.location" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_count_for"
+        }
+      ],
+      "category": []
+    }
+  ],
+  "browser.edit": [
+    {
+      "actions": [
+        {
+          "action": "WebBrowser_Create",
+          "input": [ "args0.type", "args0.url" ]
+        },
+        {
+          "action": "Element_SetValue",
+          "input": [ "args0.uiSelector", "args0.text" ]
+        },
+        {
+          "action": "Keyboard_PressNew"
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "native.input": [
+    {
+      "actions": [
+        {
+          "action": "Element_SetValue",
+          "input": [ "args0.uiSelector", "args0.text" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        },
+        {
+          "action": "Element_GetValue",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "excel.record": [
+    {
+      "actions": [
+        {
+          "action": "excel.record"
+        }
+      ]
+    }
+  ],
+  "explorer.taskbar": [
+    {
+      "actions": [
+        {
+          "action": "WebBrowser_Create",
+          "input": [ "args0.type" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "explorer.contextmenu": [
+    {
+      "actions": [
+        {
+          "action": "WebBrowser_Create",
+          "input": [ "args0.type" ]
+        },
+        {
+          "action": "logic_control_if_element",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "explorer.contextmenu.new": [
+    {
+      "actions": [
+        {
+          "action": "Word_New",
+          "input": [ "args0.filePath" ]
+        },
+        {
+          "action": "Excel_NewExcel",
+          "input": [ "args0.path" ]
+        },
+        {
+          "action": "File_MakeDir",
+          "input": [ "args0.path", "args0.name=\"新建文件夹_{0}\"" ]
+        },
+        {
+          "action": "Element_Click",
+          "input": [ "args0.uiSelector" ]
+        }
+      ],
+      "category": []
+    }
+  ],
+  "screenshot": [
+    {
+      "elementtype": "screenshot",
+      "actions": [
+        {
+          "action": "OCR_SourceMergeGeneralOCR_V1",
+          "actiontemplate": "General_OCR",
+          "actionalias": "文字识别",
+          "input": [ "args0.pictureSource=1", "args0.uiSelector" ]
+        },
+        {
+          "action": "logic_control_if_image",
+          "actiontemplate": "If_Image_Exist",
+          "actionalias": "判断存在",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Image_Wait",
+          "actiontemplate": "Wait_Image",
+          "actionalias": "等待图像",
+          "input": [ "args0.image" ]
+        },
+        {
+          "action": "Image_Find",
+          "actiontemplate": "Find_Image",
+          "actionalias": "查找图像",
+          "input": [ "args0.image" ]
+        }
+      ],
+      "category": [
+        {
+          "name": "鼠标操作",
+          "actiontemplate": "Mouse_Operation",
+          "actions": [
+            {
+              "action": "OcrOffline_MoveToOcrText_V1",
+              "input": [ "args0.uiSelector" ]
+            },
+            {
+              "action": "Image_Move",
+              "input": [ "args0.image" ]
+            },
+            {
+              "action": "Image_Click",
+              "input": [ "args0.image" ]
+            },
+            {
+              "action": "OcrOffline_ClickOcrText_V1",
+              "input": [ "args0.uiSelector" ]
+            }
+          ]
+        },
+        {
+          "name": "场景OCR",
+          "actiontemplate": "OCR_Collection",
+          "actions": [
+            {
+              "action": "OCR_SourceMergeCardOCR",
+              "input": [ "args0.pictureSource=1", "args0.image_path" ]
+            },
+            {
+              "action": "OCR_SourceMergePaperOCR",
+              "input": [ "args0.pictureSource=1", "args0.image_path" ]
+            },
+            {
+              "action": "OCR_SourceMergeEducationOCR",
+              "input": [ "args0.pictureSource=1", "args0.image_path" ]
+            },
+            {
+              "action": "OCR_SourceMergeCarOCR",
+              "input": [ "args0.pictureSource=1", "args0.image_path" ]
+            },
+            {
+              "action": "OCR_SourceMergeOtherOCR",
+              "input": [ "args0.pictureSource=1", "args0.image_path" ]
+            },
+            {
+              "action": "OCR_AmountIdentification",
+              "input": [ "args0.pictureSource=0", "args0.uiSelector" ]
+            }
+          ]
+        },
+        {
+          "name": "数据获取",
+          "actiontemplate": "Data_Acquisition",
+          "actions": [
+            {
+              "action": "OcrOffline_GetOcrTable",
+              "input": [ "args0.pictureSource=1", "args0.imagePath" ]
+            },
+            {
+              "action": "OCR_KeyValueIdentification",
+              "input": [ "args0.pictureSource=1", "args0.image_path" ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "screenshot_i18n": [
+    {
+      "elementtype": "screenshot",
+      "actions": [
+        {
+          "action": "logic_control_if_image",
+          "actiontemplate": "If_Image_Exist",
+          "actionalias": "判断存在",
+          "input": [ "args0.condition" ]
+        },
+        {
+          "action": "Image_Wait",
+          "actiontemplate": "Wait_Image",
+          "actionalias": "等待图像",
+          "input": [ "args0.image" ]
+        },
+        {
+          "action": "Image_Find",
+          "actiontemplate": "Find_Image",
+          "actionalias": "查找图像",
+          "input": [ "args0.image" ]
+        }
+      ],
+      "category": [
+        {
+          "name": "鼠标操作",
+          "actiontemplate": "Mouse_Operation",
+          "actions": [
+            {
+              "action": "Image_Move",
+              "input": [ "args0.image" ]
+            },
+            {
+              "action": "Image_Click",
+              "input": [ "args0.image" ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

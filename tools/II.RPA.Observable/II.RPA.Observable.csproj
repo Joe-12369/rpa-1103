@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Observable</RootNamespace>
+    <AssemblyName>II.RPA.Observable</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Cassia.NetStandard" Version="1.0.0" />
+    <PackageReference Include="DynamicData" Version="9.0.4" />
+    <PackageReference Include="IPA.Ubases" Version="1.0.0.22" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Reactive" Version="6.0.1" />
+    <!-- Microsoft.Extensions packages force-aligned to 10.0.10 by Directory.Build.targets -->
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Primitives" Version="10.0.10" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\ObjectExtension.cs" />
+    <Compile Include="Extensions\ReflectionExtension.cs" />
+    <Compile Include="Extensions\StringConvertExtension.cs" />
+    <Compile Include="Interops\Win32Api.Power.cs" />
+    <Compile Include="Interops\Win32Api.Screen.cs" />
+    <Compile Include="Interops\Win32Api.Session.cs" />
+    <Compile Include="Interops\Win32Api.Shared.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reactives\Extensions.cs" />
+    <Compile Include="Reactives\ReactiveObject.cs" />
+    <Compile Include="Reactives\ReactiveValue{T}.cs" />
+    <Compile Include="Scheduling\CtsControllable.cs" />
+    <Compile Include="Scheduling\IControllable.cs" />
+    <Compile Include="States\IOsStateCollector.cs" />
+    <Compile Include="States\IStateCollector.cs" />
+    <Compile Include="States\OsState.cs" />
+    <Compile Include="States\OsStateCollector.cs" />
+    <Compile Include="States\OsStates\ConnectionState.cs" />
+    <Compile Include="States\OsStates\OsSession.cs" />
+    <Compile Include="States\OsStates\ScreenInfo.cs" />
+    <Compile Include="States\StateCollector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+</Project>

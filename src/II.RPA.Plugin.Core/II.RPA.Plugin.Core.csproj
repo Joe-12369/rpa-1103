@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Plugin.Core</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.Core</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Platforms>x64;x86</Platforms>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>Library</OutputType>
+    
+    <RootNamespace>II.RPA.Plugin.Core</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.Core</AssemblyName>
+    
+    
+    <Deterministic>true</Deterministic>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;TARGET_X64</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\Compatibility\WindowsDpi.cs" Link="Compatibility\WindowsDpi.cs" />
+    
+    
+    <Reference Include="Interop.MSHTML">
+      <HintPath>..\libs\Interop.MSHTML.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+<Reference Include="System.Management" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commons\AttributeCollection.cs" />
+    <Compile Include="Commons\CaptureProvider.cs" />
+    <Compile Include="Commons\ActionCheckInterop.cs" />
+    <Compile Include="Commons\ClipBoardInvoker.cs" />
+    <Compile Include="Commons\CtsTimeout.cs" />
+    <Compile Include="Commons\CursorHelper.cs" />
+    <Compile Include="Commons\DpiConverter.cs" />
+    <Compile Include="Commons\DpiHelper.cs" />
+    <Compile Include="Commons\ImageProcesser.cs" />
+    <Compile Include="Commons\JtokenHelper.cs" />
+    <Compile Include="Commons\MessageService.cs" />
+    <Compile Include="Commons\ParentProcessUtilities.cs" />
+    <Compile Include="Commons\PowerWindowProvider.cs" />
+    <Compile Include="Commons\ProcessKiller.cs" />
+    <Compile Include="Commons\RandomHelper.cs" />
+    <Compile Include="Commons\RunContext.cs" />
+    <Compile Include="Commons\RunningStateManager.cs" />
+    <Compile Include="Commons\SelectorProps.cs" />
+    <Compile Include="Commons\SetTextByClipboard.cs" />
+    <Compile Include="Commons\SocketClient.cs" />
+    <Compile Include="Commons\RPAUtils.cs" />
+    <Compile Include="Commons\WindowCreateProcess.cs" />
+    <Compile Include="Commons\UIAExcuteTask.cs" />
+    <Compile Include="ConstFields.cs" />
+    <Compile Include="CompareMode\ICompareMode.cs" />
+    <Compile Include="CompareMode\BiggerMode.cs" />
+    <Compile Include="CompareMode\ContainsMode.cs" />
+    <Compile Include="CompareMode\DeciamlEqualMode.cs" />
+    <Compile Include="CompareMode\EndwithMode.cs" />
+    <Compile Include="CompareMode\EqualMode.cs" />
+    <Compile Include="CompareMode\CormpareFactory.cs" />
+    <Compile Include="CompareMode\RegularMode.cs" />
+    <Compile Include="CompareMode\SmallerMode.cs" />
+    <Compile Include="CompareMode\StartwithMode.cs" />
+    <Compile Include="Entities\AiBuriedDataModel.cs" />
+    <Compile Include="Services\RuntimeMessageModel.cs" />
+    <Compile Include="Entities\PluginRunRetryInfo.cs" />
+    <Compile Include="Entities\RunParamModel.cs" />
+    <Compile Include="Commons\KeyboardSimulate.cs" />
+    <Compile Include="Commons\PatternMatcher.cs" />
+    <Compile Include="Commons\GlobleConfigurations.cs" />
+    <Compile Include="Commons\EnumCollection.cs" />
+    <Compile Include="Commons\Extensions.cs" />
+    <Compile Include="Entities\Rect.cs" />
+    <Compile Include="EnumWindow\WindowHandleInfo.cs" />
+    <Compile Include="Entities\JMessage.cs" />
+    <Compile Include="Commons\NativeMethods.cs" />
+    <Compile Include="PluginRuntime\LifecycleReset\NeedResetObjectManager.cs" />
+    <Compile Include="PipeRequest.cs" />
+    <Compile Include="PipeResponse.cs" />
+    <Compile Include="PluginRuntime\Abilities\PluginParameterBase.cs" />
+    <Compile Include="PluginRuntime\Abilities\PluginAbilityProtocolBase.cs" />
+    <Compile Include="PluginRuntime\Abilities\PluginAbilityBase.cs" />
+    <Compile Include="PluginRuntime\Abilities\AsyncPluginAbilityBase.cs" />
+    <Compile Include="PluginRuntime\PackageManagement\AbilityLifetime.cs" />
+    <Compile Include="PluginRuntime\PackageManagement\AbilityConcurrencyMode.cs" />
+    <Compile Include="PluginRuntime\PackageManagement\AbilityActivationMode.cs" />
+    <Compile Include="PluginRuntime\PackageManagement\AbilityRegistration.cs" />
+    <Compile Include="PluginRuntime\PackageManagement\PluginPackageBuilder.cs" />
+    <Compile Include="PluginRuntime\PackageManagement\PackageDispatcher.cs" />
+    <Compile Include="PluginRuntime\PackageManagement\PluginPackageBase.cs" />
+    <Compile Include="PluginRuntime\LifecycleReset\INeedReset.cs" />
+    <Compile Include="PluginRuntime\Configuration\ConfigFileManager.cs" />
+    <Compile Include="PluginRuntime\Configuration\ConfigurationBase.cs" />
+    <Compile Include="PluginRuntime\Threading\IStaDispatcher.cs" />
+    <Compile Include="PluginRuntime\Threading\StaDispatcher.cs" />
+    <Compile Include="Entities\PluginInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Commons\RPAConcurrentDictionary.cs" />
+    <Compile Include="Services\AppManager.cs" />
+    <Compile Include="Services\IRpaApplication.cs" />
+    <Compile Include="Services\IRuntimeWorkerService.cs" />
+    <Compile Include="Services\RuntimeMessageService.cs" />
+    <Compile Include="Wpf\Controls\Windows\FluentWindow.cs" />
+    <Compile Include="Wpf\Controls\Windows\FluentWindowTitleBar.cs" />
+    <Compile Include="Wpf\Controls\Windows\WindowParameters.cs" />
+    <Compile Include="Wpf\Converters\NullToVisibilityConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.10" />
+    <ProjectReference Include="..\II.RPA.Plugin.Abstractions\II.RPA.Plugin.Abstractions.csproj" />
+    <ProjectReference Include="..\II.RPA.Core.Abstractions\II.RPA.Core.Abstractions.csproj" />
+    <ProjectReference Include="..\FlaUI.Core\FlaUI.Core.csproj" />
+    <ProjectReference Include="..\FlaUI.UIA2\FlaUI.UIA2.csproj" />
+    <ProjectReference Include="..\FlaUI.UIA3\FlaUI.UIA3.csproj" />
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.NamedPipeWrapper\II.RPA.NamedPipeWrapper.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Wpf\Styles\FluentWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Wpf\Styles\FluentWindowTitleBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Wpf\Theme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="ControlzEx" Version="4.2.2" />
+    <PackageReference Include="Fluent.Ribbon" Version="7.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Management" Version="8.0.0" />
+    <PackageReference Include="System.Reactive" Version="6.0.1" />
+    </ItemGroup>
+</Project>
+
+
+
+
+

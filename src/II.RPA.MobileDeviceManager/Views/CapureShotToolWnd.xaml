@@ -1,0 +1,68 @@
+﻿<Window
+    x:Class="II.RPA.MobileDeviceManager.Views.CapureShotToolWnd"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:II.RPA.MobileDeviceManager"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="240"
+    Height="120"
+    ResizeMode="NoResize"
+    WindowStyle="None"
+    mc:Ignorable="d"
+    xmlns:res="clr-namespace:II.RPA.WinAutomation.CommonUtility.Resource;assembly=II.RPA.WinAutomation.CommonUtility">
+    <Grid Background="Black">
+        <StackPanel Opacity="0.7">
+            <StackPanel Height="30" Orientation="Horizontal">
+                <Label
+                    Width="120"
+                    Content="{x:Static res:II_RPA_Resource.CapureShotToolWnd_E2404A73}"
+                    Foreground="White" />
+                <Label
+                    Width="28"
+                    Content="X,Y"
+                    Foreground="White" />
+                <Label
+                    x:Name="location"
+                    Width="92"
+                    Content="(600,600)"
+                    Foreground="White" />
+            </StackPanel>
+            <StackPanel Height="30" Orientation="Horizontal">
+                <Label
+                    Width="120"
+                    Content="{x:Static res:II_RPA_Resource.CapureShotToolWnd_4C832895}"
+                    Foreground="White" />
+                <Label
+                    Width="120"
+                    Content="{x:Static res:II_RPA_Resource.CapureShotToolWnd_97B96882}"
+                    Foreground="White" />
+            </StackPanel>
+            <StackPanel Height="1" Orientation="Horizontal">
+                <Line
+                    Stroke="White"
+                    X1="0"
+                    X2="260"
+                    Y1="0"
+                    Y2="0" />
+            </StackPanel>
+            <StackPanel Height="30" Orientation="Horizontal">
+                <Border Background="#ff8910" Height="15" Width="35" CornerRadius="2">
+                    <TextBlock Text="Ctrl" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                </Border>
+                <Border  Height="15" Width="35" Margin="83,0,0,0">
+                    <TextBlock Text="激活" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                </Border>
+            </StackPanel>
+            <StackPanel Height="30" Orientation="Horizontal">
+                <Border Background="#ff8910" Height="15" Width="35" CornerRadius="2">
+                    <TextBlock Text="ESC" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                </Border>
+                <Border  Height="15" Width="35" Margin="83,0,0,0">
+                    <TextBlock Text="退出" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                </Border>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>

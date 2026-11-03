@@ -1,0 +1,103 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug addins",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "addins"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Release addins",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "addins:publish"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Pull addins",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "addins:pull"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug ext",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "ext:build"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Publish Ext",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "ext:publish"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Build Page",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "pages:build"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Upload Ext",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "ext:upload"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}

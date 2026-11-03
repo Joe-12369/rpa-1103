@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net10.0-windows</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<IsPackable>false</IsPackable>
+		<IsTestProject>true</IsTestProject>
+		<PlatformTarget>x64</PlatformTarget>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+		<PackageReference Include="xunit" Version="2.9.3" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="3.1.5">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.10" />
+		
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\II.RPA.Plugin.GUI.Commons\II.RPA.Plugin.GUI.Commons.csproj" />
+		<ProjectReference Include="..\II.RPA.Plugin.CV\II.RPA.Plugin.CV.csproj" />
+		<ProjectReference Include="..\II.RPA.Plugin.Windows\II.RPA.Plugin.Windows.csproj" />
+		<ProjectReference Include="..\II.RPA.Plugin.Java\II.RPA.Plugin.Java.csproj" />
+		<ProjectReference Include="..\II.RPA.Plugin.JavaAlter\II.RPA.Plugin.JavaAlter.csproj" />
+		<ProjectReference Include="..\II.RPA.Plugin.SAP\II.RPA.Plugin.SAP.csproj" />
+		<ProjectReference Include="..\II.RPA.Plugin.WdtErp\II.RPA.Plugin.WdtErp.csproj" />
+	</ItemGroup>
+</Project>

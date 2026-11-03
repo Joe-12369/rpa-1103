@@ -1,0 +1,8 @@
+<Project>
+  <ItemGroup>
+    <ProjectReference Update="..\II.RPA.WebBrowser.Common\II.RPA.WebBrowser.Common.csproj"
+                      AdditionalProperties="SolutionDir=$(MSBuildThisFileDirectory)..\" />
+    <ProjectReference Update="..\II.RPA.Plugin.Browsers\II.RPA.Plugin.Browsers.csproj"
+                      AdditionalProperties="SolutionDir=$(MSBuildThisFileDirectory)..\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,39 @@
+{
+  "fileName": "II.RPA.Plugin.IE.dll",
+  "matchConfigMap": {
+    "ie": {
+      "configType": "Normal",
+      "productName": "ie",
+      "lableName": "IE浏览器",
+      "browserWndClassNames": [ "IEFrame" ],
+      "titleFeatures": [],
+      "processFeatures": [ "iexplore" ],
+      "renderClassNames": [],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "ie_nonstandard": {
+      "configType": "Normal",
+      "productName": "ie",
+      "lableName": "IE浏览器",
+      "browserWndClassNames": [ "Internet Explorer_TridentDlgFrame" ],
+      "titleFeatures": [],
+      "processFeatures": [ "iexplore" ],
+      "renderClassNames": [],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": ""
+    },
+    "AppEmbeddedIE": {
+      "configType": "AppEmbeddedIE",
+      "productName": "",
+      "lableName": "",
+      "browserWndClassNames": [],
+      "titleFeatures": [],
+      "processFeatures": [ "iexplore" ],
+      "renderClassNames": [],
+      "IERenderClassNames": [ "Internet Explorer_Server" ],
+      "appExePath": "",
+      "ExcludeProcess": [ "chrome", "edge", "msedge", "360se", "360ChromeX", "360chromeie", "superbrowser", "SogouExplorer", "iexplore" ]
+    }
+  }
+}

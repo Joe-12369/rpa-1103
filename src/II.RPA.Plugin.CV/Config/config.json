@@ -1,0 +1,5 @@
+{
+  "fileName": "II.RPA.Plugin.CV.dll",
+  //匹配根节点的方式类型,0 UIA方式，1窗口匹配
+  "MatchRootNodeMode": 1
+}

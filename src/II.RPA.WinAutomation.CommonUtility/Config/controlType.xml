@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ControlType>
+	<a>链接</a>
+	<audio>音频</audio>
+	<body>网页主体</body>
+	<button>按钮_button</button>
+	<canvas>图片</canvas>
+	<Cell>单元格</Cell>
+	<code>代码区域</code>
+	<dd>列表项_dd</dd>
+	<dialog>对话框_dialog</dialog>
+	<div>区域元素</div>
+	<dl>列表</dl>
+	<dt>列表项_dt</dt>
+	<em>强调文本_em</em>
+	<form>表单</form>
+	<frame>嵌套区块</frame>
+	<frameset>嵌套区域</frameset>
+	<h1>标题_h1</h1>
+	<h2>标题_h2</h2>
+	<h3>标题_h3</h3>
+	<h4>标题_h4</h4>
+	<h5>标题_h5</h5>
+	<h6>标题_h6</h6>
+	<header>页眉</header>
+	<i>斜体文本</i>
+	<iframe>嵌套区块</iframe>
+	<img>图像</img>
+	<image>图像</image>
+	<input>输入框</input>
+	<input type="text">输入框</input>
+	<input type="submit">按钮</input>
+	<input type="button">按钮</input>
+	<input type="radio">单选框</input>
+	<input type="reset">按钮</input>
+	<input type="checkbox">勾选框</input>
+	<label>标注_label</label>
+	<li>列表项目_li</li>
+	<map>可点击图像</map>
+	<menu>菜单栏</menu>
+	<option>选择项</option>
+	<picture>图像</picture>
+	<select>下拉框</select>
+	<span>行内元素_span</span>
+	<svg>轮廓</svg>
+	<table>表格</table>
+	<tbody>表格主体</tbody>
+	<td>单元格_td</td>
+	<textarea>文本框</textarea>
+	<th>表头单元格_th</th>
+	<Text>文本</Text>
+	<thead>表头</thead>
+	<tr>行</tr>
+	<title>标题_title</title>
+	<ul>无序列表</ul>
+	<video>视频</video>
+	<radio>单选框</radio>
+	<checkbox>多选框</checkbox>
+
+	<Animation>动画</Animation>
+	<ComboBox>下拉列表框</ComboBox>
+	<ComboBoxEx>下拉列表框</ComboBoxEx>
+	<Date_and_Time_Picker>时间选择器</Date_and_Time_Picker>
+	<Edit>文本框_Edit</Edit>
+	<EditBox>文本框</EditBox>
+	<Flat_Scroll_Bar>滚动条</Flat_Scroll_Bar>
+	<Image_List>图片列表</Image_List>
+	<IP_Address_Control>IP 地址框_IP Address Control</IP_Address_Control>
+	<List_Box>单选框</List_Box>
+	<List_View>列表视图</List_View>
+	<Month_Calendar>月历</Month_Calendar>
+	<Pager>页面</Pager>
+	<Progress_Bar>进度条</Progress_Bar>
+	<Rich_Edit>富文本框</Rich_Edit>
+	<Scroll_Bar>滚动条</Scroll_Bar>
+	<Status_Bar>状态栏</Status_Bar>
+	<SysLink>链接标签_SysLink</SysLink>
+	<Tab>标签页_Tab</Tab>
+	<Task_Dialog>对话框</Task_Dialog>
+	<Toolbar>工具栏</Toolbar>
+	<Tooltip>工具栏</Tooltip>
+	<Tree_View>树状图</Tree_View>
+
+	<CheckBox>复选框</CheckBox>
+	<CheckedListBox>复选列表框</CheckedListBox>
+	<ComboBox>下拉列表框</ComboBox>
+	<DateTimePicker>时间选择器</DateTimePicker>
+	<LinkLabel>链接标签_LinkLabel</LinkLabel>
+	<ListBox>列表框</ListBox>
+	<ListView>列表视图</ListView>
+	<MaskedTextBox>掩码文本框_MaskedTextBox</MaskedTextBox>
+	<MonthCalendar>月历</MonthCalendar>
+	<NotifyIcon>通知_NotifyIcon</NotifyIcon>
+	<NumeircUpDown>数字选择框</NumeircUpDown>
+	<PictureBox>图片框</PictureBox>
+	<ProgressBar>进度条</ProgressBar>
+	<RadioButton>单选按钮</RadioButton>
+	<RichTextBox>富文本编辑框</RichTextBox>
+	<TextBox>文本框_TextBox</TextBox>
+	<ToolTip>使用提示_ToolTip</ToolTip>
+	<TreeView>树状图</TreeView>
+	<WebBrowser>浏览器</WebBrowser>
+	<GroupBox>分组框</GroupBox>
+	<TabControl>tab页_TabControl</TabControl>
+	<ContextMenuStrip>右键菜单</ContextMenuStrip>
+	<MenuStrip>菜单_MenuStrip</MenuStrip>
+	<StatusStrip>状态栏</StatusStrip>
+	<ToolStrip>富文本编辑框</ToolStrip>
+	<DataGridView>数据表格</DataGridView>
+	<ColorDialog>对话框</ColorDialog>
+	<FolderBrowserDialog>对话框</FolderBrowserDialog>
+	<FontDialog>字体对话框</FontDialog>
+	<OpenFileDialog>对话框</OpenFileDialog>
+	<SaveFileDialog>对话框</SaveFileDialog>
+	<ImageList>图像列表</ImageList>
+	<PrintDialog>打印对话框</PrintDialog>
+	<PrintDocument>打印文档</PrintDocument>
+	<PrintPreviewControl>打印预览控件</PrintPreviewControl>
+	<PrintPreviewDialog>打印预览对话框</PrintPreviewDialog>
+	<HScrollBar>滚动条</HScrollBar>
+	<PropertyGrid>属性表格</PropertyGrid>
+	<VScrollBar>滚动条</VScrollBar>
+
+	<element_detection>图像</element_detection>
+	<ocr_recognition>文字</ocr_recognition>
+	<template_match>图像</template_match>
+</ControlType>

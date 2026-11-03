@@ -1,0 +1,29 @@
+﻿<Window
+    x:Class="II.RPA.MobileDeviceManager.Views.CheckWnd"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="50"
+    d:DesignWidth="50"
+    AllowsTransparency="True"
+    Background="Transparent"
+    Opacity="0.5"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Grid>
+        <!--<Border CornerRadius="0,0,0,0" x:Name="boder"
+
+            Background="#7EA7FF"
+                    BorderBrush="#FD2E39"
+                    BorderThickness="2">
+        -->
+        <!--<Border.Effect>
+                <DropShadowEffect Color="Gray" BlurRadius="10" ShadowDepth="0" Opacity="0.5" />
+            </Border.Effect>-->
+        <!--
+        </Border>-->
+        <Canvas Name="canvas" Margin="0,0,0,0" />
+    </Grid>
+
+</Window>

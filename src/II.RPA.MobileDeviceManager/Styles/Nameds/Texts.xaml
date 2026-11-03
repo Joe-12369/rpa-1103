@@ -1,0 +1,170 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:rc="https://ii.rpa/control">
+    <Style x:Key="TbkBase" TargetType="TextBlock">
+        <!--<Setter Property="FontFamily" Value="/II.RPA.Bot.Resource;Component/Fonts/#Source Han Sans SC VF" />-->
+        <Setter Property="FontFamily" Value="Microsoft Yahei" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="ToolTipService.InitialShowDelay" Value="200" />
+    </Style>
+    <Style
+        x:Key="TbkClear"
+        BasedOn="{StaticResource TbkBase}"
+        TargetType="TextBlock">
+        <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
+        <Setter Property="TextOptions.TextRenderingMode" Value="ClearType" />
+        <Setter Property="TextOptions.TextHintingMode" Value="Fixed" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="RenderOptions.ClearTypeHint" Value="Enabled" />
+    </Style>
+
+    <Style
+        x:Key="TbkH1"
+        BasedOn="{StaticResource TbkClear}"
+        TargetType="TextBlock">
+
+        <Setter Property="FontFamily" Value="/II.RPA.Bot.Resource;Component/Fonts/#思源黑体 CN" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="FontSize" Value="16" />
+    </Style>
+
+    <Style
+        x:Key="TbkH2"
+        BasedOn="{StaticResource TbkClear}"
+        TargetType="TextBlock">
+
+        <Setter Property="FontFamily" Value="/II.RPA.Bot.Resource;Component/Fonts/#思源黑体 CN" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="FontSize" Value="16" />
+    </Style>
+
+    <Style x:Key="RunNum" TargetType="Run">
+        <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
+        <Setter Property="TextOptions.TextRenderingMode" Value="ClearType" />
+        <Setter Property="TextOptions.TextHintingMode" Value="Fixed" />
+        <Setter Property="RenderOptions.ClearTypeHint" Value="Enabled" />
+        <Setter Property="FontFamily" Value="/II.RPA.Bot.Resource;Component/Fonts/#D-DIN-PRO" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+
+    <Style
+        x:Key="TbkNum"
+        BasedOn="{StaticResource TbkClear}"
+        TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="/II.RPA.Bot.Resource;Component/Fonts/#D-DIN-PRO" />
+    </Style>
+
+    <Style
+        x:Key="TbkIcon"
+        BasedOn="{StaticResource TbkClear}"
+        TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="/II.RPA.Bot.Resource;Component/Icon/#iconfont" />
+    </Style>
+
+    <Style
+        x:Key="TbkListTitle"
+        BasedOn="{StaticResource TbkClear}"
+        TargetType="TextBlock">
+        <Setter Property="FontSize" Value="13.5" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="LineHeight" Value="18" />
+        <Setter Property="Foreground" Value="#161923" />
+    </Style>
+
+    <Style
+        x:Key="TbkBlockListTitle"
+        BasedOn="{StaticResource TbkClear}"
+        TargetType="TextBlock">
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="LineHeight" Value="18" />
+        <Setter Property="Foreground" Value="#161923" />
+    </Style>
+
+    <Style
+        x:Key="TbkBlockListSubTitle"
+        BasedOn="{StaticResource TbkClear}"
+        TargetType="TextBlock">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="LineHeight" Value="16" />
+        <Setter Property="Foreground" Value="#848A90" />
+    </Style>
+
+    <Style
+        x:Key="TbkListBody"
+        BasedOn="{StaticResource TbkClear}"
+        TargetType="TextBlock">
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <!--<Setter Property="LineHeight" Value="18" />-->
+        <Setter Property="Foreground" Value="#505962" />
+        <Setter Property="TextOptions.TextRenderingMode" Value="Grayscale" />
+    </Style>
+    <Style
+        x:Key="TbkListSubTitle"
+        BasedOn="{StaticResource TbkClear}"
+        TargetType="TextBlock">
+        <Setter Property="TextOptions.TextRenderingMode" Value="Grayscale" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="LineHeight" Value="16" />
+        <Setter Property="Foreground" Value="#848A90" />
+    </Style>
+    <Style
+        x:Key="TbkListHeader"
+        BasedOn="{StaticResource TbkClear}"
+        TargetType="TextBlock">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="TextOptions.TextRenderingMode" Value="Grayscale" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="LineHeight" Value="22" />
+        <Setter Property="Foreground" Value="#848A90" />
+    </Style>
+
+    <Style x:Key="TBTitleStyle" TargetType="TextBlock">
+        <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
+        <Setter Property="TextOptions.TextHintingMode" Value="Fixed" />
+        <Setter Property="TextOptions.TextRenderingMode" Value="ClearType" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="FontFamily" Value="Microsoft YaHei" />
+        <Setter Property="FontWeight" Value="Black" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="FontSize" Value="16" />
+    </Style>
+
+    <Style x:Key="TBContentStyle" TargetType="TextBlock">
+        <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
+        <Setter Property="TextOptions.TextHintingMode" Value="Fixed" />
+        <Setter Property="TextOptions.TextRenderingMode" Value="ClearType" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="FontFamily" Value="Microsoft YaHei" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="FontSize" Value="16" />
+    </Style>
+
+    <!--
+        TextOptions.TextHintingMode="Fixed"
+        TextOptions.TextRenderingMode="ClearType"
+        UseLayoutRounding="True"
+    -->
+
+    <!--<Style x:Key="IcbTitle" TargetType="rc:IconButton">
+        <Setter Property="FontFamily" Value="Microsoft Yahei UI" />
+        <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
+        <Setter Property="TextOptions.TextRenderingMode" Value="ClearType" />
+        <Setter Property="TextOptions.TextHintingMode" Value="Fixed" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="RenderOptions.ClearTypeHint" Value="Enabled" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Height" Value="24" />
+        <Setter Property="Foreground" Value="#848A90" />
+        <Setter Property="Cursor" Value="Hand" />
+    </Style>-->
+</ResourceDictionary>

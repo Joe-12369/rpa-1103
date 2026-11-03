@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+    <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <OutputType>Library</OutputType>
+    <RootNamespace>II.RPA.Plugin.DriverInput</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.DriverInput</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+<PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    
+    <OutputType>Library</OutputType>
+    
+    <RootNamespace>II.RPA.Plugin.DriverInput</RootNamespace>
+    <AssemblyName>II.RPA.Plugin.DriverInput</AssemblyName>
+    
+    
+    <Deterministic>true</Deterministic>
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\$(MSBuildProjectName)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="PluginPackage.cs" />
+    <Compile Include="Config\Configurations.cs" />
+    <Compile Include="HID\Drivers.cs" />
+    <Compile Include="HID\HIDCtrl.cs" />
+    <Compile Include="HID\HIDInputManager.cs" />
+    <Compile Include="HID\HIDSendHelper.cs" />
+    <Compile Include="HID\KeyboardUtils.cs" />
+    <Compile Include="Interceptor\AiKeyboard.cs" />
+    <Compile Include="Interceptor\Classes\DeviceData.cs" />
+    <Compile Include="Interceptor\Classes\Enums.cs" />
+    <Compile Include="Interceptor\Classes\Hook.cs" />
+    <Compile Include="Interceptor\Classes\KeyStroke.cs" />
+    <Compile Include="Interceptor\Classes\MouseStroke.cs" />
+    <Compile Include="Interceptor\Classes\Stroke.cs" />
+    <Compile Include="Interceptor\Classes\Win32Point.cs" />
+    <Compile Include="Interceptor\DllWrapper.cs" />
+    <Compile Include="Interceptor\InputInterceptor.cs" />
+    <Compile Include="Interceptor\InterceptionMethods.cs" />
+    <Compile Include="Interceptor\KeyboardHook.cs" />
+    <Compile Include="Interceptor\NativeMethods.cs" />
+    <Compile Include="Params\ParamDriverSearchModel.cs" />
+    <Compile Include="Plugins\DriverInput.cs" />
+    <Compile Include="Params\EnumInputMode.cs" />
+    <Compile Include="Params\ParamBase\ParamBase.cs" />
+    <Compile Include="Params\ParamDriverInputModel.cs" />
+    <Compile Include="Plugins\DriverSearch.cs" />
+    <Compile Include="Plugins\PluginBase\DriverInputComponentBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\DeviceChoiceHelper.cs" />
+    <Compile Include="WinRing0\ControlKey.cs" />
+    <Compile Include="WinRing0\EnumWindowsType.cs" />
+    <Compile Include="WinRing0\PressKeyByWinRing0.cs" />
+    <Compile Include="WinRing0\WinRing0.cs" />
+    <Compile Include="WinRing0\WinRing0InputManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\II.RPA.Logging\II.RPA.Logging.csproj" />
+    <ProjectReference Include="..\II.RPA.Plugin.Core\II.RPA.Plugin.Core.csproj" />
+    <ProjectReference Include="..\II.RPA.WinAutomation.CommonUtility\II.RPA.WinAutomation.CommonUtility.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Config\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\plugin.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    
+    <None Include="WinRingDLL\WinRing0.sys">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WinRingDLL\WinRing0x64.sys">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WinRingDLL\WinRing0.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WinRingDLL\WinRing0x64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="InterceptorDLL\interception.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  
+  <Target Name="DeployDriverInputPlugin" AfterTargets="AfterBuild">
+    <PropertyGroup>
+      <_PluginName>DriverInput</_PluginName>
+      <_RuntimePluginDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimePluginDir>
+      <_RuntimeCsDir>$(SolutionDir)..\bin\II.RPA.PluginLoader\runtime\$(_PluginName)\</_RuntimeCsDir>
+    </PropertyGroup>
+    <RemoveDir Directories="$(_RuntimeCsDir)" Condition="Exists('$(_RuntimeCsDir)')" />
+    <MakeDir Directories="$(_RuntimePluginDir);$(_RuntimeCsDir)" />
+    <Copy SourceFiles="$(TargetDir)Config\config.json" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <ItemGroup>
+      <_MainOutput Include="$(TargetDir)$(TargetName).*" />
+      <_Interceptor Include="$(TargetDir)InterceptorDLL\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_MainOutput)" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="@(_Interceptor)" DestinationFolder="$(_RuntimeCsDir)" SkipUnchangedFiles="false" />
+  </Target>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    </ItemGroup>
+</Project>
+
+
+
+

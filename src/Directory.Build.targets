@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <!-- Keep the Microsoft.Extensions graph aligned with the .NET 10 runtime.
+         The RuntimeHost solution has a single net10.0-windows target; no
+         .NET Framework compatibility target is part of that dependency graph. -->
+    <ItemGroup Condition="'$(TargetFramework)' == 'net10.0-windows'">
+        <PackageReference Update="Microsoft.Extensions.DependencyInjection" Version="10.0.10" />
+        <PackageReference Update="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.10" />
+        <PackageReference Update="Microsoft.Extensions.Logging" Version="10.0.10" />
+        <PackageReference Update="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+        <PackageReference Update="Microsoft.Extensions.Options" Version="10.0.10" />
+        <PackageReference Update="Microsoft.Extensions.Primitives" Version="10.0.10" />
+    </ItemGroup>
+
+    <Import Project="$(MSBuildThisFileDirectory)Branding.ManagedProjects.props"
+        Condition="Exists('$(MSBuildThisFileDirectory)Branding.ManagedProjects.props')" />
+
+    <PropertyGroup>
+        <BrandingAssemblyInfoTransformScript
+            Condition="'$(BrandingAssemblyInfoTransformScript)' == ''">
+            $(MSBuildThisFileDirectory)Build.Branding.TransformAssemblyInfo.ps1</BrandingAssemblyInfoTransformScript>
+        <BrandingLogScript Condition="'$(BrandingLogScript)' == ''">
+            $(MSBuildThisFileDirectory)Build.Branding.Log.ps1</BrandingLogScript>
+        <BrandingEnabled Condition="'$(BrandingEnabled)' == ''">false</BrandingEnabled>
+        <_BrandingSourceAssemblyInfoFileNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingSourceAssemblyInfoFile)',
+            '^\s+|\s+$', ''))</_BrandingSourceAssemblyInfoFileNormalized>
+        <_BrandingAssemblyInfoTransformScriptNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingAssemblyInfoTransformScript)',
+            '^\s+|\s+$', ''))</_BrandingAssemblyInfoTransformScriptNormalized>
+        <_BrandingLogScriptNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingLogScript)',
+            '^\s+|\s+$', ''))</_BrandingLogScriptNormalized>
+        <_BrandingEnabledNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingEnabled)',
+            '^\s+|\s+$', ''))</_BrandingEnabledNormalized>
+        <_BrandingAssemblyCompanyEnabledNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingAssemblyCompanyEnabled)',
+            '^\s+|\s+$', ''))</_BrandingAssemblyCompanyEnabledNormalized>
+        <_BrandingAssemblyCopyrightEnabledNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingAssemblyCopyrightEnabled)',
+            '^\s+|\s+$', ''))</_BrandingAssemblyCopyrightEnabledNormalized>
+        <_BrandingAssemblyVersionEnabledNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingAssemblyVersionEnabled)',
+            '^\s+|\s+$', ''))</_BrandingAssemblyVersionEnabledNormalized>
+        <_BrandingAssemblyFileVersionEnabledNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingAssemblyFileVersionEnabled)',
+            '^\s+|\s+$', ''))</_BrandingAssemblyFileVersionEnabledNormalized>
+        <_BrandingAssemblyInformationalVersionEnabledNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingAssemblyInformationalVersionEnabled)',
+            '^\s+|\s+$', ''))</_BrandingAssemblyInformationalVersionEnabledNormalized>
+        <_BrandingAssemblyCompanyNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingAssemblyCompany)',
+            '^\s+|\s+$', ''))</_BrandingAssemblyCompanyNormalized>
+        <_BrandingAssemblyCopyrightNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingAssemblyCopyright)',
+            '^\s+|\s+$', ''))</_BrandingAssemblyCopyrightNormalized>
+        <_BrandingAssemblyVersionNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingAssemblyVersion)',
+            '^\s+|\s+$', ''))</_BrandingAssemblyVersionNormalized>
+        <_BrandingAssemblyFileVersionNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingAssemblyFileVersion)',
+            '^\s+|\s+$', ''))</_BrandingAssemblyFileVersionNormalized>
+        <_BrandingAssemblyInformationalVersionNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingAssemblyInformationalVersion)',
+            '^\s+|\s+$', ''))</_BrandingAssemblyInformationalVersionNormalized>
+
+        <_BrandingProjectPatternFlattened Condition="'$(BrandingProjectPattern)' != ''">$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingProjectPattern)',
+            '\s*[\r\n]+\s*', '|'))</_BrandingProjectPatternFlattened>
+        <_BrandingProjectPattern Condition="'$(_BrandingProjectPatternFlattened)' != ''">$([System.Text.RegularExpressions.Regex]::Replace('$(_BrandingProjectPatternFlattened)',
+            '^\|+|\|+$', ''))</_BrandingProjectPattern>
+
+        <_BrandingProjectHit Condition="'$(_BrandingProjectPattern)' != ''">$([System.Text.RegularExpressions.Regex]::IsMatch('$(MSBuildProjectName)',
+            '$(_BrandingProjectPattern)'))</_BrandingProjectHit>
+        <_BrandingProjectHit Condition="'$(_BrandingProjectHit)' == ''">false</_BrandingProjectHit>
+        <_BrandingProjectHitNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(_BrandingProjectHit)',
+            '^\s+|\s+$', ''))</_BrandingProjectHitNormalized>
+
+        <_BrandingHasAssemblyCompany
+            Condition="'$(_BrandingAssemblyCompanyEnabledNormalized)' == 'true' or '$(_BrandingAssemblyCompanyEnabledNormalized)' == 'True'">
+            true</_BrandingHasAssemblyCompany>
+        <_BrandingHasAssemblyCompany Condition="'$(_BrandingHasAssemblyCompany)' == ''">false</_BrandingHasAssemblyCompany>
+        <_BrandingHasAssemblyCompanyNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(_BrandingHasAssemblyCompany)',
+            '^\s+|\s+$', ''))</_BrandingHasAssemblyCompanyNormalized>
+        <_BrandingHasAssemblyCopyright
+            Condition="'$(_BrandingAssemblyCopyrightEnabledNormalized)' == 'true' or '$(_BrandingAssemblyCopyrightEnabledNormalized)' == 'True'">
+            true</_BrandingHasAssemblyCopyright>
+        <_BrandingHasAssemblyCopyright Condition="'$(_BrandingHasAssemblyCopyright)' == ''">false</_BrandingHasAssemblyCopyright>
+        <_BrandingHasAssemblyCopyrightNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(_BrandingHasAssemblyCopyright)',
+            '^\s+|\s+$', ''))</_BrandingHasAssemblyCopyrightNormalized>
+        <_BrandingHasAssemblyVersion
+            Condition="'$(_BrandingAssemblyVersionEnabledNormalized)' == 'true' or '$(_BrandingAssemblyVersionEnabledNormalized)' == 'True'">
+            true</_BrandingHasAssemblyVersion>
+        <_BrandingHasAssemblyVersion Condition="'$(_BrandingHasAssemblyVersion)' == ''">false</_BrandingHasAssemblyVersion>
+        <_BrandingHasAssemblyVersionNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(_BrandingHasAssemblyVersion)',
+            '^\s+|\s+$', ''))</_BrandingHasAssemblyVersionNormalized>
+        <_BrandingHasAssemblyFileVersion
+            Condition="'$(_BrandingAssemblyFileVersionEnabledNormalized)' == 'true' or '$(_BrandingAssemblyFileVersionEnabledNormalized)' == 'True'">
+            true</_BrandingHasAssemblyFileVersion>
+        <_BrandingHasAssemblyFileVersion Condition="'$(_BrandingHasAssemblyFileVersion)' == ''">
+            false</_BrandingHasAssemblyFileVersion>
+        <_BrandingHasAssemblyFileVersionNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(_BrandingHasAssemblyFileVersion)',
+            '^\s+|\s+$', ''))</_BrandingHasAssemblyFileVersionNormalized>
+        <_BrandingHasAssemblyInformationalVersion
+            Condition="'$(_BrandingAssemblyInformationalVersionEnabledNormalized)' == 'true' or '$(_BrandingAssemblyInformationalVersionEnabledNormalized)' == 'True'">
+            true</_BrandingHasAssemblyInformationalVersion>
+        <_BrandingHasAssemblyInformationalVersion
+            Condition="'$(_BrandingHasAssemblyInformationalVersion)' == ''">false</_BrandingHasAssemblyInformationalVersion>
+        <_BrandingHasAssemblyInformationalVersionNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(_BrandingHasAssemblyInformationalVersion)',
+            '^\s+|\s+$', ''))</_BrandingHasAssemblyInformationalVersionNormalized>
+        <_BrandingHasManagedFields
+            Condition="'$(_BrandingHasAssemblyCompanyNormalized)' == 'true' or '$(_BrandingHasAssemblyCopyrightNormalized)' == 'true' or '$(_BrandingHasAssemblyVersionNormalized)' == 'true' or '$(_BrandingHasAssemblyFileVersionNormalized)' == 'true' or '$(_BrandingHasAssemblyInformationalVersionNormalized)' == 'true'">
+            true</_BrandingHasManagedFields>
+        <_BrandingHasManagedFields Condition="'$(_BrandingHasManagedFields)' == ''">false</_BrandingHasManagedFields>
+        <_BrandingHasManagedFieldsNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(_BrandingHasManagedFields)',
+            '^\s+|\s+$', ''))</_BrandingHasManagedFieldsNormalized>
+        <_BrandingLogEnabled Condition="'$(BRANDING_BUILD_LOG)' != ''">true</_BrandingLogEnabled>
+        <_BrandingLogEnabled Condition="'$(_BrandingLogEnabled)' == ''">false</_BrandingLogEnabled>
+
+        <BrandingManagedProjectEnabled
+            Condition="'$(BrandingManagedProjectEnabled)' == '' and '$(_BrandingEnabledNormalized)' == 'true' and Exists('$(MSBuildProjectDirectory)\$(_BrandingSourceAssemblyInfoFileNormalized)') and ('$(_BrandingProjectHitNormalized)' == 'true' or '$(_BrandingProjectHitNormalized)' == 'True') and '$(_BrandingHasManagedFieldsNormalized)' == 'true'">
+            true</BrandingManagedProjectEnabled>
+        <BrandingManagedProjectEnabled Condition="'$(BrandingManagedProjectEnabled)' == ''">false</BrandingManagedProjectEnabled>
+        <_BrandingManagedProjectEnabledNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingManagedProjectEnabled)',
+            '^\s+|\s+$', ''))</_BrandingManagedProjectEnabledNormalized>
+        <BrandingEmitCompany
+            Condition="'$(BrandingEmitCompany)' == '' and '$(_BrandingManagedProjectEnabledNormalized)' == 'true' and '$(_BrandingHasAssemblyCompanyNormalized)' == 'true'">
+            true</BrandingEmitCompany>
+        <BrandingEmitCompany Condition="'$(BrandingEmitCompany)' == ''">false</BrandingEmitCompany>
+        <_BrandingEmitCompanyNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingEmitCompany)',
+            '^\s+|\s+$', ''))</_BrandingEmitCompanyNormalized>
+        <BrandingEmitCopyright
+            Condition="'$(BrandingEmitCopyright)' == '' and '$(_BrandingManagedProjectEnabledNormalized)' == 'true' and '$(_BrandingHasAssemblyCopyrightNormalized)' == 'true'">
+            true</BrandingEmitCopyright>
+        <BrandingEmitCopyright Condition="'$(BrandingEmitCopyright)' == ''">false</BrandingEmitCopyright>
+        <_BrandingEmitCopyrightNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingEmitCopyright)',
+            '^\s+|\s+$', ''))</_BrandingEmitCopyrightNormalized>
+        <BrandingEmitAssemblyVersion
+            Condition="'$(BrandingEmitAssemblyVersion)' == '' and '$(_BrandingManagedProjectEnabledNormalized)' == 'true' and '$(_BrandingHasAssemblyVersionNormalized)' == 'true'">
+            true</BrandingEmitAssemblyVersion>
+        <BrandingEmitAssemblyVersion Condition="'$(BrandingEmitAssemblyVersion)' == ''">false</BrandingEmitAssemblyVersion>
+        <_BrandingEmitAssemblyVersionNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingEmitAssemblyVersion)',
+            '^\s+|\s+$', ''))</_BrandingEmitAssemblyVersionNormalized>
+        <BrandingEmitAssemblyFileVersion
+            Condition="'$(BrandingEmitAssemblyFileVersion)' == '' and '$(_BrandingManagedProjectEnabledNormalized)' == 'true' and '$(_BrandingHasAssemblyFileVersionNormalized)' == 'true'">
+            true</BrandingEmitAssemblyFileVersion>
+        <BrandingEmitAssemblyFileVersion Condition="'$(BrandingEmitAssemblyFileVersion)' == ''">
+            false</BrandingEmitAssemblyFileVersion>
+        <_BrandingEmitAssemblyFileVersionNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingEmitAssemblyFileVersion)',
+            '^\s+|\s+$', ''))</_BrandingEmitAssemblyFileVersionNormalized>
+        <BrandingEmitAssemblyInformationalVersion
+            Condition="'$(BrandingEmitAssemblyInformationalVersion)' == '' and '$(_BrandingManagedProjectEnabledNormalized)' == 'true' and '$(_BrandingHasAssemblyInformationalVersionNormalized)' == 'true'">
+            true</BrandingEmitAssemblyInformationalVersion>
+        <BrandingEmitAssemblyInformationalVersion
+            Condition="'$(BrandingEmitAssemblyInformationalVersion)' == ''">false</BrandingEmitAssemblyInformationalVersion>
+        <_BrandingEmitAssemblyInformationalVersionNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingEmitAssemblyInformationalVersion)',
+            '^\s+|\s+$', ''))</_BrandingEmitAssemblyInformationalVersionNormalized>
+
+        <BrandingSanitizedAssemblyInfoFile>$(IntermediateOutputPath)Branding\SourceAssemblyInfo.g.cs</BrandingSanitizedAssemblyInfoFile>
+        <BrandingGeneratedAssemblyInfoFile>
+            $(IntermediateOutputPath)Branding\ManagedAssemblyInfo.g.cs</BrandingGeneratedAssemblyInfoFile>
+        <_BrandingSanitizedAssemblyInfoFileNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingSanitizedAssemblyInfoFile)',
+            '^\s+|\s+$', ''))</_BrandingSanitizedAssemblyInfoFileNormalized>
+        <_BrandingGeneratedAssemblyInfoFileNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingGeneratedAssemblyInfoFile)',
+            '^\s+|\s+$', ''))</_BrandingGeneratedAssemblyInfoFileNormalized>
+        <BrandingRemoveAssemblyCompanySwitch
+            Condition="'$(_BrandingEmitCompanyNormalized)' == 'true'"> -RemoveAssemblyCompany</BrandingRemoveAssemblyCompanySwitch>
+        <BrandingRemoveAssemblyCopyrightSwitch
+            Condition="'$(_BrandingEmitCopyrightNormalized)' == 'true'"> -RemoveAssemblyCopyright</BrandingRemoveAssemblyCopyrightSwitch>
+        <BrandingRemoveAssemblyVersionSwitch
+            Condition="'$(_BrandingEmitAssemblyVersionNormalized)' == 'true'">
+            -RemoveAssemblyVersion</BrandingRemoveAssemblyVersionSwitch>
+        <BrandingRemoveAssemblyFileVersionSwitch
+            Condition="'$(_BrandingEmitAssemblyFileVersionNormalized)' == 'true'">
+            -RemoveAssemblyFileVersion</BrandingRemoveAssemblyFileVersionSwitch>
+        <BrandingRemoveAssemblyInformationalVersionSwitch
+            Condition="'$(_BrandingEmitAssemblyInformationalVersionNormalized)' == 'true'">
+            -RemoveAssemblyInformationalVersion</BrandingRemoveAssemblyInformationalVersionSwitch>
+        <_BrandingRemoveAssemblyCompanySwitchNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingRemoveAssemblyCompanySwitch)',
+            '^\s+|\s+$', ''))</_BrandingRemoveAssemblyCompanySwitchNormalized>
+        <_BrandingRemoveAssemblyCopyrightSwitchNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingRemoveAssemblyCopyrightSwitch)',
+            '^\s+|\s+$', ''))</_BrandingRemoveAssemblyCopyrightSwitchNormalized>
+        <_BrandingRemoveAssemblyVersionSwitchNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingRemoveAssemblyVersionSwitch)',
+            '^\s+|\s+$', ''))</_BrandingRemoveAssemblyVersionSwitchNormalized>
+        <_BrandingRemoveAssemblyFileVersionSwitchNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingRemoveAssemblyFileVersionSwitch)',
+            '^\s+|\s+$', ''))</_BrandingRemoveAssemblyFileVersionSwitchNormalized>
+        <_BrandingRemoveAssemblyInformationalVersionSwitchNormalized>$([System.Text.RegularExpressions.Regex]::Replace('$(BrandingRemoveAssemblyInformationalVersionSwitch)',
+            '^\s+|\s+$', ''))</_BrandingRemoveAssemblyInformationalVersionSwitchNormalized>
+    </PropertyGroup>
+
+    <Target Name="PrepareBrandingAssemblyInfo"
+        BeforeTargets="CoreCompile"
+        Condition="'$(_BrandingManagedProjectEnabledNormalized)' == 'true'">
+        <ItemGroup>
+            <Compile Remove="$(_BrandingSourceAssemblyInfoFileNormalized)" />
+            <_BrandingAppliedField Include="AssemblyCompany"
+                Condition="'$(_BrandingEmitCompanyNormalized)' == 'true'" />
+            <_BrandingAppliedField Include="AssemblyCopyright"
+                Condition="'$(_BrandingEmitCopyrightNormalized)' == 'true'" />
+            <_BrandingAppliedField Include="AssemblyVersion"
+                Condition="'$(_BrandingEmitAssemblyVersionNormalized)' == 'true'" />
+            <_BrandingAppliedField Include="AssemblyFileVersion"
+                Condition="'$(_BrandingEmitAssemblyFileVersionNormalized)' == 'true'" />
+            <_BrandingAppliedField Include="AssemblyInformationalVersion"
+                Condition="'$(_BrandingEmitAssemblyInformationalVersionNormalized)' == 'true'" />
+        </ItemGroup>
+        <PropertyGroup>
+            <_BrandingAppliedFieldList>@(_BrandingAppliedField, ', ')</_BrandingAppliedFieldList>
+        </PropertyGroup>
+        <Message
+            Importance="high"
+            Text="[Branding] Apply $(MSBuildProjectName) fields: $(_BrandingAppliedFieldList)" />
+        <Exec
+            Condition="'$(_BrandingLogEnabled)' == 'true'"
+            Command="&quot;$(SystemRoot)\System32\WindowsPowerShell\v1.0\powershell.exe&quot; -NoProfile -NonInteractive -ExecutionPolicy Bypass -File &quot;$(_BrandingLogScriptNormalized)&quot; -Action append -LogPath &quot;$(BRANDING_BUILD_LOG)&quot; -ProjectName &quot;$(MSBuildProjectName)&quot; -FieldList &quot;$(_BrandingAppliedFieldList)&quot;"
+            WorkingDirectory="$(MSBuildProjectDirectory)" />
+        <Exec
+            Command="&quot;$(SystemRoot)\System32\WindowsPowerShell\v1.0\powershell.exe&quot; -NoProfile -NonInteractive -ExecutionPolicy Bypass -File &quot;$(_BrandingAssemblyInfoTransformScriptNormalized)&quot; -InputPath &quot;$(MSBuildProjectDirectory)\$(_BrandingSourceAssemblyInfoFileNormalized)&quot; -OutputPath &quot;$(MSBuildProjectDirectory)\$(_BrandingSanitizedAssemblyInfoFileNormalized)&quot; $(_BrandingRemoveAssemblyCompanySwitchNormalized) $(_BrandingRemoveAssemblyCopyrightSwitchNormalized) $(_BrandingRemoveAssemblyVersionSwitchNormalized) $(_BrandingRemoveAssemblyFileVersionSwitchNormalized) $(_BrandingRemoveAssemblyInformationalVersionSwitchNormalized)"
+            WorkingDirectory="$(MSBuildProjectDirectory)" />
+        <ItemGroup>
+            <_BrandingAssemblyLines
+                Include="[assembly: System.Reflection.AssemblyCompany(&quot;$(_BrandingAssemblyCompanyNormalized)&quot;)]"
+                Condition="'$(_BrandingEmitCompanyNormalized)' == 'true'" />
+            <_BrandingAssemblyLines
+                Include="[assembly: System.Reflection.AssemblyCopyright(&quot;$(_BrandingAssemblyCopyrightNormalized)&quot;)]"
+                Condition="'$(_BrandingEmitCopyrightNormalized)' == 'true'" />
+            <_BrandingAssemblyLines
+                Include="[assembly: System.Reflection.AssemblyVersion(&quot;$(_BrandingAssemblyVersionNormalized)&quot;)]"
+                Condition="'$(_BrandingEmitAssemblyVersionNormalized)' == 'true'" />
+            <_BrandingAssemblyLines
+                Include="[assembly: System.Reflection.AssemblyFileVersion(&quot;$(_BrandingAssemblyFileVersionNormalized)&quot;)]"
+                Condition="'$(_BrandingEmitAssemblyFileVersionNormalized)' == 'true'" />
+            <_BrandingAssemblyLines
+                Include="[assembly: System.Reflection.AssemblyInformationalVersion(&quot;$(_BrandingAssemblyInformationalVersionNormalized)&quot;)]"
+                Condition="'$(_BrandingEmitAssemblyInformationalVersionNormalized)' == 'true'" />
+        </ItemGroup>
+        <MakeDir
+            Directories="$([System.IO.Path]::GetDirectoryName('$(MSBuildProjectDirectory)\$(_BrandingGeneratedAssemblyInfoFileNormalized)'))" />
+        <WriteLinesToFile
+            File="$(MSBuildProjectDirectory)\$(_BrandingGeneratedAssemblyInfoFileNormalized)"
+            Overwrite="true"
+            Lines="@(_BrandingAssemblyLines)" />
+        <ItemGroup>
+            <Compile
+                Include="$(MSBuildProjectDirectory)\$(_BrandingSanitizedAssemblyInfoFileNormalized)" />
+            <Compile
+                Include="$(MSBuildProjectDirectory)\$(_BrandingGeneratedAssemblyInfoFileNormalized)" />
+        </ItemGroup>
+    </Target>
+</Project>

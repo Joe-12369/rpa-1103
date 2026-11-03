@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <BrandingEnabled>false</BrandingEnabled>
+        <BrandingSourceAssemblyInfoFile>Properties\AssemblyInfo.cs</BrandingSourceAssemblyInfoFile>
+
+        <!--
+            当前清单按 build.bat 中涉及的解决方案项目初始化。
+            只保留实际存在 Properties\AssemblyInfo.cs 的项目。
+            这里已按通配风格做归并；后续新增项目请手动补到对应规则，
+            或新增一行精确规则。
+
+            规则按前缀分类整理，便于阅读和后续维护。
+            分组顺序：tools、II.Framework、II.RPA.Core、II.RPA.Plugin、
+            II.RPA host/service/tool、standalone。
+        -->
+        <BrandingProjectPattern>
+            ^II\.Framework(\.|$)
+
+            ^II\.RPA\.Core\.GRPC(Service)?Client$
+
+            ^II\.RPA\.Plugin(\.|$)
+            ^II\.RPA\.(AdminTransfer|HIDTool|JavaBridgeHost|Logging|MobileProvider|PatchUpdate|PluginLoader|RuntimeHost|Screenshot|Server|ServiceHub|SetWinEventHook|Video2Process|ZDeskTop)$
+            ^II\.RPA\.MobileDeviceManager(\.GrpcService)?$
+            ^II\.RPA\.WebBrowser\.Common$
+            ^II\.RPA\.WinAPI$
+            ^II\.RPA\.WinAutomation\.CommonUtility$
+            ^II\.RPA\.WindowsAccessBridgeInterop$
+
+        </BrandingProjectPattern>
+
+        <!--
+            字段默认全部列出。
+            是否生效看对应的 *Enabled 开关：
+            false：不参与，保留原始 AssemblyInfo.cs 中的值。
+            true：参与覆盖；字段值为空时会覆盖为空字符串。
+        -->
+
+        <BrandingAssemblyCompanyEnabled>true</BrandingAssemblyCompanyEnabled>
+        <BrandingAssemblyCompany></BrandingAssemblyCompany>
+
+        <BrandingAssemblyCopyrightEnabled>true</BrandingAssemblyCopyrightEnabled>
+        <BrandingAssemblyCopyright>Copyright ©All rights reserved</BrandingAssemblyCopyright>
+
+        <BrandingAssemblyVersionEnabled>false</BrandingAssemblyVersionEnabled>
+        <BrandingAssemblyVersion>7.3.5.0</BrandingAssemblyVersion>
+
+        <BrandingAssemblyFileVersionEnabled>false</BrandingAssemblyFileVersionEnabled>
+        <BrandingAssemblyFileVersion>7.3.5.0</BrandingAssemblyFileVersion>
+
+        <BrandingAssemblyInformationalVersionEnabled>false</BrandingAssemblyInformationalVersionEnabled>
+        <BrandingAssemblyInformationalVersion></BrandingAssemblyInformationalVersion>
+    </PropertyGroup>
+</Project>
